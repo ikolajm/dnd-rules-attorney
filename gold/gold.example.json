@@ -1,0 +1,14 @@
+[
+  {
+    "id": "unconscious-opportunity-attack",
+    "question": "An enemy runs past my unconscious ally. Can my ally make an opportunity attack?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "An unconscious creature is incapacitated, and an incapacitated creature can't take reactions. An opportunity attack is made with a reaction, so an unconscious creature can't make one.",
+    "cites": [
+      "conditions > unconscious",
+      "conditions > incapacitated",
+      "making-an-attack > melee-attacks > opportunity-attacks"
+    ]
+  }
+]

@@ -1,0 +1,386 @@
+[
+  {
+    "id": "grappled-attack-and-cast",
+    "question": "Can a grappled creature still attack and cast spells?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grapple-drag",
+    "question": "Can I drag the creature I'm grappling when I move?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grapple-escape-acrobatics",
+    "question": "Can the grappled creature escape with Acrobatics instead of Athletics?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grapple-size-limit",
+    "question": "Can I grapple a creature two sizes larger than me?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grappled-gives-advantage",
+    "question": "Do attackers get advantage against a grappled creature?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grapple-one-hand-two-hander",
+    "question": "Can I hold a grapple with one hand and still attack with a two-handed weapon?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grappled-prone-stand",
+    "question": "I shove a creature I'm grappling prone. Can it stand up?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "dodge-while-grappled",
+    "question": "Does the Dodge action still work while I'm grappled?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grappler-knocked-prone",
+    "question": "If the creature grappling me is knocked prone, does the grapple end?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "grapple-and-shove-one-action",
+    "question": "Can I grapple and shove in the same Attack action?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "invisible-location-known",
+    "question": "Do enemies know where an invisible creature is?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "invisible-vs-invisible",
+    "question": "An invisible attacker attacks an invisible target. What is rolled?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "hidden-attack-miss-reveals",
+    "question": "If I attack from hiding and miss, am I revealed?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "hide-mid-combat-distracted",
+    "question": "Can I hide mid-combat while the enemy is distracted, without cover?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "hide-behind-ally",
+    "question": "Can I hide behind an ally?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "hide-lightly-obscured",
+    "question": "Can I hide in an area that is only lightly obscured?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "darkness-both-blind",
+    "question": "Two creatures without darkvision fight in magical darkness. What is rolled?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "darkvision-sees-invisible",
+    "question": "Does darkvision let me see an invisible creature?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "search-finds-invisible",
+    "question": "Does the Search action find an invisible creature?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "hidden-stays-hidden-moving",
+    "question": "Does a hidden creature stay hidden when it moves?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "two-advantage-one-disadvantage",
+    "question": "I have advantage from two sources and disadvantage from one. What is rolled?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "ranged-prone-five-feet",
+    "question": "I make a ranged attack against a prone target from 5 feet. What is rolled?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "ranged-unconscious-crit",
+    "question": "A ranged attack hits an unconscious creature from 5 feet. Is it a critical hit?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "paralyzed-thirty-feet",
+    "question": "Attacking a paralyzed creature from 30 feet: do I have advantage, and is a hit a critical?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "crit-doubles-modifiers",
+    "question": "Does a critical hit double the flat damage modifiers?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "nat-20-ability-check",
+    "question": "Does a natural 20 on an ability check always succeed?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "nat-1-saving-throw",
+    "question": "Does a natural 1 on a saving throw always fail?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "concentration-two-hits",
+    "question": "I take damage from two attacks. How many concentration saves do I make?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "unconscious-ends-concentration",
+    "question": "Does being knocked unconscious end concentration?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "cast-while-concentrating",
+    "question": "Can I cast a spell that doesn't need concentration while concentrating on another?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "bonus-spell-then-cantrip",
+    "question": "I cast a spell as a bonus action. Can I cast a cantrip with my action?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "bonus-spell-then-reaction-spell",
+    "question": "On a turn I cast a bonus-action spell, can I cast a leveled spell as a reaction?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "readied-spell-bonus-rule",
+    "question": "Does a spell I Ready count against the bonus-action spell rule when I release it?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "readied-spell-no-trigger",
+    "question": "I Ready a spell and the trigger never comes. Is the spell slot spent?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "same-spell-twice",
+    "question": "Two casters put the same spell on me. Do both apply?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "verbal-underwater",
+    "question": "Can I cast a spell with a verbal component underwater?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "shoved-out-of-reach-oa",
+    "question": "An enemy shoves me out of its reach. Do I provoke an opportunity attack?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "oa-unseen-creature",
+    "question": "Can I make an opportunity attack against a creature I can't see?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "disengage-through-enemy",
+    "question": "After I Disengage, can I move through an enemy's space?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "ally-space-difficult",
+    "question": "Does moving through an ally's space count as difficult terrain?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "move-between-attacks",
+    "question": "Can I move between my attacks?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "ready-and-oa-same-round",
+    "question": "My Readied trigger and an opportunity attack both happen in one round. Do I get both?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "surprise-one-notices",
+    "question": "One member of my party spots the ambush. Is the whole party still surprised?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "flying-knocked-prone",
+    "question": "A flying creature is knocked prone. What happens?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "cover-stacks",
+    "question": "Do half cover and three-quarters cover stack?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "resistant-and-vulnerable",
+    "question": "I'm resistant and vulnerable to the same damage type. What happens?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "temp-hp-stack-and-zero",
+    "question": "Do temporary hit points stack, and do they keep me conscious at 0 hit points?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  },
+  {
+    "id": "poisoned-twice",
+    "question": "I'm poisoned by two sources. Is it worse than one?",
+    "status": "",
+    "verdict": "",
+    "ruling": "",
+    "cites": []
+  }
+]
