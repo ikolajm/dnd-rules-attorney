@@ -9,8 +9,15 @@ diff under data/srd-5.1/ to see what the source changed.
 from pathlib import Path
 from urllib.request import urlopen
 
+from rules_attorney.corpus import (
+    CONDITIONS_FILE,
+    SECTIONS_FILE,
+    load_corpus,
+    render_markdown,
+)
+
 COMMIT: str = "a6212beb4b278917c2cff41c2b04c4ef4f3e0d6f"
-FILES: tuple[str, ...] = ("5e-SRD-Rule-Sections.json", "5e-SRD-Conditions.json")
+FILES: tuple[str, ...] = (SECTIONS_FILE, CONDITIONS_FILE)
 BASE: str = (
     f"https://raw.githubusercontent.com/5e-bits/5e-database/{COMMIT}/src/2014/en/"
 )
@@ -24,6 +31,10 @@ def main() -> None:
         with urlopen(BASE + name) as resp:
             body = resp.read()
         (OUT / name).write_bytes(body)
+
+    entries = load_corpus(OUT)
+    markdown = render_markdown(entries)
+    (OUT / "corpus.md").write_text(markdown + "\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

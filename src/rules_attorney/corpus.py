@@ -75,3 +75,12 @@ def load_corpus(data_dir: Path) -> list[Entry]:
     if dupes:
         raise CorpusError(f"duplicate paths: {', '.join(dupes)}")
     return entries
+
+
+def render_markdown(entries: list[Entry]) -> str:
+    """Render entries as markdown, each path as a level-2 header."""
+    blocks: list[str] = []
+    for entry in entries:
+        block = f"## {entry.path}\n\n{entry.text}"
+        blocks.append(block)
+    return "\n\n".join(blocks)
