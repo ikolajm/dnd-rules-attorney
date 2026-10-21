@@ -58,18 +58,27 @@
   {
     "id": "dodge-while-grappled",
     "question": "Does the Dodge action still work while I'm grappled?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Dodge's benefit is lost if you are incapacitated or if your speed drops to 0. A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed. While you are grappled your speed is 0, so you can take the Dodge action but gain nothing from it: attacks against you don't have disadvantage and your Dexterity saving throws don't have advantage.",
+    "cites": [
+      "actions-in-combat > dodge",
+      "conditions > grappled"
+    ],
+    "split": "dev"
   },
   {
     "id": "grappler-knocked-prone",
     "question": "If the creature grappling me is knocked prone, does the grapple end?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A grapple ends only if the grappler is incapacitated or the grappled creature is moved out of the grappler's reach. The prone condition does not make the grappler incapacitated, and being knocked prone moves neither creature, so the grappled creature stays within reach and the grapple continues.",
+    "cites": [
+      "conditions > grappled",
+      "conditions > incapacitated",
+      "conditions > prone"
+    ],
+    "split": "dev"
   },
   {
     "id": "grapple-and-shove-one-action",
@@ -82,10 +91,15 @@
   {
     "id": "invisible-location-known",
     "question": "Do enemies know where an invisible creature is?",
-    "status": "",
+    "status": "contested",
     "verdict": "",
-    "ruling": "",
-    "cites": []
+    "ruling": "Reading A: enemies know where an invisible creature is until it hides. An invisible creature can always try to hide, and for the purpose of hiding it is heavily obscured, which makes hiding a separate step that invisibility makes possible rather than one it performs. The hiding rules add that an invisible creature has to stay quiet and that signs of its passage might be noticed, which matters only if hiding is what conceals it. Reading B: enemies don't know where it is unless it gives itself away. An invisible creature is impossible to see, and its location can be detected by any noise it makes or any tracks it leaves; naming how the location can be detected implies it is otherwise unknown. Attacking an unseen target allows for guessing its location, which fits a creature that can't be seen and hasn't been heard. Why the text does not settle it: the invisible condition says how a location can be found, and the hiding rules say how it can be concealed, but neither says whether an invisible creature that has not hidden starts out located or unlocated.",
+    "cites": [
+      "conditions > invisible",
+      "making-an-attack > unseen-attackers-and-targets",
+      "using-each-ability > dexterity > hiding"
+    ],
+    "split": "dev"
   },
   {
     "id": "invisible-vs-invisible",
@@ -114,10 +128,14 @@
   {
     "id": "hide-behind-ally",
     "question": "Can I hide behind an ally?",
-    "status": "",
+    "status": "contested",
     "verdict": "",
-    "ruling": "",
-    "cites": []
+    "ruling": "Reading A: yes, if the ally blocks the enemy's view of you. The GM decides when circumstances are appropriate for hiding, and the cover rules name creatures among the obstacles that can come between you and an attacker, so an ally standing between you and an enemy can be the circumstance that lets you hide. Reading B: no. You can't hide from a creature that can see you clearly, and cover is defined by how hard a target is to harm, not by whether it can be seen. A creature typically gives half cover, which blocks at least half of your body and leaves the rest in view. Why the text does not settle it: the hiding rule turns on being seen clearly and the cover rule turns on being harder to hit, and no rule says whether a creature in the way blocks sight. The answer is left to the GM's call on the circumstances.",
+    "cites": [
+      "using-each-ability > dexterity > hiding",
+      "cover"
+    ],
+    "split": "dev"
   },
   {
     "id": "hide-lightly-obscured",
@@ -162,10 +180,11 @@
   {
     "id": "two-advantage-one-disadvantage",
     "question": "I have advantage from two sources and disadvantage from one. What is rolled?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "one d20",
+    "ruling": "If circumstances cause a roll to have both advantage and disadvantage, you are considered to have neither of them, and you roll one d20. This is true even if multiple circumstances impose disadvantage and only one grants advantage or vice versa. Two sources of advantage and one of disadvantage still give the roll both, so they cancel and you roll one d20.",
+    "cites": ["advantage-and-disadvantage"],
+    "split": "dev"
   },
   {
     "id": "ranged-prone-five-feet",
@@ -186,10 +205,13 @@
   {
     "id": "paralyzed-thirty-feet",
     "question": "Attacking a paralyzed creature from 30 feet: do I have advantage, and is a hit a critical?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "advantage, not critical",
+    "ruling": "Attack rolls against a paralyzed creature have advantage, with no limit on distance. Any attack that hits it is a critical hit only if the attacker is within 5 feet of it. At 30 feet you have advantage, but 30 feet is beyond 5 feet, so a hit is an ordinary hit, not a critical.",
+    "cites": [
+      "conditions > paralyzed"
+    ],
+    "split": "dev"
   },
   {
     "id": "crit-doubles-modifiers",
@@ -218,10 +240,11 @@
   {
     "id": "concentration-two-hits",
     "question": "I take damage from two attacks. How many concentration saves do I make?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "one per damage source",
+    "ruling": "Whenever you take damage while concentrating, you make a Constitution saving throw, with a DC of 10 or half the damage taken, whichever is higher. If you take damage from multiple sources, you make a separate saving throw for each source of damage. Two attacks are two sources, so you make two saves, each with its DC set by that attack's damage.",
+    "cites": ["casting-a-spell > duration > concentration"],
+    "split": "dev"
   },
   {
     "id": "unconscious-ends-concentration",
@@ -250,10 +273,11 @@
   {
     "id": "bonus-spell-then-reaction-spell",
     "question": "On a turn I cast a bonus-action spell, can I cast a leveled spell as a reaction?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no, cantrips with 1 action casting time only",
+    "ruling": "If you cast a spell with a bonus action, you can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action. A spell cast as a reaction on that same turn is another spell during the same turn, and a leveled spell is not a cantrip, so it can't be cast. The limit holds for that turn only: on another creature's turn, the reaction spell is allowed.",
+    "cites": ["casting-a-spell > casting-time > bonus-action"],
+    "split": "dev"
   },
   {
     "id": "readied-spell-bonus-rule",
@@ -290,10 +314,14 @@
   {
     "id": "shoved-out-of-reach-oa",
     "question": "An enemy shoves me out of its reach. Do I provoke an opportunity attack?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "You don't provoke an opportunity attack when someone or something moves you without using your movement, action, or reaction. A shove is made by the shover, using the Attack action, and pushes the target 5 feet away. Being shoved uses none of your movement, action or reaction, so leaving the enemy's reach this way does not provoke.",
+    "cites": [
+      "making-an-attack > melee-attacks > opportunity-attacks",
+      "making-an-attack > melee-attacks > shoving-a-creature"
+    ],
+    "split": "dev"
   },
   {
     "id": "oa-unseen-creature",
@@ -354,10 +382,11 @@
   {
     "id": "cover-stacks",
     "question": "Do half cover and three-quarters cover stack?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "If a target is behind multiple sources of cover, only the most protective degree of cover applies; the degrees aren't added together. For example, if a target is behind a creature that gives half cover and a tree trunk that gives three-quarters cover, the target has three-quarters cover. Half cover and three-quarters cover do not stack: only the three-quarters cover applies, a +5 bonus to AC and Dexterity saving throws.",
+    "cites": ["cover"],
+    "split": "dev"
   },
   {
     "id": "resistant-and-vulnerable",
