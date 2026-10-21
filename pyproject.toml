@@ -22,5 +22,5 @@ select = ["E", "F", "W", "I", "UP", "B", "SIM"]
 
 [tool.mypy]
 strict = true
-files = ["src"]
+files = ["src", "scripts", "tests"]
 
