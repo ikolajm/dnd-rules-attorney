@@ -693,5 +693,127 @@
       "making-an-attack > melee-attacks > opportunity-attacks"
     ],
     "split": "test"
+  },
+  {
+    "id": "shield-triggering-attack",
+    "question": "An attack hits me and I cast Shield. Does the +5 AC count against that attack?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Shield gives a +5 bonus to AC until the start of your next turn, including against the triggering attack. An attack hits when its total equals or exceeds your AC, so the attack that triggered the spell is checked against your new AC, and one that would have hit by less than 5 misses. What triggers the reaction is not in this corpus; the ruling rests on Shield's own text that the bonus applies to the triggering attack.",
+    "cites": [
+      "spells > shield",
+      "making-an-attack > attack-rolls"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "counterspell-upcast-spell",
+    "question": "An enemy casts Cure Wounds with a 5th-level slot. Does my 3rd-level Counterspell stop it automatically?",
+    "status": "settled",
+    "verdict": "no; a DC 15 check",
+    "ruling": "A spell cast with a higher-level slot assumes that slot's level for that casting, so this Cure Wounds is a 5th-level spell. Counterspell stops a spell of 3rd level or lower automatically; against one of 4th level or higher, you make an ability check using your spellcasting ability, DC 10 + the spell's level. So it is not automatic: you need a DC 15 check.",
+    "cites": [
+      "spells > counterspell",
+      "what-is-a-spell > spell-slots > casting-a-spell-at-a-higher-level"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "haste-concentration-lethargy",
+    "question": "My concentration on Haste breaks. What happens to the hasted ally?",
+    "status": "settled",
+    "verdict": "it can't move or take actions until after its next turn",
+    "ruling": "Haste requires concentration, and a spell that needs concentration ends when concentration is lost. When Haste ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it. Losing concentration ends the spell like any other ending, so the ally loses the doubled speed, the AC bonus, the advantage on Dexterity saves and the extra action, and then suffers the lethargy.",
+    "cites": [
+      "spells > haste",
+      "casting-a-spell > duration > concentration"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "detect-magic-ritual",
+    "question": "Can I cast Detect Magic without spending a spell slot?",
+    "status": "settled",
+    "verdict": "yes, as a ritual, if you have a ritual-casting feature",
+    "ruling": "Detect Magic has the ritual tag. A spell with that tag can be cast as a ritual, which takes 10 minutes longer than its normal casting time and doesn't expend a spell slot. Casting a ritual requires a feature that grants the ability, and the spell must be prepared or known unless the feature says otherwise. So yes: with such a feature, Detect Magic takes 10 minutes and an action, and costs no slot. Which features grant ritual casting is in the class rules outside this corpus.",
+    "cites": [
+      "spells > detect-magic",
+      "what-is-a-spell > rituals"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sleep-temp-hp",
+    "question": "Do temporary hit points count toward Sleep's hit point total?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Sleep affects creatures in ascending order of their current hit points, and a creature is affected only if its hit points are equal to or less than the remaining total. Temporary hit points aren't actual hit points; they are a separate buffer against damage. So a creature's temporary hit points are not added to its current hit points when Sleep is resolved.",
+    "cites": [
+      "spells > sleep",
+      "damage-and-healing > temporary-hit-points"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "invisibility-shove",
+    "question": "I'm invisible from the Invisibility spell and shove someone. Does the spell end?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Invisibility ends for a target that attacks or casts a spell. A shove is a special melee attack made with the Attack action, using an Athletics check in place of the attack roll. It is still an attack, so shoving ends the spell.",
+    "cites": [
+      "spells > invisibility",
+      "making-an-attack > melee-attacks > shoving-a-creature"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "haste-dash-distance",
+    "question": "My speed is 30 and I'm hasted. I Dash with my action and with Haste's action. How far can I move?",
+    "status": "settled",
+    "verdict": "180 feet",
+    "ruling": "Haste doubles your speed, so it is 60 feet, and its additional action can be used to Dash. Dash gives extra movement equal to your speed after applying any modifiers, so each Dash adds 60 feet. Your 60 feet of speed plus two Dashes of 60 feet each is 180 feet this turn.",
+    "cites": [
+      "spells > haste",
+      "actions-in-combat > dash"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "haste-lethargy-reaction",
+    "question": "When Haste ends, can my ally still take a reaction before its next turn?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. When Haste ends, the target can't move or take actions until after its next turn, and the reactions rule names a reaction a special action. A reaction is an action of a special kind, so the lethargy forbids it. Reading B: yes. The lethargy forbids exactly the pair the turn rule gives, moving up to your speed and taking one action, and a reaction is a response to a trigger on anyone's turn, limited by its own rule rather than counted among the actions you take on your turn. Why the text does not settle it: Haste does not say whether \"actions\" includes reactions, and the reactions rule calls a reaction an action while the turn rule treats the action and the reaction as separate things.",
+    "cites": [
+      "spells > haste",
+      "the-order-of-combat > reactions",
+      "the-order-of-combat > your-turn"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "invisibility-first-attack-advantage",
+    "question": "I attack while invisible from the Invisibility spell. Does that attack get advantage?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. The spell ends for a target that attacks, so the attack is what ends it, and the attack is made while the creature is still invisible; an invisible creature's attack rolls have advantage, and a creature that can't see you gives you advantage. Hiding works the same way, giving away your location only when the attack hits or misses. Reading B: no. The spell ends for a target that attacks, and the attack has begun when the roll is made, so the creature is no longer invisible for it; the hiding rule states its timing outright, and Invisibility states none. Why the text does not settle it: the spell names attacking as what ends it without saying whether it ends before or after the attack roll.",
+    "cites": [
+      "spells > invisibility",
+      "conditions > invisible",
+      "making-an-attack > unseen-attackers-and-targets"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "fireball-around-corner",
+    "question": "A creature is 15 feet from my fireball's center but around a corner, with no straight line to it. Is it caught?",
+    "status": "rules-as-intended",
+    "verdict": "yes",
+    "ruling": "As written, two passages conflict. The area rule says a spell's effect expands in straight lines from its point of origin, and a location with no unblocked straight line to that point isn't in the area. Fireball's own text says the fire spreads around corners. Nothing in this corpus says which governs, and read alone, the area rule leaves the creature out. As intended, Fireball's sentence is the exception it means to make, since it would do nothing if the general rule still held. So the creature, within the 20-foot radius, is caught and must make the saving throw.",
+    "cites": [
+      "spells > fireball",
+      "casting-a-spell > areas-of-effect"
+    ],
+    "split": "test"
   }
 ]
