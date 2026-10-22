@@ -60,10 +60,11 @@
     "question": "Can I hold a grapple with one hand and still attack with a two-handed weapon?",
     "status": "contested",
     "verdict": "",
-    "ruling": "Reading A: yes. The grapple rule asks for a free hand only to seize the target, and the grappled condition lists what ends it: the grappler being incapacitated, or the grappled creature being moved out of reach. Putting a second hand on a weapon is neither, so the grapple holds while you attack with the weapon in both hands. Reading B: no. You seize the target using a free hand, and a grapple held is a hand still holding the creature; that hand is not free to wield a weapon that needs two hands, so attacking with it means releasing the grapple, which you can do whenever you like. Why the text does not settle it: the free hand is named for the attempt to seize, not for holding on, and no rule says whether the hand stays committed after the grapple succeeds. The rule that a two-handed weapon needs both hands is in the equipment chapter, outside this corpus.",
+    "ruling": "Reading A: yes. The grapple rule asks for a free hand only to seize the target, and the grappled condition lists what ends it: the grappler being incapacitated, or the grappled creature being moved out of reach. Putting a second hand on a weapon is neither, so the grapple holds while you attack with the weapon in both hands. Reading B: no. You seize the target using a free hand, and a grapple held is a hand still holding the creature. The two-handed property requires two hands when you attack with the weapon, and the hand holding the grapple is not free to be one of them, so attacking with it means releasing the grapple, which you can do whenever you like. Why the text does not settle it: the free hand is named for the attempt to seize, not for holding on, and the two-handed property asks for two hands at the attack without saying whether a hand holding a grapple can be one.",
     "cites": [
       "making-an-attack > melee-attacks > grappling",
-      "conditions > grappled"
+      "conditions > grappled",
+      "weapon-properties > two-handed"
     ],
     "split": "test"
   },
@@ -671,11 +672,12 @@
     "question": "I'm standing inside the area of my own fireball. Can I choose to leave myself out of it?",
     "status": "settled",
     "verdict": "no",
-    "ruling": "An area spell does not pick its targets; it covers an area so it affects multiple creatures at once, and the only locations it leaves out are ones with no unblocked line from the point of origin. A sphere's area extends from its point of origin, so standing inside it puts you in the area. The targeting rules confirm the caster is not excluded: if you are in the area of effect of a spell you cast, you can target yourself. So the fireball affects you, and you can't opt out. The rule that settles who is caught, the fireball spell's own text naming each creature in its sphere, is outside the corpus.",
+    "ruling": "An area spell does not pick its targets; it covers an area so it affects multiple creatures at once, and the only locations it leaves out are ones with no unblocked line from the point of origin. A sphere's area extends from its point of origin, so standing inside it puts you in the area. Fireball's own text settles who is caught: each creature in its 20-foot-radius sphere must make a Dexterity saving throw, and it makes no exception for the caster. The targeting rules confirm the caster is not excluded: if you are in the area of effect of a spell you cast, you can target yourself. So the fireball affects you, and you can't opt out.",
     "cites": [
       "casting-a-spell > areas-of-effect",
       "casting-a-spell > areas-of-effect > sphere",
-      "casting-a-spell > targets > targeting-yourself"
+      "casting-a-spell > targets > targeting-yourself",
+      "spells > fireball"
     ],
     "split": "test"
   },
