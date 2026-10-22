@@ -10,6 +10,7 @@ from typing import Any
 
 SECTIONS_FILE = "5e-SRD-Rule-Sections.json"
 CONDITIONS_FILE = "5e-SRD-Conditions.json"
+WEAPON_PROPERTIES_FILE = "5e-SRD-Weapon-Properties.json"
 
 
 def slug(text: str) -> str:
@@ -65,9 +66,19 @@ def condition_entries(record: dict[str, Any]) -> list[Entry]:
     return [Entry(path=path, text=text)]
 
 
+def weapon_property_entries(record: dict[str, Any]) -> list[Entry]:
+    """Make the single entry for one weapon property, cited whole."""
+    index: str = record["index"]
+    desc: list[str] = record["desc"]
+    path = f"weapon-properties > {index}"
+    text = "\n\n".join(desc)
+    return [Entry(path=path, text=text)]
+
+
 SOURCES: dict[str, Parser] = {
     SECTIONS_FILE: section_entries,
     CONDITIONS_FILE: condition_entries,
+    WEAPON_PROPERTIES_FILE: weapon_property_entries,
 }
 
 
