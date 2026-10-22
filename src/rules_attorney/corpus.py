@@ -3,6 +3,7 @@
 import json
 import re
 from collections import Counter
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -29,8 +30,13 @@ class Entry:
     text: str
 
 
-def section_entries(index: str, desc: str) -> list[Entry]:
+type Parser = Callable[[dict[str, Any]], list[Entry]]
+
+
+def section_entries(record: dict[str, Any]) -> list[Entry]:
     """Split one rule section's markdown into an entry per header."""
+    index: str = record["index"]
+    desc: str = record["desc"]
     stack: list[tuple[int, str]] = []
     found: list[tuple[str, list[str]]] = []
     for line in desc.splitlines():
@@ -50,25 +56,29 @@ def section_entries(index: str, desc: str) -> list[Entry]:
     return [Entry(path, "\n".join(lines).strip()) for path, lines in found]
 
 
-def condition_entry(index: str, desc: list[str]) -> Entry:
+def condition_entries(record: dict[str, Any]) -> list[Entry]:
     """Make the single entry for one condition, cited whole."""
+    index: str = record["index"]
+    desc: list[str] = record["desc"]
     path = f"conditions > {index}"
     text = "\n\n".join(desc)
-    return Entry(path=path, text=text)
+    return [Entry(path=path, text=text)]
+
+
+SOURCES: dict[str, Parser] = {
+    SECTIONS_FILE: section_entries,
+    CONDITIONS_FILE: condition_entries,
+}
 
 
 def load_corpus(data_dir: Path) -> list[Entry]:
-    """Read both source files into entries, refusing duplicate paths."""
-    sections_text = (data_dir / SECTIONS_FILE).read_text(encoding="utf-8")
-    sections: list[dict[str, Any]] = json.loads(sections_text)
-    conditions_text = (data_dir / CONDITIONS_FILE).read_text(encoding="utf-8")
-    conditions: list[dict[str, Any]] = json.loads(conditions_text)
-
+    """Read every source file, refusing duplicate paths."""
     entries: list[Entry] = []
-    for s in sections:
-        entries.extend(section_entries(s["index"], s["desc"]))
-    for c in conditions:
-        entries.append(condition_entry(c["index"], c["desc"]))
+    for name, parse in SOURCES.items():
+        text = (data_dir / name).read_text(encoding="utf-8")
+        records: list[dict[str, Any]] = json.loads(text)
+        for record in records:
+            entries.extend(parse(record))
 
     counts = Counter(e.path for e in entries)
     dupes = sorted(path for path, n in counts.items() if n > 1)

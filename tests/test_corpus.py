@@ -6,8 +6,8 @@ from pathlib import Path
 import pytest
 
 from rules_attorney.corpus import (
-    CONDITIONS_FILE,
     SECTIONS_FILE,
+    SOURCES,
     CorpusError,
     load_corpus,
     section_entries,
@@ -44,7 +44,7 @@ def test_section_entries_nests_headers() -> None:
             "sibling text",
         ]
     )
-    entries = section_entries("the-root", desc)
+    entries = section_entries({"index": "the-root", "desc": desc})
     assert [e.path for e in entries] == [
         "the-root",
         "the-root > child",
@@ -57,8 +57,9 @@ def test_section_entries_nests_headers() -> None:
 def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
     desc = "\n".join(["## Root", "### Same", "a", "### Same", "b"])
     sections = [{"index": "the-root", "desc": desc}]
+    for name in SOURCES:
+        (tmp_path / name).write_text(json.dumps([]), encoding="utf-8")
     (tmp_path / SECTIONS_FILE).write_text(json.dumps(sections), encoding="utf-8")
-    (tmp_path / CONDITIONS_FILE).write_text(json.dumps([]), encoding="utf-8")
     with pytest.raises(CorpusError, match="the-root > same"):
         load_corpus(tmp_path)
 
