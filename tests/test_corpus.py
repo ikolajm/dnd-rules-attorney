@@ -12,6 +12,7 @@ from rules_attorney.corpus import (
     load_corpus,
     section_entries,
     slug,
+    spell_entries,
 )
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
@@ -54,6 +55,70 @@ def test_section_entries_nests_headers() -> None:
     assert entries[1].text == "child text"
 
 
+def test_spell_entries_renders_a_bare_cantrip() -> None:
+    record = {
+        "index": "spark",
+        "level": 0,
+        "school": {"index": "evocation", "name": "Evocation"},
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "components": ["V", "S"],
+        "duration": "Instantaneous",
+        "concentration": False,
+        "ritual": False,
+        "desc": ["First paragraph.", "Second paragraph."],
+    }
+    entries = spell_entries(record)
+    assert [e.path for e in entries] == ["spells > spark"]
+    assert entries[0].text == (
+        "Level: cantrip\n"
+        "School: Evocation\n"
+        "Casting time: 1 action\n"
+        "Range: 60 feet\n"
+        "Components: V, S\n"
+        "Duration: Instantaneous\n"
+        "Concentration: no\n"
+        "Ritual: no\n"
+        "\n"
+        "First paragraph.\n"
+        "\n"
+        "Second paragraph."
+    )
+
+
+def test_spell_entries_renders_material_and_higher_levels() -> None:
+    record = {
+        "index": "salt-ward",
+        "level": 2,
+        "school": {"index": "abjuration", "name": "Abjuration"},
+        "casting_time": "1 minute",
+        "range": "Self",
+        "components": ["V", "S", "M"],
+        "material": "A pinch of salt.",
+        "duration": "Concentration, up to 1 hour",
+        "concentration": True,
+        "ritual": True,
+        "desc": ["Only paragraph."],
+        "higher_level": ["The ward grows by 5 feet for each slot level above 2nd."],
+    }
+    entries = spell_entries(record)
+    assert [e.path for e in entries] == ["spells > salt-ward"]
+    assert entries[0].text == (
+        "Level: 2\n"
+        "School: Abjuration\n"
+        "Casting time: 1 minute\n"
+        "Range: Self\n"
+        "Components: V, S, M (A pinch of salt.)\n"
+        "Duration: Concentration, up to 1 hour\n"
+        "Concentration: yes\n"
+        "Ritual: yes\n"
+        "\n"
+        "Only paragraph.\n"
+        "\n"
+        "At Higher Levels. The ward grows by 5 feet for each slot level above 2nd."
+    )
+
+
 def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
     desc = "\n".join(["## Root", "### Same", "a", "### Same", "b"])
     sections = [{"index": "the-root", "desc": desc}]
@@ -73,6 +138,8 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "conditions > grappled",
         "weapon-properties > two-handed",
         "weapon-properties > monk",
+        "spells > fireball",
+        "spells > animate-objects",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:

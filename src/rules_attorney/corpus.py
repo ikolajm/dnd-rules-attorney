@@ -11,6 +11,7 @@ from typing import Any
 SECTIONS_FILE = "5e-SRD-Rule-Sections.json"
 CONDITIONS_FILE = "5e-SRD-Conditions.json"
 WEAPON_PROPERTIES_FILE = "5e-SRD-Weapon-Properties.json"
+SPELLS_FILE = "5e-SRD-Spells.json"
 
 
 def slug(text: str) -> str:
@@ -75,10 +76,41 @@ def weapon_property_entries(record: dict[str, Any]) -> list[Entry]:
     return [Entry(path=path, text=text)]
 
 
+def spell_entries(record: dict[str, Any]) -> list[Entry]:
+    """Make the single entry for one spell, its fields as lines above its text."""
+    index: str = record["index"]
+    desc: list[str] = record["desc"]
+    path = f"spells > {index}"
+
+    lines: list[str] = []
+    level: int = record["level"]
+    lines.append(f"Level: {'cantrip' if level == 0 else level}")
+    lines.append(f"School: {record['school']['name']}")
+    lines.append(f"Casting time: {record['casting_time']}")
+    lines.append(f"Range: {record['range']}")
+
+    components = ", ".join(record["components"])
+    material: str | None = record.get("material")
+    if material:
+        components += f" ({material})"
+    lines.append(f"Components: {components}")
+    lines.append(f"Duration: {record['duration']}")
+    lines.append(f"Concentration: {'yes' if record['concentration'] else 'no'}")
+    lines.append(f"Ritual: {'yes' if record['ritual'] else 'no'}")
+
+    blocks: list[str] = ["\n".join(lines), "\n\n".join(desc)]
+    higher: list[str] | None = record.get("higher_level")
+    if higher:
+        blocks.append("At Higher Levels. " + "\n\n".join(higher))
+    text = "\n\n".join(blocks)
+    return [Entry(path=path, text=text)]
+
+
 SOURCES: dict[str, Parser] = {
     SECTIONS_FILE: section_entries,
     CONDITIONS_FILE: condition_entries,
     WEAPON_PROPERTIES_FILE: weapon_property_entries,
+    SPELLS_FILE: spell_entries,
 }
 
 
