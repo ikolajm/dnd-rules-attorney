@@ -51,5 +51,8 @@ def test_gold_labels_are_complete(name: str) -> None:
             failures.append(f"{item['id']}: contested item has a verdict")
         if "split" in item and item["split"] not in SPLITS:
             failures.append(f"{item['id']}: bad split: {item['split']!r}")
+        # The example's sample item is never split; only the real set must be.
+        if name == "gold.json" and labeled and "split" not in item:
+            failures.append(f"{item['id']}: no split; run scripts/split_gold.py")
 
     assert failures == []
