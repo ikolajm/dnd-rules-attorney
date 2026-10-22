@@ -71,6 +71,8 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "the-planes-of-existence > the-material-plane",
         "movement > speed > travel-pace > travel-pace",
         "conditions > grappled",
+        "weapon-properties > two-handed",
+        "weapon-properties > monk",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:
