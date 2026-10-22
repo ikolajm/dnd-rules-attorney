@@ -2,58 +2,76 @@
   {
     "id": "grappled-attack-and-cast",
     "question": "Can a grappled creature still attack and cast spells?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "The grappled condition sets a creature's speed to 0 and denies it any bonus to its speed, and that is all it does. It does not incapacitate the creature or limit its actions, so a grappled creature can still take the Attack action or cast a spell. Only its movement is stopped.",
+    "cites": [
+      "conditions > grappled"
+    ]
   },
   {
     "id": "grapple-drag",
     "question": "Can I drag the creature I'm grappling when I move?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes, at half speed unless it is two or more sizes smaller",
+    "ruling": "When you move, you can drag or carry the creature you are grappling, but your speed is halved, unless the creature is two or more sizes smaller than you. So you can drag it, and you move at half speed unless it is at least two sizes smaller than you.",
+    "cites": [
+      "making-an-attack > melee-attacks > grappling"
+    ]
   },
   {
     "id": "grapple-escape-acrobatics",
     "question": "Can the grappled creature escape with Acrobatics instead of Athletics?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "A grappled creature can use its action to escape by succeeding on a Strength (Athletics) or Dexterity (Acrobatics) check contested by the grappler's Strength (Athletics) check. Acrobatics is one of the two named options, so the grappled creature can use it.",
+    "cites": [
+      "making-an-attack > melee-attacks > grappling"
+    ]
   },
   {
     "id": "grapple-size-limit",
     "question": "Can I grapple a creature two sizes larger than me?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "The target of a grapple must be no more than one size larger than you. A creature two sizes larger is outside that limit, so you can't grapple it.",
+    "cites": [
+      "making-an-attack > melee-attacks > grappling"
+    ]
   },
   {
     "id": "grappled-gives-advantage",
     "question": "Do attackers get advantage against a grappled creature?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "The grappled condition sets a creature's speed to 0 and denies it any bonus to its speed. It says nothing about attack rolls against the creature. The restrained condition is the one that gives attackers advantage, and being grappled is not being restrained, so attackers get no advantage from the grapple.",
+    "cites": [
+      "conditions > grappled",
+      "conditions > restrained"
+    ]
   },
   {
     "id": "grapple-one-hand-two-hander",
     "question": "Can I hold a grapple with one hand and still attack with a two-handed weapon?",
-    "status": "",
+    "status": "contested",
     "verdict": "",
-    "ruling": "",
-    "cites": []
+    "ruling": "Reading A: yes. The grapple rule asks for a free hand only to seize the target, and the grappled condition lists what ends it: the grappler being incapacitated, or the grappled creature being moved out of reach. Putting a second hand on a weapon is neither, so the grapple holds while you attack with the weapon in both hands. Reading B: no. You seize the target using a free hand, and a grapple held is a hand still holding the creature; that hand is not free to wield a weapon that needs two hands, so attacking with it means releasing the grapple, which you can do whenever you like. Why the text does not settle it: the free hand is named for the attempt to seize, not for holding on, and no rule says whether the hand stays committed after the grapple succeeds. The rule that a two-handed weapon needs both hands is in the equipment chapter, outside this corpus.",
+    "cites": [
+      "making-an-attack > melee-attacks > grappling",
+      "conditions > grappled"
+    ]
   },
   {
     "id": "grappled-prone-stand",
     "question": "I shove a creature I'm grappling prone. Can it stand up?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Standing up costs movement equal to half your speed, and you can't stand up if your speed is 0. A grappled creature's speed becomes 0. While the grapple lasts, the prone creature has no movement to spend, so it can't stand up; it has to escape the grapple first.",
+    "cites": [
+      "movement-and-position > being-prone",
+      "conditions > grappled",
+      "conditions > prone"
+    ]
   },
   {
     "id": "dodge-while-grappled",
@@ -83,10 +101,14 @@
   {
     "id": "grapple-and-shove-one-action",
     "question": "Can I grapple and shove in the same Attack action?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes, if the Attack action gives you more than one attack",
+    "ruling": "A grapple and a shove are each a special melee attack made with the Attack action, and if you can make multiple attacks with that action, each replaces one of them. The Attack action makes one attack unless a feature such as Extra Attack grants more. With two or more attacks, one can be a grapple and another a shove; with one attack, you can do only one of them.",
+    "cites": [
+      "making-an-attack > melee-attacks > grappling",
+      "making-an-attack > melee-attacks > shoving-a-creature",
+      "actions-in-combat > attack"
+    ]
   },
   {
     "id": "invisible-location-known",
@@ -104,26 +126,35 @@
   {
     "id": "invisible-vs-invisible",
     "question": "An invisible attacker attacks an invisible target. What is rolled?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "one d20",
+    "ruling": "An invisible creature's attack rolls have advantage, and attack rolls against an invisible creature have disadvantage. Here the attacker is invisible, which grants advantage, and the target is invisible, which imposes disadvantage. A roll with both advantage and disadvantage has neither, so one d20 is rolled.",
+    "cites": [
+      "conditions > invisible",
+      "making-an-attack > unseen-attackers-and-targets",
+      "advantage-and-disadvantage"
+    ]
   },
   {
     "id": "hidden-attack-miss-reveals",
     "question": "If I attack from hiding and miss, am I revealed?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "If you are hidden, both unseen and unheard, when you make an attack, you give away your location when the attack hits or misses. A miss is named alongside a hit, so the attack reveals your location either way.",
+    "cites": [
+      "making-an-attack > unseen-attackers-and-targets"
+    ]
   },
   {
     "id": "hide-mid-combat-distracted",
     "question": "Can I hide mid-combat while the enemy is distracted, without cover?",
-    "status": "",
+    "status": "contested",
     "verdict": "",
-    "ruling": "",
-    "cites": []
+    "ruling": "Reading A: no. You can't hide from a creature that can see you clearly, and in combat most creatures stay alert for signs of danger all around. The rule about a distracted creature lets you stay hidden as you approach it, which assumes you were already hidden; it does not let you become hidden in plain view. Reading B: yes, if the GM allows it. The GM decides when circumstances are appropriate for hiding, and a creature whose attention is elsewhere is not seeing you clearly, so distraction can be the circumstance. Why the text does not settle it: seeing clearly is not defined, so the text does not say whether it turns only on what blocks sight or also on where a creature's attention is.",
+    "cites": [
+      "using-each-ability > dexterity > hiding",
+      "actions-in-combat > hide"
+    ]
   },
   {
     "id": "hide-behind-ally",
@@ -140,42 +171,60 @@
   {
     "id": "hide-lightly-obscured",
     "question": "Can I hide in an area that is only lightly obscured?",
-    "status": "",
+    "status": "contested",
     "verdict": "",
-    "ruling": "",
-    "cites": []
+    "ruling": "Reading A: yes. You can't hide from a creature that can see you clearly, and a lightly obscured area, such as dim light or patchy fog, gives creatures disadvantage on Perception checks that rely on sight. A creature that has trouble seeing into the area is not seeing you clearly, and the hiding rules name light and heavy obscurement as the main factor in finding a hidden creature. Reading B: no. Light obscurement only penalizes Perception checks; creatures still see into the area. It is heavy obscurement that blocks vision entirely, so only that, or something else that blocks sight, keeps you from being seen clearly. Why the text does not settle it: seeing clearly is not tied to either degree of obscurement, so the text does not say which one is enough to hide.",
+    "cites": [
+      "using-each-ability > dexterity > hiding",
+      "the-environment > vision-and-light"
+    ]
   },
   {
     "id": "darkness-both-blind",
     "question": "Two creatures without darkvision fight in magical darkness. What is rolled?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "one d20",
+    "ruling": "Darkness is heavily obscured, and a creature trying to see something in a heavily obscured area effectively suffers from the blinded condition. When you attack a target you can't see, you have disadvantage, and when a creature can't see you, you have advantage on attack rolls against it. Neither creature can see the other, so each attack has both advantage and disadvantage, which cancel: one d20 is rolled.",
+    "cites": [
+      "the-environment > vision-and-light",
+      "making-an-attack > unseen-attackers-and-targets",
+      "conditions > blinded",
+      "advantage-and-disadvantage"
+    ]
   },
   {
     "id": "darkvision-sees-invisible",
     "question": "Does darkvision let me see an invisible creature?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "An invisible creature is impossible to see without the aid of magic or a special sense. Darkvision lets a creature see in darkness as if it were dim light, and that is all it changes; it says nothing about invisible creatures. Truesight is the sense that names seeing invisible creatures. Darkvision treats darkness, not invisibility, so it does not reveal an invisible creature.",
+    "cites": [
+      "conditions > invisible",
+      "the-environment > vision-and-light > darkvision",
+      "the-environment > vision-and-light > truesight"
+    ]
   },
   {
     "id": "search-finds-invisible",
     "question": "Does the Search action find an invisible creature?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "it can find the creature's location, not make it visible",
+    "ruling": "The Search action devotes your attention to finding something, with a Wisdom (Perception) or Intelligence (Investigation) check as the GM decides. An invisible creature is impossible to see without magic or a special sense, but its location can be detected by any noise it makes or any tracks it leaves; if it is hiding, your Perception check is contested by its Stealth check. A successful Search can find where the creature is through those signs, but it does not let you see it.",
+    "cites": [
+      "actions-in-combat > search",
+      "conditions > invisible",
+      "using-each-ability > dexterity > hiding"
+    ]
   },
   {
     "id": "hidden-stays-hidden-moving",
     "question": "Does a hidden creature stay hidden when it moves?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes, while it stays out of clear sight and quiet",
+    "ruling": "A hiding creature's Stealth check stands until it is discovered or stops hiding, and it gives away its position if it makes noise. You can't hide from a creature that can see you clearly, and a creature that comes out of hiding and approaches an enemy is usually seen. Moving is not itself named as ending the hide, so a creature that moves while staying out of clear sight and making no noise stays hidden; moving into clear view, or making noise, reveals it.",
+    "cites": [
+      "using-each-ability > dexterity > hiding"
+    ]
   },
   {
     "id": "two-advantage-one-disadvantage",
@@ -189,18 +238,25 @@
   {
     "id": "ranged-prone-five-feet",
     "question": "I make a ranged attack against a prone target from 5 feet. What is rolled?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "one d20",
+    "ruling": "An attack roll against a prone creature has advantage if the attacker is within 5 feet of it. A ranged attack has disadvantage if you are within 5 feet of a hostile creature who can see you and isn't incapacitated, and being prone does not incapacitate the target. At 5 feet the attack has both advantage and disadvantage, which cancel, so one d20 is rolled.",
+    "cites": [
+      "conditions > prone",
+      "making-an-attack > ranged-attacks > ranged-attacks-in-close-combat",
+      "advantage-and-disadvantage"
+    ]
   },
   {
     "id": "ranged-unconscious-crit",
     "question": "A ranged attack hits an unconscious creature from 5 feet. Is it a critical hit?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Any attack that hits an unconscious creature is a critical hit if the attacker is within 5 feet of it. The rule says any attack, not any melee attack, and 5 feet is within 5 feet, so the ranged hit is a critical. The close-range penalty does not apply either: it needs a hostile creature that isn't incapacitated, and an unconscious creature is incapacitated.",
+    "cites": [
+      "conditions > unconscious",
+      "making-an-attack > ranged-attacks > ranged-attacks-in-close-combat"
+    ]
   },
   {
     "id": "paralyzed-thirty-feet",
@@ -216,26 +272,34 @@
   {
     "id": "crit-doubles-modifiers",
     "question": "Does a critical hit double the flat damage modifiers?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "On a critical hit you roll all of the attack's damage dice twice and add them together, then add any relevant modifiers as normal. Only the dice are doubled; the modifiers are added once, so a dagger critical is 2d4 plus the ability modifier, not twice the modifier.",
+    "cites": [
+      "damage-and-healing > damage-rolls > critical-hits"
+    ]
   },
   {
     "id": "nat-20-ability-check",
     "question": "Does a natural 20 on an ability check always succeed?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "The rule that a 20 succeeds regardless of modifiers is written for the d20 roll for an attack. An ability check succeeds by meeting the DC the GM sets for the task, and no rule gives a 20 on an ability check an automatic success. A natural 20 on a check succeeds only if the total meets the DC.",
+    "cites": [
+      "making-an-attack > attack-rolls > rolling-1-or-20",
+      "ability-checks"
+    ]
   },
   {
     "id": "nat-1-saving-throw",
     "question": "Does a natural 1 on a saving throw always fail?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "The rule that a 1 misses regardless of modifiers is written for the d20 roll for an attack. A saving throw is a d20 plus the ability modifier against a DC set by the effect, and no rule makes a 1 on a save an automatic failure. A natural 1 on a save fails only if the total falls short of the DC.",
+    "cites": [
+      "making-an-attack > attack-rolls > rolling-1-or-20",
+      "saving-throws"
+    ]
   },
   {
     "id": "concentration-two-hits",
@@ -249,26 +313,33 @@
   {
     "id": "unconscious-ends-concentration",
     "question": "Does being knocked unconscious end concentration?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "You lose concentration on a spell if you are incapacitated. An unconscious creature is incapacitated, so being knocked unconscious ends concentration.",
+    "cites": [
+      "casting-a-spell > duration > concentration",
+      "conditions > unconscious"
+    ]
   },
   {
     "id": "cast-while-concentrating",
     "question": "Can I cast a spell that doesn't need concentration while concentrating on another?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Casting another spell breaks concentration only if that spell also requires concentration. A spell that doesn't require concentration is not on the list of things that break it, so you can cast it and keep concentrating on the first.",
+    "cites": [
+      "casting-a-spell > duration > concentration"
+    ]
   },
   {
     "id": "bonus-spell-then-cantrip",
     "question": "I cast a spell as a bonus action. Can I cast a cantrip with my action?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes, if the cantrip's casting time is 1 action",
+    "ruling": "After casting a spell with a bonus action, you can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action. A cantrip cast with your action is that exception, so it is allowed as long as its casting time is 1 action.",
+    "cites": [
+      "casting-a-spell > casting-time > bonus-action"
+    ]
   },
   {
     "id": "bonus-spell-then-reaction-spell",
@@ -282,34 +353,46 @@
   {
     "id": "readied-spell-bonus-rule",
     "question": "Does a spell I Ready count against the bonus-action spell rule when I release it?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "it counts on the turn you ready it, not when you release it",
+    "ruling": "When you ready a spell, you cast it as normal on your turn and hold its energy, then release it with your reaction when the trigger occurs. After a bonus-action spell, you can't cast another spell during the same turn except a cantrip with a casting time of 1 action. The casting happens on the turn you take the Ready action, so a bonus-action spell that turn allows readying only such a cantrip; releasing the spell later is not a casting and does not count again.",
+    "cites": [
+      "actions-in-combat > ready",
+      "casting-a-spell > casting-time > bonus-action"
+    ]
   },
   {
     "id": "readied-spell-no-trigger",
     "question": "I Ready a spell and the trigger never comes. Is the spell slot spent?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "When you ready a spell, you cast it as normal and hold its energy, and when a character casts a spell, they expend a slot of that spell's level or higher. The slot is spent at the casting, on your turn. The Ready action only lasts until the start of your next turn, so if the trigger never comes, the held spell is lost and the slot stays spent.",
+    "cites": [
+      "actions-in-combat > ready",
+      "what-is-a-spell > spell-slots"
+    ]
   },
   {
     "id": "same-spell-twice",
     "question": "Two casters put the same spell on me. Do both apply?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no, only the most potent",
+    "ruling": "The effects of the same spell cast multiple times don't combine; the most potent effect from those castings applies while their durations overlap. Two castings of the same spell on you are that case, so only the stronger one applies; if two clerics cast bless on you, you roll one bonus die, not two.",
+    "cites": [
+      "casting-a-spell > combining-magical-effects"
+    ]
   },
   {
     "id": "verbal-underwater",
     "question": "Can I cast a spell with a verbal component underwater?",
-    "status": "",
+    "status": "contested",
     "verdict": "",
-    "ruling": "",
-    "cites": []
+    "ruling": "Reading A: yes. The verbal component rule names a character who is gagged or in an area of silence as unable to cast, and the underwater combat rules limit weapon attacks and grant fire resistance but say nothing about spellcasting. Being underwater is neither named case. Reading B: no, or only at a cost. A verbal component is the chanting of mystic words with a specific pitch and resonance, and a creature underwater is holding its breath; it can't chant without speaking, and the text gives no way to speak underwater. Why the text does not settle it: the rule explains what a verbal component is and names two cases that block it, but does not say whether those cases are the only ones, and nothing in the corpus says whether a creature can speak underwater.",
+    "cites": [
+      "casting-a-spell > components > verbal-v",
+      "underwater-combat",
+      "the-environment > suffocating"
+    ]
   },
   {
     "id": "shoved-out-of-reach-oa",
@@ -326,58 +409,78 @@
   {
     "id": "oa-unseen-creature",
     "question": "Can I make an opportunity attack against a creature I can't see?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "You can make an opportunity attack when a hostile creature that you can see moves out of your reach. Seeing the creature is part of the trigger, so a creature you can't see leaving your reach does not give you an opportunity attack.",
+    "cites": [
+      "making-an-attack > melee-attacks > opportunity-attacks"
+    ]
   },
   {
     "id": "disengage-through-enemy",
     "question": "After I Disengage, can I move through an enemy's space?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no, unless it is at least two sizes larger or smaller than you",
+    "ruling": "Disengage means your movement doesn't provoke opportunity attacks for the rest of the turn; it does nothing else. You can move through a hostile creature's space only if it is at least two sizes larger or smaller than you. Disengaging does not change that, so you can pass through the enemy only if the size rule already allows it.",
+    "cites": [
+      "actions-in-combat > disengage",
+      "movement-and-position > moving-around-other-creatures"
+    ]
   },
   {
     "id": "ally-space-difficult",
     "question": "Does moving through an ally's space count as difficult terrain?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "The space of another creature, whether hostile or not, counts as difficult terrain, and every foot of movement in difficult terrain costs 1 extra foot. An ally is a creature that is not hostile, so moving through its space costs double.",
+    "cites": [
+      "movement-and-position > difficult-terrain",
+      "movement-and-position > moving-around-other-creatures"
+    ]
   },
   {
     "id": "move-between-attacks",
     "question": "Can I move between my attacks?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "yes, if your action makes more than one weapon attack",
+    "ruling": "You can break up your movement on your turn, using some before and some after your action. If you take an action that includes more than one weapon attack, you can also move between those attacks. So you can move between attacks when one action gives you two or more weapon attacks, such as the Attack action with Extra Attack; with a single attack there is nothing to move between, but you can still move before and after it.",
+    "cites": [
+      "movement-and-position > breaking-up-your-move",
+      "movement-and-position > breaking-up-your-move > moving-between-attacks"
+    ]
   },
   {
     "id": "ready-and-oa-same-round",
     "question": "My Readied trigger and an opportunity attack both happen in one round. Do I get both?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no, only one",
+    "ruling": "A readied action is taken with your reaction, and an opportunity attack uses your reaction. When you take a reaction, you can't take another until the start of your next turn. Both need your one reaction, so you get whichever you take first and must give up the other.",
+    "cites": [
+      "actions-in-combat > ready",
+      "making-an-attack > melee-attacks > opportunity-attacks",
+      "the-order-of-combat > reactions"
+    ]
   },
   {
     "id": "surprise-one-notices",
     "question": "One member of my party spots the ambush. Is the whole party still surprised?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no, only those who didn't notice",
+    "ruling": "Any character or monster that doesn't notice a threat is surprised at the start of the encounter, and a member of a group can be surprised even if the other members aren't. Surprise is decided per creature, so the member who spotted the ambush is not surprised, and each member who didn't notice it is.",
+    "cites": [
+      "the-order-of-combat > surprise"
+    ]
   },
   {
     "id": "flying-knocked-prone",
     "question": "A flying creature is knocked prone. What happens?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "it falls, unless it can hover or is held aloft by magic",
+    "ruling": "If a flying creature is knocked prone, it falls, unless it has the ability to hover or is held aloft by magic, such as the fly spell. At the end of a fall a creature takes 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6, and lands prone. A flier that can't hover and isn't held up by magic falls and takes that damage.",
+    "cites": [
+      "movement-and-position > flying-movement",
+      "the-environment > falling"
+    ]
   },
   {
     "id": "cover-stacks",
@@ -391,25 +494,110 @@
   {
     "id": "resistant-and-vulnerable",
     "question": "I'm resistant and vulnerable to the same damage type. What happens?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "both apply: halved, then doubled",
+    "ruling": "Resistance halves damage of its type and vulnerability doubles it, and resistance and then vulnerability are applied after all other modifiers to damage. The rule orders the two rather than cancelling them, so the damage is halved and then doubled.",
+    "cites": [
+      "damage-and-healing > damage-resistance-and-vulnerability"
+    ]
   },
   {
     "id": "temp-hp-stack-and-zero",
     "question": "Do temporary hit points stack, and do they keep me conscious at 0 hit points?",
-    "status": "",
-    "verdict": "",
-    "ruling": "",
-    "cites": []
+    "status": "settled",
+    "verdict": "no to both",
+    "ruling": "Temporary hit points can't be added together: if you have some and receive more, you keep either the old or the new, not the sum. If you have 0 hit points, receiving temporary hit points doesn't restore you to consciousness or stabilize you, though they still absorb damage. So they don't stack, and they don't keep or bring you back to consciousness at 0 hit points.",
+    "cites": [
+      "damage-and-healing > temporary-hit-points"
+    ]
   },
   {
     "id": "poisoned-twice",
     "question": "I'm poisoned by two sources. Is it worse than one?",
-    "status": "",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A poisoned creature has disadvantage on attack rolls and ability checks; that is the whole condition. If multiple situations impose disadvantage on a roll, you still roll only one additional d20. Two sources of the poisoned condition give the same disadvantage twice, which is still one disadvantage, so being poisoned twice is no worse than once.",
+    "cites": [
+      "conditions > poisoned",
+      "advantage-and-disadvantage"
+    ]
+  },
+  {
+    "id": "temp-hp-concentration",
+    "question": "My temporary hit points absorb all of a hit's damage. Do I make a concentration save?",
+    "status": "contested",
     "verdict": "",
-    "ruling": "",
-    "cites": []
+    "ruling": "Reading A: yes. Whenever you take damage while concentrating, you make a Constitution saving throw, and the temporary hit point rule itself says that when you have temporary hit points and take damage, they are lost first. Damage absorbed by them is still damage taken, so the save is made, at DC 10 or half the damage, whichever is higher. Reading B: no. Temporary hit points are a buffer against damage, a pool that protects you from injury; if the buffer absorbs all of it, nothing reaches you, and there is nothing to break your focus. Why the text does not settle it: concentration turns on taking damage, and the text does not say whether damage stopped by temporary hit points counts as taken, beyond the temporary hit point rule's own phrasing.",
+    "cites": [
+      "casting-a-spell > duration > concentration",
+      "damage-and-healing > temporary-hit-points"
+    ]
+  },
+  {
+    "id": "one-spell-several-hits-concentration",
+    "question": "One spell hits me with three separate bolts at once. How many concentration saves do I make?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: one. You make a separate saving throw for each source of damage, and the example sources, an arrow and a dragon's breath, are different attackers. One spell is one source, so its bolts call for one save, against the total damage. Reading B: three. Each bolt hits and deals its own damage, as separate attacks do, and each instance of damage is something you take while concentrating, so each calls for a save. Why the text does not settle it: source of damage is not defined, so the text does not say whether it means the spell or each separate hit the spell makes.",
+    "cites": [
+      "casting-a-spell > duration > concentration"
+    ]
+  },
+  {
+    "id": "grapple-as-opportunity-attack",
+    "question": "Can I grapple a creature as my opportunity attack?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. An opportunity attack is one melee attack made with your reaction, and a grapple is a special melee attack. A grapple fits the description of the attack the reaction allows. Reading B: no. The grapple rule says you use the Attack action to make it, and a grapple uses a contested check instead of an attack roll; an opportunity attack is a reaction, not the Attack action, so the grapple is not available. Why the text does not settle it: the grapple is called a melee attack but is tied to the Attack action, and the text does not say whether that tie is a requirement or a description of the usual case.",
+    "cites": [
+      "making-an-attack > melee-attacks > opportunity-attacks",
+      "making-an-attack > melee-attacks > grappling",
+      "making-an-attack"
+    ]
+  },
+  {
+    "id": "long-rest-short-fight",
+    "question": "A one-minute fight breaks out during a long rest. Do we have to start the rest over?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. A long rest is interrupted by a period of strenuous activity, at least 1 hour of walking, fighting, casting spells, or similar adventuring activity. The hour applies to the whole list, so a one-minute fight is far short of it and the rest continues. Reading B: yes. Fighting is not the light activity a long rest allows, which is sleeping, reading, talking, eating or standing watch; and a fight is rarely an hour long, so reading the hour onto fighting would mean fighting almost never interrupts a rest, which suggests the hour binds walking and fighting interrupts outright. Why the text does not settle it: the rule puts one duration in front of a list and does not say whether it applies to each item, and fighting is outside the allowed activities either way.",
+    "cites": [
+      "resting > long-rest"
+    ]
+  },
+  {
+    "id": "two-weapon-bonus-before-attack",
+    "question": "Can I make my two-weapon fighting bonus attack before the attack from my Attack action?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. When you take the Attack action and attack with a light melee weapon, you can use a bonus action to attack with the other. The bonus attack is granted by that attack, so the attack has to happen first; until it does, you have no bonus action to take. Reading B: yes. You choose when to take a bonus action during your turn unless its timing is specified, and the rule names a condition for the turn, taking the Attack action and attacking with a light weapon, rather than an order. Why the text does not settle it: the word when can be read as a trigger that must come first or as a condition on the turn, and the bonus action rule leaves timing open unless it is specified.",
+    "cites": [
+      "making-an-attack > melee-attacks > two-weapon-fighting",
+      "the-order-of-combat > your-turn > bonus-actions"
+    ]
+  },
+  {
+    "id": "readied-attack-extra-attack",
+    "question": "I Ready the Attack action and have Extra Attack. Do I make all my attacks when the trigger comes?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. The Ready action lets you choose an action to take in response to the trigger, and the Attack action is one; features such as Extra Attack let you make more than one attack with that action. Taking the Attack action with your reaction is still taking the Attack action, so all of its attacks come with it. Reading B: no, one attack. A readied action is taken with your reaction, and a reaction is an instant response; the Attack action makes one attack, and nothing in these rules extends a feature that adds attacks to a reaction. Why the text does not settle it: the Ready rule says you take the chosen action, and the Attack action says features can add attacks to it, but Extra Attack's own wording, which would say when it applies, is in the class rules outside this corpus.",
+    "cites": [
+      "actions-in-combat > ready",
+      "actions-in-combat > attack",
+      "the-order-of-combat > reactions"
+    ]
+  },
+  {
+    "id": "truesight-vs-invisible",
+    "question": "I can see an invisible creature with truesight. Do I still have disadvantage attacking it?",
+    "status": "rules-as-intended",
+    "verdict": "no",
+    "ruling": "As written, yes: the invisible condition says attack rolls against the creature have disadvantage, with no exception for an attacker who can see it. As intended, no. The condition opens by saying an invisible creature is impossible to see without magic or a special sense, and its penalties follow from that; the unseen attackers rules give disadvantage for attacking a target you can't see. Truesight lets a creature see invisible creatures, so for that attacker the reason for the penalty is gone. The rule as written penalizes an attacker who sees the target clearly, which the rule's own premise does not support, so the intended answer is that the attack has no disadvantage from invisibility.",
+    "cites": [
+      "conditions > invisible",
+      "the-environment > vision-and-light > truesight",
+      "making-an-attack > unseen-attackers-and-targets"
+    ]
   }
 ]
