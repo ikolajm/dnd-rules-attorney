@@ -7,7 +7,8 @@
     "ruling": "The grappled condition sets a creature's speed to 0 and denies it any bonus to its speed, and that is all it does. It does not incapacitate the creature or limit its actions, so a grappled creature can still take the Attack action or cast a spell. Only its movement is stopped.",
     "cites": [
       "conditions > grappled"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "grapple-drag",
@@ -17,7 +18,8 @@
     "ruling": "When you move, you can drag or carry the creature you are grappling, but your speed is halved, unless the creature is two or more sizes smaller than you. So you can drag it, and you move at half speed unless it is at least two sizes smaller than you.",
     "cites": [
       "making-an-attack > melee-attacks > grappling"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "grapple-escape-acrobatics",
@@ -27,7 +29,8 @@
     "ruling": "A grappled creature can use its action to escape by succeeding on a Strength (Athletics) or Dexterity (Acrobatics) check contested by the grappler's Strength (Athletics) check. Acrobatics is one of the two named options, so the grappled creature can use it.",
     "cites": [
       "making-an-attack > melee-attacks > grappling"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "grapple-size-limit",
@@ -37,7 +40,8 @@
     "ruling": "The target of a grapple must be no more than one size larger than you. A creature two sizes larger is outside that limit, so you can't grapple it.",
     "cites": [
       "making-an-attack > melee-attacks > grappling"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "grappled-gives-advantage",
@@ -48,7 +52,8 @@
     "cites": [
       "conditions > grappled",
       "conditions > restrained"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "grapple-one-hand-two-hander",
@@ -59,7 +64,8 @@
     "cites": [
       "making-an-attack > melee-attacks > grappling",
       "conditions > grappled"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "grappled-prone-stand",
@@ -71,7 +77,8 @@
       "movement-and-position > being-prone",
       "conditions > grappled",
       "conditions > prone"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "dodge-while-grappled",
@@ -108,7 +115,8 @@
       "making-an-attack > melee-attacks > grappling",
       "making-an-attack > melee-attacks > shoving-a-creature",
       "actions-in-combat > attack"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "invisible-location-known",
@@ -133,7 +141,8 @@
       "conditions > invisible",
       "making-an-attack > unseen-attackers-and-targets",
       "advantage-and-disadvantage"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "hidden-attack-miss-reveals",
@@ -143,7 +152,8 @@
     "ruling": "If you are hidden, both unseen and unheard, when you make an attack, you give away your location when the attack hits or misses. A miss is named alongside a hit, so the attack reveals your location either way.",
     "cites": [
       "making-an-attack > unseen-attackers-and-targets"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "hide-mid-combat-distracted",
@@ -154,7 +164,8 @@
     "cites": [
       "using-each-ability > dexterity > hiding",
       "actions-in-combat > hide"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "hide-behind-ally",
@@ -177,7 +188,8 @@
     "cites": [
       "using-each-ability > dexterity > hiding",
       "the-environment > vision-and-light"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "darkness-both-blind",
@@ -190,7 +202,8 @@
       "making-an-attack > unseen-attackers-and-targets",
       "conditions > blinded",
       "advantage-and-disadvantage"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "darkvision-sees-invisible",
@@ -202,7 +215,8 @@
       "conditions > invisible",
       "the-environment > vision-and-light > darkvision",
       "the-environment > vision-and-light > truesight"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "search-finds-invisible",
@@ -214,7 +228,8 @@
       "actions-in-combat > search",
       "conditions > invisible",
       "using-each-ability > dexterity > hiding"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "hidden-stays-hidden-moving",
@@ -224,7 +239,8 @@
     "ruling": "A hiding creature's Stealth check stands until it is discovered or stops hiding, and it gives away its position if it makes noise. You can't hide from a creature that can see you clearly, and a creature that comes out of hiding and approaches an enemy is usually seen. Moving is not itself named as ending the hide, so a creature that moves while staying out of clear sight and making no noise stays hidden; moving into clear view, or making noise, reveals it.",
     "cites": [
       "using-each-ability > dexterity > hiding"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "two-advantage-one-disadvantage",
@@ -232,7 +248,9 @@
     "status": "settled",
     "verdict": "one d20",
     "ruling": "If circumstances cause a roll to have both advantage and disadvantage, you are considered to have neither of them, and you roll one d20. This is true even if multiple circumstances impose disadvantage and only one grants advantage or vice versa. Two sources of advantage and one of disadvantage still give the roll both, so they cancel and you roll one d20.",
-    "cites": ["advantage-and-disadvantage"],
+    "cites": [
+      "advantage-and-disadvantage"
+    ],
     "split": "dev"
   },
   {
@@ -245,7 +263,8 @@
       "conditions > prone",
       "making-an-attack > ranged-attacks > ranged-attacks-in-close-combat",
       "advantage-and-disadvantage"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "ranged-unconscious-crit",
@@ -256,7 +275,8 @@
     "cites": [
       "conditions > unconscious",
       "making-an-attack > ranged-attacks > ranged-attacks-in-close-combat"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "paralyzed-thirty-feet",
@@ -277,7 +297,8 @@
     "ruling": "On a critical hit you roll all of the attack's damage dice twice and add them together, then add any relevant modifiers as normal. Only the dice are doubled; the modifiers are added once, so a dagger critical is 2d4 plus the ability modifier, not twice the modifier.",
     "cites": [
       "damage-and-healing > damage-rolls > critical-hits"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "nat-20-ability-check",
@@ -288,7 +309,8 @@
     "cites": [
       "making-an-attack > attack-rolls > rolling-1-or-20",
       "ability-checks"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "nat-1-saving-throw",
@@ -299,7 +321,8 @@
     "cites": [
       "making-an-attack > attack-rolls > rolling-1-or-20",
       "saving-throws"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "concentration-two-hits",
@@ -307,7 +330,9 @@
     "status": "settled",
     "verdict": "one per damage source",
     "ruling": "Whenever you take damage while concentrating, you make a Constitution saving throw, with a DC of 10 or half the damage taken, whichever is higher. If you take damage from multiple sources, you make a separate saving throw for each source of damage. Two attacks are two sources, so you make two saves, each with its DC set by that attack's damage.",
-    "cites": ["casting-a-spell > duration > concentration"],
+    "cites": [
+      "casting-a-spell > duration > concentration"
+    ],
     "split": "dev"
   },
   {
@@ -319,7 +344,8 @@
     "cites": [
       "casting-a-spell > duration > concentration",
       "conditions > unconscious"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "cast-while-concentrating",
@@ -329,7 +355,8 @@
     "ruling": "Casting another spell breaks concentration only if that spell also requires concentration. A spell that doesn't require concentration is not on the list of things that break it, so you can cast it and keep concentrating on the first.",
     "cites": [
       "casting-a-spell > duration > concentration"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "bonus-spell-then-cantrip",
@@ -339,7 +366,8 @@
     "ruling": "After casting a spell with a bonus action, you can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action. A cantrip cast with your action is that exception, so it is allowed as long as its casting time is 1 action.",
     "cites": [
       "casting-a-spell > casting-time > bonus-action"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "bonus-spell-then-reaction-spell",
@@ -347,7 +375,9 @@
     "status": "settled",
     "verdict": "no, cantrips with 1 action casting time only",
     "ruling": "If you cast a spell with a bonus action, you can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action. A spell cast as a reaction on that same turn is another spell during the same turn, and a leveled spell is not a cantrip, so it can't be cast. The limit holds for that turn only: on another creature's turn, the reaction spell is allowed.",
-    "cites": ["casting-a-spell > casting-time > bonus-action"],
+    "cites": [
+      "casting-a-spell > casting-time > bonus-action"
+    ],
     "split": "dev"
   },
   {
@@ -359,7 +389,8 @@
     "cites": [
       "actions-in-combat > ready",
       "casting-a-spell > casting-time > bonus-action"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "readied-spell-no-trigger",
@@ -370,7 +401,8 @@
     "cites": [
       "actions-in-combat > ready",
       "what-is-a-spell > spell-slots"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "same-spell-twice",
@@ -380,7 +412,8 @@
     "ruling": "The effects of the same spell cast multiple times don't combine; the most potent effect from those castings applies while their durations overlap. Two castings of the same spell on you are that case, so only the stronger one applies; if two clerics cast bless on you, you roll one bonus die, not two.",
     "cites": [
       "casting-a-spell > combining-magical-effects"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "verbal-underwater",
@@ -392,7 +425,8 @@
       "casting-a-spell > components > verbal-v",
       "underwater-combat",
       "the-environment > suffocating"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "shoved-out-of-reach-oa",
@@ -414,7 +448,8 @@
     "ruling": "You can make an opportunity attack when a hostile creature that you can see moves out of your reach. Seeing the creature is part of the trigger, so a creature you can't see leaving your reach does not give you an opportunity attack.",
     "cites": [
       "making-an-attack > melee-attacks > opportunity-attacks"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "disengage-through-enemy",
@@ -425,7 +460,8 @@
     "cites": [
       "actions-in-combat > disengage",
       "movement-and-position > moving-around-other-creatures"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "ally-space-difficult",
@@ -436,7 +472,8 @@
     "cites": [
       "movement-and-position > difficult-terrain",
       "movement-and-position > moving-around-other-creatures"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "move-between-attacks",
@@ -447,7 +484,8 @@
     "cites": [
       "movement-and-position > breaking-up-your-move",
       "movement-and-position > breaking-up-your-move > moving-between-attacks"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "ready-and-oa-same-round",
@@ -459,7 +497,8 @@
       "actions-in-combat > ready",
       "making-an-attack > melee-attacks > opportunity-attacks",
       "the-order-of-combat > reactions"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "surprise-one-notices",
@@ -469,7 +508,8 @@
     "ruling": "Any character or monster that doesn't notice a threat is surprised at the start of the encounter, and a member of a group can be surprised even if the other members aren't. Surprise is decided per creature, so the member who spotted the ambush is not surprised, and each member who didn't notice it is.",
     "cites": [
       "the-order-of-combat > surprise"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "flying-knocked-prone",
@@ -480,7 +520,8 @@
     "cites": [
       "movement-and-position > flying-movement",
       "the-environment > falling"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "cover-stacks",
@@ -488,7 +529,9 @@
     "status": "settled",
     "verdict": "no",
     "ruling": "If a target is behind multiple sources of cover, only the most protective degree of cover applies; the degrees aren't added together. For example, if a target is behind a creature that gives half cover and a tree trunk that gives three-quarters cover, the target has three-quarters cover. Half cover and three-quarters cover do not stack: only the three-quarters cover applies, a +5 bonus to AC and Dexterity saving throws.",
-    "cites": ["cover"],
+    "cites": [
+      "cover"
+    ],
     "split": "dev"
   },
   {
@@ -499,7 +542,8 @@
     "ruling": "Resistance halves damage of its type and vulnerability doubles it, and resistance and then vulnerability are applied after all other modifiers to damage. The rule orders the two rather than cancelling them, so the damage is halved and then doubled.",
     "cites": [
       "damage-and-healing > damage-resistance-and-vulnerability"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "temp-hp-stack-and-zero",
@@ -509,7 +553,8 @@
     "ruling": "Temporary hit points can't be added together: if you have some and receive more, you keep either the old or the new, not the sum. If you have 0 hit points, receiving temporary hit points doesn't restore you to consciousness or stabilize you, though they still absorb damage. So they don't stack, and they don't keep or bring you back to consciousness at 0 hit points.",
     "cites": [
       "damage-and-healing > temporary-hit-points"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "poisoned-twice",
@@ -520,7 +565,8 @@
     "cites": [
       "conditions > poisoned",
       "advantage-and-disadvantage"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "temp-hp-concentration",
@@ -531,7 +577,8 @@
     "cites": [
       "casting-a-spell > duration > concentration",
       "damage-and-healing > temporary-hit-points"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "one-spell-several-hits-concentration",
@@ -541,7 +588,8 @@
     "ruling": "Reading A: one. You make a separate saving throw for each source of damage, and the example sources, an arrow and a dragon's breath, are different attackers. One spell is one source, so its bolts call for one save, against the total damage. Reading B: three. Each bolt hits and deals its own damage, as separate attacks do, and each instance of damage is something you take while concentrating, so each calls for a save. Why the text does not settle it: source of damage is not defined, so the text does not say whether it means the spell or each separate hit the spell makes.",
     "cites": [
       "casting-a-spell > duration > concentration"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "grapple-as-opportunity-attack",
@@ -553,7 +601,8 @@
       "making-an-attack > melee-attacks > opportunity-attacks",
       "making-an-attack > melee-attacks > grappling",
       "making-an-attack"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "long-rest-short-fight",
@@ -563,7 +612,8 @@
     "ruling": "Reading A: no. A long rest is interrupted by a period of strenuous activity, at least 1 hour of walking, fighting, casting spells, or similar adventuring activity. The hour applies to the whole list, so a one-minute fight is far short of it and the rest continues. Reading B: yes. Fighting is not the light activity a long rest allows, which is sleeping, reading, talking, eating or standing watch; and a fight is rarely an hour long, so reading the hour onto fighting would mean fighting almost never interrupts a rest, which suggests the hour binds walking and fighting interrupts outright. Why the text does not settle it: the rule puts one duration in front of a list and does not say whether it applies to each item, and fighting is outside the allowed activities either way.",
     "cites": [
       "resting > long-rest"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "two-weapon-bonus-before-attack",
@@ -574,7 +624,8 @@
     "cites": [
       "making-an-attack > melee-attacks > two-weapon-fighting",
       "the-order-of-combat > your-turn > bonus-actions"
-    ]
+    ],
+    "split": "dev"
   },
   {
     "id": "readied-attack-extra-attack",
@@ -586,7 +637,8 @@
       "actions-in-combat > ready",
       "actions-in-combat > attack",
       "the-order-of-combat > reactions"
-    ]
+    ],
+    "split": "test"
   },
   {
     "id": "truesight-vs-invisible",
@@ -598,6 +650,46 @@
       "conditions > invisible",
       "the-environment > vision-and-light > truesight",
       "making-an-attack > unseen-attackers-and-targets"
-    ]
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "blinded-with-blindsight",
+    "question": "My character is blinded but has blindsight out to 30 feet. Do I have disadvantage attacking a goblin 10 feet away?",
+    "status": "rules-as-intended",
+    "verdict": "no",
+    "ruling": "As written, yes: the blinded condition says the creature's attack rolls have disadvantage, with no exception for a creature with blindsight. As intended, no. The condition's penalties follow from its first line, that a blinded creature can't see, and the unseen attackers rules give disadvantage for attacking a target you can't see. Blindsight lets a creature perceive its surroundings without relying on sight within its radius, so a goblin 10 feet away is perceived and the reason for the penalty is gone. Beyond 30 feet blindsight does nothing, and the disadvantage stands.",
+    "cites": [
+      "conditions > blinded",
+      "the-environment > vision-and-light > blindsight",
+      "making-an-attack > unseen-attackers-and-targets"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "own-area-spell",
+    "question": "I'm standing inside the area of my own fireball. Can I choose to leave myself out of it?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "An area spell does not pick its targets; it covers an area so it affects multiple creatures at once, and the only locations it leaves out are ones with no unblocked line from the point of origin. A sphere's area extends from its point of origin, so standing inside it puts you in the area. The targeting rules confirm the caster is not excluded: if you are in the area of effect of a spell you cast, you can target yourself. So the fireball affects you, and you can't opt out. The rule that settles who is caught, the fireball spell's own text naming each creature in its sphere, is outside the corpus.",
+    "cites": [
+      "casting-a-spell > areas-of-effect",
+      "casting-a-spell > areas-of-effect > sphere",
+      "casting-a-spell > targets > targeting-yourself"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "reaction-per-round",
+    "question": "I used my reaction on the last turn of round 1. In round 2 an enemy acts before me and walks out of my reach. Can I make an opportunity attack?",
+    "status": "rules-as-intended",
+    "verdict": "no",
+    "ruling": "As written, the text disagrees with itself. The Ready action says you can take only one reaction per round, and round 2 is a new round, so that line allows it. The reactions rule says that when you take a reaction, you can't take another one until the start of your next turn, and your next turn has not started. As intended, no: the reactions rule is the one that defines when a reaction returns, and the Ready line compresses it into a reminder. Your reaction comes back when your turn in round 2 starts, after the enemy has moved.",
+    "cites": [
+      "the-order-of-combat > reactions",
+      "actions-in-combat > ready",
+      "making-an-attack > melee-attacks > opportunity-attacks"
+    ],
+    "split": "test"
   }
 ]
