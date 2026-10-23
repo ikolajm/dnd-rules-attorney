@@ -9,7 +9,7 @@ requires-python = ">=3.12"
 dependencies = ["numpy>=2.5", "ollama>=0.6"]
 
 [project.optional-dependencies]
-dev = ["mypy", "pytest", "ruff"]
+dev = ["bm25s>=0.3", "mypy", "pytest", "ruff"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -23,4 +23,8 @@ select = ["E", "F", "W", "I", "UP", "B", "SIM"]
 [tool.mypy]
 strict = true
 files = ["src", "scripts", "tests"]
+
+[[tool.mypy.overrides]]
+module = ["bm25s", "bm25s.*"]
+ignore_missing_imports = true
 
