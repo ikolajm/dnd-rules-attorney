@@ -7,7 +7,13 @@ import ollama
 import pytest
 from numpy.typing import NDArray
 
-from rules_attorney.retrieve import embed_documents, embed_query, ollama_embed, rank
+from rules_attorney.retrieve import (
+    EMBED_BATCH,
+    embed_documents,
+    embed_query,
+    ollama_embed,
+    rank,
+)
 
 
 def test_rank_orders_by_cosine() -> None:
@@ -55,3 +61,18 @@ def test_ollama_embed_refuses_truncation(monkeypatch: pytest.MonkeyPatch) -> Non
     monkeypatch.setattr(ollama, "embed", fake)
     ollama_embed(["an entry"])
     assert calls[0].get("truncate") is False
+
+
+def test_ollama_embed_batches_in_order(monkeypatch: pytest.MonkeyPatch) -> None:
+    calls: list[dict[str, Any]] = []
+
+    def fake(**kwargs: Any) -> ollama.EmbedResponse:
+        calls.append(kwargs)
+        return ollama.EmbedResponse(embeddings=[[float(t)] for t in kwargs["input"]])
+
+    monkeypatch.setattr(ollama, "embed", fake)
+    count = 2 * EMBED_BATCH + 20
+    vectors = ollama_embed([str(i) for i in range(count)])
+    assert [len(call["input"]) for call in calls] == [EMBED_BATCH, EMBED_BATCH, 20]
+    assert all(call.get("truncate") is False for call in calls)
+    assert vectors[:, 0].tolist() == [float(i) for i in range(count)]
