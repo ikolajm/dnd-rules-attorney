@@ -9,10 +9,12 @@ from rules_attorney.corpus import (
     SECTIONS_FILE,
     SOURCES,
     CorpusError,
+    condition_entries,
     load_corpus,
     section_entries,
     slug,
     spell_entries,
+    weapon_property_entries,
 )
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
@@ -52,12 +54,14 @@ def test_section_entries_nests_headers() -> None:
         "the-root > child > grandchild",
         "the-root > sibling",
     ]
-    assert entries[1].text == "child text"
+    assert entries[1].text == "Child\nchild text"
+    assert entries[0].text == "Root Header\nroot text"
 
 
 def test_spell_entries_renders_a_bare_cantrip() -> None:
     record = {
         "index": "spark",
+        "name": "Spark",
         "level": 0,
         "school": {"index": "evocation", "name": "Evocation"},
         "casting_time": "1 action",
@@ -71,6 +75,8 @@ def test_spell_entries_renders_a_bare_cantrip() -> None:
     entries = spell_entries(record)
     assert [e.path for e in entries] == ["spells > spark"]
     assert entries[0].text == (
+        "Spark\n"
+        "\n"
         "Level: cantrip\n"
         "School: Evocation\n"
         "Casting time: 1 action\n"
@@ -89,6 +95,7 @@ def test_spell_entries_renders_a_bare_cantrip() -> None:
 def test_spell_entries_renders_material_and_higher_levels() -> None:
     record = {
         "index": "salt-ward",
+        "name": "Salt Ward",
         "level": 2,
         "school": {"index": "abjuration", "name": "Abjuration"},
         "casting_time": "1 minute",
@@ -104,6 +111,8 @@ def test_spell_entries_renders_material_and_higher_levels() -> None:
     entries = spell_entries(record)
     assert [e.path for e in entries] == ["spells > salt-ward"]
     assert entries[0].text == (
+        "Salt Ward\n"
+        "\n"
         "Level: 2\n"
         "School: Abjuration\n"
         "Casting time: 1 minute\n"
@@ -145,3 +154,25 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
 def test_committed_corpus_holds_known_paths(path: str) -> None:
     paths = {e.path for e in load_corpus(DATA)}
     assert path in paths
+
+
+def test_weapon_property_entries_opens_with_its_name() -> None:
+    record = {
+        "index": "hefty",
+        "name": "Hefty",
+        "desc": ["First paragraph.", "Second paragraph."],
+    }
+    entries = weapon_property_entries(record)
+    assert [e.path for e in entries] == ["weapon-properties > hefty"]
+    assert entries[0].text == "Hefty\n\nFirst paragraph.\n\nSecond paragraph."
+
+
+def test_condition_entries_opens_with_its_name() -> None:
+    record = {
+        "index": "dazed",
+        "name": "Dazed",
+        "desc": ["- First effect.", "- Second effect."],
+    }
+    entries = condition_entries(record)
+    assert [e.path for e in entries] == ["conditions > dazed"]
+    assert entries[0].text == "Dazed\n\n- First effect.\n\n- Second effect."
