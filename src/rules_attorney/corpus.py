@@ -42,15 +42,15 @@ def section_entries(record: dict[str, Any]) -> list[Entry]:
     stack: list[tuple[int, str]] = []
     found: list[tuple[str, list[str]]] = []
     for line in desc.splitlines():
-        m = re.match(r"^(#+)\s+(.*)$", line)
-        if m:
-            level = len(m.group(1))
+        header = re.match(r"^(?P<hashes>#+)\s+(?P<text>.*)$", line)
+        if header:
+            level = len(header["hashes"])
             if not stack:
                 stack.append((level, index))
             else:
                 while len(stack) > 1 and stack[-1][0] >= level:
                     stack.pop()
-                stack.append((level, slug(m.group(2))))
+                stack.append((level, slug(header["text"])))
             path = " > ".join(step for _, step in stack)
             found.append((path, []))
         elif found:
