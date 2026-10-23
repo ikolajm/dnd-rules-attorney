@@ -42,17 +42,17 @@ def section_entries(record: dict[str, Any]) -> list[Entry]:
     stack: list[tuple[int, str]] = []
     found: list[tuple[str, list[str]]] = []
     for line in desc.splitlines():
-        m = re.match(r"^(#+)\s+(.*)$", line)
-        if m:
-            level = len(m.group(1))
+        header = re.match(r"^(?P<hashes>#+)\s+(?P<text>.*)$", line)
+        if header:
+            level = len(header["hashes"])
             if not stack:
                 stack.append((level, index))
             else:
                 while len(stack) > 1 and stack[-1][0] >= level:
                     stack.pop()
-                stack.append((level, slug(m.group(2))))
+                stack.append((level, slug(header["text"])))
             path = " > ".join(step for _, step in stack)
-            found.append((path, []))
+            found.append((path, [header["text"]]))
         elif found:
             found[-1][1].append(line)
     return [Entry(path, "\n".join(lines).strip()) for path, lines in found]
@@ -62,8 +62,9 @@ def condition_entries(record: dict[str, Any]) -> list[Entry]:
     """Make the single entry for one condition, cited whole."""
     index: str = record["index"]
     desc: list[str] = record["desc"]
+    name: str = record["name"]
     path = f"conditions > {index}"
-    text = "\n\n".join(desc)
+    text = "\n\n".join([name, *desc])
     return [Entry(path=path, text=text)]
 
 
@@ -71,14 +72,16 @@ def weapon_property_entries(record: dict[str, Any]) -> list[Entry]:
     """Make the single entry for one weapon property, cited whole."""
     index: str = record["index"]
     desc: list[str] = record["desc"]
+    name: str = record["name"]
     path = f"weapon-properties > {index}"
-    text = "\n\n".join(desc)
+    text = "\n\n".join([name, *desc])
     return [Entry(path=path, text=text)]
 
 
 def spell_entries(record: dict[str, Any]) -> list[Entry]:
-    """Make the single entry for one spell, its fields as lines above its text."""
+    """Make the single entry for one spell, the spell's name, then fields, then text."""
     index: str = record["index"]
+    name: str = record["name"]
     desc: list[str] = record["desc"]
     path = f"spells > {index}"
 
@@ -98,7 +101,7 @@ def spell_entries(record: dict[str, Any]) -> list[Entry]:
     lines.append(f"Concentration: {'yes' if record['concentration'] else 'no'}")
     lines.append(f"Ritual: {'yes' if record['ritual'] else 'no'}")
 
-    blocks: list[str] = ["\n".join(lines), "\n\n".join(desc)]
+    blocks: list[str] = [name, "\n".join(lines), "\n\n".join(desc)]
     higher: list[str] | None = record.get("higher_level")
     if higher:
         blocks.append("At Higher Levels. " + "\n\n".join(higher))

@@ -1,8 +1,12 @@
 ## the-order-of-combat
 
+The Order of Combat
+
 A typical combat encounter is a clash between two sides, a flurry of weapon swings, feints, parries, footwork, and spellcasting. The game organizes the chaos of combat into a cycle of rounds and turns. A **round** represents about 6 seconds in the game world. During a round, each participant in a battle takes a **turn**. The order of turns is determined at the beginning of a combat encounter, when everyone rolls initiative. Once everyone has taken a turn, the fight continues to the next round if neither side has defeated the other.
 
 ## the-order-of-combat > combat-step-by-step
+
+Combat Step by Step
 
 1.  **Determine surprise.** The GM determines whether anyone involved in the combat encounter is surprised.
 2.  **Establish positions.** The GM decides where all the characters and monsters are located. Given the adventurers' marching order or their stated positions in the room or other location, the GM figures out where the adversaries are/how far away and in what direction.
@@ -12,6 +16,8 @@ A typical combat encounter is a clash between two sides, a flurry of weapon swin
 
 ## the-order-of-combat > surprise
 
+Surprise
+
 A band of adventurers sneaks up on a bandit camp, springing from the trees to attack them. A gelatinous cube glides down a dungeon passage, unnoticed by the adventurers until the cube engulfs one of them. In these situations, one side of the battle gains surprise over the other.
 
 The GM determines who might be surprised. If neither side tries to be stealthy, they automatically notice each other. Otherwise, the GM compares the Dexterity (Stealth) checks of anyone hiding with the passive Wisdom (Perception) score of each creature on the opposing side. Any character or monster that doesn't notice a threat is surprised at the start of the encounter.
@@ -20,6 +26,8 @@ If you're surprised, you can't move or take an action on your first turn of the 
 
 ## the-order-of-combat > initiative
 
+Initiative
+
 Initiative determines the order of turns during combat. When combat starts, every participant makes a Dexterity check to determine their place in the initiative order. The GM makes one roll for an entire group of identical creatures, so each member of the group acts at the same time.
 
 The GM ranks the combatants in order from the one with the highest Dexterity check total to the one with the lowest. This is the order (called the initiative order) in which they act during each round. The initiative order remains the same from round to round.
@@ -27,6 +35,8 @@ The GM ranks the combatants in order from the one with the highest Dexterity che
 If a tie occurs, the GM decides the order among tied GM-controlled creatures, and the players decide the order among their tied characters. The GM can decide the order if the tie is between a monster and a player character. Optionally, the GM can have the tied characters and monsters each roll a d20 to determine the order, highest roll going first.
 
 ## the-order-of-combat > your-turn
+
+Your Turn
 
 On your turn, you can **move** a distance up to your speed and **take one action**. You decide whether to move first or take your action first. Your speed--sometimes called your walking speed--is noted on your character sheet.
 
@@ -38,6 +48,8 @@ You can forgo moving, taking an action, or doing anything at all on your turn. I
 
 ## the-order-of-combat > your-turn > bonus-actions
 
+Bonus Actions
+
 Various class features, spells, and other abilities let you take an additional action on your turn called a bonus action. The Cunning Action feature, for example, allows a rogue to take a bonus action. You can take a bonus action only when a special ability, spell, or other feature of the game states that you can do something as a bonus action. You otherwise don't have a bonus action to take.
 
 You can take only one bonus action on your turn, so you must choose which bonus action to use when you have more than one available.
@@ -45,6 +57,8 @@ You can take only one bonus action on your turn, so you must choose which bonus 
 You choose when to take a bonus action during your turn, unless the bonus action's timing is specified, and anything that deprives you of your ability to take actions also prevents you from taking a bonus action.
 
 ## the-order-of-combat > your-turn > other-activity-on-your-turn
+
+Other Activity on Your Turn
 
 Your turn can include a variety of flourishes that require neither your action nor your move.
 
@@ -58,11 +72,15 @@ The GM might require you to use an action for any of these activities when it ne
 
 ## the-order-of-combat > reactions
 
+Reactions
+
 Certain special abilities, spells, and situations allow you to take a special action called a reaction. A reaction is an instant response to a trigger of some kind, which can occur on your turn or on someone else's. The opportunity attack, described later in this chapter, is the most common type of reaction.
 
 When you take a reaction, you can't take another one until the start of your next turn. If the reaction interrupts another creature's turn, that creature can continue its turn right after the reaction.
 
 ## movement-and-position
+
+Movement and Position
 
 In combat, characters and monsters are in constant motion, often using movement and position to gain the upper hand.
 
@@ -72,19 +90,27 @@ Your movement can include jumping, climbing, and swimming. These different modes
 
 ## movement-and-position > breaking-up-your-move
 
+Breaking Up Your Move
+
 You can break up your movement on your turn, using some of your speed before and after your action. For example, if you have a speed of 30 feet, you can move 10 feet, take your action, and then move 20 feet.
 
 ## movement-and-position > breaking-up-your-move > moving-between-attacks
 
+Moving between Attacks
+
 If you take an action that includes more than one weapon attack, you can break up your movement even further by moving between those attacks. For example, a fighter who can make two attacks with the Extra Attack feature and who has a speed of 25 feet could move 10 feet, make an attack, move 15 feet, and then attack again.
 
 ## movement-and-position > breaking-up-your-move > using-different-speeds
+
+Using Different Speeds
 
 If you have more than one speed, such as your walking speed and a flying speed, you can switch back and forth between your speeds during your move. Whenever you switch, subtract the distance you've already moved from the new speed. The result determines how much farther you can move. If the result is 0 or less, you can't use the new speed during the current move.
 
 For example, if you have a speed of 30 and a flying speed of 60 because a wizard cast the *fly* spell on you, you could fly 20 feet, then walk 10 feet, and then leap into the air to fly 30 feet more.
 
 ## movement-and-position > difficult-terrain
+
+Difficult Terrain
 
 Combat rarely takes place in bare rooms or on featureless plains. Boulder-strewn caverns, briar-choked forests, treacherous staircases-the setting of a typical fight contains difficult terrain.
 
@@ -93,6 +119,8 @@ Every foot of movement in difficult terrain costs 1 extra foot. This rule is tru
 Low furniture, rubble, undergrowth, steep stairs, snow, and shallow bogs are examples of difficult terrain. The space of another creature, whether hostile or not, also counts as difficult terrain.
 
 ## movement-and-position > being-prone
+
+Being Prone
 
 Combatants often find themselves lying on the ground, either because they are knocked down or because they throw themselves down. In the game, they are prone, a condition described in appendix PH-A.
 
@@ -104,6 +132,8 @@ To move while prone, you must **crawl** or use magic such as teleportation. Ever
 
 ## movement-and-position > moving-around-other-creatures
 
+Moving Around Other Creatures
+
 You can move through a nonhostile creature's space. In contrast, you can move through a hostile creature's space only if the creature is at least two sizes larger or smaller than you. Remember that another creature's space is difficult terrain for you.
 
 Whether a creature is a friend or an enemy, you can't willingly end your move in its space.
@@ -112,13 +142,19 @@ If you leave a hostile creature's reach during your move, you provoke an opportu
 
 ## movement-and-position > flying-movement
 
+Flying Movement
+
 Flying creatures enjoy many benefits of mobility, but they must also deal with the danger of falling. If a flying creature is knocked prone, has its speed reduced to 0, or is otherwise deprived of the ability to move, the creature falls, unless it has the ability to hover or it is being held aloft by magic, such as by the *fly* spell.
 
 ## movement-and-position > creature-size
 
+Creature Size
+
 Each creature takes up a different amount of space. The Size Categories table shows how much space a creature of a particular size controls in combat. Objects sometimes use the same size categories.
 
 ## movement-and-position > creature-size > size-categories
+
+Size Categories
 
 | Size       | Space                  |
 |------------|------------------------|
@@ -131,6 +167,8 @@ Each creature takes up a different amount of space. The Size Categories table sh
 
 ## movement-and-position > creature-size > space
 
+Space
+
 A creature's space is the area in feet that it effectively controls in combat, not an expression of its physical dimensions. A typical Medium creature isn't 5 feet wide, for example, but it does control a space that wide. If a Medium hobgoblin stands in a 5-foot-wide doorway, other creatures can't get through unless the hobgoblin lets them.
 
 A creature's space also reflects the area it needs to fight effectively. For that reason, there's a limit to the number of creatures that can surround another creature in combat. Assuming Medium combatants, eight creatures can fit in a 5-foot radius around another one.
@@ -139,9 +177,13 @@ Because larger creatures take up more space, fewer of them can surround a creatu
 
 ## movement-and-position > creature-size > squeezing-into-a-smaller-space
 
+Squeezing into a Smaller Space
+
 A creature can squeeze through a space that is large enough for a creature one size smaller than it. Thus, a Large creature can squeeze through a passage that's only 5 feet wide. While squeezing through a space, a creature must spend 1 extra foot for every foot it moves there, and it has disadvantage on attack rolls and Dexterity saving throws. Attack rolls against the creature have advantage while it's in the smaller space.
 
 ## movement-and-position > interacting-with-objects-around-you
+
+Interacting with Objects Around You
 
 Here are a few examples of the sorts of thing you can do in tandem with your movement and action:
 - draw or sheathe a sword
@@ -168,11 +210,15 @@ Here are a few examples of the sorts of thing you can do in tandem with your mov
 
 ## actions-in-combat
 
+Actions in Combat
+
 When you take your action on your turn, you can take one of the actions presented here, an action you gained from your class or a special feature, or an action that you improvise. Many monsters have action options of their own in their stat blocks.
 
 When you describe an action not detailed elsewhere in the rules, the GM tells you whether that action is possible and what kind of roll you need to make, if any, to determine success or failure.
 
 ## actions-in-combat > attack
+
+Attack
 
 The most common action to take in combat is the Attack action, whether you are swinging a sword, firing an arrow from a bow, or brawling with your fists.
 
@@ -182,9 +228,13 @@ Certain features, such as the Extra Attack feature of the fighter, allow you to 
 
 ## actions-in-combat > cast-a-spell
 
+Cast a Spell
+
 Spellcasters such as wizards and clerics, as well as many monsters, have access to spells and can use them to great effect in combat. Each spell has a casting time, which specifies whether the caster must use an action, a reaction, minutes, or even hours to cast the spell. Casting a spell is, therefore, not necessarily an action. Most spells do have a casting time of 1 action, so a spellcaster often uses his or her action in combat to cast such a spell.
 
 ## actions-in-combat > dash
+
+Dash
 
 When you take the Dash action, you gain extra movement for the current turn. The increase equals your speed, after applying any modifiers. With a speed of 30 feet, for example, you can move up to 60 feet on your turn if you dash.
 
@@ -192,13 +242,19 @@ Any increase or decrease to your speed changes this additional movement by the s
 
 ## actions-in-combat > disengage
 
+Disengage
+
 If you take the Disengage action, your movement doesn't provoke opportunity attacks for the rest of the turn.
 
 ## actions-in-combat > dodge
 
+Dodge
+
 When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage. You lose this benefit if you are incapacitated (as explained in appendix PH-A) or if your speed drops to 0.
 
 ## actions-in-combat > help
+
+Help
 
 You can lend your aid to another creature in the completion of a task. When you take the Help action, the creature you aid gains advantage on the next ability check it makes to perform the task you are helping with, provided that it makes the check before the start of your next turn.
 
@@ -206,9 +262,13 @@ Alternatively, you can aid a friendly creature in attacking a creature within 5 
 
 ## actions-in-combat > hide
 
+Hide
+
 When you take the Hide action, you make a Dexterity (Stealth) check in an attempt to hide, following the rules for hiding. If you succeed, you gain certain benefits, as described in the "Unseen Attackers and Targets" section later in this chapter.
 
 ## actions-in-combat > ready
+
+Ready
 
 Sometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn, which lets you act using your reaction before the start of your next turn.
 
@@ -220,13 +280,19 @@ When you ready a spell, you cast it as normal but hold its energy, which you rel
 
 ## actions-in-combat > search
 
+Search
+
 When you take the Search action, you devote your attention to finding something. Depending on the nature of your search, the GM might have you make a Wisdom (Perception) check or an Intelligence (Investigation) check.
 
 ## actions-in-combat > use-an-object
 
+Use an Object
+
 You normally interact with an object while doing something else, such as when you draw a sword as part of an attack. When an object requires your action for its use, you take the Use an Object action. This action is also useful when you want to interact with more than one object on your turn.
 
 ## making-an-attack
+
+Making an Attack
 
 Whether you're striking with a melee weapon, firing a weapon at range, or making an attack roll as part of a spell, an attack has a simple structure.
 
@@ -238,9 +304,13 @@ If there's ever any question whether something you're doing counts as an attack,
 
 ## making-an-attack > attack-rolls
 
+Attack Rolls
+
 When you make an attack, your attack roll determines whether the attack hits or misses. To make an attack roll, roll a d20 and add the appropriate modifiers. If the total of the roll plus modifiers equals or exceeds the target's Armor Class (AC), the attack hits. The AC of a character is determined at character creation, whereas the AC of a monster is in its stat block.
 
 ## making-an-attack > attack-rolls > modifiers-to-the-roll
+
+Modifiers to the Roll
 
 When a character makes an attack roll, the two most common modifiers to the roll are an ability modifier and the character's proficiency bonus. When a monster makes an attack roll, it uses whatever modifier is provided in its stat block.
 
@@ -252,6 +322,8 @@ Some spells also require an attack roll. The ability modifier used for a spell a
 
 ## making-an-attack > attack-rolls > rolling-1-or-20
 
+Rolling 1 or 20
+
 Sometimes fate blesses or curses a combatant, causing the novice to hit and the veteran to miss.
 
 If the d20 roll for an attack is a 20, the attack hits regardless of any modifiers or the target's AC. This is called a critical hit, which is explained later in this chapter.
@@ -259,6 +331,8 @@ If the d20 roll for an attack is a 20, the attack hits regardless of any modifie
 If the d20 roll for an attack is a 1, the attack misses regardless of any modifiers or the target's AC.
 
 ## making-an-attack > unseen-attackers-and-targets
+
+Unseen Attackers and Targets
 
 Combatants often try to escape their foes' notice by hiding, casting the invisibility spell, or lurking in darkness.
 
@@ -268,9 +342,13 @@ When a creature can't see you, you have advantage on attack rolls against it. If
 
 ## making-an-attack > ranged-attacks
 
+Ranged Attacks
+
 When you make a ranged attack, you fire a bow or a crossbow, hurl a handaxe, or otherwise send projectiles to strike a foe at a distance. A monster might shoot spines from its tail. Many spells also involve making a ranged attack.
 
 ## making-an-attack > ranged-attacks > range
+
+Range
 
 You can make ranged attacks only against targets within a specified range.
 
@@ -280,9 +358,13 @@ Some ranged attacks, such as those made with a longbow or a shortbow, have two r
 
 ## making-an-attack > ranged-attacks > ranged-attacks-in-close-combat
 
+Ranged Attacks in Close Combat
+
 Aiming a ranged attack is more difficult when a foe is next to you. When you make a ranged attack with a weapon, a spell, or some other means, you have disadvantage on the attack roll if you are within 5 feet of a hostile creature who can see you and who isn't incapacitated.
 
 ## making-an-attack > melee-attacks
+
+Melee Attacks
 
 Used in hand-to-hand combat, a melee attack allows you to attack a foe within your reach. A melee attack typically uses a handheld weapon such as a sword, a warhammer, or an axe. A typical monster makes a melee attack when it strikes with its claws, horns, teeth, tentacles, or other body part. A few spells also involve making a melee attack.
 
@@ -292,6 +374,8 @@ Instead of using a weapon to make a melee weapon attack, you can use an **unarme
 
 ## making-an-attack > melee-attacks > opportunity-attacks
 
+Opportunity Attacks
+
 In a fight, everyone is constantly watching for a chance to strike an enemy who is fleeing or passing by. Such a strike is called an opportunity attack.
 
 You can make an opportunity attack when a hostile creature that you can see moves out of your reach. To make the opportunity attack, you use your reaction to make one melee attack against the provoking creature. The attack occurs right before the creature leaves your reach.
@@ -300,15 +384,21 @@ You can avoid provoking an opportunity attack by taking the Disengage action. Yo
 
 ## making-an-attack > melee-attacks > two-weapon-fighting
 
+Two-Weapon Fighting
+
 When you take the Attack action and attack with a light melee weapon that you're holding in one hand, you can use a bonus action to attack with a different light melee weapon that you're holding in the other hand. You don't add your ability modifier to the damage of the bonus attack, unless that modifier is negative.
 
 If either weapon has the thrown property, you can throw the weapon, instead of making a melee attack with it.
 
 ## making-an-attack > melee-attacks > contests-in-combat
 
+Contests in Combat
+
 Battle often involves pitting your prowess against that of your foe. Such a challenge is represented by a contest. This section includes the most common contests that require an action in combat: grappling and shoving a creature. The GM can use these contests as models for improvising others.
 
 ## making-an-attack > melee-attacks > grappling
+
+Grappling
 
 When you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.
 
@@ -321,11 +411,15 @@ The target of your grapple must be no more than one size larger than you and mus
 
 ## making-an-attack > melee-attacks > shoving-a-creature
 
+Shoving a Creature
+
 Using the Attack action, you can make a special melee attack to shove a creature, either to knock it prone or push it away from you. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.
 
 The target must be no more than one size larger than you and must be within your reach. Instead of making an attack roll, you make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you win the contest, you either knock the target prone or push it 5 feet away from you.
 
 ## cover
+
+Cover
 
 Walls, trees, creatures, and other obstacles can provide cover during combat, making a target more difficult to harm. A target can benefit from cover only when an attack or other effect originates on the opposite side of the cover.
 
@@ -339,9 +433,13 @@ A target with **total cover** can't be targeted directly by an attack or a spell
 
 ## damage-and-healing
 
+Damage and Healing
+
 Injury and the risk of death are constant companions of those who explore fantasy gaming worlds. The thrust of a sword, a well-placed arrow, or a blast of flame from a *fireball* spell all have the potential to damage, or even kill, the hardiest of creatures.
 
 ## damage-and-healing > hit-points
+
+Hit Points
 
 Hit points represent a combination of physical and mental durability, the will to live, and luck. Creatures with more hit points are more difficult to kill. Those with fewer hit points are more fragile.
 
@@ -351,6 +449,8 @@ Whenever a creature takes damage, that damage is subtracted from its hit points.
 
 ## damage-and-healing > damage-rolls
 
+Damage Rolls
+
 Each weapon, spell, and harmful monster ability specifies the damage it deals. You roll the damage die or dice, add any modifiers, and apply the damage to your target. Magic weapons, special abilities, and other factors can grant a bonus to damage. With a penalty, it is possible to deal 0 damage, but never negative damage.
 
 When attacking with a **weapon**, you add your ability modifier-the same modifier used for the attack roll-to the damage. A **spell** tells you which dice to roll for damage and whether to add any modifiers.
@@ -359,11 +459,15 @@ If a spell or other effect deals damage to **more** **than one target** at the s
 
 ## damage-and-healing > damage-rolls > critical-hits
 
+Critical Hits
+
 When you score a critical hit, you get to roll extra dice for the attack's damage against the target. Roll all of the attack's damage dice twice and add them together. Then add any relevant modifiers as normal. To speed up play, you can roll all the damage dice at once.
 
 For example, if you score a critical hit with a dagger, roll 2d4 for the damage, rather than 1d4, and then add your relevant ability modifier. If the attack involves other damage dice, such as from the rogue's Sneak Attack feature, you roll those dice twice as well.
 
 ## damage-and-healing > damage-rolls > damage-types
+
+Damage Types
 
 Different attacks, damaging spells, and other harmful effects deal different types of damage. Damage types have no rules of their own, but other rules, such as damage resistance, rely on the types.
 
@@ -397,6 +501,8 @@ The damage types follow, with examples to help a GM assign a damage type to a ne
 
 ## damage-and-healing > damage-resistance-and-vulnerability
 
+Damage Resistance and Vulnerability
+
 Some creatures and objects are exceedingly difficult or unusually easy to hurt with certain types of damage.
 
 If a creature or an object has **resistance** to a damage type, damage of that type is halved against it. If a creature or an object has **vulnerability** to a damage type, damage of that type is doubled against it.
@@ -407,6 +513,8 @@ Multiple instances of resistance or vulnerability that affect the same damage ty
 
 ## damage-and-healing > healing
 
+Healing
+
 Unless it results in death, damage isn't permanent. Even death is reversible through powerful magic. Rest can restore a creature's hit points, and magical methods such as a *cure wounds* spell or a *potion of healing* can remove damage in an instant.
 
 When a creature receives healing of any kind, hit points regained are added to its current hit points. A creature's hit points can't exceed its hit point maximum, so any hit points regained in excess of this number are lost. For example, a druid grants a ranger 8 hit points of healing. If the ranger has 14 current hit points and has a hit point maximum of 20, the ranger regains 6 hit points from the druid, not 8.
@@ -415,9 +523,13 @@ A creature that has died can't regain hit points until magic such as the *revivi
 
 ## damage-and-healing > dropping-to-0-hit-points
 
+Dropping to 0 Hit Points
+
 When you drop to 0 hit points, you either die outright or fall unconscious, as explained in the following sections.
 
 ## damage-and-healing > dropping-to-0-hit-points > instant-death
+
+Instant Death
 
 Massive damage can kill you instantly. When damage reduces you to 0 hit points and there is damage remaining, you die if the remaining damage equals or exceeds your hit point maximum.
 
@@ -425,9 +537,13 @@ For example, a cleric with a maximum of 12 hit points currently has 6 hit points
 
 ## damage-and-healing > dropping-to-0-hit-points > falling-unconscious
 
+Falling Unconscious
+
 If damage reduces you to 0 hit points and fails to kill you, you fall unconscious (see appendix PH-A). This unconsciousness ends if you regain any hit points.
 
 ## damage-and-healing > dropping-to-0-hit-points > death-saving-throws
+
+Death Saving Throws
 
 Whenever you start your turn with 0 hit points, you must make a special saving throw, called a death saving throw, to determine whether you creep closer to death or hang onto life. Unlike other saving throws, this one isn't tied to any ability score. You are in the hands of fate now, aided only by spells and features that improve your chances of succeeding on a saving throw.
 
@@ -439,6 +555,8 @@ Roll a d20. If the roll is 10 or higher, you succeed. Otherwise, you fail. A suc
 
 ## damage-and-healing > dropping-to-0-hit-points > stabilizing-a-creature
 
+Stabilizing a Creature
+
 The best way to save a creature with 0 hit points is to heal it. If healing is unavailable, the creature can at least be stabilized so that it isn't killed by a failed death saving throw.
 
 You can use your action to administer first aid to an unconscious creature and attempt to stabilize it, which requires a successful DC 10 Wisdom (Medicine) check.
@@ -447,15 +565,21 @@ A **stable** creature doesn't make death saving throws, even though it has 0 hit
 
 ## damage-and-healing > dropping-to-0-hit-points > monsters-and-death
 
+Monsters and Death
+
 Most GMs have a monster die the instant it drops to 0 hit points, rather than having it fall unconscious and make death saving throws.
 
 Mighty villains and special nonplayer characters are common exceptions; the GM might have them fall unconscious and follow the same rules as player characters.
 
 ## damage-and-healing > knocking-a-creature-out
 
+Knocking a Creature Out
+
 Sometimes an attacker wants to incapacitate a foe, rather than deal a killing blow. When an attacker reduces a creature to 0 hit points with a melee attack, the attacker can knock the creature out. The attacker can make this choice the instant the damage is dealt. The creature falls unconscious and is stable.
 
 ## damage-and-healing > temporary-hit-points
+
+Temporary Hit Points
 
 Some spells and special abilities confer temporary hit points to a creature. Temporary hit points aren't actual hit points; they are a buffer against damage, a pool of hit points that protect you from injury.
 
@@ -471,11 +595,15 @@ Unless a feature that grants you temporary hit points has a duration, they last 
 
 ## mounted-combat
 
+Mounted Combat
+
 A knight charging into battle on a warhorse, a wizard casting spells from the back of a griffon, or a cleric soaring through the sky on a pegasus all enjoy the benefits of speed and mobility that a mount can provide.
 
 A willing creature that is at least one size larger than you and that has an appropriate anatomy can serve as a mount, using the following rules.
 
 ## mounted-combat > mounting-and-dismounting
+
+Mounting and Dismounting
 
 Once during your move, you can mount a creature that is within 5 feet of you or dismount. Doing so costs an amount of movement equal to half your speed. For example, if your speed is 30 feet, you must spend 15 feet of movement to mount a horse. Therefore, you can't mount it if you don't have 15 feet of movement left or if your speed is 0.
 
@@ -484,6 +612,8 @@ If an effect moves your mount against its will while you're on it, you must succ
 If your mount is knocked prone, you can use your reaction to dismount it as it falls and land on your feet. Otherwise, you are dismounted and fall prone in a space within 5 feet it.
 
 ## mounted-combat > controlling-a-mount
+
+Controlling a Mount
 
 While you're mounted, you have two options. You can either control the mount or allow it to act independently. Intelligent creatures, such as dragons, act independently.
 
@@ -495,6 +625,8 @@ In either case, if the mount provokes an opportunity attack while you're on it, 
 
 ## underwater-combat
 
+Underwater Combat
+
 When adventurers pursue sahuagin back to their undersea homes, fight off sharks in an ancient shipwreck, or find themselves in a flooded dungeon room, they must fight in a challenging environment. Underwater the following rules apply.
 
 When making a **melee weapon attack**, a creature that doesn't have a swimming speed (either natural or granted by magic) has disadvantage on the attack roll unless the weapon is a dagger, javelin, shortsword, spear, or trident.
@@ -504,6 +636,8 @@ A **ranged weapon attack** automatically misses a target beyond the weapon's nor
 Creatures and objects that are fully immersed in water have resistance to fire damage.
 
 ## ability-scores-and-modifiers
+
+Ability Scores and Modifiers
 
 | Score | Modifier |
 |-------|----------|
@@ -530,6 +664,8 @@ Because ability modifiers affect almost every attack roll, ability check, and sa
 
 ## advantage-and-disadvantage
 
+Advantage and Disadvantage
+
 Sometimes a special ability or spell tells you that you have advantage or disadvantage on an ability check, a saving throw, or an attack roll. When that happens, you roll a second d20 when you make the roll. Use the higher of the two rolls if you have advantage, and use the lower roll if you have disadvantage. For example, if you have disadvantage and roll a 17 and a 5, you use the 5. If you instead have advantage and roll those numbers, you use the 17.
 
 If multiple situations affect a roll and each one grants advantage or imposes disadvantage on it, you don't roll more than one additional d20. If two favorable situations grant advantage, for example, you still roll only one additional d20.
@@ -544,6 +680,8 @@ GM can also decide that circumstances influence a roll in one direction or the o
 
 ## proficiency-bonus
 
+Proficiency Bonus
+
 Characters have a proficiency bonus determined by level. Monsters also have this bonus, which is incorporated in their stat blocks. The bonus is used in the rules on ability checks, saving throws, and attack rolls.
 
 Your proficiency bonus can't be added to a single die roll or other number more than once. For example, if two different rules say you can add your proficiency bonus to a Wisdom saving throw, you nevertheless add the bonus only once when you make the save.
@@ -556,6 +694,8 @@ In general, you don't multiply your proficiency bonus for attack rolls or saving
 
 ## ability-checks
 
+Ability Checks
+
 An ability check tests a character's or monster's innate talent and training in an effort to overcome a challenge. The GM calls for an ability check when a character or monster attempts an action (other than an attack) that has a chance of failure. When the outcome is uncertain, the dice determine the results.
 
 For every ability check, the GM decides which of the six abilities is relevant to the task at hand and the difficulty of the task, represented by a Difficulty Class.
@@ -563,6 +703,8 @@ For every ability check, the GM decides which of the six abilities is relevant t
 The more difficult a task, the higher its DC. The Typical Difficulty Classes table shows the most common DCs.
 
 ## ability-checks > typical-difficulty-classes
+
+Typical Difficulty Classes
 
 | Task Difficulty   | DC |
 |-------------------|----|
@@ -577,6 +719,8 @@ To make an ability check, roll a d20 and add the relevant ability modifier. As w
 
 ## ability-checks > contests
 
+Contests
+
 Sometimes one character's or monster's efforts are directly opposed to another's. This can occur when both of them are trying to do the same thing and only one can succeed, such as attempting to snatch up a magic ring that has fallen on the floor. This situation also applies when one of them is trying to prevent the other one from accomplishing a goal--for example, when a monster tries to force open a door that an adventurer is holding closed. In situations like these, the outcome is determined by a special form of ability check, called a contest.
 
 Both participants in a contest make ability checks appropriate to their efforts. They apply all appropriate bonuses and penalties, but instead of comparing the total to a DC, they compare the totals of their two checks. The participant with the higher check total wins the contest. That character or monster either succeeds at the action or prevents the other one from succeeding.
@@ -584,6 +728,8 @@ Both participants in a contest make ability checks appropriate to their efforts.
 If the contest results in a tie, the situation remains the same as it was before the contest. Thus, one contestant might win the contest by default. If two characters tie in a contest to snatch a ring off the floor, neither character grabs it. In a contest between a monster trying to open a door and an adventurer trying to keep the door closed, a tie means that the door remains shut.
 
 ## ability-checks > skills
+
+Skills
 
 Each ability covers a broad range of capabilities, including skills that a character or a monster can be proficient in. A skill represents a specific aspect of an ability score, and an individual's proficiency in a skill demonstrates a focus on that aspect. (A character's starting skill proficiencies are determined at character creation, and a monster's skill proficiencies appear in the monster's stat block.)
 
@@ -593,16 +739,19 @@ The skills related to each ability score are shown in the following list. (No sk
 
 ## ability-checks > skills > strength
 
+Strength
 - Athletics
 
 ## ability-checks > skills > dexterity
 
+Dexterity
 - Acrobatics
 - Sleight of Hand
 - Stealth
 
 ## ability-checks > skills > intelligence
 
+Intelligence
 - Arcana
 - History
 - Investigation
@@ -611,6 +760,7 @@ The skills related to each ability score are shown in the following list. (No sk
 
 ## ability-checks > skills > wisdom
 
+Wisdom
 - Animal Handling
 - Insight
 - Medicine
@@ -619,6 +769,7 @@ The skills related to each ability score are shown in the following list. (No sk
 
 ## ability-checks > skills > charisma
 
+Charisma
 - Deception
 - Intimidation
 - Performance
@@ -630,9 +781,13 @@ For example, if a character attempts to climb up a dangerous cliff, the GM might
 
 ## ability-checks > skills > variant-skills-with-different-abilities
 
+Variant: Skills with Different Abilities
+
 Normally, your proficiency in a skill applies only to a specific kind of ability check. Proficiency in Athletics, for example, usually applies to Strength checks. In some situations, though, your proficiency might reasonably apply to a different kind of check. In such cases, the GM might ask for a check using an unusual combination of ability and skill, or you might ask your GM if you can apply a proficiency to a different check. For example, if you have to swim from an offshore island to the mainland, your GM might call for a Constitution check to see if you have the stamina to make it that far. In this case, your GM might allow you to apply your proficiency in Athletics and ask for a Constitution (Athletics) check. So if you're proficient in Athletics, you apply your proficiency bonus to the Constitution check just as you would normally do for a Strength (Athletics) check. Similarly, when your half-orc barbarian uses a display of raw strength to intimidate an enemy, your GM might ask for a Strength (Intimidation) check, even though Intimidation is normally associated with Charisma.
 
 ## ability-checks > passive-checks
+
+Passive Checks
 
 A passive check is a special kind of ability check that doesn't involve any die rolls. Such a check can represent the average result for a task done repeatedly, such as searching for secret doors over and over again, or can be used when the GM wants to secretly determine whether the characters succeed at something without rolling dice, such as noticing a hidden monster.
 
@@ -648,11 +803,15 @@ The rules on hiding in the "Dexterity" section below rely on passive checks, as 
 
 ## ability-checks > working-together
 
+Working Together
+
 Sometimes two or more characters team up to attempt a task. The character who's leading the effort-or the one with the highest ability modifier-can make an ability check with advantage, reflecting the help provided by the other characters. In combat, this requires the Help action.
 
 A character can only provide help if the task is one that he or she could attempt alone. For example, trying to open a lock requires proficiency with thieves' tools, so a character who lacks that proficiency can't help another character in that task. Moreover, a character can help only when two or more individuals working together would actually be productive. Some tasks, such as threading a needle, are no easier with help.
 
 ## ability-checks > working-together > group-checks
+
+Group Checks
 
 When a number of individuals are trying to accomplish something as a group, the GM might ask for a group ability check. In such a situation, the characters who are skilled at a particular task help cover those who aren't.
 
@@ -662,13 +821,19 @@ Group checks don't come up very often, and they're most useful when all the char
 
 ## using-each-ability
 
+Using Each Ability
+
 Every task that a character or monster might attempt in the game is covered by one of the six abilities. This section explains in more detail what those abilities mean and the ways they are used in the game.
 
 ## using-each-ability > strength
 
+Strength
+
 Strength measures bodily power, athletic training, and the extent to which you can exert raw physical force.
 
 ## using-each-ability > strength > strength-checks
+
+Strength Checks
 
 A Strength check can model any attempt to lift, push, pull, or break something, to force your body through a space, or to otherwise apply brute force to a situation. The Athletics skill reflects aptitude in certain kinds of Strength checks.
 
@@ -687,9 +852,13 @@ A Strength check can model any attempt to lift, push, pull, or break something, 
 
 ## using-each-ability > strength > attack-rolls-and-damage
 
+Attack Rolls and Damage
+
 You add your Strength modifier to your attack roll and your damage roll when attacking with a melee weapon such as a mace, a battleaxe, or a javelin. You use melee weapons to make melee attacks in hand-to-hand combat, and some of them can be thrown to make a ranged attack.
 
 ## using-each-ability > strength > lifting-and-carrying
+
+Lifting and Carrying
 
 Your Strength score determines the amount of weight you can bear. The following terms define what you can lift or carry.
 
@@ -701,6 +870,8 @@ Your Strength score determines the amount of weight you can bear. The following 
 
 ## using-each-ability > strength > lifting-and-carrying > variant-encumbrance
 
+Variant: Encumbrance
+
 The rules for lifting and carrying are intentionally simple. Here is a variant if you are looking for more detailed rules for determining how a character is hindered by the weight of equipment. When you use this variant, ignore the Strength column of the Armor table.
 
 If you carry weight in excess of 5 times your Strength score, you are **encumbered**, which means your speed drops by 10 feet.
@@ -709,9 +880,13 @@ If you carry weight in excess of 10 times your Strength score, up to your maximu
 
 ## using-each-ability > dexterity
 
+Dexterity
+
 Dexterity measures agility, reflexes, and balance.
 
 ## using-each-ability > dexterity > dexterity-checks
+
+Dexterity Checks
 
 A Dexterity check can model any attempt to move nimbly, quickly, or quietly, or to keep from falling on tricky footing. The Acrobatics, Sleight of Hand, and Stealth skills reflect aptitude in certain kinds of Dexterity checks.
 
@@ -733,17 +908,25 @@ A Dexterity check can model any attempt to move nimbly, quickly, or quietly, or 
 
 ## using-each-ability > dexterity > attack-rolls-and-damage
 
+Attack Rolls and Damage
+
 You add your Dexterity modifier to your attack roll and your damage roll when attacking with a ranged weapon, such as a sling or a longbow. You can also add your Dexterity modifier to your attack roll and your damage roll when attacking with a melee weapon that has the finesse property, such as a dagger or a rapier.
 
 ## using-each-ability > dexterity > armor-class
+
+Armor Class
 
 Depending on the armor you wear, you might add some or all of your Dexterity modifier to your Armor Class.
 
 ## using-each-ability > dexterity > initiative
 
+Initiative
+
 At the beginning of every combat, you roll initiative by making a Dexterity check. Initiative determines the order of creatures' turns in combat.
 
 ## using-each-ability > dexterity > hiding
+
+Hiding
 
 The GM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity (Stealth) check. Until you are discovered or you stop hiding, that check's total is contested by the Wisdom (Perception) check of any creature that actively searches for signs of your presence.
 
@@ -759,9 +942,13 @@ In combat, most creatures stay alert for signs of danger all around, so if you c
 
 ## using-each-ability > constitution
 
+Constitution
+
 Constitution measures health, stamina, and vital force.
 
 ## using-each-ability > constitution > constitution-checks
+
+Constitution Checks
 
 Constitution checks are uncommon, and no skills apply to Constitution checks, because the endurance this ability represents is largely passive rather than involving a specific effort on the part of a character or monster. A Constitution check can model your attempt to push beyond normal limits, however.
 
@@ -774,15 +961,21 @@ The GM might call for a Constitution check when you try to accomplish tasks like
 
 ## using-each-ability > constitution > hit-points
 
+Hit Points
+
 Your Constitution modifier contributes to your hit points. Typically, you add your Constitution modifier to each Hit Die you roll for your hit points.
 
 If your Constitution modifier changes, your hit point maximum changes as well, as though you had the new modifier from 1st level. For example, if you raise your Constitution score when you reach 4th level and your Constitution modifier increases from +1 to +2, you adjust your hit point maximum as though the modifier had always been +2. So you add 3 hit points for your first three levels, and then roll your hit points for 4th level using your new modifier. Or if you're 7th level and some effect lowers your Constitution score so as to reduce your Constitution modifier by 1, your hit point maximum is reduced by 7.
 
 ## using-each-ability > intelligence
 
+Intelligence
+
 Intelligence measures mental acuity, accuracy of recall, and the ability to reason.
 
 ## using-each-ability > intelligence > intelligence-checks
+
+Intelligence Checks
 
 An Intelligence check comes into play when you need to draw on logic, education, memory, or deductive reasoning. The Arcana, History, Investigation, Nature, and Religion skills reflect aptitude in certain kinds of Intelligence checks.
 
@@ -806,13 +999,19 @@ An Intelligence check comes into play when you need to draw on logic, education,
 
 ## using-each-ability > intelligence > spellcasting-ability
 
+Spellcasting Ability
+
 Wizards use Intelligence as their spellcasting ability, which helps determine the saving throw DCs of spells they cast.
 
 ## using-each-ability > wisdom
 
+Wisdom
+
 Wisdom reflects how attuned you are to the world around you and represents perceptiveness and intuition.
 
 ## using-each-ability > wisdom > wisdom-checks
+
+Wisdom Checks
 
 A Wisdom check might reflect an effort to read body language, understand someone's feelings, notice things about the environment, or care for an injured person. The Animal Handling, Insight, Medicine, Perception, and Survival skills reflect aptitude in certain kinds of Wisdom checks.
 
@@ -836,13 +1035,19 @@ Wisdom check when you try to accomplish tasks like the following:
 
 ## using-each-ability > wisdom > spellcasting-ability
 
+Spellcasting Ability
+
 Clerics, druids, and rangers use Wisdom as their spellcasting ability, which helps determine the saving throw DCs of spells they cast.
 
 ## using-each-ability > charisma
 
+Charisma
+
 Charisma measures your ability to interact effectively with others. It includes such factors as confidence and eloquence, and it can represent a charming or commanding personality.
 
 ## using-each-ability > charisma > charisma-checks
+
+Charisma Checks
 
 A Charisma check might arise when you try to influence or entertain others, when you try to make an impression or tell a convincing lie, or when you are navigating a tricky social situation. The Deception, Intimidation, Performance, and Persuasion skills reflect aptitude in certain kinds of Charisma checks.
 
@@ -860,9 +1065,13 @@ A Charisma check might arise when you try to influence or entertain others, when
 
 ## using-each-ability > charisma > spellcasting-ability
 
+Spellcasting Ability
+
 Bards, paladins, sorcerers, and warlocks use Charisma as their spellcasting ability, which helps determine the saving throw DCs of spells they cast.
 
 ## saving-throws
+
+Saving Throws
 
 A saving throw-also called a save-represents an attempt to resist a spell, a trap, a poison, a disease, or a similar threat. You don't normally decide to make a saving throw; you are forced to make one because your character or monster is at risk of harm.
 
@@ -878,6 +1087,8 @@ The result of a successful or failed saving throw is also detailed in the effect
 
 ## time
 
+Time
+
 In situations where keeping track of the passage of time is important, the GM determines the time a task requires. The GM might use a different time scale depending on the context of the situation at hand. In a dungeon environment, the adventurers' movement happens on a scale of **minutes**. It takes them about a minute to creep down a long hallway, another minute to check for traps on the door at the end of the hall, and a good ten minutes to search the chamber beyond for anything interesting or valuable.
 
 In a city or wilderness, a scale of **hours** is often more appropriate. Adventurers eager to reach the lonely tower at the heart of the forest hurry across those fifteen miles in just under four hours' time.
@@ -890,6 +1101,8 @@ In combat and other fast-paced situations, the game relies on **rounds**, a 6-se
 
 ## movement
 
+Movement
+
 Swimming across a rushing river, sneaking down a dungeon corridor, scaling a treacherous mountain slope-all sorts of movement play a key role in fantasy gaming adventures.
 
 The GM can summarize the adventurers' movement without calculating exact distances or travel times: "You travel through the forest and find the dungeon entrance late in the evening of the third day." Even in a dungeon, particularly a large dungeon or a cave network, the GM can summarize movement between encounters: "After killing the guardian at the entrance to the ancient dwarven stronghold, you consult your map, which leads you through miles of echoing corridors to a chasm bridged by a narrow stone arch."
@@ -898,11 +1111,15 @@ Sometimes it's important, though, to know how long it takes to get from one spot
 
 ## movement > speed
 
+Speed
+
 Every character and monster has a speed, which is the distance in feet that the character or monster can walk in 1 round. This number assumes short bursts of energetic movement in the midst of a life-threatening situation.
 
 The following rules determine how far a character or monster can move in a minute, an hour, or a day.
 
 ## movement > speed > travel-pace
+
+Travel Pace
 
 While traveling, a group of adventurers can move at a normal, fast, or slow pace, as shown on the Travel Pace table. The table states how far the party can move in a period of time and whether the pace has any effect. A fast pace makes characters less perceptive, while a slow pace makes it possible to sneak around and to search an area more carefully.
 
@@ -918,6 +1135,8 @@ Certain special mounts, such as a pegasus or griffon, or special vehicles, such 
 
 ## movement > speed > travel-pace > travel-pace
 
+Travel Pace
+
 | Pace   | Distance per: Minute | Hour    | Day      | Effect                                           |
 |--------|----------------------|---------|----------|--------------------------------------------------|
 | Fast   | 400 feet             | 4 miles | 30 miles | -5 penalty to passive Wisdom (Perception) scores |
@@ -926,19 +1145,27 @@ Certain special mounts, such as a pegasus or griffon, or special vehicles, such 
 
 ## movement > speed > difficult-terrain
 
+Difficult Terrain
+
 The travel speeds given in the Travel Pace table assume relatively simple terrain: roads, open plains, or clear dungeon corridors. But adventurers often face dense forests, deep swamps, rubble-filled ruins, steep mountains, and ice-covered ground-all considered difficult terrain.
 
 You move at half speed in difficult terrain--moving 1 foot in difficult terrain costs 2 feet of speed-so you can cover only half the normal distance in a minute, an hour, or a day.
 
 ## movement > special-types-of-movement
 
+Special Types of Movement
+
 Movement through dangerous dungeons or wilderness areas often involves more than simply walking. Adventurers might have to climb, crawl, swim, or jump to get where they need to go.
 
 ## movement > special-types-of-movement > climbing-swimming-and-crawling
 
+Climbing, Swimming, and Crawling
+
 While climbing or swimming, each foot of movement costs 1 extra foot (2 extra feet in difficult terrain), unless a creature has a climbing or swimming speed. At the GM's option, climbing a slippery vertical surface or one with few handholds requires a successful Strength (Athletics) check. Similarly, gaining any distance in rough water might require a successful Strength (Athletics) check.
 
 ## movement > special-types-of-movement > jumping
+
+Jumping
 
 Your Strength determines how far you can jump.
 
@@ -954,13 +1181,19 @@ You can extend your arms half your height above yourself during the jump. Thus, 
 
 ## the-environment
 
+The Environment
+
 By its nature, adventuring involves delving into places that are dark, dangerous, and full of mysteries to be explored. The rules in this section cover some of the most important ways in which adventurers interact with the environment in such places.
 
 ## the-environment > falling
 
+Falling
+
 A fall from a great height is one of the most common hazards facing an adventurer. At the end of a fall, a creature takes 1d6 bludgeoning damage for every 10 feet it fell, to a maximum of 20d6. The creature lands prone, unless it avoids taking damage from the fall.
 
 ## the-environment > suffocating
+
+Suffocating
 
 A creature can hold its breath for a number of minutes equal to 1 + its Constitution modifier (minimum of 30 seconds).
 
@@ -969,6 +1202,8 @@ When a creature runs out of breath or is choking, it can survive for a number of
 For example, a creature with a Constitution of 14 can hold its breath for 3 minutes. If it starts suffocating, it has 2 rounds to reach air before it drops to 0 hit points.
 
 ## the-environment > vision-and-light
+
+Vision and Light
 
 The most fundamental tasks of adventuring--noticing danger, finding hidden objects, hitting an enemy in combat, and targeting a spell, to name just a few--rely heavily on a character's ability to see. Darkness and other effects that obscure vision can prove a significant hindrance.
 
@@ -990,21 +1225,31 @@ Characters face darkness outdoors at night (even most moonlit nights), within th
 
 ## the-environment > vision-and-light > blindsight
 
+Blindsight
+
 A creature with blindsight can perceive its surroundings without relying on sight, within a specific radius. Creatures without eyes, such as oozes, and creatures with echolocation or heightened senses, such as bats and true dragons, have this sense.
 
 ## the-environment > vision-and-light > darkvision
+
+Darkvision
 
 Many creatures in fantasy gaming worlds, especially those that dwell underground, have darkvision. Within a specified range, a creature with darkvision can see in darkness as if the darkness were dim light, so areas of darkness are only lightly obscured as far as that creature is concerned. However, the creature can't discern color in darkness, only shades of gray.
 
 ## the-environment > vision-and-light > truesight
 
+Truesight
+
 A creature with truesight can, out to a specific range, see in normal and magical darkness, see invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them, and perceives the original form of a shapechanger or a creature that is transformed by magic. Furthermore, the creature can see into the Ethereal Plane.
 
 ## the-environment > food-and-water
 
+Food and Water
+
 Characters who don't eat or drink suffer the effects of exhaustion (see appendix PH-A). Exhaustion caused by lack of food or water can't be removed until the character eats and drinks the full required amount.
 
 ## the-environment > food-and-water > food
+
+Food
 
 A character needs one pound of food per day and can make food last longer by subsisting on half rations. Eating half a pound of food in a day counts as half a day without food.
 
@@ -1014,11 +1259,15 @@ A normal day of eating resets the count of days without food to zero.
 
 ## the-environment > food-and-water > water
 
+Water
+
 A character needs one gallon of water per day, or two gallons per day if the weather is hot. A character who drinks only half that much water must succeed on a DC 15 Constitution saving throw or suffer one level of exhaustion at the end of the day. A character with access to even less water automatically suffers one level of exhaustion at the end of the day.
 
 If the character already has one or more levels of exhaustion, the character takes two levels in either case.
 
 ## the-environment > interacting-with-objects
+
+Interacting with Objects
 
 A character's interaction with objects in an environment is often simple to resolve in the game. The player tells the GM that his or her character is doing something, such as moving a lever, and the GM describes what, if anything, happens.
 
@@ -1030,17 +1279,23 @@ A character can also attempt a Strength check to break an object. The GM sets th
 
 ## resting
 
+Resting
+
 Heroic though they might be, adventurers can't spend every hour of the day in the thick of exploration, social interaction, and combat. They need rest-time to sleep and eat, tend their wounds, refresh their minds and spirits for spellcasting, and brace themselves for further adventure.
 
 Adventurers can take short rests in the midst of an adventuring day and a long rest to end the day.
 
 ## resting > short-rest
 
+Short Rest
+
 A short rest is a period of downtime, at least 1 hour long, during which a character does nothing more strenuous than eating, drinking, reading, and tending to wounds.
 
 A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total. The player can decide to spend an additional Hit Die after each roll. A character regains some spent Hit Dice upon finishing a long rest, as explained below.
 
 ## resting > long-rest
+
+Long Rest
 
 A long rest is a period of extended downtime, at least 8 hours long, during which a character sleeps or performs light activity: reading, talking, eating, or standing watch for no more than 2 hours. If the rest is interrupted by a period of strenuous activity-at least 1 hour of walking, fighting, casting spells, or similar adventuring activity-the characters must begin the rest again to gain any benefit from it.
 
@@ -1050,11 +1305,15 @@ A character can't benefit from more than one long rest in a 24-hour period, and 
 
 ## between-adventures
 
+Between Adventures
+
 Between trips to dungeons and battles against ancient evils, adventurers need time to rest, recuperate, and prepare for their next adventure. Many adventurers also use this time to perform other tasks, such as crafting arms and armor, performing research, or spending their hard-earned gold.
 
 In some cases, the passage of time is something that occurs with little fanfare or description. When starting a new adventure, the GM might simply declare that a certain amount of time has passed and allow you to describe in general terms what your character has been doing. At other times, the GM might want to keep track of just how much time is passing as events beyond your perception stay in motion.
 
 ## between-adventures > lifestyle-expenses
+
+Lifestyle Expenses
 
 Between adventures, you choose a particular quality of life and pay the cost of maintaining that lifestyle.
 
@@ -1062,11 +1321,15 @@ Living a particular lifestyle doesn't have a huge effect on your character, but 
 
 ## between-adventures > downtime-activities
 
+Downtime Activities
+
 Between adventures, the GM might ask you what your character is doing during his or her downtime. Periods of downtime can vary in duration, but each downtime activity requires a certain number of days to complete before you gain any benefit, and at least 8 hours of each day must be spent on the downtime activity for the day to count. The days do not need to be consecutive. If you have more than the minimum amount of days to spend, you can keep doing the same thing for a longer period of time, or switch to a new downtime activity.
 
 Downtime activities other than the ones presented below are possible. If you want your character to spend his or her downtime performing an activity not covered here, discuss it with your GM.
 
 ## between-adventures > downtime-activities > crafting
+
+Crafting
 
 You can craft nonmagical objects, including adventuring equipment and works of art. You must be proficient with tools related to the object you are trying to create (typically artisan's tools). You might also need access to special materials or locations necessary to create it. For example, someone proficient with smith's tools needs a forge in order to craft a sword or suit of armor.
 
@@ -1078,6 +1341,8 @@ While crafting, you can maintain a modest lifestyle without having to pay 1 gp p
 
 ## between-adventures > downtime-activities > practicing-a-profession
 
+Practicing a Profession
+
 You can work between adventures, allowing you to maintain a modest lifestyle without having to pay 1 gp per day. This benefit lasts as long you continue to practice your profession.
 
 If you are a member of an organization that can provide gainful employment, such as a temple or a thieves' guild, you earn enough to support a comfortable lifestyle instead.
@@ -1085,6 +1350,8 @@ If you are a member of an organization that can provide gainful employment, such
 If you have proficiency in the Performance skill and put your performance skill to use during your downtime, you earn enough to support a wealthy lifestyle instead.
 
 ## between-adventures > downtime-activities > recuperating
+
+Recuperating
 
 You can use downtime between adventures to recover from a debilitating injury, disease, or poison.
 
@@ -1094,6 +1361,8 @@ After three days of downtime spent recuperating, you can make a DC 15 Constituti
 
 ## between-adventures > downtime-activities > researching
 
+Researching
+
 The time between adventures is a great chance to perform research, gaining insight into mysteries that have unfurled over the course of the campaign. Research can include poring over dusty tomes and crumbling scrolls in a library or buying drinks for the locals to pry rumors and gossip from their lips.
 
 When you begin your research, the GM determines whether the information is available, how many days of downtime it will take to find it, and whether there are any restrictions on your research (such as needing to seek out a specific individual, tome, or location). The GM might also require you to make one or more ability checks, such as an Intelligence (Investigation) check to find clues pointing toward the information you seek, or a Charisma (Persuasion) check to secure someone's aid. Once those conditions are met, you learn the information if it is available.
@@ -1101,6 +1370,8 @@ When you begin your research, the GM determines whether the information is avail
 For each day of research, you must spend 1 gp to cover your expenses. This cost is in addition to your normal lifestyle expenses.
 
 ## between-adventures > downtime-activities > training
+
+Training
 
 You can spend time between adventures learning a new language or training with a set of tools. Your GM might allow additional training options.
 
@@ -1110,6 +1381,8 @@ The training lasts for 250 days and costs 1 gp per day. After you spend the requ
 
 ## what-is-a-spell
 
+What Is a Spell?
+
 A spell is a discrete magical effect, a single shaping of the magical energies that suffuse the multiverse into a specific, limited expression. In casting a spell, a character carefully plucks at the invisible strands of raw magic suffusing the world, pins them in place in a particular pattern, sets them vibrating in a specific way, and then releases them to unleash the desired effect-in most cases, all in the span of seconds.
 
 Spells can be versatile tools, weapons, or protective wards. They can deal damage or undo it, impose or remove conditions (see appendix PH-A), drain life energy away, and restore life to the dead.
@@ -1118,17 +1391,23 @@ Uncounted thousands of spells have been created over the course of the multivers
 
 ## what-is-a-spell > spell-level
 
+Spell Level
+
 Every spell has a level from 0 to 9. A spell's level is a general indicator of how powerful it is, with the lowly (but still impressive) *magic missile* at 1st level and the earth-shaking *wish* at 9th. Cantrips-simple but powerful spells that characters can cast almost by rote-are level 0. The higher a spell's level, the higher level a spellcaster must be to use that spell.
 
 Spell level and character level don't correspond directly. Typically, a character has to be at least 17th level, not 9th level, to cast a 9th-level spell.
 
 ## what-is-a-spell > known-and-prepared-spells
 
+Known and Prepared Spells
+
 Before a spellcaster can use a spell, he or she must have the spell firmly fixed in mind, or must have access to the spell in a magic item. Members of a few classes, including bards and sorcerers, have a limited list of spells they know that are always fixed in mind. The same thing is true of many magic-using monsters. Other spellcasters, such as clerics and wizards, undergo a process of preparing spells. This process varies for different classes, as detailed in their descriptions.
 
 In every case, the number of spells a caster can have fixed in mind at any given time depends on the character's level.
 
 ## what-is-a-spell > spell-slots
+
+Spell Slots
 
 Regardless of how many spells a caster knows or prepares, he or she can cast only a limited number of spells before resting. Manipulating the fabric of magic and channeling its energy into even a simple spell is physically and mentally taxing, and higher-level spells are even more so. Thus, each spellcasting class's description (except that of the warlock) includes a table showing how many spell slots of each spell level a character can use at each character level. For example, the 3rd-level wizard Umara has four 1st-level spell slots and two 2nd-level slots.
 
@@ -1140,19 +1419,27 @@ Some characters and monsters have special abilities that let them cast spells wi
 
 ## what-is-a-spell > spell-slots > casting-a-spell-at-a-higher-level
 
+Casting a Spell at a Higher Level
+
 When a spellcaster casts a spell using a slot that is of a higher level than the spell, the spell assumes the higher level for that casting. For instance, if Umara casts *magic missile* using one of her 2nd-level slots, that *magic missile* is 2nd level. Effectively, the spell expands to fill the slot it is put into.
 
 Some spells, such as *magic missile* and *cure wounds*, have more powerful effects when cast at a higher level, as detailed in a spell's description.
 
 ## what-is-a-spell > spell-slots > casting-in-armor
 
+Casting in Armor
+
 Because of the mental focus and precise gestures required for spellcasting, you must be proficient with the armor you are wearing to cast a spell. You are otherwise too distracted and physically hampered by your armor for spellcasting.
 
 ## what-is-a-spell > cantrips
 
+Cantrips
+
 A cantrip is a spell that can be cast at will, without using a spell slot and without being prepared in advance. Repeated practice has fixed the spell in the caster's mind and infused the caster with the magic needed to produce the effect over and over. A cantrip's spell level is 0.
 
 ## what-is-a-spell > rituals
+
+Rituals
 
 Certain spells have a special tag: ritual. Such a spell can be cast following the normal rules for spellcasting, or the spell can be cast as a ritual. The ritual version of a spell takes 10 minutes longer to cast than normal. It also doesn't expend a spell slot, which means the ritual version of a spell can't be cast at a higher level.
 
@@ -1160,27 +1447,39 @@ To cast a spell as a ritual, a spellcaster must have a feature that grants the a
 
 ## casting-a-spell
 
+Casting a Spell
+
 When a character casts any spell, the same basic rules are followed, regardless of the character's class or the spell's effects.
 
 Each spell description begins with a block of information, including the spell's name, level, school of magic, casting time, range, components, and duration. The rest of a spell entry describes the spell's effect.
 
 ## casting-a-spell > casting-time
 
+Casting Time
+
 Most spells require a single action to cast, but some spells require a bonus action, a reaction, or much more time to cast.
 
 ## casting-a-spell > casting-time > bonus-action
+
+Bonus Action
 
 A spell cast with a bonus action is especially swift. You must use a bonus action on your turn to cast the spell, provided that you haven't already taken a bonus action this turn. You can't cast another spell during the same turn, except for a cantrip with a casting time of 1 action.
 
 ## casting-a-spell > casting-time > reactions
 
+Reactions
+
 Some spells can be cast as reactions. These spells take a fraction of a second to bring about and are cast in response to some event. If a spell can be cast as a reaction, the spell description tells you exactly when you can do so.
 
 ## casting-a-spell > casting-time > longer-casting-times
 
+Longer Casting Times
+
 Certain spells (including spells cast as rituals) require more time to cast: minutes or even hours. When you cast a spell with a casting time longer than a single action or reaction, you must spend your action each turn casting the spell, and you must maintain your concentration while you do so (see "Concentration" below). If your concentration is broken, the spell fails, but you don't expend a spell slot. If you want to try casting the spell again, you must start over.
 
 ## casting-a-spell > spell-range
+
+Spell Range
 
 The target of a spell must be within the spell's range. For a spell like *magic missile*, the target is a creature. For a spell like *fireball*, the target is the point in space where the ball of fire erupts.
 
@@ -1192,17 +1491,25 @@ Once a spell is cast, its effects aren't limited by its range, unless the spell'
 
 ## casting-a-spell > components
 
+Components
+
 A spell's components are the physical requirements you must meet in order to cast it. Each spell's description indicates whether it requires verbal (V), somatic (S), or material (M) components. If you can't provide one or more of a spell's components, you are unable to cast the spell.
 
 ## casting-a-spell > components > verbal-v
+
+Verbal (V)
 
 Most spells require the chanting of mystic words. The words themselves aren't the source of the spell's power; rather, the particular combination of sounds, with specific pitch and resonance, sets the threads of magic in motion. Thus, a character who is gagged or in an area of silence, such as one created by the *silence* spell, can't cast a spell with a verbal component.
 
 ## casting-a-spell > components > somatic-s
 
+Somatic (S)
+
 Spellcasting gestures might include a forceful gesticulation or an intricate set of gestures. If a spell requires a somatic component, the caster must have free use of at least one hand to perform these gestures.
 
 ## casting-a-spell > components > material-m
+
+Material (M)
 
 Casting some spells requires particular objects, specified in parentheses in the component entry. A character can use a **component pouch** or a **spellcasting focus** (found in "Equipment") in place of the components specified for a spell. But if a cost is indicated for a component, a character must have that specific component before he or she can cast the spell.
 
@@ -1212,13 +1519,19 @@ A spellcaster must have a hand free to access a spell's material components-or t
 
 ## casting-a-spell > duration
 
+Duration
+
 A spell's duration is the length of time the spell persists. A duration can be expressed in rounds, minutes, hours, or even years. Some spells specify that their effects last until the spells are dispelled or destroyed.
 
 ## casting-a-spell > duration > instantaneous
 
+Instantaneous
+
 Many spells are instantaneous. The spell harms, heals, creates, or alters a creature or an object in a way that can't be dispelled, because its magic exists only for an instant.
 
 ## casting-a-spell > duration > concentration
+
+Concentration
 
 Some spells require you to maintain concentration in order to keep their magic active. If you lose concentration, such a spell ends.
 
@@ -1233,11 +1546,15 @@ The GM might also decide that certain environmental phenomena, such as a wave cr
 
 ## casting-a-spell > targets
 
+Targets
+
 A typical spell requires you to pick one or more targets to be affected by the spell's magic. A spell's description tells you whether the spell targets creatures, objects, or a point of origin for an area of effect (described below).
 
 Unless a spell has a perceptible effect, a creature might not know it was targeted by a spell at all. An effect like crackling lightning is obvious, but a more subtle effect, such as an attempt to read a creature's thoughts, typically goes unnoticed, unless a spell says otherwise.
 
 ## casting-a-spell > targets > a-clear-path-to-the-target
+
+A Clear Path to the Target
 
 To target something, you must have a clear path to it, so it can't be behind total cover.
 
@@ -1245,9 +1562,13 @@ If you place an area of effect at a point that you can't see and an obstruction,
 
 ## casting-a-spell > targets > targeting-yourself
 
+Targeting Yourself
+
 If a spell targets a creature of your choice, you can choose yourself, unless the creature must be hostile or specifically a creature other than you. If you are in the area of effect of a spell you cast, you can target yourself.
 
 ## casting-a-spell > areas-of-effect
+
+Areas of Effect
 
 Spells such as *burning hands* and *cone of cold* cover an area, allowing them to affect multiple creatures at once.
 
@@ -1257,11 +1578,15 @@ A spell's effect expands in straight lines from the point of origin. If no unblo
 
 ## casting-a-spell > areas-of-effect > cone
 
+Cone
+
 A cone extends in a direction you choose from its point of origin. A cone's width at a given point along its length is equal to that point's distance from the point of origin. A cone's area of effect specifies its maximum length.
 
 A cone's point of origin is not included in the cone's area of effect, unless you decide otherwise.
 
 ## casting-a-spell > areas-of-effect > cube
+
+Cube
 
 You select a cube's point of origin, which lies anywhere on a face of the cubic effect. The cube's size is expressed as the length of each side.
 
@@ -1269,11 +1594,15 @@ A cube's point of origin is not included in the cube's area of effect, unless yo
 
 ## casting-a-spell > areas-of-effect > cylinder
 
+Cylinder
+
 A cylinder's point of origin is the center of a circle of a particular radius, as given in the spell description. The circle must either be on the ground or at the height of the spell effect. The energy in a cylinder expands in straight lines from the point of origin to the perimeter of the circle, forming the base of the cylinder. The spell's effect then shoots up from the base or down from the top, to a distance equal to the height of the cylinder.
 
 A cylinder's point of origin is included in the cylinder's area of effect.
 
 ## casting-a-spell > areas-of-effect > line
+
+Line
 
 A line extends from its point of origin in a straight path up to its length and covers an area defined by its width.
 
@@ -1281,11 +1610,15 @@ A line's point of origin is not included in the line's area of effect, unless yo
 
 ## casting-a-spell > areas-of-effect > sphere
 
+Sphere
+
 You select a sphere's point of origin, and the sphere extends outward from that point. The sphere's size is expressed as a radius in feet that extends from the point.
 
 A sphere's point of origin is included in the sphere's area of effect.
 
 ## casting-a-spell > spell-saving-throws
+
+Spell Saving Throws
 
 Many spells specify that a target can make a saving throw to avoid some or all of a spell's effects. The spell specifies the ability that the target uses for the save and what happens on a success or failure.
 
@@ -1293,17 +1626,23 @@ The DC to resist one of your spells equals 8 + your spellcasting ability modifie
 
 ## casting-a-spell > spell-attack-rolls
 
+Spell Attack Rolls
+
 Some spells require the caster to make an attack roll to determine whether the spell effect hits the intended target. Your attack bonus with a spell attack equals your spellcasting ability modifier + your proficiency bonus.
 
 Most spells that require attack rolls involve ranged attacks. Remember that you have disadvantage on a ranged attack roll if you are within 5 feet of a hostile creature that can see you and that isn't incapacitated.
 
 ## casting-a-spell > combining-magical-effects
 
+Combining Magical Effects
+
 The effects of different spells add together while the durations of those spells overlap. The effects of the same spell cast multiple times don't combine, however. Instead, the most potent effect-such as the highest bonus-from those castings applies while their durations overlap.
 
 For example, if two clerics cast *bless* on the same target, that character gains the spell's benefit only once; he or she doesn't get to roll two bonus dice.
 
 ## casting-a-spell > the-schools-of-magic
+
+The Schools of Magic
 
 Academies of magic group spells into eight categories called schools of magic. Scholars, particularly wizards, apply these categories to all spells, believing that all magic functions in essentially the same way, whether it derives from rigorous study or is bestowed by a deity.
 
@@ -1329,6 +1668,7 @@ Creating the undead through the use of necromancy spells such as *animate dead* 
 
 ## standard-exchange-rates
 
+Standard Exchange Rates
 | Coin          | CP    | SP   | EP   | GP    | PP      |
 |---------------|-------|------|------|-------|---------|
 | Copper (cp)   | 1     | 1/10 | 1/50 | 1/100 | 1/1,000 |
@@ -1339,17 +1679,23 @@ Creating the undead through the use of necromancy spells such as *animate dead* 
 
 ## objects
 
+Objects
+
 When characters need to saw through ropes, shatter a window, or smash a vampire's coffin, the only hard and fast rule is this: given enough time and the right tools, characters can destroy any destructible object. Use common sense when determining a character's success at damaging an object. Can a fighter cut through a section of a stone wall with a sword? No, the sword is likely to break before the wall does.
 
 For the purpose of these rules, an object is a discrete, inanimate item like a window, door, sword, book, table, chair, or stone, not a building or a vehicle that is composed of many other objects.
 
 ## objects > statistics-for-objects
 
+Statistics for Objects
+
 When time is a factor, you can assign an Armor Class and hit points to a destructible object. You can also give it immunities, resistances, and vulnerabilities to specific types of damage.
 
 ***Armor Class.*** An object's Armor Class is a measure of how difficult it is to deal damage to the object when striking it (because the object has no chance of dodging out of the way). The Object Armor Class table provides suggested AC values for various substances.
 
 ## objects > statistics-for-objects > object-armor-class
+
+Object Armor Class
 
 | Substance           | AC |
 |---------------------|----|
@@ -1364,6 +1710,8 @@ When time is a factor, you can assign an Armor Class and hit points to a destruc
 ***Hit Points.*** An object's hit points measure how much damage it can take before losing its structural integrity. Resilient objects have more hit points than fragile ones. Large objects also tend to have more hit points than small ones, unless breaking a small part of the object is just as effective as breaking the whole thing. The Object Hit Points table provides suggested hit points for fragile and resilient objects that are Large or smaller.
 
 ## objects > statistics-for-objects > object-hit-points
+
+Object Hit Points
 
 ***Huge and Gargantuan Objects.*** Normal weapons are of little use against many Huge and Gargantuan objects, such as a colossal statue, towering column of stone, or massive boulder. That said, one torch can burn a Huge tapestry, and an *earthquake* spell can reduce a colossus to rubble. You can track a Huge or Gargantuan object's hit points if you like, or you can simply decide how long the object can withstand whatever weapon or force is acting against it. If you track hit points for the object, divide it into Large or smaller sections, and track each section's hit points separately. Destroying one of those sections could ruin the entire object. For example, a Gargantuan statue of a human might topple over when one of its Large legs is reduced to 0 hit points.
 
@@ -1380,6 +1728,8 @@ When time is a factor, you can assign an Armor Class and hit points to a destruc
 
 ## poisons
 
+Poisons
+
 Given their insidious and deadly nature, poisons are illegal in most societies but are a favorite tool among assassins, drow, and other evil creatures.
 
 Poisons come in the following four types.
@@ -1393,6 +1743,8 @@ Poisons come in the following four types.
 ***Injury.*** Injury poison can be applied to weapons, ammunition, trap components, and other objects that deal piercing or slashing damage and remains potent until delivered through a wound or washed off. A creature that takes piercing or slashing damage from an object coated with the poison is exposed to its effects.
 
 ## poisons > poisons
+
+Poisons
 
 | Item               | Type     | Price per Dose |
 |--------------------|----------|----------------|
@@ -1412,6 +1764,8 @@ Poisons come in the following four types.
 | Wyvern poison      | Injury   | 1,200 gp       |
 
 ## poisons > sample-poisons
+
+Sample Poisons
 
 Each type of poison has its own debilitating effects.
 
@@ -1445,6 +1799,8 @@ Each type of poison has its own debilitating effects.
 
 ## attunement
 
+Attunement
+
 Some magic items require a creature to form a bond with them before their magical properties can be used. This bond is called attunement, and certain items have a prerequisite for it. If the prerequisite is a class, a creature must be a member of that class to attune to the item. (If the class is a spellcasting class, a monster qualifies if it has spell slots and uses that class's spell list.) If the prerequisite is to be a spellcaster, a creature qualifies if it can cast at least one spell using its traits or features, not using a magic item or the like.
 
 Without becoming attuned to an item that requires attunement, a creature gains only its nonmagical benefits, unless its description states otherwise. For example, a magic shield that requires attunement provides the benefits of a normal shield to a creature not attuned to it, but none of its magical properties.
@@ -1457,6 +1813,8 @@ A creature's attunement to an item ends if the creature no longer satisfies the 
 
 ## wearing-and-wielding-items
 
+Wearing and Wielding Items
+
 Using a magic item's properties might mean wearing or wielding it. A magic item meant to be worn must be donned in the intended fashion: boots go on the feet, gloves on the hands, hats and helmets on the head, and rings on the finger. Magic armor must be donned, a shield strapped to the arm, a cloak fastened about the shoulders. A weapon must be held.
 
 In most cases, a magic item that's meant to be worn can fit a creature regardless of size or build. Many magic garments are made to be easily adjustable, or they magically adjust themselves to the wearer. Rare exceptions exist. If the story suggests a good reason for an item to fit only creatures of a certain size or shape, you can rule that it doesn't adjust. For example, drow-made armor might fit elves only. Dwarves might make items usable only by dwarf-sized and dwarf-shaped folk.
@@ -1465,13 +1823,19 @@ When a nonhumanoid tries to wear an item, use your discretion as to whether the 
 
 ## wearing-and-wielding-items > multiple-items-of-the-same-kind
 
+Multiple Items of the Same Kind
+
 Use common sense to determine whether more than one of a given kind of magic item can be worn. A character can't normally wear more than one pair of footwear, one pair of gloves or gauntlets, one pair of bracers, one suit of armor, one item of headwear, and one cloak. You can make exceptions; a character might be able to wear a circlet under a helmet, for example, or to layer two cloaks.
 
 ## wearing-and-wielding-items > paired-items
 
+Paired Items
+
 Items that come in pairs—such as boots, bracers, gauntlets, and gloves—impart their benefits only if both items of the pair are worn. For example, a character wearing a boot of striding and springing on one foot and a boot of elvenkind on the other foot gains no benefit from either.
 
 ## activating-an-item
+
+Activating an Item
 
 Activating some magic items requires a user to do something special, such as holding the item and uttering a command word. The description of each item category or individual item details how an item is activated. Certain items use the following rules for their activation.
 
@@ -1479,13 +1843,19 @@ If an item requires an action to activate, that action isn't a function of the U
 
 ## activating-an-item > command-word
 
+Command Word
+
 A command word is a word or phrase that must be spoken for an item to work. A magic item that requires a command word can't be activated in an area where sound is prevented, as in the area of the silence spell.
 
 ## activating-an-item > consumables
 
+Consumables
+
 Some items are used up when they are activated. A potion or an elixir must be swallowed, or an oil applied to the body. The writing vanishes from a scroll when it is read. Once used, a consumable item loses its magic.
 
 ## activating-an-item > spells
+
+Spells
 
 Some magic items allow the user to cast a spell from the item. The spell is cast at the lowest possible spell level, doesn't expend any of the user's spell slots, and requires no components, unless the item's description says otherwise. The spell uses its normal casting time, range, and duration, and the user of the item must concentrate if the spell requires concentration. Many items, such as potions, bypass the casting of a spell and confer the spell's effects, with their usual duration. Certain items make exceptions to these rules, changing the casting time, duration, or other parts of a spell.
 
@@ -1493,9 +1863,13 @@ A magic item, such as certain staffs, may require you to use your own spellcasti
 
 ## activating-an-item > charges
 
+Charges
+
 Some magic items have charges that must be expended to activate their properties. The number of charges an item has remaining is revealed when an identify spell is cast on it, as well as when a creature attunes to it. Additionally, when an item regains charges, the creature attuned to it learns how many charges it regained.
 
 ## sentient-magic-items
+
+Sentient Magic Items
 
 Some magic items possess sentience and personality. Such an item might be possessed, haunted by the spirit of a previous owner, or self-aware thanks to the magic used to create it. In any case, the item behaves like a character, complete with personality quirks, ideals, bonds, and sometimes flaws. A sentient item might be a cherished ally to its wielder or a continual thorn in the side.
 
@@ -1505,13 +1879,19 @@ Sentient magic items function as NPCs under the GM's control. Any activated prop
 
 ## sentient-magic-items > creating-sentient-magic-items
 
+Creating Sentient Magic Items
+
 When you decide to make a magic item sentient, you create the item's persona in the same way you would create an NPC, with a few exceptions described here.
 
 ## sentient-magic-items > creating-sentient-magic-items > abilities
 
+Abilities
+
 A sentient magic item has Intelligence, Wisdom, and Charisma scores. You can choose the item's abilities or determine them randomly. To determine them randomly, roll 4d6 for each one, dropping the lowest roll and totaling the rest.
 
 ## sentient-magic-items > creating-sentient-magic-items > communication
+
+Communication
 
 A sentient item has some ability to communicate, either by sharing its emotions, broadcasting its thoughts telepathically, or speaking aloud. You can choose how it communicates or roll on the following table.
 
@@ -1523,6 +1903,8 @@ A sentient item has some ability to communicate, either by sharing its emotions,
 
 ## sentient-magic-items > creating-sentient-magic-items > senses
 
+Senses
+
 With sentience comes awareness. A sentient item can perceive its surroundings out to a limited range. You can choose its senses or roll on the following table.
 
 | d4 | Senses                                     |
@@ -1533,6 +1915,8 @@ With sentience comes awareness. A sentient item can perceive its surroundings ou
 | 4  | Hearing and darkvision out to 120 feet.    |
 
 ## sentient-magic-items > creating-sentient-magic-items > alignment
+
+Alignment
 
 A sentient magic item has an alignment. Its creator or nature might suggest an alignment. If not, you can pick an alignment or roll on the following table.
 
@@ -1549,6 +1933,8 @@ A sentient magic item has an alignment. Its creator or nature might suggest an a
 | 97-100 | Chaotic evil    |
 
 ## sentient-magic-items > creating-sentient-magic-items > special-purpose
+
+Special Purpose
 
 You can give a sentient item an objective it pursues, perhaps to the exclusion of all else. As long as the wielder's use of the item aligns with that special purpose, the item remains cooperative. Deviating from this course might cause conflict between the wielder and the item, and could even cause the item to prevent the use of its activated properties. You can pick a special purpose or roll on the following table.
 
@@ -1567,6 +1953,8 @@ You can give a sentient item an objective it pursues, perhaps to the exclusion o
 
 ## sentient-magic-items > conflict
 
+Conflict
+
 A sentient item has a will of its own, shaped by its personality and alignment. If its wielder acts in a manner opposed to the item's alignment or purpose, conflict can arise. When such a conflict occurs, the item makes a Charisma check contested by the wielder's Charisma check. If the item wins the contest, it makes one or more of the following demands:
 - The item insists on being carried or worn at all times.
 - The item demands that its wielder dispose of anything the item finds repugnant.
@@ -1580,15 +1968,21 @@ If a sentient item attempts to take control of its wielder, the wielder must mak
 
 ## fantasy-historical-pantheons
 
+Fantasy-Historical Pantheons
+
 The Celtic, Egyptian, Greek, and Norse pantheons are fantasy interpretations of historical religions from our world's ancient times. They include deities that are most appropriate for use in a game, divorced from their historical context in the real world and united into pantheons that serve the needs of the game.
 
 ## fantasy-historical-pantheons > the-celtic-pantheon
+
+The Celtic Pantheon
 
 It's said that something wild lurks in the heart of every soul, a space that thrills to the sound of geese calling at night, to the whispering wind through the pines, to the unexpected red of mistletoe on an oak-and it is in this space that the Celtic gods dwell. They sprang from the brook and stream, their might heightened by the strength of the oak and the beauty of the woodlands and open moor. When the first forester dared put a name to the face seen in the bole of a tree or the voice babbling in a brook, these gods forced themselves into being.
 
 The Celtic gods are as often served by druids as by clerics, for they are closely aligned with the forces of nature that druids revere.
 
 ## fantasy-historical-pantheons > the-celtic-pantheon > celtic-deities
+
+Celtic Deities
 
 | Deity                                             | Alignment | Suggested Domains | Symbol                             |
 |---------------------------------------------------|-----------|-------------------|------------------------------------|
@@ -1609,9 +2003,13 @@ The Celtic gods are as often served by druids as by clerics, for they are closel
 
 ## fantasy-historical-pantheons > the-greek-pantheon
 
+The Greek Pantheon
+
 The gods of Olympus make themselves known with the gentle lap of waves against the shores and the crash of the thunder among the cloud-enshrouded peaks. The thick boar-infested woods and the sere, olive-covered hillsides hold evidence of their passing. Every aspect of nature echoes with their presence, and they've made a place for themselves inside the human heart, too.
 
 ## fantasy-historical-pantheons > the-greek-pantheon > greek-deities
+
+Greek Deities
 
 | Deity                                      | Alignment | Suggested Domains      | Symbol                                |
 |--------------------------------------------|-----------|------------------------|---------------------------------------|
@@ -1637,11 +2035,15 @@ The gods of Olympus make themselves known with the gentle lap of waves against t
 
 ## fantasy-historical-pantheons > the-egyptian-pantheon
 
+The Egyptian Pantheon
+
 These gods are a young dynasty of an ancient divine family, heirs to the rulership of the cosmos and the maintenance of the divine principle of Ma'at-the fundamental order of truth, justice, law, and order that puts gods, mortal pharaohs, and ordinary men and women in their logical and rightful place in the universe.
 
 The Egyptian pantheon is unusual in having three gods responsible for death, each with different alignments. Anubis is the lawful neutral god of the afterlife, who judges the souls of the dead. Set is a chaotic evil god of murder, perhaps best known for killing his brother Osiris. And Nephthys is a chaotic good goddess of mourning.
 
 ## fantasy-historical-pantheons > the-egyptian-pantheon > egyptian-deities
+
+Egyptian Deities
 
 | Deity                                           | Alignment | Suggested Domains        | Symbol                               |
 |-------------------------------------------------|-----------|--------------------------|--------------------------------------|
@@ -1662,11 +2064,15 @@ The Egyptian pantheon is unusual in having three gods responsible for death, eac
 
 ## fantasy-historical-pantheons > the-norse-pantheon
 
+The Norse Pantheon
+
 Where the land plummets from the snowy hills into the icy fjords below, where the longboats draw up on to the beach, where the glaciers flow forward and retreat with every fall and spring-this is the land of the Vikings, the home of the Norse pantheon. It's a brutal clime, and one that calls for brutal living. The warriors of the land have had to adapt to the harsh conditions in order to survive, but they haven't been too twisted by the needs of their environment. Given the necessity of raiding for food and wealth, it's surprising the mortals turned out as well as they did. Their powers reflect the need these warriors had for strong leadership and decisive action. Thus, they see their deities in every bend of a river, hear them in the crash of the thunder and the booming of the glaciers, and smell them in the smoke of a burning longhouse.
 
 The Norse pantheon includes two main families, the Aesir (deities of war and destiny) and the Vanir (gods of fertility and prosperity). Once enemies, these two families are now closely allied against their common enemies, the giants (including the gods Surtur and Thrym).
 
 ## fantasy-historical-pantheons > the-norse-pantheon > norse-deities
+
+Norse Deities
 
 | Deity                                     | Alignment | Suggested Domains | Symbol                            |
 |-------------------------------------------|-----------|-------------------|-----------------------------------|
@@ -1693,11 +2099,15 @@ The Norse pantheon includes two main families, the Aesir (deities of war and des
 
 ## the-planes-of-existence
 
+The Planes of Existence
+
 The cosmos teems with a multitude of worlds as well as myriad alternate dimensions of reality, called the **planes of existence**. It encompasses every world where GMs run their adventures, all within the relatively mundane realm of the Material Plane. Beyond that plane are domains of raw elemental matter and energy, realms of pure thought and ethos, the homes of demons and angels, and the dominions of the gods.
 
 Many spells and magic items can draw energy from these planes, summon the creatures that dwell there, communicate with their denizens, and allow adventurers to travel there. As your character achieves greater power and higher levels, you might walk on streets made of solid fire or test your mettle on a battlefield where the fallen are resurrected with each dawn.
 
 ## the-planes-of-existence > the-material-plane
+
+The Material Plane
 
 The Material Plane is the nexus where the philosophical and elemental forces that define the other planes collide in the jumbled existence of mortal life and mundane matter. All fantasy gaming worlds exist within the Material Plane, making it the starting point for most campaigns and adventures. The rest of the multiverse is defined in relation to the Material Plane.
 
@@ -1705,9 +2115,13 @@ The worlds of the Material Plane are infinitely diverse, for they reflect the cr
 
 ## the-planes-of-existence > beyond-the-material
 
+Beyond the Material
+
 Beyond the Material Plane, the various planes of existence are realms of myth and mystery. They're not simply other worlds, but different qualities of being, formed and governed by spiritual and elemental principles abstracted from the ordinary world.
 
 ## the-planes-of-existence > beyond-the-material > planar-travel
+
+Planar Travel
 
 When adventurers travel into other planes of existence, they are undertaking a legendary journey across the thresholds of existence to a mythic destination where they strive to complete their quest. Such a journey is the stuff of legend. Braving the realms of the dead, seeking out the celestial servants of a deity, or bargaining with an efreeti in its home city will be the subject of song and story for years to come.
 
@@ -1719,6 +2133,8 @@ Travel to the planes beyond the Material Plane can be accomplished in two ways: 
 
 ## the-planes-of-existence > beyond-the-material > transitive-planes
 
+Transitive Planes
+
 The Ethereal Plane and the Astral Plane are called the Transitive Planes. They are mostly featureless realms that serve primarily as ways to travel from one plane to another. Spells such as *etherealness* and *astral projection* allow characters to enter these planes and traverse them to reach the planes beyond.
 
 The **Ethereal Plane** is a misty, fog-bound dimension that is sometimes described as a great ocean. Its shores, called the Border Ethereal, overlap the Material Plane and the Inner Planes, so that every location on those planes has a corresponding location on the Ethereal Plane. Certain creatures can see into the Border Ethereal, and the *see invisibility* and *true seeing* spell grant that ability. Some magical effects also extend from the Material Plane into the Border Ethereal, particularly effects that use force energy such as *forcecage* and *wall of force.* The depths of the plane, the Deep Ethereal, are a region of swirling mists and colorful fogs.
@@ -1727,11 +2143,15 @@ The **Astral Plane** is the realm of thought and dream, where visitors travel as
 
 ## the-planes-of-existence > beyond-the-material > inner-planes
 
+Inner Planes
+
 The Inner Planes surround and enfold the Material Plane and its echoes, providing the raw elemental substance from which all the worlds were made. The four **Elemental Planes**-Air, Earth, Fire, and Water-form a ring around the Material Plane, suspended within the churning **Elemental Chaos**.
 
 At their innermost edges, where they are closest to the Material Plane (in a conceptual if not a literal geographical sense), the four Elemental Planes resemble a world in the Material Plane. The four elements mingle together as they do in the Material Plane, forming land, sea, and sky. Farther from the Material Plane, though, the Elemental Planes are both alien and hostile. Here, the elements exist in their purest form-great expanses of solid earth, blazing fire, crystal-clear water, and unsullied air. These regions are little-known, so when discussing the Plane of Fire, for example, a speaker usually means just the border region. At the farthest extents of the Inner Planes, the pure elements dissolve and bleed together into an unending tumult of clashing energies and colliding substance, the Elemental Chaos.
 
 ## the-planes-of-existence > beyond-the-material > outer-planes
+
+Outer Planes
 
 If the Inner Planes are the raw matter and energy that makes up the multiverse, the Outer Planes are the direction, thought and purpose for such construction. Accordingly, many sages refer to the Outer Planes as divine planes, spiritual planes, or godly planes, for the Outer Planes are best known as the homes of deities.
 
@@ -1745,13 +2165,19 @@ The most well-known Outer Planes are a group of sixteen planes that correspond t
 
 ## the-planes-of-existence > beyond-the-material > outer-planes > outer-planes
 
+Outer Planes
+
 The planes with some element of good in their nature are called the **Upper Planes**. Celestial creatures such as angels and pegasi dwell in the Upper Planes. Planes with some element of evil are the **Lower Planes**. Fiends such as demons and devils dwell in the Lower Planes. A plane's alignment is its essence, and a character whose alignment doesn't match the plane's experiences a profound sense of dissonance there. When a good creature visits Elysium, for example (a neutral good Upper Plane), it feels in tune with the plane, but an evil creature feels out of tune and more than a little uncomfortable.
 
 ## the-planes-of-existence > beyond-the-material > outer-planes > demiplanes
 
+Demiplanes
+
 Demiplanes are small extradimensional spaces with their own unique rules. They are pieces of reality that don't seem to fit anywhere else. Demiplanes come into being by a variety of means. Some are created by spells, such as *demiplane,* or generated at the desire of a powerful deity or other force. They may exist naturally, as a fold of existing reality that has been pinched off from the rest of the multiverse, or as a baby universe growing in power. A given demiplane can be entered through a single point where it touches another plane. Theoretically, a *plane shift* spell can also carry travelers to a demiplane, but the proper frequency required for the tuning fork is extremely hard to acquire. The *gate* spell is more reliable, assuming the caster knows of the demiplane.
 
 ## traps
+
+Traps
 
 Traps can be found almost anywhere. One wrong step in an ancient tomb might trigger a series of scything blades, which cleave through armor and bone. The seemingly innocuous vines that hang over a cave entrance might grasp and choke anyone who pushes through them. A net hidden among the trees might drop on travelers who pass underneath. In a fantasy game, unwary adventurers can fall to their deaths, be burned alive, or fall under a fusillade of poisoned darts.
 
@@ -1759,13 +2185,19 @@ A trap can be either mechanical or magical in nature. **Mechanical traps** inclu
 
 ## traps > traps-in-play
 
+Traps in Play
+
 When adventurers come across a trap, you need to know how the trap is triggered and what it does, as well as the possibility for the characters to detect the trap and to disable or avoid it.
 
 ## traps > traps-in-play > triggering-a-trap
 
+Triggering a Trap
+
 Most traps are triggered when a creature goes somewhere or touches something that the trap's creator wanted to protect. Common triggers include stepping on a pressure plate or a false section of floor, pulling a trip wire, turning a doorknob, and using the wrong key in a lock. Magic traps are often set to go off when a creature enters an area or touches an object. Some magic traps (such as the *glyph of warding* spell) have more complicated trigger conditions, including a password that prevents the trap from activating.
 
 ## traps > traps-in-play > detecting-and-disabling-a-trap
+
+Detecting and Disabling a Trap
 
 Usually, some element of a trap is visible to careful inspection. Characters might notice an uneven flagstone that conceals a pressure plate, spot the gleam of light off a trip wire, notice small holes in the walls from which jets of flame will erupt, or otherwise detect something that points to a trap's presence.
 
@@ -1783,6 +2215,8 @@ Traps are often designed with mechanisms that allow them to be disarmed or bypas
 
 ## traps > traps-in-play > trap-effects
 
+Trap Effects
+
 The effects of traps can range from inconvenient to deadly, making use of elements such as arrows, spikes, blades, poison, toxic gas, blasts of fire, and deep pits. The deadliest traps combine multiple elements to kill, injure, contain, or drive off any creature unfortunate enough to trigger them. A trap's description specifies what happens when it is triggered.
 
 The attack bonus of a trap, the save DC to resist its effects, and the damage it deals can vary depending on the trap's severity. Use the Trap Save DCs and Attack Bonuses table and the Damage Severity by Level table for suggestions based on three levels of trap severity.
@@ -1791,6 +2225,8 @@ A trap intended to be a **setback** is unlikely to kill or seriously harm charac
 
 ## traps > traps-in-play > trap-effects > trap-save-dcs-and-attack-bonuses
 
+Trap Save DCs and Attack Bonuses
+
 | Trap Danger | Save DC | Attack Bonus |
 |-------------|---------|--------------|
 | Setback     | 10-11   | +3 to +5     |
@@ -1798,6 +2234,8 @@ A trap intended to be a **setback** is unlikely to kill or seriously harm charac
 | Deadly      | 16-20   | +9 to +12    |
 
 ## traps > traps-in-play > trap-effects > damage-severity-by-level
+
+Damage Severity by Level
 
 | Character Level | Setback | Dangerous | Deadly |
 |-----------------|---------|-----------|--------|
@@ -1808,6 +2246,8 @@ A trap intended to be a **setback** is unlikely to kill or seriously harm charac
 
 ## traps > traps-in-play > complex-traps
 
+Complex Traps
+
 Complex traps work like standard traps, except once activated they execute a series of actions each round. A complex trap turns the process of dealing with a trap into something more like a combat encounter.
 
 When a complex trap activates, it rolls initiative. The trap's description includes an initiative bonus. On its turn, the trap activates again, often taking an action. It might make successive attacks against intruders, create an effect that changes over time, or otherwise produce a dynamic challenge. Otherwise, the complex trap can be detected and disabled or bypassed in the usual ways.
@@ -1816,9 +2256,13 @@ For example, a trap that causes a room to slowly flood works best as a complex t
 
 ## traps > sample-traps
 
+Sample Traps
+
 The magical and mechanical traps presented here vary in deadliness and are presented in alphabetical order.
 
 ## traps > sample-traps > collapsing-roof
+
+Collapsing Roof
 
 *Mechanical trap*
 
@@ -1834,6 +2278,8 @@ When the trap is triggered, the unstable ceiling collapses. Any creature in the 
 
 ## traps > sample-traps > falling-net
 
+Falling Net
+
 *Mechanical trap*
 
 This trap uses a trip wire to release a net suspended from the ceiling.
@@ -1846,6 +2292,8 @@ Strength check, freeing itself or another creature within its reach on a success
 
 ## traps > sample-traps > fire-breathing-statue
 
+Fire-Breathing Statue
+
 *Magic trap*
 
 This trap is activated when an intruder steps on a hidden pressure plate, releasing a magical gout of flame from a nearby statue. The statue can be of anything, including a dragon or a wizard casting a spell.
@@ -1857,6 +2305,8 @@ The trap activates when more than 20 pounds of weight is placed on the pressure 
 Wedging an iron spike or other object under the pressure plate prevents the trap from activating. A successful *dispel magic* (DC 13) cast on the statue destroys the trap.
 
 ## traps > sample-traps > pits
+
+Pits
 
 *Mechanical trap*
 
@@ -1882,6 +2332,8 @@ A successful DC 20 Strength check is necessary to pry the cover open. The cover 
 
 ## traps > sample-traps > poison-darts
 
+Poison Darts
+
 *Mechanical trap*
 
 When a creature steps on a hidden pressure plate, poison-tipped darts shoot from spring-loaded or pressurized tubes cleverly embedded in the surrounding walls. An area might include multiple pressure plates, each one rigged to its own set of darts.
@@ -1894,6 +2346,8 @@ bonus against a random target within 10 feet of the pressure plate (vision is ir
 
 ## traps > sample-traps > poison-needle
 
+Poison Needle
+
 *Mechanical trap*
 
 A poisoned needle is hidden within a treasure chest's lock, or in something else that a creature might open. Opening the chest without the proper key causes the needle to spring out, delivering a dose of poison.
@@ -1904,6 +2358,8 @@ When the trap is triggered, the needle extends 3 inches straight out from the lo
 A successful DC 20 Intelligence (Investigation) check allows a character to deduce the trap's presence from alterations made to the lock to accommodate the needle. A successful DC 15 Dexterity check using thieves' tools disarms the trap, removing the needle from the lock. Unsuccessfully attempting to pick the lock triggers the trap.
 
 ## traps > sample-traps > rolling-sphere
+
+Rolling Sphere
 
 *Mechanical trap*
 
@@ -1919,6 +2375,8 @@ As an action, a creature within 5 feet of the sphere can attempt to slow it down
 
 ## traps > sample-traps > sphere-of-annihilation
 
+Sphere of Annihilation
+
 *Magic trap*
 
 Magical, impenetrable darkness fills the gaping mouth of a stone face carved into a wall. The mouth is 2 feet in diameter and roughly circular. No sound issues from it, no light can illuminate the inside of it, and any matter that enters it is instantly obliterated.
@@ -1929,6 +2387,8 @@ Some versions of the trap include an enchantment placed on the stone face, such 
 
 ## diseases
 
+Diseases
+
 A plague ravages the kingdom, setting the adventurers on a quest to find a cure. An adventurer emerges from an ancient tomb, unopened for centuries, and soon finds herself suffering from a wasting illness. A warlock offends some dark power and contracts a strange affliction that spreads whenever he casts spells.
 
 A simple outbreak might amount to little more than a small drain on party resources, curable by a casting of *lesser restoration*. A more complicated outbreak can form the basis of one or more adventures as characters search for a cure, stop the spread of the disease, and deal with the consequences.
@@ -1937,9 +2397,13 @@ A disease that does more than infect a few party members is primarily a plot dev
 
 ## diseases > sample-diseases
 
+Sample Diseases
+
 The diseases here illustrate the variety of ways disease can work in the game. Feel free to alter the saving throw DCs, incubation times, symptoms, and other characteristics of these diseases to suit your campaign.
 
 ## diseases > sample-diseases > cackle-fever
+
+Cackle Fever
 
 This disease targets humanoids, although gnomes are strangely immune. While in the grips of this disease, victims frequently succumb to fits of mad laughter, giving the disease its common name and its morbid nickname: "the shrieks."
 
@@ -1953,6 +2417,8 @@ At the end of each long rest, an infected creature can make a DC 13 Constitution
 
 ## diseases > sample-diseases > sewer-plague
 
+Sewer Plague
+
 Sewer plague is a generic term for a broad category of illnesses that incubate in sewers, refuse heaps, and stagnant swamps, and which are sometimes transmitted by creatures that dwell in those areas, such as rats and otyughs.
 
 When a humanoid creature is bitten by a creature that carries the disease, or when it comes into contact with filth or offal contaminated by the disease, the creature must succeed on a DC 11 Constitution saving throw or become infected.
@@ -1963,6 +2429,8 @@ At the end of each long rest, an infected creature must make a DC 11 Constitutio
 
 ## diseases > sample-diseases > sight-rot
 
+Sight Rot
+
 This painful infection causes bleeding from the eyes and eventually blinds the victim.
 
 A beast or humanoid that drinks water tainted by sight rot must succeed on a DC 15 Constitution saving throw or become infected. One day after infection, the creature's vision starts to become blurry. The creature takes a -1 penalty to attack rolls and ability checks that rely on sight. At the end of each long rest after the symptoms appear, the penalty worsens by 1. When it reaches -5, the victim is blinded until its sight is restored by magic such as *lesser restoration* or *heal*.
@@ -1971,15 +2439,21 @@ Sight rot can be cured using a rare flower called Eyebright, which grows in some
 
 ## madness
 
+Madness
+
 In a typical campaign, characters aren't driven mad by the horrors they face and the carnage they inflict day after day, but sometimes the stress of being an adventurer can be too much to bear. If your campaign has a strong horror theme, you might want to use madness as a way to reinforce that theme, emphasizing the extraordinarily horrific nature of the threats the adventurers face.
 
 ## madness > going-mad
+
+Going Mad
 
 Various magical effects can inflict madness on an otherwise stable mind. Certain spells, such as *contact other plane* and *symbol*, can cause insanity, and you can use the madness rules here instead of the spell effects of those spells*.* Diseases, poisons, and planar effects such as psychic wind or the howling winds of Pandemonium can all inflict madness. Some artifacts can also break the psyche of a character who uses or becomes attuned to them.
 
 Resisting a madness-inducing effect usually requires a Wisdom or Charisma saving throw.
 
 ## madness > madness-effects
+
+Madness Effects
 
 Madness can be short-term, long-term, or indefinite. Most relatively mundane effects impose short-term madness, which lasts for just a few minutes. More horrific effects or cumulative effects can result in long-term or indefinite madness.
 
@@ -1990,6 +2464,8 @@ A character afflicted with **long-term madness** is subjected to an effect from 
 A character afflicted with **indefinite madness** gains a new character flaw from the Indefinite Madness table that lasts until cured.
 
 ## madness > madness-effects > short-term-madness
+
+Short-Term Madness
 
 | d100   | Effect (lasts 1d10 minutes)                                                                                                  |
 |--------|------------------------------------------------------------------------------------------------------------------------------|
@@ -2005,6 +2481,8 @@ A character afflicted with **indefinite madness** gains a new character flaw fro
 | 91-100 | The character falls unconscious.                                                                                             |
 
 ## madness > madness-effects > long-term-madness
+
+Long-Term Madness
 
 | d100   | Effect (lasts 1d10 × 10 hours)                                                                                                                                                                                                       |
 |--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -2023,6 +2501,8 @@ A character afflicted with **indefinite madness** gains a new character flaw fro
 
 ## madness > madness-effects > indefinite-madness
 
+Indefinite Madness
+
 | d100   | Flaw (lasts until cured)                                                                                                                 |
 |--------|------------------------------------------------------------------------------------------------------------------------------------------|
 | 01-15  | "Being drunk keeps me sane."                                                                                                             |
@@ -2040,9 +2520,13 @@ A character afflicted with **indefinite madness** gains a new character flaw fro
 
 ## madness > curing-madness
 
+Curing Madness
+
 A *calm emotions* spell can suppress the effects of madness, while a *lesser restoration* spell can rid a character of a short-term or long-term madness. Depending on the source of the madness, *remove curse* or *dispel evil* might also prove effective. A *greater restoration* spell or more powerful magic is required to rid a character of indefinite madness.
 
 ## conditions > blinded
+
+Blinded
 
 - A blinded creature can't see and automatically fails any ability check that requires sight.
 
@@ -2050,21 +2534,29 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 
 ## conditions > charmed
 
+Charmed
+
 - A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects.
 
 - The charmer has advantage on any ability check to interact socially with the creature.
 
 ## conditions > deafened
 
+Deafened
+
 - A deafened creature can't hear and automatically fails any ability check that requires hearing.
 
 ## conditions > frightened
+
+Frightened
 
 - A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.
 
 - The creature can't willingly move closer to the source of its fear.
 
 ## conditions > grappled
+
+Grappled
 
 - A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.
 
@@ -2074,15 +2566,21 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 
 ## conditions > incapacitated
 
+Incapacitated
+
 - An incapacitated creature can't take actions or reactions.
 
 ## conditions > invisible
+
+Invisible
 
 - An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves.
 
 - Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.
 
 ## conditions > paralyzed
+
+Paralyzed
 
 - A paralyzed creature is incapacitated (see the condition) and can't move or speak.
 
@@ -2093,6 +2591,8 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 - Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.
 
 ## conditions > petrified
+
+Petrified
 
 - A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.
 
@@ -2108,9 +2608,13 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 
 ## conditions > poisoned
 
+Poisoned
+
 - A poisoned creature has disadvantage on attack rolls and ability checks.
 
 ## conditions > prone
+
+Prone
 
 - A prone creature's only movement option is to crawl, unless it stands up and thereby ends the condition.
 
@@ -2120,6 +2624,8 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 
 ## conditions > restrained
 
+Restrained
+
 - A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.
 
 - Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.
@@ -2128,6 +2634,8 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 
 ## conditions > stunned
 
+Stunned
+
 - A stunned creature is incapacitated (see the condition), can't move, and can speak only falteringly.
 
 - The creature automatically fails Strength and Dexterity saving throws.
@@ -2135,6 +2643,8 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 - Attack rolls against the creature have advantage.
 
 ## conditions > unconscious
+
+Unconscious
 
 - An unconscious creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings.
 
@@ -2147,6 +2657,8 @@ A *calm emotions* spell can suppress the effects of madness, while a *lesser res
 - Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.
 
 ## conditions > exhaustion
+
+Exhaustion
 
 Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.
 
@@ -2172,51 +2684,75 @@ Finishing a long rest reduces a creature's exhaustion level by 1, provided that 
 
 ## weapon-properties > ammunition
 
+Ammunition
+
 You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack (you need a free hand to load a one-handed weapon).
 
 At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield. If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon (see "Improvised Weapons" later in the section). A sling must be loaded to deal any damage when used in this way.
 
 ## weapon-properties > finesse
 
+Finesse
+
 When making an attack with a finesse weapon, you use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.
 
 ## weapon-properties > heavy
+
+Heavy
 
 Small creatures have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small creature to use effectively.
 
 ## weapon-properties > light
 
+Light
+
 A light weapon is small and easy to handle, making it ideal for use when fighting with two weapons.
 
 ## weapon-properties > loading
+
+Loading
 
 Because of the time required to load this weapon, you can fire only one piece of ammunition from it when you use an action, bonus action, or reaction to fire it, regardless of the number of attacks you can normally make.
 
 ## weapon-properties > reach
 
+Reach
+
 This weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for opportunity attacks with it.
 
 ## weapon-properties > special
+
+Special
 
 A weapon with the special property has unusual rules governing its use, explained in the weapon's description (see "Special Weapons" later in this section).
 
 ## weapon-properties > thrown
 
+Thrown
+
 If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property.
 
 ## weapon-properties > two-handed
+
+Two-Handed
 
 This weapon requires two hands when you attack with it.
 
 ## weapon-properties > versatile
 
+Versatile
+
 This weapon can be used with one or two hands. A damage value in parentheses appears with the property--the damage when the weapon is used with two hands to make a melee attack.
 
 ## weapon-properties > monk
 
+Monk
+
 Monks gain several benefits while unarmed or wielding only monk weapons while they aren't wearing armor or wielding shields.
 
 ## spells > acid-arrow
+
+Acid Arrow
 
 Level: 2
 School: Evocation
@@ -2233,6 +2769,8 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 
 ## spells > acid-splash
 
+Acid Splash
+
 Level: cantrip
 School: Conjuration
 Casting time: 1 action
@@ -2248,6 +2786,8 @@ This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level 
 
 ## spells > aid
 
+Aid
+
 Level: 2
 School: Abjuration
 Casting time: 1 action
@@ -2262,6 +2802,8 @@ Your spell bolsters your allies with toughness and resolve. Choose up to three c
 At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd.
 
 ## spells > alarm
+
+Alarm
 
 Level: 1
 School: Abjuration
@@ -2279,6 +2821,8 @@ A mental alarm alerts you with a ping in your mind if you are within 1 mile of t
 An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.
 
 ## spells > alter-self
+
+Alter Self
 
 Level: 2
 School: Transmutation
@@ -2299,6 +2843,8 @@ You assume a different form. When you cast the spell, choose one of the followin
 
 ## spells > animal-friendship
 
+Animal Friendship
+
 Level: 1
 School: Enchantment
 Casting time: 1 action
@@ -2311,6 +2857,8 @@ Ritual: no
 This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spells ends.
 
 ## spells > animal-messenger
+
+Animal Messenger
 
 Level: 2
 School: Enchantment
@@ -2329,6 +2877,8 @@ At Higher Levels. If you cast this spell using a spell slot of 3nd level or high
 
 ## spells > animal-shapes
 
+Animal Shapes
+
 Level: 8
 School: Transmutation
 Casting time: 1 action
@@ -2345,6 +2895,8 @@ The transformation lasts for the duration for each target, or until the target d
 The target's gear melds into the new form. The target can't activate, wield, or otherwise benefit from any of its equipment.
 
 ## spells > animate-dead
+
+Animate Dead
 
 Level: 3
 School: Necromancy
@@ -2364,6 +2916,8 @@ The creature is under your control for 24 hours, after which it stops obeying an
 At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones.
 
 ## spells > animate-objects
+
+Animate Objects
 
 Level: 5
 School: Transmutation
@@ -2402,6 +2956,8 @@ At Higher Levels. If you cast this spell using a spell slot of 6th level or high
 
 ## spells > antilife-shell
 
+Antilife Shell
+
 Level: 5
 School: Abjuration
 Casting time: 1 action
@@ -2418,6 +2974,8 @@ The barrier prevents an affected creature from passing or reaching through. An a
 If you move so that an affected creature is forced to pass through the barrier, the spell ends.
 
 ## spells > antimagic-field
+
+Antimagic Field
 
 Level: 8
 School: Abjuration
@@ -2450,6 +3008,8 @@ A magic weapon's properties and powers are suppressed if it is used against a ta
 
 ## spells > antipathy-sympathy
 
+Antipathy/Sympathy
+
 Level: 8
 School: Enchantment
 Casting time: 1 hour
@@ -2473,6 +3033,8 @@ A creature that successfully saves against this effect is immune to it for 1 min
 
 ## spells > arcane-eye
 
+Arcane Eye
+
 Level: 4
 School: Divination
 Casting time: 1 action
@@ -2489,6 +3051,8 @@ You mentally receive visual information from the eye, which has normal vision an
 As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter.
 
 ## spells > arcane-hand
+
+Arcane Hand
 
 Level: 5
 School: Evocation
@@ -2517,6 +3081,8 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 
 ## spells > arcane-lock
 
+Arcane Lock
+
 Level: 2
 School: Abjuration
 Casting time: 1 action
@@ -2532,6 +3098,8 @@ While affected by this spell, the object is more difficult to break or force ope
 
 ## spells > arcane-sword
 
+Arcane Sword
+
 Level: 7
 School: Evocation
 Casting time: 1 action
@@ -2546,6 +3114,8 @@ You create a sword-shaped plane of force that hovers within range. It lasts for 
 When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.
 
 ## spells > arcanists-magic-aura
+
+Arcanist's Magic Aura
 
 Level: 2
 School: Illusion
@@ -2565,6 +3135,8 @@ When you cast the spell, choose one or both of the following effects. The effect
 ***Mask.*** You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment.
 
 ## spells > astral-projection
+
+Astral Projection
 
 Level: 9
 School: Necromancy
@@ -2588,6 +3160,8 @@ The spell might also end early for you or one of your companions. A successful d
 If you are returned to your body prematurely, your companions remain in their astral forms and must find their own way back to their bodies, usually by dropping to 0 hit points.
 
 ## spells > augury
+
+Augury
 
 Level: 2
 School: Divination
@@ -2614,6 +3188,8 @@ If you cast the spell two or more times before completing your next long rest, t
 
 ## spells > awaken
 
+Awaken
+
 Level: 5
 School: Transmutation
 Casting time: 8 hours
@@ -2629,6 +3205,8 @@ The awakened beast or plant is charmed by you for 30 days or until you or your c
 
 ## spells > bane
 
+Bane
+
 Level: 1
 School: Enchantment
 Casting time: 1 action
@@ -2643,6 +3221,8 @@ Up to three creatures of your choice that you can see within range must make cha
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
 
 ## spells > banishment
+
+Banishment
 
 Level: 4
 School: Abjuration
@@ -2663,6 +3243,8 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 
 ## spells > barkskin
 
+Barkskin
+
 Level: 2
 School: Transmutation
 Casting time: 1 action
@@ -2676,6 +3258,8 @@ You touch a willing creature. Until the spell ends, the target's skin has a roug
 
 ## spells > beacon-of-hope
 
+Beacon of Hope
+
 Level: 3
 School: Abjuration
 Casting time: 1 action
@@ -2688,6 +3272,8 @@ Ritual: no
 This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.
 
 ## spells > bestow-curse
+
+Bestow Curse
 
 Level: 3
 School: Necromancy
@@ -2714,6 +3300,8 @@ At Higher Levels. If you cast this spell using a spell slot of 4th level or high
 
 ## spells > black-tentacles
 
+Black Tentacles
+
 Level: 4
 School: Conjuration
 Casting time: 1 action
@@ -2731,6 +3319,8 @@ A creature restrained by the tentacles can use its action to make a Strength or 
 
 ## spells > blade-barrier
 
+Blade Barrier
+
 Level: 6
 School: Evocation
 Casting time: 1 action
@@ -2746,6 +3336,8 @@ When a creature enters the wall's area for the first time on a turn or starts it
 
 ## spells > bless
 
+Bless
+
 Level: 1
 School: Enchantment
 Casting time: 1 action
@@ -2760,6 +3352,8 @@ You bless up to three creatures of your choice within range. Whenever a target m
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
 
 ## spells > blight
+
+Blight
 
 Level: 4
 School: Necromancy
@@ -2780,6 +3374,8 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level of hi
 
 ## spells > blindness-deafness
 
+Blindness/Deafness
+
 Level: 2
 School: Necromancy
 Casting time: 1 action
@@ -2794,6 +3390,8 @@ You can blind or deafen a foe. Choose one creature that you can see within range
 At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
 
 ## spells > blink
+
+Blink
 
 Level: 3
 School: Transmutation
@@ -2810,6 +3408,8 @@ While on the Ethereal Plane, you can see and hear the plane you originated from,
 
 ## spells > blur
 
+Blur
+
 Level: 2
 School: Illusion
 Casting time: 1 action
@@ -2822,6 +3422,8 @@ Ritual: no
 Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.
 
 ## spells > branding-smite
+
+Branding Smite
 
 Level: 2
 School: Evocation
@@ -2837,6 +3439,8 @@ The next time you hit a creature with a weapon attack before this spell ends, th
 At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd.
 
 ## spells > burning-hands
+
+Burning Hands
 
 Level: 1
 School: Evocation
@@ -2854,6 +3458,8 @@ The fire ignites any flammable objects in the area that aren't being worn or car
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.
 
 ## spells > call-lightning
+
+Call Lightning
 
 Level: 3
 School: Conjuration
@@ -2874,6 +3480,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th or higher l
 
 ## spells > calm-emotions
 
+Calm Emotions
+
 Level: 2
 School: Enchantment
 Casting time: 1 action
@@ -2888,6 +3496,8 @@ You attempt to suppress strong emotions in a group of people. Each humanoid in a
 Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the GM rules otherwise.
 
 ## spells > chain-lightning
+
+Chain Lightning
 
 Level: 6
 School: Evocation
@@ -2906,6 +3516,8 @@ At Higher Levels. When you cast this spell using a spell slot of 7th level or hi
 
 ## spells > charm-person
 
+Charm Person
+
 Level: 1
 School: Enchantment
 Casting time: 1 action
@@ -2920,6 +3532,8 @@ You attempt to charm a humanoid you can see within range. It must make a wisdom 
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.
 
 ## spells > chill-touch
+
+Chill Touch
 
 Level: cantrip
 School: Necromancy
@@ -2938,6 +3552,8 @@ This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level 
 
 ## spells > circle-of-death
 
+Circle of Death
+
 Level: 6
 School: Necromancy
 Casting time: 1 action
@@ -2952,6 +3568,8 @@ A sphere of negative energy ripples out in a 60-foot radius sphere from a point 
 At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage increases by 2d6 for each slot level above 6th.
 
 ## spells > clairvoyance
+
+Clairvoyance
 
 Level: 3
 School: Divination
@@ -2970,6 +3588,8 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 
 ## spells > clone
 
+Clone
+
 Level: 8
 School: Necromancy
 Casting time: 1 hour
@@ -2984,6 +3604,8 @@ This spell grows an inert duplicate of a living creature as a safeguard against 
 At any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The original creature's physical remains, if they still exist, become inert and can't thereafter be restored to life, since the creature's soul is elsewhere.
 
 ## spells > cloudkill
+
+Cloudkill
 
 Level: 5
 School: Conjuration
@@ -3004,6 +3626,8 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 
 ## spells > color-spray
 
+Color Spray
+
 Level: 1
 School: Illusion
 Casting time: 1 action
@@ -3020,6 +3644,8 @@ Starting with the creature that has the lowest current hit points, each creature
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st.
 
 ## spells > command
+
+Command
 
 Level: 1
 School: Enchantment
@@ -3048,6 +3674,8 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 
 ## spells > commune
 
+Commune
+
 Level: 5
 School: Divination
 Casting time: 1 minute
@@ -3064,6 +3692,8 @@ Divine beings aren't necessarily omniscient, so you might receive "unclear" as a
 If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The GM makes this roll in secret.
 
 ## spells > commune-with-nature
+
+Commune With Nature
 
 Level: 5
 School: Divination
@@ -3092,6 +3722,8 @@ For example, you could determine the location of powerful undead in the area, th
 
 ## spells > comprehend-languages
 
+Comprehend Languages
+
 Level: 1
 School: Divination
 Casting time: 1 action
@@ -3107,6 +3739,8 @@ This spell doesn't decode secret messages in a text or a glyph, such as an arcan
 
 ## spells > compulsion
 
+Compulsion
+
 Level: 4
 School: Enchantment
 Casting time: 1 action
@@ -3121,6 +3755,8 @@ Creatures of your choice that you can see within range and that can hear you mus
 A target isn't compelled to move into an obviously deadly hazard, such as a fire or a pit, but it will provoke opportunity attacks to move in the designated direction.
 
 ## spells > cone-of-cold
+
+Cone of Cold
 
 Level: 5
 School: Evocation
@@ -3138,6 +3774,8 @@ A creature killed by this spell becomes a frozen statue until it thaws.
 At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.
 
 ## spells > confusion
+
+Confusion
 
 Level: 4
 School: Enchantment
@@ -3170,6 +3808,8 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 
 ## spells > conjure-animals
 
+Conjure Animals
+
 Level: 3
 School: Conjuration
 Casting time: 1 action
@@ -3199,6 +3839,8 @@ At Higher Levels. When you cast this spell using certain higher-level spell slot
 
 ## spells > conjure-celestial
 
+Conjure Celestial
+
 Level: 7
 School: Conjuration
 Casting time: 1 minute
@@ -3217,6 +3859,8 @@ The GM has the celestial's statistics.
 At Higher Levels. When you cast this spell using a 9th-level spell slot, you summon a celestial of challenge rating 5 or lower.
 
 ## spells > conjure-elemental
+
+Conjure Elemental
 
 Level: 5
 School: Conjuration
@@ -3239,6 +3883,8 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 
 ## spells > conjure-fey
 
+Conjure Fey
+
 Level: 6
 School: Conjuration
 Casting time: 1 minute
@@ -3259,6 +3905,8 @@ The GM has the fey creature's statistics.
 At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th.
 
 ## spells > conjure-minor-elementals
+
+Conjure Minor Elementals
 
 Level: 4
 School: Conjuration
@@ -3289,6 +3937,8 @@ At Higher Levels. When you cast this spell using certain higher-level spell slot
 
 ## spells > conjure-woodland-beings
 
+Conjure Woodland Beings
+
 Level: 4
 School: Conjuration
 Casting time: 1 action
@@ -3318,6 +3968,8 @@ At Higher Levels. When you cast this spell using certain higher-level spell slot
 
 ## spells > contact-other-plane
 
+Contact Other Plane
+
 Level: 5
 School: Divination
 Casting time: 1 minute
@@ -3332,6 +3984,8 @@ You mentally contact a demigod, the spirit of a long-dead sage, or some other my
 On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The GM answers each question with one word, such as "yes," "no," "maybe," "never," "irrelevant," or "unclear" (if the entity doesn't know the answer to the question). If a one-word answer would be misleading, the GM might instead offer a short phrase as an answer.
 
 ## spells > contagion
+
+Contagion
 
 Level: 5
 School: Necromancy
@@ -3362,6 +4016,8 @@ Since this spell induces a natural disease in its target, any effect that remove
 
 ## spells > contingency
 
+Contingency
+
 Level: 6
 School: Evocation
 Casting time: 10 minutes
@@ -3379,6 +4035,8 @@ The contingent spell takes effect only on you, even if it can normally target ot
 
 ## spells > continual-flame
 
+Continual Flame
+
 Level: 2
 School: Evocation
 Casting time: 1 action
@@ -3391,6 +4049,8 @@ Ritual: no
 A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched.
 
 ## spells > control-water
+
+Control Water
 
 Level: 4
 School: Transmutation
@@ -3420,6 +4080,8 @@ When a creature enters the vortex for the first time on a turn or starts its tur
 The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.
 
 ## spells > control-weather
+
+Control Weather
 
 Level: 8
 School: Transmutation
@@ -3488,6 +4150,8 @@ When you change the weather conditions, find a current condition on the followin
 
 ## spells > counterspell
 
+Counterspell
+
 Level: 3
 School: Abjuration
 Casting time: 1 reaction
@@ -3503,6 +4167,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 
 ## spells > create-food-and-water
 
+Create Food and Water
+
 Level: 3
 School: Conjuration
 Casting time: 1 action
@@ -3515,6 +4181,8 @@ Ritual: no
 You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad.
 
 ## spells > create-undead
+
+Create Undead
 
 Level: 6
 School: Necromancy
@@ -3535,6 +4203,8 @@ At Higher Levels. When you cast this spell using a 7th-level spell slot, you can
 
 ## spells > create-or-destroy-water
 
+Create or Destroy Water
+
 Level: 1
 School: Transmutation
 Casting time: 1 action
@@ -3553,6 +4223,8 @@ You either create or destroy water.
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.
 
 ## spells > creation
+
+Creation
 
 Level: 5
 School: Illusion
@@ -3587,6 +4259,8 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 
 ## spells > cure-wounds
 
+Cure Wounds
+
 Level: 1
 School: Evocation
 Casting time: 1 action
@@ -3602,6 +4276,8 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 
 ## spells > dancing-lights
 
+Dancing Lights
+
 Level: cantrip
 School: Evocation
 Casting time: 1 action
@@ -3616,6 +4292,8 @@ You create up to four torch-sized lights within range, making them appear as tor
 As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.
 
 ## spells > darkness
+
+Darkness
 
 Level: 2
 School: Evocation
@@ -3634,6 +4312,8 @@ If any of this spell's area overlaps with an area of light created by a spell of
 
 ## spells > darkvision
 
+Darkvision
+
 Level: 2
 School: Transmutation
 Casting time: 1 action
@@ -3646,6 +4326,8 @@ Ritual: no
 You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.
 
 ## spells > daylight
+
+Daylight
 
 Level: 3
 School: Evocation
@@ -3664,6 +4346,8 @@ If any of this spell's area overlaps with an area of darkness created by a spell
 
 ## spells > death-ward
 
+Death Ward
+
 Level: 4
 School: Abjuration
 Casting time: 1 action
@@ -3680,6 +4364,8 @@ The first time the target would drop to 0 hit points as a result of taking damag
 If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.
 
 ## spells > delayed-blast-fireball
+
+Delayed Blast Fireball
 
 Level: 7
 School: Evocation
@@ -3702,6 +4388,8 @@ At Higher Levels. When you cast this spell using a spell slot of 8th level or hi
 
 ## spells > demiplane
 
+Demiplane
+
 Level: 8
 School: Conjuration
 Casting time: 1 action
@@ -3716,6 +4404,8 @@ You create a shadowy door on a flat solid surface that you can see within range.
 Each time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.
 
 ## spells > detect-evil-and-good
+
+Detect Evil and Good
 
 Level: 1
 School: Divination
@@ -3732,6 +4422,8 @@ The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 i
 
 ## spells > detect-magic
 
+Detect Magic
+
 Level: 1
 School: Divination
 Casting time: 1 action
@@ -3747,6 +4439,8 @@ The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 i
 
 ## spells > detect-poison-and-disease
 
+Detect Poison and Disease
+
 Level: 1
 School: Divination
 Casting time: 1 action
@@ -3761,6 +4455,8 @@ For the duration, you can sense the presence and location of poisons, poisonous 
 The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
 
 ## spells > detect-thoughts
+
+Detect Thoughts
 
 Level: 2
 School: Divination
@@ -3783,6 +4479,8 @@ Once you detect the presence of a creature in this way, you can read its thought
 
 ## spells > dimension-door
 
+Dimension Door
+
 Level: 4
 School: Conjuration
 Casting time: 1 action
@@ -3800,6 +4498,8 @@ If you would arrive in a place already occupied by an object or a creature, you 
 
 ## spells > disguise-self
 
+Disguise Self
+
 Level: 1
 School: Illusion
 Casting time: 1 action
@@ -3816,6 +4516,8 @@ The changes wrought by this spell fail to hold up to physical inspection. For ex
 To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.
 
 ## spells > disintegrate
+
+Disintegrate
 
 Level: 6
 School: Transmutation
@@ -3838,6 +4540,8 @@ At Higher Levels. When you cast this spell using a spell slot of 7th level or hi
 
 ## spells > dispel-evil-and-good
 
+Dispel Evil and Good
+
 Level: 5
 School: Abjuration
 Casting time: 1 action
@@ -3857,6 +4561,8 @@ You can end the spell early by using either of the following special functions.
 
 ## spells > dispel-magic
 
+Dispel Magic
+
 Level: 3
 School: Abjuration
 Casting time: 1 action
@@ -3871,6 +4577,8 @@ Choose one creature, object, or magical effect within range. Any spell of 3rd le
 At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.
 
 ## spells > divination
+
+Divination
 
 Level: 4
 School: Divination
@@ -3889,6 +4597,8 @@ If you cast the spell two or more times before finishing your next long rest, th
 
 ## spells > divine-favor
 
+Divine Favor
+
 Level: 1
 School: Evocation
 Casting time: 1 bonus action
@@ -3901,6 +4611,8 @@ Ritual: no
 Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.
 
 ## spells > divine-word
+
+Divine Word
 
 Level: 7
 School: Evocation
@@ -3925,6 +4637,8 @@ Regardless of its current hit points, a celestial, an elemental, a fey, or a fie
 
 ## spells > dominate-beast
 
+Dominate Beast
+
 Level: 4
 School: Enchantment
 Casting time: 1 action
@@ -3943,6 +4657,8 @@ You can use your action to take total and precise control of the target. Until t
 At Higher Levels. When you cast this spell with a 9th level spell slot, the duration is concentration, up to 8 hours.
 
 ## spells > dominate-monster
+
+Dominate Monster
 
 Level: 8
 School: Enchantment
@@ -3965,6 +4681,8 @@ At Higher Levels. When you cast this spell with a 9th-level spell slot, the dura
 
 ## spells > dominate-person
 
+Dominate Person
+
 Level: 5
 School: Enchantment
 Casting time: 1 action
@@ -3985,6 +4703,8 @@ Each time the target takes damage, it makes a new wisdom saving throw against th
 At Higher Levels. When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.
 
 ## spells > dream
+
+Dream
 
 Level: 5
 School: Illusion
@@ -4007,6 +4727,8 @@ If you have a body part, lock of hair, clipping from a nail, or similar portion 
 
 ## spells > druidcraft
 
+Druidcraft
+
 Level: cantrip
 School: Transmutation
 Casting time: 1 action
@@ -4027,6 +4749,8 @@ Whispering to the spirits of nature, you create one of the following effects wit
 - You instantly light or snuff out a candle, a torch, or a small campfire.
 
 ## spells > earthquake
+
+Earthquake
 
 Level: 8
 School: Evocation
@@ -4053,6 +4777,8 @@ Structures. The tremor deals 50 bludgeoning damage to any structure in contact w
 
 ## spells > eldritch-blast
 
+Eldritch Blast
+
 Level: cantrip
 School: Evocation
 Casting time: 1 action
@@ -4065,6 +4791,8 @@ Ritual: no
 A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.
 
 ## spells > enhance-ability
+
+Enhance Ability
 
 Level: 2
 School: Transmutation
@@ -4093,6 +4821,8 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 
 ## spells > enlarge-reduce
 
+Enlarge/Reduce
+
 Level: 2
 School: Transmutation
 Casting time: 1 action
@@ -4112,6 +4842,8 @@ If the target is a creature, everything it is wearing and carrying changes size 
 
 ## spells > entangle
 
+Entangle
+
 Level: 1
 School: Conjuration
 Casting time: 1 action
@@ -4129,6 +4861,8 @@ When the spell ends, the conjured plants wilt away.
 
 ## spells > enthrall
 
+Enthrall
+
 Level: 2
 School: Enchantment
 Casting time: 1 action
@@ -4141,6 +4875,8 @@ Ritual: no
 You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a wisdom saving throw. Any creature that can't be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are incapacitated or can no longer speak.
 
 ## spells > etherealness
+
+Etherealness
 
 Level: 7
 School: Transmutation
@@ -4165,6 +4901,8 @@ At Higher Levels. When you cast this spell using a spell slot of 8th level or hi
 
 ## spells > expeditious-retreat
 
+Expeditious Retreat
+
 Level: 1
 School: Transmutation
 Casting time: 1 bonus action
@@ -4177,6 +4915,8 @@ Ritual: no
 This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.
 
 ## spells > eyebite
+
+Eyebite
 
 Level: 6
 School: Necromancy
@@ -4197,6 +4937,8 @@ For the spell's duration, your eyes become an inky void imbued with dread power.
 
 ## spells > fabricate
 
+Fabricate
+
 Level: 4
 School: Transmutation
 Casting time: 10 minutes
@@ -4214,6 +4956,8 @@ Creatures or magic items can't be created or transmuted by this spell. You also 
 
 ## spells > faerie-fire
 
+Faerie Fire
+
 Level: 1
 School: Evocation
 Casting time: 1 action
@@ -4228,6 +4972,8 @@ Each object in a 20-foot cube within range is outlined in blue, green, or violet
 Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.
 
 ## spells > faithful-hound
+
+Faithful Hound
 
 Level: 4
 School: Conjuration
@@ -4246,6 +4992,8 @@ At the start of each of your turns, the hound attempts to bite one creature with
 
 ## spells > false-life
 
+False Life
+
 Level: 1
 School: Necromancy
 Casting time: 1 action
@@ -4260,6 +5008,8 @@ Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 tempo
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st.
 
 ## spells > fear
+
+Fear
 
 Level: 3
 School: Illusion
@@ -4276,6 +5026,8 @@ While frightened by this spell, a creature must take the Dash action and move aw
 
 ## spells > feather-fall
 
+Feather Fall
+
 Level: 1
 School: Transmutation
 Casting time: 1 reaction
@@ -4288,6 +5040,8 @@ Ritual: no
 Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.
 
 ## spells > feeblemind
+
+Feeblemind
 
 Level: 8
 School: Enchantment
@@ -4307,6 +5061,8 @@ At the end of every 30 days, the creature can repeat its saving throw against th
 The spell can also be ended by greater restoration, heal, or wish.
 
 ## spells > find-familiar
+
+Find Familiar
 
 Level: 1
 School: Conjuration
@@ -4333,6 +5089,8 @@ Finally, when you cast a spell with a range of touch, your familiar can deliver 
 
 ## spells > find-steed
 
+Find Steed
+
 Level: 2
 School: Conjuration
 Casting time: 10 minutes
@@ -4354,6 +5112,8 @@ You can't have more than one steed bonded by this spell at a time. As an action,
 
 ## spells > find-traps
 
+Find Traps
+
 Level: 2
 School: Divination
 Casting time: 1 action
@@ -4368,6 +5128,8 @@ You sense the presence of any trap within range that is within line of sight. A 
 This spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense.
 
 ## spells > find-the-path
+
+Find the Path
 
 Level: 6
 School: Divination
@@ -4384,6 +5146,8 @@ For the duration, as long as you are on the same plane of existence as the desti
 
 ## spells > finger-of-death
 
+Finger of Death
+
 Level: 7
 School: Necromancy
 Casting time: 1 action
@@ -4399,6 +5163,8 @@ A humanoid killed by this spell rises at the start of your next turn as a zombie
 
 ## spells > fire-bolt
 
+Fire Bolt
+
 Level: cantrip
 School: Evocation
 Casting time: 1 action
@@ -4413,6 +5179,8 @@ You hurl a mote of fire at a creature or object within range. Make a ranged spel
 This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
 
 ## spells > fire-shield
+
+Fire Shield
 
 Level: 4
 School: Evocation
@@ -4431,6 +5199,8 @@ In addition, whenever a creature within 5 feet of you hits you with a melee atta
 
 ## spells > fire-storm
 
+Fire Storm
+
 Level: 7
 School: Evocation
 Casting time: 1 action
@@ -4445,6 +5215,8 @@ A storm made up of sheets of roaring flame appears in a location you choose with
 The fire damages objects in the area and ignites flammable objects that aren't being worn or carried. If you choose, plant life in the area is unaffected by this spell.
 
 ## spells > fireball
+
+Fireball
 
 Level: 3
 School: Evocation
@@ -4462,6 +5234,8 @@ The fire spreads around corners. It ignites flammable objects in the area that a
 At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.
 
 ## spells > flame-blade
+
+Flame Blade
 
 Level: 2
 School: Evocation
@@ -4482,6 +5256,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 
 ## spells > flame-strike
 
+Flame Strike
+
 Level: 5
 School: Evocation
 Casting time: 1 action
@@ -4496,6 +5272,8 @@ A vertical column of divine fire roars down from the heavens in a location you s
 At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th.
 
 ## spells > flaming-sphere
+
+Flaming Sphere
 
 Level: 2
 School: Conjuration
@@ -4516,6 +5294,8 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 
 ## spells > flesh-to-stone
 
+Flesh to Stone
+
 Level: 6
 School: Transmutation
 Casting time: 1 action
@@ -4535,6 +5315,8 @@ If you maintain your concentration on this spell for the entire possible duratio
 
 ## spells > floating-disk
 
+Floating Disk
+
 Level: 1
 School: Conjuration
 Casting time: 1 action
@@ -4552,6 +5334,8 @@ If you move more than 100 feet away from the disk (typically because it can't mo
 
 ## spells > fly
 
+Fly
+
 Level: 3
 School: Transmutation
 Casting time: 1 action
@@ -4567,6 +5351,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 
 ## spells > fog-cloud
 
+Fog Cloud
+
 Level: 1
 School: Conjuration
 Casting time: 1 action
@@ -4581,6 +5367,8 @@ You create a 20-foot-radius sphere of fog centered on a point within range. The 
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st.
 
 ## spells > forbiddance
+
+Forbiddance
 
 Level: 6
 School: Abjuration
@@ -4600,6 +5388,8 @@ When you cast this spell, you can designate a password. A creature that speaks t
 The spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting.
 
 ## spells > forcecage
+
+Forcecage
 
 Level: 7
 School: Evocation
@@ -4624,6 +5414,8 @@ This spell can't be dispelled by dispel magic.
 
 ## spells > foresight
 
+Foresight
+
 Level: 9
 School: Divination
 Casting time: 1 minute
@@ -4639,6 +5431,8 @@ This spell immediately ends if you cast it again before its duration ends.
 
 ## spells > freedom-of-movement
 
+Freedom of Movement
+
 Level: 4
 School: Abjuration
 Casting time: 1 action
@@ -4653,6 +5447,8 @@ You touch a willing creature. For the duration, the target's movement is unaffec
 The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it grappled. Finally, being underwater imposes no penalties on the target's movement or attacks.
 
 ## spells > freezing-sphere
+
+Freezing Sphere
 
 Level: 6
 School: Evocation
@@ -4673,6 +5469,8 @@ At Higher Levels. When you cast this spell using a spell slot of 7th level or hi
 
 ## spells > gaseous-form
 
+Gaseous Form
+
 Level: 3
 School: Transmutation
 Casting time: 1 action
@@ -4689,6 +5487,8 @@ While in this form, the target's only method of movement is a flying speed of 10
 While in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.
 
 ## spells > gate
+
+Gate
 
 Level: 9
 School: Conjuration
@@ -4709,6 +5509,8 @@ When you cast this spell, you can speak the name of a specific creature (a pseud
 
 ## spells > geas
 
+Geas
+
 Level: 5
 School: Enchantment
 Casting time: 1 minute
@@ -4728,6 +5530,8 @@ At Higher Levels. When you cast this spell using a spell slot of 7th or 8th leve
 
 ## spells > gentle-repose
 
+Gentle Repose
+
 Level: 2
 School: Necromancy
 Casting time: 1 action
@@ -4742,6 +5546,8 @@ You touch a corpse or other remains. For the duration, the target is protected f
 The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead.
 
 ## spells > giant-insect
+
+Giant Insect
 
 Level: 4
 School: Transmutation
@@ -4762,6 +5568,8 @@ The GM might allow you to choose different targets. For example, if you transfor
 
 ## spells > glibness
 
+Glibness
+
 Level: 8
 School: Transmutation
 Casting time: 1 action
@@ -4774,6 +5582,8 @@ Ritual: no
 Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful.
 
 ## spells > globe-of-invulnerability
+
+Globe of Invulnerability
 
 Level: 6
 School: Abjuration
@@ -4791,6 +5601,8 @@ Any spell of 5th level or lower cast from outside the barrier can't affect creat
 At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th.
 
 ## spells > glyph-of-warding
+
+Glyph of Warding
 
 Level: 3
 School: Abjuration
@@ -4819,6 +5631,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 
 ## spells > goodberry
 
+Goodberry
+
 Level: 1
 School: Transmutation
 Casting time: 1 action
@@ -4833,6 +5647,8 @@ Up to ten berries appear in your hand and are infused with magic for the duratio
 The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.
 
 ## spells > grease
+
+Grease
 
 Level: 1
 School: Conjuration
@@ -4849,6 +5665,8 @@ When the grease appears, each creature standing in its area must succeed on a de
 
 ## spells > greater-invisibility
 
+Greater Invisibility
+
 Level: 4
 School: Illusion
 Casting time: 1 action
@@ -4861,6 +5679,8 @@ Ritual: no
 You or a creature you touch becomes invisible until the spell ends. Anything the target is wearing or carrying is invisible as long as it is on the target's person.
 
 ## spells > greater-restoration
+
+Greater Restoration
 
 Level: 5
 School: Abjuration
@@ -4883,6 +5703,8 @@ You imbue a creature you touch with positive energy to undo a debilitating effec
 
 ## spells > guardian-of-faith
 
+Guardian of Faith
+
 Level: 4
 School: Conjuration
 Casting time: 1 action
@@ -4897,6 +5719,8 @@ A Large spectral guardian appears and hovers for the duration in an unoccupied s
 Any creature hostile to you that moves to a space within 10 feet of the guardian for the first time on a turn must succeed on a dexterity saving throw. The creature takes 20 radiant damage on a failed save, or half as much damage on a successful one. The guardian vanishes when it has dealt a total of 60 damage.
 
 ## spells > guards-and-wards
+
+Guards and Wards
 
 Level: 6
 School: Abjuration
@@ -4937,6 +5761,8 @@ You can create a permanently guarded and warded structure by casting this spell 
 
 ## spells > guidance
 
+Guidance
+
 Level: cantrip
 School: Divination
 Casting time: 1 action
@@ -4949,6 +5775,8 @@ Ritual: no
 You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.
 
 ## spells > guiding-bolt
+
+Guiding Bolt
 
 Level: 1
 School: Evocation
@@ -4964,6 +5792,8 @@ A flash of light streaks toward a creature of your choice within range. Make a r
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.
 
 ## spells > gust-of-wind
+
+Gust of Wind
 
 Level: 2
 School: Evocation
@@ -4983,6 +5813,8 @@ The gust disperses gas or vapor, and it extinguishes candles, torches, and simil
 As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you.
 
 ## spells > hallow
+
+Hallow
 
 Level: 5
 School: Evocation
@@ -5021,6 +5853,8 @@ Second, you can bind an extra effect to the area. Choose the effect from the fol
 
 ## spells > hallucinatory-terrain
 
+Hallucinatory Terrain
+
 Level: 4
 School: Illusion
 Casting time: 10 minutes
@@ -5036,6 +5870,8 @@ The tactile characteristics of the terrain are unchanged, so creatures entering 
 
 ## spells > harm
 
+Harm
+
 Level: 6
 School: Necromancy
 Casting time: 1 action
@@ -5048,6 +5884,8 @@ Ritual: no
 You unleash a virulent disease on a creature that you can see within range. The target must make a constitution saving throw. On a failed save, it takes 14d6 necrotic damage, or half as much damage on a successful save. The damage can't reduce the target's hit points below 1. If the target fails the saving throw, its hit point maximum is reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.
 
 ## spells > haste
+
+Haste
 
 Level: 3
 School: Transmutation
@@ -5064,6 +5902,8 @@ When the spell ends, the target can't move or take actions until after its next 
 
 ## spells > heal
 
+Heal
+
 Level: 6
 School: Evocation
 Casting time: 1 action
@@ -5079,6 +5919,8 @@ At Higher Levels. When you cast this spell using a spell slot of 7th level or hi
 
 ## spells > healing-word
 
+Healing Word
+
 Level: 1
 School: Evocation
 Casting time: 1 bonus action
@@ -5093,6 +5935,8 @@ A creature of your choice that you can see within range regains hit points equal
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.
 
 ## spells > heat-metal
+
+Heat Metal
 
 Level: 2
 School: Transmutation
@@ -5111,6 +5955,8 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 
 ## spells > hellish-rebuke
 
+Hellish Rebuke
+
 Level: 1
 School: Evocation
 Casting time: 1 reaction
@@ -5125,6 +5971,8 @@ You point your finger, and the creature that damaged you is momentarily surround
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.
 
 ## spells > heroes-feast
+
+Heroes' Feast
 
 Level: 6
 School: Conjuration
@@ -5141,6 +5989,8 @@ A creature that partakes of the feast gains several benefits. The creature is cu
 
 ## spells > heroism
 
+Heroism
+
 Level: 1
 School: Enchantment
 Casting time: 1 action
@@ -5153,6 +6003,8 @@ Ritual: no
 A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.
 
 ## spells > hideous-laughter
+
+Hideous Laughter
 
 Level: 1
 School: Enchantment
@@ -5169,6 +6021,8 @@ At the end of each of its turns, and each time it takes damage, the target can m
 
 ## spells > hold-monster
 
+Hold Monster
+
 Level: 5
 School: Enchantment
 Casting time: 1 action
@@ -5183,6 +6037,8 @@ Choose a creature you can see and reach. The target must make a saving throw of 
 At Higher Levels. When you cast this spell using a level 6 or higher location, you can target an additional creature for each level of location beyond the fifth. The creatures must be within 30 feet o f each other when you target them.
 
 ## spells > hold-person
+
+Hold Person
 
 Level: 2
 School: Enchantment
@@ -5199,6 +6055,8 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 
 ## spells > holy-aura
 
+Holy Aura
+
 Level: 8
 School: Abjuration
 Casting time: 1 action
@@ -5211,6 +6069,8 @@ Ritual: no
 Divine light washes out from you and coalesces in a soft radiance in a 30-foot radius around you. Creatures of your choice in that radius when you cast this spell shed dim light in a 5-foot radius and have advantage on all saving throws, and other creatures have disadvantage on attack rolls against them until the spell ends. In addition, when a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a constitution saving throw or be blinded until the spell ends.
 
 ## spells > hunters-mark
+
+Hunter's Mark
 
 Level: 1
 School: Divination
@@ -5227,6 +6087,8 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd or 4th leve
 
 ## spells > hypnotic-pattern
 
+Hypnotic Pattern
+
 Level: 3
 School: Illusion
 Casting time: 1 action
@@ -5241,6 +6103,8 @@ You create a twisting pattern of colors that weaves through the air inside a 30-
 The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.
 
 ## spells > ice-storm
+
+Ice Storm
 
 Level: 4
 School: Evocation
@@ -5259,6 +6123,8 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 
 ## spells > identify
 
+Identify
+
 Level: 1
 School: Divination
 Casting time: 1 minute
@@ -5273,6 +6139,8 @@ You choose one object that you must touch throughout the casting of the spell. I
 If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.
 
 ## spells > illusory-script
+
+Illusory Script
 
 Level: 1
 School: Illusion
@@ -5292,6 +6160,8 @@ Should the spell be dispelled, the original script and the illusion both disappe
 A creature with truesight can read the hidden message.
 
 ## spells > imprisonment
+
+Imprisonment
 
 Level: 9
 School: Abjuration
@@ -5334,6 +6204,8 @@ You can use a particular special component to create only one prison at a time. 
 
 ## spells > incendiary-cloud
 
+Incendiary Cloud
+
 Level: 8
 School: Conjuration
 Casting time: 1 action
@@ -5351,6 +6223,8 @@ The cloud moves 10 feet directly away from you in a direction that you choose at
 
 ## spells > inflict-wounds
 
+Inflict Wounds
+
 Level: 1
 School: Necromancy
 Casting time: 1 action
@@ -5365,6 +6239,8 @@ Make a melee spell attack against a creature you can reach. On a hit, the target
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.
 
 ## spells > insect-plague
+
+Insect Plague
 
 Level: 5
 School: Conjuration
@@ -5382,6 +6258,8 @@ When the area appears, each creature in it must make a constitution saving throw
 At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th.
 
 ## spells > instant-summons
+
+Instant Summons
 
 Level: 6
 School: Conjuration
@@ -5402,6 +6280,8 @@ Dispel magic or a similar effect successfully applied to the sapphire ends this 
 
 ## spells > invisibility
 
+Invisibility
+
 Level: 2
 School: Illusion
 Casting time: 1 action
@@ -5416,6 +6296,8 @@ A creature you touch becomes invisible until the spell ends. Anything the target
 At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
 
 ## spells > irresistible-dance
+
+Irresistible Dance
 
 Level: 6
 School: Enchantment
@@ -5432,6 +6314,8 @@ A dancing creature must use all its movement to dance without leaving its space 
 
 ## spells > jump
 
+Jump
+
 Level: 1
 School: Transmutation
 Casting time: 1 action
@@ -5444,6 +6328,8 @@ Ritual: no
 You touch a creature. The creature's jump distance is tripled until the spell ends.
 
 ## spells > knock
+
+Knock
 
 Level: 2
 School: Transmutation
@@ -5464,6 +6350,8 @@ When you cast the spell, a loud knock, audible from as far away as 300 feet, ema
 
 ## spells > legend-lore
 
+Legend Lore
+
 Level: 5
 School: Divination
 Casting time: 10 minutes
@@ -5479,6 +6367,8 @@ The information you learn is accurate but might be couched in figurative languag
 
 ## spells > lesser-restoration
 
+Lesser Restoration
+
 Level: 2
 School: Abjuration
 Casting time: 1 action
@@ -5491,6 +6381,8 @@ Ritual: no
 You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.
 
 ## spells > levitate
+
+Levitate
 
 Level: 2
 School: Transmutation
@@ -5509,6 +6401,8 @@ When the spell ends, the target floats gently to the ground if it is still aloft
 
 ## spells > light
 
+Light
+
 Level: cantrip
 School: Evocation
 Casting time: 1 action
@@ -5523,6 +6417,8 @@ You touch one object that is no larger than 10 feet in any dimension. Until the 
 If you target an object held or worn by a hostile creature, that creature must succeed on a dexterity saving throw to avoid the spell.
 
 ## spells > lightning-bolt
+
+Lightning Bolt
 
 Level: 3
 School: Evocation
@@ -5541,6 +6437,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 
 ## spells > locate-animals-or-plants
 
+Locate Animals or Plants
+
 Level: 2
 School: Divination
 Casting time: 1 action
@@ -5553,6 +6451,8 @@ Ritual: yes
 Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present.
 
 ## spells > locate-creature
+
+Locate Creature
 
 Level: 4
 School: Divination
@@ -5571,6 +6471,8 @@ This spell can't locate a creature if running water at least 10 feet wide blocks
 
 ## spells > locate-object
 
+Locate Object
+
 Level: 2
 School: Divination
 Casting time: 1 action
@@ -5588,6 +6490,8 @@ This spell can't locate an object if any thickness of lead, even a thin sheet, b
 
 ## spells > longstrider
 
+Longstrider
+
 Level: 1
 School: Transmutation
 Casting time: 1 action
@@ -5603,6 +6507,8 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 
 ## spells > mage-armor
 
+Mage Armor
+
 Level: 1
 School: Abjuration
 Casting time: 1 action
@@ -5615,6 +6521,8 @@ Ritual: no
 You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.
 
 ## spells > mage-hand
+
+Mage Hand
 
 Level: cantrip
 School: Conjuration
@@ -5632,6 +6540,8 @@ You can use your action to control the hand. You can use the hand to manipulate 
 The hand can't attack, activate magic items, or carry more than 10 pounds.
 
 ## spells > magic-circle
+
+Magic Circle
 
 Level: 3
 School: Abjuration
@@ -5658,6 +6568,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 
 ## spells > magic-jar
 
+Magic Jar
+
 Level: 6
 School: Necromancy
 Casting time: 1 minute
@@ -5683,6 +6595,8 @@ When the spell ends, the container is destroyed.
 
 ## spells > magic-missile
 
+Magic Missile
+
 Level: 1
 School: Evocation
 Casting time: 1 action
@@ -5697,6 +6611,8 @@ You create three glowing darts of magical force. Each dart hits a creature of yo
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.
 
 ## spells > magic-mouth
+
+Magic Mouth
 
 Level: 2
 School: Illusion
@@ -5717,6 +6633,8 @@ The triggering circumstance can be as general or as detailed as you like, though
 
 ## spells > magic-weapon
 
+Magic Weapon
+
 Level: 2
 School: Transmutation
 Casting time: 1 bonus action
@@ -5731,6 +6649,8 @@ You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic
 At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3.
 
 ## spells > magnificent-mansion
+
+Magnificent Mansion
 
 Level: 7
 School: Conjuration
@@ -5748,6 +6668,8 @@ Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmo
 You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance.
 
 ## spells > major-image
+
+Major Image
 
 Level: 3
 School: Illusion
@@ -5768,6 +6690,8 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 
 ## spells > mass-cure-wounds
 
+Mass Cure Wounds
+
 Level: 5
 School: Conjuration
 Casting time: 1 action
@@ -5783,6 +6707,8 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 
 ## spells > mass-heal
 
+Mass Heal
+
 Level: 9
 School: Conjuration
 Casting time: 1 action
@@ -5795,6 +6721,8 @@ Ritual: no
 A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell are also cured of all diseases and any effect making them blinded or deafened. This spell has no effect on undead or constructs.
 
 ## spells > mass-healing-word
+
+Mass Healing Word
 
 Level: 3
 School: Evocation
@@ -5810,6 +6738,8 @@ As you call out words of restoration, up to six creatures of your choice that yo
 At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd.
 
 ## spells > mass-suggestion
+
+Mass Suggestion
 
 Level: 6
 School: Enchantment
@@ -5832,6 +6762,8 @@ At Higher Levels. When you cast this spell using a 7th-level spell slot, the dur
 
 ## spells > maze
 
+Maze
+
 Level: 8
 School: Conjuration
 Casting time: 1 action
@@ -5848,6 +6780,8 @@ The target can use its action to attempt to escape. When it does so, it makes a 
 When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space.
 
 ## spells > meld-into-stone
+
+Meld Into Stone
 
 Level: 3
 School: Transmutation
@@ -5866,6 +6800,8 @@ Minor physical damage to the stone doesn't harm you, but its partial destruction
 
 ## spells > mending
 
+Mending
+
 Level: cantrip
 School: Transmutation
 Casting time: 1 minute
@@ -5880,6 +6816,8 @@ This spell repairs a single break or tear in an object you touch, such as a brok
 This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.
 
 ## spells > message
+
+Message
 
 Level: cantrip
 School: Transmutation
@@ -5896,6 +6834,8 @@ You can cast this spell through solid objects if you are familiar with the targe
 
 ## spells > meteor-swarm
 
+Meteor Swarm
+
 Level: 9
 School: Evocation
 Casting time: 1 action
@@ -5911,6 +6851,8 @@ The spell damages objects in the area and ignites flammable objects that aren't 
 
 ## spells > mind-blank
 
+Mind Blank
+
 Level: 8
 School: Abjuration
 Casting time: 1 action
@@ -5923,6 +6865,8 @@ Ritual: no
 Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils wish spells and spells or effects of similar power used to affect the target's mind or to gain information about the target.
 
 ## spells > minor-illusion
+
+Minor Illusion
 
 Level: cantrip
 School: Illusion
@@ -5943,6 +6887,8 @@ If a creature uses its action to examine the sound or image, the creature can de
 
 ## spells > mirage-arcane
 
+Mirage Arcane
+
 Level: 7
 School: Illusion
 Casting time: 10 minutes
@@ -5961,6 +6907,8 @@ The illusion includes audible, visual, tactile, and olfactory elements, so it ca
 Creatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion.
 
 ## spells > mirror-image
+
+Mirror Image
 
 Level: 2
 School: Illusion
@@ -5983,6 +6931,8 @@ A creature is unaffected by this spell if it can't see, if it relies on senses o
 
 ## spells > mislead
 
+Mislead
+
 Level: 5
 School: Illusion
 Casting time: 1 action
@@ -6000,6 +6950,8 @@ You can see through its eyes and hear through its ears as if you were located wh
 
 ## spells > misty-step
 
+Misty Step
+
 Level: 2
 School: Conjuration
 Casting time: 1 bonus action
@@ -6012,6 +6964,8 @@ Ritual: no
 Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.
 
 ## spells > modify-memory
+
+Modify Memory
 
 Level: 5
 School: Enchantment
@@ -6036,6 +6990,8 @@ At Higher Levels. If you cast this spell using a spell slot of 6th level or high
 
 ## spells > moonbeam
 
+Moonbeam
+
 Level: 2
 School: Evocation
 Casting time: 1 action
@@ -6056,6 +7012,8 @@ On each of your turns after you cast this spell, you can use an action to move t
 At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1dl0 for each slot level above 2nd.
 
 ## spells > move-earth
+
+Move Earth
 
 Level: 6
 School: Transmutation
@@ -6078,6 +7036,8 @@ Similarly, this spell doesn't directly affect plant growth. The moved earth carr
 
 ## spells > nondetection
 
+Nondetection
+
 Level: 3
 School: Abjuration
 Casting time: 1 action
@@ -6091,6 +7051,8 @@ For the duration, you hide a target that you touch from divination magic. The ta
 
 ## spells > pass-without-trace
 
+Pass Without Trace
+
 Level: 2
 School: Abjuration
 Casting time: 1 action
@@ -6103,6 +7065,8 @@ Ritual: no
 A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth) checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.
 
 ## spells > passwall
+
+Passwall
 
 Level: 5
 School: Transmutation
@@ -6119,6 +7083,8 @@ When the opening disappears, any creatures or objects still in the passage creat
 
 ## spells > phantasmal-killer
 
+Phantasmal Killer
+
 Level: 4
 School: Illusion
 Casting time: 1 action
@@ -6134,6 +7100,8 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 
 ## spells > phantom-steed
 
+Phantom Steed
+
 Level: 3
 School: Illusion
 Casting time: 1 minute
@@ -6148,6 +7116,8 @@ A Large quasi-real, horselike creature appears on the ground in an unoccupied sp
 For the duration, you or a creature you choose can ride the steed. The creature uses the statistics for a riding horse, except it has a speed of 100 feet and can travel 10 miles in an hour, or 13 miles at a fast pace. When the spell ends, the steed gradually fades, giving the rider 1 minute to dismount. The spell ends if you use an action to dismiss it or if the steed takes any damage.
 
 ## spells > planar-ally
+
+Planar Ally
 
 Level: 6
 School: Conjuration
@@ -6172,6 +7142,8 @@ A creature enlisted to join your group counts as a member of it, receiving a ful
 
 ## spells > planar-binding
 
+Planar Binding
+
 Level: 5
 School: Abjuration
 Casting time: 1 hour
@@ -6189,6 +7161,8 @@ At Higher Levels. When you cast this spell using a spell slot of a higher level,
 
 ## spells > plane-shift
 
+Plane Shift
+
 Level: 7
 School: Conjuration
 Casting time: 1 action
@@ -6205,6 +7179,8 @@ Alternatively, if you know the sigil sequence of a teleportation circle on anoth
 You can use this spell to banish an unwilling creature to another plane. Choose a creature within your reach and make a melee spell attack against it. On a hit, the creature must make a charisma saving throw. If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence.
 
 ## spells > plant-growth
+
+Plant Growth
 
 Level: 3
 School: Transmutation
@@ -6225,6 +7201,8 @@ If you cast this spell over 8 hours, you enrich the land. All plants in a half-m
 
 ## spells > poison-spray
 
+Poison Spray
+
 Level: cantrip
 School: Conjuration
 Casting time: 1 action
@@ -6239,6 +7217,8 @@ You extend your hand toward a creature you can see within range and project a pu
 This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).
 
 ## spells > polymorph
+
+Polymorph
 
 Level: 4
 School: Transmutation
@@ -6261,6 +7241,8 @@ The target's gear melds into the new form. The creature can't activate, use, wie
 
 ## spells > power-word-kill
 
+Power Word Kill
+
 Level: 9
 School: Enchantment
 Casting time: 1 action
@@ -6273,6 +7255,8 @@ Ritual: no
 You utter a word of power that can compel one creature you can see within range to die instantly. If the creature you choose has 100 hit points or fewer, it dies. Otherwise, the spell has no effect.
 
 ## spells > power-word-stun
+
+Power Word Stun
 
 Level: 8
 School: Enchantment
@@ -6289,6 +7273,8 @@ The stunned target must make a constitution saving throw at the end of each of i
 
 ## spells > prayer-of-healing
 
+Prayer of Healing
+
 Level: 2
 School: Evocation
 Casting time: 10 minutes
@@ -6303,6 +7289,8 @@ Up to six creatures of your choice that you can see within range each regain hit
 At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 1d8 for each slot level above 2nd.
 
 ## spells > prestidigitation
+
+Prestidigitation
 
 Level: cantrip
 School: Transmutation
@@ -6330,6 +7318,8 @@ You create a nonmagical trinket or an illusory image that can fit in your hand a
 If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
 
 ## spells > prismatic-spray
+
+Prismatic Spray
 
 Level: 7
 School: Evocation
@@ -6359,6 +7349,8 @@ Eight multicolored rays of light flash from your hand. Each ray is a different c
 ***8. Special.*** The target is struck by two rays. Roll twice more, rerolling any 8.
 
 ## spells > prismatic-wall
+
+Prismatic Wall
 
 Level: 9
 School: Abjuration
@@ -6395,6 +7387,8 @@ While this layer is in place, spells can't be cast through the wall. The layer i
 
 ## spells > private-sanctum
 
+Private Sanctum
+
 Level: 4
 School: Abjuration
 Casting time: 10 minutes
@@ -6426,6 +7420,8 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 
 ## spells > produce-flame
 
+Produce Flame
+
 Level: cantrip
 School: Conjuration
 Casting time: 1 action
@@ -6442,6 +7438,8 @@ You can also attack with the flame, although doing so ends the spell. When you c
 This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
 
 ## spells > programmed-illusion
+
+Programmed Illusion
 
 Level: 6
 School: Illusion
@@ -6462,6 +7460,8 @@ Physical interaction with the image reveals it to be an illusion, because things
 
 ## spells > project-image
 
+Project Image
+
 Level: 7
 School: Illusion
 Casting time: 1 action
@@ -6481,6 +7481,8 @@ Physical interaction with the image reveals it to be an illusion, because things
 
 ## spells > protection-from-energy
 
+Protection From Energy
+
 Level: 3
 School: Abjuration
 Casting time: 1 action
@@ -6493,6 +7495,8 @@ Ritual: no
 For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.
 
 ## spells > protection-from-evil-and-good
+
+Protection from Evil and Good
 
 Level: 1
 School: Abjuration
@@ -6509,6 +7513,8 @@ The protection grants several benefits. Creatures of those types have disadvanta
 
 ## spells > protection-from-poison
 
+Protection from Poison
+
 Level: 2
 School: Abjuration
 Casting time: 1 action
@@ -6524,6 +7530,8 @@ For the duration, the target has advantage on saving throws against being poison
 
 ## spells > purify-food-and-drink
 
+Purify Food and Drink
+
 Level: 1
 School: Transmutation
 Casting time: 1 action
@@ -6536,6 +7544,8 @@ Ritual: yes
 All nonmagical food and drink within a 5-foot radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.
 
 ## spells > raise-dead
+
+Raise Dead
 
 Level: 5
 School: Necromancy
@@ -6556,6 +7566,8 @@ Coming back from the dead is an ordeal. The target takes a -4 penalty to all att
 
 ## spells > ray-of-enfeeblement
 
+Ray of Enfeeblement
+
 Level: 2
 School: Necromancy
 Casting time: 1 action
@@ -6570,6 +7582,8 @@ A black beam of enervating energy springs from your finger toward a creature wit
 At the end of each of the target's turns, it can make a constitution saving throw against the spell. On a success, the spell ends.
 
 ## spells > ray-of-frost
+
+Ray of Frost
 
 Level: cantrip
 School: Evocation
@@ -6586,6 +7600,8 @@ The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (
 
 ## spells > regenerate
 
+Regenerate
+
 Level: 7
 School: Transmutation
 Casting time: 1 minute
@@ -6600,6 +7616,8 @@ You touch a creature and stimulate its natural healing ability. The target regai
 The target's severed body members (fingers, legs, tails, and so on), if any, are restored after 2 minutes. If you have the severed part and hold it to the stump, the spell instantaneously causes the limb to knit to the stump.
 
 ## spells > reincarnate
+
+Reincarnate
 
 Level: 5
 School: Transmutation
@@ -6650,6 +7668,8 @@ The reincarnated creature recalls its former life and experiences. It retains th
 
 ## spells > remove-curse
 
+Remove Curse
+
 Level: 3
 School: Abjuration
 Casting time: 1 action
@@ -6662,6 +7682,8 @@ Ritual: no
 At your touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's attunement to the object so it can be removed or discarded.
 
 ## spells > resilient-sphere
+
+Resilient Sphere
 
 Level: 4
 School: Evocation
@@ -6682,6 +7704,8 @@ A disintegrate spell targeting the globe destroys it without harming anything in
 
 ## spells > resistance
 
+Resistance
+
 Level: cantrip
 School: Abjuration
 Casting time: 1 action
@@ -6694,6 +7718,8 @@ Ritual: no
 You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.
 
 ## spells > resurrection
+
+Resurrection
 
 Level: 7
 School: Necromancy
@@ -6716,6 +7742,8 @@ Casting this spell to restore life to a creature that has been dead for one year
 
 ## spells > reverse-gravity
 
+Reverse Gravity
+
 Level: 7
 School: Transmutation
 Casting time: 1 action
@@ -6733,6 +7761,8 @@ At the end of the duration, affected objects and creatures fall back down.
 
 ## spells > revivify
 
+Revivify
+
 Level: 3
 School: Conjuration
 Casting time: 1 action
@@ -6745,6 +7775,8 @@ Ritual: no
 You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts.
 
 ## spells > rope-trick
+
+Rope Trick
 
 Level: 2
 School: Transmutation
@@ -6765,6 +7797,8 @@ Anything inside the extradimensional space drops out when the spell ends.
 
 ## spells > sacred-flame
 
+Sacred Flame
+
 Level: cantrip
 School: Evocation
 Casting time: 1 action
@@ -6780,6 +7814,8 @@ The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (
 
 ## spells > sanctuary
 
+Sanctuary
+
 Level: 1
 School: Abjuration
 Casting time: 1 bonus action
@@ -6794,6 +7830,8 @@ You ward a creature within range against attack. Until the spell ends, any creat
 If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.
 
 ## spells > scorching-ray
+
+Scorching Ray
 
 Level: 2
 School: Evocation
@@ -6811,6 +7849,8 @@ Make a ranged spell attack for each ray. On a hit, the target takes 2d6 fire dam
 At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd.
 
 ## spells > scrying
+
+Scrying
 
 Level: 5
 School: Divination
@@ -6853,6 +7893,8 @@ Instead of targeting a creature, you can choose a location you have seen before 
 
 ## spells > secret-chest
 
+Secret Chest
+
 Level: 4
 School: Conjuration
 Casting time: 1 action
@@ -6870,6 +7912,8 @@ After 60 days, there is a cumulative 5 percent chance per day that the spell's e
 
 ## spells > see-invisibility
 
+See Invisibility
+
 Level: 2
 School: Divination
 Casting time: 1 action
@@ -6882,6 +7926,8 @@ Ritual: no
 For the duration of the spell, you see invisible creatures and objects as if they were visible, and you can see through Ethereal. The ethereal objects and creatures appear ghostly translucent.
 
 ## spells > seeming
+
+Seeming
 
 Level: 5
 School: Illusion
@@ -6902,6 +7948,8 @@ A creature can use its action to inspect a target and make an Intelligence (Inve
 
 ## spells > sending
 
+Sending
+
 Level: 3
 School: Evocation
 Casting time: 1 action
@@ -6916,6 +7964,8 @@ You send a short message of twenty-five words or less to a creature with which y
 You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive.
 
 ## spells > sequester
+
+Sequester
 
 Level: 7
 School: Transmutation
@@ -6933,6 +7983,8 @@ If the target is a creature, it falls into a state of suspended animation. Time 
 You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include "after 1,000 years" or "when the tarrasque awakens." This spell also ends if the target takes any damage.
 
 ## spells > shapechange
+
+Shapechange
 
 Level: 9
 School: Transmutation
@@ -6957,6 +8009,8 @@ During this spell's duration, you can use your action to assume a different form
 
 ## spells > shatter
 
+Shatter
+
 Level: 2
 School: Evocation
 Casting time: 1 action
@@ -6974,6 +8028,8 @@ At Higher Levels. When you cast this spell using a 3 or higher level spell slot,
 
 ## spells > shield
 
+Shield
+
 Level: 1
 School: Abjuration
 Casting time: 1 reaction
@@ -6986,6 +8042,8 @@ Ritual: no
 An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.
 
 ## spells > shield-of-faith
+
+Shield of Faith
 
 Level: 1
 School: Abjuration
@@ -7000,6 +8058,8 @@ A shimmering field appears and surrounds a creature of your choice within range,
 
 ## spells > shillelagh
 
+Shillelagh
+
 Level: cantrip
 School: Transmutation
 Casting time: 1 bonus action
@@ -7012,6 +8072,8 @@ Ritual: no
 The wood of a club or a quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.
 
 ## spells > shocking-grasp
+
+Shocking Grasp
 
 Level: cantrip
 School: Evocation
@@ -7028,6 +8090,8 @@ The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (
 
 ## spells > silence
 
+Silence
+
 Level: 2
 School: Illusion
 Casting time: 1 action
@@ -7042,6 +8106,8 @@ For the duration, no sound can be created within or pass through a 20-foot-radiu
 Casting a spell that includes a verbal component is impossible there.
 
 ## spells > silent-image
+
+Silent Image
 
 Level: 1
 School: Illusion
@@ -7059,6 +8125,8 @@ You can use your action to cause the image to move to any spot within range. As 
 Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image.
 
 ## spells > simulacrum
+
+Simulacrum
 
 Level: 7
 School: Illusion
@@ -7079,6 +8147,8 @@ If you cast this spell again, any currently active duplicates you created with t
 
 ## spells > sleep
 
+Sleep
+
 Level: 1
 School: Enchantment
 Casting time: 1 action
@@ -7098,6 +8168,8 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 
 ## spells > sleet-storm
 
+Sleet Storm
+
 Level: 3
 School: Conjuration
 Casting time: 1 action
@@ -7114,6 +8186,8 @@ The ground in the area is covered with slick ice, making it difficult terrain. W
 If a creature is concentrating in the spell's area, the creature must make a successful constitution saving throw against your spell save DC or lose concentration.
 
 ## spells > slow
+
+Slow
 
 Level: 3
 School: Transmutation
@@ -7134,6 +8208,8 @@ A creature affected by this spell makes another wisdom saving throw at the end o
 
 ## spells > spare-the-dying
 
+Spare the Dying
+
 Level: cantrip
 School: Necromancy
 Casting time: 1 action
@@ -7147,6 +8223,8 @@ You touch a living creature that has 0 hit points. The creature becomes stable. 
 
 ## spells > speak-with-animals
 
+Speak with Animals
+
 Level: 1
 School: Divination
 Casting time: 1 action
@@ -7159,6 +8237,8 @@ Ritual: yes
 You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at a minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the GM's discretion.
 
 ## spells > speak-with-dead
+
+Speak with Dead
 
 Level: 3
 School: Necromancy
@@ -7174,6 +8254,8 @@ You grant the semblance of life and intelligence to a corpse of your choice with
 Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are hostile to it or it recognizes you as an enemy. This spell doesn't return the creature's soul to its body, only its animating spirit. Thus, the corpse can't learn new information, doesn't comprehend anything that has happened since it died, and can't speculate about future events.
 
 ## spells > speak-with-plants
+
+Speak with Plants
 
 Level: 3
 School: Transmutation
@@ -7196,6 +8278,8 @@ This spell can cause the plants created by the entangle spell to release a restr
 
 ## spells > spider-climb
 
+Spider Climb
+
 Level: 2
 School: Transmutation
 Casting time: 1 action
@@ -7208,6 +8292,8 @@ Ritual: no
 Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed.
 
 ## spells > spike-growth
+
+Spike Growth
 
 Level: 2
 School: Transmutation
@@ -7223,6 +8309,8 @@ The ground in a 20-foot radius centered on a point within range twists and sprou
 The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast can make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it.
 
 ## spells > spirit-guardians
+
+Spirit Guardians
 
 Level: 3
 School: Conjuration
@@ -7240,6 +8328,8 @@ When you cast this spell, you can designate any number of creatures you can see 
 At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.
 
 ## spells > spiritual-weapon
+
+Spiritual Weapon
 
 Level: 2
 School: Evocation
@@ -7260,6 +8350,8 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 
 ## spells > stinking-cloud
 
+Stinking Cloud
+
 Level: 3
 School: Conjuration
 Casting time: 1 action
@@ -7277,6 +8369,8 @@ A moderate wind (at least 10 miles per hour) disperses the cloud after 4 rounds.
 
 ## spells > stone-shape
 
+Stone Shape
+
 Level: 4
 School: Transmutation
 Casting time: 1 action
@@ -7290,6 +8384,8 @@ You touch a stone object of Medium size or smaller or a section of stone no more
 
 ## spells > stoneskin
 
+Stoneskin
+
 Level: 4
 School: Abjuration
 Casting time: 1 action
@@ -7302,6 +8398,8 @@ Ritual: no
 This spell turns the flesh of a willing creature you touch as hard as stone. Until the spell ends, the target has resistance to nonmagical bludgeoning, piercing, and slashing damage.
 
 ## spells > storm-of-vengeance
+
+Storm of Vengeance
 
 Level: 9
 School: Conjuration
@@ -7326,6 +8424,8 @@ Each round you maintain concentration on this spell, the storm produces addition
 
 ## spells > suggestion
 
+Suggestion
+
 Level: 2
 School: Enchantment
 Casting time: 1 action
@@ -7345,6 +8445,8 @@ If you or any of your companions damage the target, the spell ends.
 
 ## spells > sunbeam
 
+Sunbeam
+
 Level: 6
 School: Evocation
 Casting time: 1 action
@@ -7362,6 +8464,8 @@ For the duration, a mote of brilliant radiance shines in your hand. It sheds bri
 
 ## spells > sunburst
 
+Sunburst
+
 Level: 8
 School: Evocation
 Casting time: 1 action
@@ -7378,6 +8482,8 @@ A creature blinded by this spell makes another constitution saving throw at the 
 This spell dispels any darkness in its area that was created by a spell.
 
 ## spells > symbol
+
+Symbol
 
 Level: 7
 School: Abjuration
@@ -7416,6 +8522,8 @@ When you inscribe the glyph, choose one of the options below for its effect. Onc
 
 ## spells > telekinesis
 
+Telekinesis
+
 Level: 5
 School: Transmutation
 Casting time: 1 action
@@ -7439,6 +8547,8 @@ You can exert fine control on objects with your telekinetic grip, such as manipu
 
 ## spells > telepathic-bond
 
+Telepathic Bond
+
 Level: 5
 School: Divination
 Casting time: 1 action
@@ -7453,6 +8563,8 @@ You forge a telepathic link among up to eight willing creatures of your choice w
 Until the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can't extend to other planes of existence.
 
 ## spells > teleport
+
+Teleport
 
 Level: 7
 School: Conjuration
@@ -7509,6 +8621,8 @@ The destination you choose must be known to you, and it must be on the same plan
 
 ## spells > teleportation-circle
 
+Teleportation Circle
+
 Level: 5
 School: Conjuration
 Casting time: 1 minute
@@ -7525,6 +8639,8 @@ Many major temples, guilds, and other important places have permanent teleportat
 You can create a permanent teleportation circle by casting this spell in the same location every day for one year. You need not use the circle to teleport when you cast the spell in this way.
 
 ## spells > thaumaturgy
+
+Thaumaturgy
 
 Level: cantrip
 School: Transmutation
@@ -7553,6 +8669,8 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 
 ## spells > thunderwave
 
+Thunderwave
+
 Level: 1
 School: Evocation
 Casting time: 1 action
@@ -7570,6 +8688,8 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 
 ## spells > time-stop
 
+Time Stop
+
 Level: 9
 School: Transmutation
 Casting time: 1 action
@@ -7584,6 +8704,8 @@ You briefly stop the flow of time for everyone but yourself. No time passes for 
 This spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it.
 
 ## spells > tiny-hut
+
+Tiny Hut
 
 Level: 3
 School: Evocation
@@ -7602,6 +8724,8 @@ Until the spell ends, you can command the interior to become dimly lit or dark. 
 
 ## spells > tongues
 
+Tongues
+
 Level: 3
 School: Divination
 Casting time: 1 action
@@ -7615,6 +8739,8 @@ This spell grants the creature you touch the ability to understand any spoken la
 
 ## spells > transport-via-plants
 
+Transport via Plants
+
 Level: 6
 School: Conjuration
 Casting time: 1 action
@@ -7627,6 +8753,8 @@ Ritual: no
 This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement.
 
 ## spells > tree-stride
+
+Tree Stride
 
 Level: 5
 School: Conjuration
@@ -7642,6 +8770,8 @@ You gain the ability to enter a tree and move from inside it to inside another t
 You can use this transportation ability once per round for the duration. You must end each turn outside a tree.
 
 ## spells > true-polymorph
+
+True Polymorph
 
 Level: 9
 School: Transmutation
@@ -7672,6 +8802,8 @@ If the spell becomes permanent, you no longer control the creature. It might rem
 
 ## spells > true-resurrection
 
+True Resurrection
+
 Level: 9
 School: Necromancy
 Casting time: 1 hour
@@ -7689,6 +8821,8 @@ The spell can even provide a new body if the original no longer exists, in which
 
 ## spells > true-seeing
 
+True Seeing
+
 Level: 6
 School: Divination
 Casting time: 1 action
@@ -7702,6 +8836,8 @@ This spell gives the willing creature you touch the ability to see things as the
 
 ## spells > true-strike
 
+True Strike
+
 Level: cantrip
 School: Divination
 Casting time: 1 action
@@ -7714,6 +8850,8 @@ Ritual: no
 You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.
 
 ## spells > unseen-servant
+
+Unseen Servant
 
 Level: 1
 School: Conjuration
@@ -7732,6 +8870,8 @@ If you command the servant to perform a task that would move it more than 60 fee
 
 ## spells > vampiric-touch
 
+Vampiric Touch
+
 Level: 3
 School: Necromancy
 Casting time: 1 action
@@ -7747,6 +8887,8 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 
 ## spells > vicious-mockery
 
+Vicious Mockery
+
 Level: cantrip
 School: Enchantment
 Casting time: 1 action
@@ -7761,6 +8903,8 @@ You unleash a string of insults laced with subtle enchantments at a creature you
 This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).
 
 ## spells > wall-of-fire
+
+Wall of Fire
 
 Level: 4
 School: Evocation
@@ -7783,6 +8927,8 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 
 ## spells > wall-of-force
 
+Wall of Force
+
 Level: 5
 School: Evocation
 Casting time: 1 action
@@ -7797,6 +8943,8 @@ An invisible wall of force springs into existence at a point you choose within r
 Nothing can physically pass through the wall. It is immune to all damage and can't be dispelled by dispel magic. A disintegrate spell destroys the wall instantly, however. The wall also extends into the Ethereal Plane, blocking ethereal travel through the wall.
 
 ## spells > wall-of-ice
+
+Wall of Ice
 
 Level: 6
 School: Evocation
@@ -7816,6 +8964,8 @@ The wall is an object that can be damaged and thus breached. It has AC 12 and 30
 At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage the wall deals when it appears increases by 2d6, and the damage from passing through the sheet of frigid air increases by 1d6, for each slot level above 6th.
 
 ## spells > wall-of-stone
+
+Wall of Stone
 
 Level: 5
 School: Evocation
@@ -7840,6 +8990,8 @@ If you maintain your concentration on this spell for its whole duration, the wal
 
 ## spells > wall-of-thorns
 
+Wall of Thorns
+
 Level: 6
 School: Conjuration
 Casting time: 1 action
@@ -7859,6 +9011,8 @@ At Higher Levels. When you cast this spell using a spell slot of 7th level or hi
 
 ## spells > warding-bond
 
+Warding Bond
+
 Level: 2
 School: Abjuration
 Casting time: 1 action
@@ -7876,6 +9030,8 @@ It also ends if the spell is cast again on either of the connected creatures. Yo
 
 ## spells > water-breathing
 
+Water Breathing
+
 Level: 3
 School: Transmutation
 Casting time: 1 action
@@ -7888,6 +9044,8 @@ Ritual: yes
 This spell gives a maximum of ten willing creatures within range and you can see, the ability to breathe underwater until the end of its term. Affected creatures also retain their normal breathing pattern.
 
 ## spells > water-walk
+
+Water Walk
 
 Level: 3
 School: Transmutation
@@ -7903,6 +9061,8 @@ This spell grants the ability to move across any liquid surface--such as water, 
 If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round.
 
 ## spells > web
+
+Web
 
 Level: 2
 School: Conjuration
@@ -7925,6 +9085,8 @@ The webs are flammable. Any 5-foot cube of webs exposed to fire burns away in 1 
 
 ## spells > weird
 
+Weird
+
 Level: 9
 School: Illusion
 Casting time: 1 action
@@ -7937,6 +9099,8 @@ Ritual: no
 Drawing on the deepest fears of a group of creatures, you create illusory creatures in their minds, visible only to them. Each creature in a 30-foot-radius sphere centered on a point of your choice within range must make a wisdom saving throw. On a failed save, a creature becomes frightened for the duration. The illusion calls on the creature's deepest fears, manifesting its worst nightmares as an implacable threat. At the start of each of the frightened creature's turns, it must succeed on a wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.
 
 ## spells > wind-walk
+
+Wind Walk
 
 Level: 6
 School: Transmutation
@@ -7952,6 +9116,8 @@ You and up to ten willing creatures you can see within range assume a gaseous fo
 If a creature is in cloud form and flying when the effect ends, the creature descends 60 feet per round for 1 minute until it lands, which it does safely. If it can't land after 1 minute, the creature falls the remaining distance.
 
 ## spells > wind-wall
+
+Wind Wall
 
 Level: 3
 School: Evocation
@@ -7969,6 +9135,8 @@ When the wall appears, each creature within its area must make a strength saving
 The strong wind keeps fog, smoke, and other gases at bay. Small or smaller flying creatures or objects can't pass through the wall. Loose, lightweight materials brought into the wall fly upward. Arrows, bolts, and other ordinary projectiles launched at targets behind the wall are deflected upward and automatically miss. (Boulders hurled by giants or siege engines, and similar projectiles, are unaffected.) Creatures in gaseous form can't pass through it.
 
 ## spells > wish
+
+Wish
 
 Level: 9
 School: Conjuration
@@ -8001,6 +9169,8 @@ The stress of casting this spell to produce any effect other than duplicating an
 
 ## spells > word-of-recall
 
+Word of Recall
+
 Level: 6
 School: Conjuration
 Casting time: 1 action
@@ -8015,6 +9185,8 @@ You and up to five willing creatures within 5 feet of you instantly teleport to 
 You must designate a sanctuary by casting this spell within a location, such as a temple, dedicated to or strongly linked to your deity. If you attempt to cast the spell in this manner in an area that isn't dedicated to your deity, the spell has no effect.
 
 ## spells > zone-of-truth
+
+Zone of Truth
 
 Level: 2
 School: Enchantment
