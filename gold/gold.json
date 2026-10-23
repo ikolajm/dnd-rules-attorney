@@ -421,11 +421,10 @@
     "question": "Can I cast a spell with a verbal component underwater?",
     "status": "contested",
     "verdict": "",
-    "ruling": "Reading A: yes. The verbal component rule names a character who is gagged or in an area of silence as unable to cast, and the underwater combat rules limit weapon attacks and grant fire resistance but say nothing about spellcasting. Being underwater is neither named case. Reading B: no, or only at a cost. A verbal component is the chanting of mystic words with a specific pitch and resonance, and a creature underwater is holding its breath; it can't chant without speaking, and the text gives no way to speak underwater. Why the text does not settle it: the rule explains what a verbal component is and names two cases that block it, but does not say whether those cases are the only ones, and nothing in the corpus says whether a creature can speak underwater.",
+    "ruling": "Reading A: yes. The verbal component rule names a character who is gagged or in an area of silence as unable to cast, and the underwater combat rules limit weapon attacks and grant fire resistance but say nothing about spellcasting. Being underwater is neither named case. Reading B: no. A verbal component is the chanting of mystic words with a specific pitch and resonance; it can't be chanted without speaking, and the text gives no way to speak underwater. Why the text does not settle it: the rule explains what a verbal component is and names two cases that block it, but does not say whether those cases are the only ones, and nothing in the corpus says whether a creature can speak underwater.",
     "cites": [
       "casting-a-spell > components > verbal-v",
-      "underwater-combat",
-      "the-environment > suffocating"
+      "underwater-combat"
     ],
     "split": "dev"
   },
