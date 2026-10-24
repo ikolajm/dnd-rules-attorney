@@ -1,8 +1,15 @@
 """The answering step, from retrieved entries to a validated ruling."""
 
+import ollama
 from pydantic import BaseModel, ValidationError
 
 from rules_attorney.corpus import Entry, render_markdown
+
+MODEL = "qwen3.5:9b"
+SEED = 1
+TEMPERATURE = 0.0
+THINK = False
+NUM_CTX = 16384
 
 INSTRUCTIONS = (
     "Rule on the dispute below using only the rules entries given, and nothing "
@@ -40,3 +47,19 @@ def build_prompt(question: str, entries: list[Entry]) -> str:
     """The instructions, the entries under their paths, then the question."""
     parts = [INSTRUCTIONS, render_markdown(entries), f"Question: {question}"]
     return "\n\n".join(parts)
+
+
+def ollama_answer(prompt: str) -> str:
+    """The model's raw reply to the prompt, an empty string when there is none."""
+    response = ollama.chat(
+        model=MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        format=Ruling.model_json_schema(),
+        think=THINK,
+        options={
+            "temperature": TEMPERATURE,
+            "seed": SEED,
+            "num_ctx": NUM_CTX,
+        },
+    )
+    return response.message.content or ""
