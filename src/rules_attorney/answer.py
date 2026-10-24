@@ -13,11 +13,14 @@ NUM_CTX = 16384
 
 INSTRUCTIONS = (
     "Rule on the dispute below using only the rules entries given, and nothing "
-    "else. Cite each entry your ruling rests on by its path, written exactly as "
-    "it appears after ##. In the explanation, give the rule, the fact from the "
-    "question it applies to, and the conclusion. Where the entries do not settle "
-    "the question, set ambiguous to true, give each reading, and say why the text "
-    "does not decide between them."
+    "else. Cite each entry your ruling rests on by its path: the text after the "
+    "## marker, written exactly, without the marker itself. In the explanation, "
+    "give the rule, the fact from the question it applies to, and the conclusion. "
+    "Set ambiguous to true when the entries' text supports more than one reading "
+    "of the case: two entries conflict, a term the case turns on is used without "
+    "being defined, or a rule's wording fits the case two ways. "
+    "Then give each reading and say why the text does not decide between them. "
+    "A point the entries say nothing about is not ambiguous on that ground alone."
 )
 
 
