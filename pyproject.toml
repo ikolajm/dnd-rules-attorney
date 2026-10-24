@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "dnd-rules-attorney"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = ["numpy>=2.5", "ollama>=0.6"]
+dependencies = ["numpy>=2.5", "ollama>=0.6", "pydantic>=2.14"]
 
 [project.optional-dependencies]
 dev = ["bm25s>=0.3", "mypy", "pytest", "ruff"]
