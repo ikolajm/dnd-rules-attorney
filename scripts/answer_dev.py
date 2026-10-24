@@ -19,6 +19,7 @@ from rules_attorney.answer import (
     build_prompt,
     ollama_answer,
     parse_reply,
+    unmarked,
     unresolved,
 )
 from rules_attorney.corpus import load_corpus
@@ -85,6 +86,7 @@ def main() -> None:
     failures = 0
     cites = 0
     resolved = 0
+    grounded = 0
 
     with out.open("w", encoding="utf-8") as file:
         for item in dev:
@@ -104,6 +106,8 @@ def main() -> None:
                 missing = unresolved(ruling.cites, known)
                 cites += len(ruling.cites)
                 resolved += len(ruling.cites) - len(missing)
+                cleaned = unresolved(unmarked(ruling.cites), known)
+                grounded += len(ruling.cites) - len(cleaned)
 
             record = {
                 "id": item["id"],
@@ -122,6 +126,7 @@ def main() -> None:
     print(out)
     print(f"schema failures: {failures} / {len(dev)}")
     print(f"cites resolved: {resolved} / {cites}")
+    print(f"cites grounded: {grounded} / {cites}")
 
 
 if __name__ == "__main__":

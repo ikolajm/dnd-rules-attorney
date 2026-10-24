@@ -46,6 +46,11 @@ def unresolved(cites: list[str], known: set[str]) -> list[str]:
     return [cite for cite in cites if cite not in known]
 
 
+def unmarked(cites: list[str]) -> list[str]:
+    """The cites with a leading ## marker removed, the model's commonest slip."""
+    return [cite.removeprefix("## ") for cite in cites]
+
+
 def build_prompt(question: str, entries: list[Entry]) -> str:
     """The instructions, the entries under their paths, then the question."""
     parts = [INSTRUCTIONS, render_markdown(entries), f"Question: {question}"]
