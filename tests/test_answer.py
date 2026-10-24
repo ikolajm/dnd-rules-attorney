@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from rules_attorney.answer import build_prompt, parse_reply, unresolved
+from rules_attorney.answer import build_prompt, parse_reply, unmarked, unresolved
 from rules_attorney.corpus import Entry, load_corpus
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
@@ -37,6 +37,12 @@ def test_unresolved_keeps_only_cites_outside_the_corpus() -> None:
     known = {entry.path for entry in load_corpus(DATA)}
     # cover is a root path, cited alone; PHB p.195 is a cite qwen3.5:9b made up.
     assert unresolved(["cover", "PHB p.195"], known) == ["PHB p.195"]
+
+
+def test_unmarked_removes_only_a_leading_marker() -> None:
+    # The first is a cite qwen3.5:9b wrote in a dev run, the header copied in.
+    cites = ["## conditions > grappled", "cover"]
+    assert unmarked(cites) == ["conditions > grappled", "cover"]
 
 
 def test_build_prompt_carries_every_path_and_the_question() -> None:
