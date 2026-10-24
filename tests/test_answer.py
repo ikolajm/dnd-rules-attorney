@@ -2,8 +2,8 @@
 
 from pathlib import Path
 
-from rules_attorney.answer import parse_reply, unresolved
-from rules_attorney.corpus import load_corpus
+from rules_attorney.answer import build_prompt, parse_reply, unresolved
+from rules_attorney.corpus import Entry, load_corpus
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
 
@@ -37,3 +37,15 @@ def test_unresolved_keeps_only_cites_outside_the_corpus() -> None:
     known = {entry.path for entry in load_corpus(DATA)}
     # cover is a root path, cited alone; PHB p.195 is a cite qwen3.5:9b made up.
     assert unresolved(["cover", "PHB p.195"], known) == ["PHB p.195"]
+
+
+def test_build_prompt_carries_every_path_and_the_question() -> None:
+    entries = [
+        Entry("conditions > grappled", "Grappled\n\nSpeed becomes 0."),
+        Entry("cover", "Cover\n\nWalls can provide cover."),
+    ]
+    prompt = build_prompt("Can a grappled creature hide?", entries)
+    # A model cannot cite a path it never saw.
+    for entry in entries:
+        assert f"## {entry.path}" in prompt
+    assert "Can a grappled creature hide?" in prompt
