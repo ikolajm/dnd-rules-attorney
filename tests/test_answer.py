@@ -1,6 +1,11 @@
 """Tests for the answering step."""
 
-from rules_attorney.answer import parse_reply
+from pathlib import Path
+
+from rules_attorney.answer import parse_reply, unresolved
+from rules_attorney.corpus import load_corpus
+
+DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
 
 # Replies captured from a probe of qwen3.5 through Ollama's structured output.
 # qwen3.5:0.8b with thinking on returned no content at all.
@@ -26,3 +31,9 @@ def test_parse_reply_returns_the_ruling_given() -> None:
     assert ruling is not None
     assert ruling.verdict == "Yes"
     assert ruling.cites == ["conditions > grappled"]
+
+
+def test_unresolved_keeps_only_cites_outside_the_corpus() -> None:
+    known = {entry.path for entry in load_corpus(DATA)}
+    # cover is a root path, cited alone; PHB p.195 is a cite qwen3.5:9b made up.
+    assert unresolved(["cover", "PHB p.195"], known) == ["PHB p.195"]

@@ -18,3 +18,8 @@ def parse_reply(content: str) -> Ruling | None:
         return Ruling.model_validate_json(content)
     except ValidationError:
         return None
+
+
+def unresolved(cites: list[str], known: set[str]) -> list[str]:
+    """The cites that name no corpus path, in the order given."""
+    return [cite for cite in cites if cite not in known]
