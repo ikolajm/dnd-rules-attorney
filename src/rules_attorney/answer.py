@@ -11,11 +11,19 @@ TEMPERATURE = 0.0
 THINK = False
 NUM_CTX = 16384
 
+# What a verdict is, written once and sent word for word to the answering
+# model and to the judge, so both work from the same sentence.
+VERDICT = (
+    "The verdict answers the question asked, in a few words: yes or no to a "
+    "yes-or-no question, a number to a how-many question, the thing itself to "
+    "a what question."
+)
 INSTRUCTIONS = (
     "Rule on the dispute below using only the rules entries given, and nothing "
-    "else. Cite each entry your ruling rests on by its path: the text after the "
-    "## marker, written exactly, without the marker itself. In the explanation, "
-    "give the rule, the fact from the question it applies to, and the conclusion. "
+    f"else. {VERDICT} Cite each entry your ruling rests on by its path: the text "
+    "after the ## marker, written exactly, without the marker itself. In the "
+    "explanation, give the rule, the fact from the question it applies to, and "
+    "the conclusion. "
     "Set ambiguous to true when the entries' text supports more than one reading "
     "of the case: two entries conflict, a term the case turns on is used without "
     "being defined, or a rule's wording fits the case two ways. "

@@ -1,0 +1,118 @@
+{
+  "run": "20261024-163024-qwen3.5-9b.jsonl",
+  "asks": "Does the system verdict mean the same as the gold verdict?",
+  "grades": {
+    "truesight-vs-invisible": {
+      "status": "rules-as-intended",
+      "question": "I can see an invisible creature with truesight. Do I still have disadvantage attacking it?",
+      "gold_verdict": "no",
+      "gold_ruling": "As written, yes: the invisible condition says attack rolls against the creature have disadvantage, with no exception for an attacker who can see it. As intended, no. The condition opens by saying an invisible creature is impossible to see without magic or a special sense, and its penalties follow from that; the unseen attackers rules give disadvantage for attacking a target you can't see. Truesight lets a creature see invisible creatures, so for that attacker the reason for the penalty is gone. The rule as written penalizes an attacker who sees the target clearly, which the rule's own premise does not support, so the intended answer is that the attack has no disadvantage from invisibility.",
+      "system_verdict": "No",
+      "agrees": true
+    },
+    "blinded-with-blindsight": {
+      "status": "rules-as-intended",
+      "question": "My character is blinded but has blindsight out to 30 feet. Do I have disadvantage attacking a goblin 10 feet away?",
+      "gold_verdict": "no",
+      "gold_ruling": "As written, yes: the blinded condition says the creature's attack rolls have disadvantage, with no exception for a creature with blindsight. As intended, no. The condition's penalties follow from its first line, that a blinded creature can't see, and the unseen attackers rules give disadvantage for attacking a target you can't see. Blindsight lets a creature perceive its surroundings without relying on sight within its radius, so a goblin 10 feet away is perceived and the reason for the penalty is gone. Beyond 30 feet blindsight does nothing, and the disadvantage stands.",
+      "system_verdict": "No",
+      "agrees": true
+    },
+    "grappled-attack-and-cast": {
+      "status": "settled",
+      "question": "Can a grappled creature still attack and cast spells?",
+      "gold_verdict": "yes",
+      "gold_ruling": "The grappled condition sets a creature's speed to 0 and denies it any bonus to its speed, and that is all it does. It does not incapacitate the creature or limit its actions, so a grappled creature can still take the Attack action or cast a spell. Only its movement is stopped.",
+      "system_verdict": "No, a grappled creature cannot move, but it can still attack and cast spells.",
+      "agrees": true
+    },
+    "grappler-knocked-prone": {
+      "status": "settled",
+      "question": "If the creature grappling me is knocked prone, does the grapple end?",
+      "gold_verdict": "no",
+      "gold_ruling": "A grapple ends only if the grappler is incapacitated or the grappled creature is moved out of the grappler's reach. The prone condition does not make the grappler incapacitated, and being knocked prone moves neither creature, so the grappled creature stays within reach and the grapple continues.",
+      "system_verdict": "false",
+      "agrees": true
+    },
+    "darkness-both-blind": {
+      "status": "settled",
+      "question": "Two creatures without darkvision fight in magical darkness. What is rolled?",
+      "gold_verdict": "one d20",
+      "gold_ruling": "Darkness is heavily obscured, and a creature trying to see something in a heavily obscured area effectively suffers from the blinded condition. When you attack a target you can't see, you have disadvantage, and when a creature can't see you, you have advantage on attack rolls against it. Neither creature can see the other, so each attack has both advantage and disadvantage, which cancel: one d20 is rolled.",
+      "system_verdict": "The attack roll is made normally; there is no automatic hit or miss based on the roll result alone.",
+      "agrees": false
+    },
+    "hidden-stays-hidden-moving": {
+      "status": "settled",
+      "question": "Does a hidden creature stay hidden when it moves?",
+      "gold_verdict": "yes, while it stays out of clear sight and quiet",
+      "gold_ruling": "A hiding creature's Stealth check stands until it is discovered or stops hiding, and it gives away its position if it makes noise. You can't hide from a creature that can see you clearly, and a creature that comes out of hiding and approaches an enemy is usually seen. Moving is not itself named as ending the hide, so a creature that moves while staying out of clear sight and making no noise stays hidden; moving into clear view, or making noise, reveals it.",
+      "system_verdict": "true",
+      "agrees": true
+    },
+    "paralyzed-thirty-feet": {
+      "status": "settled",
+      "question": "Attacking a paralyzed creature from 30 feet: do I have advantage, and is a hit a critical?",
+      "gold_verdict": "advantage, not critical",
+      "gold_ruling": "Attack rolls against a paralyzed creature have advantage, with no limit on distance. Any attack that hits it is a critical hit only if the attacker is within 5 feet of it. At 30 feet you have advantage, but 30 feet is beyond 5 feet, so a hit is an ordinary hit, not a critical.",
+      "system_verdict": "No",
+      "agrees": false
+    },
+    "concentration-two-hits": {
+      "status": "settled",
+      "question": "I take damage from two attacks. How many concentration saves do I make?",
+      "gold_verdict": "one per damage source",
+      "gold_ruling": "Whenever you take damage while concentrating, you make a Constitution saving throw, with a DC of 10 or half the damage taken, whichever is higher. If you take damage from multiple sources, you make a separate saving throw for each source of damage. Two attacks are two sources, so you make two saves, each with its DC set by that attack's damage.",
+      "system_verdict": "true",
+      "agrees": false
+    },
+    "readied-spell-no-trigger": {
+      "status": "settled",
+      "question": "I Ready a spell and the trigger never comes. Is the spell slot spent?",
+      "gold_verdict": "yes",
+      "gold_ruling": "When you ready a spell, you cast it as normal and hold its energy, and when a character casts a spell, they expend a slot of that spell's level or higher. The slot is spent at the casting, on your turn. The Ready action only lasts until the start of your next turn, so if the trigger never comes, the held spell is lost and the slot stays spent.",
+      "system_verdict": "No",
+      "agrees": false
+    },
+    "ready-and-oa-same-round": {
+      "status": "settled",
+      "question": "My Readied trigger and an opportunity attack both happen in one round. Do I get both?",
+      "gold_verdict": "no, only one",
+      "gold_ruling": "A readied action is taken with your reaction, and an opportunity attack uses your reaction. When you take a reaction, you can't take another until the start of your next turn. Both need your one reaction, so you get whichever you take first and must give up the other.",
+      "system_verdict": "true",
+      "agrees": false
+    },
+    "temp-hp-stack-and-zero": {
+      "status": "settled",
+      "question": "Do temporary hit points stack, and do they keep me conscious at 0 hit points?",
+      "gold_verdict": "no to both",
+      "gold_ruling": "Temporary hit points can't be added together: if you have some and receive more, you keep either the old or the new, not the sum. If you have 0 hit points, receiving temporary hit points doesn't restore you to consciousness or stabilize you, though they still absorb damage. So they don't stack, and they don't keep or bring you back to consciousness at 0 hit points.",
+      "system_verdict": "No, temporary hit points do not stack, and no, they do not keep you conscious at 0 hit points.",
+      "agrees": true
+    },
+    "sleep-temp-hp": {
+      "status": "settled",
+      "question": "Do temporary hit points count toward Sleep's hit point total?",
+      "gold_verdict": "no",
+      "gold_ruling": "Sleep affects creatures in ascending order of their current hit points, and a creature is affected only if its hit points are equal to or less than the remaining total. Temporary hit points aren't actual hit points; they are a separate buffer against damage. So a creature's temporary hit points are not added to its current hit points when Sleep is resolved.",
+      "system_verdict": "true",
+      "agrees": false
+    },
+    "two-advantage-one-disadvantage": {
+      "status": "settled",
+      "question": "I have advantage from two sources and disadvantage from one. What is rolled?",
+      "gold_verdict": "one d20",
+      "gold_ruling": "If circumstances cause a roll to have both advantage and disadvantage, you are considered to have neither of them, and you roll one d20. This is true even if multiple circumstances impose disadvantage and only one grants advantage or vice versa. Two sources of advantage and one of disadvantage still give the roll both, so they cancel and you roll one d20.",
+      "system_verdict": "neither",
+      "agrees": false
+    },
+    "shoved-out-of-reach-oa": {
+      "status": "settled",
+      "question": "An enemy shoves me out of its reach. Do I provoke an opportunity attack?",
+      "gold_verdict": "no",
+      "gold_ruling": "You don't provoke an opportunity attack when someone or something moves you without using your movement, action, or reaction. A shove is made by the shover, using the Attack action, and pushes the target 5 feet away. Being shoved uses none of your movement, action or reaction, so leaving the enemy's reach this way does not provoke.",
+      "system_verdict": "true",
+      "agrees": false
+    }
+  }
+}
