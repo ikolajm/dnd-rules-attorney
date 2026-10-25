@@ -1,0 +1,35 @@
+{
+  "id": "msg_011CgPH74Ke1uniBAD4HG8hu",
+  "container": null,
+  "content": [
+    {
+      "citations": null,
+      "text": "{\"agrees\": false, \"reason\": \"The gold verdict is 'yes' (a grappled creature can still attack and cast spells), but the system verdict opens with 'No' before saying it can attack and cast spells, so it does not commit cleanly to the same verdict.\"}",
+      "type": "text"
+    }
+  ],
+  "diagnostics": null,
+  "model": "claude-haiku-5-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 567,
+    "output_tokens": 87,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": null,
+    "service_tier": "standard",
+    "speed": "standard"
+  }
+}

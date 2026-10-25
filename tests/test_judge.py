@@ -1,11 +1,18 @@
 """Tests for the judge."""
 
+from pathlib import Path
+
+from anthropic.types import Message
+
 from rules_attorney.judge import (
     build_judge_prompt,
     flag_correct,
     needs_judge,
     parse_judgement,
+    reply_text,
 )
+
+CAPTURED = Path(__file__).resolve().parent / "captured" / "judge-response.json"
 
 
 def test_flag_correct_misses_a_contested_item_left_unflagged() -> None:
@@ -55,3 +62,11 @@ def test_build_judge_prompt_labels_the_verdict_as_the_instructions_name_it() -> 
     # differently leaves the model to guess which part that is.
     prompt = build_judge_prompt("q", "gold", "ruling", "answer")
     assert "System verdict: answer" in prompt
+
+
+def test_reply_text_reads_a_captured_response() -> None:
+    # One live call to claude-haiku-5-5, saved whole, so a change in the shape
+    # the API sends goes red here instead of in a run.
+    message = Message.model_validate_json(CAPTURED.read_text(encoding="utf-8"))
+    judgement = parse_judgement(reply_text(message))
+    assert judgement is not None

@@ -1,5 +1,7 @@
 """The judge, scoring a run's rulings against the gold set."""
 
+import anthropic
+from anthropic.types import Message, TextBlock
 from pydantic import BaseModel, ConfigDict, ValidationError
 
 
@@ -54,3 +56,26 @@ def parse_judgement(content: str) -> Judgement | None:
         return Judgement.model_validate_json(content)
     except ValidationError:
         return None
+
+
+def claude_judge(prompt: str) -> Message:
+    """The judge's raw response to the prompt, a live call."""
+    client = anthropic.Anthropic()
+    response = client.messages.create(
+        model=JUDGE_MODEL,
+        max_tokens=MAX_TOKENS,
+        thinking={"type": "disabled"},
+        output_config={
+            "format": {"type": "json_schema", "schema": Judgement.model_json_schema()}
+        },
+        messages=[{"role": "user", "content": prompt}],
+    )
+    return response
+
+
+def reply_text(message: Message) -> str:
+    """The reply's first text, or an empty string when there is none."""
+    for block in message.content:
+        if isinstance(block, TextBlock):
+            return block.text
+    return ""
