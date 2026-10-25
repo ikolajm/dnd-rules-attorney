@@ -1,6 +1,11 @@
 """Tests for the judge."""
 
-from rules_attorney.judge import flag_correct
+from rules_attorney.judge import (
+    build_judge_prompt,
+    flag_correct,
+    needs_judge,
+    parse_judgement,
+)
 
 
 def test_flag_correct_misses_a_contested_item_left_unflagged() -> None:
@@ -14,3 +19,39 @@ def test_flag_correct_refuses_a_settled_item_flagged() -> None:
 def test_flag_correct_expects_a_rules_as_intended_item_flagged() -> None:
     # Its text alone does not settle it, so it is flagged like a contested one.
     assert flag_correct("rules-as-intended", True)
+
+
+def test_needs_judge_holds_back_a_contested_item() -> None:
+    # A contested item has an empty verdict, so there is nothing to match.
+    assert not needs_judge("contested")
+
+
+def test_parse_judgement_counts_a_missing_reason_as_a_failure() -> None:
+    assert parse_judgement('{"agrees": true}') is None
+
+
+def test_parse_judgement_counts_an_extra_field_as_a_failure() -> None:
+    # The API's structured output needs a schema that forbids extra fields;
+    # this goes red if Judgement stops forbidding them.
+    reply = '{"agrees": true, "reason": "Both say no.", "confidence": 0.9}'
+    assert parse_judgement(reply) is None
+
+
+def test_build_judge_prompt_carries_all_four_inputs() -> None:
+    prompt = build_judge_prompt(
+        "Can a grappled creature cast a spell?",
+        "yes",
+        "Grappled only sets speed to 0.",
+        "Yes, it can still cast.",
+    )
+    assert "Can a grappled creature cast a spell?" in prompt
+    assert "yes" in prompt
+    assert "Grappled only sets speed to 0." in prompt
+    assert "Yes, it can still cast." in prompt
+
+
+def test_build_judge_prompt_labels_the_verdict_as_the_instructions_name_it() -> None:
+    # The instructions ask about "the system's verdict"; a label that names it
+    # differently leaves the model to guess which part that is.
+    prompt = build_judge_prompt("q", "gold", "ruling", "answer")
+    assert "System verdict: answer" in prompt
