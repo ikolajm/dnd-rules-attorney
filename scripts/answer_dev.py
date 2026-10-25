@@ -4,7 +4,6 @@ Calls the live Ollama server.
 """
 
 import json
-import subprocess
 import time
 from datetime import datetime
 from pathlib import Path
@@ -23,6 +22,7 @@ from rules_attorney.answer import (
     unresolved,
 )
 from rules_attorney.corpus import load_corpus
+from rules_attorney.provenance import commit
 from rules_attorney.retrieve import MODEL as EMBED_MODEL
 from rules_attorney.retrieve import (
     embed_documents,
@@ -38,25 +38,6 @@ GOLD = ROOT / "gold" / "gold.json"
 K = 10
 
 
-def commit() -> dict[str, Any]:
-    """The repo's HEAD commit, and whether the tree differs from it."""
-    head = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        capture_output=True,
-        text=True,
-        check=True,
-        cwd=ROOT,
-    )
-    status = subprocess.run(
-        ["git", "status", "--porcelain"],
-        capture_output=True,
-        text=True,
-        check=True,
-        cwd=ROOT,
-    )
-    return {"commit": head.stdout.strip(), "dirty": bool(status.stdout)}
-
-
 def main() -> None:
     """Answer each dev item and write its record."""
     entries = load_corpus(DATA)
@@ -66,7 +47,7 @@ def main() -> None:
     items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
     dev = [item for item in items if item["split"] == "dev"]
     matrix = embed_documents([entry.text for entry in entries], ollama_embed)
-    source = commit()
+    source = commit(ROOT)
     config: dict[str, Any] = {
         "model": MODEL,
         "embedder": EMBED_MODEL,
