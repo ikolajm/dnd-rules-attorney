@@ -4,6 +4,8 @@ import anthropic
 from anthropic.types import Message, TextBlock
 from pydantic import BaseModel, ConfigDict, ValidationError
 
+from rules_attorney.answer import VERDICT
+
 
 class Judgement(BaseModel):
     """The judge's reply."""
@@ -13,7 +15,7 @@ class Judgement(BaseModel):
     reason: str
 
 
-JUDGE_MODEL = "claude-haiku-5-5"
+JUDGE_MODEL = "claude-sonnet-5-5"
 MAX_TOKENS = 1024
 JUDGE_INSTRUCTIONS = (
     "You are checking one answer to a tabletop rules question against a "
@@ -21,6 +23,10 @@ JUDGE_INSTRUCTIONS = (
     "as the gold verdict, whatever the wording: 'no' and 'it cannot' agree. "
     "The gold ruling is given only to explain what a short gold verdict means. "
     "A verdict that takes both sides, or does not commit to one, does not agree. "
+    f"{VERDICT} A system verdict that does not answer the question asked does "
+    "not agree. Read 'true' and 'false' as yes and no. A verdict that reaches "
+    "the gold answer agrees even if it leaves out conditions the gold verdict "
+    "states. "
     "In reason, say in one plain sentence why the two verdicts agree or differ."
 )
 
@@ -64,7 +70,8 @@ def claude_judge(prompt: str) -> Message:
     response = client.messages.create(
         model=JUDGE_MODEL,
         max_tokens=MAX_TOKENS,
-        thinking={"type": "disabled"},
+        # Sonnet 5.5's lowest setting; it rejects disabled.
+        thinking={"type": "between_tools"},
         output_config={
             "format": {"type": "json_schema", "schema": Judgement.model_json_schema()}
         },

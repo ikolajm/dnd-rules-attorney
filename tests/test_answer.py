@@ -2,7 +2,13 @@
 
 from pathlib import Path
 
-from rules_attorney.answer import build_prompt, parse_reply, unmarked, unresolved
+from rules_attorney.answer import (
+    VERDICT,
+    build_prompt,
+    parse_reply,
+    unmarked,
+    unresolved,
+)
 from rules_attorney.corpus import Entry, load_corpus
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
@@ -55,3 +61,10 @@ def test_build_prompt_carries_every_path_and_the_question() -> None:
     for entry in entries:
         assert f"## {entry.path}" in prompt
     assert "Can a grappled creature hide?" in prompt
+
+
+def test_build_prompt_defines_the_verdict() -> None:
+    # Without it the model guesses from the field name, and answered a
+    # how-many question with "true".
+    prompt = build_prompt("q", [])
+    assert VERDICT in prompt

@@ -4,6 +4,7 @@ from pathlib import Path
 
 from anthropic.types import Message
 
+from rules_attorney.answer import VERDICT
 from rules_attorney.judge import (
     build_judge_prompt,
     flag_correct,
@@ -64,8 +65,15 @@ def test_build_judge_prompt_labels_the_verdict_as_the_instructions_name_it() -> 
     assert "System verdict: answer" in prompt
 
 
+def test_build_judge_prompt_defines_the_verdict_as_the_answer_prompt_does() -> None:
+    # The judge checks verdicts against the same sentence the answering model
+    # was given, not a wording of its own.
+    prompt = build_judge_prompt("q", "gold", "ruling", "answer")
+    assert VERDICT in prompt
+
+
 def test_reply_text_reads_a_captured_response() -> None:
-    # One live call to claude-haiku-5-5, saved whole, so a change in the shape
+    # One live call to claude-sonnet-5-5, saved whole, so a change in the shape
     # the API sends goes red here instead of in a run.
     message = Message.model_validate_json(CAPTURED.read_text(encoding="utf-8"))
     judgement = parse_judgement(reply_text(message))
