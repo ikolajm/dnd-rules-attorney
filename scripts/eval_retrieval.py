@@ -1,4 +1,4 @@
-"""Score each chunker by semantic retrieval and BM25, recall@k and all-cites@k.
+"""Score each embedder on header entries by semantic retrieval, BM25 and their fusion.
 
 Calls the live Ollama server and refuses any chunk past the model's context.
 """
@@ -8,22 +8,16 @@ import time
 from datetime import datetime
 from functools import partial
 from pathlib import Path
-from typing import Any
+from typing import Any, TextIO
 
 from rules_attorney.bm25 import bm25_rank, build_index
-from rules_attorney.chunk import (
-    OVERLAP,
-    WINDOW,
-    Chunk,
-    header_chunks,
-    prepended_chunks,
-    window_chunks,
-)
+from rules_attorney.chunk import Chunk, header_chunks
 from rules_attorney.corpus import load_corpus
+from rules_attorney.fusion import fuse
 from rules_attorney.metrics import all_cites_at_k, recall_at_k
 from rules_attorney.provenance import commit
 from rules_attorney.retrieve import (
-    NOMIC,
+    EMBEDDERS,
     embed_documents,
     embed_query,
     ollama_embed,
@@ -37,11 +31,6 @@ RUNS = ROOT / "runs"
 KS = [3, 5, 10, 20]
 TOP = max(KS)
 SIZE_K = 10
-CHUNKERS = {
-    "header": header_chunks,
-    "prepended": prepended_chunks,
-    "window": window_chunks,
-}
 
 
 def in_order(chunks: list[Chunk], labels: list[str]) -> list[Chunk]:
@@ -70,56 +59,82 @@ def report(name: str, rankings: list[list[Chunk]], dev: list[dict[str, Any]]) ->
     print(f"mean characters, top {SIZE_K}: {size:.0f}")
 
 
+def write_records(
+    file: TextIO,
+    dev: list[dict[str, Any]],
+    rankings: list[list[Chunk]],
+    *,
+    embedder: str | None,
+    method: str,
+    config: dict[str, Any],
+) -> None:
+    """One record per dev item: its top chunks' paths and the method that ranked it."""
+    for item, ranked in zip(dev, rankings, strict=True):
+        record = {
+            "id": item["id"],
+            "embedder": embedder,
+            "method": method,
+            "paths": [list(chunk.paths) for chunk in ranked[:TOP]],
+            "config": config,
+        }
+        file.write(json.dumps(record) + "\n")
+
+
 def main() -> None:
-    """For each chunker, embed and rank its chunks both ways, report and record each."""
+    """Rank header entries by BM25 once and by each embedder, alone and fused."""
     entries = load_corpus(DATA)
     items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
     dev = [item for item in items if item["split"] == "dev"]
-    config: dict[str, Any] = {
-        "embedder": NOMIC.model,
-        "window": WINDOW,
-        "overlap": OVERLAP,
-        **commit(ROOT),
-    }
+    config: dict[str, Any] = {"chunker": "header", **commit(ROOT)}
 
     print(f"{len(entries)} entries, {len(dev)} dev items")
-    embed = partial(ollama_embed, model=NOMIC.model)
-    questions = [embed_query(item["question"], NOMIC, embed) for item in dev]
+
+    chunks = header_chunks(entries)
+    labels = [str(i) for i in range(len(chunks))]
+    texts = [chunk.text for chunk in chunks]
+
+    # BM25 does not depend on the embedder, so it is ranked once.
+    index = build_index(labels, texts)
+    keyword_labels = [bm25_rank(index, item["question"]) for item in dev]
+    keyword = [in_order(chunks, ranked) for ranked in keyword_labels]
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     RUNS.mkdir(exist_ok=True)
     out = RUNS / f"retrieval-{stamp}.jsonl"
 
     with out.open("w", encoding="utf-8") as file:
-        for name, chunker in CHUNKERS.items():
-            chunks = chunker(entries)
-            labels = [str(i) for i in range(len(chunks))]
-            texts = [chunk.text for chunk in chunks]
+        # Written once, outside the loop: BM25 is the same for every embedder.
+        report("bm25", keyword, dev)
+        write_records(file, dev, keyword, embedder=None, method="bm25", config=config)
+
+        for embedder in EMBEDDERS:
+            # Questions are embedded inside the loop: a query vector belongs
+            # to the model and prefix that made it.
+            embed = partial(ollama_embed, model=embedder.model)
+            questions = [embed_query(item["question"], embedder, embed) for item in dev]
             start = time.perf_counter()
-            matrix = embed_documents(texts, NOMIC, embed)
+            matrix = embed_documents(texts, embedder, embed)
             seconds = time.perf_counter() - start
-            semantic = [
-                in_order(chunks, rank(vector, matrix, labels)) for vector in questions
+            semantic_labels = [rank(vector, matrix, labels) for vector in questions]
+            semantic = [in_order(chunks, ranked) for ranked in semantic_labels]
+
+            fused_labels = [
+                fuse([meaning, words])
+                for meaning, words in zip(semantic_labels, keyword_labels, strict=True)
             ]
-            index = build_index(labels, texts)
-            keyword = [
-                in_order(chunks, bm25_rank(index, item["question"])) for item in dev
-            ]
+            fused = [in_order(chunks, ranked) for ranked in fused_labels]
 
-            print(f"{name}: {len(chunks)} chunks embedded in {seconds:.1f}s")
-
-            for method, rankings in (("semantic", semantic), ("bm25", keyword)):
-                report(f"{name} {method}", rankings, dev)
-
-                for item, ranked in zip(dev, rankings, strict=True):
-                    record = {
-                        "id": item["id"],
-                        "chunker": name,
-                        "method": method,
-                        "paths": [list(chunk.paths) for chunk in ranked[:TOP]],
-                        "config": config,
-                    }
-                    file.write(json.dumps(record) + "\n")
+            print(f"{embedder.model}: {len(chunks)} chunks embedded in {seconds:.1f}s")
+            for method, rankings in (("semantic", semantic), ("fused", fused)):
+                report(f"{embedder.model} {method}", rankings, dev)
+                write_records(
+                    file,
+                    dev,
+                    rankings,
+                    embedder=embedder.model,
+                    method=method,
+                    config=config,
+                )
 
     print(out)
 
