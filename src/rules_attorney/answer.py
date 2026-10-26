@@ -35,9 +35,11 @@ INSTRUCTIONS = (
 class Ruling(BaseModel):
     """The ruling a model returns."""
 
-    verdict: str
+    # Model writes the fields in the order they're declared,
+    # so it gives its reasoning and the flag before it commits to a verdict.
     explanation: str
     ambiguous: bool
+    verdict: str
     cites: list[str]
 
 

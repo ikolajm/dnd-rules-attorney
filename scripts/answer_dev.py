@@ -15,6 +15,7 @@ from rules_attorney.answer import (
     SEED,
     TEMPERATURE,
     THINK,
+    Ruling,
     build_prompt,
     ollama_answer,
     parse_reply,
@@ -57,6 +58,7 @@ def main() -> None:
         "temperature": TEMPERATURE,
         "think": THINK,
         "num_ctx": NUM_CTX,
+        "fields": list(Ruling.model_fields),
         "commit": source["commit"],
         "dirty": source["dirty"],
     }
