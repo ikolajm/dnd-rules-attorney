@@ -6,6 +6,7 @@ Calls the live Ollama server and refuses any chunk past the model's context.
 import json
 import time
 from datetime import datetime
+from functools import partial
 from pathlib import Path
 from typing import Any
 
@@ -22,7 +23,7 @@ from rules_attorney.corpus import load_corpus
 from rules_attorney.metrics import all_cites_at_k, recall_at_k
 from rules_attorney.provenance import commit
 from rules_attorney.retrieve import (
-    MODEL,
+    NOMIC,
     embed_documents,
     embed_query,
     ollama_embed,
@@ -75,14 +76,15 @@ def main() -> None:
     items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
     dev = [item for item in items if item["split"] == "dev"]
     config: dict[str, Any] = {
-        "embedder": MODEL,
+        "embedder": NOMIC.model,
         "window": WINDOW,
         "overlap": OVERLAP,
         **commit(ROOT),
     }
 
     print(f"{len(entries)} entries, {len(dev)} dev items")
-    questions = [embed_query(item["question"], ollama_embed) for item in dev]
+    embed = partial(ollama_embed, model=NOMIC.model)
+    questions = [embed_query(item["question"], NOMIC, embed) for item in dev]
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     RUNS.mkdir(exist_ok=True)
@@ -94,7 +96,7 @@ def main() -> None:
             labels = [str(i) for i in range(len(chunks))]
             texts = [chunk.text for chunk in chunks]
             start = time.perf_counter()
-            matrix = embed_documents(texts, ollama_embed)
+            matrix = embed_documents(texts, NOMIC, embed)
             seconds = time.perf_counter() - start
             semantic = [
                 in_order(chunks, rank(vector, matrix, labels)) for vector in questions
