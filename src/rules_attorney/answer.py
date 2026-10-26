@@ -31,6 +31,10 @@ INSTRUCTIONS = (
     "turns on and say whether the text allows it another reading. "
     "When ambiguous, give each reading and say why the text does not decide "
     "between them. "
+    "Set ambiguous to true as well when an entry you cite, read word for word, "
+    "gives a different verdict than the reason the entries give for that rule. "
+    "Give the verdict the reason supports, and in the explanation say what the "
+    "text as written would rule. "
     "A case the entries never address is not ambiguous on that ground alone: "
     "ambiguity is in the words the entries use, not in what they leave out."
 )
