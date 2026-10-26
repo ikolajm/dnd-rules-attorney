@@ -6,6 +6,7 @@ Calls the live Ollama server.
 import json
 import time
 from datetime import datetime
+from functools import partial
 from pathlib import Path
 from typing import Any
 
@@ -24,8 +25,8 @@ from rules_attorney.answer import (
 )
 from rules_attorney.corpus import load_corpus
 from rules_attorney.provenance import commit
-from rules_attorney.retrieve import MODEL as EMBED_MODEL
 from rules_attorney.retrieve import (
+    NOMIC,
     embed_documents,
     embed_query,
     ollama_embed,
@@ -37,6 +38,7 @@ RUNS = ROOT / "runs"
 DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"
 K = 10
+EMBEDDER = NOMIC
 
 
 def main() -> None:
@@ -47,11 +49,12 @@ def main() -> None:
     known = set(paths)
     items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
     dev = [item for item in items if item["split"] == "dev"]
-    matrix = embed_documents([entry.text for entry in entries], ollama_embed)
+    embed = partial(ollama_embed, model=EMBEDDER.model)
+    matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     source = commit(ROOT)
     config: dict[str, Any] = {
         "model": MODEL,
-        "embedder": EMBED_MODEL,
+        "embedder": EMBEDDER.model,
         "chunker": "header",
         "k": K,
         "seed": SEED,
@@ -73,7 +76,7 @@ def main() -> None:
 
     with out.open("w", encoding="utf-8") as file:
         for item in dev:
-            vector = embed_query(item["question"], ollama_embed)
+            vector = embed_query(item["question"], EMBEDDER, embed)
             top = rank(vector, matrix, paths)[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
 
