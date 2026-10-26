@@ -52,11 +52,13 @@ def main() -> None:
     unanswered = 0
     # Judge replies that did not parse.
     judge_failures = 0
-    # Flags right over every record. A failed answer has no flag, so it is
-    # wrong here but neither a miss nor a false flag.
-    flags_right = 0
-    flag_misses = 0
-    false_flags = 0
+    # The flag as two rates, never one count of flags right: settled items
+    # outnumber the rest, so a model that never flags scores well on a count.
+    # A failed answer has no flag, so it counts as unflagged in its status.
+    expected_total = 0
+    expected_flagged = 0
+    settled_total = 0
+    settled_flagged = 0
     tokens_in = 0
     tokens_out = 0
 
@@ -68,12 +70,15 @@ def main() -> None:
             answer = record["ruling"]
 
             flag_ok = answer is not None and flag_correct(status, answer["ambiguous"])
-            if flag_ok:
-                flags_right += 1
-            elif answer is not None and status == "settled":
-                false_flags += 1
-            elif answer is not None:
-                flag_misses += 1
+            flagged = answer is not None and answer["ambiguous"]
+            if status == "settled":
+                settled_total += 1
+                if flagged:
+                    settled_flagged += 1
+            else:
+                expected_total += 1
+                if flagged:
+                    expected_flagged += 1
 
             agrees: bool | None = None
             reason: str | None = None
@@ -128,8 +133,8 @@ def main() -> None:
     print(f"verdict agreement: {agreed} / {judged}")
     print(f"  answers that failed their schema: {unanswered}")
     print(f"  judge replies that did not parse: {judge_failures}")
-    print(f"flags right: {flags_right} / {len(records)}")
-    print(f"  misses: {flag_misses}, false flags: {false_flags}")
+    print(f"expected items flagged: {expected_flagged} / {expected_total}")
+    print(f"settled items flagged: {settled_flagged} / {settled_total}")
     print(f"tokens: {tokens_in} in, {tokens_out} out")
 
 
