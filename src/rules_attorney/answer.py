@@ -24,11 +24,15 @@ INSTRUCTIONS = (
     "after the ## marker, written exactly, without the marker itself. In the "
     "explanation, give the rule, the fact from the question it applies to, and "
     "the conclusion. "
-    "Set ambiguous to true when the entries' text supports more than one reading "
-    "of the case: two entries conflict, a term the case turns on is used without "
-    "being defined, or a rule's wording fits the case two ways. "
-    "Then give each reading and say why the text does not decide between them. "
-    "A point the entries say nothing about is not ambiguous on that ground alone."
+    "Set ambiguous to true when two entries conflict, or when your conclusion "
+    "turns on a word or phrase the entries use that the text also lets you read "
+    "another way, and that other reading gives a different verdict. "
+    "In the explanation, before the flag, name the word or phrase your conclusion "
+    "turns on and say whether the text allows it another reading. "
+    "When ambiguous, give each reading and say why the text does not decide "
+    "between them. "
+    "A case the entries never address is not ambiguous on that ground alone: "
+    "ambiguity is in the words the entries use, not in what they leave out."
 )
 
 
