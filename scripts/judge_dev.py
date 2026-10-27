@@ -54,7 +54,7 @@ def main() -> None:
     judge_failures = 0
     # The flag as two rates, never one count of flags right: settled items
     # outnumber the rest, so a model that never flags scores well on a count.
-    # A failed answer has no flag, so it counts as unflagged in its status.
+    # A failed reply has no flag, so it counts as unflagged in its status.
     expected_total = 0
     expected_flagged = 0
     settled_total = 0
@@ -66,11 +66,11 @@ def main() -> None:
         for record in records:
             item = gold[record["id"]]
             status = item["status"]
-            # The system's ruling, None when its answer failed the schema.
-            answer = record["ruling"]
+            # The system's ruling, None when the reply failed the schema.
+            ruling = record["ruling"]
 
-            flag_ok = answer is not None and flag_correct(status, answer["ambiguous"])
-            flagged = answer is not None and answer["ambiguous"]
+            flag_ok = ruling is not None and flag_correct(status, ruling["ambiguous"])
+            flagged = ruling is not None and ruling["ambiguous"]
             if status == "settled":
                 settled_total += 1
                 if flagged:
@@ -86,7 +86,7 @@ def main() -> None:
             usage: dict[str, int] | None = None
             if needs_judge(status):
                 judged += 1
-                if answer is None:
+                if ruling is None:
                     # Nothing to judge, and it does not agree.
                     unanswered += 1
                     agrees = False
@@ -95,7 +95,7 @@ def main() -> None:
                         item["question"],
                         item["verdict"],
                         item["ruling"],
-                        answer["verdict"],
+                        ruling["answer"]["verdict"],
                     )
                     message = claude_judge(prompt)
                     reply = reply_text(message)
