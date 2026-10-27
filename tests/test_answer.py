@@ -4,6 +4,7 @@ from pathlib import Path
 
 from rules_attorney.answer import (
     VERDICT,
+    Ruling,
     build_prompt,
     parse_reply,
     unmarked,
@@ -30,12 +31,14 @@ def test_parse_reply_counts_a_missing_field_as_a_failure() -> None:
 
 def test_parse_reply_returns_the_ruling_given() -> None:
     reply = (
-        '{"verdict": "Yes", "explanation": "Grappled only sets speed to 0.", '
-        '"ambiguous": false, "cites": ["conditions > grappled"]}'
+        '{"explanation": "Grappled only sets speed to 0.", "ambiguous": false, '
+        '"answer": {"kind": "yes-or-no", "verdict": "yes"}, '
+        '"cites": ["conditions > grappled"]}'
     )
     ruling = parse_reply(reply)
     assert ruling is not None
-    assert ruling.verdict == "Yes"
+    assert ruling.answer.kind == "yes-or-no"
+    assert ruling.answer.verdict == "yes"
     assert ruling.cites == ["conditions > grappled"]
 
 
@@ -44,12 +47,46 @@ def test_parse_reply_accepts_a_bare_integer_verdict() -> None:
     # be an integer. Held to a string, it wrote "}" there instead.
     reply = (
         '{"explanation": "A separate save is made for each source of damage.", '
-        '"ambiguous": false, "verdict": 2, '
+        '"ambiguous": false, "answer": {"kind": "how-many", "verdict": 2}, '
         '"cites": ["casting-a-spell > duration > concentration"]}'
     )
     ruling = parse_reply(reply)
     assert ruling is not None
-    assert ruling.verdict == 2
+    assert ruling.answer.kind == "how-many"
+    assert ruling.answer.verdict == 2
+
+
+def test_parse_reply_refuses_a_number_to_a_yes_or_no_question() -> None:
+    # olmo-3:7b-instruct answered dodge-while-grappled with 0, its explanation
+    # ending "Verdict: no".
+    reply = (
+        '{"explanation": "Speed drops to 0, so Dodge is lost.", "ambiguous": false, '
+        '"answer": {"kind": "yes-or-no", "verdict": 0}, '
+        '"cites": ["actions-in-combat > dodge"]}'
+    )
+    assert parse_reply(reply) is None
+
+
+def test_parse_reply_refuses_a_word_that_is_not_yes_or_no() -> None:
+    # ministral-3:8b answered grappled-gives-advantage with "set", a word from
+    # the instruction to set ambiguous.
+    reply = (
+        '{"explanation": "The text allows two readings.", "ambiguous": true, '
+        '"answer": {"kind": "yes-or-no", "verdict": "set"}, '
+        '"cites": ["conditions > grappled"]}'
+    )
+    assert parse_reply(reply) is None
+
+
+def test_ruling_schema_keeps_the_declared_field_order() -> None:
+    # Ollama's grammar follows the schema's order, so the model reasons and
+    # flags before it answers, and names the kind before the verdict.
+    schema = Ruling.model_json_schema()
+    assert list(schema["properties"]) == ["explanation", "ambiguous", "answer", "cites"]
+    # Named first, so an empty $defs cannot pass the loop below.
+    assert set(schema["$defs"]) == {"YesOrNo", "HowMany", "What"}
+    for branch in schema["$defs"].values():
+        assert list(branch["properties"]) == ["kind", "verdict"]
 
 
 def test_unresolved_keeps_only_cites_outside_the_corpus() -> None:

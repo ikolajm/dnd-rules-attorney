@@ -1,7 +1,9 @@
 """The answering step, from retrieved entries to a validated ruling."""
 
+from typing import Annotated, Literal
+
 import ollama
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, Field, ValidationError
 
 from rules_attorney.corpus import Entry, render_markdown
 
@@ -48,6 +50,34 @@ INSTRUCTIONS = (
 )
 
 
+class YesOrNo(BaseModel):
+    """An answer to a yes-or-no question."""
+
+    kind: Literal["yes-or-no"]
+    verdict: Literal["yes", "no"]
+
+
+class HowMany(BaseModel):
+    """An answer to a how-many question."""
+
+    kind: Literal["how-many"]
+    # A number answer is written as a bare integer. Forced into a string, the
+    # verdict to a how-many question came out as braces: "}", "{2}".
+    verdict: int
+
+
+class What(BaseModel):
+    """An answer to a what question."""
+
+    kind: Literal["what"]
+    verdict: str
+
+
+# The model names the kind of question first, and a verdict of the wrong
+# type for that kind is refused.
+Answer = Annotated[YesOrNo | HowMany | What, Field(discriminator="kind")]
+
+
 class Ruling(BaseModel):
     """The ruling a model returns."""
 
@@ -55,9 +85,7 @@ class Ruling(BaseModel):
     # so it gives its reasoning and the flag before it commits to a verdict.
     explanation: str
     ambiguous: bool
-    # A number answer is written as a bare integer. Forced into a string, the
-    # verdict to a how-many question came out as braces: "}", "{2}".
-    verdict: str | int
+    answer: Answer
     cites: list[str]
 
 
