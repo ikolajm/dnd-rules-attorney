@@ -43,7 +43,7 @@ def needs_judge(status: str) -> bool:
 
 
 def build_judge_prompt(
-    question: str, gold_verdict: str, gold_ruling: str, verdict: str
+    question: str, gold_verdict: str, gold_ruling: str, verdict: str | int
 ) -> str:
     """The judge's instructions, then each input under its own label."""
     parts = [

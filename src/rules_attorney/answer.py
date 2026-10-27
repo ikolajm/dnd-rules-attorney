@@ -42,7 +42,9 @@ class Ruling(BaseModel):
     # so it gives its reasoning and the flag before it commits to a verdict.
     explanation: str
     ambiguous: bool
-    verdict: str
+    # A number answer is written as a bare integer. Forced into a string, the
+    # verdict to a how-many question came out as braces: "}", "{2}".
+    verdict: str | int
     cites: list[str]
 
 
