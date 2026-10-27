@@ -1,9 +1,10 @@
 """Answers every dev item from its top 10 entries and writes one record per item.
 
-Calls the live Ollama server.
+Calls the live Ollama server with the model named as its one argument.
 """
 
 import json
+import sys
 import time
 from datetime import datetime
 from functools import partial
@@ -11,7 +12,6 @@ from pathlib import Path
 from typing import Any
 
 from rules_attorney.answer import (
-    MODEL,
     NUM_CTX,
     SEED,
     TEMPERATURE,
@@ -43,6 +43,7 @@ EMBEDDER = NOMIC
 
 def main() -> None:
     """Answer each dev item and write its record."""
+    model = sys.argv[1]
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
     paths = [entry.path for entry in entries]
@@ -53,7 +54,7 @@ def main() -> None:
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     source = commit(ROOT)
     config: dict[str, Any] = {
-        "model": MODEL,
+        "model": model,
         "embedder": EMBEDDER.model,
         "chunker": "header",
         "k": K,
@@ -68,7 +69,7 @@ def main() -> None:
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     RUNS.mkdir(exist_ok=True)
-    out = RUNS / f"{stamp}-{MODEL.replace(':', '-')}.jsonl"
+    out = RUNS / f"{stamp}-{model.replace(':', '-')}.jsonl"
     failures = 0
     cites = 0
     resolved = 0
@@ -81,7 +82,7 @@ def main() -> None:
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
 
             start = time.perf_counter()
-            reply = ollama_answer(prompt)
+            reply = ollama_answer(prompt, model=model)
             seconds = time.perf_counter() - start
 
             ruling = parse_reply(reply)

@@ -5,7 +5,6 @@ from pydantic import BaseModel, ValidationError
 
 from rules_attorney.corpus import Entry, render_markdown
 
-MODEL = "qwen3.5:9b"
 SEED = 1
 TEMPERATURE = 0.0
 THINK = False
@@ -71,10 +70,10 @@ def build_prompt(question: str, entries: list[Entry]) -> str:
     return "\n\n".join(parts)
 
 
-def ollama_answer(prompt: str) -> str:
+def ollama_answer(prompt: str, *, model: str) -> str:
     """The model's raw reply to the prompt, an empty string when there is none."""
     response = ollama.chat(
-        model=MODEL,
+        model=model,
         messages=[{"role": "user", "content": prompt}],
         format=Ruling.model_json_schema(),
         think=THINK,
