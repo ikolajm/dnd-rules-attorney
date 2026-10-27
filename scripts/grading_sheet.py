@@ -43,13 +43,15 @@ def main() -> None:
     grades: dict[str, dict[str, Any]] = {}
     for record in chosen:
         item = gold[record["id"]]
-        answer = record["ruling"]
+        ruling = record["ruling"]
         grades[record["id"]] = {
             "status": item["status"],
             "question": item["question"],
             "gold_verdict": item["verdict"],
             "gold_ruling": item["ruling"],
-            "system_verdict": answer["verdict"] if answer is not None else None,
+            "system_verdict": (
+                ruling["answer"]["verdict"] if ruling is not None else None
+            ),
             "agrees": None,
         }
 

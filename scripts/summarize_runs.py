@@ -64,7 +64,6 @@ def summarize(run: Path, known: set[str]) -> None:
     cites = [cite for record in ok for cite in record["ruling"]["cites"]]
     strict = sum(1 for cite in cites if cite in known)
     grounded = sum(1 for cite in unmarked(cites) if cite in known)
-    integers = sum(1 for record in ok if isinstance(record["ruling"]["verdict"], int))
     seconds = [record["seconds"] for record in records]
 
     print(run.name)
@@ -80,7 +79,6 @@ def summarize(run: Path, known: set[str]) -> None:
         )
     )
     print(f"  cites {len(cites)}, resolved strict {strict}, once unmarked {grounded}")
-    print(f"  integer verdicts {integers}")
     print(f"  seconds max {max(seconds):.1f}, total {sum(seconds):.0f}")
 
 
