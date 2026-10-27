@@ -39,6 +39,19 @@ def test_parse_reply_returns_the_ruling_given() -> None:
     assert ruling.cites == ["conditions > grappled"]
 
 
+def test_parse_reply_accepts_a_bare_integer_verdict() -> None:
+    # The shape qwen3.5:9b wrote for a how-many question once the verdict could
+    # be an integer. Held to a string, it wrote "}" there instead.
+    reply = (
+        '{"explanation": "A separate save is made for each source of damage.", '
+        '"ambiguous": false, "verdict": 2, '
+        '"cites": ["casting-a-spell > duration > concentration"]}'
+    )
+    ruling = parse_reply(reply)
+    assert ruling is not None
+    assert ruling.verdict == 2
+
+
 def test_unresolved_keeps_only_cites_outside_the_corpus() -> None:
     known = {entry.path for entry in load_corpus(DATA)}
     # cover is a root path, cited alone; PHB p.195 is a cite qwen3.5:9b made up.
