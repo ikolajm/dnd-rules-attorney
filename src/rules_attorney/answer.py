@@ -14,6 +14,15 @@ NUM_CTX = 16384
 # the size ladder was under 5,600 characters.
 NUM_PREDICT = 4096
 
+# Models ship their own penalties (qwen3.5 ships a presence penalty of 1.5),
+# so all three are pinned off and every model samples the same way. Off is
+# 1.0 for repeat_penalty, since it divides a repeated token's score.
+PENALTIES: dict[str, float] = {
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "repeat_penalty": 1.0,
+}
+
 # What a verdict is, written once and sent word for word to the answering
 # model and to the judge, so both work from the same sentence.
 VERDICT = (
@@ -88,6 +97,7 @@ def ollama_answer(prompt: str, *, model: str) -> str:
             "seed": SEED,
             "num_ctx": NUM_CTX,
             "num_predict": NUM_PREDICT,
+            **PENALTIES,
         },
     )
     return response.message.content or ""
