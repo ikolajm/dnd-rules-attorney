@@ -17,7 +17,7 @@ from typing import Any
 
 import ollama
 
-from rules_attorney.answer import NUM_CTX, PENALTIES, SEED, TEMPERATURE, THINK
+from rules_attorney.answer import NUM_CTX, SEED, TEMPERATURE, THINK
 
 KEYS = ["zulu", "mike", "alpha"]
 PROMPT = (
@@ -58,7 +58,6 @@ def main() -> None:
                     "seed": SEED,
                     "num_ctx": NUM_CTX,
                     "num_predict": 200,
-                    **PENALTIES,
                 },
             ).message.content
             written = written_order(reply or "")
