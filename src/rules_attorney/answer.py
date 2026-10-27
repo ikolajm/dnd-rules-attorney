@@ -9,6 +9,10 @@ SEED = 1
 TEMPERATURE = 0.0
 THINK = False
 NUM_CTX = 16384
+# A cap on generated tokens, so a model caught in a loop ends in a schema
+# failure instead of generating until killed. Every reply that validated on
+# the size ladder was under 5,600 characters.
+NUM_PREDICT = 4096
 
 # What a verdict is, written once and sent word for word to the answering
 # model and to the judge, so both work from the same sentence.
@@ -83,6 +87,7 @@ def ollama_answer(prompt: str, *, model: str) -> str:
             "temperature": TEMPERATURE,
             "seed": SEED,
             "num_ctx": NUM_CTX,
+            "num_predict": NUM_PREDICT,
         },
     )
     return response.message.content or ""
