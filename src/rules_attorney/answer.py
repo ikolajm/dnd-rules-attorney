@@ -32,12 +32,19 @@ VERDICT = (
     "yes-or-no question, a number to a how-many question, the thing itself to "
     "a what question."
 )
+# What the answer's kind is, sent to the answering model only. The judge
+# compares verdicts, not kinds, and its instructions were checked against
+# hand grades, so a change to them would need checking again.
+KIND = (
+    "In answer, kind says what sort of question it is: yes-or-no, how-many or "
+    "what, and the verdict is written to fit it."
+)
 INSTRUCTIONS = (
     "Rule on the dispute below using only the rules entries given, and nothing "
-    f"else. {VERDICT} Cite each entry your ruling rests on by its path: the text "
-    "after the ## marker, written exactly, without the marker itself. In the "
-    "explanation, give the rule, the fact from the question it applies to, and "
-    "the conclusion. "
+    f"else. {VERDICT} {KIND} Cite each entry your ruling rests on by its path: "
+    "the text after the ## marker, written exactly, without the marker itself. "
+    "In the explanation, give the rule, the fact from the question it applies "
+    "to, and the conclusion. "
     "Set ambiguous to true when two entries conflict, or when your conclusion "
     "turns on a word or phrase the entries use that the text also lets you read "
     "another way, and that other reading gives a different verdict. "
