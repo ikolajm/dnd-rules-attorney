@@ -3,6 +3,7 @@
 from pathlib import Path
 
 from rules_attorney.answer import (
+    KIND,
     VERDICT,
     Ruling,
     build_prompt,
@@ -118,3 +119,10 @@ def test_build_prompt_defines_the_verdict() -> None:
     # how-many question with "true".
     prompt = build_prompt("q", [])
     assert VERDICT in prompt
+
+
+def test_build_prompt_defines_the_kind() -> None:
+    # The grammar forces a kind but says nothing of what it is for; without the
+    # sentence the model has only the field name, as the verdict once had.
+    prompt = build_prompt("q", [])
+    assert KIND in prompt

@@ -4,7 +4,7 @@ from pathlib import Path
 
 from anthropic.types import Message
 
-from rules_attorney.answer import VERDICT
+from rules_attorney.answer import KIND, VERDICT
 from rules_attorney.judge import (
     build_judge_prompt,
     flag_correct,
@@ -70,6 +70,13 @@ def test_build_judge_prompt_defines_the_verdict_as_the_answer_prompt_does() -> N
     # was given, not a wording of its own.
     prompt = build_judge_prompt("q", "gold", "ruling", "answer")
     assert VERDICT in prompt
+
+
+def test_build_judge_prompt_leaves_out_the_kind() -> None:
+    # The judge compares verdicts, not kinds, and its instructions were checked
+    # against hand grades; the kind's sentence would change them unchecked.
+    prompt = build_judge_prompt("q", "gold", "ruling", "answer")
+    assert KIND not in prompt
 
 
 def test_reply_text_reads_a_captured_response() -> None:
