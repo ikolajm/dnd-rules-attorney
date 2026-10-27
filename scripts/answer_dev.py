@@ -13,6 +13,7 @@ from typing import Any
 
 from rules_attorney.answer import (
     NUM_CTX,
+    NUM_PREDICT,
     SEED,
     TEMPERATURE,
     THINK,
@@ -62,6 +63,7 @@ def main() -> None:
         "temperature": TEMPERATURE,
         "think": THINK,
         "num_ctx": NUM_CTX,
+        "num_predict": NUM_PREDICT,
         "fields": list(Ruling.model_fields),
         "commit": source["commit"],
         "dirty": source["dirty"],
