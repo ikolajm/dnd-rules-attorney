@@ -7,8 +7,11 @@ from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
 from rules_attorney.fusion import fuse
 
 PLAN_INSTRUCTIONS = (
-    "List the separate rules questions the dispute below turns on, each one a "
-    "question a single rule answers. "
+    "List the separate rules the dispute below turns on, as one short question "
+    "per rule. Each question names the rule, condition, spell or action it asks "
+    "about, the way a rulebook's index would, and leaves out the dispute's own "
+    "details. Leave out any rule the dispute does not need. "
+    "Never restate the dispute as a question. "
     "When the dispute turns on one rule, give an empty list."
 )
 
