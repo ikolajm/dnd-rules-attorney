@@ -1,4 +1,4 @@
-"""Judges a dev run's records for verdict agreement and the flag.
+"""Judges a run's records, dev or test, for verdict agreement and the flag.
 
 Calls the live Claude API.
 """

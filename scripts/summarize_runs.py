@@ -98,7 +98,11 @@ def main() -> None:
 
     known = {entry.path for entry in load_corpus(DATA)}
     if args.table:
-        print(markdown_table([score(load(run), run, known) for run in args.runs]))
+        rows = [score(load(run), run, known) for run in args.runs]
+        try:
+            print(markdown_table(rows))
+        except ValueError as error:
+            sys.exit(str(error))
         return
     for run in args.runs:
         summarize(run, known)

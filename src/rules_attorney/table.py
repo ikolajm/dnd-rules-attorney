@@ -11,6 +11,8 @@ class Row:
     """One run's scores, read from its records and its judged file."""
 
     model: str
+    # Dev for a run made before the split was recorded.
+    split: str
     # False on the local rows, "adaptive" on the hosted one, None on the floor.
     think: bool | str | None
     commit: str
@@ -60,6 +62,7 @@ def build_row(
 
     return Row(
         model=config["model"],
+        split=config.get("split", "dev"),
         think=config.get("think"),
         commit=config["commit"],
         dirty=config["dirty"],
@@ -113,5 +116,12 @@ def markdown_row(row: Row) -> str:
 
 
 def markdown_table(rows: list[Row]) -> str:
-    """The published table, one row per run in the order given."""
+    """The published table, one row per run in the order given, all of one split.
+
+    Raises ValueError on rows of more than one split, so a dev row cannot
+    land in the test table.
+    """
+    splits = sorted({row.split for row in rows})
+    if len(splits) > 1:
+        raise ValueError(f"runs of more than one split: {', '.join(splits)}")
     return "\n".join([HEADER, RULE, *(markdown_row(row) for row in rows)])
