@@ -7,7 +7,7 @@ from typing import Any
 
 import pytest
 
-from rules_attorney.table import Row, build_row, markdown_table
+from rules_attorney.table import Row, build_row, markdown_row, markdown_table
 
 # The floor's dev run and its judged file, copied from runs/: "no" to every
 # item, never flagged, no cites, so each score is known in advance.
@@ -44,6 +44,16 @@ def test_build_row_reads_the_flag_as_two_rates() -> None:
 def test_build_row_reads_a_run_without_a_split_as_dev() -> None:
     # The captured floor predates the split in the config.
     assert floor_row().split == "dev"
+
+
+def test_build_row_reads_a_run_without_a_level_as_level_1() -> None:
+    # The captured floor predates the level in the config.
+    assert floor_row().level == 1
+
+
+def test_markdown_row_carries_the_level() -> None:
+    row = replace(floor_row(), level=3)
+    assert "| 3 |" in markdown_row(row)
 
 
 def test_markdown_table_refuses_runs_of_two_splits() -> None:
