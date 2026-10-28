@@ -1,6 +1,7 @@
 """Answers every dev item from its top 10 entries and writes one record per item.
 
-Calls the live Ollama server with the model named as its one argument.
+Answers with the model named as its one argument: through the Claude API when
+its name starts with claude-, through the live Ollama server otherwise.
 """
 
 import json
@@ -25,6 +26,8 @@ from rules_attorney.answer import (
     unresolved,
 )
 from rules_attorney.corpus import load_corpus
+from rules_attorney.hosted import EFFORT, MAX_TOKENS, MODEL_PREFIX, claude_answer
+from rules_attorney.judge import reply_text
 from rules_attorney.provenance import commit
 from rules_attorney.retrieve import (
     NOMIC,
@@ -54,20 +57,29 @@ def main() -> None:
     embed = partial(ollama_embed, model=EMBEDDER.model)
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     source = commit(ROOT)
+    hosted = model.startswith(MODEL_PREFIX)
     config: dict[str, Any] = {
         "model": model,
         "embedder": EMBEDDER.model,
         "chunker": "header",
         "k": K,
-        "seed": SEED,
-        "temperature": TEMPERATURE,
-        "think": THINK,
-        "num_ctx": NUM_CTX,
-        "num_predict": NUM_PREDICT,
         "fields": list(Ruling.model_fields),
         "commit": source["commit"],
         "dirty": source["dirty"],
     }
+    if hosted:
+        # Opus 5.5 takes no seed or temperature and cannot turn thinking off.
+        config.update({"effort": EFFORT, "max_tokens": MAX_TOKENS, "think": "adaptive"})
+    else:
+        config.update(
+            {
+                "seed": SEED,
+                "temperature": TEMPERATURE,
+                "think": THINK,
+                "num_ctx": NUM_CTX,
+                "num_predict": NUM_PREDICT,
+            }
+        )
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     RUNS.mkdir(exist_ok=True)
@@ -84,7 +96,19 @@ def main() -> None:
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
 
             start = time.perf_counter()
-            reply = ollama_answer(prompt, model=model)
+            usage: dict[str, Any] = {}
+            if hosted:
+                message = claude_answer(prompt, model=model)
+                reply = reply_text(message)
+                # The stop reason shows a refusal or a hit cap, and the
+                # tokens give the run's measured cost.
+                usage = {
+                    "stop": message.stop_reason,
+                    "input_tokens": message.usage.input_tokens,
+                    "output_tokens": message.usage.output_tokens,
+                }
+            else:
+                reply = ollama_answer(prompt, model=model)
             seconds = time.perf_counter() - start
 
             ruling = parse_reply(reply)
@@ -105,6 +129,7 @@ def main() -> None:
                 "ruling": ruling.model_dump() if ruling is not None else None,
                 "unresolved": missing,
                 "seconds": round(seconds, 2),
+                **usage,
                 "config": config,
             }
             file.write(json.dumps(record) + "\n")
