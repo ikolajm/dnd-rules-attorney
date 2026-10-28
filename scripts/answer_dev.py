@@ -1,10 +1,11 @@
 """Answers every item of a split from its top 10 entries, one record per item.
 
-    python scripts/answer_dev.py <model> [--split dev|test]
+    python scripts/answer_dev.py <model> [--split dev|test] [--level 1|3]
 
 Answers with the model named: through the Claude API when its name starts
 with claude-, through the live Ollama server otherwise. The split is dev
-unless test is named.
+unless test is named. Level 3 plans sub-questions with the same model and
+answers from the merged ranking's top 10.
 """
 
 import argparse
@@ -31,6 +32,12 @@ from rules_attorney.answer import (
 from rules_attorney.corpus import load_corpus
 from rules_attorney.hosted import EFFORT, MAX_TOKENS, MODEL_PREFIX, claude_answer
 from rules_attorney.judge import reply_text
+from rules_attorney.multihop import (
+    build_plan_prompt,
+    merged_ranking,
+    ollama_plan,
+    parse_plan,
+)
 from rules_attorney.provenance import commit
 from rules_attorney.retrieve import (
     NOMIC,
@@ -54,9 +61,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("model")
     parser.add_argument("--split", choices=SPLITS, default=SPLITS[0])
+    parser.add_argument("--level", type=int, choices=[1, 3], default=1)
     args = parser.parse_args()
     model: str = args.model
     split: str = args.split
+    level: int = args.level
+    hosted = model.startswith(MODEL_PREFIX)
+    if hosted and level == 3:
+        parser.error("level 3 needs a local model: there is no hosted plan call yet")
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
     paths = [entry.path for entry in entries]
@@ -66,10 +78,10 @@ def main() -> None:
     embed = partial(ollama_embed, model=EMBEDDER.model)
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     source = commit(ROOT)
-    hosted = model.startswith(MODEL_PREFIX)
     config: dict[str, Any] = {
         "model": model,
         "split": split,
+        "level": level,
         "embedder": EMBEDDER.model,
         "chunker": "header",
         "k": K,
@@ -92,9 +104,11 @@ def main() -> None:
         )
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+    marker = "-level3" if level == 3 else ""
     RUNS.mkdir(exist_ok=True)
-    out = RUNS / f"{stamp}-{split}-{model.replace(':', '-')}.jsonl"
+    out = RUNS / f"{stamp}-{split}{marker}-{model.replace(':', '-')}.jsonl"
     failures = 0
+    plan_failures = 0
     cites = 0
     resolved = 0
     grounded = 0
@@ -102,7 +116,29 @@ def main() -> None:
     with out.open("w", encoding="utf-8") as file:
         for item in chosen:
             vector = embed_query(item["question"], EMBEDDER, embed)
-            top = rank(vector, matrix, paths)[:K]
+            ranking = rank(vector, matrix, paths)
+            planned: dict[str, Any] = {}
+            if level == 3:
+                plan_start = time.perf_counter()
+                plan_reply = ollama_plan(
+                    build_plan_prompt(item["question"]), model=model
+                )
+                plan_seconds = time.perf_counter() - plan_start
+                plan = parse_plan(plan_reply)
+                if plan is None:
+                    plan_failures += 1
+                sub_questions = plan or []
+                sub_rankings = [
+                    rank(embed_query(sub, EMBEDDER, embed), matrix, paths)
+                    for sub in sub_questions
+                ]
+                ranking = merged_ranking(ranking, sub_rankings)
+                planned = {
+                    "plan_reply": plan_reply,
+                    "sub_questions": sub_questions,
+                    "plan_seconds": round(plan_seconds, 2),
+                }
+            top = ranking[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
 
             start = time.perf_counter()
@@ -140,6 +176,7 @@ def main() -> None:
                 "unresolved": missing,
                 "seconds": round(seconds, 2),
                 **usage,
+                **planned,
                 "config": config,
             }
             file.write(json.dumps(record) + "\n")
@@ -149,6 +186,8 @@ def main() -> None:
 
     print(out)
     print(f"schema failures: {failures} / {len(chosen)}")
+    if level == 3:
+        print(f"failed plans: {plan_failures} / {len(chosen)}")
     print(f"cites resolved: {resolved} / {cites}")
     print(f"cites grounded: {grounded} / {cites}")
 
