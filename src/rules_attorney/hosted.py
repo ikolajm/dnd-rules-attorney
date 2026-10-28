@@ -6,6 +6,7 @@ import anthropic
 from anthropic.types import Message
 
 from rules_attorney.answer import Ruling
+from rules_attorney.multihop import Plan
 
 MODEL_PREFIX = "claude-"
 # Opus 5.5 defaults to medium. Its thinking cannot be turned off, so effort
@@ -32,10 +33,12 @@ def enum_consts(value: Any) -> Any:
 # does not enforce it, and keeps an enum. Each kind is a one-value Literal,
 # which pydantic writes as a const.
 RULING_SCHEMA = anthropic.transform_schema(enum_consts(Ruling.model_json_schema()))
+# Plan holds no const, so its schema needs no enum rewrite.
+PLAN_SCHEMA = anthropic.transform_schema(Plan.model_json_schema())
 
 
-def claude_answer(prompt: str, *, model: str) -> Message:
-    """The model's raw response to the prompt, a live call."""
+def claude_structured(prompt: str, *, model: str, schema: dict[str, Any]) -> Message:
+    """The model's raw response to the prompt, held to the schema, a live call."""
     client = anthropic.Anthropic()
     # No thinking parameter: Opus 5.5 runs adaptive without one and refuses
     # disabled. No temperature or seed, which it refuses too.
@@ -44,7 +47,17 @@ def claude_answer(prompt: str, *, model: str) -> Message:
         max_tokens=MAX_TOKENS,
         output_config={
             "effort": EFFORT,
-            "format": {"type": "json_schema", "schema": RULING_SCHEMA},
+            "format": {"type": "json_schema", "schema": schema},
         },
         messages=[{"role": "user", "content": prompt}],
     )
+
+
+def claude_answer(prompt: str, *, model: str) -> Message:
+    """The model's raw response to the prompt, a live call."""
+    return claude_structured(prompt, model=model, schema=RULING_SCHEMA)
+
+
+def claude_plan(prompt: str, *, model: str) -> Message:
+    """The model's raw plan for the prompt, a live call."""
+    return claude_structured(prompt, model=model, schema=PLAN_SCHEMA)
