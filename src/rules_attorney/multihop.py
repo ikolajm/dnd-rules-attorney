@@ -4,6 +4,7 @@ import ollama
 from pydantic import BaseModel, ValidationError
 
 from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
+from rules_attorney.fusion import fuse
 
 PLAN_INSTRUCTIONS = (
     "List the separate rules questions the dispute below turns on, each one a "
@@ -47,3 +48,8 @@ def ollama_plan(prompt: str, *, model: str) -> str:
         },
     )
     return response.message.content or ""
+
+
+def merged_ranking(question: list[str], subs: list[list[str]]) -> list[str]:
+    """The question's ranking and the sub-questions', fused into one."""
+    return fuse([question, *subs])
