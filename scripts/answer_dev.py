@@ -30,7 +30,13 @@ from rules_attorney.answer import (
     unresolved,
 )
 from rules_attorney.corpus import load_corpus
-from rules_attorney.hosted import EFFORT, MAX_TOKENS, MODEL_PREFIX, claude_answer
+from rules_attorney.hosted import (
+    EFFORT,
+    MAX_TOKENS,
+    MODEL_PREFIX,
+    claude_answer,
+    claude_plan,
+)
 from rules_attorney.judge import reply_text
 from rules_attorney.multihop import (
     build_plan_prompt,
@@ -67,8 +73,6 @@ def main() -> None:
     split: str = args.split
     level: int = args.level
     hosted = model.startswith(MODEL_PREFIX)
-    if hosted and level == 3:
-        parser.error("level 3 needs a local model: there is no hosted plan call yet")
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
     paths = [entry.path for entry in entries]
@@ -120,9 +124,17 @@ def main() -> None:
             planned: dict[str, Any] = {}
             if level == 3:
                 plan_start = time.perf_counter()
-                plan_reply = ollama_plan(
-                    build_plan_prompt(item["question"]), model=model
-                )
+                plan_prompt = build_plan_prompt(item["question"])
+                plan_usage: dict[str, Any] = {}
+                if hosted:
+                    plan_message = claude_plan(plan_prompt, model=model)
+                    plan_reply = reply_text(plan_message)
+                    plan_usage = {
+                        "plan_input_tokens": plan_message.usage.input_tokens,
+                        "plan_output_tokens": plan_message.usage.output_tokens,
+                    }
+                else:
+                    plan_reply = ollama_plan(plan_prompt, model=model)
                 plan_seconds = time.perf_counter() - plan_start
                 plan = parse_plan(plan_reply)
                 if plan is None:
@@ -137,6 +149,7 @@ def main() -> None:
                     "plan_reply": plan_reply,
                     "sub_questions": sub_questions,
                     "plan_seconds": round(plan_seconds, 2),
+                    **plan_usage,
                 }
             top = ranking[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
