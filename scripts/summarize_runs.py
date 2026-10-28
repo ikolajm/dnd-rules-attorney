@@ -1,6 +1,7 @@
-"""Summarizes dev runs and their judged files, or compares two runs' replies.
+"""Summarizes runs and their judged files, tables them, or compares two runs' replies.
 
     python scripts/summarize_runs.py runs/<run>.jsonl [runs/<run>.jsonl ...]
+    python scripts/summarize_runs.py --table runs/<run>.jsonl [runs/<run>.jsonl ...]
     python scripts/summarize_runs.py --compare runs/<old>.jsonl runs/<new>.jsonl
 
 A run's judged file is found beside it, `<run>.judged-<judge>.jsonl`, and a
@@ -8,6 +9,9 @@ run judged more than once is refused rather than summarized from one judge
 chosen silently. The flag is read as two rates, expected items flagged and
 settled items flagged, a failed answer counted unflagged in its status. Cites
 are resolved against the corpus, strict and once a leading `## ` is removed.
+
+--table prints the published table, one markdown row per run in the order
+given, from the same scores the summary prints.
 
 --compare reports how many replies are identical byte for byte, item by item,
 and names each item that differs.
@@ -19,8 +23,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from rules_attorney.answer import unmarked
 from rules_attorney.corpus import load_corpus
+from rules_attorney.table import Row, build_row, markdown_table
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "srd-5.1"
@@ -39,47 +43,30 @@ def judged_file(run: Path) -> Path:
     return found[0]
 
 
+def score(records: list[dict[str, Any]], run: Path, known: set[str]) -> Row:
+    """One run's scores, from its records and its one judged file."""
+    judged = {record["id"]: record for record in load(judged_file(run))}
+    return build_row(records, judged, known)
+
+
 def summarize(run: Path, known: set[str]) -> None:
     """Print one run's config, agreement, flag rates, cites and timing."""
     records = load(run)
-    judged = {record["id"]: record for record in load(judged_file(run))}
-    config = records[0]["config"]
-    ok = [record for record in records if record["ruling"] is not None]
-    failed = [record["id"] for record in records if record["ruling"] is None]
-
-    sent = [j for j in judged.values() if j["judged"]]
-    agree = sum(1 for j in sent if j["agrees"])
-
-    def flagged(status_settled: bool) -> tuple[int, int]:
-        rows = [
-            r
-            for r in records
-            if (judged[r["id"]]["status"] == "settled") == status_settled
-        ]
-        hits = sum(
-            1 for r in rows if r["ruling"] is not None and r["ruling"]["ambiguous"]
-        )
-        return hits, len(rows)
-
-    cites = [cite for record in ok for cite in record["ruling"]["cites"]]
-    strict = sum(1 for cite in cites if cite in known)
-    grounded = sum(1 for cite in unmarked(cites) if cite in known)
-    seconds = [record["seconds"] for record in records]
-
+    row = score(records, run, known)
+    cap = records[0]["config"].get("num_predict")
     print(run.name)
+    print(f"  model {row.model} commit {row.commit[:7]} dirty {row.dirty} cap {cap}")
+    print(f"  schema failures {len(row.failed)} of {row.items} {row.failed}")
+    print(f"  verdict agreement {row.agreed} of {row.judged}")
     print(
-        f"  model {config['model']} commit {config['commit'][:7]}"
-        f" dirty {config['dirty']} cap {config.get('num_predict')}"
+        f"  flag expected {row.expected_flagged} of {row.expected},"
+        f" settled {row.settled_flagged} of {row.settled}"
     )
-    print(f"  schema failures {len(failed)} of {len(records)} {failed}")
-    print(f"  verdict agreement {agree} of {len(sent)}")
     print(
-        "  flag expected {} of {}, settled {} of {}".format(
-            *flagged(False), *flagged(True)
-        )
+        f"  cites {row.cites}, resolved strict {row.strict},"
+        f" once unmarked {row.grounded}"
     )
-    print(f"  cites {len(cites)}, resolved strict {strict}, once unmarked {grounded}")
-    print(f"  seconds max {max(seconds):.1f}, total {sum(seconds):.0f}")
+    print(f"  seconds max {row.seconds_max:.1f}, total {row.seconds_total:.0f}")
 
 
 def compare(old: Path, new: Path) -> None:
@@ -95,10 +82,12 @@ def compare(old: Path, new: Path) -> None:
 
 
 def main() -> None:
-    """Summarize the runs named, or compare two."""
+    """Summarize the runs named, table them, or compare two."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("runs", nargs="+", type=Path)
-    parser.add_argument("--compare", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--compare", action="store_true")
+    mode.add_argument("--table", action="store_true")
     args = parser.parse_args()
 
     if args.compare:
@@ -108,6 +97,9 @@ def main() -> None:
         return
 
     known = {entry.path for entry in load_corpus(DATA)}
+    if args.table:
+        print(markdown_table([score(load(run), run, known) for run in args.runs]))
+        return
     for run in args.runs:
         summarize(run, known)
 
