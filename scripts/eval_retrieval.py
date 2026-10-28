@@ -1,8 +1,12 @@
 """Score each embedder on header entries by semantic retrieval, BM25 and their fusion.
 
+    python scripts/eval_retrieval.py [--split dev|test]
+
 Calls the live Ollama server and refuses any chunk past the model's context.
+The split is dev unless test is named.
 """
 
+import argparse
 import json
 import time
 from datetime import datetime
@@ -23,6 +27,7 @@ from rules_attorney.retrieve import (
     ollama_embed,
     rank,
 )
+from rules_attorney.split import SPLITS
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "srd-5.1"
@@ -38,7 +43,9 @@ def in_order(chunks: list[Chunk], labels: list[str]) -> list[Chunk]:
     return [chunks[int(label)] for label in labels]
 
 
-def report(name: str, rankings: list[list[Chunk]], dev: list[dict[str, Any]]) -> None:
+def report(
+    name: str, rankings: list[list[Chunk]], chosen: list[dict[str, Any]]
+) -> None:
     """Print recall@k and all-cites@k at each k, and the top chunks' mean size."""
     ranked_paths = [[chunk.paths for chunk in ranked] for ranked in rankings]
     print(name)
@@ -46,12 +53,12 @@ def report(name: str, rankings: list[list[Chunk]], dev: list[dict[str, Any]]) ->
     for k in KS:
         recall = sum(
             recall_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, dev, strict=True)
-        ) / len(dev)
+            for ranked, item in zip(ranked_paths, chosen, strict=True)
+        ) / len(chosen)
         complete = sum(
             all_cites_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, dev, strict=True)
-        ) / len(dev)
+            for ranked, item in zip(ranked_paths, chosen, strict=True)
+        ) / len(chosen)
         print(f"{k:<4}{recall:.3f}   {complete:.3f}")
 
     top = [chunk for ranked in rankings for chunk in ranked[:SIZE_K]]
@@ -61,15 +68,15 @@ def report(name: str, rankings: list[list[Chunk]], dev: list[dict[str, Any]]) ->
 
 def write_records(
     file: TextIO,
-    dev: list[dict[str, Any]],
+    chosen: list[dict[str, Any]],
     rankings: list[list[Chunk]],
     *,
     embedder: str | None,
     method: str,
     config: dict[str, Any],
 ) -> None:
-    """One record per dev item: its top chunks' paths and the method that ranked it."""
-    for item, ranked in zip(dev, rankings, strict=True):
+    """One record per item: its top chunks' paths and the method that ranked it."""
+    for item, ranked in zip(chosen, rankings, strict=True):
         record = {
             "id": item["id"],
             "embedder": embedder,
@@ -82,12 +89,15 @@ def write_records(
 
 def main() -> None:
     """Rank header entries by BM25 once and by each embedder, alone and fused."""
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--split", choices=SPLITS, default=SPLITS[0])
+    split: str = parser.parse_args().split
     entries = load_corpus(DATA)
     items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
-    dev = [item for item in items if item["split"] == "dev"]
-    config: dict[str, Any] = {"chunker": "header", **commit(ROOT)}
+    chosen = [item for item in items if item["split"] == split]
+    config: dict[str, Any] = {"chunker": "header", "split": split, **commit(ROOT)}
 
-    print(f"{len(entries)} entries, {len(dev)} dev items")
+    print(f"{len(entries)} entries, {len(chosen)} {split} items")
 
     chunks = header_chunks(entries)
     labels = [str(i) for i in range(len(chunks))]
@@ -95,23 +105,27 @@ def main() -> None:
 
     # BM25 does not depend on the embedder, so it is ranked once.
     index = build_index(labels, texts)
-    keyword_labels = [bm25_rank(index, item["question"]) for item in dev]
+    keyword_labels = [bm25_rank(index, item["question"]) for item in chosen]
     keyword = [in_order(chunks, ranked) for ranked in keyword_labels]
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     RUNS.mkdir(exist_ok=True)
-    out = RUNS / f"retrieval-{stamp}.jsonl"
+    out = RUNS / f"retrieval-{stamp}-{split}.jsonl"
 
     with out.open("w", encoding="utf-8") as file:
         # Written once, outside the loop: BM25 is the same for every embedder.
-        report("bm25", keyword, dev)
-        write_records(file, dev, keyword, embedder=None, method="bm25", config=config)
+        report("bm25", keyword, chosen)
+        write_records(
+            file, chosen, keyword, embedder=None, method="bm25", config=config
+        )
 
         for embedder in EMBEDDERS:
             # Questions are embedded inside the loop: a query vector belongs
             # to the model and prefix that made it.
             embed = partial(ollama_embed, model=embedder.model)
-            questions = [embed_query(item["question"], embedder, embed) for item in dev]
+            questions = [
+                embed_query(item["question"], embedder, embed) for item in chosen
+            ]
             start = time.perf_counter()
             matrix = embed_documents(texts, embedder, embed)
             seconds = time.perf_counter() - start
@@ -126,10 +140,10 @@ def main() -> None:
 
             print(f"{embedder.model}: {len(chunks)} chunks embedded in {seconds:.1f}s")
             for method, rankings in (("semantic", semantic), ("fused", fused)):
-                report(f"{embedder.model} {method}", rankings, dev)
+                report(f"{embedder.model} {method}", rankings, chosen)
                 write_records(
                     file,
-                    dev,
+                    chosen,
                     rankings,
                     embedder=embedder.model,
                     method=method,

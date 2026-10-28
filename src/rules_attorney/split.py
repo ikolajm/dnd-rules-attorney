@@ -5,6 +5,8 @@ from typing import Any
 
 SEED: int = 7
 DEV_SHARE: float = 0.6
+# The splits a run can score, dev first as the default every script takes.
+SPLITS = ("dev", "test")
 
 
 def assign_splits(

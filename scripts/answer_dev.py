@@ -1,11 +1,14 @@
-"""Answers every dev item from its top 10 entries and writes one record per item.
+"""Answers every item of a split from its top 10 entries, one record per item.
 
-Answers with the model named as its one argument: through the Claude API when
-its name starts with claude-, through the live Ollama server otherwise.
+    python scripts/answer_dev.py <model> [--split dev|test]
+
+Answers with the model named: through the Claude API when its name starts
+with claude-, through the live Ollama server otherwise. The split is dev
+unless test is named.
 """
 
+import argparse
 import json
-import sys
 import time
 from datetime import datetime
 from functools import partial
@@ -36,6 +39,7 @@ from rules_attorney.retrieve import (
     ollama_embed,
     rank,
 )
+from rules_attorney.split import SPLITS
 
 ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "runs"
@@ -46,20 +50,26 @@ EMBEDDER = NOMIC
 
 
 def main() -> None:
-    """Answer each dev item and write its record."""
-    model = sys.argv[1]
+    """Answer each item of the split and write its record."""
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("model")
+    parser.add_argument("--split", choices=SPLITS, default=SPLITS[0])
+    args = parser.parse_args()
+    model: str = args.model
+    split: str = args.split
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
     paths = [entry.path for entry in entries]
     known = set(paths)
     items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
-    dev = [item for item in items if item["split"] == "dev"]
+    chosen = [item for item in items if item["split"] == split]
     embed = partial(ollama_embed, model=EMBEDDER.model)
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     source = commit(ROOT)
     hosted = model.startswith(MODEL_PREFIX)
     config: dict[str, Any] = {
         "model": model,
+        "split": split,
         "embedder": EMBEDDER.model,
         "chunker": "header",
         "k": K,
@@ -83,14 +93,14 @@ def main() -> None:
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     RUNS.mkdir(exist_ok=True)
-    out = RUNS / f"{stamp}-{model.replace(':', '-')}.jsonl"
+    out = RUNS / f"{stamp}-{split}-{model.replace(':', '-')}.jsonl"
     failures = 0
     cites = 0
     resolved = 0
     grounded = 0
 
     with out.open("w", encoding="utf-8") as file:
-        for item in dev:
+        for item in chosen:
             vector = embed_query(item["question"], EMBEDDER, embed)
             top = rank(vector, matrix, paths)[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
@@ -138,7 +148,7 @@ def main() -> None:
             print(f"{item['id']}: {status} in {seconds:.1f}s")
 
     print(out)
-    print(f"schema failures: {failures} / {len(dev)}")
+    print(f"schema failures: {failures} / {len(chosen)}")
     print(f"cites resolved: {resolved} / {cites}")
     print(f"cites grounded: {grounded} / {cites}")
 

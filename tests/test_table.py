@@ -1,10 +1,13 @@
 """Tests for the scores the published table is built from."""
 
 import json
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
-from rules_attorney.table import Row, build_row
+import pytest
+
+from rules_attorney.table import Row, build_row, markdown_table
 
 # The floor's dev run and its judged file, copied from runs/: "no" to every
 # item, never flagged, no cites, so each score is known in advance.
@@ -36,3 +39,14 @@ def test_build_row_reads_the_flag_as_two_rates() -> None:
     row = floor_row()
     assert (row.expected_flagged, row.expected) == (0, 10)
     assert (row.settled_flagged, row.settled) == (0, 30)
+
+
+def test_build_row_reads_a_run_without_a_split_as_dev() -> None:
+    # The captured floor predates the split in the config.
+    assert floor_row().split == "dev"
+
+
+def test_markdown_table_refuses_runs_of_two_splits() -> None:
+    dev = floor_row()
+    with pytest.raises(ValueError, match="more than one split"):
+        markdown_table([dev, replace(dev, split="test")])
