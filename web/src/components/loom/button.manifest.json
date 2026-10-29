@@ -1,0 +1,25 @@
+{
+  "name": "button",
+  "kind": "atom",
+  "category": "button",
+  "file": "button.tsx",
+  "dependencies": [
+    "cn"
+  ],
+  "npmDependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "tokens": [
+    "color",
+    "typography",
+    "spacing",
+    "sizing"
+  ],
+  "composition": "slottable",
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "form-field",
+  "kind": "atom",
+  "category": "form",
+  "file": "form-field.tsx",
+  "dependencies": [
+    "cn"
+  ],
+  "npmDependencies": [],
+  "tokens": [
+    "color",
+    "typography",
+    "spacing",
+    "sizing"
+  ],
+  "composition": "none"
+}

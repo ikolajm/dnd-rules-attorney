@@ -1,0 +1,25 @@
+{
+  "name": "badge",
+  "kind": "atom",
+  "category": "button",
+  "file": "badge.tsx",
+  "dependencies": [
+    "cn"
+  ],
+  "npmDependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority"
+  ],
+  "tokens": [
+    "color",
+    "typography",
+    "spacing",
+    "sizing"
+  ],
+  "composition": "slot",
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ]
+}

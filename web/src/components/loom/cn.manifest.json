@@ -1,0 +1,12 @@
+{
+  "name": "cn",
+  "kind": "utility",
+  "category": "utility",
+  "file": "cn.ts",
+  "dependencies": [],
+  "npmDependencies": [
+    "clsx"
+  ],
+  "tokens": [],
+  "composition": "none"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "select",
+  "kind": "atom",
+  "category": "form",
+  "file": "select.tsx",
+  "dependencies": [
+    "cn",
+    "form-field"
+  ],
+  "npmDependencies": [
+    "@radix-ui/react-select",
+    "lucide-react"
+  ],
+  "tokens": [
+    "color",
+    "typography",
+    "spacing",
+    "sizing"
+  ],
+  "composition": "none",
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ]
+}

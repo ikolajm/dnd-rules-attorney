@@ -1,0 +1,5 @@
+/* Import order is the cascade: the reset first, into the weakest layer, then
+ * Loom's substrate. main.css appears with the first `npm run loom:sync`; until
+ * then this import fails the build, which is the signal the sync has not run. */
+@import './reset.css';
+@import './styles/loom/main.css';

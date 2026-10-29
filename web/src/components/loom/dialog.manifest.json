@@ -1,0 +1,30 @@
+{
+  "name": "dialog",
+  "kind": "atom",
+  "category": "layout",
+  "file": "dialog.tsx",
+  "dependencies": [
+    "button",
+    "cn"
+  ],
+  "npmDependencies": [
+    "@radix-ui/react-dialog",
+    "lucide-react"
+  ],
+  "tokens": [
+    "color",
+    "typography",
+    "spacing",
+    "sizing"
+  ],
+  "composition": "none",
+  "variants": [
+    "default"
+  ],
+  "sizes": [
+    "sm",
+    "md",
+    "lg",
+    "full"
+  ]
+}
