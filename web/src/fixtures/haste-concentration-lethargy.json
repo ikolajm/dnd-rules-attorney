@@ -1,0 +1,87 @@
+{
+  "source": {
+    "run": "20261028-152008-dev-level3-qwen3.5-9b.jsonl",
+    "id": "haste-concentration-lethargy",
+    "model": "qwen3.5:9b",
+    "commit": "048be8f3ea7aeb0ee06e870fe196c35b9ee769c2",
+    "gate": "placeholder"
+  },
+  "question": "My concentration on Haste breaks. What happens to the hasted ally?",
+  "events": [
+    {
+      "event": "gate",
+      "data": {
+        "allowed": true
+      }
+    },
+    {
+      "event": "plan",
+      "data": {
+        "sub_questions": [
+          "What is the effect of breaking concentration on a spell like Haste?"
+        ]
+      }
+    },
+    {
+      "event": "entries",
+      "data": {
+        "entries": [
+          {
+            "path": "casting-a-spell > duration > concentration",
+            "text": "Concentration\n\nSome spells require you to maintain concentration in order to keep their magic active. If you lose concentration, such a spell ends.\n\nIf a spell must be maintained with concentration, that fact appears in its Duration entry, and the spell specifies how long you can concentrate on it. You can end concentration at any time (no action required).\n\nNormal activity, such as moving and attacking, doesn't interfere with concentration. The following factors can break concentration:\n- **Casting another spell that requires concentration.** You lose concentration on a spell if you cast another spell that requires concentration. You can't concentrate on two spells at once.\n- **Taking damage.** Whenever you take damage while you are concentrating on a spell, you must make a Constitution saving throw to maintain your concentration. The DC equals 10 or half the damage you take, whichever number is higher. If you take damage from multiple sources, such as an arrow and a dragon's breath, you make a separate saving throw for each source of damage.\n- **Being incapacitated or killed.** You lose concentration on a spell if you are incapacitated or if you die.\n\nThe GM might also decide that certain environmental phenomena, such as a wave crashing over you while you're on a storm-tossed ship, require you to succeed on a DC 10 Constitution saving throw to maintain concentration on a spell."
+          },
+          {
+            "path": "spells > haste",
+            "text": "Haste\n\nLevel: 3\nSchool: Transmutation\nCasting time: 1 action\nRange: 30 feet\nComponents: V, S, M (A shaving of licorice root.)\nDuration: Up to 1 minute\nConcentration: yes\nRitual: no\n\nChoose a willing creature that you can see within range. Until the spell ends, the target's speed is doubled, it gains a +2 bonus to AC, it has advantage on dexterity saving throws, and it gains an additional action on each of its turns. That action can be used only to take the Attack (one weapon attack only), Dash, Disengage, Hide, or Use an Object action.\n\nWhen the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it."
+          },
+          {
+            "path": "actions-in-combat > ready",
+            "text": "Ready\n\nSometimes you want to get the jump on a foe or wait for a particular circumstance before you act. To do so, you can take the Ready action on your turn, which lets you act using your reaction before the start of your next turn.\n\nFirst, you decide what perceivable circumstance will trigger your reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your speed in response to it. Examples include \"If the cultist steps on the trapdoor, I'll pull the lever that opens it,\" and \"If the goblin steps next to me, I move away.\"\n\nWhen the trigger occurs, you can either take your reaction right after the trigger finishes or ignore the trigger. Remember that you can take only one reaction per round.\n\nWhen you ready a spell, you cast it as normal but hold its energy, which you release with your reaction when the trigger occurs. To be readied, a spell must have a casting time of 1 action, and holding onto the spell's magic requires concentration. If your concentration is broken, the spell dissipates without taking effect. For example, if you are concentrating on the *web* spell and ready *magic missile*, your *web* spell ends, and if you take damage before you release *magic missile* with your reaction, your concentration might be broken."
+          },
+          {
+            "path": "spells > greater-restoration",
+            "text": "Greater Restoration\n\nLevel: 5\nSchool: Abjuration\nCasting time: 1 action\nRange: Touch\nComponents: V, S, M (Diamond dust worth at least 100gp, which the spell consumes.)\nDuration: Instantaneous\nConcentration: no\nRitual: no\n\nYou imbue a creature you touch with positive energy to undo a debilitating effect. You can reduce the target's exhaustion level by one, or end one of the following effects on the target:\n\n- One effect that charmed or petrified the target\n\n- One curse, including the target's attunement to a cursed magic item\n\n- Any reduction to one of the target's ability scores\n\n- One effect reducing the target's hit point maximum"
+          },
+          {
+            "path": "spells > detect-thoughts",
+            "text": "Detect Thoughts\n\nLevel: 2\nSchool: Divination\nCasting time: 1 action\nRange: Self\nComponents: V, S, M (A copper coin.)\nDuration: Up to 1 minute\nConcentration: yes\nRitual: no\n\nFor the duration, you can read the thoughts of certain creatures. When you cast the spell and as your action on each turn until the spell ends, you can focus your mind on any one creature that you can see within 30 feet of you. If the creature you choose has an Intelligence of 3 or lower or doesn't speak any language, the creature is unaffected.\n\nYou initially learn the surface thoughts of the creature - what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a Wisdom saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the spell ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the spell ends.\n\nQuestions verbally directed at the target creature naturally shape the course of its thoughts, so this spell is particularly effective as part of an interrogation.\n\nYou can also use this spell to detect the presence of thinking creatures you can't see. When you cast the spell or as your action during the duration, you can search for thoughts within 30 feet of you. The spell can penetrate barriers, but 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead blocks you. You can't detect a creature with an Intelligence of 3 or lower or one that doesn't speak any language.\n\nOnce you detect the presence of a creature in this way, you can read its thoughts for the rest of the duration as described above, even if you can't see it, but it must still be within range."
+          },
+          {
+            "path": "madness > curing-madness",
+            "text": "Curing Madness\n\nA *calm emotions* spell can suppress the effects of madness, while a *lesser restoration* spell can rid a character of a short-term or long-term madness. Depending on the source of the madness, *remove curse* or *dispel evil* might also prove effective. A *greater restoration* spell or more powerful magic is required to rid a character of indefinite madness."
+          },
+          {
+            "path": "conditions > exhaustion",
+            "text": "Exhaustion\n\nSome special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.\n\n1 - Disadvantage on ability checks\n\n2 - Speed halved\n\n3 - Disadvantage on attack rolls and saving throws\n\n4 - Hit point maximum halved\n\n5 - Speed reduced to 0\n\n6 - Death\n\nIf an already exhausted creature suffers another effect that causes exhaustion, its current level of exhaustion increases by the amount specified in the effect's description.\n\nA creature suffers the effect of its current level of exhaustion as well as all lower levels. For example, a creature suffering level 2 exhaustion has its speed halved and has disadvantage on ability checks.\n\nAn effect that removes exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1.\n\nFinishing a long rest reduces a creature's exhaustion level by 1, provided that the creature has also ingested some food and drink."
+          },
+          {
+            "path": "spells > foresight",
+            "text": "Foresight\n\nLevel: 9\nSchool: Divination\nCasting time: 1 minute\nRange: Touch\nComponents: V, S, M (A hummingbird feather.)\nDuration: 8 hours\nConcentration: no\nRitual: no\n\nYou touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can't be surprised and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.\n\nThis spell immediately ends if you cast it again before its duration ends."
+          },
+          {
+            "path": "spells > mending",
+            "text": "Mending\n\nLevel: cantrip\nSchool: Transmutation\nCasting time: 1 minute\nRange: Touch\nComponents: V, S, M (Two lodestones.)\nDuration: Instantaneous\nConcentration: no\nRitual: no\n\nThis spell repairs a single break or tear in an object you touch, such as a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no longer than 1 foot in any dimension, you mend it, leaving no trace of the former damage.\n\nThis spell can physically repair a magic item or construct, but the spell can't restore magic to such an object."
+          },
+          {
+            "path": "spells > expeditious-retreat",
+            "text": "Expeditious Retreat\n\nLevel: 1\nSchool: Transmutation\nCasting time: 1 bonus action\nRange: Self\nComponents: V, S\nDuration: Up to 10 minutes\nConcentration: yes\nRitual: no\n\nThis spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action."
+          }
+        ]
+      }
+    },
+    {
+      "event": "ruling",
+      "data": {
+        "explanation": "The rule states that if you lose concentration on a spell, such a spell ends (casting-a-spell > duration > concentration). The fact is that the user's concentration on Haste breaks. Therefore, the conclusion is that the Haste spell ends for the ally.",
+        "ambiguous": false,
+        "answer": {
+          "kind": "what",
+          "verdict": "The spell ends."
+        },
+        "cites": [
+          "casting-a-spell > duration > concentration"
+        ]
+      }
+    }
+  ]
+}

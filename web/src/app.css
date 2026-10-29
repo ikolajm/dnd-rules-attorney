@@ -1,0 +1,266 @@
+/* The app's own layout, unlayered so it sits above Loom's classes. Spacing reads
+ * Loom's nesting levels: content between the regions, section inside one, group
+ * between a label and what it labels. */
+
+.app {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+/* A reading column, narrower than Loom's content width, which is sized for a
+ * page of panels rather than prose. */
+.column {
+  width: 100%;
+  max-width: 46rem;
+  margin-inline: auto;
+  padding-inline: var(--screen-x-padding);
+}
+
+main.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-gap);
+  padding-block: var(--screen-y-padding);
+}
+
+.question {
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+/* Before the first question the input sits centred under the name. */
+main.empty {
+  justify-content: center;
+  gap: var(--section-gap);
+}
+
+main.empty h1 {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-heading);
+}
+
+.run-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--group-gap);
+}
+
+.run-status p {
+  margin: 0;
+}
+
+/* A status carries an icon as well as its words, so it never rests on colour. */
+.run-status__line {
+  display: flex;
+  align-items: center;
+  gap: var(--component-gap);
+}
+
+.run-status__line[class*='tone-'] {
+  color: var(--tone-text);
+}
+
+.run-status__line svg {
+  width: var(--icon-2);
+  height: var(--icon-2);
+  flex: none;
+}
+
+.verdict,
+.reasoning,
+.verdict__cites,
+.reasoning__plan {
+  display: flex;
+  flex-direction: column;
+  gap: var(--group-gap);
+}
+
+.verdict,
+.reasoning {
+  gap: var(--section-gap);
+}
+
+.verdict h2,
+.verdict h3,
+.reasoning h2,
+.reasoning h3,
+.verdict__answer {
+  margin: 0;
+}
+
+/* Neutral on purpose: the secondary raspberry on a "No" would read as an error. */
+.verdict__answer {
+  font-family: var(--font-heading);
+}
+
+.verdict__ambiguous {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--group-gap);
+  margin: 0;
+}
+
+.verdict__cite-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--group-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reasoning__sub-questions {
+  margin: 0;
+  padding-inline-start: 1.25em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--group-compact-gap);
+}
+
+.reasoning__explanation p {
+  margin: 0 0 1em;
+}
+
+/* An inline cite is a button so it can open the panel, but it reads as a link in
+ * the sentence: no box, and it wraps with the words around it. */
+.reasoning__explanation .link {
+  display: inline;
+  padding: 0;
+  text-align: start;
+}
+
+.view-all {
+  border-top: var(--bw-1) solid var(--outline-subtle);
+  padding-top: var(--section-gap);
+}
+
+.view-all__summary {
+  display: flex;
+  align-items: center;
+  gap: var(--component-gap);
+  cursor: pointer;
+  list-style: none;
+}
+
+.view-all__summary::-webkit-details-marker {
+  display: none;
+}
+
+.view-all__chevron {
+  width: var(--icon-2);
+  height: var(--icon-2);
+  transition: transform var(--transition);
+}
+
+.view-all[open] .view-all__chevron {
+  transform: rotate(90deg);
+}
+
+.view-all__list {
+  margin: var(--group-gap) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.view-all__entry {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--group-gap);
+  text-align: start;
+}
+
+/* Once a question runs, the input pins to the bottom of the viewport while the
+ * ruling scrolls above it. */
+.ask {
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  border-top: var(--bw-1) solid var(--outline-subtle);
+  padding-block: var(--group-gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--group-compact-gap);
+}
+
+.ask__form {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--group-gap);
+}
+
+.ask__form .textarea {
+  flex: 1;
+  resize: none;
+}
+
+/* Over the column, never beside it: opening it moves nothing. */
+.source-panel {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: min(28rem, 100vw);
+  overflow-y: auto;
+  padding: var(--section-y-padding) var(--section-x-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  z-index: 2;
+}
+
+/* The modal fills the screen; the UA's own centring and max sizes are undone. */
+.source-panel--modal {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  border: none;
+  color: inherit;
+}
+
+.source-panel--modal:not([open]) {
+  display: none;
+}
+
+.source-panel--modal::backdrop {
+  background: var(--scrim);
+}
+
+.source-panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--group-gap);
+}
+
+.source-panel__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--group-compact-gap);
+}
+
+.source-panel__heading p,
+.source-panel__heading h2 {
+  margin: 0;
+}
+
+.source-panel__text {
+  white-space: pre-wrap;
+}
+
+.dev-switcher {
+  position: fixed;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--group-compact-gap);
+  z-index: 1;
+}
