@@ -1,0 +1,90 @@
+{
+  "source": {
+    "run": "20261028-152008-dev-level3-qwen3.5-9b.jsonl",
+    "id": "grappled-attack-and-cast",
+    "model": "qwen3.5:9b",
+    "commit": "048be8f3ea7aeb0ee06e870fe196c35b9ee769c2",
+    "gate": "placeholder"
+  },
+  "question": "Can a grappled creature still attack and cast spells?",
+  "events": [
+    {
+      "event": "gate",
+      "data": {
+        "allowed": true
+      }
+    },
+    {
+      "event": "plan",
+      "data": {
+        "sub_questions": [
+          "Can a grappled creature make an attack?",
+          "Can a grappled creature cast a spell?"
+        ]
+      }
+    },
+    {
+      "event": "entries",
+      "data": {
+        "entries": [
+          {
+            "path": "making-an-attack > melee-attacks > grappling",
+            "text": "Grappling\n\nWhen you want to grab a creature or wrestle with it, you can use the Attack action to make a special melee attack, a grapple. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.\n\nThe target of your grapple must be no more than one size larger than you and must be within your reach. Using at least one free hand, you try to seize the target by making a grapple check instead of an attack roll: a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you succeed, you subject the target to the grappled condition (see appendix PH-A). The condition specifies the things that end it, and you can release the target whenever you like (no action required).\n\n***Escaping a Grapple.*** A grappled creature can use its action to escape. To do so, it must succeed on a Strength (Athletics) or Dexterity (Acrobatics) check contested by your Strength\n(Athletics) check.\n\n***Moving a Grappled Creature.*** When you move, you can drag or carry the grappled creature with you, but your speed is halved, unless the creature is two or more sizes smaller than you."
+          },
+          {
+            "path": "conditions > grappled",
+            "text": "Grappled\n\n- A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n\n- The condition ends if the grappler is incapacitated (see the condition).\n\n- The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the thunderwave spell."
+          },
+          {
+            "path": "making-an-attack > melee-attacks",
+            "text": "Melee Attacks\n\nUsed in hand-to-hand combat, a melee attack allows you to attack a foe within your reach. A melee attack typically uses a handheld weapon such as a sword, a warhammer, or an axe. A typical monster makes a melee attack when it strikes with its claws, horns, teeth, tentacles, or other body part. A few spells also involve making a melee attack.\n\nMost creatures have a 5-foot **reach** and can thus attack targets within 5 feet of them when making a melee attack. Certain creatures (typically those larger than Medium) have melee attacks with a greater reach than 5 feet, as noted in their descriptions.\n\nInstead of using a weapon to make a melee weapon attack, you can use an **unarmed strike**: a punch, kick, head-butt, or similar forceful blow (none of which count as weapons). On a hit, an unarmed strike deals bludgeoning damage equal to 1 + your Strength modifier. You are proficient with your unarmed strikes."
+          },
+          {
+            "path": "spells > dominate-beast",
+            "text": "Dominate Beast\n\nLevel: 4\nSchool: Enchantment\nCasting time: 1 action\nRange: 60 feet\nComponents: V, S\nDuration: Up to 1 minute\nConcentration: yes\nRitual: no\n\nYou attempt to beguile a creature that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.\n\nWhile the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\n\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.\n\nAt Higher Levels. When you cast this spell with a 9th level spell slot, the duration is concentration, up to 8 hours."
+          },
+          {
+            "path": "attunement",
+            "text": "Attunement\n\nSome magic items require a creature to form a bond with them before their magical properties can be used. This bond is called attunement, and certain items have a prerequisite for it. If the prerequisite is a class, a creature must be a member of that class to attune to the item. (If the class is a spellcasting class, a monster qualifies if it has spell slots and uses that class's spell list.) If the prerequisite is to be a spellcaster, a creature qualifies if it can cast at least one spell using its traits or features, not using a magic item or the like.\n\nWithout becoming attuned to an item that requires attunement, a creature gains only its nonmagical benefits, unless its description states otherwise. For example, a magic shield that requires attunement provides the benefits of a normal shield to a creature not attuned to it, but none of its magical properties.\n\nAttuning to an item requires a creature to spend a short rest focused on only that item while being in physical contact with it (this can't be the same short rest used to learn the item's properties). This focus can take the form of weapon practice (for a weapon), meditation (for a wondrous item), or some other appropriate activity. If the short rest is interrupted, the attunement attempt fails. Otherwise, at the end of the short rest, the creature gains an intuitive understanding of how to activate any magical properties of the item, including any necessary command words.\n\nAn item can be attuned to only one creature at a time, and a creature can be attuned to no more than three magic items at a time. Any attempt to attune to a fourth item fails; the creature must end its attunement to an item first. Additionally, a creature can't attune to more than one copy of an item. For example, a creature can't attune to more than one *ring of protection* at a time.\n\nA creature's attunement to an item ends if the creature no longer satisfies the prerequisites for attunement, if the item has been more than 100 feet away for at least 24 hours, if the creature dies, or if another creature attunes to the item. A creature can also voluntarily end attunement by spending another short rest focused on the item, unless the item is cursed."
+          },
+          {
+            "path": "making-an-attack > melee-attacks > shoving-a-creature",
+            "text": "Shoving a Creature\n\nUsing the Attack action, you can make a special melee attack to shove a creature, either to knock it prone or push it away from you. If you're able to make multiple attacks with the Attack action, this attack replaces one of them.\n\nThe target must be no more than one size larger than you and must be within your reach. Instead of making an attack roll, you make a Strength (Athletics) check contested by the target's Strength (Athletics) or Dexterity (Acrobatics) check (the target chooses the ability to use). If you win the contest, you either knock the target prone or push it 5 feet away from you."
+          },
+          {
+            "path": "spells > dominate-monster",
+            "text": "Dominate Monster\n\nLevel: 8\nSchool: Enchantment\nCasting time: 1 action\nRange: 60 feet\nComponents: V, S\nDuration: Up to 1 hour\nConcentration: yes\nRitual: no\n\nYou attempt to beguile a creature that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.\n\nWhile the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.\n\nYou can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.\n\nEach time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.\n\nAt Higher Levels. When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours."
+          },
+          {
+            "path": "spells > shocking-grasp",
+            "text": "Shocking Grasp\n\nLevel: cantrip\nSchool: Evocation\nCasting time: 1 action\nRange: Touch\nComponents: V, S\nDuration: Instantaneous\nConcentration: no\nRitual: no\n\nLightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take reactions until the start of its next turn.\n\nThe spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8)."
+          },
+          {
+            "path": "spells > hold-monster",
+            "text": "Hold Monster\n\nLevel: 5\nSchool: Enchantment\nCasting time: 1 action\nRange: 90 feet\nComponents: V, S, M (A small piece of iron.)\nDuration: Up to 1 minute\nConcentration: yes\nRitual: no\n\nChoose a creature you can see and reach. The target must make a saving throw of Wisdom or be paralyzed for the duration of the spell. This spell has no effect against the undead. At the end of each round, the target can make a new saving throw of Wisdom. If successful, the spell ends for the creature.\n\nAt Higher Levels. When you cast this spell using a level 6 or higher location, you can target an additional creature for each level of location beyond the fifth. The creatures must be within 30 feet o f each other when you target them."
+          },
+          {
+            "path": "spells > gaseous-form",
+            "text": "Gaseous Form\n\nLevel: 3\nSchool: Transmutation\nCasting time: 1 action\nRange: Touch\nComponents: V, S, M (A bit of gauze and a wisp of smoke.)\nDuration: Up to 1 hour\nConcentration: yes\nRitual: no\n\nYou transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.\n\nWhile in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.\n\nWhile in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells."
+          }
+        ]
+      }
+    },
+    {
+      "event": "ruling",
+      "data": {
+        "explanation": "The rule on 'making-an-attack > melee-attacks' states that an unarmed strike is a special type of melee attack (punch, kick, head-butt) which does not count as a weapon. The rule on 'spells > shocking-grasp' requires making a melee spell attack. The rule on 'spells > dominate-beast' and 'spells > dominate-monster' allows the caster to issue commands like 'Attack that creature'. However, the rule on 'making-an-attack > melee-attacks > grappling' states that when you make a grapple check, you replace one of your attacks with this special attack. The rule on 'conditions > grappled' states that a grappled creature's speed becomes 0. The question asks if a grappled creature can still attack and cast spells. The rules do not explicitly state that a grappled creature cannot attack or cast spells, but the condition of being grappled restricts movement (speed becomes 0) and benefits from bonus speed. However, there is no rule stating that a grappled creature cannot make an attack or cast a spell. Therefore, based on the provided rules, a grappled creature can still attack and cast spells unless specific conditions prevent it (e.g., being incapacitated or paralyzed by another effect).",
+        "ambiguous": false,
+        "answer": {
+          "kind": "yes-or-no",
+          "verdict": "yes"
+        },
+        "cites": [
+          "making-an-attack > melee-attacks",
+          "spells > shocking-grasp",
+          "conditions > grappled"
+        ]
+      }
+    }
+  ]
+}
