@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy Dunmas</title>
+
+    <!-- Inter, at the four weights Loom's type ramp asks for. tokens.css names the
+         family and loads nothing; without this link the page renders in the
+         system-ui fallback, which looks right only on a machine with Inter
+         installed. crossorigin on the gstatic hint lets the anonymous font fetch
+         reuse the preconnected socket. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

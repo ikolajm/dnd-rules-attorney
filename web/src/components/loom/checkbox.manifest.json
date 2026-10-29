@@ -1,0 +1,25 @@
+{
+  "name": "checkbox",
+  "kind": "atom",
+  "category": "form",
+  "file": "checkbox.tsx",
+  "dependencies": [
+    "cn",
+    "form-field"
+  ],
+  "npmDependencies": [],
+  "tokens": [
+    "color",
+    "sizing"
+  ],
+  "composition": "none",
+  "variants": [
+    "false",
+    "true"
+  ],
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ]
+}

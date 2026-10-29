@@ -1,0 +1,21 @@
+/* The reset lives in `loom.reset`, the slot tokens.css declares first and never
+ * fills, so every Loom class outranks it. Left unlayered it would outrank all of
+ * Loom instead, and buttons would lose their background and border. */
+@layer loom.reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$note": "The brand, as Loom's questionnaire answers. `npm run loom:sync` passes this file to Loom via --answers, so the stylesheets are reproducible from this repo rather than from whichever brand is active in the Loom checkout. editorial supplies density and typeScale; edges is overridden to soft.",
+  "projectName": "lazy-dunmas",
+  "styleDirection": "editorial",
+  "defaultMode": "dark",
+  "primary": "#462255",
+  "secondary": "#AA4465",
+  "heading": "Inter",
+  "body": "Inter",
+  "edges": "soft",
+  "controlHeight": "standard"
+}
