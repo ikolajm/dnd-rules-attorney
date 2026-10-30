@@ -32,17 +32,39 @@ export function entryLabel(entry: Entry): string {
   return entryTitle(entry.text) ?? segments[segments.length - 1]
 }
 
+// How a run names each of its entries, by path. A title stands alone unless
+// another of the run's entries shares it; then each takes its parent section in
+// parentheses, "Spellcasting Ability (Intelligence)", so the three Spellcasting
+// Ability entries under Intelligence, Wisdom and Charisma read apart. The title
+// stays first, so a list still scans by title. Every place a run names an
+// entry reads these, so the citations, the rules list and the explanation's
+// links agree.
+export function entryLabels(entries: Entry[]): Map<string, string> {
+  const titles = new Map(entries.map((e) => [e.path, entryLabel(e)]))
+  const counts = new Map<string, number>()
+  for (const title of titles.values()) counts.set(title, (counts.get(title) ?? 0) + 1)
+
+  const labels = new Map<string, string>()
+  for (const [path, title] of titles) {
+    const segments = pathSegments(path)
+    const parent = segments[segments.length - 2]
+    labels.set(path, counts.get(title)! > 1 && parent ? `${title} (${parent})` : title)
+  }
+  return labels
+}
+
 export type ExplanationPart = { text: string } | { text: string; entry: Entry }
 
 // The explanation names entries by path inline, most often in single quotes:
 // 'making-an-attack > melee-attacks'. Each path of the ten becomes a link that
-// reads as the entry's title, "Making an attack › Melee attacks", so the prose
-// reads as prose. The match takes in a leading marker and any quotes around the
-// path, so neither is left behind as text; parentheses stay, since they carry
-// the sentence. Longest first, so a path is never matched as the prefix of a
+// reads as the run names that entry, "Melee Attacks", so the prose reads as
+// prose. The match takes in a leading marker and any quotes around the path, so
+// neither is left behind as text; parentheses stay, since they carry the
+// sentence. Longest first, so a path is never matched as the prefix of a
 // longer one.
 export function linkExplanation(explanation: string, entries: Entry[]): ExplanationPart[] {
   if (entries.length === 0) return [{ text: explanation }]
+  const labels = entryLabels(entries)
   const byPath = new Map(entries.map((e) => [e.path, e]))
   const escaped = [...byPath.keys()]
     .sort((a, b) => b.length - a.length)
@@ -55,7 +77,7 @@ export function linkExplanation(explanation: string, entries: Entry[]): Explanat
   for (const match of explanation.matchAll(pattern)) {
     if (match.index > last) parts.push({ text: explanation.slice(last, match.index) })
     const entry = byPath.get(match[1])!
-    parts.push({ text: entryLabel(entry), entry })
+    parts.push({ text: labels.get(entry.path)!, entry })
     last = match.index + match[0].length
   }
   if (last < explanation.length) parts.push({ text: explanation.slice(last) })

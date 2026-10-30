@@ -24,9 +24,96 @@ main.column {
   padding-block: var(--screen-y-padding);
 }
 
-.question {
+/* A run builds from the foot up, as a chat thread does: the first phases sit
+ * just above the input, and each new one pushes the rest up. The main fills
+ * the grid row above the input, so flex-end anchors it there. */
+main.thread {
+  justify-content: flex-end;
+}
+
+/* Gold marks the small label that names a block: a phase's label, the one a
+ * run waits on, the source panel's trail and a spell's subtitle. Nothing gold
+ * is a warning, so the colour reads as a label and only that. */
+.eyebrow {
+  color: var(--secondary-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* A label one level under a phase's, naming a part of its body. Neutral, so
+ * gold stays the top of the hierarchy. */
+.subhead {
   margin: 0;
-  font-family: var(--font-heading);
+  color: var(--on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* A phase of the run: a gold label over its body, fading in and rising to rest
+ * when its event lands. Under reduced motion it fades without the rise. The
+ * look is provisional until the design sweep closes. */
+.phase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--group-gap);
+  animation: phase-in 320ms ease-out both;
+}
+
+.phase__label {
+  margin: 0;
+}
+
+@keyframes phase-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-4));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes phase-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* The phase the run waits on, its label pulsing at the foot. */
+.phase__pending {
+  animation: pending 1.4s ease-in-out infinite;
+}
+
+.phase__pending::after {
+  content: '…';
+}
+
+@keyframes pending {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phase {
+    animation-name: phase-fade;
+  }
+
+  .phase__pending {
+    animation: none;
+  }
+}
+
+.phase__question {
+  margin: 0;
+  padding-inline-start: var(--space-4);
+  border-inline-start: var(--bw-2) solid var(--secondary-border);
+  font-style: italic;
+}
+
+.phase__question p {
+  margin: 0;
 }
 
 /* Before the first question the input sits centred under the name. */
@@ -70,28 +157,23 @@ main.empty h1 {
 }
 
 .verdict,
-.reasoning,
-.verdict__cites,
-.reasoning__plan {
+.verdict__part {
   display: flex;
   flex-direction: column;
   gap: var(--group-gap);
 }
 
-.verdict,
-.reasoning {
+.verdict {
   gap: var(--section-gap);
 }
 
-.verdict h2,
 .verdict h3,
-.reasoning h2,
-.reasoning h3,
 .verdict__answer {
   margin: 0;
 }
 
-/* Neutral on purpose: the secondary raspberry on a "No" would read as an error. */
+/* Neutral until the verdict's colour is decided. The secondary gold is the
+   phases' labels, so it is not the verdict's. */
 .verdict__answer {
   font-family: var(--font-heading);
 }
@@ -104,6 +186,10 @@ main.empty h1 {
   margin: 0;
 }
 
+.verdict__no-cites {
+  margin: 0;
+}
+
 .verdict__cite-list {
   display: flex;
   flex-wrap: wrap;
@@ -113,7 +199,7 @@ main.empty h1 {
   list-style: none;
 }
 
-.reasoning__sub-questions {
+.sub-questions {
   margin: 0;
   padding-inline-start: 1.25em;
   display: flex;
@@ -121,21 +207,20 @@ main.empty h1 {
   gap: var(--group-compact-gap);
 }
 
-.reasoning__explanation p {
+.explanation p {
   margin: 0 0 1em;
+}
+
+.explanation p:last-child {
+  margin-bottom: 0;
 }
 
 /* An inline cite is a button so it can open the panel, but it reads as a link in
  * the sentence: no box, and it wraps with the words around it. */
-.reasoning__explanation .link {
+.explanation .link {
   display: inline;
   padding: 0;
   text-align: start;
-}
-
-.view-all {
-  border-top: var(--bw-1) solid var(--outline-subtle);
-  padding-top: var(--section-gap);
 }
 
 .view-all__summary {
@@ -160,19 +245,27 @@ main.empty h1 {
   transform: rotate(90deg);
 }
 
+/* A numbered list of links, spaced as the sub-questions are. */
 .view-all__list {
   margin: var(--group-gap) 0 0;
-  padding: 0;
-  list-style: none;
+  padding-inline-start: 1.25em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--group-compact-gap);
 }
 
-.view-all__entry {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--group-gap);
+/* Each entry is a button so it can open the panel, read as a link. */
+.view-all__list .link {
+  padding: 0;
   text-align: start;
+}
+
+.view-all__cited {
+  width: var(--icon-1);
+  height: var(--icon-1);
+  margin-inline-start: var(--component-gap);
+  vertical-align: middle;
+  color: var(--on-surface-variant);
 }
 
 /* Once a question runs, the input pins to the bottom of the viewport while the

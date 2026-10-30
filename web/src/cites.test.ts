@@ -1,7 +1,7 @@
 // Run with `node --test src/cites.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { entryLabel, linkExplanation } from './cites.ts'
+import { entryLabel, entryLabels, linkExplanation } from './cites.ts'
 
 // Entries as the corpus writes them, each opening with its own title line.
 const GRAPPLED = { path: 'conditions > grappled', text: 'Grappled\n\n- A grappled creature’s speed becomes 0.' }
@@ -35,4 +35,25 @@ test('parentheses around a path stay in the text', () => {
 test('an entry is named by its own title, cased as the source writes it', () => {
   // The slug alone gives "Melee attacks".
   assert.equal(entryLabel(MELEE), 'Melee Attacks')
+})
+
+// The three Spellcasting Ability entries a question about spellcasters drew, as
+// the corpus writes them.
+const ABILITY = (parent: string) => ({
+  path: `using-each-ability > ${parent} > spellcasting-ability`,
+  text: 'Spellcasting Ability\n\nYour modifier for this ability.',
+})
+const SPELLCASTERS = [ABILITY('intelligence'), ABILITY('wisdom'), ABILITY('charisma'), GRAPPLED]
+
+test('entries that share a title each take their parent section', () => {
+  const labels = entryLabels(SPELLCASTERS)
+  assert.equal(labels.get('using-each-ability > intelligence > spellcasting-ability'), 'Spellcasting Ability (Intelligence)')
+  assert.equal(labels.get('using-each-ability > wisdom > spellcasting-ability'), 'Spellcasting Ability (Wisdom)')
+  // A title no other entry shares stands alone.
+  assert.equal(labels.get('conditions > grappled'), 'Grappled')
+})
+
+test('an explanation link reads as the run names the entry', () => {
+  const parts = linkExplanation("Under 'using-each-ability > wisdom > spellcasting-ability', clerics cast.", SPELLCASTERS)
+  assert.equal(parts[1].text, 'Spellcasting Ability (Wisdom)')
 })
