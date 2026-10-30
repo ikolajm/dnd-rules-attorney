@@ -31,6 +31,7 @@ export function AskForm({ draft, running, onDraft, onSubmit, onStop }: Props) {
       <textarea
         id="question"
         className="textarea"
+        data-size="sm"
         rows={2}
         placeholder="Ask a rules question"
         value={draft}
