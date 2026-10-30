@@ -13,7 +13,7 @@ const yesNo = (value: boolean) => (value ? 'Yes' : 'No')
 export function SpellStats({ spell }: Props) {
   return (
     <div className="spell-stats">
-      <p className="text-label-md text-on-surface-variant">{spell.subtitle}</p>
+      <p className="eyebrow text-label-md">{spell.subtitle}</p>
       <dl className="spell-stats__rows text-body-md">
         <dt>Casting Time</dt>
         <dd>{spell.castingTime}</dd>

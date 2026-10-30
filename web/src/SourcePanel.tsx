@@ -124,12 +124,12 @@ function PanelBody({
     <>
       <header className="source-panel__header">
         <div className="source-panel__heading">
-          {trail.length > 0 && <p className="text-label-sm text-on-surface-variant">{trail.join(' › ')}</p>}
+          {trail.length > 0 && <p className="eyebrow text-label-sm">{trail.join(' › ')}</p>}
           <h2 id="source-title" className="text-title-md">
             {title}
           </h2>
           {cited && (
-            <Badge size="sm" color="primary" intensity="soft">
+            <Badge size="md" color="primary" intensity="soft">
               Cited
             </Badge>
           )}

@@ -1,11 +1,11 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { AskForm } from './AskForm.tsx'
 import { Attribution } from './Attribution.tsx'
 import { resolveCite } from './cites.ts'
 import { fixtures } from './fixtures/index.ts'
 import { live } from './live.ts'
-import { Reasoning } from './Reasoning.tsx'
-import { applyEvent, startRun, type Run } from './run.ts'
+import { Phase } from './Phase.tsx'
+import { applyEvent, PENDING_LABEL, PHASE_LABEL, startRun, type Run } from './run.ts'
 import { RunStatus } from './RunStatus.tsx'
 import { SourcePanel } from './SourcePanel.tsx'
 import { replay, SCENARIOS, type Scenario } from './stream.ts'
@@ -20,6 +20,9 @@ export default function App() {
   const [scenario, setScenario] = useState<Scenario>('ruled')
   const [draft, setDraft] = useState('')
   const [run, setRun] = useState<Run | null>(null)
+  // Counts the questions asked. It keys the run's phases, so each new question
+  // mounts them afresh and they play their entrance again.
+  const [turn, setTurn] = useState(0)
   const [openEntry, setOpenEntry] = useState<Entry | null>(null)
   const abortRef = useRef<AbortController | null>(null)
   // The control that opened the panel, so focus goes back to it on close.
@@ -35,11 +38,29 @@ export default function App() {
     }),
   )
 
+  // The page follows the newest phase unless the reader has scrolled up from the
+  // foot. The scroll is instant: the phase's own fade and rise is the motion, and
+  // a smooth scroll's in-between positions would read as the reader leaving.
+  const followRef = useRef(true)
+  useEffect(() => {
+    const onScroll = () => {
+      const below = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight)
+      followRef.current = below < 96
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+  useEffect(() => {
+    if (run && followRef.current) window.scrollTo({ top: document.documentElement.scrollHeight })
+  }, [run])
+
   // A new question clears the screen: a ruling left up while the next one
   // streams would read as the answer to it.
   const ask = async (question: string) => {
     const controller = new AbortController()
     abortRef.current = controller
+    followRef.current = true
+    setTurn((t) => t + 1)
     setOpenEntry(null)
     setDraft('')
     setRun(startRun(question))
@@ -133,25 +154,56 @@ export default function App() {
           {form}
         </main>
       ) : (
-        <main className="column">
-          <h1 className="question text-title-lg">{run.question}</h1>
+        // One turn told in time order, each phase mounting as its event lands.
+        <main key={turn} className="column thread">
+          <h1 className="visually-hidden">Lazy Dunmas</h1>
 
-          {run.ruling ? (
-            <Verdict ruling={run.ruling} entries={entries} onOpen={open} />
-          ) : (
-            <RunStatus run={run} onRetry={() => void ask(run.question)} />
-          )}
+          <Phase id="phase-question" label={PHASE_LABEL.question}>
+            <blockquote className="phase__question text-body-lg">
+              <p>“{run.question}”</p>
+            </blockquote>
+          </Phase>
 
           {run.subQuestions && (
-            <Reasoning
-              subQuestions={run.subQuestions}
-              explanation={run.ruling?.explanation ?? null}
-              entries={entries}
-              onOpen={open}
-            />
+            <Phase id="phase-plan" label={PHASE_LABEL.plan}>
+              {run.subQuestions.length > 0 ? (
+                <ol className="sub-questions text-body-lg">
+                  {run.subQuestions.map((q) => (
+                    <li key={q}>{q}</li>
+                  ))}
+                </ol>
+              ) : (
+                <p className="text-body-lg text-on-surface-variant">
+                  Not split: the question is searched as it was asked.
+                </p>
+              )}
+            </Phase>
           )}
 
-          {run.entries && <ViewAll entries={run.entries} cites={run.ruling?.cites ?? null} onOpen={open} />}
+          {run.entries && (
+            <Phase id="phase-entries" label={PHASE_LABEL.entries}>
+              <ViewAll entries={run.entries} cites={run.ruling?.cites ?? null} onOpen={open} />
+            </Phase>
+          )}
+
+          {/* A ruling, or how the run ended without one, in the Verdict's place. */}
+          {run.ruling ? (
+            <Phase id="phase-verdict" label={PHASE_LABEL.verdict}>
+              <Verdict ruling={run.ruling} entries={entries} onOpen={open} />
+            </Phase>
+          ) : (
+            !running && (
+              <Phase id="phase-verdict" label={PHASE_LABEL.verdict}>
+                <RunStatus run={run} onRetry={() => void ask(run.question)} />
+              </Phase>
+            )
+          )}
+
+          {/* The phase the run waits on, pending at the foot. The slot stays
+              mounted so a screen reader hears each label as it changes. */}
+          <div aria-live="polite">
+            {running && <p className="phase__pending phase__label eyebrow text-label-lg">{PENDING_LABEL[run.stage]}</p>}
+          </div>
         </main>
       )}
 

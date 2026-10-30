@@ -16,11 +16,21 @@ export type Run = {
   error: ErrorReason | null
 }
 
-export const STAGE_LABEL: Record<Run['stage'], string> = {
-  checking: 'Checking the question',
-  splitting: 'Splitting the dispute',
-  finding: 'Finding the rules',
-  ruling: 'Ruling',
+// The phases, in the order a run reaches them, each named as its label reads.
+export const PHASE_LABEL = {
+  question: 'Question',
+  plan: 'Splitting the dispute',
+  entries: 'Rules found',
+  verdict: 'Verdict',
+} as const
+
+// While a run waits, the label of the phase it is waiting on, shown pending at
+// the foot. Before the gate answers, the dispute is next to be split.
+export const PENDING_LABEL: Record<Run['stage'], string> = {
+  checking: PHASE_LABEL.plan,
+  splitting: PHASE_LABEL.plan,
+  finding: PHASE_LABEL.entries,
+  ruling: PHASE_LABEL.verdict,
 }
 
 export function startRun(question: string): Run {
