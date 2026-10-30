@@ -1,20 +1,21 @@
 import type { ErrorReason, Fixture, StreamEvent } from './types.ts'
 
-// The seam the live stream replaces: a question in, the endpoint's events out,
-// ended early by the signal. Until the endpoint exists, a fixture is replayed
-// at the timings level 3 measured on dev.
+// The dev source beside the live one: a fixture replayed at the timings level 3
+// measured, in the shape `live` has, so the design sweep can bring up every
+// state without Ollama running.
 
-// Plan and ruling are dev medians from the level 3 run. The gate is not written
-// and retrieval was not timed on its own, so those two are guesses.
-const DELAY = { gate: 400, plan: 500, entries: 300, ruling: 2500 }
+// Plan and ruling are dev medians from the level 3 run, and the gate is the
+// gate check's fifth of a second. Retrieval was not timed on its own, so its
+// delay is a guess.
+const DELAY = { gate: 200, plan: 500, entries: 300, ruling: 2500 }
 
-// How long the timeout scenario waits before failing, standing in for the
-// server's limit, which is the endpoint's to set.
+// How long the timeout scenario waits before failing. The server's limit is 30
+// seconds; this is shorter so the state can be looked at without the wait.
 const TIMEOUT_DEMO = 8000
 
 // Dev only. Each failure the screen has to show, on any fixture. None of them
 // is a recorded run: the refusal and the errors are synthesised here.
-export const SCENARIOS = ['ruled', 'refused', 'unreachable', 'plan-unparsed', 'ruling-unparsed', 'timeout'] as const
+export const SCENARIOS = ['ruled', 'refused', 'unreachable', 'ruling-unparsed', 'timeout'] as const
 export type Scenario = (typeof SCENARIOS)[number]
 
 function wait(ms: number, signal: AbortSignal): Promise<void> {
@@ -48,16 +49,12 @@ export async function* replay(fixture: Fixture, scenario: Scenario, signal: Abor
 
   await wait(DELAY.gate, signal)
   if (scenario === 'refused') {
-    yield { event: 'gate', data: { allowed: false } }
+    yield { event: 'gate', data: { about_rules: false } }
     return
   }
   yield take('gate')
 
   await wait(DELAY.plan, signal)
-  if (scenario === 'plan-unparsed') {
-    yield error('plan-unparsed')
-    return
-  }
   yield take('plan')
 
   await wait(DELAY.entries, signal)

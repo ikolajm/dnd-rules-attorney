@@ -5,9 +5,9 @@ import type { ErrorReason } from './types.ts'
 
 const ERROR_TEXT: Record<ErrorReason, string> = {
   unreachable: 'The model could not be reached. Check that Ollama is running.',
-  'plan-unparsed': 'The model’s plan came back in a shape that could not be read.',
   'ruling-unparsed': 'The model’s ruling came back in a shape that could not be read.',
   timeout: 'The ruling took too long and was ended.',
+  'server-unreachable': 'The rules server could not be reached. Check that it is running.',
 }
 
 type Props = {
