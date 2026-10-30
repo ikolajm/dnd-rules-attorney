@@ -172,8 +172,10 @@ main.empty h1 {
   margin: 0;
 }
 
-/* Neutral until the verdict's colour is decided. The secondary gold is the
-   phases' labels, so it is not the verdict's. */
+/* Neutral by decision. Size, place and the gold label above it already set the
+   answer apart. A yes-green or no-red would mean nothing on a number or a
+   sentence and would read a correct "No" as a failure; gold is the labels';
+   violet costs contrast on the line that must read first. */
 .verdict__answer {
   font-family: var(--font-heading);
 }
