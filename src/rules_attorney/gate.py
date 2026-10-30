@@ -3,7 +3,7 @@
 import ollama
 from pydantic import BaseModel, ValidationError
 
-from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
+from rules_attorney.answer import chat_request
 
 GATE_INSTRUCTIONS = (
     "Decide whether the question below asks how the rules of Dungeons & "
@@ -37,16 +37,5 @@ def parse_gate(content: str) -> bool | None:
 
 def ollama_gate(prompt: str, *, model: str) -> str:
     """The model's raw reply to the prompt, an empty string when there is none."""
-    response = ollama.chat(
-        model=model,
-        messages=[{"role": "user", "content": prompt}],
-        format=Gate.model_json_schema(),
-        think=THINK,
-        options={
-            "temperature": TEMPERATURE,
-            "seed": SEED,
-            "num_ctx": NUM_CTX,
-            "num_predict": NUM_PREDICT,
-        },
-    )
+    response = ollama.chat(**chat_request(prompt, model, Gate.model_json_schema()))
     return response.message.content or ""
