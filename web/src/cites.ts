@@ -1,3 +1,4 @@
+import { entryTitle } from './entry.ts'
 import type { Entry } from './types.ts'
 
 // The model's commonest slip is copying the `## ` the prompt puts before each
@@ -23,8 +24,12 @@ export function pathSegments(path: string): string[] {
   })
 }
 
-export function pathLabel(path: string): string {
-  return pathSegments(path).join(' › ')
+// An entry as the screen names it: its own title line, "Fire Bolt", alone. The
+// trail of parent sections shows only in the source panel, and is built from
+// the path, since the parents' own entries are seldom among the ten.
+export function entryLabel(entry: Entry): string {
+  const segments = pathSegments(entry.path)
+  return entryTitle(entry.text) ?? segments[segments.length - 1]
 }
 
 export type ExplanationPart = { text: string } | { text: string; entry: Entry }
@@ -50,7 +55,7 @@ export function linkExplanation(explanation: string, entries: Entry[]): Explanat
   for (const match of explanation.matchAll(pattern)) {
     if (match.index > last) parts.push({ text: explanation.slice(last, match.index) })
     const entry = byPath.get(match[1])!
-    parts.push({ text: pathLabel(entry.path), entry })
+    parts.push({ text: entryLabel(entry), entry })
     last = match.index + match[0].length
   }
   if (last < explanation.length) parts.push({ text: explanation.slice(last) })

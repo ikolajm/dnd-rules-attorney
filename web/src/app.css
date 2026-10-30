@@ -251,8 +251,15 @@ main.empty h1 {
   margin: 0;
 }
 
-.source-panel__text {
-  white-space: pre-wrap;
+/* The entry renders as markdown, so its line breaks come from the renderer and
+   white-space stays normal. The look is provisional until the design sweep. */
+.source-panel__text :is(h3, p, ul, ol) {
+  margin-block: 0 var(--space-3);
+}
+
+.source-panel__table {
+  overflow-x: auto;
+  margin-block-end: var(--space-3);
 }
 
 .dev-switcher {

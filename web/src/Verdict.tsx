@@ -1,7 +1,7 @@
 import { CircleSlash, Scale } from 'lucide-react'
 import { Badge } from './components/loom/badge.tsx'
 import { Button } from './components/loom/button.tsx'
-import { pathLabel, resolveCite } from './cites.ts'
+import { entryLabel, resolveCite } from './cites.ts'
 import type { Answer, Entry, Ruling } from './types.ts'
 
 type Props = {
@@ -54,7 +54,7 @@ export function Verdict({ ruling, entries, onOpen }: Props) {
             <li key={c.cite}>
               {c.found ? (
                 <Button variant="outline" color="neutral" size="sm" onClick={() => onOpen(c.entry)}>
-                  {pathLabel(c.entry.path)}
+                  {entryLabel(c.entry)}
                 </Button>
               ) : (
                 <Badge

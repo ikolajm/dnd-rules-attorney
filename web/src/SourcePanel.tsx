@@ -1,9 +1,34 @@
 import { X } from 'lucide-react'
 import { useEffect, useRef, useSyncExternalStore } from 'react'
+import Markdown, { type Components } from 'react-markdown'
+import remarkBreaks from 'remark-breaks'
+import remarkGfm from 'remark-gfm'
 import { Badge } from './components/loom/badge.tsx'
 import { Button } from './components/loom/button.tsx'
-import { pathSegments } from './cites.ts'
+import { entryLabel, pathSegments } from './cites.ts'
+import { entryBody } from './entry.ts'
 import type { Entry } from './types.ts'
+
+// Tables are GFM, not CommonMark. Breaks keeps each single line break, as the
+// spell stat lines need until the spell formatter lays them out.
+const PLUGINS = [remarkGfm, remarkBreaks]
+
+// The corpus's markdown onto Loom. Headings inside an entry sit under the
+// panel's own h2, whatever level the source wrote them at, and a table scrolls
+// on its own rather than widening the panel.
+const ELEMENTS: Components = {
+  h1: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
+  h2: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
+  h3: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
+  h4: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
+  h5: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
+  h6: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
+  table: ({ children }) => (
+    <div className="source-panel__table">
+      <table className="table">{children}</table>
+    </div>
+  ),
+}
 
 // Wide enough that a panel beside the column leaves the ruling readable. Below
 // it nothing can be read beside the panel, so it becomes a modal.
@@ -85,9 +110,8 @@ function PanelBody({
   onClose,
   closeRef,
 }: Props & { entry: Entry; closeRef: React.RefObject<HTMLButtonElement | null> }) {
-  const segments = pathSegments(entry.path)
-  const title = segments[segments.length - 1]
-  const trail = segments.slice(0, -1)
+  const title = entryLabel(entry)
+  const trail = pathSegments(entry.path).slice(0, -1)
 
   return (
     <>
@@ -107,8 +131,11 @@ function PanelBody({
           <X />
         </Button>
       </header>
-      {/* The entry's markdown shown as written until a renderer is chosen. */}
-      <div className="source-panel__text text-body-md">{entry.text}</div>
+      <div className="source-panel__text text-body-md">
+        <Markdown remarkPlugins={PLUGINS} components={ELEMENTS}>
+          {entryBody(entry.text)}
+        </Markdown>
+      </div>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import { Badge } from './components/loom/badge.tsx'
-import { pathLabel, resolveCite } from './cites.ts'
+import { entryLabel, resolveCite } from './cites.ts'
 import type { Entry } from './types.ts'
 
 type Props = {
@@ -28,7 +28,7 @@ export function ViewAll({ entries, cites, onOpen }: Props) {
         {entries.map((entry) => (
           <li key={entry.path}>
             <button type="button" className="view-all__entry list-item interactive" data-size="md" onClick={() => onOpen(entry)}>
-              <span className="text-body-md">{pathLabel(entry.path)}</span>
+              <span className="text-body-md">{entryLabel(entry)}</span>
               {cited.has(entry.path) && (
                 <Badge size="sm" color="primary" intensity="soft">
                   Cited
