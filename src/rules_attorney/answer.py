@@ -1,6 +1,6 @@
 """The answering step, from retrieved entries to a validated ruling."""
 
-from typing import Annotated, Literal
+from typing import Annotated, Any, Literal
 
 import ollama
 from pydantic import BaseModel, Field, ValidationError
@@ -111,21 +111,26 @@ def build_prompt(question: str, entries: list[Entry]) -> str:
     return "\n\n".join(parts)
 
 
-def ollama_answer(prompt: str, *, model: str) -> str:
-    """The model's raw reply to the prompt, an empty string when there is none."""
-    response = ollama.chat(
-        model=model,
-        messages=[{"role": "user", "content": prompt}],
-        format=Ruling.model_json_schema(),
-        think=THINK,
+def chat_request(prompt: str, model: str, schema: dict[str, Any]) -> dict[str, Any]:
+    """The arguments every Ollama chat call sends, measured or served."""
+    return {
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "format": schema,
+        "think": THINK,
         # No penalty is set, so each model samples with the penalties it ships,
         # as it runs with its own template. Pinned off, qwen3.5 lost its presence
         # penalty of 1.5 and looped to the cap on 22 dev items across the ladder.
-        options={
+        "options": {
             "temperature": TEMPERATURE,
             "seed": SEED,
             "num_ctx": NUM_CTX,
             "num_predict": NUM_PREDICT,
         },
-    )
+    }
+
+
+def ollama_answer(prompt: str, *, model: str) -> str:
+    """The model's raw reply to the prompt, an empty string when there is none."""
+    response = ollama.chat(**chat_request(prompt, model, Ruling.model_json_schema()))
     return response.message.content or ""

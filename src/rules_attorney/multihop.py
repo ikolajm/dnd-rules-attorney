@@ -3,7 +3,7 @@
 import ollama
 from pydantic import BaseModel, ValidationError
 
-from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
+from rules_attorney.answer import chat_request
 from rules_attorney.fusion import fuse
 
 PLAN_INSTRUCTIONS = (
@@ -38,18 +38,7 @@ def parse_plan(content: str) -> list[str] | None:
 
 def ollama_plan(prompt: str, *, model: str) -> str:
     """The model's raw reply to the prompt, an empty string when there is none."""
-    response = ollama.chat(
-        model=model,
-        messages=[{"role": "user", "content": prompt}],
-        format=Plan.model_json_schema(),
-        think=THINK,
-        options={
-            "temperature": TEMPERATURE,
-            "seed": SEED,
-            "num_ctx": NUM_CTX,
-            "num_predict": NUM_PREDICT,
-        },
-    )
+    response = ollama.chat(**chat_request(prompt, model, Plan.model_json_schema()))
     return response.message.content or ""
 
 
