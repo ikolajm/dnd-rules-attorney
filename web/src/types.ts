@@ -32,9 +32,3 @@ export type StreamEvent =
   | { event: 'entries'; data: { entries: Entry[] } }
   | { event: 'ruling'; data: Ruling }
   | { event: 'error'; data: { reason: ErrorReason } }
-
-export type Fixture = {
-  source: { run: string; id: string; model: string; commit: string; gate: string }
-  question: string
-  events: StreamEvent[]
-}

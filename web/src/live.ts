@@ -1,8 +1,8 @@
 import { parser } from './sse.ts'
 import type { StreamEvent } from './types.ts'
 
-// The live source: a question in, the endpoint's events out, ended early by the
-// signal. The same shape as `replay`, so the screen takes either.
+// The stream: a question in, the endpoint's events out, ended early by the
+// signal.
 
 const SERVER_DOWN: StreamEvent = { event: 'error', data: { reason: 'server-unreachable' } }
 
@@ -43,7 +43,7 @@ export async function* live(question: string, signal: AbortSignal): AsyncGenerat
       if (done) break
       for (const raw of push(value)) {
         // JSON arrives untyped. The cast is the boundary; the server writes
-        // these shapes, as the fixtures' cast is for the script.
+        // these shapes, mirrored in types.ts.
         const e = { event: raw.event, data: JSON.parse(raw.data) } as StreamEvent
         yield e
         if (ends(e)) ended = true
