@@ -109,7 +109,7 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 | `scripts/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
 | `scripts/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
 
-The judge and the hosted rows call the Claude API and read `ANTHROPIC_API_KEY` from the environment; everything else runs locally. `scripts/pull_srd.py` refetches the corpus at its pinned commit.
+The judge and the hosted rows call the Claude API and authenticate with the profile `ant auth login` stores; a set `ANTHROPIC_API_KEY` takes precedence over it, even an empty one. Everything else runs locally. `scripts/pull_srd.py` refetches the corpus at its pinned commit.
 
 ## Checks
 
