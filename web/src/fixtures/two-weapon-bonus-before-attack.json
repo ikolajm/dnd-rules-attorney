@@ -11,7 +11,7 @@
     {
       "event": "gate",
       "data": {
-        "allowed": true
+        "about_rules": true
       }
     },
     {

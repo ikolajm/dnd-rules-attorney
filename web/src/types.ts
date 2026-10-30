@@ -19,13 +19,15 @@ export type Entry = {
   text: string
 }
 
-// The stage a run failed at, as the screen names it.
-export type ErrorReason = 'unreachable' | 'plan-unparsed' | 'ruling-unparsed' | 'timeout'
+// The stage a run failed at, as the screen names it. The server sends the
+// first three; the frontend alone sets server-unreachable, for a server it
+// could not reach or that stopped before the run ended.
+export type ErrorReason = 'unreachable' | 'ruling-unparsed' | 'timeout' | 'server-unreachable'
 
-// The gate's and the error's data are placeholders until the gate call and the
-// endpoint are written; they own the real shapes.
+// The gate's data mirrors `Gate` in rules_attorney.gate, and the error's the
+// events rules_attorney.stream yields.
 export type StreamEvent =
-  | { event: 'gate'; data: { allowed: boolean } }
+  | { event: 'gate'; data: { about_rules: boolean } }
   | { event: 'plan'; data: { sub_questions: string[] } }
   | { event: 'entries'; data: { entries: Entry[] } }
   | { event: 'ruling'; data: Ruling }

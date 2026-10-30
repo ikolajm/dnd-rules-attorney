@@ -38,7 +38,7 @@ export function startRun(question: string): Run {
 export function applyEvent(run: Run, e: StreamEvent): Run {
   switch (e.event) {
     case 'gate':
-      return e.data.allowed ? { ...run, stage: 'splitting' } : { ...run, phase: 'refused' }
+      return e.data.about_rules ?{ ...run, stage: 'splitting' } : { ...run, phase: 'refused' }
     case 'plan':
       return { ...run, stage: 'finding', subQuestions: e.data.sub_questions }
     case 'entries':

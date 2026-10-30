@@ -20,9 +20,9 @@ DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"
 FIXTURES = ROOT / "web" / "src" / "fixtures"
 
-# The gate call is not written yet, so its event has no settled shape. This
-# stands in for a question it lets through.
-GATE_PLACEHOLDER = {"allowed": True}
+# The level 3 runs made no gate call, so a fixture's gate is the pass the
+# gate gives every gold question, in the shape rules_attorney.gate returns.
+GATE_PLACEHOLDER = {"about_rules": True}
 
 
 def fixture(
