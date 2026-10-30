@@ -7,10 +7,13 @@ import { Badge } from './components/loom/badge.tsx'
 import { Button } from './components/loom/button.tsx'
 import { entryLabel, pathSegments } from './cites.ts'
 import { entryBody } from './entry.ts'
+import { parseSpell } from './spell.ts'
+import { SpellStats } from './SpellStats.tsx'
 import type { Entry } from './types.ts'
 
-// Tables are GFM, not CommonMark. Breaks keeps each single line break, as the
-// spell stat lines need until the spell formatter lays them out.
+// Tables are GFM, not CommonMark. Breaks keeps each single line break, which
+// two rule sections write as one; the spells' stat lines, which wrote most of
+// them, are laid out by SpellStats instead.
 const PLUGINS = [remarkGfm, remarkBreaks]
 
 // The corpus's markdown onto Loom. Headings inside an entry sit under the
@@ -112,6 +115,10 @@ function PanelBody({
 }: Props & { entry: Entry; closeRef: React.RefObject<HTMLButtonElement | null> }) {
   const title = entryLabel(entry)
   const trail = pathSegments(entry.path).slice(0, -1)
+  const body = entryBody(entry.text)
+  // A spell's stat lines get their own layout; anything that does not parse as
+  // one renders as markdown, as every other entry does.
+  const spell = entry.path.startsWith('spells > ') ? parseSpell(body) : null
 
   return (
     <>
@@ -132,8 +139,9 @@ function PanelBody({
         </Button>
       </header>
       <div className="source-panel__text text-body-md">
+        {spell && <SpellStats spell={spell} />}
         <Markdown remarkPlugins={PLUGINS} components={ELEMENTS}>
-          {entryBody(entry.text)}
+          {spell ? spell.body : body}
         </Markdown>
       </div>
     </>

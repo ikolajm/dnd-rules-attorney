@@ -262,6 +262,27 @@ main.empty h1 {
   margin-block-end: var(--space-3);
 }
 
+/* A spell's stats: labels in one column, values in the other, a long material
+   sentence wrapping inside its own column. */
+.spell-stats {
+  margin-block-end: var(--space-4);
+}
+
+.spell-stats__rows {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-1) var(--space-4);
+  margin: 0;
+}
+
+.spell-stats__rows dt {
+  color: var(--on-surface-variant);
+}
+
+.spell-stats__rows dd {
+  margin: 0;
+}
+
 .dev-switcher {
   position: fixed;
   top: var(--space-2);
