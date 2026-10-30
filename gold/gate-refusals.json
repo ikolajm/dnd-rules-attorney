@@ -1,0 +1,42 @@
+[
+  {
+    "id": "wrestling-grapple-escape",
+    "question": "In freestyle wrestling, can you escape a hold by rolling out of bounds?"
+  },
+  {
+    "id": "tennis-advantage-score",
+    "question": "In tennis, does the server win the game if they win the point at advantage?"
+  },
+  {
+    "id": "study-concentration-breaks",
+    "question": "Does taking a short break every hour help me keep my concentration while studying?"
+  },
+  {
+    "id": "insurance-cover-flood",
+    "question": "Does standard home insurance cover damage from a flooded basement?"
+  },
+  {
+    "id": "chess-castle-through-check",
+    "question": "In chess, can a king castle if it would pass through a square under attack?"
+  },
+  {
+    "id": "soccer-offside-own-half",
+    "question": "Can a soccer player be offside while standing in their own half?"
+  },
+  {
+    "id": "boiling-point-altitude",
+    "question": "Does water boil at a lower temperature at high altitude?"
+  },
+  {
+    "id": "spell-check-proper-nouns",
+    "question": "Why does spell check flag proper nouns as misspelled?"
+  },
+  {
+    "id": "python-list-copy",
+    "question": "Does assigning one Python list to another variable copy it?"
+  },
+  {
+    "id": "rent-deposit-return",
+    "question": "How many days does a landlord have to return a security deposit?"
+  }
+]
