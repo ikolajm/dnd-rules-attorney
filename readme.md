@@ -1,6 +1,59 @@
 # DnD Rules Attorney (Lazy-dunmas)
 
-A project to allow local llm to quickly lookup and determine what is legal within the 2014 5e ruleset.
+Rules disputes at a D&D table, answered by a local model from the SRD 5.1, every ruling citing the sections it rests on, plus an evaluation harness that measures retrieval and answers separately against a gold set.
+
+<!-- Demo video and screenshots go here. -->
+
+## How it works
+
+You ask one rules question, and the screen shows the run in the order it happens:
+
+1. **Question.** A gate call first decides whether the question is about the rules of D&D 5e at all. A question off the game is refused and handed back to edit; a question that might be about the rules goes on.
+2. **Splitting the dispute.** The model names the separate rules the question turns on, one short sub-question per rule.
+3. **Rules found.** The question and each sub-question are embedded and ranked against every SRD entry by cosine similarity, and the rankings are fused into one. The first ten entries are what the model is handed.
+4. **Verdict.** The model rules from those ten entries alone and returns a structured ruling: the verdict, an ambiguity flag, an explanation, and the entries it cites. Each cited entry opens its source text beside the ruling.
+
+This is level 3 below. The server streams each phase to the screen as server-sent events as it lands. A stop cancels the request to the model, and a run is ended at 30 seconds.
+
+- **Models:** `qwen3.5:9b` for the gate, the plan and the ruling, and `nomic-embed-text` for the embeddings, both through [Ollama](https://ollama.com), locally.
+- **Server:** Python and FastAPI, in `src/rules_attorney/`. The served calls build the same request the measured runs did, so what the screen shows is what the results table measured.
+- **Screen:** React and Vite in `web/`, styled with [Loom](https://github.com/ikolajm/loom).
+- **Corpus:** the SRD 5.1's rule sections, conditions, spells and weapon properties, from [5e-bits/5e-database](https://github.com/5e-bits/5e-database) at a pinned commit, in `data/srd-5.1/`.
+
+## Running it
+
+You need Python 3.12 or later, Node 20.19 or 22.12 or later, and Ollama.
+
+Pull the two models:
+
+```
+ollama pull qwen3.5:9b
+ollama pull nomic-embed-text
+```
+
+Install the server and the screen, from the repository root:
+
+```
+python -m venv .venv
+.venv/Scripts/python -m pip install -e ".[dev]"
+cd web
+npm install
+```
+
+On macOS or Linux, the venv's Python is `.venv/bin/python` rather than `.venv/Scripts/python`.
+
+Then, each in a terminal of its own, with Ollama running:
+
+```
+.venv/Scripts/python -m uvicorn rules_attorney.server:app
+```
+
+```
+cd web
+npm run dev
+```
+
+The server embeds the corpus once at startup, then serves on port 8000. The screen is at `http://localhost:5173`, and forwards questions to the server.
 
 ## Results
 
@@ -40,6 +93,41 @@ Retrieval on the same test items, scored against the entries each gold item cite
 recall@k is the share of an item's cited entries in the top k; all-cites@k is the share of items with every cited entry there. At the k the model is handed, a quarter of items are missing an entry their ruling needs. Splitting the question moves that by one item either way, and the planner decides which way: the 9b gives one sub-question for 24 of 28 items, most of them a rephrasing of the question, while Opus gives none for 12 and two or three for the rest. Opus's level 3 column is counted from its answer run's records, which hold the 10 entries handed over, so it stops at 10.
 
 Every other number is computed from run records by `scripts/summarize_runs.py --table`, `scripts/eval_retrieval.py --split test` and `scripts/eval_multihop.py --split test`. Level 1's rows are at commit `df178dc` and level 3's at `f9e8a3b`.
+
+## Reproducing the results
+
+The gold set is `gold/gold.json`, each item a question, its expected verdict, whether it is settled or ambiguous, and the entries its ruling cites, split into dev and test. Tuning happens on dev; test is scored once. The scripts that run a split take `--split test` for the test split and run dev without it. Those that write records write them to `runs/`, which git ignores, each record carrying the commit it ran at and whether the tree was dirty.
+
+| Script | What it does |
+|---|---|
+| `scripts/eval_retrieval.py` | Scores level 1's retrieval: recall@k and all-cites@k |
+| `scripts/eval_multihop.py <model>` | Plans with the model named and scores level 3's fused retrieval |
+| `scripts/answer_dev.py <model> [--level 1\|3]` | Rules on every item of the split; a model named `claude-…` answers through the API |
+| `scripts/judge_dev.py runs/<run>.jsonl` | Judges a run's verdicts and flags with Claude Sonnet 5.5 |
+| `scripts/floor_dev.py` | Writes the floor row: "no" to every item, no flag, no cites |
+| `scripts/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs |
+| `scripts/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
+| `scripts/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
+
+The judge and the hosted rows call the Claude API and read `ANTHROPIC_API_KEY` from the environment; everything else runs locally. `scripts/pull_srd.py` refetches the corpus at its pinned commit.
+
+## Checks
+
+From the repository root:
+
+```
+.venv/Scripts/python -m pytest
+.venv/Scripts/python -m ruff check .
+.venv/Scripts/python -m ruff format --check .
+.venv/Scripts/python -m mypy
+```
+
+From `web/`:
+
+```
+npm run build
+node --test src/*.test.ts
+```
 
 This work includes material taken from the System Reference Document 5.1 ("SRD 5.1") by Wizards of the Coast LLC and available at
 https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.
