@@ -292,3 +292,16 @@ main.empty h1 {
   gap: var(--group-compact-gap);
   z-index: 1;
 }
+
+.attribution {
+  text-align: center;
+}
+
+/* Loom spaces a dialog's parts with gap and sets no margins, but its title is
+   an h2 and its description a p, and the reset here zeroes body's margin
+   alone, so the browser's own heading and paragraph margins stacked on top of
+   the gap. */
+.dialog-title,
+.dialog-description {
+  margin: 0;
+}

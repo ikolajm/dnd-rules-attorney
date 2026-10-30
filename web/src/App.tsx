@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import { AskForm } from './AskForm.tsx'
+import { Attribution } from './Attribution.tsx'
 import { resolveCite } from './cites.ts'
 import { fixtures } from './fixtures/index.ts'
 import { live } from './live.ts'
@@ -157,11 +158,7 @@ export default function App() {
       <div className="ask">
         {run !== null && <div className="column">{form}</div>}
         <footer className="attribution column text-body-sm text-on-surface-variant">
-          Rules text from the System Reference Document 5.1 by Wizards of the Coast LLC, licensed under{' '}
-          <a className="link link-prose" href="https://creativecommons.org/licenses/by/4.0/legalcode">
-            CC-BY-4.0
-          </a>
-          .
+          <Attribution />
         </footer>
       </div>
 
