@@ -19,6 +19,7 @@ from rules_attorney.corpus import (
     EQUIPMENT_KINDS,
     FEATURES_FILE,
     SOURCES,
+    TRAITS_FILE,
     Entry,
     load_corpus,
 )
@@ -68,7 +69,8 @@ def test_records_match_the_source_files() -> None:
     # number typed in. A rule section is one record of many entries; a
     # condition, spell, weapon property, weapon or armor is one record of
     # one. Equipment that is neither is gear and makes no entry. Class
-    # features are one record per distinct text, however many repeat it.
+    # features and racial traits are one record per distinct text, however
+    # many repeat it; a race is one record of one.
     expected = 0
     for name in SOURCES:
         rows: list[dict[str, Any]] = json.loads(
@@ -78,7 +80,7 @@ def test_records_match_the_source_files() -> None:
             rows = [
                 r for r in rows if r["equipment_category"]["index"] in EQUIPMENT_KINDS
             ]
-        if name == FEATURES_FILE:
+        if name in (FEATURES_FILE, TRAITS_FILE):
             expected += len({"\n\n".join(r["desc"]) for r in rows})
             continue
         expected += len(rows)

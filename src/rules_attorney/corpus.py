@@ -14,6 +14,8 @@ WEAPON_PROPERTIES_FILE = "5e-SRD-Weapon-Properties.json"
 SPELLS_FILE = "5e-SRD-Spells.json"
 EQUIPMENT_FILE = "5e-SRD-Equipment.json"
 FEATURES_FILE = "5e-SRD-Features.json"
+RACES_FILE = "5e-SRD-Races.json"
+TRAITS_FILE = "5e-SRD-Traits.json"
 
 # The equipment categories that become entries; the rest of the file is gear,
 # a lookup rather than a dispute.
@@ -39,15 +41,19 @@ class Entry:
 
 
 type Parser = Callable[[dict[str, Any]], list[Entry]]
+# Every source file's records, by file name.
+type Loaded = dict[str, list[dict[str, Any]]]
 # A source whose entries need the whole file at once, as class features do to
-# merge the records that repeat one text.
-type FileParser = Callable[[list[dict[str, Any]]], list[Entry]]
+# merge the records that repeat one text. It is also handed every source file,
+# for a fact its own file lacks: a subrace trait names its subrace, and only
+# the races say which race that subrace belongs to.
+type FileParser = Callable[[list[dict[str, Any]], Loaded], list[Entry]]
 
 
 def each(parse: Parser) -> FileParser:
     """A file parser running a record parser over every record in turn."""
 
-    def parse_all(records: list[dict[str, Any]]) -> list[Entry]:
+    def parse_all(records: list[dict[str, Any]], loaded: Loaded) -> list[Entry]:
         return [entry for record in records for entry in parse(record)]
 
     return parse_all
@@ -293,7 +299,9 @@ def feature_entry(group: list[dict[str, Any]], name: str) -> Entry:
     return Entry(path=path, text=text)
 
 
-def feature_entries(records: list[dict[str, Any]]) -> list[Entry]:
+def feature_entries(
+    records: list[dict[str, Any]], loaded: Loaded | None = None
+) -> list[Entry]:
     """One entry per distinct class feature text, in the file's first-seen order."""
     groups: dict[str, list[dict[str, Any]]] = {}
     for record in records:
@@ -315,6 +323,83 @@ def feature_entries(records: list[dict[str, Any]]) -> list[Entry]:
     return entries
 
 
+def names(refs: list[dict[str, Any]]) -> str:
+    """The names of referenced records joined by commas, or none."""
+    return ", ".join(ref["name"] for ref in refs) or "none"
+
+
+def race_entries(
+    records: list[dict[str, Any]], loaded: Loaded | None = None
+) -> list[Entry]:
+    """One entry per race: its size, its speed, its traits and its subraces."""
+    entries: list[Entry] = []
+    for race in records:
+        lines = [
+            f"Size: {race['size']}",
+            f"Speed: {race['speed']} feet",
+            f"Traits: {names(race['traits'])}",
+        ]
+        if race["subraces"]:
+            lines.append(f"Subraces: {names(race['subraces'])}")
+        text = "\n\n".join([race["name"], "\n".join(lines)])
+        entries.append(Entry(path=f"races > {race['index']}", text=text))
+    return entries
+
+
+def breath_option(record: dict[str, Any]) -> str:
+    """A Draconic Ancestry color's breath: Black: acid, 30 ft. line, Dex save."""
+    specific: dict[str, Any] = record["trait_specific"]
+    breath: dict[str, Any] = specific["breath_weapon"]
+    area: dict[str, Any] = breath["area_of_effect"]
+    save: str = breath["dc"]["dc_type"]["name"].title()
+    color = parenthetical(record["name"]) or record["name"]
+    damage: str = specific["damage_type"]["name"].lower()
+    return f"{color}: {damage}, {area['size']} ft. {area['type']}, {save} save"
+
+
+def trait_entry(group: list[dict[str, Any]], subrace_race: dict[str, Any]) -> Entry:
+    """One entry for the trait records that share a text."""
+    # The parent record names the entry; its colored variants are options.
+    first = min(group, key=lambda r: "parent" in r)
+    races = sorted({race["name"] for r in group for race in r["races"]})
+    subraces = {s["index"]: s for r in group for s in r["subraces"]}
+
+    lines: list[str] = []
+    steps = ["racial-traits"]
+    if subraces:
+        # A subrace trait names no race of its own; its subrace's race is it.
+        (subrace,) = subraces.values()
+        race = subrace_race[subrace["index"]]
+        steps += [race["index"], subrace["index"]]
+        lines += [f"Race: {race['name']}", f"Subrace: {subrace['name']}"]
+    elif len(races) == 1:
+        steps.append(slug(first["races"][0]["index"]))
+        lines.append(f"Race: {races[0]}")
+    else:
+        lines.append(f"Races: {', '.join(races)}")
+    steps.append(slug(first["name"]))
+
+    options = [breath_option(r) for r in group if "parent" in r]
+    if options:
+        lines.append(f"Options: {'; '.join(options)}")
+
+    text = "\n\n".join([first["name"], "\n".join(lines), "\n\n".join(first["desc"])])
+    return Entry(path=" > ".join(steps), text=text)
+
+
+def trait_entries(records: list[dict[str, Any]], loaded: Loaded) -> list[Entry]:
+    """One entry per distinct racial trait text, in the file's first-seen order."""
+    subrace_race = {
+        subrace["index"]: race
+        for race in loaded[RACES_FILE]
+        for subrace in race["subraces"]
+    }
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for record in records:
+        groups.setdefault("\n\n".join(record["desc"]), []).append(record)
+    return [trait_entry(group, subrace_race) for group in groups.values()]
+
+
 SOURCES: dict[str, FileParser] = {
     SECTIONS_FILE: each(section_entries),
     CONDITIONS_FILE: each(condition_entries),
@@ -322,16 +407,20 @@ SOURCES: dict[str, FileParser] = {
     SPELLS_FILE: each(spell_entries),
     EQUIPMENT_FILE: each(equipment_entries),
     FEATURES_FILE: feature_entries,
+    RACES_FILE: race_entries,
+    TRAITS_FILE: trait_entries,
 }
 
 
 def load_corpus(data_dir: Path) -> list[Entry]:
     """Read every source file, refusing duplicate paths."""
+    loaded: Loaded = {
+        name: json.loads((data_dir / name).read_text(encoding="utf-8"))
+        for name in SOURCES
+    }
     entries: list[Entry] = []
     for name, parse in SOURCES.items():
-        text = (data_dir / name).read_text(encoding="utf-8")
-        records: list[dict[str, Any]] = json.loads(text)
-        entries.extend(parse(records))
+        entries.extend(parse(loaded[name], loaded))
 
     counts = Counter(e.path for e in entries)
     dupes = sorted(path for path, n in counts.items() if n > 1)

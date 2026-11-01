@@ -7,6 +7,7 @@ from typing import Any
 import pytest
 
 from rules_attorney.corpus import (
+    RACES_FILE,
     SECTIONS_FILE,
     SOURCES,
     CorpusError,
@@ -16,9 +17,11 @@ from rules_attorney.corpus import (
     feature_entries,
     load_corpus,
     prerequisite,
+    race_entries,
     section_entries,
     slug,
     spell_entries,
+    trait_entries,
     weapon_property_entries,
 )
 
@@ -162,6 +165,10 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "class-features > fighter > champion > improved-critical",
         "class-features > cleric > channel-divinity-1rest",
         "class-features > cleric > channel-divinity-2rest",
+        "races > halfling",
+        "racial-traits > darkvision",
+        "racial-traits > dwarf > hill-dwarf > dwarven-toughness",
+        "racial-traits > dragonborn > draconic-ancestry",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:
@@ -433,3 +440,102 @@ def test_prerequisite_writes_each_kind(
     requirement: dict[str, Any], expected: str
 ) -> None:
     assert prerequisite(requirement) == expected
+
+
+def ref(index: str, name: str) -> dict[str, str]:
+    """A made-up reference to another record, as the source writes one."""
+    return {"index": index, "name": name}
+
+
+# A made-up race with one subrace, as the races file holds it. Only the races
+# say which race a subrace belongs to, so the trait tests hand it over too.
+MOUNTAINFOLK = {
+    "index": "mountainfolk",
+    "name": "Mountainfolk",
+    "size": "Small",
+    "speed": 25,
+    "traits": [ref("stone-sense", "Stone Sense")],
+    "subraces": [ref("deep-mountainfolk", "Deep Mountainfolk")],
+}
+LOADED = {RACES_FILE: [MOUNTAINFOLK]}
+
+
+def trait(**fields: Any) -> dict[str, Any]:
+    """A made-up racial trait record, its fields overridden by the ones given."""
+    record: dict[str, Any] = {
+        "index": "stone-sense",
+        "name": "Stone Sense",
+        "races": [ref("mountainfolk", "Mountainfolk")],
+        "subraces": [],
+        "desc": ["You sense stone."],
+    }
+    record.update(fields)
+    return record
+
+
+def test_race_entries_writes_size_speed_traits_and_subraces() -> None:
+    entries = race_entries([MOUNTAINFOLK])
+    assert [e.path for e in entries] == ["races > mountainfolk"]
+    assert entries[0].text == (
+        "Mountainfolk\n"
+        "\n"
+        "Size: Small\n"
+        "Speed: 25 feet\n"
+        "Traits: Stone Sense\n"
+        "Subraces: Deep Mountainfolk"
+    )
+
+
+def test_race_entries_writes_none_for_a_race_without_traits() -> None:
+    plain = {**MOUNTAINFOLK, "traits": [], "subraces": []}
+    lines = race_entries([plain])[0].text.splitlines()
+    assert "Traits: none" in lines
+    assert not any(line.startswith("Subraces:") for line in lines)
+
+
+def test_trait_entries_cites_a_race_trait_under_its_race() -> None:
+    entries = trait_entries([trait()], LOADED)
+    assert [e.path for e in entries] == ["racial-traits > mountainfolk > stone-sense"]
+    assert entries[0].text == ("Stone Sense\n\nRace: Mountainfolk\n\nYou sense stone.")
+
+
+def test_trait_entries_cites_a_shared_trait_without_a_race() -> None:
+    record = trait(races=[ref("mountainfolk", "Mountainfolk"), ref("dwarf", "Dwarf")])
+    entries = trait_entries([record], LOADED)
+    assert [e.path for e in entries] == ["racial-traits > stone-sense"]
+    assert "Races: Dwarf, Mountainfolk" in entries[0].text.splitlines()
+
+
+def test_trait_entries_finds_a_subrace_traits_race_in_the_races() -> None:
+    record = trait(
+        index="deep-sight",
+        name="Deep Sight",
+        races=[],
+        subraces=[ref("deep-mountainfolk", "Deep Mountainfolk")],
+    )
+    entries = trait_entries([record], LOADED)
+    assert [e.path for e in entries] == [
+        "racial-traits > mountainfolk > deep-mountainfolk > deep-sight"
+    ]
+    assert entries[0].text.splitlines()[2:4] == [
+        "Race: Mountainfolk",
+        "Subrace: Deep Mountainfolk",
+    ]
+
+
+def test_trait_entries_merges_variants_into_options() -> None:
+    breath = {
+        "area_of_effect": {"size": 15, "type": "cone"},
+        "dc": {"dc_type": {"name": "CON"}},
+    }
+    variant = trait(
+        index="ancestry-green",
+        name="Ancestry (Green)",
+        parent=ref("ancestry", "Ancestry"),
+        trait_specific={"damage_type": {"name": "Poison"}, "breath_weapon": breath},
+    )
+    # The variant comes first, so the name has to be passed over to its parent's.
+    entries = trait_entries([variant, trait(index="ancestry", name="Ancestry")], LOADED)
+    assert [e.path for e in entries] == ["racial-traits > mountainfolk > ancestry"]
+    assert entries[0].text.splitlines()[0] == "Ancestry"
+    assert "Options: Green: poison, 15 ft. cone, Con save" in entries[0].text
