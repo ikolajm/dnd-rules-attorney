@@ -13,7 +13,9 @@ from rules_attorney.corpus import (
     armor_lines,
     condition_entries,
     equipment_entries,
+    feature_entries,
     load_corpus,
+    prerequisite,
     section_entries,
     slug,
     spell_entries,
@@ -155,6 +157,11 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "equipment > longsword",
         "equipment > net",
         "equipment > shield",
+        "class-features > extra-attack",
+        "class-features > fighter > extra-attack",
+        "class-features > fighter > champion > improved-critical",
+        "class-features > cleric > channel-divinity-1rest",
+        "class-features > cleric > channel-divinity-2rest",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:
@@ -320,3 +327,109 @@ def test_equipment_entries_skips_gear() -> None:
         "equipment_category": {"index": "adventuring-gear", "name": "Adventuring Gear"},
     }
     assert equipment_entries(record) == []
+
+
+def feature(**fields: Any) -> dict[str, Any]:
+    """A made-up class feature record, its fields overridden by the ones given."""
+    record: dict[str, Any] = {
+        "index": "rally",
+        "name": "Rally",
+        "class": {"index": "bard", "name": "Bard"},
+        "level": 1,
+        "prerequisites": [],
+        "desc": ["You rally your allies."],
+    }
+    record.update(fields)
+    return record
+
+
+def test_feature_entries_merges_a_scaling_family() -> None:
+    records = [
+        feature(index="rally-d6", name="Rally (d6)", level=1),
+        feature(index="rally-d8", name="Rally (d8)", level=5),
+    ]
+    entries = feature_entries(records)
+    assert [e.path for e in entries] == ["class-features > bard > rally"]
+    assert entries[0].text == (
+        "Rally\n\nClass: Bard\nLevels: 1 (d6), 5 (d8)\n\nYou rally your allies."
+    )
+
+
+def test_feature_entries_merges_one_text_across_classes() -> None:
+    # "class" is a keyword, so the field goes in by dict unpacking.
+    records = [
+        feature(**{"class": {"index": "paladin", "name": "Paladin"}}),
+        feature(**{"class": {"index": "monk", "name": "Monk"}}),
+    ]
+    entries = feature_entries(records)
+    assert [e.path for e in entries] == ["class-features > rally"]
+    assert entries[0].text == (
+        "Rally\n\nClasses: Monk, Paladin\nLevel: 1\n\nYou rally your allies."
+    )
+
+
+def test_feature_entries_writes_subclass_options_and_prerequisite() -> None:
+    subclass = {"index": "storm", "name": "Storm"}
+    # The variant comes first, so the name has to be passed over to its parent's.
+    records = [
+        feature(name="Ancestor: Red - Fire Damage", subclass=subclass),
+        feature(name="Ancestor", subclass=subclass),
+        feature(
+            index="spark-lance",
+            name="Spark Lance",
+            level=2,
+            desc=["Your bolt reaches farther."],
+            prerequisites=[
+                {"type": "spell", "spell": "/api/2014/spells/eldritch-blast"}
+            ],
+        ),
+    ]
+    entries = feature_entries(records)
+    assert [e.path for e in entries] == [
+        "class-features > bard > storm > ancestor",
+        "class-features > bard > spark-lance",
+    ]
+    assert entries[0].text == (
+        "Ancestor\n"
+        "\n"
+        "Class: Bard\n"
+        "Subclass: Storm\n"
+        "Level: 1\n"
+        "Options: Red - Fire Damage\n"
+        "\n"
+        "You rally your allies."
+    )
+    assert "Prerequisite: eldritch blast" in entries[1].text.splitlines()
+
+
+def test_feature_entries_keeps_parentheticals_where_names_would_collide() -> None:
+    records = [
+        feature(name="Rally (1/rest)", level=2),
+        feature(name="Rally (2/rest)", level=6, desc=["You rally twice."]),
+    ]
+    entries = feature_entries(records)
+    assert [e.path for e in entries] == [
+        "class-features > bard > rally-1rest",
+        "class-features > bard > rally-2rest",
+    ]
+    assert entries[0].text.startswith("Rally (1/rest)\n")
+
+
+@pytest.mark.parametrize(
+    ("requirement", "expected"),
+    [
+        ({"type": "level", "level": 5}, "level 5"),
+        (
+            {"type": "spell", "spell": "/api/2014/spells/eldritch-blast"},
+            "eldritch blast",
+        ),
+        (
+            {"type": "feature", "feature": "/api/2014/features/pact-of-the-tome"},
+            "pact of the tome",
+        ),
+    ],
+)
+def test_prerequisite_writes_each_kind(
+    requirement: dict[str, Any], expected: str
+) -> None:
+    assert prerequisite(requirement) == expected
