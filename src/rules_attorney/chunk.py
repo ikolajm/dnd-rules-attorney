@@ -6,7 +6,15 @@ from itertools import groupby
 from rules_attorney.corpus import Entry
 
 # Sources hold one record per entry
-WHOLE = ("conditions", "spells", "weapon-properties", "equipment", "class-features")
+WHOLE = (
+    "conditions",
+    "spells",
+    "weapon-properties",
+    "equipment",
+    "class-features",
+    "races",
+    "racial-traits",
+)
 WINDOW = 800
 OVERLAP = 200
 SEPARATOR = "\n\n"
