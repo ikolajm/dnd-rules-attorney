@@ -9200,3 +9200,435 @@ Ritual: no
 You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.
 
 An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such a creature can remain evasive in its answers as long as it remains within the boundaries of the truth.
+
+## equipment > club
+
+Club
+
+Category: Simple melee weapon
+Damage: 1d4 bludgeoning
+Properties: Light, Monk
+
+## equipment > dagger
+
+Dagger
+
+Category: Simple melee weapon
+Damage: 1d4 piercing
+Properties: Finesse, Light, Thrown, Monk
+Thrown range: 20/60 ft.
+
+## equipment > greatclub
+
+Greatclub
+
+Category: Simple melee weapon
+Damage: 1d8 bludgeoning
+Properties: Two-Handed
+
+## equipment > handaxe
+
+Handaxe
+
+Category: Simple melee weapon
+Damage: 1d6 slashing
+Properties: Light, Thrown, Monk
+Thrown range: 20/60 ft.
+
+## equipment > javelin
+
+Javelin
+
+Category: Simple melee weapon
+Damage: 1d6 piercing
+Properties: Thrown, Monk
+Thrown range: 30/120 ft.
+
+## equipment > light-hammer
+
+Light hammer
+
+Category: Simple melee weapon
+Damage: 1d4 bludgeoning
+Properties: Light, Thrown, Monk
+Thrown range: 20/60 ft.
+
+## equipment > mace
+
+Mace
+
+Category: Simple melee weapon
+Damage: 1d6 bludgeoning
+Properties: Monk
+
+## equipment > quarterstaff
+
+Quarterstaff
+
+Category: Simple melee weapon
+Damage: 1d6 bludgeoning (1d8 two-handed)
+Properties: Versatile, Monk
+
+## equipment > sickle
+
+Sickle
+
+Category: Simple melee weapon
+Damage: 1d4 slashing
+Properties: Light, Monk
+
+## equipment > spear
+
+Spear
+
+Category: Simple melee weapon
+Damage: 1d6 piercing (1d8 two-handed)
+Properties: Thrown, Versatile, Monk
+Thrown range: 20/60 ft.
+
+## equipment > crossbow-light
+
+Crossbow, light
+
+Category: Simple ranged weapon
+Damage: 1d8 piercing
+Properties: Ammunition, Loading, Two-Handed
+Range: 80/320 ft.
+
+## equipment > dart
+
+Dart
+
+Category: Simple ranged weapon
+Damage: 1d4 piercing
+Properties: Finesse, Thrown
+Range: 20/60 ft.
+
+## equipment > shortbow
+
+Shortbow
+
+Category: Simple ranged weapon
+Damage: 1d6 piercing
+Properties: Ammunition, Two-Handed
+Range: 80/320 ft.
+
+## equipment > sling
+
+Sling
+
+Category: Simple ranged weapon
+Damage: 1d4 bludgeoning
+Properties: Ammunition
+Range: 30/120 ft.
+
+## equipment > battleaxe
+
+Battleaxe
+
+Category: Martial melee weapon
+Damage: 1d8 slashing (1d10 two-handed)
+Properties: Versatile
+
+## equipment > flail
+
+Flail
+
+Category: Martial melee weapon
+Damage: 1d8 bludgeoning
+Properties: none
+
+## equipment > glaive
+
+Glaive
+
+Category: Martial melee weapon
+Damage: 1d10 slashing
+Properties: Heavy, Reach, Two-Handed
+
+## equipment > greataxe
+
+Greataxe
+
+Category: Martial melee weapon
+Damage: 1d12 slashing
+Properties: Heavy, Two-Handed
+
+## equipment > greatsword
+
+Greatsword
+
+Category: Martial melee weapon
+Damage: 2d6 slashing
+Properties: Heavy, Two-Handed
+
+## equipment > halberd
+
+Halberd
+
+Category: Martial melee weapon
+Damage: 1d10 slashing
+Properties: Heavy, Reach, Two-Handed
+
+## equipment > lance
+
+Lance
+
+Category: Martial melee weapon
+Damage: 1d12 piercing
+Properties: Reach, Special
+
+Special. You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted.
+
+## equipment > longsword
+
+Longsword
+
+Category: Martial melee weapon
+Damage: 1d8 slashing (1d10 two-handed)
+Properties: Versatile
+
+## equipment > maul
+
+Maul
+
+Category: Martial melee weapon
+Damage: 2d6 bludgeoning
+Properties: Heavy, Two-Handed
+
+## equipment > morningstar
+
+Morningstar
+
+Category: Martial melee weapon
+Damage: 1d8 piercing
+Properties: none
+
+## equipment > pike
+
+Pike
+
+Category: Martial melee weapon
+Damage: 1d10 piercing
+Properties: Heavy, Reach, Two-Handed
+
+## equipment > rapier
+
+Rapier
+
+Category: Martial melee weapon
+Damage: 1d8 piercing
+Properties: Finesse
+
+## equipment > scimitar
+
+Scimitar
+
+Category: Martial melee weapon
+Damage: 1d6 slashing
+Properties: Finesse, Light
+
+## equipment > shortsword
+
+Shortsword
+
+Category: Martial melee weapon
+Damage: 1d6 piercing
+Properties: Finesse, Light, Monk
+
+## equipment > trident
+
+Trident
+
+Category: Martial melee weapon
+Damage: 1d6 piercing (1d8 two-handed)
+Properties: Thrown, Versatile
+Thrown range: 20/60 ft.
+
+## equipment > war-pick
+
+War pick
+
+Category: Martial melee weapon
+Damage: 1d8 piercing
+Properties: none
+
+## equipment > warhammer
+
+Warhammer
+
+Category: Martial melee weapon
+Damage: 1d8 bludgeoning (1d10 two-handed)
+Properties: Versatile
+
+## equipment > whip
+
+Whip
+
+Category: Martial melee weapon
+Damage: 1d4 slashing
+Properties: Finesse, Reach
+
+## equipment > blowgun
+
+Blowgun
+
+Category: Martial ranged weapon
+Damage: 1 piercing
+Properties: Ammunition, Loading
+Range: 25/100 ft.
+
+## equipment > crossbow-hand
+
+Crossbow, hand
+
+Category: Martial ranged weapon
+Damage: 1d6 piercing
+Properties: Ammunition, Light, Loading
+Range: 30/120 ft.
+
+## equipment > crossbow-heavy
+
+Crossbow, heavy
+
+Category: Martial ranged weapon
+Damage: 1d10 piercing
+Properties: Ammunition, Heavy, Loading, Two-Handed
+Range: 100/400 ft.
+
+## equipment > longbow
+
+Longbow
+
+Category: Martial ranged weapon
+Damage: 1d8 piercing
+Properties: Ammunition, Heavy, Two-Handed
+Range: 150/600 ft.
+
+## equipment > net
+
+Net
+
+Category: Martial ranged weapon
+Damage: none
+Properties: Thrown, Special
+Range: 5/15 ft.
+
+Special. A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When you use an action, bonus action, or reaction to attack with a net, you can make only one attack regardless of the number of attacks you can normally make.
+
+## equipment > padded-armor
+
+Padded Armor
+
+Category: Light armor
+Armor class: 11 + Dex modifier
+Strength: none
+Stealth: disadvantage
+
+## equipment > leather-armor
+
+Leather Armor
+
+Category: Light armor
+Armor class: 11 + Dex modifier
+Strength: none
+Stealth: no disadvantage
+
+## equipment > studded-leather-armor
+
+Studded Leather Armor
+
+Category: Light armor
+Armor class: 12 + Dex modifier
+Strength: none
+Stealth: no disadvantage
+
+## equipment > hide-armor
+
+Hide Armor
+
+Category: Medium armor
+Armor class: 12 + Dex modifier (max 2)
+Strength: none
+Stealth: no disadvantage
+
+## equipment > chain-shirt
+
+Chain Shirt
+
+Category: Medium armor
+Armor class: 13 + Dex modifier (max 2)
+Strength: none
+Stealth: no disadvantage
+
+## equipment > scale-mail
+
+Scale Mail
+
+Category: Medium armor
+Armor class: 14 + Dex modifier (max 2)
+Strength: none
+Stealth: disadvantage
+
+## equipment > breastplate
+
+Breastplate
+
+Category: Medium armor
+Armor class: 14 + Dex modifier (max 2)
+Strength: none
+Stealth: no disadvantage
+
+## equipment > half-plate-armor
+
+Half Plate Armor
+
+Category: Medium armor
+Armor class: 15 + Dex modifier (max 2)
+Strength: none
+Stealth: disadvantage
+
+## equipment > ring-mail
+
+Ring Mail
+
+Category: Heavy armor
+Armor class: 14
+Strength: none
+Stealth: disadvantage
+
+## equipment > chain-mail
+
+Chain Mail
+
+Category: Heavy armor
+Armor class: 16
+Strength: 13
+Stealth: disadvantage
+
+## equipment > splint-armor
+
+Splint Armor
+
+Category: Heavy armor
+Armor class: 17
+Strength: 15
+Stealth: disadvantage
+
+## equipment > plate-armor
+
+Plate Armor
+
+Category: Heavy armor
+Armor class: 18
+Strength: 15
+Stealth: disadvantage
+
+## equipment > shield
+
+Shield
+
+Category: Shield
+Armor class: +2
+Strength: none
+Stealth: no disadvantage

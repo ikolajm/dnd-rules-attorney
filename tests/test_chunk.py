@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+from typing import Any
 
 from rules_attorney.chunk import (
     Chunk,
@@ -13,7 +14,13 @@ from rules_attorney.chunk import (
     window_chunks,
     windows,
 )
-from rules_attorney.corpus import SOURCES, Entry, load_corpus
+from rules_attorney.corpus import (
+    EQUIPMENT_FILE,
+    EQUIPMENT_KINDS,
+    SOURCES,
+    Entry,
+    load_corpus,
+)
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
 ENTRIES = load_corpus(DATA)
@@ -58,10 +65,18 @@ def test_prepended_chunk_never_carries_its_own_path() -> None:
 def test_records_match_the_source_files() -> None:
     # Counted from the files, so the test follows the data rather than a
     # number typed in. A rule section is one record of many entries; a
-    # condition, spell or weapon property is one record of one.
-    expected = sum(
-        len(json.loads((DATA / name).read_text(encoding="utf-8"))) for name in SOURCES
-    )
+    # condition, spell, weapon property, weapon or armor is one record of
+    # one. Equipment that is neither is gear and makes no entry.
+    expected = 0
+    for name in SOURCES:
+        rows: list[dict[str, Any]] = json.loads(
+            (DATA / name).read_text(encoding="utf-8")
+        )
+        if name == EQUIPMENT_FILE:
+            rows = [
+                r for r in rows if r["equipment_category"]["index"] in EQUIPMENT_KINDS
+            ]
+        expected += len(rows)
     assert len(records(ENTRIES)) == expected
 
 
