@@ -1159,5 +1159,196 @@
       "equipment > dagger"
     ],
     "split": "dev"
+  },
+  {
+    "id": "halfling-greatsword",
+    "question": "Can my halfling fight with a greatsword without any penalty?",
+    "status": "settled",
+    "verdict": "no, they attack with it at disadvantage",
+    "ruling": "A halfling is Small. The greatsword has the heavy property, and Small creatures have disadvantage on attack rolls with heavy weapons. So a halfling can wield a greatsword, but attacks with it at disadvantage.",
+    "cites": [
+      "races > halfling",
+      "equipment > greatsword",
+      "weapon-properties > heavy"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "halfling-through-hostile-space",
+    "question": "Can my halfling move through the space of a hostile human?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "You can move through a hostile creature's space only if it is at least two sizes larger or smaller than you, and a Medium human is one size larger than a Small halfling, so the general rule says no. Halfling Nimbleness lets a halfling move through the space of any creature of a size larger than its own, hostile or not, so the halfling can. The space is still difficult terrain, and the halfling can't end its move there.",
+    "cites": [
+      "racial-traits > halfling > halfling-nimbleness",
+      "races > halfling",
+      "movement-and-position > moving-around-other-creatures",
+      "movement-and-position > creature-size > size-categories"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "halfling-grapple-large",
+    "question": "Can my halfling grapple a Large creature?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "The target of a grapple must be no more than one size larger than you. A halfling is Small, and Large is two sizes above Small, so a Large creature is too big for a halfling to grapple.",
+    "cites": [
+      "races > halfling",
+      "making-an-attack > melee-attacks > grappling",
+      "movement-and-position > creature-size > size-categories"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "darkvision-in-darkness-spell",
+    "question": "My dwarf has darkvision. Can they see inside the area of a Darkness spell?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Darkvision lets a creature see in darkness as if it were dim light. The Darkness spell's magical darkness is the exception: a creature with darkvision can't see through it. So the dwarf's darkvision does nothing inside the spell's area.",
+    "cites": [
+      "racial-traits > darkvision",
+      "spells > darkness"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "darkvision-perception-penalty",
+    "question": "With darkvision, do I have disadvantage on Perception checks in a pitch-dark cave?",
+    "status": "settled",
+    "verdict": "yes, on checks that rely on sight, within 60 feet",
+    "ruling": "Within 60 feet, darkvision lets you see in darkness as if it were dim light, so darkness is only lightly obscured for you. In a lightly obscured area, creatures have disadvantage on Wisdom (Perception) checks that rely on sight. So in the dark you can see, but your sight-based Perception checks have disadvantage, and beyond 60 feet the darkness is still darkness.",
+    "cites": [
+      "racial-traits > darkvision",
+      "the-environment > vision-and-light",
+      "the-environment > vision-and-light > darkvision"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "elf-sleep-spell",
+    "question": "Can the Sleep spell knock out my elf?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Sleep sends creatures into a magical slumber. An elf's Fey Ancestry says magic cannot put it to sleep, so the spell has no effect on the elf, whatever its hit points.",
+    "cites": [
+      "racial-traits > fey-ancestry",
+      "spells > sleep"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "relentless-endurance-massive-damage",
+    "question": "My half-orc has 10 maximum hit points and 5 left, and takes 20 damage. Can Relentless Endurance keep them at 1 hit point?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "The damage reduces the half-orc to 0 hit points with 15 remaining, and remaining damage equal to or more than your hit point maximum kills you instantly. Relentless Endurance works only when you are reduced to 0 hit points but not killed outright, so it can't save a half-orc from instant death.",
+    "cites": [
+      "racial-traits > half-orc > relentless-endurance",
+      "damage-and-healing > dropping-to-0-hit-points > instant-death"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "savage-attacks-sneak-attack",
+    "question": "My half-orc rogue scores a critical hit with a rapier and Sneak Attack. Does Savage Attacks let me roll an extra Sneak Attack die?",
+    "status": "settled",
+    "verdict": "no, an extra rapier die",
+    "ruling": "Savage Attacks lets you roll one of the weapon's damage dice one more time on a critical hit with a melee weapon attack. The rapier's damage die is a d8; Sneak Attack's dice are the feature's, not the weapon's. So the extra die is a rapier die, not a Sneak Attack die.",
+    "cites": [
+      "racial-traits > half-orc > savage-attacks",
+      "class-features > rogue > sneak-attack",
+      "equipment > rapier"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "lucky-death-save",
+    "question": "Can my halfling use Lucky on a death saving throw?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Lucky lets a halfling reroll a 1 on the d20 for an attack roll, ability check or saving throw. A death saving throw is a special saving throw, so a 1 on it can be rerolled. That matters, since a 1 on a death save counts as two failures.",
+    "cites": [
+      "racial-traits > halfling > lucky",
+      "damage-and-healing > dropping-to-0-hit-points > death-saving-throws"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "lucky-with-advantage",
+    "question": "My halfling rolls with advantage and gets a 1 and a 13. Can I use Lucky?",
+    "status": "settled",
+    "verdict": "yes, on the 1 only",
+    "ruling": "Lucky lets a halfling reroll a d20 that shows a 1. When you have advantage or disadvantage and something lets you reroll, you can reroll only one of the dice, and you choose which. So the halfling can reroll the 1 and then take the higher of the new roll and the 13.",
+    "cites": [
+      "racial-traits > halfling > lucky",
+      "advantage-and-disadvantage"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "dragonborn-breath-resisted",
+    "question": "A red dragonborn breathes on a gold dragonborn, who fails the save. How much damage does the gold dragonborn take?",
+    "status": "settled",
+    "verdict": "half the damage rolled",
+    "ruling": "A red dragonborn's breath deals fire damage, in full on a failed save. A gold dragonborn's ancestry is also tied to fire, and a dragonborn has resistance to the damage type of its ancestry. Resistance halves the damage, so the gold dragonborn takes half of what was rolled.",
+    "cites": [
+      "racial-traits > dragonborn > breath-weapon",
+      "racial-traits > dragonborn > draconic-ancestry",
+      "racial-traits > dragonborn > damage-resistance",
+      "damage-and-healing > damage-resistance-and-vulnerability"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "dwarf-poisoned-immunity",
+    "question": "Does Dwarven Resilience make my dwarf immune to being poisoned?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Dwarven Resilience gives advantage on saving throws against poison and resistance to poison damage. Neither is immunity: a dwarf that fails the save is still poisoned, with disadvantage on attack rolls and ability checks, and takes half of any poison damage.",
+    "cites": [
+      "racial-traits > dwarf > dwarven-resilience",
+      "conditions > poisoned"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "lightfoot-hide-behind-ally",
+    "question": "Can my lightfoot halfling hide behind our human fighter?",
+    "status": "settled",
+    "verdict": "yes, they can attempt it",
+    "ruling": "You can't hide from a creature that can see you clearly. A lightfoot halfling's Naturally Stealthy lets it attempt to hide even when it is obscured only by a creature at least one size larger, and a Medium human is one size larger than a Small halfling. So the halfling can try to hide behind the fighter, making a Dexterity (Stealth) check as usual.",
+    "cites": [
+      "racial-traits > halfling > lightfoot-halfling > naturally-stealthy",
+      "using-each-ability > dexterity > hiding",
+      "races > halfling"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "dwarf-poison-spray-save",
+    "question": "Does my dwarf get advantage on the saving throw against Poison Spray?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. Dwarven Resilience gives advantage on saving throws against poison, and Poison Spray is a puff of noxious gas that deals poison damage, so the save against it is a save against poison. Reading B: no. Poison names the poisons, the substances a creature touches, swallows, inhales or is wounded with, and the poisoned condition; Poison Spray is a spell that deals poison damage, and the trait's resistance to poison damage already covers that. Why the text does not settle it: the trait never says what counts as poison, and the spell is both a gas and a damage type.",
+    "cites": [
+      "racial-traits > dwarf > dwarven-resilience",
+      "spells > poison-spray",
+      "poisons"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "savage-attacks-unarmed-strike",
+    "question": "My half-orc monk scores a critical hit with an unarmed strike. Does Savage Attacks add a die?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. Savage Attacks rolls one of the weapon's damage dice again, and an unarmed strike is not a weapon, so it has no weapon damage dice to roll. Reading B: yes. An unarmed strike is a melee weapon attack, and Martial Arts has the monk roll a die in place of the unarmed strike's normal damage, so the strike has a damage die for Savage Attacks to roll again. Why the text does not settle it: the trait applies to melee weapon attacks, which an unarmed strike is, but rolls the weapon's dice, which an unarmed strike lacks unless Martial Arts' die counts as one.",
+    "cites": [
+      "racial-traits > half-orc > savage-attacks",
+      "making-an-attack > melee-attacks",
+      "class-features > monk > martial-arts"
+    ],
+    "split": "test"
   }
 ]
