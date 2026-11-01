@@ -18,7 +18,7 @@ This is level 3 below. The server streams each phase to the screen as server-sen
 - **Models:** `qwen3.5:9b` for the gate, the plan and the ruling, and `nomic-embed-text` for the embeddings, both through [Ollama](https://ollama.com), locally.
 - **Server:** Python and FastAPI, in `src/rules_attorney/`. The served calls build the same request the measured runs did, so what the screen shows is what the results table measured.
 - **Screen:** React and Vite in `web/`, styled with [Loom](https://github.com/ikolajm/loom).
-- **Corpus:** the SRD 5.1's rule sections, conditions, spells and weapon properties, from [5e-bits/5e-database](https://github.com/5e-bits/5e-database) at a pinned commit, in `data/srd-5.1/`.
+- **Corpus:** the SRD 5.1's rule sections, conditions, spells, weapon properties, weapons and armor, class features, races and racial traits, from [5e-bits/5e-database](https://github.com/5e-bits/5e-database) at a pinned commit, in `data/srd-5.1/`.
 
 ## Running it
 
@@ -57,42 +57,42 @@ The server embeds the corpus once at startup, then serves on port 8000. The scre
 
 ## Results
 
-**Level 1** answers each question from the 10 SRD entries most similar to it: entries chunked by header, embedded with `nomic-embed-text`, ranked by cosine similarity. **Level 3** first has the answering model split the question into sub-questions, one per rule it turns on, ranks the entries for the question and for each sub-question, and fuses the rankings with reciprocal rank fusion; the fused ranking's first 10 entries are handed over, so level 3 gets no more text than level 1. At both levels the model returns a structured ruling (an explanation, an ambiguity flag, a verdict and the entries cited), validated against a Pydantic schema. Scored on the held-out test split, once: 28 gold items, 22 with a verdict to judge and 8 that should be flagged as ambiguous.
+**Level 1** answers each question from the 10 SRD entries most similar to it: entries chunked by header, embedded with `nomic-embed-text`, ranked by cosine similarity. **Level 3** first has the answering model split the question into sub-questions, one per rule it turns on, ranks the entries for the question and for each sub-question, and fuses the rankings with reciprocal rank fusion; the fused ranking's first 10 entries are handed over, so level 3 gets no more text than level 1. At both levels the model returns a structured ruling (an explanation, an ambiguity flag, a verdict and the entries cited), validated against a Pydantic schema. Scored on the held-out test split, once on the grown corpus: 45 gold items, 37 with a verdict to judge and 10 that should be flagged as ambiguous.
 
 | Model | Level | Thinking | Agreement | Expected flagged | Settled flagged | Schema failures | Cites resolved, strict | Once unmarked |
 |---|---|---|---|---|---|---|---|---|
-| claude-opus-5-5 | 1 | adaptive | 20 / 22 | 4 / 8 | 1 / 20 | 0 / 28 | 66 / 66 | 66 / 66 |
-| claude-opus-5-5 | 3 | adaptive | 21 / 22 | 3 / 8 | 0 / 20 | 0 / 28 | 68 / 68 | 68 / 68 |
-| gemma4:12b | 1 | off | 19 / 22 | 3 / 8 | 4 / 20 | 0 / 28 | 36 / 47 | 36 / 47 |
-| qwen3.5:9b | 1 | off | 20 / 22 | 0 / 8 | 2 / 20 | 0 / 28 | 41 / 47 | 46 / 47 |
-| qwen3.5:9b | 3 | off | 18 / 22 | 0 / 8 | 2 / 20 | 1 / 28 | 38 / 44 | 44 / 44 |
-| qwen3.5:4b | 1 | off | 18 / 22 | 3 / 8 | 1 / 20 | 2 / 28 | 27 / 38 | 31 / 38 |
-| qwen3.5:2b | 1 | off | 14 / 22 | 1 / 8 | 4 / 20 | 0 / 28 | 0 / 37 | 33 / 37 |
-| qwen3.5:0.8b | 1 | off | 13 / 22 | 3 / 8 | 7 / 20 | 1 / 28 | 5 / 34 | 7 / 34 |
-| ministral-3:8b | 1 | off | 18 / 22 | 5 / 8 | 10 / 20 | 0 / 28 | 26 / 53 | 42 / 53 |
-| olmo-3:7b-instruct | 1 | off | 13 / 22 | 5 / 8 | 9 / 20 | 0 / 28 | 17 / 36 | 27 / 36 |
-| floor | - | - | 10 / 22 | 0 / 8 | 0 / 20 | 0 / 28 | 0 / 0 | 0 / 0 |
+| claude-opus-5-5 | 1 | adaptive | 32 / 37 | 4 / 10 | 0 / 35 | 0 / 45 | 109 / 109 | 109 / 109 |
+| claude-opus-5-5 | 3 | adaptive | 33 / 37 | 4 / 10 | 0 / 35 | 0 / 45 | 110 / 110 | 110 / 110 |
+| gemma4:12b | 1 | off | 28 / 37 | 1 / 10 | 10 / 35 | 1 / 45 | 65 / 77 | 65 / 77 |
+| qwen3.5:9b | 1 | off | 32 / 37 | 1 / 10 | 3 / 35 | 0 / 45 | 74 / 78 | 77 / 78 |
+| qwen3.5:9b | 3 | off | 28 / 37 | 1 / 10 | 3 / 35 | 2 / 45 | 69 / 76 | 76 / 76 |
+| qwen3.5:4b | 1 | off | 29 / 37 | 1 / 10 | 6 / 35 | 3 / 45 | 50 / 67 | 58 / 67 |
+| qwen3.5:2b | 1 | off | 27 / 37 | 1 / 10 | 4 / 35 | 0 / 45 | 1 / 62 | 59 / 62 |
+| qwen3.5:0.8b | 1 | off | 17 / 37 | 4 / 10 | 9 / 35 | 1 / 45 | 11 / 52 | 14 / 52 |
+| ministral-3:8b | 1 | off | 28 / 37 | 2 / 10 | 18 / 35 | 0 / 45 | 18 / 80 | 56 / 80 |
+| olmo-3:7b-instruct | 1 | off | 17 / 37 | 3 / 10 | 13 / 35 | 0 / 45 | 37 / 64 | 54 / 64 |
+| floor | - | - | 18 / 37 | 0 / 10 | 0 / 35 | 0 / 45 | 0 / 0 | 0 / 0 |
 
 - **Agreement** is whether the verdict means the same as the gold verdict, decided by Claude Sonnet 5.5 as judge. The judge was checked against hand grades before its scores were counted, and matched twelve of twelve graded blind.
 - **The flag** is read as two rates, never one count: a system that never flags would score well on a count, since settled items outnumber the rest.
 - **Cites** are checked against the corpus as written and once a leading `## ` marker, the commonest slip, is removed.
 - **The floor** answers "no" to every item, never flags and cites nothing, judged like any other row, so the bottom of the table is measured.
 - **Local models** run through Ollama as their default tags ship them, `Q4_K_M` except `qwen3.5:2b` and `qwen3.5:0.8b` at `Q8_0`, with thinking off and temperature 0. **Opus 5.5** is the ceiling, through the API at effort `high`; it cannot turn thinking off.
-- With 22 judged items, one item is about four and a half points, and a gap of one between rows is not a finding. Agreement does not separate the top three; the ceiling separates on the flag and on cites.
-- **Level 3 does not separate from level 1.** Opus gains one verdict net and `qwen3.5:9b` loses two: it gains one and loses three, one of the three its schema failure, an explanation that argued both readings until it reached the 4,096-token cap. The 9b looped that way once at level 3 on dev as well, and not at level 1 on either split. The planning call adds about 100 seconds across the 28 items for Opus and 15 for the 9b.
+- With 37 judged items, one item is about 2.7 points, and a gap of one between rows is not a finding. Agreement does not separate the top three; the ceiling separates on the flag and on cites.
+- **Level 3 gives Opus one verdict and costs `qwen3.5:9b` four.** Opus gains two and loses one. The 9b gains one and loses five, two of the five its schema failures: explanations that argued both readings until they reached the 4,096-token cap. On dev the 9b loses four too, 39 to 35 of 54. The loop is not level 3's alone: on dev the 9b hit the cap once at each level. The planning call adds about 160 seconds across the 45 items for Opus and 25 for the 9b.
 
 Retrieval on the same test items, scored against the entries each gold item cites:
 
 | k | recall@k, level 1 | all-cites@k, level 1 | all-cites@k, level 3 planned by `qwen3.5:9b` | all-cites@k, level 3 planned by Opus |
 |---|---|---|---|---|
-| 3 | 0.729 | 0.464 | 0.464 | 0.393 |
-| 5 | 0.824 | 0.607 | 0.571 | 0.571 |
-| 10 | 0.899 | 0.750 | 0.714 | 0.786 |
-| 20 | 0.952 | 0.893 | 0.857 | - |
+| 3 | 0.650 | 0.333 | 0.222 | 0.333 |
+| 5 | 0.733 | 0.444 | 0.400 | 0.467 |
+| 10 | 0.839 | 0.600 | 0.489 | 0.667 |
+| 20 | 0.909 | 0.778 | 0.689 | - |
 
-recall@k is the share of an item's cited entries in the top k; all-cites@k is the share of items with every cited entry there. At the k the model is handed, a quarter of items are missing an entry their ruling needs. Splitting the question moves that by one item either way, and the planner decides which way: the 9b gives one sub-question for 24 of 28 items, most of them a rephrasing of the question, while Opus gives none for 12 and two or three for the rest. Opus's level 3 column is counted from its answer run's records, which hold the 10 entries handed over, so it stops at 10.
+recall@k is the share of an item's cited entries in the top k; all-cites@k is the share of items with every cited entry there. At the k the model is handed, two items in five are missing an entry their ruling needs. Most of that is the items the grown corpus brought: the 28 earlier items complete 21 at 10 on their earlier cites, as before the corpus grew, and 19 with two of them re-cited to a class feature, while the 17 new items complete 8, most misses a short weapon entry or the size rule. Splitting the question helps when the planner decomposes and costs when it rephrases: Opus gives no sub-questions for 16 of 45 items and two to four for the rest, gaining three items at 10, while the 9b gives one for 37, most of them a rephrasing of the question, and loses five. Opus's level 3 column is counted from its answer run's records, which hold the 10 entries handed over, so it stops at 10.
 
-Every other number is computed from run records by `scripts/summarize_runs.py --table`, `scripts/eval_retrieval.py --split test` and `scripts/eval_multihop.py --split test`. Level 1's rows are at commit `df178dc` and level 3's at `f9e8a3b`.
+Every other number is computed from run records by `scripts/summarize_runs.py --table`, `scripts/eval_retrieval.py --split test` and `scripts/eval_multihop.py --split test`, all at commit `62538c6`.
 
 ## Reproducing the results
 
