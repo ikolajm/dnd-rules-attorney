@@ -16,10 +16,66 @@ EQUIPMENT_FILE = "5e-SRD-Equipment.json"
 FEATURES_FILE = "5e-SRD-Features.json"
 RACES_FILE = "5e-SRD-Races.json"
 TRAITS_FILE = "5e-SRD-Traits.json"
+CLASSES_FILE = "5e-SRD-Classes.json"
+FEATS_FILE = "5e-SRD-Feats.json"
+# Written by hand from the SRD 5.1 document, not pulled: the rules its prose
+# holds that no source file does, each passage with its page.
+SUPPLEMENT_FILE = "supplement.json"
 
-# The equipment categories that become entries; the rest of the file is gear,
-# a lookup rather than a dispute.
+# The equipment categories that become entries.
 EQUIPMENT_KINDS = ("weapon", "armor")
+# The gear whose description carries a rule a ruling can turn on; the rest of
+# the gear is a lookup, a price or a capacity. Silk rope repeats hempen's text.
+GEAR_WITH_RULES = (
+    "acid-vial",
+    "alchemists-fire-flask",
+    "antitoxin-vial",
+    "ball-bearings-bag-of-1000",
+    "block-and-tackle",
+    "caltrops",
+    "candle",
+    "chain-10-feet",
+    "climbers-kit",
+    "component-pouch",
+    "crowbar",
+    "healers-kit",
+    "holy-water-flask",
+    "hunting-trap",
+    "lamp",
+    "lantern-bullseye",
+    "lantern-hooded",
+    "lock",
+    "magnifying-glass",
+    "manacles",
+    "oil-flask",
+    "poison-basic-vial",
+    "ram-portable",
+    "rope-hempen-50-feet",
+    "tinderbox",
+    "torch",
+)
+# A spellcasting focus is several gear records sharing one text; each becomes
+# one entry under the focus's name, its forms a line.
+FOCI = {
+    "Arcane Focus": ("crystal", "orb", "rod", "staff", "wand"),
+    "Druidic Focus": ("sprig-of-mistletoe", "totem", "wooden-staff", "yew-wand"),
+    "Holy Symbol": ("amulet", "emblem", "reliquary"),
+}
+ABILITIES = {
+    "str": "Strength",
+    "dex": "Dexterity",
+    "con": "Constitution",
+    "int": "Intelligence",
+    "wis": "Wisdom",
+    "cha": "Charisma",
+}
+ARMOR_PROFICIENCIES = (
+    "light-armor",
+    "medium-armor",
+    "heavy-armor",
+    "all-armor",
+    "shields",
+)
 
 
 def slug(text: str) -> str:
@@ -38,6 +94,22 @@ class CorpusError(Exception):
 class Entry:
     path: str
     text: str
+
+
+@dataclass(frozen=True)
+class Join:
+    """Text added to the corpus once its entries are built.
+
+    `append` adds paragraphs to the end of an existing entry, `insert` adds
+    text right after the one place `after` occurs in it, and `new` makes an
+    entry, `name` its first line.
+    """
+
+    op: str
+    path: str
+    text: str
+    after: str | None = None
+    name: str | None = None
 
 
 type Parser = Callable[[dict[str, Any]], list[Entry]]
@@ -195,13 +267,15 @@ def armor_lines(record: dict[str, Any]) -> list[str]:
 
 
 def equipment_entries(record: dict[str, Any]) -> list[Entry]:
-    """Make the single entry for one weapon or armor; any other equipment makes none."""
+    """The single entry for a weapon, armor or gear with a rule; others make none."""
     kind: str = record["equipment_category"]["index"]
-    if kind not in EQUIPMENT_KINDS:
-        return []
     index: str = record["index"]
     name: str = record["name"]
     path = f"equipment > {index}"
+    if index in GEAR_WITH_RULES:
+        return [Entry(path=path, text="\n\n".join([name, *record["desc"]]))]
+    if kind not in EQUIPMENT_KINDS:
+        return []
 
     lines = weapon_lines(record) if kind == "weapon" else armor_lines(record)
     blocks: list[str] = [name, "\n".join(lines)]
@@ -210,6 +284,31 @@ def equipment_entries(record: dict[str, Any]) -> list[Entry]:
         blocks.append("Special. " + "\n\n".join(special))
     text = "\n\n".join(blocks)
     return [Entry(path=path, text=text)]
+
+
+def focus_entries(records: list[dict[str, Any]]) -> list[Entry]:
+    """One entry per spellcasting focus, its forms merged on their shared text."""
+    by_index = {record["index"]: record for record in records}
+    entries: list[Entry] = []
+    for name, forms in FOCI.items():
+        group = [by_index[index] for index in forms if index in by_index]
+        if not group:
+            continue
+        texts = {"\n\n".join(record["desc"]) for record in group}
+        if len(group) != len(forms) or len(texts) != 1:
+            raise CorpusError(f"{name}: its forms are missing or differ in text")
+        line = f"Forms: {', '.join(record['name'] for record in group)}"
+        text = "\n\n".join([name, line, texts.pop()])
+        entries.append(Entry(path=f"equipment > {slug(name)}", text=text))
+    return entries
+
+
+def equipment_file_entries(
+    records: list[dict[str, Any]], loaded: Loaded | None = None
+) -> list[Entry]:
+    """The weapons, armor and gear with rules, then the spellcasting foci."""
+    entries = [entry for record in records for entry in equipment_entries(record)]
+    return entries + focus_entries(records)
 
 
 def feature_text(record: dict[str, Any]) -> str:
@@ -400,20 +499,132 @@ def trait_entries(records: list[dict[str, Any]], loaded: Loaded) -> list[Entry]:
     return [trait_entry(group, subrace_race) for group in groups.values()]
 
 
+def class_entries(record: dict[str, Any]) -> list[Entry]:
+    """Make the single entry for one class: its hit die, proficiencies and saves."""
+    armor: list[str] = []
+    weapons: list[str] = []
+    for proficiency in record["proficiencies"]:
+        index: str = proficiency["index"]
+        name: str = proficiency["name"]
+        if index in ARMOR_PROFICIENCIES:
+            armor.append(name)
+        elif index.startswith("saving-throw-") or name.endswith(("Kit", "Tools")):
+            # Saves are their own line; a tool is a lookup.
+            continue
+        else:
+            weapons.append(name)
+    saves = [ABILITIES[save["index"]] for save in record["saving_throws"]]
+    # A proficiency name can hold a comma, "Crossbows, light", so the lists
+    # are joined by semicolons.
+    lines = [
+        f"Hit die: d{record['hit_die']}",
+        f"Armor: {'; '.join(armor) or 'none'}",
+        f"Weapons: {'; '.join(weapons) or 'none'}",
+        f"Saving throws: {', '.join(saves)}",
+    ]
+    text = "\n\n".join([record["name"], "\n".join(lines)])
+    return [Entry(path=f"classes > {record['index']}", text=text)]
+
+
+def feat_entries(record: dict[str, Any]) -> list[Entry]:
+    """Make the single entry for one feat: its prerequisite, then its text."""
+    requirements = [
+        f"{ABILITIES[r['ability_score']['index']]} {r['minimum_score']}"
+        for r in record["prerequisites"]
+    ]
+    blocks: list[str] = [record["name"]]
+    if requirements:
+        blocks.append(f"Prerequisite: {'; '.join(requirements)}")
+    text = "\n\n".join([*blocks, *record["desc"]])
+    return [Entry(path=f"feats > {record['index']}", text=text)]
+
+
+def spellcasting_path(class_index: str) -> str:
+    """The feature a class's spellcasting text joins: Spellcasting or Pact Magic."""
+    feature = (
+        "pact-magic" if class_index == "warlock" else f"spellcasting-{class_index}"
+    )
+    return f"class-features > {class_index} > {feature}"
+
+
+def spellcasting_joins(loaded: Loaded) -> list[Join]:
+    """Each casting class's spellcasting rules, from its record, onto its feature."""
+    joins: list[Join] = []
+    for record in loaded[CLASSES_FILE]:
+        spellcasting: dict[str, Any] | None = record.get("spellcasting")
+        if not spellcasting:
+            continue
+        paragraphs: list[str] = []
+        for info in spellcasting["info"]:
+            first, *rest = info["desc"]
+            # A run-in heading, written as the rule sections write theirs.
+            paragraphs += [f"***{info['name']}.*** {first}", *rest]
+        joins.append(
+            Join("append", spellcasting_path(record["index"]), "\n\n".join(paragraphs))
+        )
+    return joins
+
+
+def supplement_joins(supplement: dict[str, Any]) -> list[Join]:
+    """The supplement's passages as joins; an insertion is one run of text."""
+    joins: list[Join] = []
+    for passage in supplement["passages"]:
+        op: str = passage["op"]
+        separator = "" if op == "insert" else "\n\n"
+        joins.append(
+            Join(
+                op,
+                passage["path"],
+                separator.join(passage["text"]),
+                after=passage.get("after"),
+                name=passage.get("name"),
+            )
+        )
+    return joins
+
+
+def apply_joins(entries: list[Entry], joins: list[Join]) -> list[Entry]:
+    """The entries with each join applied in turn, refusing one that misses its mark."""
+    texts = {entry.path: entry.text for entry in entries}
+    order = [entry.path for entry in entries]
+    for join in joins:
+        if join.op == "new":
+            if join.path in texts:
+                raise CorpusError(f"new entry already exists: {join.path}")
+            texts[join.path] = f"{join.name}\n\n{join.text}"
+            order.append(join.path)
+            continue
+        if join.path not in texts:
+            raise CorpusError(f"{join.op} into a missing entry: {join.path}")
+        text = texts[join.path]
+        if join.op == "append":
+            texts[join.path] = f"{text}\n\n{join.text}"
+        elif join.op == "insert":
+            anchor = join.after or ""
+            if not anchor or text.count(anchor) != 1:
+                raise CorpusError(f"insert needs one {anchor!r} in {join.path}")
+            texts[join.path] = text.replace(anchor, anchor + join.text)
+        else:
+            raise CorpusError(f"unknown join {join.op!r} for {join.path}")
+    return [Entry(path=path, text=texts[path]) for path in order]
+
+
 SOURCES: dict[str, FileParser] = {
     SECTIONS_FILE: each(section_entries),
     CONDITIONS_FILE: each(condition_entries),
     WEAPON_PROPERTIES_FILE: each(weapon_property_entries),
     SPELLS_FILE: each(spell_entries),
-    EQUIPMENT_FILE: each(equipment_entries),
+    EQUIPMENT_FILE: equipment_file_entries,
     FEATURES_FILE: feature_entries,
     RACES_FILE: race_entries,
     TRAITS_FILE: trait_entries,
+    CLASSES_FILE: each(class_entries),
+    FEATS_FILE: each(feat_entries),
 }
 
 
 def load_corpus(data_dir: Path) -> list[Entry]:
-    """Read every source file, refusing duplicate paths."""
+    """Read every source file and the supplement, refusing duplicate paths."""
     loaded: Loaded = {
         name: json.loads((data_dir / name).read_text(encoding="utf-8"))
         for name in SOURCES
@@ -422,11 +633,16 @@ def load_corpus(data_dir: Path) -> list[Entry]:
     for name, parse in SOURCES.items():
         entries.extend(parse(loaded[name], loaded))
 
+    # Checked before the joins, which key entries by path; a new entry's own
+    # clash is refused as it joins.
     counts = Counter(e.path for e in entries)
     dupes = sorted(path for path, n in counts.items() if n > 1)
     if dupes:
         raise CorpusError(f"duplicate paths: {', '.join(dupes)}")
-    return entries
+
+    supplement = json.loads((data_dir / SUPPLEMENT_FILE).read_text(encoding="utf-8"))
+    joins = spellcasting_joins(loaded) + supplement_joins(supplement)
+    return apply_joins(entries, joins)
 
 
 def render_markdown(entries: list[Entry]) -> str:

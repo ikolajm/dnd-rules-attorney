@@ -18,7 +18,7 @@ This is level 3 below. The server streams each phase to the screen as server-sen
 - **Models:** `qwen3.5:9b` for the gate, the plan and the ruling, and `nomic-embed-text` for the embeddings, both through [Ollama](https://ollama.com), locally.
 - **Server:** Python and FastAPI, in `src/rules_attorney/`. The served calls build the same request the measured runs did, so what the screen shows is what the results table measured.
 - **Screen:** React and Vite in `web/`, styled with [Loom](https://github.com/ikolajm/loom).
-- **Corpus:** the SRD 5.1's rule sections, conditions, spells, weapon properties, weapons and armor, class features, races and racial traits, from [5e-bits/5e-database](https://github.com/5e-bits/5e-database) at a pinned commit, in `data/srd-5.1/`.
+- **Corpus:** the SRD 5.1's rule sections, conditions, spells, weapon properties, weapons, armor and gear with rules, class features and the classes' spellcasting, classes, races, racial traits and feats, from [5e-bits/5e-database](https://github.com/5e-bits/5e-database) at a pinned commit, in `data/srd-5.1/`; and `supplement.json` beside them, the rules only the SRD 5.1 document's prose holds, copied verbatim by hand: multiclassing, the equipment chapter's armor and weapon rules, inspiration, gaining a level, the feats chapter, reaction spell triggers and a few lines more.
 
 ## Running it
 
@@ -108,6 +108,7 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 | `scripts/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs |
 | `scripts/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
 | `scripts/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
+| `scripts/check_supplement.py <srd.txt>` | Checks every passage in `supplement.json` word for word against the SRD 5.1 document's text |
 
 The judge and the hosted rows call the Claude API and authenticate with the profile `ant auth login` stores; a set `ANTHROPIC_API_KEY` takes precedence over it, even an empty one. Everything else runs locally. `scripts/pull_srd.py` refetches the corpus at its pinned commit.
 
