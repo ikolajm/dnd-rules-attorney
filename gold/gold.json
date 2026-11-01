@@ -699,7 +699,7 @@
     "question": "An attack hits me and I cast Shield. Does the +5 AC count against that attack?",
     "status": "settled",
     "verdict": "yes",
-    "ruling": "Shield gives a +5 bonus to AC until the start of your next turn, including against the triggering attack. An attack hits when its total equals or exceeds your AC, so the attack that triggered the spell is checked against your new AC, and one that would have hit by less than 5 misses. What triggers the reaction is not in this corpus; the ruling rests on Shield's own text that the bonus applies to the triggering attack.",
+    "ruling": "Shield gives a +5 bonus to AC until the start of your next turn, including against the triggering attack. Its casting time is a reaction taken when you are hit by an attack, so it is cast once the hit is known. An attack hits when its total equals or exceeds your AC, so the attack that triggered the spell is checked against your new AC, and one that would have hit by less than 5 misses.",
     "cites": [
       "spells > shield",
       "making-an-attack > attack-rolls"
@@ -735,7 +735,7 @@
     "question": "Can I cast Detect Magic without spending a spell slot?",
     "status": "settled",
     "verdict": "yes: as a ritual with a ritual-casting feature, or at will with the Eldritch Sight invocation",
-    "ruling": "Detect Magic has the ritual tag. A spell with that tag can be cast as a ritual, which takes 10 minutes longer than its normal casting time and doesn't expend a spell slot. Casting a ritual requires a feature that grants the ability, and the spell must be prepared or known unless the feature says otherwise. So with such a feature, Detect Magic takes 10 minutes and an action, and costs no slot. A warlock has a second way: the Eldritch Sight invocation lets you cast Detect Magic at will without expending a spell slot. The classes' own Ritual Casting features are in the class rules outside this corpus; the Book of Ancient Secrets invocation, which is in it, is one feature that grants ritual casting.",
+    "ruling": "Detect Magic has the ritual tag. A spell with that tag can be cast as a ritual, which takes 10 minutes longer than its normal casting time and doesn't expend a spell slot. Casting a ritual requires a feature that grants the ability, and the spell must be prepared or known unless the feature says otherwise. So with such a feature, Detect Magic takes 10 minutes and an action, and costs no slot. A warlock has a second way: the Eldritch Sight invocation lets you cast Detect Magic at will without expending a spell slot. The bard, cleric, druid and wizard each have Ritual Casting: a bard casts as a ritual a spell it knows, a cleric or druid one it has prepared, and a wizard one in its spellbook, prepared or not. The warlock's Book of Ancient Secrets invocation grants ritual casting too.",
     "cites": [
       "spells > detect-magic",
       "what-is-a-spell > rituals",
@@ -1348,6 +1348,246 @@
       "racial-traits > half-orc > savage-attacks",
       "making-an-attack > melee-attacks",
       "class-features > monk > martial-arts"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "multiclass-extra-attack-stack",
+    "question": "I'm a fighter 5 / ranger 5 with Extra Attack from both classes. How many attacks do I make when I take the Attack action?",
+    "status": "settled",
+    "verdict": "two",
+    "ruling": "Each class's Extra Attack lets you attack twice instead of once when you take the Attack action. When you gain Extra Attack from more than one class, the features don't add together, and you can't make more than two attacks with it unless the feature says you do, as the fighter's does only from 11th level in that class. A 5th-level fighter's Extra Attack gives two, so you make two attacks.",
+    "cites": [
+      "multiclassing > class-features > extra-attack",
+      "class-features > fighter > extra-attack",
+      "class-features > extra-attack"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "multiclass-spell-slots-paladin-sorcerer",
+    "question": "I'm a paladin 4 / sorcerer 3. What spell slots do I have?",
+    "status": "settled",
+    "verdict": "four 1st-level, three 2nd-level and two 3rd-level slots",
+    "ruling": "With the Spellcasting feature from both classes, you use the multiclass rules. Your slots come from adding your full levels in the sorcerer class and half your paladin levels, rounded down: 3 + 2 = 5. On the Multiclass Spellcaster table, 5th level gives four 1st-level, three 2nd-level and two 3rd-level slots. You can use the 3rd-level slots only to cast lower-level spells you know or have prepared.",
+    "cites": [
+      "multiclassing > class-features > spellcasting > spell-slots",
+      "multiclassing > class-features > spellcasting"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "multiclass-channel-divinity-uses",
+    "question": "I'm a cleric 2 / paladin 3. How many times can I use Channel Divinity between rests?",
+    "status": "settled",
+    "verdict": "once",
+    "ruling": "Both classes grant Channel Divinity, and each version is used once before a short or long rest. Gaining the feature from a second class gives you that class's effects but no additional use; more uses come only from a class level that explicitly grants them, as the cleric's 6th level does. So you can use it once between rests, choosing any effect from either class.",
+    "cites": [
+      "multiclassing > class-features > channel-divinity",
+      "class-features > cleric > channel-divinity-1rest",
+      "class-features > paladin > channel-divinity"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "multiclass-unarmored-defense",
+    "question": "I'm a barbarian 1 who takes a level in monk. Can I switch to the monk's Unarmored Defense, adding Wisdom instead of Constitution?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "If you already have the Unarmored Defense feature, you can't gain it again from another class. You have the barbarian's version, 10 + your Dexterity modifier + your Constitution modifier, which allows a shield; the monk level does not give you the monk's version.",
+    "cites": [
+      "multiclassing > class-features > unarmored-defense",
+      "class-features > barbarian > unarmored-defense",
+      "class-features > monk > unarmored-defense"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "wizard-in-plate",
+    "question": "My wizard puts on plate armor. Can she still cast spells?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Anyone can put on armor, but if you wear armor you lack proficiency with, you have disadvantage on any ability check, saving throw or attack roll that involves Strength or Dexterity, and you can't cast spells. The wizard has no armor proficiency, so in plate she can't cast spells.",
+    "cites": [
+      "armor > armor-proficiency",
+      "classes > wizard"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "weak-cleric-chain-mail",
+    "question": "My cleric has Strength 11 and puts on chain mail. What does it cost her?",
+    "status": "settled",
+    "verdict": "10 feet of speed, disadvantage on Strength and Dexterity rolls, and no spellcasting",
+    "ruling": "Chain mail is heavy armor with a Strength requirement of 13; armor with a Strength requirement reduces the wearer's speed by 10 feet unless the wearer's Strength meets it, and 11 does not. The cleric is proficient with light and medium armor and shields, not heavy armor, so she also has disadvantage on any ability check, saving throw or attack roll that involves Strength or Dexterity, and she can't cast spells.",
+    "cites": [
+      "equipment > chain-mail",
+      "armor > heavy-armor",
+      "armor > armor-proficiency",
+      "classes > cleric"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "dwarf-plate-speed",
+    "question": "My dwarf fighter has Strength 10 and wears plate armor. Is her speed reduced?",
+    "status": "settled",
+    "verdict": "no; it stays 25 feet",
+    "ruling": "Plate armor requires Strength 15, and heavy armor with a Strength requirement reduces the wearer's speed by 10 feet unless the wearer meets it. A dwarf's speed, though, is not reduced by wearing heavy armor, so her speed stays 25 feet. As a fighter she is proficient with all armor, so no other penalty applies.",
+    "cites": [
+      "races > dwarf",
+      "armor > heavy-armor",
+      "equipment > plate-armor"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "don-breastplate-in-ambush",
+    "question": "Woken by an ambush, I spend my first turn putting on my breastplate. Do I get its AC this round?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A breastplate is medium armor, which takes 5 minutes to don. You benefit from the armor's AC only if you take the full time to don it, so a turn spent on it gives you nothing this round.",
+    "cites": [
+      "armor > getting-into-and-out-of-armor",
+      "equipment > breastplate"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "throw-a-longsword",
+    "question": "I throw my longsword at a goblin 30 feet away. What damage does it deal, and does the distance matter?",
+    "status": "settled",
+    "verdict": "1d4, rolled with disadvantage at 30 feet",
+    "ruling": "The longsword has no thrown property. A melee weapon thrown without that property is an improvised weapon and deals 1d4 damage, and an improvised thrown weapon has a normal range of 20 feet and a long range of 60. At 30 feet the goblin is beyond normal range, so the attack roll has disadvantage.",
+    "cites": [
+      "weapons > improvised-weapons",
+      "equipment > longsword",
+      "making-an-attack > ranged-attacks > range"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "inspiration-stockpile",
+    "question": "The DM gives me inspiration twice before I use it. Do I have two inspirations?",
+    "status": "settled",
+    "verdict": "no; you have one",
+    "ruling": "You either have inspiration or you don't; you can't stockpile multiple inspirations for later use. The second award gives you nothing more. If you already have it, you can give it up to another player character instead.",
+    "cites": [
+      "inspiration"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "inspiration-after-the-roll",
+    "question": "I roll a 6 on an attack. Can I spend inspiration now to get advantage on it?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. You expend inspiration when you make the roll, and advantage means rolling a second d20 when you make it, so the choice comes before the d20 is rolled. Reading B: yes. The attack roll is still being made until its result is applied, so inspiration can be spent on it once the 6 is seen. Why the text does not settle it: \"when you make\" the roll can mean before the d20 is rolled or at any point while it is being resolved, and the text does not say whether a roll already seen can still take advantage.",
+    "cites": [
+      "inspiration",
+      "advantage-and-disadvantage"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "grappler-pin-attacks",
+    "question": "With the Grappler feat I pin a creature I'm grappling. Do my attacks against it have advantage?",
+    "status": "settled",
+    "verdict": "no; you roll normally",
+    "ruling": "Grappler gives you advantage on attack rolls against a creature you are grappling, and pinning it leaves you and the creature both restrained. Attacks against a restrained creature have advantage, but a restrained creature's own attack rolls have disadvantage, and you are restrained too. When a roll has both advantage and disadvantage, you have neither, however many sources there are of each, so you roll one d20.",
+    "cites": [
+      "feats > grappler",
+      "conditions > restrained",
+      "advantage-and-disadvantage"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "caltrops-then-dash",
+    "question": "An enemy fails its save against my caltrops. Can it Dash to keep moving this turn?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A creature that enters the caltrops and fails its DC 15 Dexterity save stops moving this turn and takes 1 piercing damage. Dash gives extra movement for the turn, but the creature has stopped moving, so it can't use it this turn. The damage also reduces its walking speed by 10 feet until it regains at least 1 hit point.",
+    "cites": [
+      "equipment > caltrops",
+      "actions-in-combat > dash"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "oil-then-fire-bolt",
+    "question": "I hit a goblin with a flask of oil, and the next round I hit it with Fire Bolt. How much fire damage does it take?",
+    "status": "settled",
+    "verdict": "1d10 + 5",
+    "ruling": "A creature hit by thrown oil is covered in it, and if it takes any fire damage before the oil dries after 1 minute, it takes an additional 5 fire damage from the burning oil. Fire Bolt deals 1d10 fire damage on a hit, so the goblin takes 1d10 + 5 fire damage.",
+    "cites": [
+      "equipment > oil-flask",
+      "spells > fire-bolt"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "wizard-ritual-unprepared",
+    "question": "My wizard didn't prepare Detect Magic today, but it's in her spellbook. Can she cast it as a ritual?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Detect Magic has the ritual tag. A caster needs a feature that grants ritual casting, and must have the spell prepared or known unless the feature says otherwise. The wizard's Ritual Casting does: she can cast a wizard spell as a ritual if it has the ritual tag and is in her spellbook, without having it prepared. The ritual takes 10 minutes longer and expends no slot.",
+    "cites": [
+      "class-features > wizard > spellcasting-wizard",
+      "what-is-a-spell > rituals",
+      "spells > detect-magic"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "cleric-ritual-unprepared",
+    "question": "My cleric didn't prepare Detect Magic today. Can he still cast it as a ritual?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Detect Magic has the ritual tag, but the cleric's Ritual Casting lets him cast a cleric spell as a ritual only if it has the ritual tag and he has it prepared. Without Detect Magic prepared, he can't cast it at all, ritual or not.",
+    "cites": [
+      "class-features > cleric > spellcasting-cleric",
+      "what-is-a-spell > rituals",
+      "spells > detect-magic"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "copy-fireball-too-early",
+    "question": "My 3rd-level wizard finds a scroll of Fireball. Can she copy it into her spellbook?",
+    "status": "settled",
+    "verdict": "no, not until she can prepare 3rd-level spells",
+    "ruling": "A wizard can copy a spell of 1st level or higher into her spellbook only if it is of a spell level she can prepare, and the spells she prepares must be of a level for which she has spell slots. A 3rd-level wizard has 1st- and 2nd-level slots, and Fireball is a 3rd-level spell, so she can't copy it yet.",
+    "cites": [
+      "class-features > wizard > your-spellbook",
+      "class-features > wizard > spellcasting-wizard",
+      "spells > fireball"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "counterspell-invisible-caster",
+    "question": "An invisible mage casts a spell 30 feet from me. Can I Counterspell it?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Counterspell is a reaction you take when you see a creature within 60 feet of you casting a spell. An invisible creature is impossible to see without magic or a special sense, so without one you can't see the mage casting, and the reaction's trigger never happens.",
+    "cites": [
+      "spells > counterspell",
+      "conditions > invisible"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "shield-emblem-with-mace",
+    "question": "My cleric holds a mace and a shield emblazoned with her holy symbol. Can she cast Bless?",
+    "status": "settled",
+    "verdict": "no, not while holding both",
+    "ruling": "Bless has verbal, somatic and material components. A cleric can use a holy symbol as a spellcasting focus in place of the material component, and bearing it on a shield counts. A somatic component, though, needs free use of at least one hand, and with a mace in one hand and the shield on the other she has none free. She can cast it only after freeing a hand.",
+    "cites": [
+      "equipment > holy-symbol",
+      "casting-a-spell > components > somatic-s",
+      "casting-a-spell > components > material-m",
+      "spells > bless"
     ],
     "split": "test"
   }
