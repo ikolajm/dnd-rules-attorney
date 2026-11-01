@@ -4154,7 +4154,7 @@ Counterspell
 
 Level: 3
 School: Abjuration
-Casting time: 1 reaction
+Casting time: 1 reaction, which you take when you see a creature within 60 feet of you casting a spell
 Range: 60 feet
 Components: S
 Duration: Instantaneous
@@ -5030,7 +5030,7 @@ Feather Fall
 
 Level: 1
 School: Transmutation
-Casting time: 1 reaction
+Casting time: 1 reaction, which you take when you or a creature within 60 feet of you falls
 Range: 60 feet
 Components: V, M (A small feather or a piece of down.)
 Duration: 1 minute
@@ -5959,7 +5959,7 @@ Hellish Rebuke
 
 Level: 1
 School: Evocation
-Casting time: 1 reaction
+Casting time: 1 reaction, which you take in response to being damaged by a creature within 60 feet of you that you can see
 Range: 60 feet
 Components: V, S
 Duration: Instantaneous
@@ -8032,7 +8032,7 @@ Shield
 
 Level: 1
 School: Abjuration
-Casting time: 1 reaction
+Casting time: 1 reaction, which you take when you are hit by an attack or targeted by the magic missile spell
 Range: Self
 Components: V, S
 Duration: 1 round
@@ -9633,6 +9633,228 @@ Armor class: +2
 Strength: none
 Stealth: no disadvantage
 
+## equipment > acid-vial
+
+Acid (vial)
+
+As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon.
+
+On a hit, the target takes 2d6 acid damage.
+
+## equipment > alchemists-fire-flask
+
+Alchemist's fire (flask)
+
+This sticky, adhesive fluid ignites when exposed to air.
+
+As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon.
+
+On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.
+
+## equipment > antitoxin-vial
+
+Antitoxin (vial)
+
+A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs.
+
+## equipment > ball-bearings-bag-of-1000
+
+Ball bearings (bag of 1,000)
+
+As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 10 feet on a side.
+
+A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone.
+
+A creature moving through the area at half speed doesn't need to make the save.
+
+## equipment > block-and-tackle
+
+Block and tackle
+
+A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift.
+
+## equipment > caltrops
+
+Caltrops
+
+As an action, you can spread a bag of caltrops to cover a square area that is 5 feet on a side.
+
+Any creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving this turn and take 1 piercing damage.
+
+Taking this damage reduces the creature's walking speed by 10 feet until the creature regains at least 1 hit point.
+
+A creature moving through the area at half speed doesn't need to make the save.
+
+## equipment > candle
+
+Candle
+
+For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.
+
+## equipment > chain-10-feet
+
+Chain (10 feet)
+
+A chain has 10 hit points. It can be burst with a successful DC 20 Strength check.
+
+## equipment > component-pouch
+
+Component pouch
+
+A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description).
+
+## equipment > crowbar
+
+Crowbar
+
+Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied.
+
+## equipment > holy-water-flask
+
+Holy water (flask)
+
+As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon.
+
+If the target is a fiend or undead, it takes 2d6 radiant damage.
+
+A cleric or paladin may create holy water by performing a special ritual.
+
+The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.
+
+## equipment > hunting-trap
+
+Hunting trap
+
+When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground.
+
+A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long).
+
+A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature.
+
+## equipment > climbers-kit
+
+Climber's Kit
+
+A climber's kit includes special pitons, boot tips, gloves, and a harness. You can use the climber's kit as an action to anchor yourself; when you do, you can't fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor.
+
+## equipment > healers-kit
+
+Healer's Kit
+
+This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check.
+
+## equipment > lamp
+
+Lamp
+
+A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.
+
+## equipment > lantern-bullseye
+
+Lantern, bullseye
+
+A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.
+
+## equipment > lantern-hooded
+
+Lantern, hooded
+
+A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.
+
+## equipment > lock
+
+Lock
+
+A key is provided with the lock. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check. Your GM may decide that better locks are available for higher prices.
+
+## equipment > magnifying-glass
+
+Magnifying glass
+
+This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.
+
+A magnifying glass grants advantage on any ability check made to appraise or inspect an item that is small or highly detailed.
+
+## equipment > manacles
+
+Manacles
+
+These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check.
+
+Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points.
+
+## equipment > oil-flask
+
+Oil (flask)
+
+Oil usually comes in a clay flask that holds 1 pint.
+
+As an action, you can splash the oil in this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. Make a ranged attack against a target creature or object, treating the oil as an improvised weapon.
+
+On a hit, the target is covered in oil. If the target takes any fire damage before the oil dries (after 1 minute), the target takes an additional 5 fire damage from the burning oil.
+
+You can also pour a flask of oil on the ground to cover a 5-foot-square area, provided that the surface is level.
+
+If lit, the oil burns for 2 rounds and deals 5 fire damage to any creature that enters the area or ends its turn in the area. A creature can take this damage only once per turn.
+
+## equipment > poison-basic-vial
+
+Poison, basic (vial)
+
+You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying.
+
+## equipment > ram-portable
+
+Ram, portable
+
+You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help you use the ram, giving you advantage on this check.
+
+## equipment > rope-hempen-50-feet
+
+Rope, hempen (50 feet)
+
+Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.
+
+## equipment > tinderbox
+
+Tinderbox
+
+This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.
+
+Lighting any other fire takes 1 minute.
+
+## equipment > torch
+
+Torch
+
+A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.
+
+## equipment > arcane-focus
+
+Arcane Focus
+
+Forms: Crystal, Orb, Rod, Staff, Wand
+
+An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus.
+
+## equipment > druidic-focus
+
+Druidic Focus
+
+Forms: Sprig of mistletoe, Totem, Wooden staff, Yew wand
+
+A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus.
+
+## equipment > holy-symbol
+
+Holy Symbol
+
+Forms: Amulet, Emblem, Reliquary
+
+A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.
+
+Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.
+
 ## class-features > barbarian > rage
 
 Rage
@@ -9826,6 +10048,30 @@ Level: 1
 
 You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations.
 
+***Cantrips.*** You know two cantrips of your choice from the bard spell list. You learn additional bard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Bard table.
+
+***Spell Slots.*** The Bard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+For example, if you know the 1st-level spell cure wounds and have a 1st-level and a 2nd-level spell slot available, you can cast cure wounds using either slot.
+
+***Spells Known of 1st Level and Higher.*** You know four 1st-level spells of your choice from the bard spell list.
+
+The Spells Known column of the Bard table shows when you learn more bard spells of your choice.
+
+Each of these spells must be of a level for which you have spell slots, as shown on the table. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.
+
+Additionally, when you gain a level in this class, you can choose one of the bard spells you know and replace it with another spell from the bard spell list, which also must be of a level for which you have spell slots.
+
+***Spellcasting Ability.*** Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or oration. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a bard spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Charisma modifier.
+
+Spell attack modifier = your proficiency bonus + your Charisma modifier.
+
+***Ritual Casting.*** You can cast any bard spell you know as a ritual if that spell has the ritual tag.
+
+***Spellcasting Focus.*** You can use a musical instrument (see Equipment) as a spellcasting focus for your bard spells.
+
 ## class-features > bard > bardic-inspiration
 
 Bardic Inspiration
@@ -9969,6 +10215,26 @@ Class: Cleric
 Level: 1
 
 As a conduit for divine power, you can cast cleric spells.
+
+***Cantrips.*** At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table.
+
+***Preparing and Casting Spells.*** The Cleric table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+You prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list. When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.
+
+For example, if you are a 3rd-level cleric, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.
+
+You can change your list of prepared spells when you finish a long rest. Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.
+
+***Spellcasting Ability.*** Wisdom is your spellcasting ability for your cleric spells. The power of your spells comes from your devotion to your deity. You use your Wisdom whenever a cleric spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Wisdom modifier
+
+Spell attack modifier = your proficiency bonus + your Wisdom modifier
+
+***Ritual Casting.*** You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared.
+
+***Spellcasting Focus.*** You can use a holy symbol (see Equipment) as a spellcasting focus for your cleric spells.
 
 ## class-features > cleric > divine-domain
 
@@ -10131,6 +10397,26 @@ Class: Druid
 Level: 1
 
 Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.
+
+***Cantrips.*** At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.
+
+***Preparing and Casting Spells.*** The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.
+
+For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.
+
+You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.
+
+***Spellcasting Ability.*** Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Wisdom modifier.
+
+Spell attack modifier = your proficiency bonus + your Wisdom modifier.
+
+***Ritual Casting.*** You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.
+
+***Spellcasting Focus.*** You can use a druidic focus (see chapter 5, "Equipment") as a spellcasting focus for your druid spells.
 
 ## class-features > druid > druidic
 
@@ -10759,6 +11045,22 @@ Level: 2
 
 By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.
 
+***Preparing and Casting Spells.*** The Paladin table shows how many spell slots you have to cast your spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.
+
+For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd- level slot. Casting the spell doesn't remove it from your list of prepared spells.
+
+You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.
+
+***Spellcasting Ability.*** Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Charisma modifier.
+
+Spell attack modifier = your proficiency bonus + your Charisma modifier.
+
+***Spellcasting Focus.*** You can use a holy symbol as a spellcasting focus for your paladin spells.
+
 ## class-features > paladin > divine-smite
 
 Divine Smite
@@ -10982,6 +11284,22 @@ Class: Ranger
 Level: 2
 
 By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does.
+
+***Spell Slots.*** The Ranger table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+For example, if you know the 1st-level spell animal friendship and have a 1st-level and a 2nd-level spell slot available, you can cast animal friendship using either slot.
+
+***Spells Known of 1st Level and Higher.*** You know two 1st-level spells of your choice from the ranger spell list.
+
+The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.
+
+Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots.
+
+***Spellcasting Ability.*** Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Wisdom modifier.
+
+Spell attack modifier = your proficiency bonus + your Wisdom modifier.
 
 ## class-features > ranger > ranger-archetype
 
@@ -11412,6 +11730,26 @@ Level: 1
 
 An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells.
 
+***Cantrips.*** At 1st level, you know four cantrips of your choice from the sorcerer spell list. You learn additional sorcerer cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Sorcerer table.
+
+***Spell Slots.*** The Sorcerer table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these sorcerer spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+For example, if you know the 1st-level spell burning hands and have a 1st-level and a 2nd-level spell slot available, you can cast burning hands using either slot.
+
+***Spells Known of 1st Level and Higher.*** You know two 1st-level spells of your choice from the sorcerer spell list.
+
+The Spells Known column of the Sorcerer table shows when you learn more sorcerer spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level. 
+
+Additionally, when you gain a level in this class, you can choose one of the sorcerer spells you know and replace it with another spell from the sorcerer spell list, which also must be of a level for which you have spell slots.
+
+***Spellcasting Ability.*** Charisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to project your will into the world. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a sorcerer spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Charisma modifier.
+
+Spell attack modifier = your proficiency bonus + your Charisma modifier.
+
+***Spellcasting Focus.*** You can use an arcane focus as a spellcasting focus for your sorcerer spells.
+
 ## class-features > sorcerer > sorcerous-origin
 
 Sorcerous Origin
@@ -11639,6 +11977,28 @@ Level: 1
 
 Your arcane research and the magic bestowed on you by your patron have given you facility with spells.
 
+***Cantrips.*** You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.
+
+***Spell Slots.*** The Warlock table shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.
+
+For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell.
+
+***Spells Known of 1st Level and Higher.*** At 1st level, you know two 1st-level spells of your choice from the warlock spell list.
+
+The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level and higher. 
+
+A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.
+
+Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.
+
+***Spellcasting Ability.*** Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Charisma modifier.
+
+Spell attack modifier = your proficiency bonus + your Charisma modifier.
+
+***Spellcasting Focus.*** You can use an arcane focus as a spellcasting focus for your warlock spells.
+
 ## class-features > warlock > eldritch-invocations
 
 Eldritch Invocations
@@ -11651,6 +12011,8 @@ In your study of occult lore, you have unearthed eldritch invocations, fragments
 At 2nd level, you gain two eldritch invocations of your choice. Your invocation options are detailed at the end of the class description. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.
 
 Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.
+
+If an eldritch invocation has prerequisites, you must meet them to learn it. You can learn the invocation at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class.
 
 ## class-features > warlock > eldritch-invocation-agonizing-blast
 
@@ -12086,6 +12448,28 @@ Level: 1
 
 As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.
 
+***Cantrips.*** At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table.
+
+***Spellbook.*** At 1st level, you have a spellbook containing six 1st- level wizard spells of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind.
+
+***Preparing and Casting Spells.*** The Wizard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.
+
+You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.
+
+For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell magic missile, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.
+
+You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list.
+
+***Spellcasting Ability.*** Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.
+
+Spell save DC = 8 + your proficiency bonus + your Intelligence modifier.
+
+Spell attack modifier = your proficiency bonus + your Intelligence modifier.
+
+***Ritual Casting.*** You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared.
+
+***Spellcasting Focus.*** You can use an arcane focus as a spellcasting focus for your wizard spells.
+
 ## class-features > wizard > arcane-recovery
 
 Arcane Recovery
@@ -12190,6 +12574,8 @@ Size: Medium
 Speed: 25 feet
 Traits: Darkvision, Dwarven Resilience, Stonecunning, Dwarven Combat Training, Tool Proficiency
 Subraces: Hill Dwarf
+
+***Speed.*** Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.
 
 ## races > elf
 
@@ -12501,3 +12887,444 @@ Infernal Legacy
 Race: Tiefling
 
 You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
+
+## classes > barbarian
+
+Barbarian
+
+Hit die: d12
+Armor: Light Armor; Medium Armor; Shields
+Weapons: Simple Weapons; Martial Weapons
+Saving throws: Strength, Constitution
+
+## classes > bard
+
+Bard
+
+Hit die: d8
+Armor: Light Armor
+Weapons: Simple Weapons; Longswords; Rapiers; Shortswords; Hand crossbows
+Saving throws: Dexterity, Charisma
+
+## classes > cleric
+
+Cleric
+
+Hit die: d8
+Armor: Light Armor; Medium Armor; Shields
+Weapons: Simple Weapons
+Saving throws: Wisdom, Charisma
+
+## classes > druid
+
+Druid
+
+Hit die: d8
+Armor: Light Armor; Medium Armor; Shields
+Weapons: Clubs; Daggers; Javelins; Maces; Quarterstaffs; Sickles; Spears; Darts; Slings; Scimitars
+Saving throws: Intelligence, Wisdom
+
+## classes > fighter
+
+Fighter
+
+Hit die: d10
+Armor: All armor; Shields
+Weapons: Simple Weapons; Martial Weapons
+Saving throws: Strength, Constitution
+
+## classes > monk
+
+Monk
+
+Hit die: d8
+Armor: none
+Weapons: Simple Weapons; Shortswords
+Saving throws: Strength, Dexterity
+
+## classes > paladin
+
+Paladin
+
+Hit die: d10
+Armor: All armor; Shields
+Weapons: Simple Weapons; Martial Weapons
+Saving throws: Wisdom, Charisma
+
+## classes > ranger
+
+Ranger
+
+Hit die: d10
+Armor: Light Armor; Medium Armor; Shields
+Weapons: Simple Weapons; Martial Weapons
+Saving throws: Strength, Dexterity
+
+## classes > rogue
+
+Rogue
+
+Hit die: d8
+Armor: Light Armor
+Weapons: Simple Weapons; Longswords; Rapiers; Shortswords; Hand crossbows
+Saving throws: Dexterity, Intelligence
+
+## classes > sorcerer
+
+Sorcerer
+
+Hit die: d6
+Armor: none
+Weapons: Daggers; Darts; Slings; Quarterstaffs; Crossbows, light
+Saving throws: Constitution, Charisma
+
+## classes > warlock
+
+Warlock
+
+Hit die: d8
+Armor: Light Armor
+Weapons: Simple Weapons
+Saving throws: Wisdom, Charisma
+
+## classes > wizard
+
+Wizard
+
+Hit die: d6
+Armor: none
+Weapons: Daggers; Darts; Slings; Quarterstaffs; Crossbows, light
+Saving throws: Intelligence, Wisdom
+
+## feats > grappler
+
+Grappler
+
+Prerequisite: Strength 13
+
+You’ve developed the Skills necessary to hold your own in close--quarters Grappling. You gain the following benefits:
+
+- You have advantage on Attack Rolls against a creature you are Grappling.
+
+- You can use your action to try to pin a creature Grappled by you. To do so, make another grapple check. If you succeed, you and the creature are both Restrained until the grapple ends.
+
+## class-features > wizard > your-spellbook
+
+Your Spellbook
+
+The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard’s chest, for example, or in a dusty tome in an ancient library.
+
+***Copying a Spell into the Book.*** When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell level you can prepare and if you can spare the time to decipher and copy it.
+
+Copying that spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation.
+
+For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.
+
+***Replacing the Book.*** You can copy a spell from your own spellbook into another book—for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.
+
+If you lose your spellbook, you can use the same procedure to transcribe the spells that you have prepared into a new spellbook. Filling out the remainder of your spellbook requires you to find new spells to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place.
+
+## beyond-1st-level
+
+Beyond 1st Level
+
+When your character gains a level, his or her class often grants additional features, as detailed in the class description. Some of these features allow you to increase your ability scores, either increasing two scores by 1 each or increasing one score by 2. You can’t increase an ability score above 20. In addition, every character’s proficiency bonus increases at certain levels.
+
+Each time you gain a level, you gain 1 additional Hit Die. Roll that Hit Die, add your Constitution modifier to the roll, and add the total to your hit point maximum. Alternatively, you can use the fixed value shown in your class entry, which is the average result of the die roll (rounded up).
+
+When your Constitution modifier increases by 1, your hit point maximum increases by 1 for each level you have attained. For example, if your 7th-level fighter has a Constitution score of 17, when he reaches 8th level, he increases his Constitution score from 17 to 18, thus increasing his Constitution modifier from +3 to +4. His hit point maximum then increases by 8.
+
+The Character Advancement table summarizes the XP you need to advance in levels from level 1 through level 20, and the proficiency bonus for a character of that level. Consult the information in your character’s class description to see what other improvements you gain at each level.
+
+Character Advancement
+
+| Experience Points | Level | Proficiency Bonus |
+|---|---|---|
+| 0 | 1 | +2 |
+| 300 | 2 | +2 |
+| 900 | 3 | +2 |
+| 2,700 | 4 | +2 |
+| 6,500 | 5 | +3 |
+| 14,000 | 6 | +3 |
+| 23,000 | 7 | +3 |
+| 34,000 | 8 | +3 |
+| 48,000 | 9 | +4 |
+| 64,000 | 10 | +4 |
+| 85,000 | 11 | +4 |
+| 100,000 | 12 | +4 |
+| 120,000 | 13 | +5 |
+| 140,000 | 14 | +5 |
+| 165,000 | 15 | +5 |
+| 195,000 | 16 | +5 |
+| 225,000 | 17 | +6 |
+| 265,000 | 18 | +6 |
+| 305,000 | 19 | +6 |
+| 355,000 | 20 | +6 |
+
+## multiclassing
+
+Multiclassing
+
+Multiclassing allows you to gain levels in multiple classes. Doing so lets you mix the abilities of those classes to realize a character concept that might not be reflected in one of the standard class options.
+
+With this rule, you have the option of gaining a level in a new class whenever you advance in level, instead of gaining a level in your current class. Your levels in all your classes are added together to determine your character level. For example, if you have three levels in wizard and two in fighter, you’re a 5th-level character.
+
+## multiclassing > prerequisites
+
+Prerequisites
+
+To qualify for a new class, you must meet the ability score prerequisites for both your current class and your new one, as shown in the Multiclassing Prerequisites table. For example, a barbarian who decides to multiclass into the druid class must have both Strength and Wisdom scores of 13 or higher. Without the full training that a beginning character receives, you must be a quick study in your new class, having a natural aptitude that is reflected by higher-than-average ability scores.
+
+Multiclassing Prerequisites
+
+| Class | Ability Score Minimum |
+|---|---|
+| Barbarian | Strength 13 |
+| Bard | Charisma 13 |
+| Cleric | Wisdom 13 |
+| Druid | Wisdom 13 |
+| Fighter | Strength 13 or Dexterity 13 |
+| Monk | Dexterity 13 and Wisdom 13 |
+| Paladin | Strength 13 and Charisma 13 |
+| Ranger | Dexterity 13 and Wisdom 13 |
+| Rogue | Dexterity 13 |
+| Sorcerer | Charisma 13 |
+| Warlock | Charisma 13 |
+| Wizard | Intelligence 13 |
+
+## multiclassing > experience-points
+
+Experience Points
+
+The experience point cost to gain a level is always based on your total character level, as shown in the Character Advancement table, not your level in a particular class. So, if you are a cleric 6/fighter 1, you must gain enough XP to reach 8th level before you can take your second level as a fighter or your seventh level as a cleric.
+
+## multiclassing > hit-points-and-hit-dice
+
+Hit Points and Hit Dice
+
+You gain the hit points from your new class as described for levels after 1st. You gain the 1st-level hit points for a class only when you are a 1st-level character.
+
+You add together the Hit Dice granted by all your classes to form your pool of Hit Dice. If the Hit Dice are the same die type, you can simply pool them together. For example, both the fighter and the paladin have a d10, so if you are a paladin 5/fighter 5, you have ten d10 Hit Dice. If your classes give you Hit Dice of different types, keep track of them separately. If you are a paladin 5/cleric 5, for example, you have five d10 Hit Dice and five d8 Hit Dice.
+
+## multiclassing > proficiency-bonus
+
+Proficiency Bonus
+
+Your proficiency bonus is always based on your total character level, as shown in the Character Advancement table, not your level in a particular class. For example, if you are a fighter 3/rogue 2, you have the proficiency bonus of a 5th-level character, which is +3.
+
+## multiclassing > proficiencies
+
+Proficiencies
+
+When you gain your first level in a class other than your initial class, you gain only some of new class’s starting proficiencies, as shown in the Multiclassing Proficiencies table.
+
+Multiclassing Proficiencies
+
+| Class | Proficiencies Gained |
+|---|---|
+| Barbarian | Shields, simple weapons, martial weapons |
+| Bard | Light armor, one skill of your choice, one musical instrument of your choice |
+| Cleric | Light armor, medium armor, shields |
+| Druid | Light armor, medium armor, shields (druids will not wear armor or use shields made of metal) |
+| Fighter | Light armor, medium armor, shields, simple weapons, martial weapons |
+| Monk | Simple weapons, shortswords |
+| Paladin | Light armor, medium armor, shields, simple weapons, martial weapons |
+| Ranger | Light armor, medium armor, shields, simple weapons, martial weapons, one skill from the class’s skill list |
+| Rogue | Light armor, one skill from the class’s skill list, thieves’ tools |
+| Sorcerer | — |
+| Warlock | Light armor, simple weapons |
+| Wizard | — |
+
+## multiclassing > class-features
+
+Class Features
+
+When you gain a new level in a class, you get its features for that level. You don’t, however, receive the class’s starting equipment, and a few features have additional rules when you’re multiclassing: Channel Divinity, Extra Attack, Unarmored Defense, and Spellcasting.
+
+## multiclassing > class-features > channel-divinity
+
+Channel Divinity
+
+If you already have the Channel Divinity feature and gain a level in a class that also grants the feature, you gain the Channel Divinity effects granted by that class, but getting the feature again doesn’t give you an additional use of it. You gain additional uses only when you reach a class level that explicitly grants them to you. For example, if you are a cleric 6/paladin 4, you can use Channel Divinity twice between rests because you are high enough level in the cleric class to have more uses. Whenever you use the feature, you can choose any of the Channel Divinity effects available to you from your two classes.
+
+## multiclassing > class-features > extra-attack
+
+Extra Attack
+
+If you gain the Extra Attack class feature from more than one class, the features don’t add together. You can’t make more than two attacks with this feature unless it says you do (as the fighter’s version of Extra Attack does). Similarly, the warlock’s eldritch invocation Thirsting Blade doesn’t give you additional attacks if you also have Extra Attack.
+
+## multiclassing > class-features > unarmored-defense
+
+Unarmored Defense
+
+If you already have the Unarmored Defense feature, you can’t gain it again from another class.
+
+## multiclassing > class-features > spellcasting
+
+Spellcasting
+
+Your capacity for spellcasting depends partly on your combined levels in all your spellcasting classes and partly on your individual levels in those classes. Once you have the Spellcasting feature from more than one class, use the rules below. If you multiclass but have the Spellcasting feature from only one class, you follow the rules as described in that class.
+
+## multiclassing > class-features > spellcasting > spells-known-and-prepared
+
+Spells Known and Prepared
+
+***Spells Known and Prepared.*** You determine what spells you know and can prepare for each class individually, as if you were a single-classed member of that class. If you are a ranger 4/wizard 3, for example, you know three 1st-level ranger spells based on your levels in the ranger class. As 3rd-level wizard, you know three wizard cantrips, and your spellbook contains ten wizard spells, two of which (the two you gained when you reached 3rd level as a wizard) can be 2nd-level spells. If your Intelligence is 16, you can prepare six wizard spells from your spellbook.
+
+Each spell you know and prepare is associated with one of your classes, and you use the spellcasting ability of that class when you cast the spell. Similarly, a spellcasting focus, such as a holy symbol, can be used only for the spells from the class associated with that focus.
+
+## multiclassing > class-features > spellcasting > spell-slots
+
+Spell Slots
+
+***Spell Slots.*** You determine your available spell slots by adding together all your levels in the bard, cleric, druid, sorcerer, and wizard classes, and half your levels (rounded down) in the paladin and ranger classes. Use this total to determine your spell slots by consulting the Multiclass Spellcaster table.
+
+If you have more than one spellcasting class, this table might give you spell slots of a level that is higher than the spells you know or can prepare. You can use those slots, but only to cast your lower-level spells. If a lower-level spell that you cast, like burning hands, has an enhanced effect when cast using a higher-level slot, you can use the enhanced effect, even though you don’t have any spells of that higher level.
+
+For example, if you are the aforementioned ranger 4/wizard 3, you count as a 5th-level character when determining your spell slots: you have four 1st-level slots, three 2nd-level slots, and two 3rd-level slots. However, you don’t know any 3rd-level spells, nor do you know any 2nd-level ranger spells. You can use the spell slots of those levels to cast the spells you do know—and potentially enhance their effects.
+
+Multiclass Spellcaster: Spell Slots per Spell Level
+
+| Lvl. | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th | 8th | 9th |
+|---|---|---|---|---|---|---|---|---|---|
+| 1st | 2 | — | — | — | — | — | — | — | — |
+| 2nd | 3 | — | — | — | — | — | — | — | — |
+| 3rd | 4 | 2 | — | — | — | — | — | — | — |
+| 4th | 4 | 3 | — | — | — | — | — | — | — |
+| 5th | 4 | 3 | 2 | — | — | — | — | — | — |
+| 6th | 4 | 3 | 3 | — | — | — | — | — | — |
+| 7th | 4 | 3 | 3 | 1 | — | — | — | — | — |
+| 8th | 4 | 3 | 3 | 2 | — | — | — | — | — |
+| 9th | 4 | 3 | 3 | 3 | 1 | — | — | — | — |
+| 10th | 4 | 3 | 3 | 3 | 2 | — | — | — | — |
+| 11th | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |
+| 12th | 4 | 3 | 3 | 3 | 2 | 1 | — | — | — |
+| 13th | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |
+| 14th | 4 | 3 | 3 | 3 | 2 | 1 | 1 | — | — |
+| 15th | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |
+| 16th | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | — |
+| 17th | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |
+| 18th | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |
+| 19th | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |
+| 20th | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |
+
+## multiclassing > class-features > spellcasting > pact-magic
+
+Pact Magic
+
+***Pact Magic.*** If you have both the Spellcasting class feature and the Pact Magic class feature from the warlock class, you can use the spell slots you gain from the Pact Magic feature to cast spells you know or have prepared from classes with the Spellcasting class feature, and you can use the spell slots you gain from the Spellcasting class feature to cast warlock spells you know.
+
+## inspiration
+
+Inspiration
+
+Inspiration is a rule the game master can use to reward you for playing your character in a way that’s true to his or her personality traits, ideal, bond, and flaw. By using inspiration, you can draw on your personality trait of compassion for the downtrodden to give you an edge in negotiating with the Beggar Prince. Or inspiration can let you call on your bond to the defense of your home village to push past the effect of a spell that has been laid on you.
+
+Gaining Inspiration
+
+Your GM can choose to give you inspiration for a variety of reasons. Typically, GMs award it when you play out your personality traits, give in to the drawbacks presented by a flaw or bond, and otherwise portray your character in a compelling way. Your GM will tell you how you can earn inspiration in the game.
+
+You either have inspiration or you don’t—you can’t stockpile multiple “inspirations” for later use.
+
+Using Inspiration
+
+If you have inspiration, you can expend it when you make an attack roll, saving throw, or ability check. Spending your inspiration gives you advantage on that roll.
+
+Additionally, if you have inspiration, you can reward another player for good roleplaying, clever thinking, or simply doing something exciting in the game. When another player character does something that really contributes to the story in a fun and interesting way, you can give up your inspiration to give that character inspiration.
+
+## armor > armor-proficiency
+
+Armor Proficiency
+
+***Armor Proficiency.*** Anyone can put on a suit of armor or strap a shield to an arm. Only those proficient in the armor’s use know how to wear it effectively, however. Your class gives you proficiency with certain types of armor. If you wear armor that you lack proficiency with, you have disadvantage on any ability check, saving throw, or attack roll that involves Strength or Dexterity, and you can’t cast spells.
+
+## armor > light-armor
+
+Light Armor
+
+Made from supple and thin materials, light armor favors agile adventurers since it offers some protection without sacrificing mobility. If you wear light armor, you add your Dexterity modifier to the base number from your armor type to determine your Armor Class.
+
+## armor > medium-armor
+
+Medium Armor
+
+Medium armor offers more protection than light armor, but it also impairs movement more. If you wear medium armor, you add your Dexterity modifier, to a maximum of +2, to the base number from your armor type to determine your Armor Class.
+
+## armor > heavy-armor
+
+Heavy Armor
+
+***Heavy Armor.*** Heavier armor interferes with the wearer’s ability to move quickly, stealthily, and freely. If the Armor table shows “Str 13” or “Str 15” in the Strength column for an armor type, the armor reduces the wearer’s speed by 10 feet unless the wearer has a Strength score equal to or higher than the listed score.
+
+Of all the armor categories, heavy armor offers the best protection. These suits of armor cover the entire body and are designed to stop a wide range of attacks. Only proficient warriors can manage their weight and bulk.
+
+Heavy armor doesn’t let you add your Dexterity modifier to your Armor Class, but it also doesn’t penalize you if your Dexterity modifier is negative.
+
+## armor > stealth
+
+Stealth
+
+***Stealth.*** If the Armor table shows “Disadvantage” in the Stealth column, the wearer has disadvantage on Dexterity (Stealth) checks.
+
+## armor > shields
+
+Shields
+
+***Shields.*** A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.
+
+## armor > getting-into-and-out-of-armor
+
+Getting Into and Out of Armor
+
+The time it takes to don or doff armor depends on the armor’s category.
+
+***Don.*** This is the time it takes to put on armor. You benefit from the armor’s AC only if you take the full time to don the suit of armor.
+
+***Doff.*** This is the time it takes to take off armor. If you have help, reduce this time by half.
+
+Donning and Doffing Armor
+
+| Category | Don | Doff |
+|---|---|---|
+| Light Armor | 1 minute | 1 minute |
+| Medium Armor | 5 minutes | 1 minute |
+| Heavy Armor | 10 minutes | 5 minutes |
+| Shield | 1 action | 1 action |
+
+## weapons
+
+Weapons
+
+The Weapons table shows the most common weapons used in the fantasy gaming worlds, their price and weight, the damage they deal when they hit, and any special properties they possess. Every weapon is classified as either melee or ranged. A melee weapon is used to attack a target within 5 feet of you, whereas a ranged weapon is used to attack a target at a distance.
+
+## weapons > weapon-proficiency
+
+Weapon Proficiency
+
+Your race, class, and feats can grant you proficiency with certain weapons or categories of weapons. The two categories are simple and martial. Most people can use simple weapons with proficiency. These weapons include clubs, maces, and other weapons often found in the hands of commoners. Martial weapons, including swords, axes, and polearms, require more specialized training to use effectively. Most warriors use martial weapons because these weapons put their fighting style and training to best use.
+
+Proficiency with a weapon allows you to add your proficiency bonus to the attack roll for any attack you make with that weapon. If you make an attack roll using a weapon with which you lack proficiency, you do not add your proficiency bonus to the attack roll.
+
+## weapons > improvised-weapons
+
+Improvised Weapons
+
+Sometimes characters don’t have their weapons and have to attack with whatever is at hand. An improvised weapon includes any object you can wield in one or two hands, such as broken glass, a table leg, a frying pan, a wagon wheel, or a dead goblin.
+
+Often, an improvised weapon is similar to an actual weapon and can be treated as such. For example, a table leg is akin to a club. At the GM’s option, a character proficient with a weapon can use a similar object as if it were that weapon and use his or her proficiency bonus.
+
+An object that bears no resemblance to a weapon deals 1d4 damage (the GM assigns a damage type appropriate to the object). If a character uses a ranged weapon to make a melee attack, or throws a melee weapon that does not have the thrown property, it also deals 1d4 damage. An improvised thrown weapon has a normal range of 20 feet and a long range of 60 feet.
+
+## weapons > silvered-weapons
+
+Silvered Weapons
+
+Some monsters that have immunity or resistance to nonmagical weapons are susceptible to silver weapons, so cautious adventurers invest extra coin to plate their weapons with silver. You can silver a single weapon or ten pieces of ammunition for 100 gp. This cost represents not only the price of the silver, but the time and expertise needed to add silver to the weapon without making it less effective.
+
+## feats
+
+Feats
+
+At certain levels, your class gives you the Ability Score Improvement feature. Using the optional feats rule, you can forgo taking that feature to take a feat of your choice instead. You can take each feat only once, unless the feat’s description says otherwise.
+
+You must meet any prerequisite specified in a feat to take that feat. If you ever lose a feat’s prerequisite, you can’t use that feat until you regain the prerequisite. For example, the Grappler feat requires you to have a Strength of 13 or higher. If your Strength is reduced below 13 somehow—perhaps by a withering curse—you can’t benefit from the Grappler feat until your Strength is restored.

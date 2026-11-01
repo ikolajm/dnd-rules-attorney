@@ -4,6 +4,10 @@ The files are the 2014 English data from the 5e-bits/5e-database repository on
 GitHub, fetched at the commit pinned in COMMIT and written unchanged. To move
 the corpus to a newer source, change COMMIT, rerun this script, and read the
 diff under data/srd-5.1/ to see what the source changed.
+
+data/srd-5.1/supplement.json is not pulled: it is written by hand from the
+SRD 5.1 document, and scripts/check_supplement.py checks it against the
+document's text. This script reads it to rebuild corpus.md and never writes it.
 """
 
 from pathlib import Path

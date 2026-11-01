@@ -14,6 +14,7 @@ WHOLE = (
     "class-features",
     "races",
     "racial-traits",
+    "classes",
 )
 WINDOW = 800
 OVERLAP = 200

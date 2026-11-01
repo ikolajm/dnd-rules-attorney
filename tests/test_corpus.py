@@ -7,20 +7,31 @@ from typing import Any
 import pytest
 
 from rules_attorney.corpus import (
+    CLASSES_FILE,
+    FOCI,
     RACES_FILE,
     SECTIONS_FILE,
     SOURCES,
+    SUPPLEMENT_FILE,
     CorpusError,
+    Entry,
+    Join,
+    apply_joins,
     armor_lines,
+    class_entries,
     condition_entries,
     equipment_entries,
+    feat_entries,
     feature_entries,
+    focus_entries,
     load_corpus,
     prerequisite,
     race_entries,
     section_entries,
     slug,
     spell_entries,
+    spellcasting_joins,
+    supplement_joins,
     trait_entries,
     weapon_property_entries,
 )
@@ -142,6 +153,8 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
     for name in SOURCES:
         (tmp_path / name).write_text(json.dumps([]), encoding="utf-8")
     (tmp_path / SECTIONS_FILE).write_text(json.dumps(sections), encoding="utf-8")
+    supplement: dict[str, list[Any]] = {"passages": []}
+    (tmp_path / SUPPLEMENT_FILE).write_text(json.dumps(supplement), encoding="utf-8")
     with pytest.raises(CorpusError, match="the-root > same"):
         load_corpus(tmp_path)
 
@@ -169,6 +182,18 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "racial-traits > darkvision",
         "racial-traits > dwarf > hill-dwarf > dwarven-toughness",
         "racial-traits > dragonborn > draconic-ancestry",
+        "classes > wizard",
+        "class-features > wizard > your-spellbook",
+        "feats > grappler",
+        "equipment > caltrops",
+        "equipment > holy-symbol",
+        "beyond-1st-level",
+        "multiclassing > class-features > extra-attack",
+        "multiclassing > class-features > spellcasting > spell-slots",
+        "inspiration",
+        "armor > armor-proficiency",
+        "weapons > improvised-weapons",
+        "feats",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:
@@ -327,13 +352,200 @@ def test_equipment_entries_writes_a_shield_and_its_absent_requirements() -> None
     ]
 
 
-def test_equipment_entries_skips_gear() -> None:
-    record = {
-        "index": "rope-hempen-50-feet",
-        "name": "Rope, hempen (50 feet)",
+def gear(**fields: Any) -> dict[str, Any]:
+    """A made-up adventuring gear record, its fields overridden by the ones given."""
+    record: dict[str, Any] = {
+        "index": "bedroll",
+        "name": "Bedroll",
         "equipment_category": {"index": "adventuring-gear", "name": "Adventuring Gear"},
+        "desc": ["A roll of blankets."],
     }
-    assert equipment_entries(record) == []
+    record.update(fields)
+    return record
+
+
+def test_equipment_entries_skips_gear_without_a_rule() -> None:
+    assert equipment_entries(gear()) == []
+
+
+def test_equipment_entries_renders_gear_with_a_rule() -> None:
+    record = gear(index="caltrops", name="Caltrops", desc=["Spread them.", "Save."])
+    entries = equipment_entries(record)
+    assert [e.path for e in entries] == ["equipment > caltrops"]
+    assert entries[0].text == "Caltrops\n\nSpread them.\n\nSave."
+
+
+def foci_records(text: str = "Channel your spells.") -> list[dict[str, Any]]:
+    """A gear record for every form of every focus, a focus's forms sharing a text."""
+    return [
+        gear(index=index, name=index.title(), desc=[f"{name}: {text}"])
+        for name, forms in FOCI.items()
+        for index in forms
+    ]
+
+
+def test_focus_entries_merges_each_focus_into_one_entry() -> None:
+    entries = focus_entries(foci_records())
+    assert [e.path for e in entries] == [f"equipment > {slug(name)}" for name in FOCI]
+    holy = entries[[*FOCI].index("Holy Symbol")]
+    assert holy.text == (
+        "Holy Symbol\n\nForms: Amulet, Emblem, Reliquary\n\n"
+        "Holy Symbol: Channel your spells."
+    )
+
+
+def test_focus_entries_refuses_forms_whose_texts_differ() -> None:
+    records = foci_records()
+    amulet = next(r for r in records if r["index"] == "amulet")
+    amulet["desc"] = ["Something else."]
+    with pytest.raises(CorpusError, match="Holy Symbol"):
+        focus_entries(records)
+
+
+def test_focus_entries_refuses_a_focus_missing_a_form() -> None:
+    records = [r for r in foci_records() if r["index"] != "amulet"]
+    with pytest.raises(CorpusError, match="Holy Symbol"):
+        focus_entries(records)
+
+
+def proficiency(index: str, name: str) -> dict[str, str]:
+    return {"index": index, "name": name}
+
+
+def test_class_entries_sorts_proficiencies_into_lines() -> None:
+    record = {
+        "index": "warden",
+        "name": "Warden",
+        "hit_die": 10,
+        "proficiencies": [
+            proficiency("light-armor", "Light Armor"),
+            proficiency("shields", "Shields"),
+            proficiency("simple-weapons", "Simple Weapons"),
+            proficiency("crossbows-light", "Crossbows, light"),
+            proficiency("herbalism-kit", "Herbalism Kit"),
+            proficiency("thieves-tools", "Thieves' Tools"),
+            proficiency("saving-throw-str", "Saving Throw: STR"),
+        ],
+        "saving_throws": [{"index": "str"}, {"index": "wis"}],
+    }
+    entries = class_entries(record)
+    assert [e.path for e in entries] == ["classes > warden"]
+    assert entries[0].text == (
+        "Warden\n"
+        "\n"
+        "Hit die: d10\n"
+        "Armor: Light Armor; Shields\n"
+        "Weapons: Simple Weapons; Crossbows, light\n"
+        "Saving throws: Strength, Wisdom"
+    )
+
+
+def test_class_entries_writes_none_for_no_armor() -> None:
+    record = {
+        "index": "sage",
+        "name": "Sage",
+        "hit_die": 6,
+        "proficiencies": [proficiency("daggers", "Daggers")],
+        "saving_throws": [{"index": "int"}],
+    }
+    assert "Armor: none" in class_entries(record)[0].text
+
+
+def test_feat_entries_writes_the_prerequisite_before_the_text() -> None:
+    record = {
+        "index": "brawler",
+        "name": "Brawler",
+        "prerequisites": [{"ability_score": {"index": "str"}, "minimum_score": 13}],
+        "desc": ["You fight well.", "- You hit harder."],
+    }
+    entries = feat_entries(record)
+    assert [e.path for e in entries] == ["feats > brawler"]
+    assert entries[0].text == (
+        "Brawler\n\nPrerequisite: Strength 13\n\nYou fight well.\n\n- You hit harder."
+    )
+
+
+def test_spellcasting_joins_label_each_rule_and_skip_non_casters() -> None:
+    def info(name: str, *desc: str) -> dict[str, Any]:
+        return {"name": name, "desc": list(desc)}
+
+    loaded: dict[str, list[dict[str, Any]]] = {
+        CLASSES_FILE: [
+            {"index": "fighter"},
+            {
+                "index": "wizard",
+                "spellcasting": {
+                    "info": [
+                        info("Ritual Casting", "Cast it slowly."),
+                        info("Ability", "Int.", "DC."),
+                    ]
+                },
+            },
+            {"index": "warlock", "spellcasting": {"info": [info("Slots", "Few.")]}},
+        ]
+    }
+    assert spellcasting_joins(loaded) == [
+        Join(
+            "append",
+            "class-features > wizard > spellcasting-wizard",
+            "***Ritual Casting.*** Cast it slowly.\n\n***Ability.*** Int.\n\nDC.",
+        ),
+        Join("append", "class-features > warlock > pact-magic", "***Slots.*** Few."),
+    ]
+
+
+def test_supplement_joins_runs_an_insertion_together() -> None:
+    supplement = {
+        "passages": [
+            {
+                "op": "insert",
+                "path": "a",
+                "after": "x",
+                "pages": [1],
+                "text": ["one", "two"],
+            },
+            {
+                "op": "new",
+                "path": "b",
+                "name": "B",
+                "pages": [1],
+                "text": ["one", "two"],
+            },
+        ]
+    }
+    assert supplement_joins(supplement) == [
+        Join("insert", "a", "onetwo", after="x"),
+        Join("new", "b", "one\n\ntwo", name="B"),
+    ]
+
+
+def test_apply_joins_appends_inserts_and_adds_in_order() -> None:
+    entries = [Entry("a", "A\n\nCasting time: 1 reaction"), Entry("b", "B")]
+    joins = [
+        Join("insert", "a", ", when hit", after="Casting time: 1 reaction"),
+        Join("append", "b", "More."),
+        Join("new", "c", "Rule.", name="C"),
+    ]
+    assert apply_joins(entries, joins) == [
+        Entry("a", "A\n\nCasting time: 1 reaction, when hit"),
+        Entry("b", "B\n\nMore."),
+        Entry("c", "C\n\nRule."),
+    ]
+
+
+@pytest.mark.parametrize(
+    ("join", "message"),
+    [
+        (Join("append", "missing", "x"), "missing entry: missing"),
+        (Join("insert", "a", "x", after="absent"), "one 'absent'"),
+        (Join("insert", "a", "x", after="twice"), "one 'twice'"),
+        (Join("new", "a", "x", name="A"), "already exists: a"),
+        (Join("replace", "a", "x"), "unknown join 'replace'"),
+    ],
+)
+def test_apply_joins_refuses_a_join_that_misses(join: Join, message: str) -> None:
+    with pytest.raises(CorpusError, match=message):
+        apply_joins([Entry("a", "twice twice")], [join])
 
 
 def feature(**fields: Any) -> dict[str, Any]:
