@@ -12,6 +12,11 @@ SECTIONS_FILE = "5e-SRD-Rule-Sections.json"
 CONDITIONS_FILE = "5e-SRD-Conditions.json"
 WEAPON_PROPERTIES_FILE = "5e-SRD-Weapon-Properties.json"
 SPELLS_FILE = "5e-SRD-Spells.json"
+EQUIPMENT_FILE = "5e-SRD-Equipment.json"
+
+# The equipment categories that become entries; the rest of the file is gear,
+# a lookup rather than a dispute.
+EQUIPMENT_KINDS = ("weapon", "armor")
 
 
 def slug(text: str) -> str:
@@ -109,11 +114,91 @@ def spell_entries(record: dict[str, Any]) -> list[Entry]:
     return [Entry(path=path, text=text)]
 
 
+def span(distance: dict[str, int]) -> str:
+    """A range as the equipment tables write it, normal/long in feet."""
+    return f"{distance['normal']}/{distance['long']} ft."
+
+
+def weapon_lines(record: dict[str, Any]) -> list[str]:
+    """A weapon's fields that lead to a rule, one line each."""
+    lines: list[str] = []
+    ranged = record["weapon_range"] == "Ranged"
+    lines.append(
+        f"Category: {record['weapon_category']} {record['weapon_range'].lower()} weapon"
+    )
+
+    damage: dict[str, Any] | None = record.get("damage")
+    if damage:
+        text = f"{damage['damage_dice']} {damage['damage_type']['name'].lower()}"
+        versatile: dict[str, Any] | None = record.get("two_handed_damage")
+        if versatile:
+            text += f" ({versatile['damage_dice']} two-handed)"
+        lines.append(f"Damage: {text}")
+    else:
+        lines.append("Damage: none")
+
+    names = [prop["name"] for prop in record["properties"]]
+    lines.append(f"Properties: {', '.join(names) if names else 'none'}")
+
+    # A melee weapon's range is always 5 in the source, reach or not, so it
+    # is left to the Reach property.
+    if ranged:
+        lines.append(f"Range: {span(record['range'])}")
+    thrown: dict[str, int] | None = record.get("throw_range")
+    if thrown and not ranged:
+        lines.append(f"Thrown range: {span(thrown)}")
+    return lines
+
+
+def armor_lines(record: dict[str, Any]) -> list[str]:
+    """A piece of armor's fields that lead to a rule, one line each."""
+    lines: list[str] = []
+    category: str = record["armor_category"]
+    shield = category == "Shield"
+    lines.append(f"Category: {category if shield else f'{category} armor'}")
+
+    ac: dict[str, Any] = record["armor_class"]
+    if shield:
+        armor_class = f"+{ac['base']}"
+    elif ac["dex_bonus"] and "max_bonus" in ac:
+        armor_class = f"{ac['base']} + Dex modifier (max {ac['max_bonus']})"
+    elif ac["dex_bonus"]:
+        armor_class = f"{ac['base']} + Dex modifier"
+    else:
+        armor_class = str(ac["base"])
+    lines.append(f"Armor class: {armor_class}")
+
+    strength: int = record["str_minimum"]
+    lines.append(f"Strength: {strength if strength else 'none'}")
+    stealth = "disadvantage" if record["stealth_disadvantage"] else "no disadvantage"
+    lines.append(f"Stealth: {stealth}")
+    return lines
+
+
+def equipment_entries(record: dict[str, Any]) -> list[Entry]:
+    """Make the single entry for one weapon or armor; any other equipment makes none."""
+    kind: str = record["equipment_category"]["index"]
+    if kind not in EQUIPMENT_KINDS:
+        return []
+    index: str = record["index"]
+    name: str = record["name"]
+    path = f"equipment > {index}"
+
+    lines = weapon_lines(record) if kind == "weapon" else armor_lines(record)
+    blocks: list[str] = [name, "\n".join(lines)]
+    special: list[str] | None = record.get("special")
+    if special:
+        blocks.append("Special. " + "\n\n".join(special))
+    text = "\n\n".join(blocks)
+    return [Entry(path=path, text=text)]
+
+
 SOURCES: dict[str, Parser] = {
     SECTIONS_FILE: section_entries,
     CONDITIONS_FILE: condition_entries,
     WEAPON_PROPERTIES_FILE: weapon_property_entries,
     SPELLS_FILE: spell_entries,
+    EQUIPMENT_FILE: equipment_entries,
 }
 
 

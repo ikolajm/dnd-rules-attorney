@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+from typing import Any
 
 import pytest
 
@@ -9,7 +10,9 @@ from rules_attorney.corpus import (
     SECTIONS_FILE,
     SOURCES,
     CorpusError,
+    armor_lines,
     condition_entries,
+    equipment_entries,
     load_corpus,
     section_entries,
     slug,
@@ -149,6 +152,9 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "weapon-properties > monk",
         "spells > fireball",
         "spells > animate-objects",
+        "equipment > longsword",
+        "equipment > net",
+        "equipment > shield",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:
@@ -176,3 +182,141 @@ def test_condition_entries_opens_with_its_name() -> None:
     entries = condition_entries(record)
     assert [e.path for e in entries] == ["conditions > dazed"]
     assert entries[0].text == "Dazed\n\n- First effect.\n\n- Second effect."
+
+
+def weapon(**fields: Any) -> dict[str, Any]:
+    """A made-up weapon record, its fields overridden by the ones given."""
+    record: dict[str, Any] = {
+        "index": "war-fork",
+        "name": "War Fork",
+        "equipment_category": {"index": "weapon", "name": "Weapon"},
+        "weapon_category": "Martial",
+        "weapon_range": "Melee",
+        "damage": {"damage_dice": "1d8", "damage_type": {"name": "Piercing"}},
+        "range": {"normal": 5},
+        "properties": [],
+    }
+    record.update(fields)
+    return record
+
+
+def armor(**fields: Any) -> dict[str, Any]:
+    """A made-up armor record, its fields overridden by the ones given."""
+    record: dict[str, Any] = {
+        "index": "bark-mail",
+        "name": "Bark Mail",
+        "equipment_category": {"index": "armor", "name": "Armor"},
+        "armor_category": "Heavy",
+        "armor_class": {"base": 15, "dex_bonus": False},
+        "str_minimum": 0,
+        "stealth_disadvantage": False,
+    }
+    record.update(fields)
+    return record
+
+
+def test_equipment_entries_renders_a_versatile_thrown_melee_weapon() -> None:
+    record = weapon(
+        two_handed_damage={"damage_dice": "1d10", "damage_type": {"name": "Piercing"}},
+        throw_range={"normal": 20, "long": 60},
+        properties=[{"name": "Thrown"}, {"name": "Versatile"}],
+    )
+    entries = equipment_entries(record)
+    assert [e.path for e in entries] == ["equipment > war-fork"]
+    assert entries[0].text == (
+        "War Fork\n"
+        "\n"
+        "Category: Martial melee weapon\n"
+        "Damage: 1d8 piercing (1d10 two-handed)\n"
+        "Properties: Thrown, Versatile\n"
+        "Thrown range: 20/60 ft."
+    )
+
+
+def test_equipment_entries_renders_a_ranged_special_weapon_without_damage() -> None:
+    record = weapon(
+        index="snare",
+        name="Snare",
+        weapon_range="Ranged",
+        range={"normal": 5, "long": 15},
+        throw_range={"normal": 5, "long": 15},
+        properties=[{"name": "Thrown"}, {"name": "Special"}],
+        special=["A creature hit is caught."],
+    )
+    del record["damage"]
+    entries = equipment_entries(record)
+    assert entries[0].text == (
+        "Snare\n"
+        "\n"
+        "Category: Martial ranged weapon\n"
+        "Damage: none\n"
+        "Properties: Thrown, Special\n"
+        "Range: 5/15 ft.\n"
+        "\n"
+        "Special. A creature hit is caught."
+    )
+
+
+def test_equipment_entries_writes_no_range_on_a_melee_weapon() -> None:
+    entries = equipment_entries(weapon())
+    assert entries[0].text == (
+        "War Fork\n"
+        "\n"
+        "Category: Martial melee weapon\n"
+        "Damage: 1d8 piercing\n"
+        "Properties: none"
+    )
+
+
+@pytest.mark.parametrize(
+    ("category", "armor_class", "expected"),
+    [
+        ("Light", {"base": 12, "dex_bonus": True}, "12 + Dex modifier"),
+        (
+            "Medium",
+            {"base": 15, "dex_bonus": True, "max_bonus": 2},
+            "15 + Dex modifier (max 2)",
+        ),
+        ("Heavy", {"base": 16, "dex_bonus": False}, "16"),
+        ("Shield", {"base": 2, "dex_bonus": False}, "+2"),
+    ],
+)
+def test_armor_lines_writes_each_armor_class_form(
+    category: str, armor_class: dict[str, Any], expected: str
+) -> None:
+    lines = armor_lines(armor(armor_category=category, armor_class=armor_class))
+    assert f"Armor class: {expected}" in lines
+
+
+def test_equipment_entries_renders_heavy_armor() -> None:
+    record = armor(str_minimum=13, stealth_disadvantage=True)
+    entries = equipment_entries(record)
+    assert [e.path for e in entries] == ["equipment > bark-mail"]
+    assert entries[0].text == (
+        "Bark Mail\n"
+        "\n"
+        "Category: Heavy armor\n"
+        "Armor class: 15\n"
+        "Strength: 13\n"
+        "Stealth: disadvantage"
+    )
+
+
+def test_equipment_entries_writes_a_shield_and_its_absent_requirements() -> None:
+    record = armor(armor_category="Shield", armor_class={"base": 2, "dex_bonus": False})
+    lines = armor_lines(record)
+    assert lines == [
+        "Category: Shield",
+        "Armor class: +2",
+        "Strength: none",
+        "Stealth: no disadvantage",
+    ]
+
+
+def test_equipment_entries_skips_gear() -> None:
+    record = {
+        "index": "rope-hempen-50-feet",
+        "name": "Rope, hempen (50 feet)",
+        "equipment_category": {"index": "adventuring-gear", "name": "Adventuring Gear"},
+    }
+    assert equipment_entries(record) == []
