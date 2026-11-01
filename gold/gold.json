@@ -630,13 +630,14 @@
   {
     "id": "readied-attack-extra-attack",
     "question": "I Ready the Attack action and have Extra Attack. Do I make all my attacks when the trigger comes?",
-    "status": "contested",
-    "verdict": "",
-    "ruling": "Reading A: yes. The Ready action lets you choose an action to take in response to the trigger, and the Attack action is one; features such as Extra Attack let you make more than one attack with that action. Taking the Attack action with your reaction is still taking the Attack action, so all of its attacks come with it. Reading B: no, one attack. A readied action is taken with your reaction, and a reaction is an instant response; the Attack action makes one attack, and nothing in these rules extends a feature that adds attacks to a reaction. Why the text does not settle it: the Ready rule says you take the chosen action, and the Attack action says features can add attacks to it, but Extra Attack's own wording, which would say when it applies, is in the class rules outside this corpus.",
+    "status": "settled",
+    "verdict": "one attack, unless the trigger comes on your own turn",
+    "ruling": "A readied action is taken with your reaction when its trigger occurs, and a reaction can come on your turn or on someone else's. The Attack action makes one attack, and features can add more; Extra Attack lets you attack twice whenever you take the Attack action on your turn. A readied Attack taken on another creature's turn is not taken on your turn, so it makes one attack. Only if the trigger came during your own turn would Extra Attack apply.",
     "cites": [
       "actions-in-combat > ready",
       "actions-in-combat > attack",
-      "the-order-of-combat > reactions"
+      "the-order-of-combat > reactions",
+      "class-features > extra-attack"
     ],
     "split": "test"
   },
@@ -733,11 +734,12 @@
     "id": "detect-magic-ritual",
     "question": "Can I cast Detect Magic without spending a spell slot?",
     "status": "settled",
-    "verdict": "yes, as a ritual, if you have a ritual-casting feature",
-    "ruling": "Detect Magic has the ritual tag. A spell with that tag can be cast as a ritual, which takes 10 minutes longer than its normal casting time and doesn't expend a spell slot. Casting a ritual requires a feature that grants the ability, and the spell must be prepared or known unless the feature says otherwise. So yes: with such a feature, Detect Magic takes 10 minutes and an action, and costs no slot. Which features grant ritual casting is in the class rules outside this corpus.",
+    "verdict": "yes: as a ritual with a ritual-casting feature, or at will with the Eldritch Sight invocation",
+    "ruling": "Detect Magic has the ritual tag. A spell with that tag can be cast as a ritual, which takes 10 minutes longer than its normal casting time and doesn't expend a spell slot. Casting a ritual requires a feature that grants the ability, and the spell must be prepared or known unless the feature says otherwise. So with such a feature, Detect Magic takes 10 minutes and an action, and costs no slot. A warlock has a second way: the Eldritch Sight invocation lets you cast Detect Magic at will without expending a spell slot. The classes' own Ritual Casting features are in the class rules outside this corpus; the Book of Ancient Secrets invocation, which is in it, is one feature that grants ritual casting.",
     "cites": [
       "spells > detect-magic",
-      "what-is-a-spell > rituals"
+      "what-is-a-spell > rituals",
+      "class-features > warlock > eldritch-invocation-eldritch-sight"
     ],
     "split": "test"
   },
@@ -820,7 +822,7 @@
     "question": "I can attack twice when I take the Attack action. Can I throw two nets?",
     "status": "settled",
     "verdict": "no",
-    "ruling": "When you use an action, bonus action, or reaction to attack with a net, you can make only one attack, regardless of the number of attacks you can normally make. So an Attack action that throws a net makes one attack, and the second net has to wait for another action. The feature that grants a second attack is not in this corpus; the ruling rests on the net's own text.",
+    "ruling": "When you use an action, bonus action, or reaction to attack with a net, you can make only one attack, regardless of the number of attacks you can normally make. So an Attack action that throws a net makes one attack, and the second net has to wait for another action. Whatever grants the second attack, the ruling rests on the net's own text.",
     "cites": [
       "equipment > net"
     ],
@@ -953,7 +955,7 @@
     "question": "I can attack twice when I take the Attack action. Can I hit with my longsword first, then throw a net with the second attack?",
     "status": "contested",
     "verdict": "",
-    "ruling": "Reading A: no. When you use an action to attack with a net, you can make only one attack, regardless of the number you can normally make. An Attack action that throws the net is such an action, so it makes one attack in all, and having already swung the longsword, there is no attack left for the net. Reading B: yes. The limit attaches to using an action to attack with a net, and an action begun with a longsword was not used to attack with a net; at most, the net's limit caps the net at one attack, leaving the longsword attack before it untouched. Why the text does not settle it: it says when an action is used to attack with a net but not whether an action whose attacks are split between weapons counts, nor whether the one attack is the action's or the net's. The feature that grants a second attack is not in this corpus.",
+    "ruling": "Reading A: no. When you use an action to attack with a net, you can make only one attack, regardless of the number you can normally make. An Attack action that throws the net is such an action, so it makes one attack in all, and having already swung the longsword, there is no attack left for the net. Reading B: yes. The limit attaches to using an action to attack with a net, and an action begun with a longsword was not used to attack with a net; at most, the net's limit caps the net at one attack, leaving the longsword attack before it untouched. Why the text does not settle it: it says when an action is used to attack with a net but not whether an action whose attacks are split between weapons counts, nor whether the one attack is the action's or the net's.",
     "cites": [
       "equipment > net"
     ],
@@ -964,12 +966,197 @@
     "question": "I can attack twice when I take the Attack action, and both daggers are sheathed. Can I draw and throw a dagger with each attack?",
     "status": "contested",
     "verdict": "",
-    "ruling": "Reading A: no. You can interact with one object for free during your move or your action, such as drawing your weapon as part of the attack. Drawing the second dagger is a second interaction, which takes the Use an Object action, so you throw one dagger and the second attack needs a weapon already in hand. Reading B: yes. Drawing the weapon is given as part of the attack itself, and the ammunition property makes drawing a piece of ammunition part of each attack, so drawing a thrown weapon reads the same way, once per attack. Why the text does not settle it: the thrown property says nothing about drawing, unlike ammunition, and the free interaction's example, drawing a weapon as part of an attack, can be read as spending the one interaction or as part of each attack. The feature that grants a second attack is not in this corpus.",
+    "ruling": "Reading A: no. You can interact with one object for free during your move or your action, such as drawing your weapon as part of the attack. Drawing the second dagger is a second interaction, which takes the Use an Object action, so you throw one dagger and the second attack needs a weapon already in hand. Reading B: yes. Drawing the weapon is given as part of the attack itself, and the ammunition property makes drawing a piece of ammunition part of each attack, so drawing a thrown weapon reads the same way, once per attack. Why the text does not settle it: the thrown property says nothing about drawing, unlike ammunition, and the free interaction's example, drawing a weapon as part of an attack, can be read as spending the one interaction or as part of each attack.",
     "cites": [
       "weapon-properties > thrown",
       "weapon-properties > ammunition",
       "the-order-of-combat > your-turn > other-activity-on-your-turn",
       "actions-in-combat > use-an-object"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "sneak-attack-longsword",
+    "question": "My rogue has advantage and attacks with a longsword. Do I get Sneak Attack?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Sneak Attack adds its damage once per turn to a hit with advantage, but the attack must use a finesse or a ranged weapon. A longsword is a melee weapon whose only property is versatile, so it is neither, and advantage does not make up for it.",
+    "cites": [
+      "class-features > rogue > sneak-attack",
+      "equipment > longsword"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sneak-attack-shot-in-melee",
+    "question": "My ally is next to the goblin I shoot with my shortbow, but an orc is standing next to me. Do I get Sneak Attack?",
+    "status": "settled",
+    "verdict": "no, if the orc can see you and isn't incapacitated",
+    "ruling": "A shortbow is a ranged weapon, so it qualifies for Sneak Attack, and you don't need advantage when another enemy of the target is within 5 feet of it, as long as you don't have disadvantage. But a ranged attack has disadvantage when you are within 5 feet of a hostile creature who can see you and isn't incapacitated, as the orc is. With disadvantage, the ally beside the goblin no longer enables Sneak Attack.",
+    "cites": [
+      "class-features > rogue > sneak-attack",
+      "making-an-attack > ranged-attacks > ranged-attacks-in-close-combat",
+      "equipment > shortbow"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sneak-attack-opportunity-attack",
+    "question": "I used Sneak Attack on my turn. Can I use it again on an opportunity attack before my next turn?",
+    "status": "settled",
+    "verdict": "yes, if the attack qualifies",
+    "ruling": "Sneak Attack is limited to once per turn, not once per round. An opportunity attack is made with your reaction when a hostile creature leaves your reach, which happens on that creature's turn, so it falls on a turn where you haven't used Sneak Attack. If it hits with a finesse weapon and you have advantage, or another enemy of the target is within 5 feet of it and you don't have disadvantage, Sneak Attack applies again.",
+    "cites": [
+      "class-features > rogue > sneak-attack",
+      "making-an-attack > melee-attacks > opportunity-attacks"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "rage-in-chain-mail",
+    "question": "My barbarian rages while wearing chain mail. Do they get resistance to slashing damage?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Rage grants its benefits, resistance to bludgeoning, piercing and slashing damage among them, only if you aren't wearing heavy armor. Chain mail is heavy armor, so a barbarian raging in it gains none of those benefits.",
+    "cites": [
+      "class-features > barbarian > rage",
+      "equipment > chain-mail"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "rage-ends-concentration",
+    "question": "I'm concentrating on a spell when I start raging. What happens to the spell?",
+    "status": "settled",
+    "verdict": "it ends",
+    "ruling": "If you are able to cast spells, you can't cast them or concentrate on them while raging. A spell that requires concentration ends when you lose concentration on it, so entering a rage ends the spell.",
+    "cites": [
+      "class-features > barbarian > rage",
+      "casting-a-spell > duration > concentration"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "rage-shove-only",
+    "question": "On my turn I only shove an enemy while raging. Does my rage end at the end of my turn?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A rage ends early if your turn ends and you haven't attacked a hostile creature or taken damage since your last turn. A shove is a special melee attack made with the Attack action, so shoving a hostile creature is attacking it, and the rage continues.",
+    "cites": [
+      "class-features > barbarian > rage",
+      "making-an-attack > melee-attacks > shoving-a-creature"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "monk-greatclub",
+    "question": "Can my monk use Martial Arts with a greatclub?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Monk weapons are shortswords and any simple melee weapons that don't have the two-handed or heavy property. A greatclub is a simple melee weapon, but it has the two-handed property, so it is not a monk weapon, and Martial Arts' benefits don't apply to it.",
+    "cites": [
+      "class-features > monk > martial-arts",
+      "equipment > greatclub"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "dueling-with-shield",
+    "question": "With the Dueling fighting style, I hold a longsword in one hand and a shield in the other. Do I get the +2 damage?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Dueling gives a +2 bonus to damage rolls when you wield a melee weapon in one hand and no other weapons. A shield is armor, not a weapon, so carrying one leaves you wielding the longsword alone, and the bonus applies.",
+    "cites": [
+      "class-features > fighting-style-dueling",
+      "equipment > shield"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "great-weapon-fighting-longsword",
+    "question": "My fighter has Great Weapon Fighting. Can I reroll damage dice with a longsword held in both hands?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Great Weapon Fighting lets you reroll a 1 or 2 on a damage die for an attack with a melee weapon you wield with two hands, and the weapon must have the two-handed or versatile property. A longsword is versatile, so wielded with two hands it qualifies.",
+    "cites": [
+      "class-features > fighter > fighting-style-great-weapon-fighting",
+      "equipment > longsword"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "two-weapon-style-modifier",
+    "question": "With the Two-Weapon Fighting style, do I add my ability modifier to my off-hand attack's damage?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Two-weapon fighting normally leaves the ability modifier off the bonus attack's damage unless it is negative. The Two-Weapon Fighting style lets you add your ability modifier to the damage of the second attack, so with the style you add it.",
+    "cites": [
+      "class-features > fighting-style-two-weapon-fighting",
+      "making-an-attack > melee-attacks > two-weapon-fighting"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "action-surge-attack-count",
+    "question": "My 5th-level fighter takes the Attack action and uses Action Surge to take it again. How many attacks is that?",
+    "status": "settled",
+    "verdict": "four",
+    "ruling": "At 5th level a fighter's Extra Attack lets them attack twice whenever they take the Attack action on their turn. Action Surge grants one additional action on your turn, so taking the Attack action with each gives two Attack actions of two attacks each, four in all.",
+    "cites": [
+      "class-features > fighter > action-surge",
+      "class-features > fighter > extra-attack"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "uncanny-dodge-fireball",
+    "question": "Can my rogue use Uncanny Dodge to halve the damage from a Fireball?",
+    "status": "settled",
+    "verdict": "no; Evasion covers it from 7th level",
+    "ruling": "Uncanny Dodge halves an attack's damage when an attacker you can see hits you with an attack. Fireball makes no attack; each creature in its area makes a Dexterity saving throw. So Uncanny Dodge does not apply. Evasion, from 7th level, does: against an effect that allows a Dexterity save for half damage, you take no damage on a success and half on a failure.",
+    "cites": [
+      "class-features > rogue > uncanny-dodge",
+      "spells > fireball",
+      "class-features > rogue > evasion"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "rage-thrown-handaxe",
+    "question": "While raging, I throw a handaxe using Strength. Do I add my rage damage bonus?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. Rage's bonus applies when you make a melee weapon attack using Strength, and throwing a weapon makes a ranged attack, so a thrown handaxe is not a melee weapon attack. Reading B: yes. The handaxe is a melee weapon, and the thrown property has you use the same ability you would for a melee attack with it, Strength; an attack made with a melee weapon using Strength is what the bonus names. Why the text does not settle it: melee weapon attack can be read as a melee attack made with a weapon or as an attack made with a melee weapon, and a thrown melee weapon is the case where the two come apart.",
+    "cites": [
+      "class-features > barbarian > rage",
+      "weapon-properties > thrown",
+      "equipment > handaxe"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sneak-attack-thrown-handaxe",
+    "question": "Can my rogue Sneak Attack with a thrown handaxe?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. The attack must use a finesse or a ranged weapon. A handaxe is a melee weapon without finesse, and throwing it makes a ranged attack but does not make it a ranged weapon. Reading B: yes. Thrown, the handaxe is used to make a ranged attack, so the attack uses a weapon as a ranged weapon, which is what the requirement is after. Why the text does not settle it: Sneak Attack names the weapon, not the attack, and the thrown property turns a melee weapon's attack into a ranged one without saying whether the weapon's kind changes with it.",
+    "cites": [
+      "class-features > rogue > sneak-attack",
+      "weapon-properties > thrown",
+      "equipment > handaxe"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "dueling-thrown-dagger",
+    "question": "With the Dueling fighting style, I throw the dagger I'm holding in one hand. Do I add the +2 damage?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. Dueling applies when you wield a melee weapon in one hand and no other weapons, and gives +2 to damage rolls with that weapon. A dagger is a melee weapon held in one hand, and its thrown damage is a damage roll with that weapon. Reading B: no. Once thrown, the dagger has left your hand, so when its damage is rolled you are no longer wielding it, and the thrown attack is a ranged one. Why the text does not settle it: Dueling names what you wield and the damage roll with it, but not whether the wielding must hold when the damage is rolled or only when the attack is made.",
+    "cites": [
+      "class-features > fighting-style-dueling",
+      "weapon-properties > thrown",
+      "equipment > dagger"
     ],
     "split": "dev"
   }
