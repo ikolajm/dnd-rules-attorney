@@ -814,5 +814,163 @@
       "casting-a-spell > areas-of-effect"
     ],
     "split": "test"
+  },
+  {
+    "id": "net-extra-attack",
+    "question": "I can attack twice when I take the Attack action. Can I throw two nets?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "When you use an action, bonus action, or reaction to attack with a net, you can make only one attack, regardless of the number of attacks you can normally make. So an Attack action that throws a net makes one attack, and the second net has to wait for another action. The feature that grants a second attack is not in this corpus; the ruling rests on the net's own text.",
+    "cites": [
+      "equipment > net"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "net-restrains-large",
+    "question": "I hit a Large creature with a net. What does it suffer, and how does it get free?",
+    "status": "settled",
+    "verdict": "it is restrained until freed, by a DC 10 Strength check as an action or 5 slashing damage to the net",
+    "ruling": "A Large or smaller creature hit by a net is restrained until it is freed. Restrained, its speed is 0, attack rolls against it have advantage, its own attack rolls have disadvantage, and it has disadvantage on Dexterity saving throws. It, or another creature within reach of it, can use an action to make a DC 10 Strength check, freeing it on a success. Dealing 5 slashing damage to the net, which has AC 10, also frees it without harming it and destroys the net.",
+    "cites": [
+      "equipment > net",
+      "conditions > restrained"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "net-adjacent-disadvantage",
+    "question": "I throw a net at an enemy standing right next to me. Do I have disadvantage?",
+    "status": "settled",
+    "verdict": "yes, if the enemy can see you and isn't incapacitated",
+    "ruling": "A net is a ranged weapon, so throwing it is a ranged attack. You have disadvantage on a ranged attack roll when you are within 5 feet of a hostile creature who can see you and isn't incapacitated. The target being next to you is enough. Its normal range of 5 feet covers the target, so range adds no disadvantage of its own.",
+    "cites": [
+      "equipment > net",
+      "making-an-attack > ranged-attacks > ranged-attacks-in-close-combat"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "lance-one-handed",
+    "question": "Can I wield a lance in one hand?",
+    "status": "settled",
+    "verdict": "only while mounted",
+    "ruling": "A lance requires two hands to wield when you aren't mounted. While you are mounted it has no such requirement, so you can wield it in one hand; on foot you need both.",
+    "cites": [
+      "equipment > lance"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "lance-reach-disadvantage",
+    "question": "Mounted with a lance, I attack one enemy 5 feet away and another 10 feet away. Which attack has disadvantage?",
+    "status": "settled",
+    "verdict": "only the attack on the enemy 5 feet away",
+    "ruling": "The lance has the reach property, which adds 5 feet to your reach when you attack with it, so the enemy 10 feet away is within reach. You have disadvantage when you use a lance to attack a target within 5 feet of you, and being mounted does not lift it. So the attack on the enemy 5 feet away has disadvantage, and the attack on the one 10 feet away does not.",
+    "cites": [
+      "equipment > lance",
+      "weapon-properties > reach"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "rapier-dagger-two-weapon",
+    "question": "I hold a rapier in one hand and a dagger in the other. Can I use two-weapon fighting?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Two-weapon fighting lets you use a bonus action to attack with a light melee weapon in your other hand when you take the Attack action and attack with a light melee weapon held in one hand. Both weapons have to be light. The dagger is light, but the rapier's only property is finesse, so the pairing does not qualify, whichever weapon attacks first.",
+    "cites": [
+      "making-an-attack > melee-attacks > two-weapon-fighting",
+      "equipment > rapier",
+      "equipment > dagger"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "handaxe-two-weapon-throw",
+    "question": "With a handaxe in each hand, I attack with one. Can my bonus attack be a throw with the other?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "The handaxe is light, so a handaxe in each hand qualifies for two-weapon fighting: after attacking with one, you can use a bonus action to attack with the other. If either weapon has the thrown property, you can throw it instead of making a melee attack, and the handaxe has it. You don't add your ability modifier to the bonus attack's damage unless it is negative.",
+    "cites": [
+      "making-an-attack > melee-attacks > two-weapon-fighting",
+      "equipment > handaxe"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "dart-strength",
+    "question": "Can I use my Strength instead of my Dexterity when I throw a dart?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "A dart is a ranged weapon, which uses Dexterity for its attack and damage rolls. It also has the finesse property, and a finesse weapon lets you choose your Strength or Dexterity modifier for the attack and damage rolls, the same modifier for both. So you can throw a dart with Strength.",
+    "cites": [
+      "equipment > dart",
+      "weapon-properties > finesse",
+      "using-each-ability > dexterity > attack-rolls-and-damage"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "small-greatsword",
+    "question": "My character is Small. Do they attack with a greatsword at disadvantage?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "The greatsword has the heavy property, and Small creatures have disadvantage on attack rolls with heavy weapons. So a Small character attacks with a greatsword at disadvantage.",
+    "cites": [
+      "equipment > greatsword",
+      "weapon-properties > heavy"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "breastplate-shield-stealth",
+    "question": "Wearing a breastplate and carrying a shield, do I have disadvantage on Stealth checks?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A breastplate imposes no disadvantage on Stealth, unlike half plate among the medium armors, and a shield imposes none either. Neither piece gives disadvantage, so the pair does not.",
+    "cites": [
+      "equipment > breastplate",
+      "equipment > shield"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "shield-spell-and-shield",
+    "question": "I'm carrying a shield and cast the Shield spell. What is my total AC bonus from the two?",
+    "status": "settled",
+    "verdict": "+7",
+    "ruling": "A shield gives +2 to AC, and the Shield spell gives +5 until the start of your next turn. The rule against combining stops only the same spell's effects from adding together; a shield is not a spell, so nothing stops the two bonuses applying together, for +7 in all.",
+    "cites": [
+      "spells > shield",
+      "equipment > shield",
+      "casting-a-spell > combining-magical-effects"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "net-after-other-attack",
+    "question": "I can attack twice when I take the Attack action. Can I hit with my longsword first, then throw a net with the second attack?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. When you use an action to attack with a net, you can make only one attack, regardless of the number you can normally make. An Attack action that throws the net is such an action, so it makes one attack in all, and having already swung the longsword, there is no attack left for the net. Reading B: yes. The limit attaches to using an action to attack with a net, and an action begun with a longsword was not used to attack with a net; at most, the net's limit caps the net at one attack, leaving the longsword attack before it untouched. Why the text does not settle it: it says when an action is used to attack with a net but not whether an action whose attacks are split between weapons counts, nor whether the one attack is the action's or the net's. The feature that grants a second attack is not in this corpus.",
+    "cites": [
+      "equipment > net"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "draw-and-throw-two-daggers",
+    "question": "I can attack twice when I take the Attack action, and both daggers are sheathed. Can I draw and throw a dagger with each attack?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. You can interact with one object for free during your move or your action, such as drawing your weapon as part of the attack. Drawing the second dagger is a second interaction, which takes the Use an Object action, so you throw one dagger and the second attack needs a weapon already in hand. Reading B: yes. Drawing the weapon is given as part of the attack itself, and the ammunition property makes drawing a piece of ammunition part of each attack, so drawing a thrown weapon reads the same way, once per attack. Why the text does not settle it: the thrown property says nothing about drawing, unlike ammunition, and the free interaction's example, drawing a weapon as part of an attack, can be read as spending the one interaction or as part of each attack. The feature that grants a second attack is not in this corpus.",
+    "cites": [
+      "weapon-properties > thrown",
+      "weapon-properties > ammunition",
+      "the-order-of-combat > your-turn > other-activity-on-your-turn",
+      "actions-in-combat > use-an-object"
+    ],
+    "split": "dev"
   }
 ]
