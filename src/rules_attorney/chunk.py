@@ -6,7 +6,7 @@ from itertools import groupby
 from rules_attorney.corpus import Entry
 
 # Sources hold one record per entry
-WHOLE = ("conditions", "spells", "weapon-properties", "equipment")
+WHOLE = ("conditions", "spells", "weapon-properties", "equipment", "class-features")
 WINDOW = 800
 OVERLAP = 200
 SEPARATOR = "\n\n"
@@ -40,7 +40,8 @@ def record_key(path: str) -> str:
     """The source record a path belongs to: its rule section, or itself."""
     steps = path.split(" > ")
     if steps[0] in WHOLE:
-        return " > ".join(steps[:2])
+        # The whole path, since a class feature's runs past two steps.
+        return path
     return steps[0]
 
 

@@ -13,6 +13,7 @@ CONDITIONS_FILE = "5e-SRD-Conditions.json"
 WEAPON_PROPERTIES_FILE = "5e-SRD-Weapon-Properties.json"
 SPELLS_FILE = "5e-SRD-Spells.json"
 EQUIPMENT_FILE = "5e-SRD-Equipment.json"
+FEATURES_FILE = "5e-SRD-Features.json"
 
 # The equipment categories that become entries; the rest of the file is gear,
 # a lookup rather than a dispute.
@@ -38,6 +39,18 @@ class Entry:
 
 
 type Parser = Callable[[dict[str, Any]], list[Entry]]
+# A source whose entries need the whole file at once, as class features do to
+# merge the records that repeat one text.
+type FileParser = Callable[[list[dict[str, Any]]], list[Entry]]
+
+
+def each(parse: Parser) -> FileParser:
+    """A file parser running a record parser over every record in turn."""
+
+    def parse_all(records: list[dict[str, Any]]) -> list[Entry]:
+        return [entry for record in records for entry in parse(record)]
+
+    return parse_all
 
 
 def section_entries(record: dict[str, Any]) -> list[Entry]:
@@ -193,12 +206,122 @@ def equipment_entries(record: dict[str, Any]) -> list[Entry]:
     return [Entry(path=path, text=text)]
 
 
-SOURCES: dict[str, Parser] = {
-    SECTIONS_FILE: section_entries,
-    CONDITIONS_FILE: condition_entries,
-    WEAPON_PROPERTIES_FILE: weapon_property_entries,
-    SPELLS_FILE: spell_entries,
-    EQUIPMENT_FILE: equipment_entries,
+def feature_text(record: dict[str, Any]) -> str:
+    """A class feature record's description, the text records are merged on."""
+    return "\n\n".join(record["desc"])
+
+
+def parenthetical(name: str) -> str | None:
+    """The trailing parenthetical of a name, Bardic Inspiration (d6)'s d6."""
+    match = re.search(r"\s*\(([^)]*)\)$", name)
+    return match[1] if match else None
+
+
+def bare_name(name: str) -> str:
+    """A name without its trailing parenthetical."""
+    return re.sub(r"\s*\([^)]*\)$", "", name)
+
+
+def prerequisite(requirement: dict[str, Any]) -> str:
+    """One prerequisite as words: a spell, a feature or a level."""
+    kind: str = requirement["type"]
+    if kind == "level":
+        return f"level {requirement['level']}"
+    # A spell or a feature is a URL ending in its index.
+    index: str = requirement[kind].rsplit("/", 1)[-1]
+    return index.replace("-", " ")
+
+
+def first_record(group: list[dict[str, Any]]) -> dict[str, Any]:
+    """The lowest-level record, a "Parent: Option" variant passed over at a tie."""
+    return min(group, key=lambda r: (r["level"], ": " in r["name"]))
+
+
+def feature_scope(group: list[dict[str, Any]]) -> list[str]:
+    """The steps above a feature's own: its class and subclass, or none if shared."""
+    first = first_record(group)
+    if len({r["class"]["index"] for r in group}) > 1:
+        return ["class-features"]
+    steps = ["class-features", slug(first["class"]["index"])]
+    subclass: dict[str, Any] | None = first.get("subclass")
+    if subclass:
+        steps.append(slug(subclass["index"]))
+    return steps
+
+
+def feature_entry(group: list[dict[str, Any]], name: str) -> Entry:
+    """One entry for the records that share a text, its facts kept from their names."""
+    first = first_record(group)
+    classes = sorted({r["class"]["name"] for r in group})
+    subclass: dict[str, Any] | None = first.get("subclass")
+    path = " > ".join([*feature_scope(group), slug(name)])
+
+    lines: list[str] = []
+    if len(classes) == 1:
+        lines.append(f"Class: {classes[0]}")
+    else:
+        lines.append(f"Classes: {', '.join(classes)}")
+    if subclass:
+        lines.append(f"Subclass: {subclass['name']}")
+
+    # A level once per distinct level and parenthetical, in level order, so
+    # the copies under several classes write each level once.
+    levels: list[str] = []
+    for record in sorted(group, key=lambda r: r["level"]):
+        note = parenthetical(record["name"])
+        level = f"{record['level']} ({note})" if note else str(record["level"])
+        if level not in levels:
+            levels.append(level)
+    if len(levels) == 1:
+        lines.append(f"Level: {levels[0]}")
+    else:
+        lines.append(f"Levels: {', '.join(levels)}")
+
+    options = [
+        r["name"].split(": ", 1)[1] for r in group if r["name"].startswith(f"{name}: ")
+    ]
+    if options:
+        lines.append(f"Options: {', '.join(options)}")
+
+    requirements: list[dict[str, Any]] = first["prerequisites"]
+    if requirements:
+        lines.append(
+            f"Prerequisite: {'; '.join(prerequisite(r) for r in requirements)}"
+        )
+
+    text = "\n\n".join([name, "\n".join(lines), feature_text(first)])
+    return Entry(path=path, text=text)
+
+
+def feature_entries(records: list[dict[str, Any]]) -> list[Entry]:
+    """One entry per distinct class feature text, in the file's first-seen order."""
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for record in records:
+        groups.setdefault(feature_text(record), []).append(record)
+
+    # A name drops its parenthetical unless another text in the same scope
+    # would then share it, as the cleric's Channel Divinity (1/rest) and its
+    # later (2/rest) do; those keep theirs, so no two entries share a path.
+    bare = Counter(
+        (*feature_scope(g), bare_name(first_record(g)["name"])) for g in groups.values()
+    )
+    entries: list[Entry] = []
+    for group in groups.values():
+        full = first_record(group)["name"]
+        name = bare_name(full)
+        if bare[(*feature_scope(group), name)] > 1:
+            name = full
+        entries.append(feature_entry(group, name))
+    return entries
+
+
+SOURCES: dict[str, FileParser] = {
+    SECTIONS_FILE: each(section_entries),
+    CONDITIONS_FILE: each(condition_entries),
+    WEAPON_PROPERTIES_FILE: each(weapon_property_entries),
+    SPELLS_FILE: each(spell_entries),
+    EQUIPMENT_FILE: each(equipment_entries),
+    FEATURES_FILE: feature_entries,
 }
 
 
@@ -208,8 +331,7 @@ def load_corpus(data_dir: Path) -> list[Entry]:
     for name, parse in SOURCES.items():
         text = (data_dir / name).read_text(encoding="utf-8")
         records: list[dict[str, Any]] = json.loads(text)
-        for record in records:
-            entries.extend(parse(record))
+        entries.extend(parse(records))
 
     counts = Counter(e.path for e in entries)
     dupes = sorted(path for path, n in counts.items() if n > 1)
