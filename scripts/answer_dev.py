@@ -1,11 +1,14 @@
 """Answers every item of a split from its top 10 entries, one record per item.
 
-    python scripts/answer_dev.py <model> [--split dev|test] [--level 1|3]
+    python scripts/answer_dev.py <model> [--split dev|test] [--level 1|3] [--rerank]
 
 Answers with the model named: through the Claude API when its name starts
 with claude-, through the live Ollama server otherwise. The split is dev
 unless test is named. Level 3 plans sub-questions with the same model and
 answers from the merged ranking's top 10.
+
+--rerank reorders level 1's top 30 with the cross-encoder
+and answers from its fusion with level 1's order.
 """
 
 import argparse
@@ -45,6 +48,14 @@ from rules_attorney.multihop import (
     parse_plan,
 )
 from rules_attorney.provenance import commit
+from rules_attorney.rerank import (
+    DEPTH,
+    RERANKER,
+    Score,
+    cross_encoder,
+    fused_order,
+    rerank,
+)
 from rules_attorney.retrieve import (
     NOMIC,
     embed_documents,
@@ -68,10 +79,14 @@ def main() -> None:
     parser.add_argument("model")
     parser.add_argument("--split", choices=SPLITS, default=SPLITS[0])
     parser.add_argument("--level", type=int, choices=[1, 3], default=1)
+    parser.add_argument("--rerank", action="store_true")
     args = parser.parse_args()
     model: str = args.model
     split: str = args.split
     level: int = args.level
+    reranking: bool = args.rerank
+    if reranking and level == 3:
+        parser.error("--rerank is measured on level 1 only")
     hosted = model.startswith(MODEL_PREFIX)
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
@@ -81,6 +96,7 @@ def main() -> None:
     chosen = [item for item in items if item["split"] == split]
     embed = partial(ollama_embed, model=EMBEDDER.model)
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
+    score: Score | None = cross_encoder(RERANKER) if reranking else None
     source = commit(ROOT)
     config: dict[str, Any] = {
         "model": model,
@@ -89,6 +105,8 @@ def main() -> None:
         "embedder": EMBEDDER.model,
         "chunker": "header",
         "k": K,
+        "reranker": RERANKER if reranking else None,
+        "depth": DEPTH if reranking else None,
         "fields": list(Ruling.model_fields),
         "commit": source["commit"],
         "dirty": source["dirty"],
@@ -109,6 +127,8 @@ def main() -> None:
 
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     marker = "-level3" if level == 3 else ""
+    if reranking:
+        marker = "-rerank"
     RUNS.mkdir(exist_ok=True)
     out = RUNS / f"{stamp}-{split}{marker}-{model.replace(':', '-')}.jsonl"
     failures = 0
@@ -151,6 +171,17 @@ def main() -> None:
                     "plan_seconds": round(plan_seconds, 2),
                     **plan_usage,
                 }
+            reordered: dict[str, Any] = {}
+            if score is not None:
+                rerank_start = time.perf_counter()
+                candidates = ranking[:DEPTH]
+                order = rerank(
+                    item["question"], [by_path[path] for path in candidates], score
+                )
+                ranking = fused_order(order, candidates)
+                reordered = {
+                    "rerank_seconds": round(time.perf_counter() - rerank_start, 2)
+                }
             top = ranking[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
 
@@ -190,6 +221,7 @@ def main() -> None:
                 "seconds": round(seconds, 2),
                 **usage,
                 **planned,
+                **reordered,
                 "config": config,
             }
             file.write(json.dumps(record) + "\n")
