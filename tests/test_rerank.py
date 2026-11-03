@@ -1,7 +1,9 @@
 """Tests for reordering entries by a cross-encoder's scores."""
 
+import pytest
+
 from rules_attorney.corpus import Entry
-from rules_attorney.rerank import Score, rerank
+from rules_attorney.rerank import Score, TruncationError, refuse_truncation, rerank
 
 # Its words appear in no entry text, so a pair can only carry it because
 # rerank put it there.
@@ -50,3 +52,15 @@ def test_a_tie_keeps_the_order_given() -> None:
         Entry(path="third", text="x"),
     ]
     assert rerank(QUESTION, entries, recording([])) == ["first", "second", "third"]
+
+
+def test_a_pair_at_the_limit_passes() -> None:
+    # The longest is exactly the limit, which the window holds whole. The
+    # test fails only if this raises.
+    refuse_truncation([3, 5], limit=5)
+
+
+def test_a_pair_past_the_limit_is_refused() -> None:
+    # Not the first length, so a check of only one pair would miss it.
+    with pytest.raises(TruncationError):
+        refuse_truncation([3, 6, 4], limit=5)
