@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["bm25s>=0.3", "mypy", "pytest", "ruff"]
+rerank = ["sentence-transformers>=6.2", "torch>=2.15"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
