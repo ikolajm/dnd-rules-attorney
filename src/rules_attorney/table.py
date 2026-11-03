@@ -13,6 +13,8 @@ class Row:
     model: str
     # Level 1 for a run made before the level was recorded.
     level: int
+    # None on a run made without the rerank stage.
+    reranker: str | None
     # Dev for a run made before the split was recorded.
     split: str
     # False on the local rows, "adaptive" on the hosted one, None on the floor.
@@ -65,6 +67,7 @@ def build_row(
     return Row(
         model=config["model"],
         level=config.get("level", 1),
+        reranker=config.get("reranker"),
         split=config.get("split", "dev"),
         think=config.get("think"),
         commit=config["commit"],
@@ -101,12 +104,19 @@ def thinking(think: bool | str | None) -> str:
     return str(think)
 
 
+def level_cell(level: int, reranker: str | None) -> str:
+    """The level column: the level, and + rerank on a run that reranked."""
+    if reranker is not None:
+        return f"{level} + rerank"
+    return str(level)
+
+
 def markdown_row(row: Row) -> str:
     """One run as a row of the published table."""
     commit = row.commit[:7] + (" dirty" if row.dirty else "")
     cells = [
         row.model,
-        str(row.level),
+        level_cell(row.level, row.reranker),
         thinking(row.think),
         f"{row.agreed} / {row.judged}",
         f"{row.expected_flagged} / {row.expected}",
