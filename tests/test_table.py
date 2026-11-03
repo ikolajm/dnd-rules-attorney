@@ -7,6 +7,7 @@ from typing import Any
 
 import pytest
 
+from rules_attorney.rerank import RERANKER
 from rules_attorney.table import Row, build_row, markdown_row, markdown_table
 
 # The floor's dev run and its judged file, copied from runs/: "no" to every
@@ -51,9 +52,27 @@ def test_build_row_reads_a_run_without_a_level_as_level_1() -> None:
     assert floor_row().level == 1
 
 
+def test_build_row_reads_a_run_without_a_reranker_as_none() -> None:
+    # The captured floor predates the reranker in the config.
+    assert floor_row().reranker is None
+
+
+def test_build_row_reads_the_reranker() -> None:
+    records = load("floor-run.jsonl")
+    records[0]["config"]["reranker"] = RERANKER
+    judged = {record["id"]: record for record in load("floor-judged.jsonl")}
+    assert build_row(records, judged, known=set()).reranker == RERANKER
+
+
 def test_markdown_row_carries_the_level() -> None:
     row = replace(floor_row(), level=3)
     assert "| 3 |" in markdown_row(row)
+
+
+def test_markdown_row_names_the_rerank_stage() -> None:
+    # A rerank run records level 1, and must not print as one.
+    row = replace(floor_row(), reranker=RERANKER)
+    assert "| 1 + rerank |" in markdown_row(row)
 
 
 def test_markdown_table_refuses_runs_of_two_splits() -> None:
