@@ -17,7 +17,7 @@ from typing import Any
 from rules_attorney.corpus import load_corpus
 from rules_attorney.metrics import all_cites_at_k, recall_at_k
 from rules_attorney.provenance import commit
-from rules_attorney.rerank import DEPTH, RERANKER, cross_encoder, rerank
+from rules_attorney.rerank import DEPTH, RERANKER, cross_encoder, fused_order, rerank
 from rules_attorney.retrieve import (
     NOMIC,
     embed_documents,
@@ -84,6 +84,7 @@ def main() -> None:
     out = RUNS / f"rerank-{stamp}-{split}.jsonl"
     befores: list[list[str]] = []
     afters: list[list[str]] = []
+    fused_orders: list[list[str]] = []
     seconds_total = 0.0
 
     with out.open("w", encoding="utf-8") as file:
@@ -94,12 +95,15 @@ def main() -> None:
             after = rerank(item["question"], [by_path[path] for path in before], score)
             seconds = time.perf_counter() - start
             seconds_total += seconds
+            fused = fused_order(after, before)
             befores.append(before)
             afters.append(after)
+            fused_orders.append(fused)
             record: dict[str, Any] = {
                 "id": item["id"],
                 "before": before,
                 "after": after,
+                "fused": fused,
                 "seconds": round(seconds, 2),
                 "config": config,
             }
@@ -109,6 +113,7 @@ def main() -> None:
     print(out)
     report("level 1", befores, chosen, [*KS, DEPTH])
     report(f"level 1 reranked by {RERANKER}", afters, chosen, KS)
+    report(f"level 1 fused with {RERANKER}", fused_orders, chosen, KS)
     print(f"rerank seconds: {seconds_total:.1f}")
 
 
