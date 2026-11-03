@@ -102,7 +102,8 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 |---|---|
 | `scripts/eval_retrieval.py` | Scores level 1's retrieval: recall@k and all-cites@k |
 | `scripts/eval_multihop.py <model>` | Plans with the model named and scores level 3's fused retrieval |
-| `scripts/answer_dev.py <model> [--level 1\|3]` | Rules on every item of the split; a model named `claude-…` answers through the API |
+| `scripts/eval_rerank.py` | Reranks level 1's top 30 with `BAAI/bge-reranker-v2-m3` and scores level 1's order, the reranked order and the two fused |
+| `scripts/answer_dev.py <model> [--level 1\|3] [--rerank]` | Rules on every item of the split; a model named `claude-…` answers through the API; `--rerank` answers level 1 from its order fused with the reranked one |
 | `scripts/judge_dev.py runs/<run>.jsonl` | Judges a run's verdicts and flags with Claude Sonnet 5.5 |
 | `scripts/floor_dev.py` | Writes the floor row: "no" to every item, no flag, no cites |
 | `scripts/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs |
@@ -111,6 +112,12 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 | `scripts/check_supplement.py <srd.txt>` | Checks every passage in `supplement.json` word for word against the SRD 5.1 document's text |
 
 The judge and the hosted rows call the Claude API and authenticate with the profile `ant auth login` stores; a set `ANTHROPIC_API_KEY` takes precedence over it, even an empty one. Everything else runs locally. `scripts/pull_srd.py` refetches the corpus at its pinned commit.
+
+The rerank scripts need the `rerank` extra, sentence-transformers on PyTorch, which the screen does not use. On Windows, PyPI's torch is CPU-only, so it comes from PyTorch's CUDA 13.2 index:
+
+```
+.venv/Scripts/python -m pip install -e ".[dev,rerank]" --extra-index-url https://download.pytorch.org/whl/cu132
+```
 
 ## Checks
 
