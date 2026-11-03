@@ -3,7 +3,13 @@
 import pytest
 
 from rules_attorney.corpus import Entry
-from rules_attorney.rerank import Score, TruncationError, refuse_truncation, rerank
+from rules_attorney.rerank import (
+    Score,
+    TruncationError,
+    fused_order,
+    refuse_truncation,
+    rerank,
+)
 
 # Its words appear in no entry text, so a pair can only carry it because
 # rerank put it there.
@@ -64,3 +70,16 @@ def test_a_pair_past_the_limit_is_refused() -> None:
     # Not the first length, so a check of only one pair would miss it.
     with pytest.raises(TruncationError):
         refuse_truncation([3, 6, 4], limit=5)
+
+
+def test_fused_order_is_neither_order_alone() -> None:
+    # p is second and first, 1/62 + 1/61; r first and third, 1/61 + 1/63;
+    # q third and second, 1/63 + 1/62. Highest first, that is p, r, q.
+    assert fused_order(["r", "p", "q"], ["p", "q", "r"]) == ["p", "r", "q"]
+
+
+def test_fused_order_breaks_a_tie_by_the_reranked_order() -> None:
+    # Each is first in one order and second in the other, so they tie, and
+    # the first ranking handed to fuse decides. Swapped, the row measured on
+    # dev would not be the one this code produces.
+    assert fused_order(["b", "a"], ["a", "b"]) == ["b", "a"]

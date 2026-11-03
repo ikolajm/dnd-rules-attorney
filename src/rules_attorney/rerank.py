@@ -3,6 +3,7 @@
 from collections.abc import Callable
 
 from rules_attorney.corpus import Entry
+from rules_attorney.fusion import fuse
 
 type Score = Callable[[list[tuple[str, str]]], list[float]]
 
@@ -22,6 +23,11 @@ def rerank(question: str, entries: list[Entry], score: Score) -> list[str]:
         zip(entries, scores, strict=True), key=lambda pair: pair[1], reverse=True
     )
     return [entry.path for entry, _ in ranked]
+
+
+def fused_order(reranked: list[str], retrieved: list[str]) -> list[str]:
+    """The two orders fused by reciprocal rank, ties going to the reranked order."""
+    return fuse([reranked, retrieved])
 
 
 class TruncationError(Exception):
