@@ -22,3 +22,36 @@ def rerank(question: str, entries: list[Entry], score: Score) -> list[str]:
         zip(entries, scores, strict=True), key=lambda pair: pair[1], reverse=True
     )
     return [entry.path for entry, _ in ranked]
+
+
+class TruncationError(Exception):
+    """A pair longer than the reranker's window, which it would cut silently."""
+
+
+def refuse_truncation(lengths: list[int], limit: int) -> None:
+    """Raise when any pair's token count is past the limit."""
+    longest = max(lengths, default=0)
+    if longest > limit:
+        raise TruncationError(
+            f"a pair of {longest} tokens is past the {limit}-token window"
+        )
+
+
+def cross_encoder(model: str) -> Score:
+    """A Score backed by the cross-encoder named, loaded once."""
+    # Imported here, so torch loads only when a real scorer is built and an
+    # install without the rerank extra still runs the tests.
+    from sentence_transformers import CrossEncoder
+
+    encoder = CrossEncoder(model)
+
+    def score(pairs: list[tuple[str, str]]) -> list[float]:
+        lengths = [
+            len(encoder.tokenizer(question, text)["input_ids"])
+            for question, text in pairs
+        ]
+        refuse_truncation(lengths, encoder.max_length)
+        scores = encoder.predict(pairs)
+        return [float(value) for value in scores]
+
+    return score
