@@ -3,10 +3,11 @@
 from typing import Any, Final
 
 import anthropic
-from anthropic.types import Message
+from anthropic.types import Message, MessageParam
 
 from rules_attorney.answer import Ruling
 from rules_attorney.multihop import Plan
+from rules_attorney.tools import claude_tools
 
 MODEL_PREFIX = "claude-"
 # Opus 5.5 defaults to medium. Its thinking cannot be turned off, so effort
@@ -61,3 +62,17 @@ def claude_answer(prompt: str, *, model: str) -> Message:
 def claude_plan(prompt: str, *, model: str) -> Message:
     """The model's raw plan for the prompt, a live call."""
     return claude_structured(prompt, model=model, schema=PLAN_SCHEMA)
+
+
+def claude_turn(messages: list[MessageParam], model: str) -> Message:
+    """The model's next turn in the loop, with the tools and no format, a live call."""
+    client = anthropic.Anthropic()
+    # No format: the loop's turns choose tools, and the ruling call that
+    # follows the loop keeps the schema.
+    return client.messages.create(
+        model=model,
+        max_tokens=MAX_TOKENS,
+        output_config={"effort": EFFORT},
+        tools=claude_tools(),
+        messages=messages,
+    )

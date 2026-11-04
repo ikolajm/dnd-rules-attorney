@@ -15,6 +15,15 @@ NUM_CTX = 16384
 # failure instead of generating until killed. Every reply that validated on
 # the size ladder was under 5,600 characters.
 NUM_PREDICT = 4096
+# No penalty is set, so each model samples with the penalties it ships,
+# as it runs with its own template. Pinned off, qwen3.5 lost its presence
+# penalty of 1.5 and looped to the cap on 22 dev items across the ladder.
+OPTIONS: dict[str, Any] = {
+    "temperature": TEMPERATURE,
+    "seed": SEED,
+    "num_ctx": NUM_CTX,
+    "num_predict": NUM_PREDICT,
+}
 
 # What a verdict is, written once and sent word for word to the answering
 # model and to the judge, so both work from the same sentence.
@@ -118,15 +127,7 @@ def chat_request(prompt: str, model: str, schema: dict[str, Any]) -> dict[str, A
         "messages": [{"role": "user", "content": prompt}],
         "format": schema,
         "think": THINK,
-        # No penalty is set, so each model samples with the penalties it ships,
-        # as it runs with its own template. Pinned off, qwen3.5 lost its presence
-        # penalty of 1.5 and looped to the cap on 22 dev items across the ladder.
-        "options": {
-            "temperature": TEMPERATURE,
-            "seed": SEED,
-            "num_ctx": NUM_CTX,
-            "num_predict": NUM_PREDICT,
-        },
+        "options": OPTIONS,
     }
 
 

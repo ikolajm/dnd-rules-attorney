@@ -4,9 +4,12 @@ from pathlib import Path
 
 from rules_attorney.answer import (
     KIND,
+    SEED,
+    THINK,
     VERDICT,
     Ruling,
     build_prompt,
+    chat_request,
     parse_reply,
     unmarked,
     unresolved,
@@ -126,3 +129,12 @@ def test_build_prompt_defines_the_kind() -> None:
     # sentence the model has only the field name, as the verdict once had.
     prompt = build_prompt("q", [])
     assert KIND in prompt
+
+
+def test_chat_request_seeds_the_options_and_keeps_think_top_level() -> None:
+    # Ollama reads think from the request, not the options. Swapping seed for
+    # think inside the options left runs unseeded and passed every other gate.
+    request = chat_request("Question?", "qwen3.5:9b", {})
+    assert request["options"]["seed"] == SEED
+    assert "think" not in request["options"]
+    assert request["think"] == THINK
