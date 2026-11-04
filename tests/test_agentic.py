@@ -2,6 +2,9 @@
 
 from collections.abc import Mapping
 
+import numpy as np
+from numpy.typing import NDArray
+
 from rules_attorney.agentic import (
     INVALID_CALL,
     Call,
@@ -9,10 +12,12 @@ from rules_attorney.agentic import (
     ToolCall,
     Trace,
     Turn,
+    build_dispatch,
     hand_over,
     run_loop,
 )
 from rules_attorney.corpus import Entry
+from rules_attorney.retrieve import NOMIC
 
 
 class FakeBackend:
@@ -92,3 +97,19 @@ def test_hand_over_puts_lookups_first_and_fills_ten() -> None:
     trace = Trace([Turn([lookup], 0.0, 0, 0)], "done")
     question = [f"q{n}" for n in range(12)]
     assert hand_over(trace, question) == ["L"] + [f"q{n}" for n in range(9)]
+
+
+def fake_embed(texts: list[str]) -> NDArray[np.float64]:
+    """One fixed vector for any query, so the ranking rests on the matrix alone."""
+    return np.array([[1.0, 0.0]])
+
+
+def test_dispatch_routes_a_search_whole_and_a_lookup_to_the_index() -> None:
+    # Seven rows whose cosine against [1, 0] rises with n, more than a search
+    # shows, so a cut to five would show.
+    matrix = np.array([[float(n), 1.0] for n in range(7)])
+    paths = [f"p{n}" for n in range(7)]
+    index = {"fireball": ["spells > fireball"]}
+    routed = build_dispatch(NOMIC, fake_embed, matrix, paths, index)
+    assert routed("search", {"query": "q"}) == [f"p{n}" for n in range(6, -1, -1)]
+    assert routed("lookup", {"name": "Fireball"}) == ["spells > fireball"]

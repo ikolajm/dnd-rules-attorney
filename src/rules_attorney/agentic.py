@@ -5,13 +5,25 @@ from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from typing import Any, Literal, Protocol
 
+import numpy as np
 import ollama
+from numpy.typing import NDArray
 
 from rules_attorney.answer import OPTIONS, THINK
 from rules_attorney.corpus import Entry
 from rules_attorney.fusion import fuse
 from rules_attorney.lookup import lookup_order
-from rules_attorney.tools import SEARCH_K, ollama_tools, render_result, valid_call
+from rules_attorney.retrieve import Embed, Embedder
+from rules_attorney.tools import (
+    SEARCH_K,
+    LookupArgs,
+    SearchArgs,
+    lookup,
+    ollama_tools,
+    render_result,
+    search,
+    valid_call,
+)
 
 # Sent word for word to both rows, as the first message of every loop.
 LOOP_INSTRUCTIONS = (
@@ -138,6 +150,31 @@ def hand_over(trace: Trace, question_ranking: list[str], k: int = 10) -> list[st
         call.ranking for call in calls if call.name == "search"
     ]
     return lookup_order(linked, fuse(rankings), k)
+
+
+def build_dispatch(
+    embedder: Embedder,
+    embed: Embed,
+    matrix: NDArray[np.float64],
+    paths: list[str],
+    index: dict[str, list[str]],
+) -> Dispatch:
+    """Loop's dispatch over the corpus: a search's whole ranking, a lookup's paths."""
+
+    def dispatch(name: str, arguments: Mapping[str, object]) -> list[str]:
+        if name == "search":
+            query = SearchArgs.model_validate(arguments).query
+            return search(
+                query,
+                embedder=embedder,
+                embed=embed,
+                matrix=matrix,
+                paths=paths,
+                k=len(paths),
+            )
+        return lookup(LookupArgs.model_validate(arguments).name, index)
+
+    return dispatch
 
 
 def build_loop_prompt(question: str) -> str:
