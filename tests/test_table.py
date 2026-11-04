@@ -64,6 +64,13 @@ def test_build_row_reads_the_reranker() -> None:
     assert build_row(records, judged, known=set()).reranker == RERANKER
 
 
+def test_build_row_reads_the_lookup() -> None:
+    records = load("floor-run.jsonl")
+    records[0]["config"]["lookup"] = ["equipment"]
+    judged = {record["id"]: record for record in load("floor-judged.jsonl")}
+    assert build_row(records, judged, known=set()).lookup == ["equipment"]
+
+
 def test_markdown_row_carries_the_level() -> None:
     row = replace(floor_row(), level=3)
     assert "| 3 |" in markdown_row(row)
@@ -73,6 +80,11 @@ def test_markdown_row_names_the_rerank_stage() -> None:
     # A rerank run records level 1, and must not print as one.
     row = replace(floor_row(), reranker=RERANKER)
     assert "| 1 + rerank |" in markdown_row(row)
+
+
+def test_markdown_row_names_the_lookup_stage() -> None:
+    row = replace(floor_row(), lookup=["equipment"])
+    assert "| 1 + lookup |" in markdown_row(row)
 
 
 def test_markdown_table_refuses_runs_of_two_splits() -> None:

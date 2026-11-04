@@ -15,6 +15,8 @@ class Row:
     level: int
     # None on a run made without the rerank stage.
     reranker: str | None
+    # The kinds linked, None on a run made without the lookup stage.
+    lookup: list[str] | None
     # Dev for a run made before the split was recorded.
     split: str
     # False on the local rows, "adaptive" on the hosted one, None on the floor.
@@ -68,6 +70,7 @@ def build_row(
         model=config["model"],
         level=config.get("level", 1),
         reranker=config.get("reranker"),
+        lookup=config.get("lookup"),
         split=config.get("split", "dev"),
         think=config.get("think"),
         commit=config["commit"],
@@ -104,10 +107,12 @@ def thinking(think: bool | str | None) -> str:
     return str(think)
 
 
-def level_cell(level: int, reranker: str | None) -> str:
-    """The level column: the level, and + rerank on a run that reranked."""
+def level_cell(level: int, reranker: str | None, lookup: list[str] | None) -> str:
+    """The level column: the level, + rerank or + lookup on a run with that stage."""
     if reranker is not None:
         return f"{level} + rerank"
+    if lookup is not None:
+        return f"{level} + lookup"
     return str(level)
 
 
@@ -116,7 +121,7 @@ def markdown_row(row: Row) -> str:
     commit = row.commit[:7] + (" dirty" if row.dirty else "")
     cells = [
         row.model,
-        level_cell(row.level, row.reranker),
+        level_cell(row.level, row.reranker, row.lookup),
         thinking(row.think),
         f"{row.agreed} / {row.judged}",
         f"{row.expected_flagged} / {row.expected}",
