@@ -3,8 +3,9 @@
 from typing import Any, Final
 
 import anthropic
-from anthropic.types import Message, MessageParam
+from anthropic.types import Message, MessageParam, ToolResultBlockParam, ToolUseBlock
 
+from rules_attorney.agentic import Reply, ToolCall, build_loop_prompt
 from rules_attorney.answer import Ruling
 from rules_attorney.multihop import Plan
 from rules_attorney.tools import claude_tools
@@ -76,3 +77,34 @@ def claude_turn(messages: list[MessageParam], model: str) -> Message:
         tools=claude_tools(),
         messages=messages,
     )
+
+
+class ClaudeBackend:
+    """The loop's conversation with a model through the Claude API."""
+
+    def __init__(self, question: str, model: str) -> None:
+        self.model = model
+        self.messages: list[MessageParam] = [
+            {"role": "user", "content": build_loop_prompt(question)}
+        ]
+        # The last turn's tool_use ids, which each result must answer.
+        self.ids: list[str] = []
+
+    def ask(self) -> Reply:
+        """The model's next turn, kept in the conversation."""
+        message = claude_turn(self.messages, self.model)
+        # The whole content goes back, thinking blocks included, which the
+        # API requires on the turn a tool result follows.
+        self.messages.append({"role": "assistant", "content": message.content})
+        uses = [block for block in message.content if isinstance(block, ToolUseBlock)]
+        self.ids = [block.id for block in uses]
+        calls = [ToolCall(block.name, block.input) for block in uses]
+        return Reply(calls, message.usage.input_tokens, message.usage.output_tokens)
+
+    def tell(self, results: list[str]) -> None:
+        """Every result in one user message, each answering its tool_use id."""
+        content: list[ToolResultBlockParam] = [
+            {"type": "tool_result", "tool_use_id": use_id, "content": result}
+            for use_id, result in zip(self.ids, results, strict=True)
+        ]
+        self.messages.append({"role": "user", "content": content})

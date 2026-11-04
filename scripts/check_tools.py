@@ -38,7 +38,8 @@ def first_calls(question: str, model: str) -> list[tuple[str, Mapping[str, objec
         ]
     reply = ollama_turn([{"role": "user", "content": prompt}], model)
     return [
-        (call.function.name, call.function.arguments) for call in reply.tool_calls or []
+        (call.function.name, call.function.arguments)
+        for call in reply.message.tool_calls or []
     ]
 
 
