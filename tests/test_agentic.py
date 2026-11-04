@@ -1,8 +1,10 @@
 """Tests for the agentic search loop, against a scripted backend."""
 
 from collections.abc import Mapping
+from typing import Any
 
 import numpy as np
+import pytest
 from numpy.typing import NDArray
 
 from rules_attorney.agentic import (
@@ -14,6 +16,7 @@ from rules_attorney.agentic import (
     Turn,
     build_dispatch,
     hand_over,
+    loop_handed,
     run_loop,
 )
 from rules_attorney.corpus import Entry
@@ -113,3 +116,46 @@ def test_dispatch_routes_a_search_whole_and_a_lookup_to_the_index() -> None:
     routed = build_dispatch(NOMIC, fake_embed, matrix, paths, index)
     assert routed("search", {"query": "q"}) == [f"p{n}" for n in range(6, -1, -1)]
     assert routed("lookup", {"name": "Fireball"}) == ["spells > fireball"]
+
+
+def record(item_id: str, **config: object) -> dict[str, Any]:
+    """A loop record from a clean dev run of m, any config field overridden."""
+    base: dict[str, object] = {
+        "split": "dev",
+        "model": "m",
+        "dirty": False,
+        "commit": "abc",
+    }
+    return {"id": item_id, "handed": ["p"], "config": base | config}
+
+
+def test_loop_handed_maps_each_id_to_its_ten() -> None:
+    records = [record("a"), record("b")]
+    assert loop_handed(records, "dev", "m", ["a", "b"]) == {"a": ["p"], "b": ["p"]}
+
+
+def test_loop_handed_refuses_another_split() -> None:
+    with pytest.raises(ValueError, match="split"):
+        loop_handed([record("a", split="test")], "dev", "m", ["a"])
+
+
+def test_loop_handed_refuses_another_model() -> None:
+    # The loop's model is the answering model, as level 3's planner is.
+    with pytest.raises(ValueError, match="from m"):
+        loop_handed([record("a", model="other")], "dev", "m", ["a"])
+
+
+def test_loop_handed_refuses_a_dirty_tree() -> None:
+    with pytest.raises(ValueError, match="dirty"):
+        loop_handed([record("a", dirty=True)], "dev", "m", ["a"])
+
+
+def test_loop_handed_refuses_two_commits() -> None:
+    records = [record("a"), record("b", commit="def")]
+    with pytest.raises(ValueError, match="commit"):
+        loop_handed(records, "dev", "m", ["a", "b"])
+
+
+def test_loop_handed_refuses_a_missing_item() -> None:
+    with pytest.raises(ValueError, match="miss"):
+        loop_handed([record("a")], "dev", "m", ["a", "b"])

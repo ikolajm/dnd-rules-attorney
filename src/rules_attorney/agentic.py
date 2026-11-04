@@ -223,3 +223,23 @@ class OllamaBackend:
         """Each result as a tool message, under its call's tool name."""
         for name, result in zip(self.names, results, strict=True):
             self.messages.append({"role": "tool", "tool_name": name, "content": result})
+
+
+def loop_handed(
+    records: list[dict[str, Any]], split: str, model: str, ids: list[str]
+) -> dict[str, list[str]]:
+    """Each item's id to the ten its loop record handed over, refusing a mismatch."""
+    configs = [record["config"] for record in records]
+    if any(config["split"] != split for config in configs):
+        raise ValueError(f"loop records are not all from the {split} split")
+    if any(config["model"] != model for config in configs):
+        raise ValueError(f"loop records are not all from {model}")
+    if any(config["dirty"] for config in configs):
+        raise ValueError("loop records come from a dirty tree")
+    if len({config["commit"] for config in configs}) > 1:
+        raise ValueError("loop records span more than one commit")
+    handed = {record["id"]: record["handed"] for record in records}
+    missing = [item_id for item_id in ids if item_id not in handed]
+    if missing:
+        raise ValueError(f"loop records miss {len(missing)} items, {missing[0]} first")
+    return handed
