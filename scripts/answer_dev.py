@@ -1,7 +1,7 @@
 """Answers every item of a split from its top 10 entries, one record per item.
 
     python scripts/answer_dev.py <model> [--split dev|test] [--level 1|3]
-        [--rerank] [--lookup]
+        [--rerank] [--lookup] [--loop-records <path>]
 
 Answers with the model named: through the Claude API when its name starts
 with claude-, through the live Ollama server otherwise. The split is dev
@@ -13,6 +13,9 @@ and answers from its fusion with level 1's order.
 
 --lookup answers from the records the question names, linked ahead of level
 1's order.
+
+--loop-records answers from the ten each item's record from
+scripts/eval_agentic.py handed over, without running the loop again.
 """
 
 import argparse
@@ -23,6 +26,7 @@ from functools import partial
 from pathlib import Path
 from typing import Any
 
+from rules_attorney.agentic import loop_handed
 from rules_attorney.answer import (
     NUM_CTX,
     NUM_PREDICT,
@@ -86,18 +90,24 @@ def main() -> None:
     parser.add_argument("--level", type=int, choices=[1, 3], default=1)
     parser.add_argument("--rerank", action="store_true")
     parser.add_argument("--lookup", action="store_true")
+    parser.add_argument("--loop-records", type=Path)
     args = parser.parse_args()
     model: str = args.model
     split: str = args.split
     level: int = args.level
     reranking: bool = args.rerank
     looking_up: bool = args.lookup
+    loop_records: Path | None = args.loop_records
     if looking_up and reranking:
         parser.error("--lookup and --rerank are separate stages; run one at a time")
     if reranking and level == 3:
         parser.error("--rerank is measured on level 1 only")
     if looking_up and level == 3:
         parser.error("--lookup is measured on level 1 only")
+    if loop_records is not None and (reranking or looking_up):
+        parser.error("--loop-records is a stage of its own; run one stage at a time")
+    if loop_records is not None and level == 3:
+        parser.error("--loop-records answers in place of level 1's ten")
     hosted = model.startswith(MODEL_PREFIX)
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
@@ -105,6 +115,18 @@ def main() -> None:
     known = set(paths)
     items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
     chosen = [item for item in items if item["split"] == split]
+    handed: dict[str, list[str]] | None = None
+    loop_commit: str | None = None
+    if loop_records is not None:
+        # Refused here, before the embeddings run or any model is called.
+        lines = loop_records.read_text(encoding="utf-8").splitlines()
+        loop = [json.loads(line) for line in lines]
+        try:
+            handed = loop_handed(loop, split, model, [item["id"] for item in chosen])
+        except ValueError as error:
+            parser.error(str(error))
+        # loop_handed refused mixed commits, so the first record's is the run's.
+        loop_commit = loop[0]["config"]["commit"]
     embed = partial(ollama_embed, model=EMBEDDER.model)
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     score: Score | None = cross_encoder(RERANKER) if reranking else None
@@ -122,6 +144,8 @@ def main() -> None:
         "reranker": RERANKER if reranking else None,
         "depth": DEPTH if reranking else None,
         "lookup": list(KINDS) if looking_up else None,
+        "loop": loop_records.name if loop_records is not None else None,
+        "loop_commit": loop_commit,
         "fields": list(Ruling.model_fields),
         "commit": source["commit"],
         "dirty": source["dirty"],
@@ -146,6 +170,8 @@ def main() -> None:
         marker = "-rerank"
     if looking_up:
         marker = "-lookup"
+    if loop_records is not None:
+        marker = "-loop"
     RUNS.mkdir(exist_ok=True)
     out = RUNS / f"{stamp}-{split}{marker}-{model.replace(':', '-')}.jsonl"
     failures = 0
@@ -204,6 +230,9 @@ def main() -> None:
                 named = links(item["question"], index)
                 ranking = lookup_order(named, ranking, K)
                 looked_up = {"links": named}
+            if handed is not None:
+                # The ten the loop's record handed over, in place of level 1's.
+                ranking = handed[item["id"]]
             top = ranking[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
 
