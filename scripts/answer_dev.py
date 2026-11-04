@@ -1,6 +1,7 @@
 """Answers every item of a split from its top 10 entries, one record per item.
 
-    python scripts/answer_dev.py <model> [--split dev|test] [--level 1|3] [--rerank]
+    python scripts/answer_dev.py <model> [--split dev|test] [--level 1|3]
+        [--rerank] [--lookup]
 
 Answers with the model named: through the Claude API when its name starts
 with claude-, through the live Ollama server otherwise. The split is dev
@@ -9,6 +10,9 @@ answers from the merged ranking's top 10.
 
 --rerank reorders level 1's top 30 with the cross-encoder
 and answers from its fusion with level 1's order.
+
+--lookup answers from the records the question names, linked ahead of level
+1's order.
 """
 
 import argparse
@@ -41,6 +45,7 @@ from rules_attorney.hosted import (
     claude_plan,
 )
 from rules_attorney.judge import reply_text
+from rules_attorney.lookup import KINDS, links, lookup_order, name_index
 from rules_attorney.multihop import (
     build_plan_prompt,
     merged_ranking,
@@ -80,13 +85,19 @@ def main() -> None:
     parser.add_argument("--split", choices=SPLITS, default=SPLITS[0])
     parser.add_argument("--level", type=int, choices=[1, 3], default=1)
     parser.add_argument("--rerank", action="store_true")
+    parser.add_argument("--lookup", action="store_true")
     args = parser.parse_args()
     model: str = args.model
     split: str = args.split
     level: int = args.level
     reranking: bool = args.rerank
+    looking_up: bool = args.lookup
+    if looking_up and reranking:
+        parser.error("--lookup and --rerank are separate stages; run one at a time")
     if reranking and level == 3:
         parser.error("--rerank is measured on level 1 only")
+    if looking_up and level == 3:
+        parser.error("--lookup is measured on level 1 only")
     hosted = model.startswith(MODEL_PREFIX)
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
@@ -97,6 +108,9 @@ def main() -> None:
     embed = partial(ollama_embed, model=EMBEDDER.model)
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     score: Score | None = cross_encoder(RERANKER) if reranking else None
+    index: dict[str, list[str]] | None = (
+        name_index(entries, KINDS) if looking_up else None
+    )
     source = commit(ROOT)
     config: dict[str, Any] = {
         "model": model,
@@ -107,6 +121,7 @@ def main() -> None:
         "k": K,
         "reranker": RERANKER if reranking else None,
         "depth": DEPTH if reranking else None,
+        "lookup": list(KINDS) if looking_up else None,
         "fields": list(Ruling.model_fields),
         "commit": source["commit"],
         "dirty": source["dirty"],
@@ -129,6 +144,8 @@ def main() -> None:
     marker = "-level3" if level == 3 else ""
     if reranking:
         marker = "-rerank"
+    if looking_up:
+        marker = "-lookup"
     RUNS.mkdir(exist_ok=True)
     out = RUNS / f"{stamp}-{split}{marker}-{model.replace(':', '-')}.jsonl"
     failures = 0
@@ -182,6 +199,11 @@ def main() -> None:
                 reordered = {
                     "rerank_seconds": round(time.perf_counter() - rerank_start, 2)
                 }
+            looked_up: dict[str, Any] = {}
+            if index is not None:
+                named = links(item["question"], index)
+                ranking = lookup_order(named, ranking, K)
+                looked_up = {"links": named}
             top = ranking[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
 
@@ -222,6 +244,7 @@ def main() -> None:
                 **usage,
                 **planned,
                 **reordered,
+                **looked_up,
                 "config": config,
             }
             file.write(json.dumps(record) + "\n")
