@@ -8,7 +8,7 @@ from typing import Any
 import pytest
 
 from rules_attorney.rerank import RERANKER
-from rules_attorney.table import Row, build_row, markdown_row, markdown_table
+from rules_attorney.table import Row, build_row, gains, markdown_row, markdown_table
 
 # The floor's dev run and its judged file, copied from runs/: "no" to every
 # item, never flagged, no cites, so each score is known in advance.
@@ -108,6 +108,30 @@ def test_markdown_row_prints_a_dash_for_a_run_without_a_level() -> None:
     judged = {record["id"]: record for record in load("floor-judged.jsonl")}
     row = build_row(records, judged, known=set())
     assert "| floor | - |" in markdown_row(row)
+
+
+def floor_judged() -> dict[str, dict[str, Any]]:
+    """The captured floor's judged records, keyed by item id."""
+    return {record["id"]: record for record in load("floor-judged.jsonl")}
+
+
+def test_gains_names_the_item_each_run_agreed_on_alone() -> None:
+    base = floor_judged()
+    stage = floor_judged()
+    # The floor disagrees on the first and agrees on the second.
+    stage["grappled-attack-and-cast"]["agrees"] = True
+    stage["grappled-gives-advantage"]["agrees"] = False
+    assert gains(base, stage) == (
+        ["grappled-attack-and-cast"],
+        ["grappled-gives-advantage"],
+    )
+
+
+def test_gains_refuses_runs_of_different_items() -> None:
+    stage = floor_judged()
+    del stage["grappled-attack-and-cast"]
+    with pytest.raises(ValueError, match="different items"):
+        gains(floor_judged(), stage)
 
 
 def test_markdown_table_refuses_runs_of_two_splits() -> None:

@@ -3,6 +3,7 @@
     python scripts/summarize_runs.py runs/<run>.jsonl [runs/<run>.jsonl ...]
     python scripts/summarize_runs.py --table runs/<run>.jsonl [runs/<run>.jsonl ...]
     python scripts/summarize_runs.py --compare runs/<old>.jsonl runs/<new>.jsonl
+    python scripts/summarize_runs.py --gains runs/<base>.jsonl runs/<stage>.jsonl
 
 A run's judged file is found beside it, `<run>.judged-<judge>.jsonl`, and a
 run judged more than once is refused rather than summarized from one judge
@@ -15,6 +16,9 @@ given, from the same scores the summary prints.
 
 --compare reports how many replies are identical byte for byte, item by item,
 and names each item that differs.
+
+--gains names the judged items the second run agreed on and the first did
+not, then the reverse, from the two runs' judged files.
 """
 
 import argparse
@@ -24,7 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from rules_attorney.corpus import load_corpus
-from rules_attorney.table import Row, build_row, markdown_table
+from rules_attorney.table import Row, build_row, gains, markdown_table
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "srd-5.1"
@@ -81,19 +85,42 @@ def compare(old: Path, new: Path) -> None:
         print(f"  differs: {item}")
 
 
+def gained_and_lost(base: Path, stage: Path) -> None:
+    """Print the judged items each of two runs agreed on and the other did not."""
+    before = {record["id"]: record for record in load(judged_file(base))}
+    after = {record["id"]: record for record in load(judged_file(stage))}
+    try:
+        gained, lost = gains(before, after)
+    except ValueError as error:
+        sys.exit(str(error))
+    print(f"{stage.name} against {base.name}")
+    print(f"gained {len(gained)}")
+    for item in gained:
+        print(f"  {item}")
+    print(f"lost {len(lost)}")
+    for item in lost:
+        print(f"  {item}")
+
+
 def main() -> None:
-    """Summarize the runs named, table them, or compare two."""
+    """Summarize the runs named, table them, or compare two or read their gains."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("runs", nargs="+", type=Path)
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--compare", action="store_true")
     mode.add_argument("--table", action="store_true")
+    mode.add_argument("--gains", action="store_true")
     args = parser.parse_args()
 
     if args.compare:
         if len(args.runs) != 2:
             parser.error("--compare takes exactly two runs")
         compare(*args.runs)
+        return
+    if args.gains:
+        if len(args.runs) != 2:
+            parser.error("--gains takes exactly two runs")
+        gained_and_lost(*args.runs)
         return
 
     known = {entry.path for entry in load_corpus(DATA)}
