@@ -156,3 +156,19 @@ def markdown_table(rows: list[Row]) -> str:
     if len(splits) > 1:
         raise ValueError(f"runs of more than one split: {', '.join(splits)}")
     return "\n".join([HEADER, RULE, *(markdown_row(row) for row in rows)])
+
+
+def gains(
+    base: dict[str, dict[str, Any]], stage: dict[str, dict[str, Any]]
+) -> tuple[list[str], list[str]]:
+    """The judged items the stage agreed on and the base did not, then the reverse.
+
+    Each run's judged records are keyed by item id. Raises ValueError on runs
+    of different items, since a gain is only read across the same items.
+    """
+    if base.keys() != stage.keys():
+        raise ValueError("the two runs judge different items")
+    sent = [item for item in base if base[item]["judged"]]
+    gained = [i for i in sent if stage[i]["agrees"] and not base[i]["agrees"]]
+    lost = [i for i in sent if base[i]["agrees"] and not stage[i]["agrees"]]
+    return gained, lost
