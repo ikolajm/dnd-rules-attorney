@@ -108,6 +108,7 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 | `scripts/judge_dev.py runs/<run>.jsonl` | Judges a run's verdicts and flags with Claude Sonnet 5.5 |
 | `scripts/floor_dev.py` | Writes the floor row: "no" to every item, no flag, no cites |
 | `scripts/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs |
+| `scripts/score_handed.py runs/<run>.jsonl ...` | Scores the ten each answer run retrieved, recall@k and all-cites@k against the gold cites, and refuses a run recorded on a dirty tree |
 | `scripts/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
 | `scripts/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
 | `scripts/check_supplement.py <srd.txt>` | Checks every passage in `supplement.json` word for word against the SRD 5.1 document's text |
