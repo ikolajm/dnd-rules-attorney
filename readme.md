@@ -57,42 +57,60 @@ The server embeds the corpus once at startup, then serves on port 8000. The scre
 
 ## Results
 
-**Level 1** answers each question from the 10 SRD entries most similar to it: entries chunked by header, embedded with `nomic-embed-text`, ranked by cosine similarity. **Level 3** first has the answering model split the question into sub-questions, one per rule it turns on, ranks the entries for the question and for each sub-question, and fuses the rankings with reciprocal rank fusion; the fused ranking's first 10 entries are handed over, so level 3 gets no more text than level 1. At both levels the model returns a structured ruling (an explanation, an ambiguity flag, a verdict and the entries cited), validated against a Pydantic schema. Scored on the held-out test split, once on the grown corpus: 45 gold items, 37 with a verdict to judge and 10 that should be flagged as ambiguous.
+Every stage hands the answering model 10 SRD entries, so none wins by reading more.
 
-| Model | Level | Thinking | Agreement | Expected flagged | Settled flagged | Schema failures | Cites resolved, strict | Once unmarked |
-|---|---|---|---|---|---|---|---|---|
-| claude-opus-5-5 | 1 | adaptive | 32 / 37 | 4 / 10 | 0 / 35 | 0 / 45 | 109 / 109 | 109 / 109 |
-| claude-opus-5-5 | 3 | adaptive | 33 / 37 | 4 / 10 | 0 / 35 | 0 / 45 | 110 / 110 | 110 / 110 |
-| gemma4:12b | 1 | off | 28 / 37 | 1 / 10 | 10 / 35 | 1 / 45 | 65 / 77 | 65 / 77 |
-| qwen3.5:9b | 1 | off | 32 / 37 | 1 / 10 | 3 / 35 | 0 / 45 | 74 / 78 | 77 / 78 |
-| qwen3.5:9b | 3 | off | 28 / 37 | 1 / 10 | 3 / 35 | 2 / 45 | 69 / 76 | 76 / 76 |
-| qwen3.5:4b | 1 | off | 29 / 37 | 1 / 10 | 6 / 35 | 3 / 45 | 50 / 67 | 58 / 67 |
-| qwen3.5:2b | 1 | off | 27 / 37 | 1 / 10 | 4 / 35 | 0 / 45 | 1 / 62 | 59 / 62 |
-| qwen3.5:0.8b | 1 | off | 17 / 37 | 4 / 10 | 9 / 35 | 1 / 45 | 11 / 52 | 14 / 52 |
-| ministral-3:8b | 1 | off | 28 / 37 | 2 / 10 | 18 / 35 | 0 / 45 | 18 / 80 | 56 / 80 |
-| olmo-3:7b-instruct | 1 | off | 17 / 37 | 3 / 10 | 13 / 35 | 0 / 45 | 37 / 64 | 54 / 64 |
-| floor | - | - | 18 / 37 | 0 / 10 | 0 / 35 | 0 / 45 | 0 / 0 | 0 / 0 |
+- **Level 1** ranks the entries, chunked by header and embedded with `nomic-embed-text`, by cosine similarity to the question.
+- **1 + rerank** reorders level 1's top 30 with the cross-encoder `BAAI/bge-reranker-v2-m3` and fuses that order with level 1's.
+- **1 + lookup** puts the records the question names, a weapon, a spell, a condition, a race or a class feature, ahead of level 1's order.
+- **Level 3** has the answering model split the question into sub-questions, one per rule it turns on, ranks the entries for the question and each sub-question, and fuses the rankings with reciprocal rank fusion, each cut to its first 10.
+- **The loop** gives the answering model two tools, `search`, which returns the top five entries in full, and `lookup`, which resolves a record by name, for up to six calls. The code then hands over the records looked up first, then the question's ranking fused with every search's, each cut to its first 10.
 
-- **Agreement** is whether the verdict means the same as the gold verdict, decided by Claude Sonnet 5.5 as judge. The judge was checked against hand grades before its scores were counted, and matched twelve of twelve graded blind.
+At every stage the model returns a structured ruling (an explanation, an ambiguity flag, a verdict and the entries cited), validated against a Pydantic schema. Scored on the held-out test split once: 52 gold items, 44 with a verdict to judge and 10 that should be flagged as ambiguous.
+
+### Retrieval
+
+all-cites@k, the share of items with every entry their ruling cites in the top k:
+
+| k | level 1 | 1 + rerank | 1 + lookup | level 3, `qwen3.5:9b` | level 3, Opus | loop, `qwen3.5:9b` | loop, Opus |
+|---|---|---|---|---|---|---|---|
+| 3 | 0.327 | 0.346 | 0.404 | 0.250 | 0.346 | 0.404 | 0.423 |
+| 5 | 0.423 | 0.462 | 0.577 | 0.423 | 0.538 | 0.500 | 0.712 |
+| 10 | 0.558 | 0.596 | 0.654 | 0.538 | 0.692 | 0.654 | 0.904 |
+
+At the 10 the model is handed, level 1 completes 56% of items and Opus's loop 90%. The loop driven by `qwen3.5:9b` scores 0.654, the same as the lookup alone, and level 3 planned by the 9b scores below level 1 at 3 and 10. Retrieval is deterministic for level 1, rerank and lookup; level 3 and the loop depend on the model's plans and searches, and each column is the one draw the answers below were given.
+
+### Rulings
+
+| Model | Level | Thinking | Agreement | Expected flagged | Settled flagged | Schema failures | Cites resolved, strict | Once unmarked | Commit |
+|---|---|---|---|---|---|---|---|---|---|
+| claude-opus-5-5 | 1 | adaptive | 38 / 44 | 5 / 10 | 0 / 42 | 0 / 52 | 129 / 129 | 129 / 129 | 15463d8 |
+| claude-opus-5-5 | 1 + rerank | adaptive | 37 / 44 | 3 / 10 | 0 / 42 | 0 / 52 | 127 / 127 | 127 / 127 | 15463d8 |
+| claude-opus-5-5 | 1 + lookup | adaptive | 39 / 44 | 4 / 10 | 0 / 42 | 0 / 52 | 137 / 137 | 137 / 137 | 15463d8 |
+| claude-opus-5-5 | 3 | adaptive | 40 / 44 | 3 / 10 | 0 / 42 | 0 / 52 | 138 / 138 | 138 / 138 | 15463d8 |
+| claude-opus-5-5 | loop | adaptive | 43 / 44 | 3 / 10 | 1 / 42 | 0 / 52 | 165 / 165 | 165 / 165 | 15463d8 |
+| gemma4:12b | 1 | off | 32 / 44 | 2 / 10 | 16 / 42 | 2 / 52 | 80 / 93 | 80 / 93 | 15463d8 |
+| qwen3.5:9b | 1 | off | 32 / 44 | 1 / 10 | 5 / 42 | 1 / 52 | 79 / 87 | 86 / 87 | 15463d8 |
+| qwen3.5:9b | 1 + rerank | off | 35 / 44 | 0 / 10 | 4 / 42 | 0 / 52 | 72 / 83 | 79 / 83 | 15463d8 |
+| qwen3.5:9b | 1 + lookup | off | 36 / 44 | 0 / 10 | 6 / 42 | 0 / 52 | 66 / 94 | 91 / 94 | 15463d8 |
+| qwen3.5:9b | 3 | off | 33 / 44 | 0 / 10 | 1 / 42 | 1 / 52 | 77 / 88 | 87 / 88 | 15463d8 |
+| qwen3.5:9b | loop | off | 31 / 44 | 0 / 10 | 4 / 42 | 0 / 52 | 85 / 99 | 99 / 99 | 15463d8 |
+| qwen3.5:4b | 1 | off | 30 / 44 | 0 / 10 | 7 / 42 | 3 / 52 | 66 / 91 | 78 / 91 | 15463d8 |
+| qwen3.5:2b | 1 | off | 29 / 44 | 0 / 10 | 7 / 42 | 0 / 52 | 1 / 69 | 63 / 69 | 15463d8 |
+| qwen3.5:0.8b | 1 | off | 18 / 44 | 4 / 10 | 15 / 42 | 2 / 52 | 19 / 59 | 21 / 59 | 15463d8 |
+| ministral-3:8b | 1 | off | 31 / 44 | 5 / 10 | 15 / 42 | 0 / 52 | 33 / 93 | 71 / 93 | 15463d8 |
+| olmo-3:7b-instruct | 1 | off | 20 / 44 | 2 / 10 | 13 / 42 | 0 / 52 | 39 / 78 | 62 / 78 | 15463d8 |
+| floor | - | - | 21 / 44 | 0 / 10 | 0 / 42 | 0 / 52 | 0 / 0 | 0 / 0 | 6b75109 |
+
+- **Agreement** is whether the verdict means the same as the gold verdict, decided by Claude Sonnet 5.5 as judge. The judge was checked against hand grades before its scores were counted, and matched twelve of twelve graded blind. With 44 judged items, one item is about 2.3 points.
 - **The flag** is read as two rates, never one count: a system that never flags would score well on a count, since settled items outnumber the rest.
 - **Cites** are checked against the corpus as written and once a leading `## ` marker, the commonest slip, is removed.
-- **The floor** answers "no" to every item, never flags and cites nothing, judged like any other row, so the bottom of the table is measured.
+- **The floor** answers "no" to every item, never flags and cites nothing, judged like any other row, so the bottom of the table is measured. It agrees on 21 of 44, and two models score below it.
 - **Local models** run through Ollama as their default tags ship them, `Q4_K_M` except `qwen3.5:2b` and `qwen3.5:0.8b` at `Q8_0`, with thinking off and temperature 0. **Opus 5.5** is the ceiling, through the API at effort `high`; it cannot turn thinking off.
-- With 37 judged items, one item is about 2.7 points, and a gap of one between rows is not a finding. Agreement does not separate the top three; the ceiling separates on the flag and on cites.
-- **Level 3 gives Opus one verdict and costs `qwen3.5:9b` four.** Opus gains two and loses one. The 9b gains one and loses five, two of the five its schema failures: explanations that argued both readings until they reached the 4,096-token cap. On dev the 9b loses four too, 39 to 35 of 54. The loop is not level 3's alone: on dev the 9b hit the cap once at each level. The planning call adds about 160 seconds across the 45 items for Opus and 25 for the 9b.
+- **Answer runs do not reproduce.** Rerun on the same prompts in the same session, `qwen3.5:9b` shared 6 to 11 of 52 replies with its first draw at every stage but level 3, which matched in all three draws. Its agreement across draws: level 1 32 and 34, rerank 35 and 32, lookup 36, 32 and 32, level 3 33 three times, the loop 31 and 30. No 9b stage separates from level 1, and its rows above, the first draw, are not ranked against each other. The other local models were run once, their spread unmeasured.
+- **Opus's loop gains five items against level 1 and loses none**, alongside the largest retrieval gain: `invisible-vs-invisible`, `ranged-prone-five-feet`, `readied-attack-extra-attack`, `halfling-greatsword` and `grappler-pin-attacks`. Level 3 gains two and loses none, the lookup gains one, and rerank loses one. Each is one draw. The loop flags 3 of the 10 ambiguous items to level 1's 5, and one settled item.
+- **The loop's cost**, per item before the answer call: Opus makes 4.52 calls over 3.15 turns, 7,555 input and 842 output tokens, in 12.9 seconds, and 11 of 52 items reach the six-call cap; `qwen3.5:9b` makes 2.62 calls, 2,478 and 408 tokens, in 5.0 seconds, none capped.
 
-Retrieval on the same test items, scored against the entries each gold item cites:
-
-| k | recall@k, level 1 | all-cites@k, level 1 | all-cites@k, level 3 planned by `qwen3.5:9b` | all-cites@k, level 3 planned by Opus |
-|---|---|---|---|---|
-| 3 | 0.650 | 0.333 | 0.222 | 0.333 |
-| 5 | 0.733 | 0.444 | 0.400 | 0.467 |
-| 10 | 0.839 | 0.600 | 0.489 | 0.667 |
-| 20 | 0.909 | 0.778 | 0.689 | - |
-
-recall@k is the share of an item's cited entries in the top k; all-cites@k is the share of items with every cited entry there. At the k the model is handed, two items in five are missing an entry their ruling needs. Most of that is the items the grown corpus brought: the 28 earlier items complete 21 at 10 on their earlier cites, as before the corpus grew, and 19 with two of them re-cited to a class feature, while the 17 new items complete 8, most misses a short weapon entry or the size rule. Splitting the question helps when the planner decomposes and costs when it rephrases: Opus gives no sub-questions for 16 of 45 items and two to four for the rest, gaining three items at 10, while the 9b gives one for 37, most of them a rephrasing of the question, and loses five. Opus's level 3 column is counted from its answer run's records, which hold the 10 entries handed over, so it stops at 10.
-
-Every other number is computed from run records by `scripts/summarize_runs.py --table`, `scripts/eval_retrieval.py --split test` and `scripts/eval_multihop.py --split test`, all at commit `62538c6`.
+Every number is computed from run records by `scripts/summarize_runs.py --table` and `--gains`, `scripts/score_handed.py` and `scripts/eval_agentic.py --records`. The runs are at commit `15463d8`, the floor at `6b75109` and the 9b's reruns at `fcd6d77`; nothing between them changes how an answer is made.
 
 ## Reproducing the results
 
@@ -104,10 +122,11 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 | `scripts/eval_multihop.py <model>` | Plans with the model named and scores level 3's fused retrieval |
 | `scripts/eval_rerank.py` | Reranks level 1's top 30 with `BAAI/bge-reranker-v2-m3` and scores level 1's order, the reranked order and the two fused |
 | `scripts/eval_lookup.py [--kinds <root> ...]` | Links the records each question names ahead of level 1's order and scores both orders, with each kind's link precision and recall |
-| `scripts/answer_dev.py <model> [--level 1\|3] [--rerank\|--lookup]` | Rules on every item of the split; a model named `claude-…` answers through the API; `--rerank` answers level 1 from its order fused with the reranked one; `--lookup` answers from the records the question names ahead of level 1's order |
+| `scripts/eval_agentic.py <model> [--records runs/<agentic>.jsonl]` | Runs the loop on every item of the split and scores the ten it hands over, with its calls, turns, tokens and seconds; `--records` prints the same from records already written |
+| `scripts/answer_dev.py <model> [--level 1\|3] [--rerank\|--lookup\|--loop-records runs/<agentic>.jsonl]` | Rules on every item of the split; a model named `claude-…` answers through the API; `--rerank` answers level 1 from its order fused with the reranked one; `--lookup` answers from the records the question names ahead of level 1's order; `--loop-records` answers from the ten each loop record handed over |
 | `scripts/judge_dev.py runs/<run>.jsonl` | Judges a run's verdicts and flags with Claude Sonnet 5.5 |
 | `scripts/floor_dev.py` | Writes the floor row: "no" to every item, no flag, no cites |
-| `scripts/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs |
+| `scripts/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs; `--gains <base> <stage>` names the items each of two runs agreed on and the other did not |
 | `scripts/score_handed.py runs/<run>.jsonl ...` | Scores the ten each answer run retrieved, recall@k and all-cites@k against the gold cites, and refuses a run recorded on a dirty tree |
 | `scripts/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
 | `scripts/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
