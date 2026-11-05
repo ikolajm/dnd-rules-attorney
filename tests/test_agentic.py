@@ -102,6 +102,25 @@ def test_hand_over_puts_lookups_first_and_fills_ten() -> None:
     assert hand_over(trace, question) == ["L"] + [f"q{n}" for n in range(9)]
 
 
+MIDS = [f"mid{n}" for n in range(10)]
+
+
+def buried(name: str) -> list[str]:
+    """Forty deep: ten of its own, the mids 11th to 20th, then top last."""
+    own = [f"{name}{n}" for n in range(10)]
+    deeper = [f"{name}x{n}" for n in range(19)]
+    return own + MIDS + deeper + ["top"]
+
+
+def test_hand_over_keeps_the_question_first_the_searches_bury() -> None:
+    # readied-spell-no-trigger: Opus's searches, fused whole with the
+    # question's ranking, pushed the question's first out of the ten.
+    searches = [Call("search", {"query": name}, True, buried(name)) for name in "abc"]
+    trace = Trace([Turn(searches, 0.0, 0, 0)], "done")
+    question = ["top"] + [f"q{n}" for n in range(9)] + MIDS
+    assert "top" in hand_over(trace, question)
+
+
 def fake_embed(texts: list[str]) -> NDArray[np.float64]:
     """One fixed vector for any query, so the ranking rests on the matrix alone."""
     return np.array([[1.0, 0.0]])

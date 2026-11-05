@@ -29,3 +29,21 @@ def test_merged_ranking_puts_a_sub_question_first_into_the_top_ten() -> None:
     merged = merged_ranking(QUESTION_RANKING, [["sub-first"]])
     assert "sub-first" in merged[:10]
     assert "q10" not in merged[:10]
+
+
+MIDS = [f"mid{n}" for n in range(10)]
+
+
+def buried(name: str) -> list[str]:
+    """Forty deep: ten of its own, the mids 11th to 20th, then top last."""
+    own = [f"{name}{n}" for n in range(10)]
+    deeper = [f"{name}x{n}" for n in range(19)]
+    return own + MIDS + deeper + ["top"]
+
+
+def test_merged_ranking_keeps_the_question_first_the_sub_questions_bury() -> None:
+    # The shape of readied-spell-no-trigger: fused whole, mids placed 11th to
+    # 20th in every ranking push the question's first out of the ten.
+    question = ["top"] + [f"q{n}" for n in range(9)] + MIDS
+    merged = merged_ranking(question, [buried("a"), buried("b"), buried("c")])
+    assert "top" in merged[:10]
