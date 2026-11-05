@@ -2,7 +2,7 @@
 
 import pytest
 
-from rules_attorney.fusion import fuse, fused_scores
+from rules_attorney.fusion import fuse, fuse_tops, fused_scores
 
 
 def test_a_label_first_in_both_scores_two_over_sixty_one() -> None:
@@ -31,3 +31,21 @@ def test_second_in_both_beats_first_in_one_and_last_in_the_other() -> None:
 
 def test_a_tie_keeps_the_first_ranking_order() -> None:
     assert fuse([["a", "b"], ["b", "a"]]) == ["a", "b"]
+
+
+MIDS = [f"mid{n}" for n in range(10)]
+
+
+def buried(name: str) -> list[str]:
+    """Forty deep: ten of its own, the mids 11th to 20th, then top last."""
+    own = [f"{name}{n}" for n in range(10)]
+    deeper = [f"{name}x{n}" for n in range(19)]
+    return own + MIDS + deeper + ["top"]
+
+
+def test_fuse_tops_keeps_a_first_place_the_whole_rankings_bury() -> None:
+    # The shape of readied-spell-no-trigger: fused whole, the mids' 4/71 to
+    # 4/80 outscore top's 1/61 + 3/100, and top falls out of the ten.
+    question = ["top"] + [f"q{n}" for n in range(9)] + MIDS
+    rankings = [question, buried("a"), buried("b"), buried("c")]
+    assert "top" in fuse_tops(rankings)[:10]

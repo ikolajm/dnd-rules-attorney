@@ -11,7 +11,7 @@ from numpy.typing import NDArray
 
 from rules_attorney.answer import OPTIONS, THINK
 from rules_attorney.corpus import Entry
-from rules_attorney.fusion import fuse
+from rules_attorney.fusion import fuse_tops
 from rules_attorney.lookup import lookup_order
 from rules_attorney.retrieve import Embed, Embedder
 from rules_attorney.tools import (
@@ -143,13 +143,13 @@ def run_loop(
 
 
 def hand_over(trace: Trace, question_ranking: list[str], k: int = 10) -> list[str]:
-    """Lookups first, then the question's and searches' rankings fused, cut to k."""
+    """Lookups first, then the question's and searches' tops fused, cut to k."""
     calls = [call for turn in trace.turns for call in turn.calls if call.valid]
     linked = [path for call in calls if call.name == "lookup" for path in call.ranking]
     rankings = [question_ranking] + [
         call.ranking for call in calls if call.name == "search"
     ]
-    return lookup_order(linked, fuse(rankings), k)
+    return lookup_order(linked, fuse_tops(rankings), k)
 
 
 def build_dispatch(
