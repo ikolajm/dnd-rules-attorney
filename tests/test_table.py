@@ -100,6 +100,16 @@ def test_markdown_row_names_the_loop() -> None:
     assert "| loop |" in markdown_row(row)
 
 
+def test_markdown_row_prints_a_dash_for_a_run_without_a_level() -> None:
+    # The floor records its level as None. The published row's dash was once
+    # typed by hand over the 1 a missing level printed.
+    records = load("floor-run.jsonl")
+    records[0]["config"]["level"] = None
+    judged = {record["id"]: record for record in load("floor-judged.jsonl")}
+    row = build_row(records, judged, known=set())
+    assert "| floor | - |" in markdown_row(row)
+
+
 def test_markdown_table_refuses_runs_of_two_splits() -> None:
     dev = floor_row()
     with pytest.raises(ValueError, match="more than one split"):

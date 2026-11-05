@@ -11,8 +11,9 @@ class Row:
     """One run's scores, read from its records and its judged file."""
 
     model: str
-    # Level 1 for a run made before the level was recorded.
-    level: int
+    # Level 1 for a run made before the level was recorded, None on the floor,
+    # which retrieves nothing.
+    level: int | None
     # None on a run made without the rerank stage.
     reranker: str | None
     # The kinds linked, None on a run made without the lookup stage.
@@ -111,9 +112,12 @@ def thinking(think: bool | str | None) -> str:
 
 
 def level_cell(
-    level: int, reranker: str | None, lookup: list[str] | None, loop: str | None
+    level: int | None, reranker: str | None, lookup: list[str] | None, loop: str | None
 ) -> str:
-    """The level column: loop, or the level with + rerank or + lookup for a stage."""
+    """The level column: loop, the level with + rerank or + lookup for a stage, or
+    a dash for a run that retrieves nothing."""
+    if level is None:
+        return "-"
     # The loop replaces level 1's retrieval rather than adding a stage to it.
     if loop is not None:
         return "loop"

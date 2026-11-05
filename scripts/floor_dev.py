@@ -42,6 +42,8 @@ def main() -> None:
     config: dict[str, Any] = {
         "model": "floor",
         "split": split,
+        # The floor retrieves nothing, so it has no level; the table prints a dash.
+        "level": None,
         "fields": list(Ruling.model_fields),
         "commit": source["commit"],
         "dirty": source["dirty"],
