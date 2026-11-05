@@ -1,10 +1,14 @@
 """Runs the agentic loop on every item of a split and scores the ten it hands over.
 
-    python scripts/eval_agentic.py <model> [--split dev|test]
+    python scripts/eval_agentic.py <model> [--split dev|test] [--records <path>]
 
 Searches with the model named, through the live Ollama server, or through the
 Claude API when its name starts with claude-. The split is dev unless test is
 named.
+
+--records prints the same report from records this script already wrote, with
+no search and no model call, refusing records of another split or model, from
+a dirty tree or more than one commit, or missing an item.
 """
 
 import argparse
@@ -23,6 +27,7 @@ from rules_attorney.agentic import (
     Trace,
     build_dispatch,
     hand_over,
+    loop_handed,
     run_loop,
 )
 from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
@@ -110,14 +115,29 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("model")
     parser.add_argument("--split", choices=SPLITS, default=SPLITS[0])
+    parser.add_argument("--records", type=Path)
     args = parser.parse_args()
     model: str = args.model
     split: str = args.split
+    written: Path | None = args.records
+    items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
+    chosen = [item for item in items if item["split"] == split]
+    if written is not None:
+        lines = written.read_text(encoding="utf-8").splitlines()
+        loaded = [json.loads(line) for line in lines]
+        ids = [item["id"] for item in chosen]
+        try:
+            loop_handed(loaded, split, model, ids)
+        except ValueError as error:
+            parser.error(str(error))
+        # In the split's order, which the report zips against.
+        by_id = {record["id"]: record for record in loaded}
+        print(written)
+        summarize([by_id[item_id] for item_id in ids], chosen)
+        return
     entries = load_corpus(DATA)
     by_path = {entry.path: entry for entry in entries}
     paths = [entry.path for entry in entries]
-    items: list[dict[str, Any]] = json.loads(GOLD.read_text(encoding="utf-8"))
-    chosen = [item for item in items if item["split"] == split]
     embed = partial(ollama_embed, model=EMBEDDER.model)
     matrix = embed_documents([entry.text for entry in entries], EMBEDDER, embed)
     index = name_index(entries, KINDS)
@@ -184,6 +204,11 @@ def main() -> None:
             print(f"{item['id']}: {trace.stopped}, {calls} calls in {seconds:.1f}s")
 
     print(out)
+    summarize(records, chosen)
+
+
+def summarize(records: list[dict[str, Any]], chosen: list[dict[str, Any]]) -> None:
+    """Print the loop's retrieval, its lookup tool, the colon items and its cost."""
     report("loop", [r["handed"] for r in records], chosen, KS)
     report("level 1", [r["question"] for r in records], chosen, KS)
     matcher = [lookup_order(r["links"], r["question"], K) for r in records]
