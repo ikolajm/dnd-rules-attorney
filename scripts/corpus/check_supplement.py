@@ -1,6 +1,6 @@
 """Check the supplement's passages word for word against the SRD 5.1 document.
 
-    python scripts/check_supplement.py <srd.txt>
+    python scripts/corpus/check_supplement.py <srd.txt>
 
 <srd.txt> is the document's text, written by pdftotext from SRD_CC_v5.1.pdf
 (https://media.wizards.com/2023/downloads/dnd/SRD_CC_v5.1.pdf):
@@ -25,7 +25,7 @@ from pathlib import Path
 from typing import Any
 
 SUPPLEMENT = (
-    Path(__file__).resolve().parent.parent / "data" / "srd-5.1" / "supplement.json"
+    Path(__file__).resolve().parents[2] / "data" / "srd-5.1" / "supplement.json"
 )
 
 

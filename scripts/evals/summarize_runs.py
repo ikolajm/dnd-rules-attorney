@@ -1,9 +1,9 @@
 """Summarizes runs and their judged files, tables them, or compares two runs' replies.
 
-    python scripts/summarize_runs.py runs/<run>.jsonl [runs/<run>.jsonl ...]
-    python scripts/summarize_runs.py --table runs/<run>.jsonl [runs/<run>.jsonl ...]
-    python scripts/summarize_runs.py --compare runs/<old>.jsonl runs/<new>.jsonl
-    python scripts/summarize_runs.py --gains runs/<base>.jsonl runs/<stage>.jsonl
+    python scripts/evals/summarize_runs.py runs/<run>.jsonl [runs/<run>.jsonl ...]
+    python scripts/evals/summarize_runs.py --table runs/<run>.jsonl ...
+    python scripts/evals/summarize_runs.py --compare runs/<old>.jsonl runs/<new>.jsonl
+    python scripts/evals/summarize_runs.py --gains runs/<base>.jsonl runs/<stage>.jsonl
 
 A run's judged file is found beside it, `<run>.judged-<judge>.jsonl`, and a
 run judged more than once is refused rather than summarized from one judge
@@ -30,7 +30,7 @@ from typing import Any
 from rules_attorney.corpus import load_corpus
 from rules_attorney.evals.table import Row, build_row, gains, markdown_table
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data" / "srd-5.1"
 
 

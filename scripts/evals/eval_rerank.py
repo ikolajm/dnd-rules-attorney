@@ -1,6 +1,6 @@
 """Rerank level 1's top entries for every item of a split, and score both orders.
 
-    python scripts/eval_rerank.py [--split dev|test]
+    python scripts/evals/eval_rerank.py [--split dev|test]
 
 Embeds through the live Ollama server and reranks with the cross-encoder.
 The split is dev unless test is named.
@@ -27,7 +27,7 @@ from rules_attorney.retrieve import (
     rank,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"
 RUNS = ROOT / "runs"

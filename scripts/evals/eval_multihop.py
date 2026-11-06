@@ -1,6 +1,6 @@
 """Ranks every item of a split by its question and its sub-questions, merged.
 
-    python scripts/eval_multihop.py <model> [--split dev|test]
+    python scripts/evals/eval_multihop.py <model> [--split dev|test]
 
 Plans with the model named, through the live Ollama server. The split is dev
 unless test is named.
@@ -33,7 +33,7 @@ from rules_attorney.retrieve import (
     rank,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"
 RUNS = ROOT / "runs"

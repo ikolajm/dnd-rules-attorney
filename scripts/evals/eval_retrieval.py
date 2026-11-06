@@ -1,6 +1,6 @@
 """Score each embedder on header entries by semantic retrieval, BM25 and their fusion.
 
-    python scripts/eval_retrieval.py [--split dev|test]
+    python scripts/evals/eval_retrieval.py [--split dev|test]
 
 Calls the live Ollama server and refuses any chunk past the model's context.
 The split is dev unless test is named.
@@ -29,7 +29,7 @@ from rules_attorney.retrieve import (
     rank,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"
 RUNS = ROOT / "runs"

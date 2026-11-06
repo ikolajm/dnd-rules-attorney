@@ -1,6 +1,6 @@
 """Runs the agentic loop on every item of a split and scores the ten it hands over.
 
-    python scripts/eval_agentic.py <model> [--split dev|test] [--records <path>]
+    python scripts/evals/eval_agentic.py <model> [--split dev|test] [--records <path>]
 
 Searches with the model named, through the live Ollama server, or through the
 Claude API when its name starts with claude-. The split is dev unless test is
@@ -46,7 +46,7 @@ from rules_attorney.retrieve import (
 )
 from rules_attorney.tools import NO_RECORD, SEARCH_K
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"
 RUNS = ROOT / "runs"

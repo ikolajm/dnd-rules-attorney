@@ -21,7 +21,7 @@ from rules_attorney.agentic import build_loop_prompt, ollama_turn
 from rules_attorney.hosted import MODEL_PREFIX, claude_turn
 from rules_attorney.tools import valid_call
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 GOLD = ROOT / "gold" / "gold.json"
 
 

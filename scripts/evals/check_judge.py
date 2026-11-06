@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def main() -> None:
@@ -24,7 +24,7 @@ def main() -> None:
     if len(runs) != 1:
         sys.exit(f"judged file mixes runs: {runs}")
     run = runs.pop()
-    # Named the way scripts/grading_sheet.py names it.
+    # Named the way scripts/evals/grading_sheet.py names it.
     grades_file = ROOT / "gold" / f"hand-grades-{Path(run).stem}.json"
     hand: dict[str, Any] = json.loads(grades_file.read_text(encoding="utf-8"))
     if hand["run"] != run:

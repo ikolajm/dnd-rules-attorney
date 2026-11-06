@@ -1,6 +1,6 @@
 """Scores the ten each answer record retrieved, one report per run.
 
-    python scripts/score_handed.py runs/<run>.jsonl [runs/<run>.jsonl ...]
+    python scripts/evals/score_handed.py runs/<run>.jsonl [runs/<run>.jsonl ...]
 
 Each record is scored against the cites of the gold item with its id. A run
 recorded on a dirty tree is refused.
@@ -13,7 +13,7 @@ from typing import Any
 
 from rules_attorney.evals.metrics import all_cites_at_k, recall_at_k
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 GOLD = ROOT / "gold" / "gold.json"
 KS = [3, 5, 10]
 

@@ -1,6 +1,6 @@
 """Runs the gate over a split's gold questions and the refusal set.
 
-    python scripts/check_gate.py <model> [--split dev|test]
+    python scripts/evals/check_gate.py <model> [--split dev|test]
 
 Gates with the model named, through the live Ollama server. The split is dev
 unless test is named; the refusal set runs whole every time. Every gold
@@ -19,7 +19,7 @@ from rules_attorney.evals.provenance import commit
 from rules_attorney.evals.split import SPLITS
 from rules_attorney.gate import build_gate_prompt, ollama_gate, parse_gate
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 GOLD = ROOT / "gold" / "gold.json"
 REFUSALS = ROOT / "gold" / "gate-refusals.json"
 RUNS = ROOT / "runs"
