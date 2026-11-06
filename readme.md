@@ -110,11 +110,11 @@ At the 10 the model is handed, level 1 completes 56% of items and Opus's loop 90
 - **Opus's loop gains five items against level 1 and loses none**, alongside the largest retrieval gain: `invisible-vs-invisible`, `ranged-prone-five-feet`, `readied-attack-extra-attack`, `halfling-greatsword` and `grappler-pin-attacks`. Level 3 gains two and loses none, the lookup gains one, and rerank loses one. Each is one draw. The loop flags 3 of the 10 ambiguous items to level 1's 5, and one settled item.
 - **The loop's cost**, per item before the answer call: Opus makes 4.52 calls over 3.15 turns, 7,555 input and 842 output tokens, in 12.9 seconds, and 11 of 52 items reach the six-call cap; `qwen3.5:9b` makes 2.62 calls, 2,478 and 408 tokens, in 5.0 seconds, none capped.
 
-Every number is computed from run records by `scripts/summarize_runs.py --table` and `--gains`, `scripts/score_handed.py` and `scripts/eval_agentic.py --records`. The runs are at commit `15463d8`, the floor at `6b75109` and the 9b's reruns at `fcd6d77`; nothing between them changes how an answer is made.
+Every number is computed from run records by `scripts/summarize_runs.py --table` and `--gains`, `scripts/score_handed.py` and `scripts/eval_agentic.py --records`. The runs are at commit `15463d8`, the floor at `6b75109` and the 9b's reruns at `fcd6d77`; nothing between them changes how an answer is made. The records are in `results/`: `results/test/` holds the test run and the floor, `results/reruns/` the 9b's reruns, and `results/judge-check/` the run the judge was checked against, with its judged file, recorded on a dirty tree at `66a051b`.
 
 ## Reproducing the results
 
-The gold set is `gold/gold.json`, each item a question, its expected verdict, whether it is settled or ambiguous, and the entries its ruling cites, split into dev and test. Tuning happens on dev; test is scored once. The scripts that run a split take `--split test` for the test split and run dev without it. Those that write records write them to `runs/`, which git ignores, each record carrying the commit it ran at and whether the tree was dirty.
+The gold set is `gold/gold.json`, each item a question, its expected verdict, whether it is settled or ambiguous, and the entries its ruling cites, split into dev and test. Tuning happens on dev; test is scored once. The scripts that run a split take `--split test` for the test split and run dev without it. Those that write records write them to `runs/`, which git ignores, each record carrying the commit it ran at and whether the tree was dirty. The records behind the published numbers are in `results/`, so a new run never lands beside them.
 
 | Script | What it does |
 |---|---|
