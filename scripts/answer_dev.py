@@ -41,6 +41,9 @@ from rules_attorney.answer import (
     unresolved,
 )
 from rules_attorney.corpus import load_corpus
+from rules_attorney.evals.judge import reply_text
+from rules_attorney.evals.provenance import commit
+from rules_attorney.evals.split import SPLITS
 from rules_attorney.hosted import (
     EFFORT,
     MAX_TOKENS,
@@ -48,7 +51,6 @@ from rules_attorney.hosted import (
     claude_answer,
     claude_plan,
 )
-from rules_attorney.judge import reply_text
 from rules_attorney.lookup import KINDS, links, lookup_order, name_index
 from rules_attorney.multihop import (
     build_plan_prompt,
@@ -56,7 +58,6 @@ from rules_attorney.multihop import (
     ollama_plan,
     parse_plan,
 )
-from rules_attorney.provenance import commit
 from rules_attorney.rerank import (
     DEPTH,
     RERANKER,
@@ -72,7 +73,6 @@ from rules_attorney.retrieve import (
     ollama_embed,
     rank,
 )
-from rules_attorney.split import SPLITS
 
 ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "runs"

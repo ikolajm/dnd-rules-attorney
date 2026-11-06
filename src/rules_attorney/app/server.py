@@ -1,6 +1,6 @@
 """The endpoint: one question in, its run streamed out as server-sent events.
 
-    python -m uvicorn rules_attorney.server:app
+    python -m uvicorn rules_attorney.app.server:app
 
 Serves on port 8000 once the corpus is embedded, against the live Ollama
 server.
@@ -18,13 +18,13 @@ from fastapi.sse import EventSourceResponse, ServerSentEvent
 from pydantic import BaseModel
 
 from rules_attorney.answer import Ruling, chat_request
+from rules_attorney.app.stream import Call, Calls, run
 from rules_attorney.corpus import load_corpus
 from rules_attorney.gate import Gate
 from rules_attorney.multihop import Plan
 from rules_attorney.retrieve import NOMIC, embed_documents, ollama_embed
-from rules_attorney.stream import Call, Calls, run
 
-DATA = Path(__file__).resolve().parents[2] / "data" / "srd-5.1"
+DATA = Path(__file__).resolve().parents[3] / "data" / "srd-5.1"
 # The model level 3 was measured on, for the gate, the plan and the ruling.
 MODEL = "qwen3.5:9b"
 

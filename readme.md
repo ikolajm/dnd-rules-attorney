@@ -16,7 +16,7 @@ You ask one rules question, and the screen shows the run in the order it happens
 This is level 3 below. The server streams each phase to the screen as server-sent events as it lands. A stop cancels the request to the model, and a run is ended at 30 seconds.
 
 - **Models:** `qwen3.5:9b` for the gate, the plan and the ruling, and `nomic-embed-text` for the embeddings, both through [Ollama](https://ollama.com), locally.
-- **Server:** Python and FastAPI, in `src/rules_attorney/`. The served calls build the same request the measured runs did, so what the screen shows is what the results table measured.
+- **Server:** Python and FastAPI, in `src/rules_attorney/app/`. The served calls build the same request the measured runs did, so what the screen shows is what the results table measured.
 - **Screen:** React and Vite in `web/`, styled with [Loom](https://github.com/ikolajm/loom).
 - **Corpus:** the SRD 5.1's rule sections, conditions, spells, weapon properties, weapons, armor and gear with rules, class features and the classes' spellcasting, classes, races, racial traits and feats, from [5e-bits/5e-database](https://github.com/5e-bits/5e-database) at a pinned commit, in `data/srd-5.1/`; and `supplement.json` beside them, the rules only the SRD 5.1 document's prose holds, copied verbatim by hand: multiclassing, the equipment chapter's armor and weapon rules, inspiration, gaining a level, the feats chapter, reaction spell triggers and a few lines more.
 
@@ -45,7 +45,7 @@ On macOS or Linux, the venv's Python is `.venv/bin/python` rather than `.venv/Sc
 Then, each in a terminal of its own, with Ollama running:
 
 ```
-.venv/Scripts/python -m uvicorn rules_attorney.server:app
+.venv/Scripts/python -m uvicorn rules_attorney.app.server:app
 ```
 
 ```

@@ -25,7 +25,7 @@ export type Entry = {
 export type ErrorReason = 'unreachable' | 'ruling-unparsed' | 'timeout' | 'server-unreachable'
 
 // The gate's data mirrors `Gate` in rules_attorney.gate, and the error's the
-// events rules_attorney.stream yields.
+// events rules_attorney.app.stream yields.
 export type StreamEvent =
   | { event: 'gate'; data: { about_rules: boolean } }
   | { event: 'plan'; data: { sub_questions: string[] } }

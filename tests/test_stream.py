@@ -6,8 +6,8 @@ import contextlib
 import numpy as np
 from numpy.typing import NDArray
 
+from rules_attorney.app.stream import Call, Calls, Event, run
 from rules_attorney.corpus import Entry
-from rules_attorney.stream import Call, Calls, Event, run
 
 QUESTION = "Can a grappled creature still attack?"
 ENTRIES = [

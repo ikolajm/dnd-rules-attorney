@@ -7,7 +7,7 @@ and before anything is tuned against them, so no run sees an unassigned item.
 import json
 from pathlib import Path
 
-from rules_attorney.split import assign_splits
+from rules_attorney.evals.split import assign_splits
 
 GOLD = Path(__file__).resolve().parent.parent / "gold" / "gold.json"
 

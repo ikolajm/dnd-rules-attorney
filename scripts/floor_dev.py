@@ -14,8 +14,8 @@ from pathlib import Path
 from typing import Any
 
 from rules_attorney.answer import Ruling, YesOrNo
-from rules_attorney.provenance import commit
-from rules_attorney.split import SPLITS
+from rules_attorney.evals.provenance import commit
+from rules_attorney.evals.split import SPLITS
 
 ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "runs"

@@ -1,6 +1,6 @@
 """Tests for scoring retrieval against gold cites."""
 
-from rules_attorney.metrics import all_cites_at_k, recall_at_k
+from rules_attorney.evals.metrics import all_cites_at_k, recall_at_k
 
 
 def test_recall_at_k_counts_the_share_of_cites() -> None:
