@@ -4,16 +4,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-from rules_attorney.chunk import (
-    Chunk,
-    header_chunks,
-    joined,
-    overlapping,
-    prepended_chunks,
-    records,
-    window_chunks,
-    windows,
-)
 from rules_attorney.corpus import (
     EQUIPMENT_FILE,
     EQUIPMENT_KINDS,
@@ -25,6 +15,16 @@ from rules_attorney.corpus import (
     TRAITS_FILE,
     Entry,
     load_corpus,
+)
+from rules_attorney.evals.chunk import (
+    Chunk,
+    header_chunks,
+    joined,
+    overlapping,
+    prepended_chunks,
+    records,
+    window_chunks,
+    windows,
 )
 
 DATA = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"

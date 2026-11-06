@@ -6,7 +6,7 @@ from typing import Any
 import ollama
 import pytest
 
-from rules_attorney import server
+from rules_attorney.app import server
 from rules_attorney.gate import Gate
 
 

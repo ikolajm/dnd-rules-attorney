@@ -15,9 +15,9 @@ from pathlib import Path
 from typing import Any
 
 from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
+from rules_attorney.evals.provenance import commit
+from rules_attorney.evals.split import SPLITS
 from rules_attorney.gate import build_gate_prompt, ollama_gate, parse_gate
-from rules_attorney.provenance import commit
-from rules_attorney.split import SPLITS
 
 ROOT = Path(__file__).resolve().parent.parent
 GOLD = ROOT / "gold" / "gold.json"

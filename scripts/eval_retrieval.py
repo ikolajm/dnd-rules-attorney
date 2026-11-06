@@ -14,12 +14,13 @@ from functools import partial
 from pathlib import Path
 from typing import Any, TextIO
 
-from rules_attorney.bm25 import bm25_rank, build_index
-from rules_attorney.chunk import Chunk, header_chunks
 from rules_attorney.corpus import load_corpus
+from rules_attorney.evals.bm25 import bm25_rank, build_index
+from rules_attorney.evals.chunk import Chunk, header_chunks
+from rules_attorney.evals.metrics import all_cites_at_k, recall_at_k
+from rules_attorney.evals.provenance import commit
+from rules_attorney.evals.split import SPLITS
 from rules_attorney.fusion import fuse
-from rules_attorney.metrics import all_cites_at_k, recall_at_k
-from rules_attorney.provenance import commit
 from rules_attorney.retrieve import (
     EMBEDDERS,
     embed_documents,
@@ -27,7 +28,6 @@ from rules_attorney.retrieve import (
     ollama_embed,
     rank,
 )
-from rules_attorney.split import SPLITS
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "srd-5.1"

@@ -32,10 +32,11 @@ from rules_attorney.agentic import (
 )
 from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
 from rules_attorney.corpus import load_corpus
+from rules_attorney.evals.metrics import all_cites_at_k, recall_at_k
+from rules_attorney.evals.provenance import commit
+from rules_attorney.evals.split import SPLITS
 from rules_attorney.hosted import EFFORT, MAX_TOKENS, MODEL_PREFIX, ClaudeBackend
 from rules_attorney.lookup import KINDS, links, lookup_order, name_index
-from rules_attorney.metrics import all_cites_at_k, recall_at_k
-from rules_attorney.provenance import commit
 from rules_attorney.retrieve import (
     NOMIC,
     embed_documents,
@@ -43,7 +44,6 @@ from rules_attorney.retrieve import (
     ollama_embed,
     rank,
 )
-from rules_attorney.split import SPLITS
 from rules_attorney.tools import NO_RECORD, SEARCH_K
 
 ROOT = Path(__file__).resolve().parent.parent

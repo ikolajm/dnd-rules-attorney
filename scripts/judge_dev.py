@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from rules_attorney.judge import (
+from rules_attorney.evals.judge import (
     JUDGE_INSTRUCTIONS,
     JUDGE_MODEL,
     MAX_TOKENS,
@@ -19,7 +19,7 @@ from rules_attorney.judge import (
     parse_judgement,
     reply_text,
 )
-from rules_attorney.provenance import commit
+from rules_attorney.evals.provenance import commit
 
 ROOT = Path(__file__).resolve().parent.parent
 GOLD = ROOT / "gold" / "gold.json"

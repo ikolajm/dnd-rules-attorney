@@ -3,7 +3,7 @@
 from collections import Counter
 from typing import Any
 
-from rules_attorney.split import assign_splits
+from rules_attorney.evals.split import assign_splits
 
 
 def make(item_id: str, status: str, split: str | None = None) -> dict[str, Any]:

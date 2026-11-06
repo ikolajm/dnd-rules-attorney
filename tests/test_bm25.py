@@ -3,7 +3,7 @@
 import bm25s
 import pytest
 
-from rules_attorney.bm25 import (
+from rules_attorney.evals.bm25 import (
     bm25_rank,
     build_index,
     idf,

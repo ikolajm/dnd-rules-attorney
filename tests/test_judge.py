@@ -5,7 +5,7 @@ from pathlib import Path
 from anthropic.types import Message
 
 from rules_attorney.answer import KIND, VERDICT
-from rules_attorney.judge import (
+from rules_attorney.evals.judge import (
     build_judge_prompt,
     flag_correct,
     needs_judge,

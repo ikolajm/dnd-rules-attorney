@@ -28,7 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from rules_attorney.corpus import load_corpus
-from rules_attorney.table import Row, build_row, gains, markdown_table
+from rules_attorney.evals.table import Row, build_row, gains, markdown_table
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "srd-5.1"

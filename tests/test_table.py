@@ -7,8 +7,14 @@ from typing import Any
 
 import pytest
 
+from rules_attorney.evals.table import (
+    Row,
+    build_row,
+    gains,
+    markdown_row,
+    markdown_table,
+)
 from rules_attorney.rerank import RERANKER
-from rules_attorney.table import Row, build_row, gains, markdown_row, markdown_table
 
 # The floor's dev run and its judged file, copied from runs/: "no" to every
 # item, never flagged, no cites, so each score is known in advance.
