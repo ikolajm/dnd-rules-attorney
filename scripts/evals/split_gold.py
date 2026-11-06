@@ -9,7 +9,7 @@ from pathlib import Path
 
 from rules_attorney.evals.split import assign_splits
 
-GOLD = Path(__file__).resolve().parent.parent / "gold" / "gold.json"
+GOLD = Path(__file__).resolve().parents[2] / "gold" / "gold.json"
 
 
 def main() -> None:

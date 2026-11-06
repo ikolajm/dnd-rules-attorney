@@ -1,6 +1,6 @@
 """Answers every item of a split from its top 10 entries, one record per item.
 
-    python scripts/answer_dev.py <model> [--split dev|test] [--level 1|3]
+    python scripts/evals/answer_dev.py <model> [--split dev|test] [--level 1|3]
         [--rerank] [--lookup] [--loop-records <path>]
 
 Answers with the model named: through the Claude API when its name starts
@@ -15,7 +15,7 @@ and answers from its fusion with level 1's order.
 1's order.
 
 --loop-records answers from the ten each item's record from
-scripts/eval_agentic.py handed over, without running the loop again.
+scripts/evals/eval_agentic.py handed over, without running the loop again.
 """
 
 import argparse
@@ -74,7 +74,7 @@ from rules_attorney.retrieve import (
     rank,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 RUNS = ROOT / "runs"
 DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"

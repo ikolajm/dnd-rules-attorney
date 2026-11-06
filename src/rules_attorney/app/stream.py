@@ -17,7 +17,7 @@ from rules_attorney.retrieve import NOMIC, Embed, embed_query, rank
 # The whole run's limit, in seconds. On level 3's dev run the slowest ruling
 # that parsed took 9.4 seconds and the one that looped to its cap took 44.8.
 LIMIT = 30.0
-# The entries handed to the answer, as scripts/answer_dev.py hands them.
+# The entries handed to the answer, as scripts/evals/answer_dev.py hands them.
 K = 10
 
 # A model call, from a prompt to its raw reply.

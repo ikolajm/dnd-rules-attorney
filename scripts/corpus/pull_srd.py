@@ -6,7 +6,7 @@ the corpus to a newer source, change COMMIT, rerun this script, and read the
 diff under data/srd-5.1/ to see what the source changed.
 
 data/srd-5.1/supplement.json is not pulled: it is written by hand from the
-SRD 5.1 document, and scripts/check_supplement.py checks it against the
+SRD 5.1 document, and scripts/corpus/check_supplement.py checks it against the
 document's text. This script reads it to rebuild corpus.md and never writes it.
 """
 
@@ -24,7 +24,7 @@ BASE: str = (
     f"https://raw.githubusercontent.com/5e-bits/5e-database/{COMMIT}/src/2014/en/"
 )
 
-OUT = Path(__file__).resolve().parent.parent / "data" / "srd-5.1"
+OUT = Path(__file__).resolve().parents[2] / "data" / "srd-5.1"
 
 
 def main() -> None:

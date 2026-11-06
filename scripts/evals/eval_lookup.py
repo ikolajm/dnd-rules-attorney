@@ -1,6 +1,6 @@
 """Link the records each question names ahead of level 1, and score both orders.
 
-    python scripts/eval_lookup.py [--split dev|test] [--kinds <root> ...]
+    python scripts/evals/eval_lookup.py [--split dev|test] [--kinds <root> ...]
 
 Embeds through the live Ollama server. The split is dev unless test is named,
 and --kinds names the path roots a name links from, every root in KINDS unless
@@ -28,7 +28,7 @@ from rules_attorney.retrieve import (
     rank,
 )
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data" / "srd-5.1"
 GOLD = ROOT / "gold" / "gold.json"
 RUNS = ROOT / "runs"

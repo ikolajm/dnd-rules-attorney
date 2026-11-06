@@ -21,7 +21,7 @@ from rules_attorney.evals.judge import (
 )
 from rules_attorney.evals.provenance import commit
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 GOLD = ROOT / "gold" / "gold.json"
 
 

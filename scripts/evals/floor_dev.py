@@ -1,9 +1,9 @@
 """Writes the floor's records: "no" to every item, never flagged, no cites.
 
-    python scripts/floor_dev.py [--split dev|test]
+    python scripts/evals/floor_dev.py [--split dev|test]
 
-Calls nothing. The records take the shape scripts/answer_dev.py writes, so
-scripts/judge_dev.py judges them like any other run, and the floor's agreement
+Calls nothing. The records take the shape scripts/evals/answer_dev.py writes, so
+scripts/evals/judge_dev.py judges them like any other run, and the floor's agreement
 is measured rather than counted from gold's wording.
 """
 
@@ -17,7 +17,7 @@ from rules_attorney.answer import Ruling, YesOrNo
 from rules_attorney.evals.provenance import commit
 from rules_attorney.evals.split import SPLITS
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 RUNS = ROOT / "runs"
 GOLD = ROOT / "gold" / "gold.json"
 

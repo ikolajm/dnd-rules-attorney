@@ -110,7 +110,7 @@ At the 10 the model is handed, level 1 completes 56% of items and Opus's loop 90
 - **Opus's loop gains five items against level 1 and loses none**, alongside the largest retrieval gain: `invisible-vs-invisible`, `ranged-prone-five-feet`, `readied-attack-extra-attack`, `halfling-greatsword` and `grappler-pin-attacks`. Level 3 gains two and loses none, the lookup gains one, and rerank loses one. Each is one draw. The loop flags 3 of the 10 ambiguous items to level 1's 5, and one settled item.
 - **The loop's cost**, per item before the answer call: Opus makes 4.52 calls over 3.15 turns, 7,555 input and 842 output tokens, in 12.9 seconds, and 11 of 52 items reach the six-call cap; `qwen3.5:9b` makes 2.62 calls, 2,478 and 408 tokens, in 5.0 seconds, none capped.
 
-Every number is computed from run records by `scripts/summarize_runs.py --table` and `--gains`, `scripts/score_handed.py` and `scripts/eval_agentic.py --records`. The runs are at commit `15463d8`, the floor at `6b75109` and the 9b's reruns at `fcd6d77`; nothing between them changes how an answer is made. The records are in `results/`: `results/test/` holds the test run and the floor, `results/reruns/` the 9b's reruns, and `results/judge-check/` the run the judge was checked against, with its judged file, recorded on a dirty tree at `66a051b`.
+Every number is computed from run records by `scripts/evals/summarize_runs.py --table` and `--gains`, `scripts/evals/score_handed.py` and `scripts/evals/eval_agentic.py --records`. The runs are at commit `15463d8`, the floor at `6b75109` and the 9b's reruns at `fcd6d77`; nothing between them changes how an answer is made. The records are in `results/`: `results/test/` holds the test run and the floor, `results/reruns/` the 9b's reruns, and `results/judge-check/` the run the judge was checked against, with its judged file, recorded on a dirty tree at `66a051b`.
 
 ## Reproducing the results
 
@@ -118,21 +118,21 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 
 | Script | What it does |
 |---|---|
-| `scripts/eval_retrieval.py` | Scores level 1's retrieval: recall@k and all-cites@k |
-| `scripts/eval_multihop.py <model>` | Plans with the model named and scores level 3's fused retrieval |
-| `scripts/eval_rerank.py` | Reranks level 1's top 30 with `BAAI/bge-reranker-v2-m3` and scores level 1's order, the reranked order and the two fused |
-| `scripts/eval_lookup.py [--kinds <root> ...]` | Links the records each question names ahead of level 1's order and scores both orders, with each kind's link precision and recall |
-| `scripts/eval_agentic.py <model> [--records runs/<agentic>.jsonl]` | Runs the loop on every item of the split and scores the ten it hands over, with its calls, turns, tokens and seconds; `--records` prints the same from records already written |
-| `scripts/answer_dev.py <model> [--level 1\|3] [--rerank\|--lookup\|--loop-records runs/<agentic>.jsonl]` | Rules on every item of the split; a model named `claude-…` answers through the API; `--rerank` answers level 1 from its order fused with the reranked one; `--lookup` answers from the records the question names ahead of level 1's order; `--loop-records` answers from the ten each loop record handed over |
-| `scripts/judge_dev.py runs/<run>.jsonl` | Judges a run's verdicts and flags with Claude Sonnet 5.5 |
-| `scripts/floor_dev.py` | Writes the floor row: "no" to every item, no flag, no cites |
-| `scripts/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs; `--gains <base> <stage>` names the items each of two runs agreed on and the other did not |
-| `scripts/score_handed.py runs/<run>.jsonl ...` | Scores the ten each answer run retrieved, recall@k and all-cites@k against the gold cites, and refuses a run recorded on a dirty tree |
-| `scripts/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
-| `scripts/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
-| `scripts/check_supplement.py <srd.txt>` | Checks every passage in `supplement.json` word for word against the SRD 5.1 document's text |
+| `scripts/evals/eval_retrieval.py` | Scores level 1's retrieval: recall@k and all-cites@k |
+| `scripts/evals/eval_multihop.py <model>` | Plans with the model named and scores level 3's fused retrieval |
+| `scripts/evals/eval_rerank.py` | Reranks level 1's top 30 with `BAAI/bge-reranker-v2-m3` and scores level 1's order, the reranked order and the two fused |
+| `scripts/evals/eval_lookup.py [--kinds <root> ...]` | Links the records each question names ahead of level 1's order and scores both orders, with each kind's link precision and recall |
+| `scripts/evals/eval_agentic.py <model> [--records runs/<agentic>.jsonl]` | Runs the loop on every item of the split and scores the ten it hands over, with its calls, turns, tokens and seconds; `--records` prints the same from records already written |
+| `scripts/evals/answer_dev.py <model> [--level 1\|3] [--rerank\|--lookup\|--loop-records runs/<agentic>.jsonl]` | Rules on every item of the split; a model named `claude-…` answers through the API; `--rerank` answers level 1 from its order fused with the reranked one; `--lookup` answers from the records the question names ahead of level 1's order; `--loop-records` answers from the ten each loop record handed over |
+| `scripts/evals/judge_dev.py runs/<run>.jsonl` | Judges a run's verdicts and flags with Claude Sonnet 5.5 |
+| `scripts/evals/floor_dev.py` | Writes the floor row: "no" to every item, no flag, no cites |
+| `scripts/evals/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs; `--gains <base> <stage>` names the items each of two runs agreed on and the other did not |
+| `scripts/evals/score_handed.py runs/<run>.jsonl ...` | Scores the ten each answer run retrieved, recall@k and all-cites@k against the gold cites, and refuses a run recorded on a dirty tree |
+| `scripts/evals/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
+| `scripts/app/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
+| `scripts/corpus/check_supplement.py <srd.txt>` | Checks every passage in `supplement.json` word for word against the SRD 5.1 document's text |
 
-The judge and the hosted rows call the Claude API and authenticate with the profile `ant auth login` stores; a set `ANTHROPIC_API_KEY` takes precedence over it, even an empty one. Everything else runs locally. `scripts/pull_srd.py` refetches the corpus at its pinned commit.
+The judge and the hosted rows call the Claude API and authenticate with the profile `ant auth login` stores; a set `ANTHROPIC_API_KEY` takes precedence over it, even an empty one. Everything else runs locally. `scripts/corpus/pull_srd.py` refetches the corpus at its pinned commit.
 
 The rerank scripts need the `rerank` extra, sentence-transformers on PyTorch, which the screen does not use. On Windows, PyPI's torch is CPU-only, so it comes from PyTorch's CUDA 13.2 index:
 

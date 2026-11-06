@@ -1,11 +1,11 @@
 """Compares the served stream for gold items with their measured level 3 records.
 
-    python scripts/check_stream.py <id> [<id> ...] [--run <run file>] [--url <url>]
+    python scripts/app/check_stream.py <id> [<id> ...] [--run <run file>] [--url <url>]
 
 Posts each item's question to the running server and reads its events,
 printing when each lands. For a gold item, the sub-questions, the entries in
 order and the ruling must each equal its record in the run file, which is
-level 3's dev run unless another is named. An item from the gate's refusal
+level 3's published test run unless another is named. An item from the gate's refusal
 set must end at the gate, refused.
 """
 
@@ -18,10 +18,10 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 GOLD = ROOT / "gold" / "gold.json"
 REFUSALS = ROOT / "gold" / "gate-refusals.json"
-RUN = ROOT / "runs" / "20261028-152008-dev-level3-qwen3.5-9b.jsonl"
+RUN = ROOT / "results" / "test" / "20261105-152617-test-level3-qwen3.5-9b.jsonl"
 URL = "http://127.0.0.1:8000/ask"
 
 
