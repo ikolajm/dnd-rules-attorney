@@ -128,6 +128,7 @@ The gold set is `gold/gold.json`, each item a question, its expected verdict, wh
 | `scripts/evals/floor_dev.py` | Writes the floor row: "no" to every item, no flag, no cites |
 | `scripts/evals/summarize_runs.py --table runs/<run>.jsonl ...` | Prints the results table from judged runs; `--gains <base> <stage>` names the items each of two runs agreed on and the other did not |
 | `scripts/evals/score_handed.py runs/<run>.jsonl ...` | Scores the ten each answer run retrieved, recall@k and all-cites@k against the gold cites, and refuses a run recorded on a dirty tree |
+| `scripts/evals/rescore_test.py [--dry-run]` | Reruns every published row on test at one clean commit, judges each and prints the tables, stopping on the first failure; `--dry-run` prints the commands |
 | `scripts/evals/check_gate.py <model>` | Runs the gate over the gold questions and `gold/gate-refusals.json`, a set it must refuse |
 | `scripts/app/check_stream.py <id> ...` | Posts gold items to the running server and checks each matches its measured record |
 | `scripts/corpus/check_supplement.py <srd.txt>` | Checks every passage in `supplement.json` word for word against the SRD 5.1 document's text |
