@@ -562,12 +562,22 @@ def bones_record() -> dict[str, Any]:
         "name": "Bones",
         "size": "Medium",
         "type": "undead",
+        "hit_points": 13,
+        "hit_points_roll": "2d8+4",
         "speed": {"walk": "30 ft."},
+        "strength": 10,
+        "dexterity": 14,
+        "constitution": 15,
+        "intelligence": 6,
+        "wisdom": 8,
+        "charisma": 5,
         "damage_vulnerabilities": [],
         "damage_resistances": [],
         "damage_immunities": [],
         "condition_immunities": [],
         "senses": {"passive_perception": 9},
+        "languages": "",
+        "challenge_rating": 1,
     }
 
 
@@ -575,13 +585,44 @@ def test_monster_lines_writes_every_field_on_a_plain_record() -> None:
     assert monster_lines(bones_record()) == [
         "Type: undead",
         "Size: Medium",
+        "Hit points: 13 (2d8 + 4)",
         "Speed: 30 ft.",
+        "Abilities: Str 10, Dex 14, Con 15, Int 6, Wis 8, Cha 5",
         "Damage vulnerabilities: none",
         "Damage resistances: none",
         "Damage immunities: none",
         "Condition immunities: none",
         "Senses: passive Perception 9",
+        "Languages: none",
+        "Challenge: 1",
     ]
+
+
+@pytest.mark.parametrize(
+    ("rating", "written"),
+    [(0, "0"), (0.125, "1/8"), (0.25, "1/4"), (0.5, "1/2"), (24, "24")],
+)
+def test_monster_lines_writes_a_challenge_as_a_stat_block_does(
+    rating: float, written: str
+) -> None:
+    lines = monster_lines({**bones_record(), "challenge_rating": rating})
+    assert lines[-1] == f"Challenge: {written}"
+
+
+def test_monster_lines_refuses_an_unknown_challenge_rating() -> None:
+    record = {**bones_record(), "challenge_rating": 0.75}
+    with pytest.raises(CorpusError, match="bones: unknown challenge rating"):
+        monster_lines(record)
+
+
+def test_monster_lines_writes_a_negative_hit_point_modifier() -> None:
+    record = {**bones_record(), "hit_points": 1, "hit_points_roll": "1d4-1"}
+    assert "Hit points: 1 (1d4 - 1)" in monster_lines(record)
+
+
+def test_monster_lines_writes_the_languages_given() -> None:
+    record = {**bones_record(), "languages": "Common, Draconic"}
+    assert "Languages: Common, Draconic" in monster_lines(record)
 
 
 def test_monster_lines_writes_modes_after_the_walk_and_hover_beside_fly() -> None:

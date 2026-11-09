@@ -16907,12 +16907,16 @@ Aboleth
 
 Type: aberration
 Size: Large
+Hit points: 135 (18d10 + 36)
 Speed: 10 ft., swim 40 ft.
+Abilities: Str 21, Dex 9, Con 15, Int 18, Wis 15, Cha 18
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 20
+Languages: Deep Speech, telepathy 120 ft.
+Challenge: 10
 
 Amphibious. The aboleth can breathe air and water.
 
@@ -16939,12 +16943,16 @@ Acolyte
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 9 (2d8)
 Speed: 30 ft.
+Abilities: Str 10, Dex 10, Con 10, Int 10, Wis 14, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: any one language (usually Common)
+Challenge: 1/4
 
 Spellcasting. The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:
 
@@ -16957,12 +16965,16 @@ Adult Black Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 195 (17d12 + 85)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 23, Dex 14, Con 21, Int 14, Wis 13, Cha 17
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+Languages: Common, Draconic
+Challenge: 14
 
 Amphibious. The dragon can breathe air and water.
 
@@ -16988,12 +17000,16 @@ Adult Blue Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 225 (18d12 + 108)
 Speed: 40 ft., burrow 30 ft., fly 80 ft.
+Abilities: Str 25, Dex 10, Con 23, Int 16, Wis 15, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+Languages: Common, Draconic
+Challenge: 16
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17017,12 +17033,16 @@ Adult Brass Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 172 (15d12 + 75)
 Speed: 40 ft., burrow 40 ft., fly 80 ft.
+Abilities: Str 23, Dex 10, Con 21, Int 14, Wis 13, Cha 17
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+Languages: Common, Draconic
+Challenge: 13
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17048,12 +17068,16 @@ Adult Bronze Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 212 (17d12 + 102)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 25, Dex 10, Con 23, Int 16, Wis 15, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+Languages: Common, Draconic
+Challenge: 15
 
 Amphibious. The dragon can breathe air and water.
 
@@ -17081,12 +17105,16 @@ Adult Copper Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 184 (16d12 + 80)
 Speed: 40 ft., climb 40 ft., fly 80 ft.
+Abilities: Str 23, Dex 12, Con 21, Int 18, Wis 15, Cha 17
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+Languages: Common, Draconic
+Challenge: 14
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17112,12 +17140,16 @@ Adult Gold Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 256 (19d12 + 133)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 27, Dex 14, Con 25, Int 16, Wis 15, Cha 24
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 24
+Languages: Common, Draconic
+Challenge: 17
 
 Amphibious. The dragon can breathe air and water.
 
@@ -17145,12 +17177,16 @@ Adult Green Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 207 (18d12 + 90)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 23, Dex 12, Con 21, Int 18, Wis 15, Cha 17
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+Languages: Common, Draconic
+Challenge: 15
 
 Amphibious. The dragon can breathe air and water.
 
@@ -17176,12 +17212,16 @@ Adult Red Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 256 (19d12 + 133)
 Speed: 40 ft., climb 40 ft., fly 80 ft.
+Abilities: Str 27, Dex 10, Con 25, Int 16, Wis 13, Cha 21
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 23
+Languages: Common, Draconic
+Challenge: 17
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17205,12 +17245,16 @@ Adult Silver Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 243 (18d12 + 126)
 Speed: 40 ft., fly 80 ft.
+Abilities: Str 27, Dex 10, Con 25, Int 16, Wis 13, Cha 21
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+Languages: Common, Draconic
+Challenge: 16
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17236,12 +17280,16 @@ Adult White Dragon
 
 Type: dragon
 Size: Huge
+Hit points: 200 (16d12 + 96)
 Speed: 40 ft., burrow 30 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 22, Dex 10, Con 22, Int 8, Wis 12, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+Languages: Common, Draconic
+Challenge: 13
 
 Ice Walk. The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
 
@@ -17267,12 +17315,16 @@ Air Elemental
 
 Type: elemental
 Size: Large
+Hit points: 90 (12d10 + 24)
 Speed: fly 90 ft. (hover)
+Abilities: Str 14, Dex 20, Con 14, Int 6, Wis 10, Cha 6
 Damage vulnerabilities: none
 Damage resistances: lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Auran
+Challenge: 5
 
 Air Form. The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
 
@@ -17287,12 +17339,16 @@ Ancient Black Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 367 (21d20 + 147)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 27, Dex 14, Con 25, Int 16, Wis 15, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 26
+Languages: Common, Draconic
+Challenge: 21
 
 Amphibious. The dragon can breathe air and water.
 
@@ -17318,12 +17374,16 @@ Ancient Blue Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 481 (26d20 + 208)
 Speed: 40 ft., burrow 40 ft., fly 80 ft.
+Abilities: Str 29, Dex 10, Con 27, Int 18, Wis 17, Cha 21
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+Languages: Common, Draconic
+Challenge: 23
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17347,12 +17407,16 @@ Ancient Brass Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 297 (17d20 + 119)
 Speed: 40 ft., burrow 40 ft., fly 80 ft.
+Abilities: Str 27, Dex 10, Con 25, Int 16, Wis 15, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 24
+Languages: Common, Draconic
+Challenge: 20
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17381,12 +17445,16 @@ Ancient Bronze Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 444 (24d20 + 192)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 29, Dex 10, Con 27, Int 18, Wis 17, Cha 21
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+Languages: Common, Draconic
+Challenge: 22
 
 Amphibious. The dragon can breathe air and water.
 
@@ -17417,12 +17485,16 @@ Ancient Copper Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 350 (20d20 + 140)
 Speed: 40 ft., climb 40 ft., fly 80 ft.
+Abilities: Str 27, Dex 12, Con 25, Int 20, Wis 17, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+Languages: Common, Draconic
+Challenge: 21
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17451,12 +17523,16 @@ Ancient Gold Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 546 (28d20 + 252)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 30, Dex 14, Con 29, Int 18, Wis 17, Cha 28
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+Languages: Common, Draconic
+Challenge: 24
 
 Amphibious. The dragon can breathe air and water.
 
@@ -17487,12 +17563,16 @@ Ancient Green Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 385 (22d20 + 154)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 27, Dex 12, Con 25, Int 20, Wis 17, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+Languages: Common, Draconic
+Challenge: 22
 
 Amphibious. The dragon can breathe air and water.
 
@@ -17518,12 +17598,16 @@ Ancient Red Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 546 (28d20 + 252)
 Speed: 40 ft., climb 40 ft., fly 80 ft.
+Abilities: Str 30, Dex 10, Con 29, Int 18, Wis 15, Cha 23
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 26
+Languages: Common, Draconic
+Challenge: 24
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17547,12 +17631,16 @@ Ancient Silver Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 487 (25d20 + 225)
 Speed: 40 ft., fly 80 ft.
+Abilities: Str 30, Dex 10, Con 29, Int 18, Wis 15, Cha 23
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 26
+Languages: Common, Draconic
+Challenge: 23
 
 Legendary Resistance (3/Day). If the dragon fails a saving throw, it can choose to succeed instead.
 
@@ -17581,12 +17669,16 @@ Ancient White Dragon
 
 Type: dragon
 Size: Gargantuan
+Hit points: 333 (18d20 + 144)
 Speed: 40 ft., burrow 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 26, Dex 10, Con 26, Int 10, Wis 13, Cha 14
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 23
+Languages: Common, Draconic
+Challenge: 20
 
 Ice Walk. The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
 
@@ -17612,12 +17704,16 @@ Androsphinx
 
 Type: monstrosity
 Size: Large
+Hit points: 199 (19d10 + 95)
 Speed: 40 ft., fly 60 ft.
+Abilities: Str 22, Dex 10, Con 20, Int 16, Wis 18, Cha 23
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: psychic; bludgeoning, piercing, and slashing from nonmagical weapons
 Condition immunities: Charmed, Frightened
 Senses: truesight 120 ft., passive Perception 20
+Languages: Common, Sphinx
+Challenge: 17
 
 Inscrutable. The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.
 
@@ -17657,12 +17753,16 @@ Animated Armor
 
 Type: construct
 Size: Medium
+Hit points: 33 (6d8 + 6)
 Speed: 25 ft.
+Abilities: Str 14, Dex 11, Con 13, Int 1, Wis 3, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison; psychic
 Condition immunities: Blinded, Charmed, Deafened, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 6
+Languages: none
+Challenge: 1
 
 Antimagic Susceptibility. The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.
 
@@ -17674,12 +17774,16 @@ Ankheg
 
 Type: monstrosity
 Size: Large
+Hit points: 39 (6d10 + 6)
 Speed: 30 ft., burrow 10 ft.
+Abilities: Str 17, Dex 11, Con 13, Int 1, Wis 13, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 11
+Languages: none
+Challenge: 2
 
 Actions
 
@@ -17691,12 +17795,16 @@ Ape
 
 Type: beast
 Size: Medium
+Hit points: 19 (3d8 + 6)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 16, Dex 14, Con 14, Int 6, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1/2
 
 ## monsters > archmage
 
@@ -17704,12 +17812,16 @@ Archmage
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 99 (18d8 + 18)
 Speed: 30 ft.
+Abilities: Str 10, Dex 14, Con 12, Int 20, Wis 15, Cha 16
 Damage vulnerabilities: none
 Damage resistances: damage from spells; bludgeoning, piercing, and slashing from nonmagical attacks (from stoneskin)
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: any six languages
+Challenge: 12
 
 Magic Resistance. The archmage has advantage on saving throws against spells and other magical effects.
 
@@ -17733,12 +17845,16 @@ Assassin
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 78 (12d8 + 24)
 Speed: 30 ft.
+Abilities: Str 11, Dex 16, Con 14, Int 13, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: poison
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: Thieves' cant plus any two languages
+Challenge: 8
 
 Assassinate. During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a surprised creature is a critical hit.
 
@@ -17752,12 +17868,16 @@ Awakened Shrub
 
 Type: plant
 Size: Small
+Hit points: 10 (3d6)
 Speed: 20 ft.
+Abilities: Str 3, Dex 8, Con 11, Int 10, Wis 10, Cha 6
 Damage vulnerabilities: fire
 Damage resistances: piercing
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: one language known by its creator
+Challenge: 0
 
 False Appearance. While the shrub remains motionless, it is indistinguishable from a normal shrub.
 
@@ -17767,12 +17887,16 @@ Awakened Tree
 
 Type: plant
 Size: Huge
+Hit points: 59 (7d12 + 14)
 Speed: 20 ft.
+Abilities: Str 19, Dex 6, Con 15, Int 10, Wis 10, Cha 7
 Damage vulnerabilities: fire
 Damage resistances: bludgeoning; piercing
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: one language known by its creator
+Challenge: 2
 
 False Appearance. While the tree remains motionless, it is indistinguishable from a normal tree.
 
@@ -17782,12 +17906,16 @@ Axe Beak
 
 Type: beast
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 50 ft.
+Abilities: Str 14, Dex 12, Con 12, Int 2, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/4
 
 ## monsters > azer
 
@@ -17795,12 +17923,16 @@ Azer
 
 Type: elemental
 Size: Medium
+Hit points: 39 (6d8 + 12)
 Speed: 30 ft.
+Abilities: Str 17, Dex 12, Con 15, Int 12, Wis 13, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: passive Perception 11
+Languages: Ignan
+Challenge: 2
 
 Heated Body. A creature that touches the azer or hits it with a melee attack while within 5 ft. of it takes 5 (1d10) fire damage.
 
@@ -17814,12 +17946,16 @@ Baboon
 
 Type: beast
 Size: Small
+Hit points: 3 (1d6)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 8, Dex 14, Con 11, Int 4, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: none
+Challenge: 0
 
 Pack Tactics. The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 ft. of the creature and the ally isn't incapacitated.
 
@@ -17829,12 +17965,16 @@ Badger
 
 Type: beast
 Size: Tiny
+Hit points: 3 (1d4 + 1)
 Speed: 20 ft., burrow 5 ft.
+Abilities: Str 4, Dex 11, Con 12, Int 2, Wis 12, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 11
+Languages: none
+Challenge: 0
 
 Keen Smell. The badger has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -17844,12 +17984,16 @@ Balor
 
 Type: fiend (demon)
 Size: Huge
+Hit points: 262 (21d12 + 126)
 Speed: 40 ft., fly 80 ft.
+Abilities: Str 26, Dex 15, Con 22, Int 20, Wis 16, Cha 22
 Damage vulnerabilities: none
 Damage resistances: cold; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: truesight 120 ft., passive Perception 13
+Languages: Abyssal, telepathy 120 ft.
+Challenge: 19
 
 Death Throes. When the balor dies, it explodes, and each creature within 30 feet of it must make a DC 20 Dexterity saving throw, taking 70 (20d6) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.
 
@@ -17869,12 +18013,16 @@ Bandit
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 30 ft.
+Abilities: Str 11, Dex 12, Con 12, Int 10, Wis 10, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any one language (usually Common)
+Challenge: 1/8
 
 ## monsters > bandit-captain
 
@@ -17882,12 +18030,16 @@ Bandit Captain
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 65 (10d8 + 20)
 Speed: 30 ft.
+Abilities: Str 15, Dex 16, Con 14, Int 14, Wis 11, Cha 14
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any two languages
+Challenge: 2
 
 Reactions
 
@@ -17899,12 +18051,16 @@ Barbed Devil
 
 Type: fiend (devil)
 Size: Medium
+Hit points: 110 (13d8 + 52)
 Speed: 30 ft.
+Abilities: Str 16, Dex 17, Con 18, Int 12, Wis 14, Cha 14
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 18
+Languages: Infernal, telepathy 120 ft.
+Challenge: 5
 
 Barbed Hide. At the start of each of its turns, the barbed devil deals 5 (1d10) piercing damage to any creature grappling it.
 
@@ -17918,12 +18074,16 @@ Basilisk
 
 Type: monstrosity
 Size: Medium
+Hit points: 52 (8d8 + 16)
 Speed: 20 ft.
+Abilities: Str 16, Dex 8, Con 15, Int 2, Wis 8, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 9
+Languages: none
+Challenge: 3
 
 Petrifying Gaze. If a creature starts its turn within 30 ft. of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't incapacitated. On a failed save, the creature magically begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
 A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.
@@ -17935,12 +18095,16 @@ Bat
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 5 ft., fly 30 ft.
+Abilities: Str 2, Dex 15, Con 8, Int 2, Wis 12, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 60 ft., passive Perception 11
+Languages: none
+Challenge: 0
 
 Echolocation. The bat can't use its blindsight while deafened.
 
@@ -17952,12 +18116,16 @@ Bearded Devil
 
 Type: fiend (devil)
 Size: Medium
+Hit points: 52 (8d8 + 16)
 Speed: 30 ft.
+Abilities: Str 16, Dex 15, Con 15, Int 9, Wis 11, Cha 11
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 10
+Languages: Infernal, telepathy 120 ft.
+Challenge: 3
 
 Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
 
@@ -17971,12 +18139,16 @@ Behir
 
 Type: monstrosity
 Size: Huge
+Hit points: 168 (16d12 + 64)
 Speed: 50 ft., climb 40 ft.
+Abilities: Str 23, Dex 16, Con 18, Int 7, Wis 14, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: darkvision 90 ft., passive Perception 16
+Languages: Draconic
+Challenge: 11
 
 Actions
 
@@ -17991,12 +18163,16 @@ Berserker
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 67 (9d8 + 27)
 Speed: 30 ft.
+Abilities: Str 16, Dex 12, Con 17, Int 9, Wis 11, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any one language (usually Common)
+Challenge: 2
 
 Reckless. At the start of its turn, the berserker can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.
 
@@ -18006,12 +18182,16 @@ Black Bear
 
 Type: beast
 Size: Medium
+Hit points: 19 (3d8 + 6)
 Speed: 40 ft., climb 30 ft.
+Abilities: Str 15, Dex 10, Con 14, Int 2, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1/2
 
 Keen Smell. The bear has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -18021,12 +18201,16 @@ Black Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 33 (6d8 + 6)
 Speed: 30 ft., fly 60 ft., swim 30 ft.
+Abilities: Str 15, Dex 14, Con 13, Int 10, Wis 11, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 2
 
 Amphibious. The dragon can breathe air and water.
 
@@ -18040,12 +18224,16 @@ Black Pudding
 
 Type: ooze
 Size: Large
+Hit points: 85 (10d10 + 30)
 Speed: 20 ft., climb 20 ft.
+Abilities: Str 16, Dex 5, Con 16, Int 1, Wis 6, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid; cold; lightning; slashing
 Condition immunities: Blinded, Charmed, Exhaustion, Frightened, Prone
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+Languages: none
+Challenge: 4
 
 Amorphous. The pudding can move through a space as narrow as 1 inch wide without squeezing.
 
@@ -18063,12 +18251,16 @@ Blink Dog
 
 Type: fey
 Size: Medium
+Hit points: 22 (4d8 + 4)
 Speed: 40 ft.
+Abilities: Str 12, Dex 17, Con 12, Int 10, Wis 13, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: Blink Dog, understands Sylvan but can't speak it
+Challenge: 1/4
 
 Keen Hearing and Smell. The dog has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -18082,12 +18274,16 @@ Blood Hawk
 
 Type: beast
 Size: Small
+Hit points: 7 (2d6)
 Speed: 10 ft., fly 60 ft.
+Abilities: Str 6, Dex 14, Con 10, Int 3, Wis 14, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 1/8
 
 Keen Sight. The hawk has advantage on Wisdom (Perception) checks that rely on sight.
 
@@ -18099,12 +18295,16 @@ Blue Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 52 (8d8 + 16)
 Speed: 30 ft., burrow 15 ft., fly 60 ft.
+Abilities: Str 17, Dex 10, Con 15, Int 12, Wis 11, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 3
 
 Actions
 
@@ -18116,12 +18316,16 @@ Boar
 
 Type: beast
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 40 ft.
+Abilities: Str 13, Dex 11, Con 12, Int 2, Wis 9, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 9
+Languages: none
+Challenge: 1/4
 
 Charge. If the boar moves at least 20 ft. straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
 
@@ -18133,12 +18337,16 @@ Bone Devil
 
 Type: fiend (devil)
 Size: Large
+Hit points: 142 (15d10 + 60)
 Speed: 40 ft., fly 40 ft.
+Abilities: Str 18, Dex 16, Con 18, Int 13, Wis 14, Cha 16
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 12
+Languages: Infernal, telepathy 120 ft.
+Challenge: 9
 
 Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
 
@@ -18150,12 +18358,16 @@ Brass Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 16 (3d8 + 3)
 Speed: 30 ft., burrow 15 ft., fly 60 ft.
+Abilities: Str 15, Dex 10, Con 13, Int 10, Wis 11, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 1
 
 Actions
 
@@ -18169,12 +18381,16 @@ Bronze Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 32 (5d8 + 10)
 Speed: 30 ft., fly 60 ft., swim 30 ft.
+Abilities: Str 17, Dex 10, Con 15, Int 12, Wis 11, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 2
 
 Amphibious. The dragon can breathe air and water.
 
@@ -18190,12 +18406,16 @@ Brown Bear
 
 Type: beast
 Size: Large
+Hit points: 34 (4d10 + 12)
 Speed: 40 ft., climb 30 ft.
+Abilities: Str 19, Dex 10, Con 16, Int 2, Wis 13, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1
 
 Keen Smell. The bear has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -18205,12 +18425,16 @@ Bugbear
 
 Type: humanoid (goblinoid)
 Size: Medium
+Hit points: 27 (5d8 + 5)
 Speed: 30 ft.
+Abilities: Str 15, Dex 14, Con 13, Int 8, Wis 11, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Common, Goblin
+Challenge: 1
 
 Brute. A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).
 
@@ -18222,12 +18446,16 @@ Bulette
 
 Type: monstrosity
 Size: Large
+Hit points: 94 (9d10 + 45)
 Speed: 40 ft., burrow 40 ft.
+Abilities: Str 19, Dex 11, Con 21, Int 2, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 16
+Languages: none
+Challenge: 5
 
 Standing Leap. The bulette's long jump is up to 30 ft. and its high jump is up to 15 ft., with or without a running start.
 
@@ -18241,12 +18469,16 @@ Camel
 
 Type: beast
 Size: Large
+Hit points: 15 (2d10 + 4)
 Speed: 50 ft.
+Abilities: Str 16, Dex 8, Con 14, Int 2, Wis 8, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 9
+Languages: none
+Challenge: 1/8
 
 ## monsters > cat
 
@@ -18254,12 +18486,16 @@ Cat
 
 Type: beast
 Size: Tiny
+Hit points: 2 (1d4)
 Speed: 40 ft., climb 30 ft.
+Abilities: Str 3, Dex 15, Con 10, Int 3, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 0
 
 Keen Smell. The cat has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -18269,12 +18505,16 @@ Centaur
 
 Type: monstrosity
 Size: Large
+Hit points: 45 (6d10 + 12)
 Speed: 50 ft.
+Abilities: Str 18, Dex 14, Con 14, Int 9, Wis 13, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: Elvish, Sylvan
+Challenge: 2
 
 Charge. If the centaur moves at least 30 ft. straight toward a target and then hits it with a pike attack on the same turn, the target takes an extra 10 (3d6) piercing damage.
 
@@ -18284,12 +18524,16 @@ Chain Devil
 
 Type: fiend (devil)
 Size: Medium
+Hit points: 85 (10d8 + 40)
 Speed: 30 ft.
+Abilities: Str 18, Dex 15, Con 18, Int 11, Wis 12, Cha 14
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 11
+Languages: Infernal, telepathy 120 ft.
+Challenge: 8
 
 Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
 
@@ -18310,12 +18554,16 @@ Chimera
 
 Type: monstrosity
 Size: Large
+Hit points: 114 (12d10 + 48)
 Speed: 30 ft., fly 60 ft.
+Abilities: Str 19, Dex 11, Con 19, Int 3, Wis 14, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 18
+Languages: understands Draconic but can't speak
+Challenge: 6
 
 Actions
 
@@ -18327,12 +18575,16 @@ Chuul
 
 Type: aberration
 Size: Large
+Hit points: 93 (11d10 + 33)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 19, Dex 10, Con 16, Int 5, Wis 11, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 14
+Languages: understands Deep Speech but can't speak
+Challenge: 4
 
 Amphibious. The chuul can breathe air and water.
 
@@ -18348,12 +18600,16 @@ Clay Golem
 
 Type: construct
 Size: Large
+Hit points: 133 (14d10 + 56)
 Speed: 20 ft.
+Abilities: Str 20, Dex 9, Con 18, Int 3, Wis 8, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid; poison; psychic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
 Senses: darkvision 60 ft., passive Perception 9
+Languages: understands the languages of its creator but can't speak
+Challenge: 9
 
 Acid Absorption. Whenever the golem is subjected to acid damage, it takes no damage and instead regains a number of hit points equal to the acid damage dealt.
 
@@ -18375,12 +18631,16 @@ Cloaker
 
 Type: aberration
 Size: Large
+Hit points: 78 (12d10 + 12)
 Speed: 10 ft., fly 40 ft.
+Abilities: Str 17, Dex 15, Con 12, Int 13, Wis 12, Cha 14
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 11
+Languages: Deep Speech, Undercommon
+Challenge: 8
 
 Damage Transfer. While attached to a creature, the cloaker takes only half the damage dealt to it (rounded down). and that creature takes the other half.
 
@@ -18402,12 +18662,16 @@ Cloud Giant
 
 Type: giant
 Size: Huge
+Hit points: 200 (16d12 + 96)
 Speed: 40 ft.
+Abilities: Str 27, Dex 10, Con 22, Int 12, Wis 16, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 17
+Languages: Common, Giant
+Challenge: 9
 
 Keen Smell. The giant has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -18423,12 +18687,16 @@ Cockatrice
 
 Type: monstrosity
 Size: Small
+Hit points: 27 (6d6 + 6)
 Speed: 20 ft., fly 40 ft.
+Abilities: Str 6, Dex 12, Con 12, Int 2, Wis 13, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 11
+Languages: none
+Challenge: 1/2
 
 ## monsters > commoner
 
@@ -18436,12 +18704,16 @@ Commoner
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 4 (1d8)
 Speed: 30 ft.
+Abilities: Str 10, Dex 10, Con 10, Int 10, Wis 10, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any one language (usually Common)
+Challenge: 0
 
 ## monsters > constrictor-snake
 
@@ -18449,12 +18721,16 @@ Constrictor Snake
 
 Type: beast
 Size: Large
+Hit points: 13 (2d10 + 2)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 15, Dex 14, Con 12, Int 1, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., passive Perception 10
+Languages: none
+Challenge: 1/4
 
 ## monsters > copper-dragon-wyrmling
 
@@ -18462,12 +18738,16 @@ Copper Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 22 (4d8 + 4)
 Speed: 30 ft., climb 30 ft., fly 60 ft.
+Abilities: Str 15, Dex 12, Con 13, Int 14, Wis 11, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 1
 
 Actions
 
@@ -18481,12 +18761,16 @@ Couatl
 
 Type: celestial
 Size: Medium
+Hit points: 97 (13d8 + 39)
 Speed: 30 ft., fly 90 ft.
+Abilities: Str 16, Dex 20, Con 17, Int 18, Wis 20, Cha 18
 Damage vulnerabilities: none
 Damage resistances: radiant
 Damage immunities: psychic; bludgeoning, piercing, and slashing from nonmagical weapons
 Condition immunities: none
 Senses: truesight 120 ft., passive Perception 15
+Languages: all, telepathy 120 ft.
+Challenge: 4
 
 Innate Spellcasting. The couatl's spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring only verbal components:
 
@@ -18509,12 +18793,16 @@ Crab
 
 Type: beast
 Size: Tiny
+Hit points: 2 (1d4)
 Speed: 20 ft., swim 20 ft.
+Abilities: Str 2, Dex 11, Con 10, Int 1, Wis 8, Cha 2
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 30 ft., passive Perception 9
+Languages: none
+Challenge: 0
 
 Amphibious. The crab can breathe air and water.
 
@@ -18524,12 +18812,16 @@ Crocodile
 
 Type: beast
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 20 ft., swim 20 ft.
+Abilities: Str 15, Dex 10, Con 13, Int 2, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/2
 
 Hold Breath. The crocodile can hold its breath for 15 minutes.
 
@@ -18539,12 +18831,16 @@ Cult Fanatic
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 22 (6d8 - 5)
 Speed: 30 ft.
+Abilities: Str 11, Dex 14, Con 12, Int 10, Wis 13, Cha 14
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: any one language (usually Common)
+Challenge: 2
 
 Dark Devotion. The fanatic has advantage on saving throws against being charmed or frightened.
 
@@ -18560,12 +18856,16 @@ Cultist
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 9 (2d8)
 Speed: 30 ft.
+Abilities: Str 11, Dex 12, Con 10, Int 10, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any one language (usually Common)
+Challenge: 1/8
 
 Dark Devotion. The cultist has advantage on saving throws against being charmed or frightened.
 
@@ -18575,12 +18875,16 @@ Darkmantle
 
 Type: monstrosity
 Size: Small
+Hit points: 22 (5d6 + 5)
 Speed: 10 ft., fly 30 ft.
+Abilities: Str 16, Dex 12, Con 13, Int 2, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 60 ft., passive Perception 10
+Languages: none
+Challenge: 1/2
 
 Echolocation. The darkmantle can't use its blindsight while deafened.
 
@@ -18596,12 +18900,16 @@ Death Dog
 
 Type: monstrosity
 Size: Medium
+Hit points: 39 (6d8 + 12)
 Speed: 40 ft.
+Abilities: Str 15, Dex 14, Con 14, Int 3, Wis 13, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 15
+Languages: none
+Challenge: 1
 
 Two-Headed. The dog has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, or knocked unconscious.
 
@@ -18611,12 +18919,16 @@ Deep Gnome (Svirfneblin)
 
 Type: humanoid (gnome)
 Size: Small
+Hit points: 16 (3d6 + 6)
 Speed: 20 ft.
+Abilities: Str 15, Dex 14, Con 14, Int 12, Wis 10, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 12
+Languages: Gnomish, Terran, Undercommon
+Challenge: 1/2
 
 Stone Camouflage. The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
 
@@ -18632,12 +18944,16 @@ Deer
 
 Type: beast
 Size: Medium
+Hit points: 4 (1d8)
 Speed: 50 ft.
+Abilities: Str 11, Dex 16, Con 11, Int 2, Wis 14, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: none
+Challenge: 0
 
 ## monsters > deva
 
@@ -18645,12 +18961,16 @@ Deva
 
 Type: celestial
 Size: Medium
+Hit points: 136 (16d8 + 64)
 Speed: 30 ft., fly 90 ft.
+Abilities: Str 18, Dex 18, Con 18, Int 17, Wis 20, Cha 20
 Damage vulnerabilities: none
 Damage resistances: radiant; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: Charmed, Exhaustion, Frightened
 Senses: darkvision 120 ft., passive Perception 19
+Languages: all, telepathy 120 ft.
+Challenge: 10
 
 Angelic Weapons. The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack).
 
@@ -18673,12 +18993,16 @@ Dire Wolf
 
 Type: beast
 Size: Large
+Hit points: 37 (5d10 + 10)
 Speed: 50 ft.
+Abilities: Str 17, Dex 15, Con 15, Int 3, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1
 
 Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -18690,12 +19014,16 @@ Djinni
 
 Type: elemental
 Size: Large
+Hit points: 161 (14d10 + 84)
 Speed: 30 ft., fly 90 ft.
+Abilities: Str 21, Dex 15, Con 22, Int 15, Wis 16, Cha 20
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning; thunder
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 13
+Languages: Auran
+Challenge: 11
 
 Elemental Demise. If the djinni dies, its body disintegrates into a warm breeze, leaving behind only equipment the djinni was wearing or carrying.
 
@@ -18716,12 +19044,16 @@ Doppelganger
 
 Type: monstrosity (shapechanger)
 Size: Medium
+Hit points: 52 (8d8 + 16)
 Speed: 30 ft.
+Abilities: Str 11, Dex 18, Con 14, Int 11, Wis 12, Cha 14
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: Charmed
 Senses: darkvision 60 ft., passive Perception 11
+Languages: Common
+Challenge: 3
 
 Shapechanger. The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -18739,12 +19071,16 @@ Draft Horse
 
 Type: beast
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 40 ft.
+Abilities: Str 18, Dex 10, Con 12, Int 2, Wis 11, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/4
 
 ## monsters > dragon-turtle
 
@@ -18752,12 +19088,16 @@ Dragon Turtle
 
 Type: dragon
 Size: Gargantuan
+Hit points: 341 (22d20 + 110)
 Speed: 20 ft., swim 40 ft.
+Abilities: Str 25, Dex 10, Con 20, Int 10, Wis 12, Cha 12
 Damage vulnerabilities: none
 Damage resistances: fire
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 11
+Languages: Aquan, Draconic
+Challenge: 17
 
 Amphibious. The dragon turtle can breathe air and water.
 
@@ -18771,12 +19111,16 @@ Dretch
 
 Type: fiend (demon)
 Size: Small
+Hit points: 18 (4d6 + 4)
 Speed: 20 ft.
+Abilities: Str 11, Dex 11, Con 12, Int 5, Wis 8, Cha 3
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 9
+Languages: Abyssal, telepathy 60 ft. (works only with creatures that understand Abyssal)
+Challenge: 1/4
 
 Actions
 
@@ -18788,12 +19132,16 @@ Drider
 
 Type: monstrosity
 Size: Large
+Hit points: 123 (13d10 + 52)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 16, Dex 16, Con 18, Int 13, Wis 14, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 15
+Languages: Elvish, Undercommon
+Challenge: 6
 
 Fey Ancestry. The drider has advantage on saving throws against being charmed, and magic can't put the drider to sleep.
 
@@ -18813,12 +19161,16 @@ Drow
 
 Type: humanoid (elf)
 Size: Medium
+Hit points: 13 (3d8)
 Speed: 30 ft.
+Abilities: Str 10, Dex 14, Con 10, Int 11, Wis 11, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 12
+Languages: Elvish, Undercommon
+Challenge: 1/4
 
 Fey Ancestry. The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep.
 
@@ -18834,12 +19186,16 @@ Druid
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 27 (5d8 + 5)
 Speed: 30 ft.
+Abilities: Str 10, Dex 12, Con 13, Int 12, Wis 15, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: Druidic plus any two languages
+Challenge: 2
 
 Spellcasting. The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:
 
@@ -18853,12 +19209,16 @@ Dryad
 
 Type: fey
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 30 ft.
+Abilities: Str 10, Dex 12, Con 11, Int 14, Wis 15, Cha 18
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Elvish, Sylvan
+Challenge: 1
 
 Innate Spellcasting. The dryad's innate spellcasting ability is Charisma (spell save DC 14). The dryad can innately cast the following spells, requiring no material components:
 
@@ -18884,12 +19244,16 @@ Duergar
 
 Type: humanoid (dwarf)
 Size: Medium
+Hit points: 26 (4d8 + 8)
 Speed: 25 ft.
+Abilities: Str 14, Dex 11, Con 14, Int 11, Wis 10, Cha 9
 Damage vulnerabilities: none
 Damage resistances: poison
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 10
+Languages: Dwarvish, Undercommon
+Challenge: 1
 
 Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.
 
@@ -18907,12 +19271,16 @@ Dust Mephit
 
 Type: elemental
 Size: Small
+Hit points: 17 (5d6)
 Speed: 30 ft., fly 30 ft.
+Abilities: Str 5, Dex 14, Con 10, Int 9, Wis 11, Cha 10
 Damage vulnerabilities: fire
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 12
+Languages: Auran, Terran
+Challenge: 1/2
 
 Death Burst. When the mephit dies, it explodes in a burst of dust. Each creature within 5 ft. of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.
 
@@ -18928,12 +19296,16 @@ Eagle
 
 Type: beast
 Size: Small
+Hit points: 3 (1d6)
 Speed: 10 ft., fly 60 ft.
+Abilities: Str 6, Dex 15, Con 10, Int 2, Wis 14, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 0
 
 Keen Sight. The eagle has advantage on Wisdom (Perception) checks that rely on sight.
 
@@ -18943,12 +19315,16 @@ Earth Elemental
 
 Type: elemental
 Size: Large
+Hit points: 126 (12d10 + 60)
 Speed: 30 ft., burrow 30 ft.
+Abilities: Str 20, Dex 8, Con 20, Int 5, Wis 10, Cha 5
 Damage vulnerabilities: thunder
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Exhaustion, Paralyzed, Petrified, Poisoned, Unconscious
 Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 10
+Languages: Terran
+Challenge: 5
 
 Earth Glide. The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.
 
@@ -18960,12 +19336,16 @@ Efreeti
 
 Type: elemental
 Size: Large
+Hit points: 200 (16d10 + 112)
 Speed: 40 ft., fly 60 ft.
+Abilities: Str 22, Dex 12, Con 24, Int 16, Wis 15, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 12
+Languages: Ignan
+Challenge: 11
 
 Elemental Demise. If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the djinni was wearing or carrying.
 
@@ -18981,12 +19361,16 @@ Elephant
 
 Type: beast
 Size: Huge
+Hit points: 76 (8d12 + 24)
 Speed: 40 ft.
+Abilities: Str 22, Dex 9, Con 17, Int 3, Wis 11, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 4
 
 Trampling Charge. If the elephant moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the elephant can make one stomp attack against it as a bonus action.
 
@@ -18996,12 +19380,16 @@ Elk
 
 Type: beast
 Size: Large
+Hit points: 13 (2d10 + 2)
 Speed: 50 ft.
+Abilities: Str 16, Dex 10, Con 12, Int 2, Wis 10, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/4
 
 Charge. If the elk moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
 
@@ -19011,12 +19399,16 @@ Erinyes
 
 Type: fiend (devil)
 Size: Medium
+Hit points: 153 (18d8 + 72)
 Speed: 30 ft., fly 60 ft.
+Abilities: Str 18, Dex 16, Con 18, Int 14, Wis 14, Cha 18
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: truesight 120 ft., passive Perception 12
+Languages: Infernal, telepathy 120 ft.
+Challenge: 12
 
 Hellish Weapons. The erinyes's weapon attacks are magical and deal an extra 13 (3d8) poison damage on a hit (included in the attacks).
 
@@ -19032,12 +19424,16 @@ Ettercap
 
 Type: monstrosity
 Size: Medium
+Hit points: 44 (8d8 + 8)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 14, Dex 15, Con 13, Int 7, Wis 12, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 13
+Languages: none
+Challenge: 2
 
 Spider Climb. The ettercap can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
 
@@ -19051,12 +19447,16 @@ Ettin
 
 Type: giant
 Size: Large
+Hit points: 85 (10d10 + 30)
 Speed: 40 ft.
+Abilities: Str 21, Dex 8, Con 17, Int 6, Wis 10, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Giant, Orc
+Challenge: 4
 
 Two Heads. The ettin has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.
 
@@ -19068,12 +19468,16 @@ Fire Elemental
 
 Type: elemental
 Size: Large
+Hit points: 102 (12d10 + 36)
 Speed: 50 ft.
+Abilities: Str 10, Dex 17, Con 16, Int 6, Wis 10, Cha 7
 Damage vulnerabilities: none
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: fire; poison
 Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Ignan
+Challenge: 5
 
 Fire Form. The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 ft. of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
 
@@ -19087,12 +19491,16 @@ Fire Giant
 
 Type: giant
 Size: Huge
+Hit points: 162 (13d12 + 78)
 Speed: 30 ft.
+Abilities: Str 25, Dex 9, Con 23, Int 10, Wis 14, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: passive Perception 16
+Languages: Giant
+Challenge: 9
 
 ## monsters > flesh-golem
 
@@ -19100,12 +19508,16 @@ Flesh Golem
 
 Type: construct
 Size: Medium
+Hit points: 93 (11d8 + 44)
 Speed: 30 ft.
+Abilities: Str 19, Dex 9, Con 18, Int 6, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning; poison; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
 Senses: darkvision 60 ft., passive Perception 10
+Languages: understands the languages of its creator but can't speak
+Challenge: 5
 
 Berserk. Whenever the golem starts its turn with 40 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.
 The golem's creator, if within 60 feet of the berserk golem, can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a DC 15 Charisma (Persuasion) check. If the check succeeds, the golem ceases being berserk. If it takes damage while still at 40 hit points or fewer, the golem might go berserk again.
@@ -19126,12 +19538,16 @@ Flying Snake
 
 Type: beast
 Size: Tiny
+Hit points: 5 (2d4)
 Speed: 30 ft., fly 60 ft., swim 30 ft.
+Abilities: Str 4, Dex 18, Con 11, Int 2, Wis 12, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., passive Perception 11
+Languages: none
+Challenge: 1/8
 
 Flyby. The snake doesn't provoke opportunity attacks when it flies out of an enemy's reach.
 
@@ -19141,12 +19557,16 @@ Flying Sword
 
 Type: construct
 Size: Small
+Hit points: 17 (5d6)
 Speed: 0 ft., fly 50 ft. (hover)
+Abilities: Str 12, Dex 15, Con 11, Int 1, Wis 5, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison; psychic
 Condition immunities: Blinded, Charmed, Blinded, Frightened, Paralyzed, Petrified, Poisoned
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 7
+Languages: none
+Challenge: 1/4
 
 Antimagic Susceptibility. The sword is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.
 
@@ -19158,12 +19578,16 @@ Frog
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 20 ft., swim 20 ft.
+Abilities: Str 1, Dex 13, Con 8, Int 1, Wis 8, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 11
+Languages: none
+Challenge: 0
 
 Amphibious. The frog can breathe air and water
 
@@ -19175,12 +19599,16 @@ Frost Giant
 
 Type: giant
 Size: Huge
+Hit points: 138 (12d12 + 60)
 Speed: 40 ft.
+Abilities: Str 23, Dex 9, Con 21, Int 9, Wis 10, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: passive Perception 13
+Languages: Giant
+Challenge: 8
 
 ## monsters > gargoyle
 
@@ -19188,12 +19616,16 @@ Gargoyle
 
 Type: elemental
 Size: Medium
+Hit points: 52 (7d8 + 21)
 Speed: 30 ft., fly 60 ft.
+Abilities: Str 15, Dex 11, Con 16, Int 6, Wis 11, Cha 7
 Damage vulnerabilities: none
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
 Damage immunities: poison
 Condition immunities: Exhaustion, Petrified, Poisoned
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Terran
+Challenge: 2
 
 False Appearance. While the gargoyle remains motion less, it is indistinguishable from an inanimate statue.
 
@@ -19203,12 +19635,16 @@ Gelatinous Cube
 
 Type: ooze
 Size: Large
+Hit points: 84 (8d10 + 40)
 Speed: 15 ft.
+Abilities: Str 14, Dex 3, Con 20, Int 1, Wis 6, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: Blinded, Charmed, Deafened, Exhaustion, Frightened, Prone
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+Languages: none
+Challenge: 2
 
 Ooze Cube. The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.
 Creatures inside the cube can be seen but have total cover.
@@ -19230,12 +19666,16 @@ Ghast
 
 Type: undead
 Size: Medium
+Hit points: 36 (8d8)
 Speed: 30 ft.
+Abilities: Str 16, Dex 17, Con 10, Int 11, Wis 10, Cha 8
 Damage vulnerabilities: none
 Damage resistances: necrotic
 Damage immunities: poison
 Condition immunities: Poisoned, Charmed, Exhaustion
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Common
+Challenge: 2
 
 Stench. Any creature that starts its turn within 5 ft. of the ghast must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.
 
@@ -19247,12 +19687,16 @@ Ghost
 
 Type: undead
 Size: Medium
+Hit points: 45 (10d8)
 Speed: 0 ft., fly 40 ft. (hover)
+Abilities: Str 7, Dex 13, Con 10, Int 10, Wis 12, Cha 17
 Damage vulnerabilities: none
 Damage resistances: acid; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: cold; necrotic; poison
 Condition immunities: Charmed, Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained
 Senses: darkvision 60 ft., passive Perception 11
+Languages: any languages it knew in life
+Challenge: 4
 
 Ethereal Sight. The ghost can see 60 ft. into the Ethereal Plane when it is on the Material Plane, and vice versa.
 
@@ -19273,12 +19717,16 @@ Ghoul
 
 Type: undead
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 30 ft.
+Abilities: Str 13, Dex 15, Con 10, Int 7, Wis 10, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned, Charmed, Exhaustion
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Common
+Challenge: 1
 
 ## monsters > giant-ape
 
@@ -19286,12 +19734,16 @@ Giant Ape
 
 Type: beast
 Size: Huge
+Hit points: 157 (15d12 + 60)
 Speed: 40 ft., climb 40 ft.
+Abilities: Str 23, Dex 14, Con 18, Int 7, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 7
 
 ## monsters > giant-badger
 
@@ -19299,12 +19751,16 @@ Giant Badger
 
 Type: beast
 Size: Medium
+Hit points: 13 (2d8 + 4)
 Speed: 30 ft., burrow 10 ft.
+Abilities: Str 13, Dex 10, Con 15, Int 2, Wis 12, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 11
+Languages: none
+Challenge: 1/4
 
 Keen Smell. The badger has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -19314,12 +19770,16 @@ Giant Bat
 
 Type: beast
 Size: Large
+Hit points: 22 (4d10)
 Speed: 10 ft., fly 60 ft.
+Abilities: Str 15, Dex 16, Con 11, Int 2, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 60 ft., passive Perception 11
+Languages: none
+Challenge: 1/4
 
 Echolocation. The bat can't use its blindsight while deafened.
 
@@ -19331,12 +19791,16 @@ Giant Boar
 
 Type: beast
 Size: Large
+Hit points: 42 (5d10 + 15)
 Speed: 40 ft.
+Abilities: Str 17, Dex 10, Con 16, Int 2, Wis 7, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 8
+Languages: none
+Challenge: 2
 
 Charge. If the boar moves at least 20 ft. straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
 
@@ -19348,12 +19812,16 @@ Giant Centipede
 
 Type: beast
 Size: Small
+Hit points: 4 (1d6 + 1)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 5, Dex 14, Con 12, Int 1, Wis 7, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 30 ft., passive Perception 8
+Languages: none
+Challenge: 1/4
 
 ## monsters > giant-constrictor-snake
 
@@ -19361,12 +19829,16 @@ Giant Constrictor Snake
 
 Type: beast
 Size: Huge
+Hit points: 60 (8d12 + 8)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 19, Dex 14, Con 12, Int 1, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., passive Perception 12
+Languages: none
+Challenge: 2
 
 ## monsters > giant-crab
 
@@ -19374,12 +19846,16 @@ Giant Crab
 
 Type: beast
 Size: Medium
+Hit points: 13 (3d8)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 13, Dex 15, Con 11, Int 1, Wis 9, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 30 ft., passive Perception 9
+Languages: none
+Challenge: 1/8
 
 Amphibious. The crab can breathe air and water.
 
@@ -19389,12 +19865,16 @@ Giant Crocodile
 
 Type: beast
 Size: Huge
+Hit points: 85 (9d12 + 27)
 Speed: 30 ft., swim 50 ft.
+Abilities: Str 21, Dex 9, Con 17, Int 2, Wis 10, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 5
 
 Hold Breath. The crocodile can hold its breath for 30 minutes.
 
@@ -19404,12 +19884,16 @@ Giant Eagle
 
 Type: beast
 Size: Large
+Hit points: 26 (4d10 + 4)
 Speed: 10 ft., fly 80 ft.
+Abilities: Str 16, Dex 17, Con 13, Int 8, Wis 14, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: Giant Eagle, understands Common and Auran but can't speak
+Challenge: 1
 
 Keen Sight. The eagle has advantage on Wisdom (Perception) checks that rely on sight.
 
@@ -19419,12 +19903,16 @@ Giant Elk
 
 Type: beast
 Size: Huge
+Hit points: 42 (5d12 + 10)
 Speed: 60 ft.
+Abilities: Str 19, Dex 16, Con 14, Int 7, Wis 14, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: Giant Elk, understands Common, Elvish, and Sylvan but can't speak
+Challenge: 2
 
 Charge. If the elk moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.
 
@@ -19434,12 +19922,16 @@ Giant Fire Beetle
 
 Type: beast
 Size: Small
+Hit points: 4 (1d6 + 1)
 Speed: 30 ft.
+Abilities: Str 8, Dex 10, Con 12, Int 1, Wis 7, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 30 ft., passive Perception 8
+Languages: none
+Challenge: 0
 
 Illumination. The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 ft..
 
@@ -19449,12 +19941,16 @@ Giant Frog
 
 Type: beast
 Size: Medium
+Hit points: 18 (4d8)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 12, Dex 13, Con 11, Int 2, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 12
+Languages: none
+Challenge: 1/4
 
 Amphibious. The frog can breathe air and water
 
@@ -19470,12 +19966,16 @@ Giant Goat
 
 Type: beast
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 40 ft.
+Abilities: Str 17, Dex 11, Con 12, Int 3, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: none
+Challenge: 1/2
 
 Charge. If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
 
@@ -19487,12 +19987,16 @@ Giant Hyena
 
 Type: beast
 Size: Large
+Hit points: 45 (6d10 + 12)
 Speed: 50 ft.
+Abilities: Str 16, Dex 14, Con 14, Int 2, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1
 
 Rampage. When the hyena reduces a creature to 0 hit points with a melee attack on its turn, the hyena can take a bonus action to move up to half its speed and make a bite attack.
 
@@ -19502,12 +20006,16 @@ Giant Lizard
 
 Type: beast
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 15, Dex 12, Con 13, Int 2, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 10
+Languages: none
+Challenge: 1/4
 
 ## monsters > giant-octopus
 
@@ -19515,12 +20023,16 @@ Giant Octopus
 
 Type: beast
 Size: Large
+Hit points: 52 (8d10 + 8)
 Speed: 10 ft., swim 60 ft.
+Abilities: Str 17, Dex 13, Con 13, Int 4, Wis 10, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: none
+Challenge: 1
 
 Hold Breath. While out of water, the octopus can hold its breath for 1 hour.
 
@@ -19538,12 +20050,16 @@ Giant Owl
 
 Type: beast
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 5 ft., fly 60 ft.
+Abilities: Str 13, Dex 15, Con 12, Int 8, Wis 13, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 15
+Languages: Giant Owl, understands Common, Elvish, and Sylvan but can't speak
+Challenge: 1/4
 
 Flyby. The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.
 
@@ -19555,12 +20071,16 @@ Giant Poisonous Snake
 
 Type: beast
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 10, Dex 18, Con 13, Int 2, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., passive Perception 12
+Languages: none
+Challenge: 1/4
 
 ## monsters > giant-rat
 
@@ -19568,12 +20088,16 @@ Giant Rat
 
 Type: beast
 Size: Small
+Hit points: 7 (2d6)
 Speed: 30 ft.
+Abilities: Str 7, Dex 15, Con 11, Int 2, Wis 10, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: none
+Challenge: 1/8
 
 Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -19585,12 +20109,16 @@ Giant Rat (Diseased)
 
 Type: beast
 Size: Small
+Hit points: 7 (2d6)
 Speed: 30 ft.
+Abilities: Str 7, Dex 15, Con 11, Int 2, Wis 10, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: none
+Challenge: 1/8
 
 Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -19602,12 +20130,16 @@ Giant Scorpion
 
 Type: beast
 Size: Large
+Hit points: 52 (7d10 + 14)
 Speed: 40 ft.
+Abilities: Str 15, Dex 13, Con 15, Int 1, Wis 9, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 60 ft., passive Perception 9
+Languages: none
+Challenge: 3
 
 ## monsters > giant-sea-horse
 
@@ -19615,12 +20147,16 @@ Giant Sea Horse
 
 Type: beast
 Size: Large
+Hit points: 16 (3d10)
 Speed: 0 ft., swim 40 ft.
+Abilities: Str 12, Dex 15, Con 11, Int 2, Wis 12, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: none
+Challenge: 1/2
 
 Charge. If the sea horse moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
 
@@ -19632,12 +20168,16 @@ Giant Shark
 
 Type: beast
 Size: Huge
+Hit points: 126 (11d12 + 55)
 Speed: swim 50 ft.
+Abilities: Str 23, Dex 11, Con 21, Int 1, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 60 ft., passive Perception 13
+Languages: none
+Challenge: 5
 
 Blood Frenzy. The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.
 
@@ -19649,12 +20189,16 @@ Giant Spider
 
 Type: beast
 Size: Large
+Hit points: 26 (4d10 + 4)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 14, Dex 16, Con 12, Int 2, Wis 11, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 10
+Languages: none
+Challenge: 1
 
 Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
 
@@ -19668,12 +20212,16 @@ Giant Toad
 
 Type: beast
 Size: Large
+Hit points: 39 (6d10 + 6)
 Speed: 20 ft., swim 40 ft.
+Abilities: Str 15, Dex 13, Con 13, Int 2, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 10
+Languages: none
+Challenge: 1
 
 Amphibious. The toad can breathe air and water
 
@@ -19690,12 +20238,16 @@ Giant Vulture
 
 Type: beast
 Size: Large
+Hit points: 22 (3d10 + 6)
 Speed: 10 ft., fly 60 ft.
+Abilities: Str 15, Dex 10, Con 15, Int 6, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: understands Common but can't speak
+Challenge: 1
 
 Keen Sight and Smell. The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.
 
@@ -19707,12 +20259,16 @@ Giant Wasp
 
 Type: beast
 Size: Medium
+Hit points: 13 (3d8)
 Speed: 10 ft., fly 50 ft., swim 50 ft.
+Abilities: Str 10, Dex 14, Con 10, Int 1, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/2
 
 ## monsters > giant-weasel
 
@@ -19720,12 +20276,16 @@ Giant Weasel
 
 Type: beast
 Size: Medium
+Hit points: 9 (2d8)
 Speed: 40 ft.
+Abilities: Str 11, Dex 16, Con 10, Int 4, Wis 12, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 13
+Languages: none
+Challenge: 1/8
 
 Keen Hearing and Smell. The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -19735,12 +20295,16 @@ Giant Wolf Spider
 
 Type: beast
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 40 ft., climb 40 ft.
+Abilities: Str 12, Dex 16, Con 13, Int 3, Wis 12, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 13
+Languages: none
+Challenge: 1/4
 
 Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
 
@@ -19754,12 +20318,16 @@ Gibbering Mouther
 
 Type: aberration
 Size: Medium
+Hit points: 67 (9d8 + 27)
 Speed: 10 ft., swim 10 ft.
+Abilities: Str 10, Dex 8, Con 16, Int 3, Wis 10, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: Prone
 Senses: darkvision 60 ft., passive Perception 10
+Languages: none
+Challenge: 2
 
 Aberrant Ground. The ground in a 10-foot radius around the mouther is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a DC 10 Strength saving throw or have its speed reduced to 0 until the start of its next turn.
 
@@ -19775,12 +20343,16 @@ Glabrezu
 
 Type: fiend (demon)
 Size: Large
+Hit points: 157 (15d10 + 75)
 Speed: 40 ft.
+Abilities: Str 20, Dex 15, Con 21, Int 19, Wis 17, Cha 16
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: truesight 120 ft., passive Perception 13
+Languages: Abyssal, telepathy 120 ft.
+Challenge: 9
 
 Innate Spellcasting. The glabrezu's spellcasting ability is Intelligence (spell save DC 16). The glabrezu can innately cast the following spells, requiring no material components:
 At will: darkness, detect magic, dispel magic
@@ -19794,12 +20366,16 @@ Gladiator
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 112 (15d8 + 45)
 Speed: 30 ft.
+Abilities: Str 18, Dex 15, Con 16, Int 10, Wis 12, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: any one language (usually Common)
+Challenge: 5
 
 Brave. The gladiator has advantage on saving throws against being frightened.
 
@@ -19815,12 +20391,16 @@ Gnoll
 
 Type: humanoid (gnoll)
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 30 ft.
+Abilities: Str 14, Dex 12, Con 11, Int 6, Wis 10, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Gnoll
+Challenge: 1/2
 
 Rampage. When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack.
 
@@ -19830,12 +20410,16 @@ Goat
 
 Type: beast
 Size: Medium
+Hit points: 4 (1d8)
 Speed: 40 ft.
+Abilities: Str 12, Dex 10, Con 11, Int 2, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 0
 
 Charge. If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 2 (1d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 10 Strength saving throw or be knocked prone.
 
@@ -19847,12 +20431,16 @@ Goblin
 
 Type: humanoid (goblinoid)
 Size: Small
+Hit points: 7 (2d6)
 Speed: 30 ft.
+Abilities: Str 8, Dex 14, Con 10, Int 10, Wis 8, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 9
+Languages: Common, Goblin
+Challenge: 1/4
 
 Nimble Escape. The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
 
@@ -19862,12 +20450,16 @@ Gold Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 60 (8d8 + 24)
 Speed: 30 ft., fly 60 ft., swim 30 ft.
+Abilities: Str 19, Dex 14, Con 17, Int 14, Wis 11, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 3
 
 Amphibious. The dragon can breathe air and water.
 
@@ -19883,12 +20475,16 @@ Gorgon
 
 Type: monstrosity
 Size: Large
+Hit points: 114 (12d10 + 48)
 Speed: 40 ft.
+Abilities: Str 20, Dex 11, Con 18, Int 2, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: Petrified
 Senses: darkvision 60 ft., passive Perception 14
+Languages: none
+Challenge: 5
 
 Trampling Charge. If the gorgon moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 16 Strength saving throw or be knocked prone. If the target is prone, the gorgon can make one attack with its hooves against it as a bonus action.
 
@@ -19902,12 +20498,16 @@ Gray Ooze
 
 Type: ooze
 Size: Medium
+Hit points: 22 (3d8 + 9)
 Speed: 10 ft., climb 10 ft.
+Abilities: Str 12, Dex 6, Con 16, Int 1, Wis 6, Cha 2
 Damage vulnerabilities: none
 Damage resistances: acid; cold; fire
 Damage immunities: none
 Condition immunities: Blinded, Charmed, Deafened, Exhaustion, Frightened, Prone
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+Languages: none
+Challenge: 1/2
 
 Amorphous. The ooze can move through a space as narrow as 1 inch wide without squeezing.
 
@@ -19922,12 +20522,16 @@ Green Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 38 (7d8 + 7)
 Speed: 30 ft., fly 60 ft., swim 30 ft.
+Abilities: Str 15, Dex 12, Con 13, Int 14, Wis 11, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 2
 
 Amphibious. The dragon can breathe air and water.
 
@@ -19941,12 +20545,16 @@ Green Hag
 
 Type: fey
 Size: Medium
+Hit points: 82 (11d8 + 33)
 Speed: 30 ft.
+Abilities: Str 18, Dex 12, Con 16, Int 13, Wis 14, Cha 14
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Common, Draconic, Sylvan
+Challenge: 3
 
 Amphibious. The hag can breathe air and water.
 
@@ -19969,12 +20577,16 @@ Grick
 
 Type: monstrosity
 Size: Medium
+Hit points: 27 (6d8)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 14, Dex 14, Con 11, Int 3, Wis 14, Cha 5
 Damage vulnerabilities: none
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 12
+Languages: none
+Challenge: 2
 
 Stone Camouflage. The grick has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
 
@@ -19984,12 +20596,16 @@ Griffon
 
 Type: monstrosity
 Size: Large
+Hit points: 59 (7d10 + 21)
 Speed: 30 ft., fly 80 ft.
+Abilities: Str 18, Dex 15, Con 16, Int 2, Wis 13, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 15
+Languages: none
+Challenge: 2
 
 Keen Sight. The griffon has advantage on Wisdom (Perception) checks that rely on sight.
 
@@ -19999,12 +20615,16 @@ Grimlock
 
 Type: humanoid (grimlock)
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 30 ft.
+Abilities: Str 16, Dex 12, Con 12, Int 9, Wis 8, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: Blinded
 Senses: blindsight 30 ft. or 10 ft. while deafened (blind beyond this radius), passive Perception 13
+Languages: Undercommon
+Challenge: 1/4
 
 Blind Senses. The grimlock can't use its blindsight while deafened and unable to smell.
 
@@ -20018,12 +20638,16 @@ Guard
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 30 ft.
+Abilities: Str 13, Dex 12, Con 12, Int 10, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: any one language (usually Common)
+Challenge: 1/8
 
 ## monsters > guardian-naga
 
@@ -20031,12 +20655,16 @@ Guardian Naga
 
 Type: monstrosity
 Size: Large
+Hit points: 127 (15d10 + 45)
 Speed: 40 ft.
+Abilities: Str 19, Dex 18, Con 16, Int 16, Wis 19, Cha 18
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Charmed, Poisoned
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Celestial, Common
+Challenge: 10
 
 Rejuvenation. If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.
 
@@ -20056,12 +20684,16 @@ Gynosphinx
 
 Type: monstrosity
 Size: Large
+Hit points: 136 (16d10 + 48)
 Speed: 40 ft., fly 60 ft.
+Abilities: Str 18, Dex 15, Con 16, Int 18, Wis 18, Cha 18
 Damage vulnerabilities: none
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: psychic
 Condition immunities: Charmed, Frightened
 Senses: truesight 120 ft., passive Perception 18
+Languages: Common, Sphinx
+Challenge: 11
 
 Inscrutable. The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.
 
@@ -20090,12 +20722,16 @@ Half-Red Dragon Veteran
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 65 (10d8 + 20)
 Speed: 30 ft.
+Abilities: Str 16, Dex 13, Con 14, Int 10, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: fire
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 12
+Languages: Common, Draconic
+Challenge: 5
 
 Actions
 
@@ -20107,12 +20743,16 @@ Harpy
 
 Type: monstrosity
 Size: Medium
+Hit points: 38 (7d8 + 7)
 Speed: 20 ft., fly 40 ft.
+Abilities: Str 12, Dex 13, Con 12, Int 7, Wis 10, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: Common
+Challenge: 1
 
 Actions
 
@@ -20126,12 +20766,16 @@ Hawk
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 10 ft., fly 60 ft.
+Abilities: Str 5, Dex 16, Con 8, Int 2, Wis 14, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 0
 
 Keen Sight. The hawk has advantage on Wisdom (Perception) checks that rely on sight.
 
@@ -20141,12 +20785,16 @@ Hell Hound
 
 Type: fiend
 Size: Medium
+Hit points: 45 (7d8 + 14)
 Speed: 50 ft.
+Abilities: Str 17, Dex 12, Con 14, Int 6, Wis 13, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 15
+Languages: understands Infernal but can't speak it
+Challenge: 3
 
 Keen Hearing and Smell. The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -20162,12 +20810,16 @@ Hezrou
 
 Type: fiend (demon)
 Size: Large
+Hit points: 136 (13d10 + 65)
 Speed: 30 ft.
+Abilities: Str 19, Dex 17, Con 20, Int 5, Wis 12, Cha 13
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 11
+Languages: Abyssal, telepathy 120 ft.
+Challenge: 8
 
 Magic Resistance. The hezrou has advantage on saving throws against spells and other magical effects.
 
@@ -20179,12 +20831,16 @@ Hill Giant
 
 Type: giant
 Size: Huge
+Hit points: 105 (10d12 + 40)
 Speed: 40 ft.
+Abilities: Str 21, Dex 8, Con 19, Int 5, Wis 9, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: Giant
+Challenge: 5
 
 ## monsters > hippogriff
 
@@ -20192,12 +20848,16 @@ Hippogriff
 
 Type: monstrosity
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 40 ft., fly 60 ft.
+Abilities: Str 17, Dex 13, Con 13, Int 2, Wis 12, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 15
+Languages: none
+Challenge: 1
 
 Keen Sight. The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.
 
@@ -20207,12 +20867,16 @@ Hobgoblin
 
 Type: humanoid (goblinoid)
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 30 ft.
+Abilities: Str 13, Dex 12, Con 12, Int 10, Wis 10, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Common, Goblin
+Challenge: 1/2
 
 Martial Advantage. Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the hobgoblin that isn't incapacitated.
 
@@ -20222,12 +20886,16 @@ Homunculus
 
 Type: construct
 Size: Tiny
+Hit points: 5 (2d4)
 Speed: 20 ft., fly 40 ft.
+Abilities: Str 4, Dex 15, Con 11, Int 10, Wis 10, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Charmed, Poisoned
 Senses: darkvision 60 ft., passive Perception 10
+Languages: understands the languages of its creator but can't speak
+Challenge: 0
 
 Telepathic Bond. While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically.
 
@@ -20237,12 +20905,16 @@ Horned Devil
 
 Type: fiend (devil)
 Size: Large
+Hit points: 178 (17d10 + 85)
 Speed: 20 ft., fly 60 ft.
+Abilities: Str 22, Dex 17, Con 21, Int 12, Wis 16, Cha 17
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 13
+Languages: Infernal, telepathy 120 ft.
+Challenge: 11
 
 Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
 
@@ -20254,12 +20926,16 @@ Hunter Shark
 
 Type: beast
 Size: Large
+Hit points: 45 (6d10 + 12)
 Speed: swim 40 ft.
+Abilities: Str 18, Dex 13, Con 15, Int 1, Wis 10, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 12
+Languages: none
+Challenge: 2
 
 Blood Frenzy. The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.
 
@@ -20271,12 +20947,16 @@ Hydra
 
 Type: monstrosity
 Size: Huge
+Hit points: 172 (15d12 + 75)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 20, Dex 12, Con 20, Int 2, Wis 10, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 16
+Languages: none
+Challenge: 8
 
 Hold Breath. The hydra can hold its breath for 1 hour.
 
@@ -20294,12 +20974,16 @@ Hyena
 
 Type: beast
 Size: Medium
+Hit points: 5 (1d8 + 1)
 Speed: 50 ft.
+Abilities: Str 11, Dex 13, Con 12, Int 2, Wis 12, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 0
 
 Pack Tactics. The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 ft. of the creature and the ally isn't incapacitated.
 
@@ -20309,12 +20993,16 @@ Ice Devil
 
 Type: fiend (devil)
 Size: Large
+Hit points: 180 (19d10 + 76)
 Speed: 40 ft.
+Abilities: Str 21, Dex 14, Con 18, Int 18, Wis 15, Cha 18
 Damage vulnerabilities: none
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 12
+Languages: Infernal, telepathy 120 ft.
+Challenge: 14
 
 Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
 
@@ -20332,12 +21020,16 @@ Ice Mephit
 
 Type: elemental
 Size: Small
+Hit points: 21 (6d6)
 Speed: 30 ft., fly 30 ft.
+Abilities: Str 7, Dex 13, Con 10, Int 9, Wis 11, Cha 12
 Damage vulnerabilities: bludgeoning; fire
 Damage resistances: none
 Damage immunities: cold; poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 12
+Languages: Aquan, Auran
+Challenge: 1/2
 
 Death Burst. When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 ft. of it must make a DC 10 Dexterity saving throw, taking 4 (1d8) slashing damage on a failed save, or half as much damage on a successful one.
 
@@ -20355,12 +21047,16 @@ Imp
 
 Type: fiend (devil)
 Size: Tiny
+Hit points: 10 (3d4 + 3)
 Speed: 20 ft., fly 40 ft.
+Abilities: Str 6, Dex 17, Con 13, Int 11, Wis 12, Cha 14
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 11
+Languages: Infernal, Common
+Challenge: 1
 
 Shapechanger. The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -20378,12 +21074,16 @@ Invisible Stalker
 
 Type: elemental
 Size: Medium
+Hit points: 104 (16d8 + 32)
 Speed: 50 ft., fly 50 ft. (hover)
+Abilities: Str 16, Dex 19, Con 14, Int 10, Wis 15, Cha 11
 Damage vulnerabilities: none
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 Senses: darkvision 60 ft., passive Perception 18
+Languages: Auran, understands Common but doesn't speak it
+Challenge: 6
 
 Invisibility. The stalker is invisible.
 
@@ -20395,12 +21095,16 @@ Iron Golem
 
 Type: construct
 Size: Large
+Hit points: 210 (20d10 + 100)
 Speed: 30 ft.
+Abilities: Str 24, Dex 9, Con 20, Int 3, Wis 11, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire; poison; psychic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
 Senses: darkvision 120 ft., passive Perception 10
+Languages: understands the languages of its creator but can't speak
+Challenge: 16
 
 Fire Absorption. Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.
 
@@ -20420,12 +21124,16 @@ Jackal
 
 Type: beast
 Size: Small
+Hit points: 3 (1d6)
 Speed: 40 ft.
+Abilities: Str 8, Dex 15, Con 11, Int 3, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 0
 
 Keen Hearing and Smell. The jackal has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -20437,12 +21145,16 @@ Killer Whale
 
 Type: beast
 Size: Huge
+Hit points: 90 (12d12 + 12)
 Speed: swim 60 ft.
+Abilities: Str 19, Dex 10, Con 13, Int 3, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 120 ft., passive Perception 13
+Languages: none
+Challenge: 3
 
 Echolocation. The whale can't use its blindsight while deafened.
 
@@ -20456,12 +21168,16 @@ Knight
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 52 (8d8 + 16)
 Speed: 30 ft.
+Abilities: Str 16, Dex 11, Con 14, Int 11, Wis 11, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any one language (usually Common)
+Challenge: 3
 
 Brave. The knight has advantage on saving throws against being frightened.
 
@@ -20479,12 +21195,16 @@ Kobold
 
 Type: humanoid (kobold)
 Size: Small
+Hit points: 5 (2d6 - 2)
 Speed: 30 ft.
+Abilities: Str 7, Dex 15, Con 9, Int 8, Wis 7, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 8
+Languages: Common, Draconic
+Challenge: 1/8
 
 Sunlight Sensitivity. While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
 
@@ -20496,12 +21216,16 @@ Kraken
 
 Type: monstrosity (titan)
 Size: Gargantuan
+Hit points: 472 (27d20 + 189)
 Speed: 20 ft., swim 60 ft.
+Abilities: Str 30, Dex 11, Con 25, Int 22, Wis 18, Cha 20
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Condition immunities: Frightened, Paralyzed
 Senses: truesight 120 ft., passive Perception 14
+Languages: understands Abyssal, Celestial, Infernal, and Primordial but can't speak, telepathy 120 ft.
+Challenge: 23
 
 Amphibious. The kraken can breathe air and water.
 
@@ -20529,12 +21253,16 @@ Lamia
 
 Type: monstrosity
 Size: Large
+Hit points: 97 (13d10 + 26)
 Speed: 30 ft.
+Abilities: Str 16, Dex 13, Con 15, Int 14, Wis 15, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 12
+Languages: Abyssal, Common
+Challenge: 4
 
 Innate Spellcasting. The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components. At will: disguise self (any humanoid form), major image 3/day each: charm person, mirror image, scrying, suggestion 1/day: geas
 
@@ -20544,12 +21272,16 @@ Lemure
 
 Type: fiend (devil)
 Size: Medium
+Hit points: 13 (3d8)
 Speed: 15 ft.
+Abilities: Str 10, Dex 5, Con 11, Int 1, Wis 11, Cha 3
 Damage vulnerabilities: none
 Damage resistances: cold
 Damage immunities: fire; poison
 Condition immunities: Charmed, Frightened, Poisoned
 Senses: darkvision 120 ft., passive Perception 10
+Languages: understands infernal but can't speak
+Challenge: 0
 
 Devil's Sight. Magical darkness doesn't impede the lemure's darkvision.
 
@@ -20561,12 +21293,16 @@ Lich
 
 Type: undead
 Size: Medium
+Hit points: 135 (18d8 + 54)
 Speed: 30 ft.
+Abilities: Str 11, Dex 16, Con 16, Int 20, Wis 14, Cha 16
 Damage vulnerabilities: none
 Damage resistances: cold; lightning; necrotic
 Damage immunities: poison; bludgeoning, piercing, and slashing from nonmagical weapons
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
 Senses: truesight 120 ft., passive Perception 19
+Languages: Common plus up to five other languages
+Challenge: 21
 
 Legendary Resistance (3/Day). If the lich fails a saving throw, it can choose to succeed instead.
 
@@ -20603,12 +21339,16 @@ Lion
 
 Type: beast
 Size: Large
+Hit points: 26 (4d10 + 4)
 Speed: 50 ft.
+Abilities: Str 17, Dex 15, Con 13, Int 3, Wis 12, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1
 
 Keen Smell. The lion has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -20624,12 +21364,16 @@ Lizard
 
 Type: beast
 Size: Tiny
+Hit points: 2 (1d4)
 Speed: 20 ft., climb 20 ft.
+Abilities: Str 2, Dex 11, Con 10, Int 1, Wis 8, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 9
+Languages: none
+Challenge: 0
 
 ## monsters > lizardfolk
 
@@ -20637,12 +21381,16 @@ Lizardfolk
 
 Type: humanoid (lizardfolk)
 Size: Medium
+Hit points: 22 (4d8 + 4)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 15, Dex 10, Con 13, Int 7, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: Draconic
+Challenge: 1/2
 
 Hold Breath. The lizardfolk can hold its breath for 15 minutes.
 
@@ -20652,12 +21400,16 @@ Mage
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 40 (9d8)
 Speed: 30 ft.
+Abilities: Str 9, Dex 14, Con 11, Int 17, Wis 12, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: any four languages
+Challenge: 6
 
 Spellcasting. The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:
 
@@ -20674,12 +21426,16 @@ Magma Mephit
 
 Type: elemental
 Size: Small
+Hit points: 22 (5d6 + 5)
 Speed: 30 ft., fly 30 ft.
+Abilities: Str 8, Dex 12, Con 12, Int 7, Wis 10, Cha 10
 Damage vulnerabilities: cold
 Damage resistances: none
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Ignan, Terran
+Challenge: 1/2
 
 Death Burst. When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.
 
@@ -20697,12 +21453,16 @@ Magmin
 
 Type: elemental
 Size: Small
+Hit points: 9 (2d6 + 2)
 Speed: 30 ft.
+Abilities: Str 7, Dex 15, Con 12, Int 8, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: fire
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Ignan
+Challenge: 1/2
 
 Death Burst. When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 ft. of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited.
 
@@ -20714,12 +21474,16 @@ Mammoth
 
 Type: beast
 Size: Huge
+Hit points: 126 (11d12 + 55)
 Speed: 40 ft.
+Abilities: Str 24, Dex 9, Con 21, Int 3, Wis 11, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 6
 
 Trampling Charge. If the mammoth moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 18 Strength saving throw or be knocked prone. If the target is prone, the mammoth can make one stomp attack against it as a bonus action.
 
@@ -20729,12 +21493,16 @@ Manticore
 
 Type: monstrosity
 Size: Large
+Hit points: 68 (8d10 + 24)
 Speed: 30 ft., fly 50 ft.
+Abilities: Str 17, Dex 16, Con 17, Int 7, Wis 12, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 11
+Languages: none
+Challenge: 3
 
 Tail Spike Regrowth. The manticore has twenty-four tail spikes. Used spikes regrow when the manticore finishes a long rest.
 
@@ -20744,12 +21512,16 @@ Marilith
 
 Type: fiend (demon)
 Size: Large
+Hit points: 189 (18d10 + 90)
 Speed: 40 ft.
+Abilities: Str 18, Dex 20, Con 20, Int 18, Wis 16, Cha 20
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: truesight 120 ft., passive Perception 13
+Languages: Abyssal, telepathy 120 ft.
+Challenge: 16
 
 Magic Resistance. The marilith has advantage on saving throws against spells and other magical effects.
 
@@ -20771,12 +21543,16 @@ Mastiff
 
 Type: beast
 Size: Medium
+Hit points: 5 (1d8 + 1)
 Speed: 40 ft.
+Abilities: Str 13, Dex 14, Con 12, Int 3, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1/8
 
 Keen Hearing and Smell. The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -20786,12 +21562,16 @@ Medusa
 
 Type: monstrosity
 Size: Medium
+Hit points: 127 (17d8 + 51)
 Speed: 30 ft.
+Abilities: Str 10, Dex 15, Con 16, Int 12, Wis 13, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Common
+Challenge: 6
 
 Petrifying Gaze. When a creature that can see the medusa's eyes starts its turn within 30 ft. of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
 Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.
@@ -20803,12 +21583,16 @@ Merfolk
 
 Type: humanoid (merfolk)
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 10 ft., swim 40 ft.
+Abilities: Str 10, Dex 13, Con 12, Int 11, Wis 11, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: Aquan, Common
+Challenge: 1/8
 
 Amphibious. The merfolk can breathe air and water.
 
@@ -20818,12 +21602,16 @@ Merrow
 
 Type: monstrosity
 Size: Large
+Hit points: 45 (6d10 + 12)
 Speed: 10 ft., swim 40 ft.
+Abilities: Str 18, Dex 10, Con 15, Int 8, Wis 10, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Abyssal, Aquan
+Challenge: 2
 
 Amphibious. The merrow can breathe air and water.
 
@@ -20833,12 +21621,16 @@ Mimic
 
 Type: monstrosity (shapechanger)
 Size: Medium
+Hit points: 58 (9d8 + 18)
 Speed: 15 ft.
+Abilities: Str 17, Dex 12, Con 15, Int 5, Wis 13, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: Prone
 Senses: darkvision 60 ft., passive Perception 11
+Languages: none
+Challenge: 2
 
 Shapechanger. The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn 't transformed. It reverts to its true form if it dies.
 
@@ -20854,12 +21646,16 @@ Minotaur
 
 Type: monstrosity
 Size: Large
+Hit points: 76 (9d10 + 27)
 Speed: 40 ft.
+Abilities: Str 18, Dex 11, Con 16, Int 6, Wis 16, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 17
+Languages: Abyssal
+Challenge: 3
 
 Charge. If the minotaur moves at least 10 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 ft. away and knocked prone.
 
@@ -20873,12 +21669,16 @@ Minotaur Skeleton
 
 Type: undead
 Size: Large
+Hit points: 67 (9d10 + 18)
 Speed: 40 ft.
+Abilities: Str 18, Dex 11, Con 15, Int 6, Wis 8, Cha 5
 Damage vulnerabilities: bludgeoning
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Exhaustion, Poisoned
 Senses: darkvision 60 ft., passive Perception 9
+Languages: understands Abyssal but can't speak
+Challenge: 2
 
 Charge. If the skeleton moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 feet away and knocked prone.
 
@@ -20888,12 +21688,16 @@ Mule
 
 Type: beast
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 40 ft.
+Abilities: Str 14, Dex 10, Con 13, Int 2, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/8
 
 Beast of Burden. The mule is considered to be a Large animal for the purpose of determining its carrying capacity.
 
@@ -20905,12 +21709,16 @@ Mummy
 
 Type: undead
 Size: Medium
+Hit points: 58 (9d8 + 18)
 Speed: 20 ft.
+Abilities: Str 16, Dex 8, Con 15, Int 6, Wis 10, Cha 12
 Damage vulnerabilities: fire
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: necrotic; poison
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
 Senses: darkvision 60 ft., passive Perception 10
+Languages: the languages it knew in life
+Challenge: 3
 
 Actions
 
@@ -20922,12 +21730,16 @@ Mummy Lord
 
 Type: undead
 Size: Medium
+Hit points: 97 (13d8 + 39)
 Speed: 20 ft.
+Abilities: Str 18, Dex 10, Con 17, Int 11, Wis 18, Cha 16
 Damage vulnerabilities: fire
 Damage resistances: none
 Damage immunities: necrotic; poison; bludgeoning, piercing, and slashing from nonmagical weapons
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
 Senses: darkvision 60 ft., passive Perception 14
+Languages: the languages it knew in life
+Challenge: 15
 
 Magic Resistance. The mummy lord has advantage on saving throws against spells and other magical effects.
 
@@ -20965,12 +21777,16 @@ Nalfeshnee
 
 Type: fiend (demon)
 Size: Large
+Hit points: 184 (16d10 + 96)
 Speed: 20 ft., fly 30 ft.
+Abilities: Str 21, Dex 10, Con 22, Int 19, Wis 12, Cha 15
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: truesight 120 ft., passive Perception 11
+Languages: Abyssal, telepathy 120 ft.
+Challenge: 13
 
 Magic Resistance. The nalfeshnee has advantage on saving throws against spells and other magical effects.
 
@@ -20986,12 +21802,16 @@ Night Hag
 
 Type: fiend
 Size: Medium
+Hit points: 112 (15d8 + 45)
 Speed: 30 ft.
+Abilities: Str 18, Dex 15, Con 16, Int 16, Wis 14, Cha 16
 Damage vulnerabilities: none
 Damage resistances: cold; fire; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: none
 Condition immunities: Charmed
 Senses: darkvision 120 ft., passive Perception 16
+Languages: Abyssal, Common, Infernal, Primordial
+Challenge: 5
 
 Innate Spellcasting. The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:
 
@@ -21018,12 +21838,16 @@ Nightmare
 
 Type: fiend
 Size: Large
+Hit points: 68 (8d10 + 24)
 Speed: 60 ft., fly 90 ft.
+Abilities: Str 18, Dex 15, Con 16, Int 10, Wis 13, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: passive Perception 11
+Languages: understands Abyssal, Common, and Infernal but can't speak
+Challenge: 3
 
 Confer Fire Resistance. The nightmare can grant resistance to fire damage to anyone riding it.
 
@@ -21039,12 +21863,16 @@ Noble
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 9 (2d8)
 Speed: 30 ft.
+Abilities: Str 11, Dex 12, Con 11, Int 12, Wis 14, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: any two languages
+Challenge: 1/8
 
 Reactions
 
@@ -21056,12 +21884,16 @@ Ochre Jelly
 
 Type: ooze
 Size: Large
+Hit points: 45 (6d10 + 12)
 Speed: 10 ft., climb 10 ft.
+Abilities: Str 15, Dex 6, Con 14, Int 2, Wis 6, Cha 1
 Damage vulnerabilities: none
 Damage resistances: acid
 Damage immunities: lightning; slashing
 Condition immunities: Blinded, Charmed, Blinded, Exhaustion, Frightened, Prone
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+Languages: none
+Challenge: 2
 
 Amorphous. The jelly can move through a space as narrow as 1 inch wide without squeezing.
 
@@ -21077,12 +21909,16 @@ Octopus
 
 Type: beast
 Size: Small
+Hit points: 3 (1d6)
 Speed: 5 ft., swim 30 ft.
+Abilities: Str 4, Dex 15, Con 11, Int 3, Wis 10, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 12
+Languages: none
+Challenge: 0
 
 Hold Breath. While out of water, the octopus can hold its breath for 30 minutes.
 
@@ -21100,12 +21936,16 @@ Ogre
 
 Type: giant
 Size: Large
+Hit points: 59 (7d10 + 21)
 Speed: 40 ft.
+Abilities: Str 19, Dex 8, Con 16, Int 5, Wis 7, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 8
+Languages: Common, Giant
+Challenge: 2
 
 ## monsters > ogre-zombie
 
@@ -21113,12 +21953,16 @@ Ogre Zombie
 
 Type: undead
 Size: Large
+Hit points: 85 (9d10 + 36)
 Speed: 30 ft.
+Abilities: Str 19, Dex 6, Con 18, Int 3, Wis 6, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 8
+Languages: understands Common and Giant but can't speak
+Challenge: 2
 
 Undead Fortitude. If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
 
@@ -21128,12 +21972,16 @@ Oni
 
 Type: giant
 Size: Large
+Hit points: 110 (13d10 + 39)
 Speed: 30 ft., fly 30 ft.
+Abilities: Str 19, Dex 11, Con 16, Int 14, Wis 12, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Common, Giant
+Challenge: 7
 
 Innate Spellcasting. The oni's innate spellcasting ability is Charisma (spell save DC 13). The oni can innately cast the following spells, requiring no material components:
 
@@ -21154,12 +22002,16 @@ Orc
 
 Type: humanoid (orc)
 Size: Medium
+Hit points: 15 (2d8 + 6)
 Speed: 30 ft.
+Abilities: Str 16, Dex 12, Con 16, Int 7, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Common, Orc
+Challenge: 1/2
 
 Aggressive. As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
 
@@ -21169,12 +22021,16 @@ Otyugh
 
 Type: aberration
 Size: Large
+Hit points: 114 (12d10 + 48)
 Speed: 30 ft.
+Abilities: Str 16, Dex 11, Con 19, Int 6, Wis 13, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 11
+Languages: Otyugh
+Challenge: 5
 
 Limited Telepathy. The otyugh can magically transmit simple messages and images to any creature within 120 ft. of it that can understand a language. This form of telepathy doesn't allow the receiving creature to telepathically respond.
 
@@ -21188,12 +22044,16 @@ Owl
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 5 ft., fly 60 ft.
+Abilities: Str 3, Dex 13, Con 8, Int 2, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 13
+Languages: none
+Challenge: 0
 
 Flyby. The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.
 
@@ -21205,12 +22065,16 @@ Owlbear
 
 Type: monstrosity
 Size: Large
+Hit points: 59 (7d10 + 21)
 Speed: 40 ft.
+Abilities: Str 20, Dex 12, Con 17, Int 3, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 13
+Languages: none
+Challenge: 3
 
 Keen Sight and Smell. The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell.
 
@@ -21220,12 +22084,16 @@ Panther
 
 Type: beast
 Size: Medium
+Hit points: 13 (3d8)
 Speed: 50 ft., climb 40 ft.
+Abilities: Str 14, Dex 15, Con 10, Int 3, Wis 14, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 1/4
 
 Keen Smell. The panther has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -21237,12 +22105,16 @@ Pegasus
 
 Type: celestial
 Size: Large
+Hit points: 59 (7d10 + 21)
 Speed: 60 ft., fly 90 ft.
+Abilities: Str 18, Dex 15, Con 16, Int 10, Wis 15, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 16
+Languages: understands Celestial, Common, Elvish, and Sylvan but can't speak
+Challenge: 2
 
 ## monsters > phase-spider
 
@@ -21250,12 +22122,16 @@ Phase Spider
 
 Type: monstrosity
 Size: Large
+Hit points: 32 (5d10 + 5)
 Speed: 30 ft., climb 30 ft.
+Abilities: Str 15, Dex 15, Con 12, Int 6, Wis 10, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: none
+Challenge: 3
 
 Ethereal Jaunt. As a bonus action, the spider can magically shift from the Material Plane to the Ethereal Plane, or vice versa.
 
@@ -21269,12 +22145,16 @@ Pit Fiend
 
 Type: fiend (devil)
 Size: Large
+Hit points: 300 (24d10 + 168)
 Speed: 30 ft., fly 60 ft.
+Abilities: Str 26, Dex 14, Con 24, Int 22, Wis 18, Cha 24
 Damage vulnerabilities: none
 Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: truesight 120 ft., passive Perception 14
+Languages: Infernal, telepathy 120 ft.
+Challenge: 20
 
 Fear Aura. Any creature hostile to the pit fiend that starts its turn within 20 feet of the pit fiend must make a DC 21 Wisdom saving throw, unless the pit fiend is incapacitated. On a failed save, the creature is frightened until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the pit fiend's Fear Aura for the next 24 hours.
 
@@ -21292,12 +22172,16 @@ Planetar
 
 Type: celestial
 Size: Large
+Hit points: 200 (16d10 + 112)
 Speed: 40 ft., fly 120 ft.
+Abilities: Str 24, Dex 20, Con 24, Int 19, Wis 22, Cha 25
 Damage vulnerabilities: none
 Damage resistances: radiant; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: Charmed, Exhaustion, Frightened
 Senses: truesight 120 ft., passive Perception 21
+Languages: all, telepathy 120 ft.
+Challenge: 16
 
 Angelic Weapons. The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra 5d8 radiant damage (included in the attack).
 
@@ -21320,12 +22204,16 @@ Plesiosaurus
 
 Type: beast
 Size: Large
+Hit points: 68 (8d10 + 24)
 Speed: 20 ft., swim 40 ft.
+Abilities: Str 18, Dex 15, Con 16, Int 2, Wis 12, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 2
 
 Hold Breath. The plesiosaurus can hold its breath for 1 hour.
 
@@ -21335,12 +22223,16 @@ Poisonous Snake
 
 Type: beast
 Size: Tiny
+Hit points: 2 (1d4)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 2, Dex 16, Con 11, Int 1, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., passive Perception 10
+Languages: none
+Challenge: 1/8
 
 ## monsters > polar-bear
 
@@ -21348,12 +22240,16 @@ Polar Bear
 
 Type: beast
 Size: Large
+Hit points: 42 (5d10 + 15)
 Speed: 40 ft., swim 30 ft.
+Abilities: Str 20, Dex 10, Con 16, Int 2, Wis 13, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 2
 
 Keen Smell. The bear has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -21363,12 +22259,16 @@ Pony
 
 Type: beast
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 40 ft.
+Abilities: Str 15, Dex 10, Con 13, Int 2, Wis 11, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/8
 
 ## monsters > priest
 
@@ -21376,12 +22276,16 @@ Priest
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 27 (5d8 + 5)
 Speed: 25 ft.
+Abilities: Str 10, Dex 10, Con 12, Int 13, Wis 16, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: any two languages
+Challenge: 2
 
 Divine Eminence. As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.
 
@@ -21398,12 +22302,16 @@ Pseudodragon
 
 Type: dragon
 Size: Tiny
+Hit points: 7 (2d4 + 2)
 Speed: 15 ft., fly 60 ft.
+Abilities: Str 6, Dex 15, Con 13, Int 10, Wis 12, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 13
+Languages: understands Common and Draconic but can't speak
+Challenge: 1/4
 
 Keen Senses. The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing, or smell.
 
@@ -21417,12 +22325,16 @@ Purple Worm
 
 Type: monstrosity
 Size: Gargantuan
+Hit points: 247 (15d20 + 90)
 Speed: 50 ft., burrow 30 ft.
+Abilities: Str 28, Dex 7, Con 22, Int 1, Wis 8, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 30 ft., tremorsense 60 ft., passive Perception 9
+Languages: none
+Challenge: 15
 
 Tunneler. The worm can burrow through solid rock at half its burrow speed and leaves a 10-foot-diameter tunnel in its wake.
 
@@ -21432,12 +22344,16 @@ Quasit
 
 Type: fiend (demon)
 Size: Tiny
+Hit points: 7 (3d4)
 Speed: 40 ft.
+Abilities: Str 5, Dex 17, Con 10, Int 7, Wis 10, Cha 10
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 10
+Languages: Abyssal, Common
+Challenge: 1
 
 Shapechanger. The quasit can use its action to polymorph into a beast form that resembles a bat (speed 10 ft. fly 40 ft.), a centipede (40 ft., climb 40 ft.), or a toad (40 ft., swim 40 ft.), or back into its true form . Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed . It reverts to its true form if it dies.
 
@@ -21455,12 +22371,16 @@ Quipper
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: swim 40 ft.
+Abilities: Str 2, Dex 16, Con 9, Int 1, Wis 7, Cha 2
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 8
+Languages: none
+Challenge: 0
 
 Blood Frenzy. The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points.
 
@@ -21472,12 +22392,16 @@ Rakshasa
 
 Type: fiend
 Size: Medium
+Hit points: 110 (13d8 + 52)
 Speed: 40 ft.
+Abilities: Str 14, Dex 17, Con 18, Int 13, Wis 16, Cha 20
 Damage vulnerabilities: piercing from magic weapons wielded by good creatures
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 13
+Languages: Common, Infernal
+Challenge: 13
 
 Limited Magic Immunity. The rakshasa can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.
 
@@ -21493,12 +22417,16 @@ Rat
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 20 ft.
+Abilities: Str 2, Dex 11, Con 9, Int 2, Wis 10, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 10
+Languages: none
+Challenge: 0
 
 Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -21508,12 +22436,16 @@ Raven
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 10 ft., fly 50 ft.
+Abilities: Str 2, Dex 14, Con 8, Int 2, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 0
 
 Mimicry. The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check.
 
@@ -21523,12 +22455,16 @@ Red Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 75 (10d8 + 30)
 Speed: 30 ft., climb 30 ft., fly 60 ft.
+Abilities: Str 19, Dex 10, Con 17, Int 12, Wis 11, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 4
 
 Actions
 
@@ -21540,12 +22476,16 @@ Reef Shark
 
 Type: beast
 Size: Medium
+Hit points: 22 (4d8 + 4)
 Speed: swim 40 ft.
+Abilities: Str 14, Dex 13, Con 13, Int 1, Wis 10, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 30 ft., passive Perception 12
+Languages: none
+Challenge: 1/2
 
 Pack Tactics. The shark has advantage on an attack roll against a creature if at least one of the shark's allies is within 5 ft. of the creature and the ally isn't incapacitated.
 
@@ -21557,12 +22497,16 @@ Remorhaz
 
 Type: monstrosity
 Size: Huge
+Hit points: 195 (17d12 + 85)
 Speed: 30 ft., burrow 20 ft.
+Abilities: Str 24, Dex 13, Con 21, Int 4, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold; fire
 Condition immunities: none
 Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 10
+Languages: none
+Challenge: 11
 
 Heated Body. A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.
 
@@ -21577,12 +22521,16 @@ Rhinoceros
 
 Type: beast
 Size: Large
+Hit points: 45 (6d10 + 12)
 Speed: 40 ft.
+Abilities: Str 21, Dex 8, Con 15, Int 2, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: none
+Challenge: 2
 
 Charge. If the rhinoceros moves at least 20 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.
 
@@ -21592,12 +22540,16 @@ Riding Horse
 
 Type: beast
 Size: Large
+Hit points: 13 (2d10 + 2)
 Speed: 60 ft.
+Abilities: Str 16, Dex 10, Con 12, Int 2, Wis 11, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 1/4
 
 ## monsters > roc
 
@@ -21605,12 +22557,16 @@ Roc
 
 Type: monstrosity
 Size: Gargantuan
+Hit points: 248 (16d20 + 80)
 Speed: 20 ft., fly 120 ft.
+Abilities: Str 28, Dex 10, Con 20, Int 3, Wis 10, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 11
 
 Keen Sight. The roc has advantage on Wisdom (Perception) checks that rely on sight.
 
@@ -21620,12 +22576,16 @@ Roper
 
 Type: monstrosity
 Size: Large
+Hit points: 93 (11d10 + 33)
 Speed: 10 ft., climb 10 ft.
+Abilities: Str 18, Dex 8, Con 17, Int 7, Wis 16, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 16
+Languages: none
+Challenge: 5
 
 False Appearance. While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.
 
@@ -21643,12 +22603,16 @@ Rug of Smothering
 
 Type: construct
 Size: Large
+Hit points: 33 (6d10)
 Speed: 10 ft.
+Abilities: Str 17, Dex 14, Con 10, Int 1, Wis 3, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison; psychic
 Condition immunities: Blinded, Charmed, Blinded, Frightened, Paralyzed, Petrified, Poisoned
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 6
+Languages: none
+Challenge: 2
 
 Antimagic Susceptibility. The rug is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the rug must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.
 
@@ -21662,12 +22626,16 @@ Rust Monster
 
 Type: monstrosity
 Size: Medium
+Hit points: 27 (5d8 + 5)
 Speed: 40 ft.
+Abilities: Str 13, Dex 12, Con 13, Int 2, Wis 13, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 11
+Languages: none
+Challenge: 1/2
 
 Iron Scent. The rust monster can pinpoint, by scent, the location of ferrous metal within 30 feet of it.
 
@@ -21684,12 +22652,16 @@ Saber-Toothed Tiger
 
 Type: beast
 Size: Large
+Hit points: 52 (7d10 + 14)
 Speed: 40 ft.
+Abilities: Str 18, Dex 14, Con 15, Int 3, Wis 12, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 2
 
 Keen Smell. The tiger has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -21701,12 +22673,16 @@ Sahuagin
 
 Type: humanoid (sahuagin)
 Size: Medium
+Hit points: 22 (4d8 + 4)
 Speed: 30 ft., swim 40 ft.
+Abilities: Str 13, Dex 11, Con 12, Int 12, Wis 13, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 15
+Languages: Sahuagin
+Challenge: 1/2
 
 Blood Frenzy. The sahuagin has advantage on melee attack rolls against any creature that doesn't have all its hit points.
 
@@ -21720,12 +22696,16 @@ Salamander
 
 Type: elemental
 Size: Large
+Hit points: 90 (12d10 + 24)
 Speed: 30 ft.
+Abilities: Str 18, Dex 14, Con 15, Int 11, Wis 10, Cha 12
 Damage vulnerabilities: cold
 Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: fire
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Ignan
+Challenge: 5
 
 Heated Body. A creature that touches the salamander or hits it with a melee attack while within 5 ft. of it takes 7 (2d6) fire damage.
 
@@ -21737,12 +22717,16 @@ Satyr
 
 Type: fey
 Size: Medium
+Hit points: 31 (7d8)
 Speed: 40 ft.
+Abilities: Str 12, Dex 16, Con 11, Int 12, Wis 10, Cha 14
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: Common, Elvish, Sylvan
+Challenge: 1/2
 
 Magic Resistance. The satyr has advantage on saving throws against spells and other magical effects.
 
@@ -21752,12 +22736,16 @@ Scorpion
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 10 ft.
+Abilities: Str 2, Dex 11, Con 8, Int 1, Wis 8, Cha 2
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: blindsight 10 ft., passive Perception 9
+Languages: none
+Challenge: 0
 
 ## monsters > scout
 
@@ -21765,12 +22753,16 @@ Scout
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 16 (3d8 + 3)
 Speed: 30 ft.
+Abilities: Str 11, Dex 14, Con 12, Int 11, Wis 13, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 15
+Languages: any one language (usually Common)
+Challenge: 1/2
 
 Keen Hearing and Sight. The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight.
 
@@ -21780,12 +22772,16 @@ Sea Hag
 
 Type: fey
 Size: Medium
+Hit points: 52 (7d8 + 21)
 Speed: 30 ft., swim 40 ft.
+Abilities: Str 16, Dex 13, Con 16, Int 12, Wis 12, Cha 13
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 11
+Languages: Aquan, Common, Giant
+Challenge: 2
 
 Amphibious. The hag can breathe air and water.
 
@@ -21805,12 +22801,16 @@ Sea Horse
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: swim 20 ft.
+Abilities: Str 1, Dex 12, Con 8, Int 1, Wis 10, Cha 2
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 0
 
 Water Breathing. The sea horse can breathe only underwater.
 
@@ -21820,12 +22820,16 @@ Shadow
 
 Type: undead
 Size: Medium
+Hit points: 16 (3d8 + 3)
 Speed: 40 ft.
+Abilities: Str 6, Dex 14, Con 13, Int 6, Wis 10, Cha 8
 Damage vulnerabilities: radiant
 Damage resistances: acid; cold; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: necrotic; poison
 Condition immunities: Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained
 Senses: darkvision 60 ft., passive Perception 10
+Languages: none
+Challenge: 1/2
 
 Amorphous. The shadow can move through a space as narrow as 1 inch wide without squeezing.
 
@@ -21839,12 +22843,16 @@ Shambling Mound
 
 Type: plant
 Size: Large
+Hit points: 136 (16d10 + 48)
 Speed: 20 ft., swim 20 ft.
+Abilities: Str 18, Dex 8, Con 16, Int 5, Wis 10, Cha 5
 Damage vulnerabilities: none
 Damage resistances: cold; fire
 Damage immunities: lightning
 Condition immunities: Blinded, Blinded, Exhaustion
 Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 10
+Languages: none
+Challenge: 5
 
 Lightning Absorption. Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.
 
@@ -21858,12 +22866,16 @@ Shield Guardian
 
 Type: construct
 Size: Large
+Hit points: 142 (15d10 + 60)
 Speed: 30 ft.
+Abilities: Str 18, Dex 8, Con 18, Int 7, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 10
+Languages: understands commands given in any language but can't speak
+Challenge: 7
 
 Bound. The shield guardian is magically bound to an amulet. As long as the guardian and its amulet are on the same plane of existence, the amulet's wearer can telepathically call the guardian to travel to it, and the guardian knows the distance and direction to the amulet. If the guardian is within 60 feet of the amulet's wearer, half of any damage the wearer takes (rounded up) is transferred to the guardian.
 
@@ -21881,12 +22893,16 @@ Shrieker
 
 Type: plant
 Size: Medium
+Hit points: 13 (3d8)
 Speed: 0 ft.
+Abilities: Str 1, Dex 1, Con 10, Int 1, Wis 3, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: Blinded, Blinded, Frightened
 Senses: blindsight 30 ft. (blind beyond this radius), passive Perception 6
+Languages: none
+Challenge: 0
 
 False Appearance. While the shrieker remains motionless, it is indistinguishable from an ordinary fungus.
 
@@ -21900,12 +22916,16 @@ Silver Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 45 (6d8 + 18)
 Speed: 30 ft., fly 60 ft.
+Abilities: Str 19, Dex 10, Con 17, Int 12, Wis 11, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 2
 
 Actions
 
@@ -21919,12 +22939,16 @@ Skeleton
 
 Type: undead
 Size: Medium
+Hit points: 13 (2d8 + 4)
 Speed: 30 ft.
+Abilities: Str 10, Dex 14, Con 15, Int 6, Wis 8, Cha 5
 Damage vulnerabilities: bludgeoning
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned, Exhaustion
 Senses: darkvision 60 ft., passive Perception 9
+Languages: understands all languages it spoke in life but can't speak
+Challenge: 1/4
 
 ## monsters > solar
 
@@ -21932,12 +22956,16 @@ Solar
 
 Type: celestial
 Size: Large
+Hit points: 243 (18d10 + 144)
 Speed: 50 ft., fly 150 ft.
+Abilities: Str 26, Dex 22, Con 26, Int 25, Wis 25, Cha 30
 Damage vulnerabilities: none
 Damage resistances: radiant; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: necrotic; poison
 Condition immunities: Charmed, Exhaustion, Frightened, Poisoned
 Senses: truesight 120 ft., passive Perception 24
+Languages: all, telepathy 120 ft.
+Challenge: 21
 
 Angelic Weapons. The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack).
 
@@ -21970,12 +22998,16 @@ Specter
 
 Type: undead
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 0 ft., fly 50 ft. (hover)
+Abilities: Str 1, Dex 14, Con 11, Int 10, Wis 10, Cha 11
 Damage vulnerabilities: none
 Damage resistances: acid; cold; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: necrotic; poison
 Condition immunities: Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 Senses: darkvision 60 ft., passive Perception 10
+Languages: understands all languages it knew in life but can't speak
+Challenge: 1
 
 Incorporeal Movement. The specter can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
 
@@ -21987,12 +23019,16 @@ Spider
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 20 ft., climb 20 ft.
+Abilities: Str 2, Dex 14, Con 8, Int 1, Wis 10, Cha 2
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 30 ft., passive Perception 12
+Languages: none
+Challenge: 0
 
 Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
 
@@ -22006,12 +23042,16 @@ Spirit Naga
 
 Type: monstrosity
 Size: Large
+Hit points: 75 (10d10 + 20)
 Speed: 40 ft.
+Abilities: Str 18, Dex 17, Con 14, Int 16, Wis 15, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Charmed, Poisoned
 Senses: darkvision 60 ft., passive Perception 12
+Languages: Abyssal, Common
+Challenge: 8
 
 Rejuvenation. If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.
 
@@ -22030,12 +23070,16 @@ Sprite
 
 Type: fey
 Size: Tiny
+Hit points: 2 (1d4)
 Speed: 10 ft., fly 40 ft.
+Abilities: Str 3, Dex 18, Con 10, Int 14, Wis 13, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: Common, Elvish, Sylvan
+Challenge: 1/4
 
 Actions
 
@@ -22049,12 +23093,16 @@ Spy
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 27 (6d8)
 Speed: 30 ft.
+Abilities: Str 10, Dex 15, Con 10, Int 12, Wis 14, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 16
+Languages: any two languages
+Challenge: 1
 
 Cunning Action. On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.
 
@@ -22066,12 +23114,16 @@ Steam Mephit
 
 Type: elemental
 Size: Small
+Hit points: 21 (6d6)
 Speed: 30 ft., fly 30 ft.
+Abilities: Str 5, Dex 11, Con 10, Int 11, Wis 10, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire; poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Aquan, Ignan
+Challenge: 1/4
 
 Death Burst. When the mephit dies, it explodes in a cloud of steam. Each creature within 5 ft. of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage.
 
@@ -22087,12 +23139,16 @@ Stirge
 
 Type: beast
 Size: Tiny
+Hit points: 2 (1d4)
 Speed: 10 ft., fly 40 ft.
+Abilities: Str 4, Dex 16, Con 11, Int 2, Wis 8, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 9
+Languages: none
+Challenge: 1/8
 
 ## monsters > stone-giant
 
@@ -22100,12 +23156,16 @@ Stone Giant
 
 Type: giant
 Size: Huge
+Hit points: 126 (11d12 + 55)
 Speed: 40 ft.
+Abilities: Str 23, Dex 15, Con 20, Int 10, Wis 12, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Giant
+Challenge: 7
 
 Stone Camouflage. The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
 
@@ -22119,12 +23179,16 @@ Stone Golem
 
 Type: construct
 Size: Large
+Hit points: 178 (17d10 + 85)
 Speed: 30 ft.
+Abilities: Str 22, Dex 9, Con 20, Int 3, Wis 11, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison; psychic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
 Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
 Senses: darkvision 120 ft., passive Perception 10
+Languages: understands the languages of its creator but can't speak
+Challenge: 10
 
 Immutable Form. The golem is immune to any spell or effect that would alter its form.
 
@@ -22142,12 +23206,16 @@ Storm Giant
 
 Type: giant
 Size: Huge
+Hit points: 230 (20d12 + 100)
 Speed: 50 ft., swim 50 ft.
+Abilities: Str 29, Dex 14, Con 20, Int 16, Wis 18, Cha 18
 Damage vulnerabilities: none
 Damage resistances: cold
 Damage immunities: lightning; thunder
 Condition immunities: none
 Senses: passive Perception 19
+Languages: Common, Giant
+Challenge: 13
 
 Amphibious. The giant can breathe air and water.
 
@@ -22166,12 +23234,16 @@ Succubus/Incubus
 
 Type: fiend (shapechanger)
 Size: Medium
+Hit points: 66 (12d8 + 12)
 Speed: 30 ft., fly 60 ft.
+Abilities: Str 8, Dex 17, Con 13, Int 15, Wis 12, Cha 20
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning; poison; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 15
+Languages: Abyssal, Common, Infernal, telepathy 60 ft.
+Challenge: 4
 
 Telepathic Bond. The fiend ignores the range restriction on its telepathy when communicating with a creature it has charmed. The two don't even need to be on the same plane of existence.
 
@@ -22192,12 +23264,16 @@ Swarm of Bats
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 0 ft., fly 30 ft.
+Abilities: Str 5, Dex 15, Con 10, Int 2, Wis 12, Cha 4
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: blindsight 60 ft., passive Perception 11
+Languages: none
+Challenge: 1/4
 
 Echolocation. The swarm can't use its blindsight while deafened.
 
@@ -22211,12 +23287,16 @@ Swarm of Beetles
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 20 ft., burrow 5 ft., climb 20 ft.
+Abilities: Str 3, Dex 13, Con 10, Int 1, Wis 7, Cha 1
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: blindsight 10 ft., passive Perception 8
+Languages: none
+Challenge: 1/2
 
 Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
 
@@ -22226,12 +23306,16 @@ Swarm of Centipedes
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 20 ft., climb 20 ft.
+Abilities: Str 3, Dex 13, Con 10, Int 1, Wis 7, Cha 1
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: blindsight 10 ft., passive Perception 8
+Languages: none
+Challenge: 1/2
 
 Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
 
@@ -22241,12 +23325,16 @@ Swarm of Insects
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 20 ft., climb 20 ft.
+Abilities: Str 3, Dex 13, Con 10, Int 1, Wis 7, Cha 1
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: blindsight 10 ft., passive Perception 8
+Languages: none
+Challenge: 1/2
 
 Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
 
@@ -22256,12 +23344,16 @@ Swarm of Poisonous Snakes
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 36 (8d8)
 Speed: 30 ft., swim 30 ft.
+Abilities: Str 8, Dex 18, Con 11, Int 1, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: blindsight 10 ft., passive Perception 10
+Languages: none
+Challenge: 2
 
 Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny snake. The swarm can't regain hit points or gain temporary hit points.
 
@@ -22271,12 +23363,16 @@ Swarm of Quippers
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 28 (8d8 - 8)
 Speed: 0 ft., swim 40 ft.
+Abilities: Str 13, Dex 16, Con 9, Int 1, Wis 7, Cha 2
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: darkvision 60 ft., passive Perception 8
+Languages: none
+Challenge: 1
 
 Blood Frenzy. The swarm has advantage on melee attack rolls against any creature that doesn't have all its hit points.
 
@@ -22290,12 +23386,16 @@ Swarm of Rats
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 24 (7d8 - 7)
 Speed: 30 ft.
+Abilities: Str 9, Dex 11, Con 9, Int 2, Wis 10, Cha 3
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: darkvision 30 ft., passive Perception 10
+Languages: none
+Challenge: 1/4
 
 Keen Smell. The swarm has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -22307,12 +23407,16 @@ Swarm of Ravens
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 24 (7d8 - 7)
 Speed: 10 ft., fly 50 ft.
+Abilities: Str 6, Dex 14, Con 8, Int 3, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: passive Perception 15
+Languages: none
+Challenge: 1/4
 
 Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny raven. The swarm can't regain hit points or gain temporary hit points.
 
@@ -22322,12 +23426,16 @@ Swarm of Spiders
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 20 ft., climb 20 ft.
+Abilities: Str 3, Dex 13, Con 10, Int 1, Wis 7, Cha 1
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: blindsight 10 ft., passive Perception 8
+Languages: none
+Challenge: 1/2
 
 Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
 
@@ -22343,12 +23451,16 @@ Swarm of Wasps
 
 Type: swarm of Tiny beasts
 Size: Medium
+Hit points: 22 (5d8)
 Speed: 5 ft., fly 30 ft.
+Abilities: Str 3, Dex 13, Con 10, Int 1, Wis 7, Cha 1
 Damage vulnerabilities: none
 Damage resistances: bludgeoning; piercing; slashing
 Damage immunities: none
 Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
 Senses: blindsight 10 ft., passive Perception 8
+Languages: none
+Challenge: 1/2
 
 Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
 
@@ -22358,12 +23470,16 @@ Tarrasque
 
 Type: monstrosity (titan)
 Size: Gargantuan
+Hit points: 676 (33d20 + 330)
 Speed: 40 ft.
+Abilities: Str 30, Dex 11, Con 30, Int 3, Wis 11, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire; poison; bludgeoning, piercing, and slashing from nonmagical weapons
 Condition immunities: Charmed, Frightened, Paralyzed, Poisoned
 Senses: blindsight 120 ft., passive Perception 10
+Languages: none
+Challenge: 30
 
 Legendary Resistance (3/Day). If the tarrasque fails a saving throw, it can choose to succeed instead.
 
@@ -22394,12 +23510,16 @@ Thug
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 32 (5d8 + 10)
 Speed: 30 ft.
+Abilities: Str 15, Dex 11, Con 14, Int 10, Wis 10, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any one language (usually Common)
+Challenge: 1/2
 
 Pack Tactics. The thug has advantage on an attack roll against a creature if at least one of the thug's allies is within 5 ft. of the creature and the ally isn't incapacitated.
 
@@ -22409,12 +23529,16 @@ Tiger
 
 Type: beast
 Size: Large
+Hit points: 37 (5d10 + 10)
 Speed: 40 ft.
+Abilities: Str 17, Dex 15, Con 14, Int 3, Wis 12, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 13
+Languages: none
+Challenge: 1
 
 Keen Smell. The tiger has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -22426,12 +23550,16 @@ Treant
 
 Type: plant
 Size: Huge
+Hit points: 138 (12d12 + 60)
 Speed: 30 ft.
+Abilities: Str 23, Dex 8, Con 21, Int 12, Wis 16, Cha 12
 Damage vulnerabilities: fire
 Damage resistances: bludgeoning; piercing
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: Common, Druidic, Elvish, Sylvan
+Challenge: 9
 
 False Appearance. While the treant remains motionless, it is indistinguishable from a normal tree.
 
@@ -22447,12 +23575,16 @@ Tribal Warrior
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 30 ft.
+Abilities: Str 13, Dex 11, Con 12, Int 8, Wis 11, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: any one language
+Challenge: 1/8
 
 Pack Tactics. The warrior has advantage on an attack roll against a creature if at least one of the warrior's allies is within 5 ft. of the creature and the ally isn't incapacitated.
 
@@ -22462,12 +23594,16 @@ Triceratops
 
 Type: beast
 Size: Huge
+Hit points: 95 (10d12 + 30)
 Speed: 50 ft.
+Abilities: Str 22, Dex 9, Con 17, Int 2, Wis 11, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 10
+Languages: none
+Challenge: 5
 
 Trampling Charge. If the triceratops moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the triceratops can make one stomp attack against it as a bonus action.
 
@@ -22477,12 +23613,16 @@ Troll
 
 Type: giant
 Size: Large
+Hit points: 84 (8d10 + 40)
 Speed: 30 ft.
+Abilities: Str 18, Dex 13, Con 20, Int 7, Wis 9, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 12
+Languages: Giant
+Challenge: 5
 
 Keen Smell. The troll has advantage on Wisdom (Perception) checks that rely on smell.
 
@@ -22494,12 +23634,16 @@ Tyrannosaurus Rex
 
 Type: beast
 Size: Huge
+Hit points: 136 (13d12 + 52)
 Speed: 50 ft.
+Abilities: Str 25, Dex 10, Con 19, Int 2, Wis 12, Cha 9
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 8
 
 ## monsters > unicorn
 
@@ -22507,12 +23651,16 @@ Unicorn
 
 Type: celestial
 Size: Large
+Hit points: 67 (9d10 + 18)
 Speed: 50 ft.
+Abilities: Str 18, Dex 14, Con 15, Int 11, Wis 17, Cha 16
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Charmed, Paralyzed, Poisoned
 Senses: darkvision 60 ft., passive Perception 13
+Languages: Celestial, Elvish, Sylvan, telepathy 60 ft.
+Challenge: 5
 
 Charge. If the unicorn moves at least 20 ft. straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.
 
@@ -22545,12 +23693,16 @@ Vampire, Vampire Form
 
 Type: undead (shapechanger)
 Size: Medium
+Hit points: 144 (17d8 + 68)
 Speed: 30 ft.
+Abilities: Str 18, Dex 18, Con 18, Int 17, Wis 15, Cha 18
 Damage vulnerabilities: none
 Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 17
+Languages: the languages it knew in life
+Challenge: 13
 
 Shapechanger. If the vampire isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.
 While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.
@@ -22592,12 +23744,16 @@ Vampire, Bat Form
 
 Type: undead (shapechanger)
 Size: Medium
+Hit points: 144 (17d8 + 68)
 Speed: 5 ft., fly 30 ft.
+Abilities: Str 18, Dex 18, Con 18, Int 17, Wis 15, Cha 18
 Damage vulnerabilities: none
 Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 17
+Languages: the languages it knew in life
+Challenge: 13
 
 Shapechanger. If the vampire isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.
 While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.
@@ -22639,12 +23795,16 @@ Vampire, Mist Form
 
 Type: undead (shapechanger)
 Size: Medium
+Hit points: 144 (17d8 + 68)
 Speed: fly 20 ft.
+Abilities: Str 18, Dex 18, Con 18, Int 17, Wis 15, Cha 18
 Damage vulnerabilities: none
 Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 120 ft., passive Perception 17
+Languages: the languages it knew in life
+Challenge: 13
 
 Shapechanger. If the vampire isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.
 While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.
@@ -22679,12 +23839,16 @@ Vampire Spawn
 
 Type: undead
 Size: Medium
+Hit points: 82 (11d8 + 33)
 Speed: 30 ft.
+Abilities: Str 16, Dex 16, Con 16, Int 11, Wis 10, Cha 12
 Damage vulnerabilities: none
 Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 13
+Languages: the languages it knew in life
+Challenge: 5
 
 Regeneration. The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.
 
@@ -22702,12 +23866,16 @@ Veteran
 
 Type: humanoid (any race)
 Size: Medium
+Hit points: 58 (9d8 + 18)
 Speed: 30 ft.
+Abilities: Str 16, Dex 13, Con 14, Int 10, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 12
+Languages: any one language (usually Common)
+Challenge: 3
 
 ## monsters > violet-fungus
 
@@ -22715,12 +23883,16 @@ Violet Fungus
 
 Type: plant
 Size: Medium
+Hit points: 18 (4d8)
 Speed: 5 ft.
+Abilities: Str 3, Dex 1, Con 10, Int 1, Wis 3, Cha 1
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: Blinded, Blinded, Frightened
 Senses: blindsight 30 ft. (blind beyond this radius), passive Perception 6
+Languages: none
+Challenge: 1/4
 
 False Appearance. While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.
 
@@ -22730,12 +23902,16 @@ Vrock
 
 Type: fiend (demon)
 Size: Large
+Hit points: 104 (11d10 + 44)
 Speed: 40 ft., fly 60 ft.
+Abilities: Str 17, Dex 15, Con 18, Int 8, Wis 13, Cha 8
 Damage vulnerabilities: none
 Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 120 ft., passive Perception 11
+Languages: Abyssal, telepathy 120 ft.
+Challenge: 6
 
 Magic Resistance. The vrock has advantage on saving throws against spells and other magical effects.
 
@@ -22751,12 +23927,16 @@ Vulture
 
 Type: beast
 Size: Medium
+Hit points: 5 (1d8 + 1)
 Speed: 10 ft., fly 50 ft.
+Abilities: Str 7, Dex 10, Con 13, Int 2, Wis 12, Cha 4
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 0
 
 Keen Sight and Smell. The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.
 
@@ -22768,12 +23948,16 @@ Warhorse
 
 Type: beast
 Size: Large
+Hit points: 19 (3d10 + 3)
 Speed: 60 ft.
+Abilities: Str 18, Dex 12, Con 13, Int 2, Wis 12, Cha 7
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 11
+Languages: none
+Challenge: 1/2
 
 Trampling Charge. If the horse moves at least 20 ft. straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action.
 
@@ -22783,12 +23967,16 @@ Warhorse Skeleton
 
 Type: undead
 Size: Large
+Hit points: 22 (3d10 + 6)
 Speed: 60 ft.
+Abilities: Str 18, Dex 12, Con 15, Int 2, Wis 8, Cha 5
 Damage vulnerabilities: bludgeoning
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Exhaustion, Poisoned
 Senses: darkvision 60 ft., passive Perception 9
+Languages: none
+Challenge: 1/2
 
 ## monsters > water-elemental
 
@@ -22796,12 +23984,16 @@ Water Elemental
 
 Type: elemental
 Size: Large
+Hit points: 114 (12d10 + 48)
 Speed: 30 ft., swim 90 ft.
+Abilities: Str 18, Dex 14, Con 18, Int 5, Wis 10, Cha 8
 Damage vulnerabilities: none
 Damage resistances: acid; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: poison
 Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
 Senses: darkvision 60 ft., passive Perception 10
+Languages: Aquan
+Challenge: 5
 
 Water Form. The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
 
@@ -22818,12 +24010,16 @@ Weasel
 
 Type: beast
 Size: Tiny
+Hit points: 1 (1d4 - 1)
 Speed: 30 ft.
+Abilities: Str 3, Dex 16, Con 8, Int 2, Wis 12, Cha 3
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 0
 
 Keen Hearing and Smell. The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -22833,12 +24029,16 @@ Werebear, Bear Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 135 (18d8 + 54)
 Speed: 40 ft., climb 30 ft.
+Abilities: Str 19, Dex 10, Con 17, Int 11, Wis 12, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 17
+Languages: none
+Challenge: 5
 
 Shapechanger. The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22850,12 +24050,16 @@ Werebear, Human Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 135 (18d8 + 54)
 Speed: 30 ft.
+Abilities: Str 19, Dex 10, Con 17, Int 11, Wis 12, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 17
+Languages: Common
+Challenge: 5
 
 Shapechanger. The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22867,12 +24071,16 @@ Werebear, Hybrid Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 135 (18d8 + 54)
 Speed: 40 ft., climb 30 ft.
+Abilities: Str 19, Dex 10, Con 17, Int 11, Wis 12, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 17
+Languages: Common
+Challenge: 5
 
 Shapechanger. The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22884,12 +24092,16 @@ Wereboar, Boar Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 78 (12d8 + 24)
 Speed: 40 ft.
+Abilities: Str 17, Dex 10, Con 15, Int 10, Wis 11, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 12
+Languages: none
+Challenge: 4
 
 Shapechanger. The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22903,12 +24115,16 @@ Wereboar, Human Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 78 (12d8 + 24)
 Speed: 30 ft.
+Abilities: Str 17, Dex 10, Con 15, Int 10, Wis 11, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 12
+Languages: Common (can't speak in boar form)
+Challenge: 4
 
 Shapechanger. The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22920,12 +24136,16 @@ Wereboar, Hybrid Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 78 (12d8 + 24)
 Speed: 30 ft.
+Abilities: Str 17, Dex 10, Con 15, Int 10, Wis 11, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 12
+Languages: Common
+Challenge: 4
 
 Shapechanger. The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22939,12 +24159,16 @@ Wererat, Human Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 33 (6d8 + 6)
 Speed: 30 ft.
+Abilities: Str 10, Dex 15, Con 12, Int 11, Wis 10, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 12
+Languages: Common
+Challenge: 2
 
 Shapechanger. The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22956,12 +24180,16 @@ Wererat, Hybrid Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 33 (6d8 + 6)
 Speed: 30 ft.
+Abilities: Str 10, Dex 15, Con 12, Int 11, Wis 10, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 12
+Languages: Common
+Challenge: 2
 
 Shapechanger. The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22973,12 +24201,16 @@ Wererat, Rat Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 33 (6d8 + 6)
 Speed: 30 ft.
+Abilities: Str 10, Dex 15, Con 12, Int 11, Wis 10, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 12
+Languages: none
+Challenge: 2
 
 Shapechanger. The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -22990,12 +24222,16 @@ Weretiger, Human Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 120 (16d8 + 48)
 Speed: 30 ft.
+Abilities: Str 17, Dex 15, Con 16, Int 10, Wis 13, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 15
+Languages: Common
+Challenge: 4
 
 Shapechanger. The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -23007,12 +24243,16 @@ Weretiger, Hybrid Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 120 (16d8 + 48)
 Speed: 30 ft.
+Abilities: Str 17, Dex 15, Con 16, Int 10, Wis 13, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 15
+Languages: Common
+Challenge: 4
 
 Shapechanger. The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -23026,12 +24266,16 @@ Weretiger, Tiger Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 120 (16d8 + 48)
 Speed: 40 ft.
+Abilities: Str 17, Dex 15, Con 16, Int 10, Wis 13, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 15
+Languages: none
+Challenge: 4
 
 Shapechanger. The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -23045,12 +24289,16 @@ Werewolf, Human Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 58 (9d8 + 18)
 Speed: 30 ft.
+Abilities: Str 15, Dex 13, Con 14, Int 10, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 14
+Languages: Common
+Challenge: 3
 
 Shapechanger. The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -23062,12 +24310,16 @@ Werewolf, Hybrid Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 58 (9d8 + 18)
 Speed: 30 ft.
+Abilities: Str 15, Dex 13, Con 14, Int 10, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 14
+Languages: Common
+Challenge: 3
 
 Shapechanger. The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -23079,12 +24331,16 @@ Werewolf, Wolf Form
 
 Type: humanoid (human)
 Size: Medium
+Hit points: 58 (9d8 + 18)
 Speed: 40 ft.
+Abilities: Str 15, Dex 13, Con 14, Int 10, Wis 11, Cha 10
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Condition immunities: none
 Senses: passive Perception 14
+Languages: none
+Challenge: 3
 
 Shapechanger. The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
 
@@ -23096,12 +24352,16 @@ White Dragon Wyrmling
 
 Type: dragon
 Size: Medium
+Hit points: 32 (5d8 + 10)
 Speed: 30 ft., burrow 15 ft., fly 60 ft., swim 30 ft.
+Abilities: Str 14, Dex 10, Con 14, Int 5, Wis 10, Cha 11
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+Languages: Draconic
+Challenge: 2
 
 Actions
 
@@ -23113,12 +24373,16 @@ Wight
 
 Type: undead
 Size: Medium
+Hit points: 45 (6d8 + 18)
 Speed: 30 ft.
+Abilities: Str 15, Dex 14, Con 16, Int 10, Wis 13, Cha 15
 Damage vulnerabilities: none
 Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: poison
 Condition immunities: Exhaustion, Poisoned
 Senses: darkvision 60 ft., passive Perception 13
+Languages: the languages it knew in life
+Challenge: 3
 
 Sunlight Sensitivity. While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
 
@@ -23128,12 +24392,16 @@ Will-o'-Wisp
 
 Type: undead
 Size: Tiny
+Hit points: 22 (9d4)
 Speed: 0 ft., fly 50 ft. (hover)
+Abilities: Str 1, Dex 28, Con 10, Int 13, Wis 14, Cha 11
 Damage vulnerabilities: none
 Damage resistances: acid; cold; fire; necrotic; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
 Damage immunities: lightning; poison
 Condition immunities: Exhaustion, Grappled, Paralyzed, Poisoned, Prone, Restrained, Unconscious
 Senses: darkvision 120 ft., passive Perception 12
+Languages: the languages it knew in life
+Challenge: 2
 
 Consume Life. As a bonus action, the will-o'-wisp can target one creature it can see within 5 ft. of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.
 
@@ -23153,12 +24421,16 @@ Winter Wolf
 
 Type: monstrosity
 Size: Large
+Hit points: 75 (10d10 + 20)
 Speed: 50 ft.
+Abilities: Str 18, Dex 13, Con 14, Int 7, Wis 12, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: passive Perception 15
+Languages: Common, Giant, Winter Wolf
+Challenge: 3
 
 Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -23176,12 +24448,16 @@ Wolf
 
 Type: beast
 Size: Medium
+Hit points: 11 (2d8 + 2)
 Speed: 40 ft.
+Abilities: Str 12, Dex 15, Con 12, Int 3, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: passive Perception 13
+Languages: none
+Challenge: 1/4
 
 Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -23193,12 +24469,16 @@ Worg
 
 Type: monstrosity
 Size: Large
+Hit points: 26 (4d10 + 4)
 Speed: 50 ft.
+Abilities: Str 16, Dex 13, Con 13, Int 7, Wis 11, Cha 8
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: Goblin, Worg
+Challenge: 1/2
 
 Keen Hearing and Smell. The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
 
@@ -23208,12 +24488,16 @@ Wraith
 
 Type: undead
 Size: Medium
+Hit points: 67 (9d8 + 27)
 Speed: 0 ft., fly 60 ft. (hover)
+Abilities: Str 6, Dex 16, Con 16, Int 12, Wis 14, Cha 15
 Damage vulnerabilities: none
 Damage resistances: acid; cold; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
 Damage immunities: necrotic; poison
 Condition immunities: Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained
 Senses: darkvision 60 ft., passive Perception 12
+Languages: the languages it knew in life
+Challenge: 5
 
 Incorporeal Movement. The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
 
@@ -23229,12 +24513,16 @@ Wyvern
 
 Type: dragon
 Size: Large
+Hit points: 110 (13d10 + 39)
 Speed: 20 ft., fly 80 ft.
+Abilities: Str 19, Dex 10, Con 16, Int 5, Wis 12, Cha 6
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., passive Perception 14
+Languages: none
+Challenge: 6
 
 ## monsters > xorn
 
@@ -23242,12 +24530,16 @@ Xorn
 
 Type: elemental
 Size: Medium
+Hit points: 73 (7d8 + 42)
 Speed: 20 ft., burrow 20 ft.
+Abilities: Str 17, Dex 10, Con 22, Int 11, Wis 10, Cha 11
 Damage vulnerabilities: none
 Damage resistances: piercing and slashing from nonmagical weapons that aren't adamantine
 Damage immunities: none
 Condition immunities: none
 Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 16
+Languages: Terran
+Challenge: 5
 
 Earth Glide. The xorn can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through.
 
@@ -23261,12 +24553,16 @@ Young Black Dragon
 
 Type: dragon
 Size: Large
+Hit points: 127 (15d10 + 45)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 19, Dex 14, Con 17, Int 12, Wis 11, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 16
+Languages: Common, Draconic
+Challenge: 7
 
 Amphibious. The dragon can breathe air and water.
 
@@ -23280,12 +24576,16 @@ Young Blue Dragon
 
 Type: dragon
 Size: Large
+Hit points: 152 (16d10 + 64)
 Speed: 40 ft., burrow 20 ft., fly 80 ft.
+Abilities: Str 21, Dex 10, Con 19, Int 14, Wis 13, Cha 17
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 19
+Languages: Common, Draconic
+Challenge: 9
 
 Actions
 
@@ -23297,12 +24597,16 @@ Young Brass Dragon
 
 Type: dragon
 Size: Large
+Hit points: 110 (13d10 + 39)
 Speed: 40 ft., burrow 20 ft., fly 80 ft.
+Abilities: Str 19, Dex 10, Con 17, Int 12, Wis 11, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 16
+Languages: Common, Draconic
+Challenge: 6
 
 Actions
 
@@ -23316,12 +24620,16 @@ Young Bronze Dragon
 
 Type: dragon
 Size: Large
+Hit points: 142 (15d10 + 60)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 21, Dex 10, Con 19, Int 14, Wis 13, Cha 17
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: lightning
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 17
+Languages: Common, Draconic
+Challenge: 8
 
 Amphibious. The dragon can breathe air and water.
 
@@ -23337,12 +24645,16 @@ Young Copper Dragon
 
 Type: dragon
 Size: Large
+Hit points: 119 (14d10 + 42)
 Speed: 40 ft., climb 40 ft., fly 80 ft.
+Abilities: Str 19, Dex 12, Con 17, Int 16, Wis 13, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: acid
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 17
+Languages: Common, Draconic
+Challenge: 7
 
 Actions
 
@@ -23356,12 +24668,16 @@ Young Gold Dragon
 
 Type: dragon
 Size: Large
+Hit points: 178 (17d10 + 85)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 23, Dex 14, Con 21, Int 16, Wis 13, Cha 20
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 19
+Languages: Common, Draconic
+Challenge: 10
 
 Amphibious. The dragon can breathe air and water.
 
@@ -23377,12 +24693,16 @@ Young Green Dragon
 
 Type: dragon
 Size: Large
+Hit points: 136 (16d10 + 48)
 Speed: 40 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 19, Dex 12, Con 17, Int 16, Wis 13, Cha 15
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 17
+Languages: Common, Draconic
+Challenge: 8
 
 Amphibious. The dragon can breathe air and water.
 
@@ -23396,12 +24716,16 @@ Young Red Dragon
 
 Type: dragon
 Size: Large
+Hit points: 178 (17d10 + 85)
 Speed: 40 ft., climb 40 ft., fly 80 ft.
+Abilities: Str 23, Dex 10, Con 21, Int 14, Wis 11, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: fire
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 18
+Languages: Common, Draconic
+Challenge: 10
 
 Actions
 
@@ -23413,12 +24737,16 @@ Young Silver Dragon
 
 Type: dragon
 Size: Large
+Hit points: 168 (16d10 + 80)
 Speed: 40 ft., fly 80 ft.
+Abilities: Str 23, Dex 10, Con 21, Int 14, Wis 11, Cha 19
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 18
+Languages: Common, Draconic
+Challenge: 9
 
 Actions
 
@@ -23432,12 +24760,16 @@ Young White Dragon
 
 Type: dragon
 Size: Large
+Hit points: 133 (14d10 + 56)
 Speed: 40 ft., burrow 20 ft., fly 80 ft., swim 40 ft.
+Abilities: Str 18, Dex 10, Con 18, Int 6, Wis 11, Cha 12
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: cold
 Condition immunities: none
 Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 16
+Languages: Common, Draconic
+Challenge: 6
 
 Ice Walk. The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
 
@@ -23451,12 +24783,16 @@ Zombie
 
 Type: undead
 Size: Medium
+Hit points: 22 (3d8 + 9)
 Speed: 20 ft.
+Abilities: Str 13, Dex 6, Con 16, Int 3, Wis 6, Cha 5
 Damage vulnerabilities: none
 Damage resistances: none
 Damage immunities: poison
 Condition immunities: Poisoned
 Senses: darkvision 60 ft., passive Perception 8
+Languages: understands all languages it spoke in life but can't speak
+Challenge: 1/4
 
 Undead Fortitude. If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
 
