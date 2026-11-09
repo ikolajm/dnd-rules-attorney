@@ -632,6 +632,35 @@ def monster_lines(record: dict[str, Any]) -> list[str]:
     return lines
 
 
+def ability_text(ability: dict[str, Any]) -> str:
+    """A named ability as a stat block runs it in: its name, then its text."""
+    return f"{ability['name']}. {ability['desc']}"
+
+
+def monster_entries(record: dict[str, Any]) -> list[Entry]:
+    """The single entry for a stat block: its lines, then its abilities by group."""
+    blocks: list[str] = [record["name"], "\n".join(monster_lines(record))]
+    specials = record.get("special_abilities") or []
+    blocks.extend(ability_text(ability) for ability in specials)
+    actions = [
+        action
+        for action in record.get("actions") or []
+        if action["name"] != "Multiattack"
+        # lstrip: the druid's quarterstaff opens its text with a space.
+        and not action["desc"].lstrip().startswith(("Melee", "Ranged"))
+    ]
+    for heading, group in (
+        ("Actions", actions),
+        ("Reactions", record.get("reactions") or []),
+        ("Legendary Actions", record.get("legendary_actions") or []),
+    ):
+        if group:
+            blocks.append(heading)
+            blocks.extend(ability_text(ability) for ability in group)
+    text = "\n\n".join(blocks)
+    return [Entry(path=f"monsters > {record['index']}", text=text)]
+
+
 def spellcasting_path(class_index: str) -> str:
     """The feature a class's spellcasting text joins: Spellcasting or Pact Magic."""
     feature = (

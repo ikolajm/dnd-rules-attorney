@@ -27,6 +27,7 @@ from rules_attorney.corpus import (
     item_fields,
     load_corpus,
     magic_item_entries,
+    monster_entries,
     monster_lines,
     prerequisite,
     race_entries,
@@ -624,6 +625,58 @@ def test_monster_lines_refuses_an_unknown_sense() -> None:
     record = {**bones_record(), "senses": {"echolocation": "30 ft."}}
     with pytest.raises(CorpusError, match="bones: unknown sense"):
         monster_lines(record)
+
+
+def ability(name: str, desc: str) -> dict[str, str]:
+    """A made-up stat block ability."""
+    return {"name": name, "desc": desc}
+
+
+def test_monster_entries_writes_each_group_under_its_heading() -> None:
+    record = {
+        **bones_record(),
+        "special_abilities": [ability("Rattle", "It rattles.")],
+        "actions": [
+            ability("Multiattack", "It makes two attacks."),
+            ability("Claw", "Melee Weapon Attack: +4 to hit."),
+            ability("Shriek", "Each creature within 30 ft. is frightened."),
+        ],
+        "reactions": [ability("Brace", "It adds 2 to its AC.")],
+        "legendary_actions": [ability("Clatter", "It moves 10 ft.")],
+    }
+    entries = monster_entries(record)
+    assert [e.path for e in entries] == ["monsters > bones"]
+    assert entries[0].text == "\n\n".join(
+        [
+            "Bones",
+            "\n".join(monster_lines(record)),
+            "Rattle. It rattles.",
+            "Actions",
+            "Shriek. Each creature within 30 ft. is frightened.",
+            "Reactions",
+            "Brace. It adds 2 to its AC.",
+            "Legendary Actions",
+            "Clatter. It moves 10 ft.",
+        ]
+    )
+
+
+def test_monster_entries_leaves_out_an_attack_opening_with_a_space() -> None:
+    # The source's druid opens its quarterstaff attack with a space.
+    attack = ability("Quarterstaff", " Melee Weapon Attack: +2 to hit.")
+    text = monster_entries({**bones_record(), "actions": [attack]})[0].text
+    assert "Quarterstaff" not in text
+
+
+def test_monster_entries_writes_no_heading_over_an_empty_group() -> None:
+    record = {
+        **bones_record(),
+        "actions": [ability("Bite", "Melee Weapon Attack: +4 to hit.")],
+        "reactions": None,
+    }
+    text = monster_entries(record)[0].text
+    for heading in ("Actions", "Reactions", "Legendary Actions"):
+        assert heading not in text.split("\n\n")
 
 
 def test_spellcasting_joins_label_each_rule_and_skip_non_casters() -> None:
