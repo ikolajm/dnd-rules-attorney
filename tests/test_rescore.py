@@ -5,12 +5,15 @@ from pathlib import Path
 import pytest
 
 from rules_attorney.evals.rescore import (
+    HOSTED,
     MODELS,
     STAGED,
     Ref,
     RescoreError,
     Step,
+    manifest_text,
     plan,
+    read_manifest,
     refuse_moved,
     resolve,
     written,
@@ -67,13 +70,44 @@ def test_one_answer_run_per_published_row() -> None:
     assert len(answered) == len(MODELS) + 4 * len(STAGED) + 1 == 17
 
 
-def test_table_rows_follow_the_answer_order() -> None:
-    steps = plan()
-    answered = [step.name for step in steps if step.script in ANSWERING]
-    (table,) = [step for step in steps if step.name == "table"]
+PUBLISHED = [
+    *(
+        f"answer {model}{suffix}"
+        for model in MODELS
+        for suffix in (
+            ("", " rerank", " lookup", " level3", " loop") if model in STAGED else ("",)
+        )
+    ),
+    "floor",
+]
+
+
+def test_table_rows_follow_the_published_order() -> None:
+    (table,) = [step for step in plan() if step.name == "table"]
 
     assert table.args[0] == "--table"
-    assert refs(table) == answered
+    assert refs(table) == PUBLISHED
+
+
+def test_judges_follow_the_published_order() -> None:
+    judged = [
+        ref for step in plan() if step.script == "judge_dev.py" for ref in refs(step)
+    ]
+
+    assert judged == PUBLISHED
+
+
+def calls_api(step: Step) -> bool:
+    return step.script == "judge_dev.py" or HOSTED in step.args
+
+
+def test_every_local_run_comes_before_the_api_is_called() -> None:
+    steps = plan()
+    first_api = next(n for n, step in enumerate(steps) if calls_api(step))
+    local = [n for n, step in enumerate(steps) if step.writes and not calls_api(step)]
+
+    assert first_api == local[-1] + 1
+    assert steps[first_api].name == f"agentic {HOSTED}"
 
 
 def test_each_loop_answers_from_its_own_models_agentic_record() -> None:
@@ -121,28 +155,56 @@ def test_resolve_refuses_a_missing_record() -> None:
 
 WRITES = Step("w", "answer_dev.py", (), True)
 QUIET = Step("q", "score_handed.py", (), False)
-OLD = {Path("runs/old.jsonl")}
+OLD_PATH = Path("runs/old.jsonl")
+OLD = {OLD_PATH: 1}
+NEW = Path("runs/new.jsonl")
 
 
 def test_written_finds_the_one_new_record() -> None:
-    new = Path("runs/new.jsonl")
-
-    assert written(WRITES, OLD, OLD | {new}) == new
+    assert written(WRITES, OLD, {**OLD, NEW: 2}) == NEW
 
 
-@pytest.mark.parametrize("added", [set(), {Path("runs/a.jsonl"), Path("runs/b.jsonl")}])
-def test_written_refuses_none_or_two(added: set[Path]) -> None:
+def test_written_finds_a_rewritten_record() -> None:
+    # A judge rerun overwrites the file the failed judge half wrote.
+    assert written(WRITES, OLD, {OLD_PATH: 2}) == OLD_PATH
+
+
+@pytest.mark.parametrize(
+    "added", [{}, {Path("runs/a.jsonl"): 2, Path("runs/b.jsonl"): 2}]
+)
+def test_written_refuses_none_or_two(added: dict[Path, int]) -> None:
     with pytest.raises(RescoreError, match="not one"):
-        written(WRITES, OLD, OLD | added)
+        written(WRITES, OLD, {**OLD, **added})
 
 
 def test_written_allows_none_from_a_quiet_step() -> None:
-    assert written(QUIET, OLD, OLD) is None
+    assert written(QUIET, OLD, dict(OLD)) is None
 
 
 def test_written_refuses_a_record_from_a_quiet_step() -> None:
     with pytest.raises(RescoreError, match="should not"):
-        written(QUIET, OLD, OLD | {Path("runs/new.jsonl")})
+        written(QUIET, OLD, {**OLD, NEW: 2})
+
+
+def test_manifest_reads_back_what_it_wrote() -> None:
+    records = {"retrieval": OLD_PATH, "floor": NEW}
+    text = manifest_text("abc", records)
+
+    assert read_manifest(text, "abc", {OLD_PATH, NEW}) == records
+
+
+def test_manifest_refuses_another_commit() -> None:
+    text = manifest_text("abc", {"retrieval": OLD_PATH})
+
+    with pytest.raises(RescoreError, match="not def"):
+        read_manifest(text, "def", {OLD_PATH})
+
+
+def test_manifest_refuses_a_record_gone_from_runs() -> None:
+    text = manifest_text("abc", {"retrieval": OLD_PATH, "floor": NEW})
+
+    with pytest.raises(RescoreError, match="no longer in runs"):
+        read_manifest(text, "abc", {OLD_PATH})
 
 
 START = {"commit": "abc", "dirty": False}

@@ -1,14 +1,16 @@
 """The test rescore's steps, in order, and the checks between them."""
 
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+HOSTED = "claude-opus-5-5"
 # The models whose every stage is published, each with its loop.
-STAGED = ("claude-opus-5-5", "qwen3.5:9b")
+STAGED = (HOSTED, "qwen3.5:9b")
 # Every answering model, in the published table's order.
 MODELS = (
-    "claude-opus-5-5",
+    HOSTED,
     "gemma4:12b",
     "qwen3.5:9b",
     "qwen3.5:4b",
@@ -72,29 +74,39 @@ def answer_steps(model: str) -> list[Step]:
     return steps
 
 
+def loop_step(model: str) -> Step:
+    """The model's agentic loop over test."""
+    return Step(f"agentic {model}", "eval_agentic.py", (model, *TEST), True)
+
+
 def plan() -> list[Step]:
-    """Every step of the rescore, in the order it runs."""
+    """Every step of the rescore, in the order it runs.
+
+    Every local run comes before the hosted model's, so a failure in a path
+    they share stops the rescore before it spends API credit. The judges and
+    the table take the published table's order.
+    """
     steps = [
         Step("retrieval", "eval_retrieval.py", TEST, True),
         Step("rerank", "eval_rerank.py", TEST, True),
         Step("lookup", "eval_lookup.py", TEST, True),
     ]
-    steps += [
-        Step(f"agentic {model}", "eval_agentic.py", (model, *TEST), True)
-        for model in STAGED
-    ]
-    answers = [step for model in MODELS for step in answer_steps(model)]
+    local = [model for model in MODELS if model != HOSTED]
+    steps += [loop_step(model) for model in STAGED if model != HOSTED]
+    steps += [step for model in local for step in answer_steps(model)]
     floor = Step("floor", "floor_dev.py", TEST, True)
-    steps += [*answers, floor]
+    steps += [floor, loop_step(HOSTED), *answer_steps(HOSTED)]
+
+    published = [*(step for model in MODELS for step in answer_steps(model)), floor]
     steps += [
         Step(f"judge {step.name}", "judge_dev.py", (Ref(step.name),), True)
-        for step in [*answers, floor]
+        for step in published
     ]
     steps.append(
         Step(
             "table",
             "summarize_runs.py",
-            ("--table", *(Ref(step.name) for step in [*answers, floor])),
+            ("--table", *(Ref(step.name) for step in published)),
             False,
         )
     )
@@ -112,7 +124,7 @@ def plan() -> list[Step]:
         Step(
             "handed",
             "score_handed.py",
-            tuple(Ref(step.name) for step in answers),
+            tuple(Ref(step.name) for step in published if step is not floor),
             False,
         )
     )
@@ -141,9 +153,14 @@ def resolve(step: Step, records: dict[str, Path]) -> list[str]:
     return args
 
 
-def written(step: Step, before: set[Path], after: set[Path]) -> Path | None:
-    """The one record a step wrote, or None for a step that writes none."""
-    new = sorted(after - before)
+def written(step: Step, before: dict[Path, int], after: dict[Path, int]) -> Path | None:
+    """The one record a step wrote, or None for a step that writes none.
+
+    Each listing maps a file to its modified time, so a file the step
+    rewrote counts: a judge rerun overwrites the half-written file of the
+    judge that failed.
+    """
+    new = sorted(path for path, mtime in after.items() if before.get(path) != mtime)
     if step.writes:
         if len(new) != 1:
             raise RescoreError(f"{step.name}: wrote {len(new)} records, not one: {new}")
@@ -159,3 +176,21 @@ def refuse_moved(start: dict[str, Any], now: dict[str, Any]) -> None:
         raise RescoreError("the tree is dirty: commit or stash first")
     if now["commit"] != start["commit"]:
         raise RescoreError(f"HEAD moved from {start['commit']} to {now['commit']}")
+
+
+def manifest_text(commit: str, records: dict[str, Path]) -> str:
+    """The steps done at the commit and the record each wrote, as JSON."""
+    paths = {name: path.as_posix() for name, path in records.items()}
+    return json.dumps({"commit": commit, "records": paths}, indent=2) + "\n"
+
+
+def read_manifest(text: str, commit: str, exists: set[Path]) -> dict[str, Path]:
+    """A stopped rescore's records, refused if one is gone or the commit differs."""
+    data = json.loads(text)
+    if data["commit"] != commit:
+        raise RescoreError(f"the manifest is for {data['commit']}, not {commit}")
+    records = {name: Path(path) for name, path in data["records"].items()}
+    missing = sorted(str(path) for path in records.values() if path not in exists)
+    if missing:
+        raise RescoreError(f"the manifest names records no longer in runs/: {missing}")
+    return records

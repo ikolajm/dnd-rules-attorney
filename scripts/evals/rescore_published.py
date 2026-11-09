@@ -1,13 +1,18 @@
 """Rescores every published row on test at one clean commit, stopping on a failure.
 
-    python scripts/evals/rescore_test.py [--dry-run]
+    python scripts/evals/rescore_published.py [--dry-run]
 
 Runs retrieval, the loops, every answer run and the floor, judges each, then
-prints the tables, all in the order src/rules_attorney/evals/rescore.py gives.
-Calls the live Ollama server and the Claude API. Refuses a dirty tree before
-each step, and a HEAD that moved since the first. Each step's record is the
-one new file it writes to runs/; a step writing none or more than one stops
-the rescore. The records written are listed last, for results/test/.
+prints the tables, all in the order src/rules_attorney/evals/rescore.py gives,
+the local runs before the hosted model's. Calls the live Ollama server and the
+Claude API. Refuses a dirty tree before each step, and a HEAD that moved since
+the first. Each step's record is the one file it writes or rewrites in runs/;
+a step writing none or more than one stops the rescore.
+
+Each record is noted in runs/rescore/<commit>.json as its step finishes, and a
+rescore started again at the same commit skips the steps noted there, so a
+failure late in the run costs only the step that failed. Delete the manifest
+to start over. The records are listed last, for results/test/.
 
 --dry-run prints each step's command, the records named by their steps,
 and runs nothing.
@@ -21,7 +26,9 @@ from pathlib import Path
 from rules_attorney.evals.provenance import commit
 from rules_attorney.evals.rescore import (
     RescoreError,
+    manifest_text,
     plan,
+    read_manifest,
     refuse_moved,
     resolve,
     written,
@@ -29,18 +36,26 @@ from rules_attorney.evals.rescore import (
 
 ROOT = Path(__file__).resolve().parents[2]
 RUNS = ROOT / "runs"
+MANIFESTS = RUNS / "rescore"
 SCRIPTS = ROOT / "scripts" / "evals"
 
 
-def listing() -> set[Path]:
-    """Every file in runs/, relative to the repo root."""
+def listing() -> dict[Path, int]:
+    """Every file in runs/, relative to the repo root, with its modified time.
+
+    The manifests sit in a folder of their own, so a listing never counts one.
+    """
     if not RUNS.exists():
-        return set()
-    return {path.relative_to(ROOT) for path in RUNS.iterdir() if path.is_file()}
+        return {}
+    return {
+        path.relative_to(ROOT): path.stat().st_mtime_ns
+        for path in RUNS.iterdir()
+        if path.is_file()
+    }
 
 
 def main() -> None:
-    """Run each step in order and list the records they wrote."""
+    """Run each step not yet done at this commit, and list the records."""
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
@@ -53,8 +68,20 @@ def main() -> None:
         return
 
     start = commit(ROOT)
+    manifest = MANIFESTS / f"{start['commit']}.json"
     records: dict[str, Path] = {}
+    try:
+        refuse_moved(start, start)
+        if manifest.exists():
+            text = manifest.read_text(encoding="utf-8")
+            records = read_manifest(text, start["commit"], set(listing()))
+            print(f"resuming: {len(records)} steps done, from {manifest.name}")
+    except RescoreError as error:
+        sys.exit(f"stopped: {error}")
+
     for number, step in enumerate(steps, 1):
+        if step.name in records:
+            continue
         try:
             refuse_moved(start, commit(ROOT))
             command = [
@@ -72,6 +99,10 @@ def main() -> None:
             sys.exit(f"stopped: {error}")
         if record is not None:
             records[step.name] = record
+            MANIFESTS.mkdir(parents=True, exist_ok=True)
+            manifest.write_text(
+                manifest_text(start["commit"], records), encoding="utf-8"
+            )
 
     print(f"\nrecords at {start['commit'][:7]}:")
     for record in records.values():
