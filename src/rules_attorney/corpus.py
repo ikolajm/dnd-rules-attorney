@@ -19,6 +19,7 @@ TRAITS_FILE = "5e-SRD-Traits.json"
 CLASSES_FILE = "5e-SRD-Classes.json"
 FEATS_FILE = "5e-SRD-Feats.json"
 MAGIC_ITEMS_FILE = "5e-SRD-Magic-Items.json"
+MONSTERS_FILE = "5e-SRD-Monsters.json"
 # Written by hand from the SRD 5.1 document, not pulled: the rules its prose
 # holds that no source file does, each passage with its page.
 SUPPLEMENT_FILE = "supplement.json"
@@ -743,6 +744,7 @@ SOURCES: dict[str, FileParser] = {
     CLASSES_FILE: each(class_entries),
     FEATS_FILE: each(feat_entries),
     MAGIC_ITEMS_FILE: each(magic_item_entries),
+    MONSTERS_FILE: each(monster_entries),
 }
 
 
