@@ -27,6 +27,7 @@ from rules_attorney.corpus import (
     item_fields,
     load_corpus,
     magic_item_entries,
+    monster_lines,
     prerequisite,
     race_entries,
     section_entries,
@@ -545,6 +546,84 @@ def test_magic_item_entries_makes_no_entry_for_a_variant() -> None:
 def test_magic_item_entries_writes_no_variants_line_without_variants() -> None:
     entries = magic_item_entries({**potion_record(), "variants": []})
     assert "Variants:" not in entries[0].text
+
+
+def bones_record() -> dict[str, Any]:
+    """A made-up stat block with every field empty or plain."""
+    return {
+        "index": "bones",
+        "name": "Bones",
+        "size": "Medium",
+        "type": "undead",
+        "speed": {"walk": "30 ft."},
+        "damage_vulnerabilities": [],
+        "damage_resistances": [],
+        "damage_immunities": [],
+        "condition_immunities": [],
+        "senses": {"passive_perception": 9},
+    }
+
+
+def test_monster_lines_writes_every_field_on_a_plain_record() -> None:
+    assert monster_lines(bones_record()) == [
+        "Type: undead",
+        "Size: Medium",
+        "Speed: 30 ft.",
+        "Damage vulnerabilities: none",
+        "Damage resistances: none",
+        "Damage immunities: none",
+        "Condition immunities: none",
+        "Senses: passive Perception 9",
+    ]
+
+
+def test_monster_lines_writes_modes_after_the_walk_and_hover_beside_fly() -> None:
+    speed = {"walk": "0 ft.", "fly": "40 ft.", "hover": True}
+    record = {**bones_record(), "speed": speed}
+    assert "Speed: 0 ft., fly 40 ft. (hover)" in monster_lines(record)
+
+
+def test_monster_lines_writes_each_sense_with_passive_perception() -> None:
+    senses = {"darkvision": "60 ft.", "passive_perception": 11}
+    lines = monster_lines({**bones_record(), "senses": senses})
+    assert "Senses: darkvision 60 ft., passive Perception 11" in lines
+
+
+def test_monster_lines_joins_damage_by_semicolons_and_names_conditions() -> None:
+    record = {
+        **bones_record(),
+        "damage_resistances": [
+            "fire",
+            "bludgeoning, piercing, and slashing from nonmagical weapons",
+        ],
+        "condition_immunities": [
+            {"index": "poisoned", "name": "Poisoned"},
+            {"index": "exhaustion", "name": "Exhaustion"},
+        ],
+    }
+    lines = monster_lines(record)
+    assert (
+        "Damage resistances: fire; bludgeoning, piercing, and slashing "
+        "from nonmagical weapons"
+    ) in lines
+    assert "Condition immunities: Poisoned, Exhaustion" in lines
+
+
+def test_monster_lines_writes_the_subtype_in_the_type() -> None:
+    record = {**bones_record(), "type": "humanoid", "subtype": "any race"}
+    assert monster_lines(record)[0] == "Type: humanoid (any race)"
+
+
+def test_monster_lines_refuses_an_unknown_speed_mode() -> None:
+    record = {**bones_record(), "speed": {"walk": "30 ft.", "teleport": "60 ft."}}
+    with pytest.raises(CorpusError, match="bones: unknown speed mode"):
+        monster_lines(record)
+
+
+def test_monster_lines_refuses_an_unknown_sense() -> None:
+    record = {**bones_record(), "senses": {"echolocation": "30 ft."}}
+    with pytest.raises(CorpusError, match="bones: unknown sense"):
+        monster_lines(record)
 
 
 def test_spellcasting_joins_label_each_rule_and_skip_non_casters() -> None:

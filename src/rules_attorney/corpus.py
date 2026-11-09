@@ -581,6 +581,57 @@ def magic_item_entries(record: dict[str, Any]) -> list[Entry]:
     return [Entry(path=f"magic-items > {record['index']}", text=text)]
 
 
+# The speed modes and senses a stat block may name; the build refuses others.
+# Hover is not a mode: it is read beside fly.
+SPEEDS = ("walk", "fly", "swim", "climb", "burrow")
+SENSES = ("darkvision", "blindsight", "truesight", "tremorsense", "passive_perception")
+
+
+def monster_lines(record: dict[str, Any]) -> list[str]:
+    """A stat block's rule-bearing fields: type, size, speed, defenses and senses."""
+    index: str = record["index"]
+    kind: str = record["type"]
+    subtype: str | None = record.get("subtype")
+    if subtype:
+        kind += f" ({subtype})"
+    lines = [f"Type: {kind}", f"Size: {record['size']}"]
+
+    speed: dict[str, Any] = record["speed"]
+    speeds: list[str] = []
+    for mode, value in speed.items():
+        if mode == "hover":
+            continue
+        if mode not in SPEEDS:
+            raise CorpusError(f"{index}: unknown speed mode {mode!r}")
+        if mode == "walk":
+            speeds.append(value)
+        else:
+            text = f"{mode} {value}"
+            if mode == "fly" and speed.get("hover"):
+                text += " (hover)"
+            speeds.append(text)
+    lines.append(f"Speed: {', '.join(speeds)}")
+
+    for label, key in (
+        ("Damage vulnerabilities", "damage_vulnerabilities"),
+        ("Damage resistances", "damage_resistances"),
+        ("Damage immunities", "damage_immunities"),
+    ):
+        lines.append(f"{label}: {'; '.join(record[key]) or 'none'}")
+    lines.append(f"Condition immunities: {names(record['condition_immunities'])}")
+
+    senses: list[str] = []
+    for sense, value in record["senses"].items():
+        if sense not in SENSES:
+            raise CorpusError(f"{index}: unknown sense {sense!r}")
+        if sense == "passive_perception":
+            senses.append(f"passive Perception {value}")
+        else:
+            senses.append(f"{sense} {value}")
+    lines.append(f"Senses: {', '.join(senses)}")
+    return lines
+
+
 def spellcasting_path(class_index: str) -> str:
     """The feature a class's spellcasting text joins: Spellcasting or Pact Magic."""
     feature = (
