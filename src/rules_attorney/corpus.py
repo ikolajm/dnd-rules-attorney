@@ -539,6 +539,31 @@ def feat_entries(record: dict[str, Any]) -> list[Entry]:
     return [Entry(path=f"feats > {record['index']}", text=text)]
 
 
+def item_fields(line: str) -> list[str]:
+    """The type, rarity and attunement lines of a magic item's first line."""
+    depth = 0
+    split: int | None = None
+    for index, char in enumerate(line):
+        if char == "(":
+            depth += 1
+        elif char == ")":
+            depth -= 1
+        elif char == "," and depth == 0:
+            split = index
+            break
+    if split is None:
+        raise CorpusError(f"no comma outside parentheses: {line!r}")
+    kind = line[:split]
+    rest = line[split + 1 :]
+    pattern = r"\((requires attunement[^)]*)\)"
+    clauses = re.findall(pattern, rest)
+    if len(clauses) > 1:
+        raise CorpusError(f"more than one attunement clause found: {line!r}")
+    attunement = clauses[0] if clauses else "none"
+    rarity = re.sub(pattern, "", rest).strip()
+    return [f"Type: {kind}", f"Rarity: {rarity}", f"Attunement: {attunement}"]
+
+
 def spellcasting_path(class_index: str) -> str:
     """The feature a class's spellcasting text joins: Spellcasting or Pact Magic."""
     feature = (

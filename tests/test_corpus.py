@@ -24,6 +24,7 @@ from rules_attorney.corpus import (
     feat_entries,
     feature_entries,
     focus_entries,
+    item_fields,
     load_corpus,
     prerequisite,
     race_entries,
@@ -463,6 +464,48 @@ def test_feat_entries_writes_the_prerequisite_before_the_text() -> None:
     assert entries[0].text == (
         "Brawler\n\nPrerequisite: Strength 13\n\nYou fight well.\n\n- You hit harder."
     )
+
+
+def test_item_fields_splits_a_line_with_an_attunement_clause() -> None:
+    assert item_fields("Wondrous item, rare (requires attunement by a bard)") == [
+        "Type: Wondrous item",
+        "Rarity: rare",
+        "Attunement: requires attunement by a bard",
+    ]
+
+
+def test_item_fields_writes_none_without_an_attunement_clause() -> None:
+    assert item_fields("Potion, uncommon") == [
+        "Type: Potion",
+        "Rarity: uncommon",
+        "Attunement: none",
+    ]
+
+
+def test_item_fields_splits_past_a_comma_inside_parentheses() -> None:
+    assert item_fields("Armor (light, medium, or heavy), rare") == [
+        "Type: Armor (light, medium, or heavy)",
+        "Rarity: rare",
+        "Attunement: none",
+    ]
+
+
+def test_item_fields_splits_at_the_first_of_several_commas() -> None:
+    assert item_fields("Wondrous item, rare (silver), very rare (bronze)") == [
+        "Type: Wondrous item",
+        "Rarity: rare (silver), very rare (bronze)",
+        "Attunement: none",
+    ]
+
+
+def test_item_fields_refuses_a_line_without_a_comma_outside_parentheses() -> None:
+    with pytest.raises(CorpusError, match="Ring of odd"):
+        item_fields("Ring of odd (rare, cursed)")
+
+
+def test_item_fields_refuses_two_attunement_clauses() -> None:
+    with pytest.raises(CorpusError, match="Ring, rare"):
+        item_fields("Ring, rare (requires attunement) (requires attunement by a bard)")
 
 
 def test_spellcasting_joins_label_each_rule_and_skip_non_casters() -> None:
