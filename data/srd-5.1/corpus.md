@@ -16901,6 +16901,6565 @@ You can also use an action to cast the detect magic spell from the orb without u
 
 ***Destroying an Orb.*** An Orb of Dragonkind appears fragile but is impervious to most damage, including the attacks and breath weapons of dragons. A disintegrate spell or one good hit from a +3 magic weapon is sufficient to destroy an orb, however.
 
+## monsters > aboleth
+
+Aboleth
+
+Type: aberration
+Size: Large
+Speed: 10 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 20
+
+Amphibious. The aboleth can breathe air and water.
+
+Mucous Cloud. While underwater, the aboleth is surrounded by transformative mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 ft. of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater.
+
+Probing Telepathy. If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature.
+
+Actions
+
+Enslave. The aboleth targets one creature it can see within 30 ft. of it. The target must succeed on a DC 14 Wisdom saving throw or be magically charmed by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.
+Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.
+
+Legendary Actions
+
+Detect. The aboleth makes a Wisdom (Perception) check.
+
+Tail Swipe. The aboleth makes one tail attack.
+
+Psychic Drain (Costs 2 Actions). One creature charmed by the aboleth takes 10 (3d6) psychic damage, and the aboleth regains hit points equal to the damage the creature takes.
+
+## monsters > acolyte
+
+Acolyte
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+Spellcasting. The acolyte is a 1st-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). The acolyte has following cleric spells prepared:
+
+- Cantrips (at will): light, sacred flame, thaumaturgy
+- 1st level (3 slots): bless, cure wounds, sanctuary
+
+## monsters > adult-black-dragon
+
+Adult Black Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Acid Breath. The dragon exhales acid in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-blue-dragon
+
+Adult Blue Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., burrow 30 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 ft. of the dragon and aware of it must succeed on a DC 17 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Lightning Breath. The dragon exhales lightning in a 90-foot line that is 5 ft. wide. Each creature in that line must make a DC 19 Dexterity saving throw, taking 66 (12d10) lightning damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 20 Dexterity saving throw or take 14 (2d6 + 7) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-brass-dragon
+
+Adult Brass Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., burrow 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Fire Breath. The dragon exhales fire in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 45 (13d6) fire damage on a failed save, or half as much damage on a successful one.
+Sleep Breath. The dragon exhales sleep gas in a 60-foot cone. Each creature in that area must succeed on a DC 18 Constitution saving throw or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-bronze-dragon
+
+Adult Bronze Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 17 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Lightning Breath. The dragon exhales lightning in a 90-foot line that is 5 feet wide. Each creature in that line must make a DC 19 Dexterity saving throw, taking 66 (12d10) lightning damage on a failed save, or half as much damage on a successful one.
+Repulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 19 Strength saving throw. On a failed save, the creature is pushed 60 feet away from the dragon.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 20 Dexterity saving throw or take 14 (2d6 + 7) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-copper-dragon
+
+Adult Copper Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., climb 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Acid Breath. The dragon exhales acid in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 18 Dexterity saving throw, taking 54 (12d8) acid damage on a failed save, or half as much damage on a successful one.
+Slowing Breath. The dragon exhales gas in a 60-foot cone. Each creature in that area must succeed on a DC 18 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-gold-dragon
+
+Adult Gold Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 24
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Fire Breath. The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 66 (12d10) fire damage on a failed save, or half as much damage on a successful one.
+Weakening Breath. The dragon exhales gas in a 60-foot cone. Each creature in that area must succeed on a DC 21 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-green-dragon
+
+Adult Green Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 22
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .
+
+Poison Breath. The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 56 (16d6) poison damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-red-dragon
+
+Adult Red Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., climb 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 23
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 ft. of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Fire Breath. The dragon exhales fire in a 60-foot cone. Each creature in that area must make a DC 21 Dexterity saving throw, taking 63 (18d6) fire damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-silver-dragon
+
+Adult Silver Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 18 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Cold Breath. The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 20 Constitution saving throw, taking 58 (13d8) cold damage on a failed save, or half as much damage on a successful one.
+Paralyzing Breath. The dragon exhales paralyzing gas in a 60-foot cone. Each creature in that area must succeed on a DC 20 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > adult-white-dragon
+
+Adult White Dragon
+
+Type: dragon
+Size: Huge
+Speed: 40 ft., burrow 30 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 21
+
+Ice Walk. The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 ft. of the dragon and aware of it must succeed on a DC 14 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Cold Breath. The dragon exhales an icy blast in a 60-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 10 ft. of the dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6 + 6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > air-elemental
+
+Air Elemental
+
+Type: elemental
+Size: Large
+Speed: fly 90 ft. (hover)
+Damage vulnerabilities: none
+Damage resistances: lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
+Senses: darkvision 60 ft., passive Perception 10
+
+Air Form. The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+
+Actions
+
+Whirlwind. Each creature in the elemental's space must make a DC 13 Strength saving throw. On a failure, a target takes 15 (3d8 + 2) bludgeoning damage and is flung up 20 feet away from the elemental in a random direction and knocked prone. If a thrown target strikes an object, such as a wall or floor, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 13 Dexterity saving throw or take the same damage and be knocked prone.
+If the saving throw is successful, the target takes half the bludgeoning damage and isn't flung away or knocked prone.
+
+## monsters > ancient-black-dragon
+
+Ancient Black Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 26
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Acid Breath. The dragon exhales acid in a 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-blue-dragon
+
+Ancient Blue Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., burrow 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Lightning Breath. The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-brass-dragon
+
+Ancient Brass Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., burrow 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 24
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 18 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons:
+Fire Breath. The dragon exhales fire in an 90-foot line that is 10 feet wide. Each creature in that line must make a DC 21 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one.
+Sleep Breath. The dragon exhales sleep gas in a 90-foot cone. Each creature in that area must succeed on a DC 21 Constitution saving throw or fall unconscious for 10 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.
+
+Change Shape. The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).
+In a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-bronze-dragon
+
+Ancient Bronze Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Lightning Breath. The dragon exhales lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.
+Repulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 23 Strength saving throw. On a failed save, the creature is pushed 60 feet away from the dragon.
+
+Change Shape. The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).
+In a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6 + 9) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-copper-dragon
+
+Ancient Copper Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., climb 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Acid Breath. The dragon exhales acid in an 90-foot line that is 10 feet wide. Each creature in that line must make a DC 22 Dexterity saving throw, taking 63 (14d8) acid damage on a failed save, or half as much damage on a successful one.
+Slowing Breath. The dragon exhales gas in a 90-foot cone. Each creature in that area must succeed on a DC 22 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.
+
+Change Shape. The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).
+In a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-gold-dragon
+
+Ancient Gold Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 24 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Fire Breath. The dragon exhales fire in a 90-foot cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 71 (13d10) fire damage on a failed save, or half as much damage on a successful one.
+Weakening Breath. The dragon exhales gas in a 90-foot cone. Each creature in that area must succeed on a DC 24 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+Change Shape. The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).
+In a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6 + 10) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-green-dragon
+
+Ancient Green Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 27
+
+Amphibious. The dragon can breathe air and water.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Poison Breath. The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-red-dragon
+
+Ancient Red Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., climb 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 26
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Fire Breath. The dragon exhales fire in a 90-foot cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6 + 10) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-silver-dragon
+
+Ancient Silver Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 26
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Cold Breath. The dragon exhales an icy blast in a 90-foot cone. Each creature in that area must make a DC 24 Constitution saving throw, taking 67 (15d8) cold damage on a failed save, or half as much damage on a successful one.
+Paralyzing Breath. The dragon exhales paralyzing gas in a 90-foot cone. Each creature in that area must succeed on a DC 24 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+Change Shape. The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).
+In a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6 + 10) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > ancient-white-dragon
+
+Ancient White Dragon
+
+Type: dragon
+Size: Gargantuan
+Speed: 40 ft., burrow 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 23
+
+Ice Walk. The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
+
+Legendary Resistance. If the dragon fails a saving throw, it can choose to succeed instead.
+
+Actions
+
+Frightful Presence. Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours .
+
+Cold Breath. The dragon exhales an icy blast in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 72 (16d8) cold damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Detect. The dragon makes a Wisdom (Perception) check.
+
+Tail Attack. The dragon makes a tail attack.
+
+Wing Attack (Costs 2 Actions). The dragon beats its wings. Each creature within 15 ft. of the dragon must succeed on a DC 22 Dexterity saving throw or take 15 (2d6 + 8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.
+
+## monsters > androsphinx
+
+Androsphinx
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: psychic; bludgeoning, piercing, and slashing from nonmagical weapons
+Condition immunities: Charmed, Frightened
+Senses: truesight 120 ft., passive Perception 20
+
+Inscrutable. The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.
+
+Magic Weapons. The sphinx's weapon attacks are magical.
+
+Spellcasting. The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:
+
+- Cantrips (at will): sacred flame, spare the dying, thaumaturgy
+- 1st level (4 slots): command, detect evil and good, detect magic
+- 2nd level (3 slots): lesser restoration, zone of truth
+- 3rd level (3 slots): dispel magic, tongues
+- 4th level (3 slots): banishment, freedom of movement
+- 5th level (2 slots): flame strike, greater restoration
+- 6th level (1 slot): heroes' feast
+
+Actions
+
+Roar. The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.
+
+First Roar. Each creature that fails a DC 18 Wisdom saving throw is frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+Second Roar. Each creature that fails a DC 18 Wisdom saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+Third Roar. Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone.
+
+Legendary Actions
+
+Claw Attack. The sphinx makes one claw attack.
+
+Teleport (Costs 2 Actions). The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.
+
+Cast a Spell (Costs 3 Actions). The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.
+
+## monsters > animated-armor
+
+Animated Armor
+
+Type: construct
+Size: Medium
+Speed: 25 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison; psychic
+Condition immunities: Blinded, Charmed, Deafened, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 6
+
+Antimagic Susceptibility. The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.
+
+False Appearance. While the armor remains motionless, it is indistinguishable from a normal suit of armor.
+
+## monsters > ankheg
+
+Ankheg
+
+Type: monstrosity
+Size: Large
+Speed: 30 ft., burrow 10 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 11
+
+Actions
+
+Acid Spray. The ankheg spits acid in a line that is 30 ft. long and 5 ft. wide, provided that it has no creature grappled. Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much damage on a successful one.
+
+## monsters > ape
+
+Ape
+
+Type: beast
+Size: Medium
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+## monsters > archmage
+
+Archmage
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: damage from spells; bludgeoning, piercing, and slashing from nonmagical attacks (from stoneskin)
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+Magic Resistance. The archmage has advantage on saving throws against spells and other magical effects.
+
+Spellcasting. The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast disguise self and invisibility at will and has the following wizard spells prepared:
+
+- Cantrips (at will): fire bolt, light, mage hand, prestidigitation, shocking grasp
+- 1st level (4 slots): detect magic, identify, mage armor*, magic missile
+- 2nd level (3 slots): detect thoughts, mirror image, misty step
+- 3rd level (3 slots): counterspell, fly, lightning bolt
+- 4th level (3 slots): banishment, fire shield, stoneskin*
+- 5th level (3 slots): cone of cold, scrying, wall of force
+- 6th level (1 slot): globe of invulnerability
+- 7th level (1 slot): teleport
+- 8th level (1 slot): mind blank*
+- 9th level (1 slot): time stop
+* The archmage casts these spells on itself before combat.
+
+## monsters > assassin
+
+Assassin
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: poison
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Assassinate. During its first turn, the assassin has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the assassin scores against a surprised creature is a critical hit.
+
+Evasion. If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.
+
+Sneak Attack (1/Turn). The assassin deals an extra 13 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 ft. of an ally of the assassin that isn't incapacitated and the assassin doesn't have disadvantage on the attack roll.
+
+## monsters > awakened-shrub
+
+Awakened Shrub
+
+Type: plant
+Size: Small
+Speed: 20 ft.
+Damage vulnerabilities: fire
+Damage resistances: piercing
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+False Appearance. While the shrub remains motionless, it is indistinguishable from a normal shrub.
+
+## monsters > awakened-tree
+
+Awakened Tree
+
+Type: plant
+Size: Huge
+Speed: 20 ft.
+Damage vulnerabilities: fire
+Damage resistances: bludgeoning; piercing
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+False Appearance. While the tree remains motionless, it is indistinguishable from a normal tree.
+
+## monsters > axe-beak
+
+Axe Beak
+
+Type: beast
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+## monsters > azer
+
+Azer
+
+Type: elemental
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: passive Perception 11
+
+Heated Body. A creature that touches the azer or hits it with a melee attack while within 5 ft. of it takes 5 (1d10) fire damage.
+
+Heated Weapons. When the azer hits with a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack).
+
+Illumination. The azer sheds bright light in a 10-foot radius and dim light for an additional 10 ft..
+
+## monsters > baboon
+
+Baboon
+
+Type: beast
+Size: Small
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Pack Tactics. The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > badger
+
+Badger
+
+Type: beast
+Size: Tiny
+Speed: 20 ft., burrow 5 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 11
+
+Keen Smell. The badger has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > balor
+
+Balor
+
+Type: fiend (demon)
+Size: Huge
+Speed: 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: truesight 120 ft., passive Perception 13
+
+Death Throes. When the balor dies, it explodes, and each creature within 30 feet of it must make a DC 20 Dexterity saving throw, taking 70 (20d6) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.
+
+Fire Aura. At the start of each of the balor's turns, each creature within 5 feet of it takes 10 (3d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature that touches the balor or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.
+
+Magic Resistance. The balor has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The balor's weapon attacks are magical.
+
+Actions
+
+Teleport. The balor magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.
+
+## monsters > bandit
+
+Bandit
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+## monsters > bandit-captain
+
+Bandit Captain
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Reactions
+
+Parry. The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon.
+
+## monsters > barbed-devil
+
+Barbed Devil
+
+Type: fiend (devil)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 18
+
+Barbed Hide. At the start of each of its turns, the barbed devil deals 5 (1d10) piercing damage to any creature grappling it.
+
+Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
+
+Magic Resistance. The devil has advantage on saving throws against spells and other magical effects.
+
+## monsters > basilisk
+
+Basilisk
+
+Type: monstrosity
+Size: Medium
+Speed: 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 9
+
+Petrifying Gaze. If a creature starts its turn within 30 ft. of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't incapacitated. On a failed save, the creature magically begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
+A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.
+If the basilisk sees its reflection within 30 ft. of it in bright light, it mistakes itself for a rival and targets itself with its gaze.
+
+## monsters > bat
+
+Bat
+
+Type: beast
+Size: Tiny
+Speed: 5 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 60 ft., passive Perception 11
+
+Echolocation. The bat can't use its blindsight while deafened.
+
+Keen Hearing. The bat has advantage on Wisdom (Perception) checks that rely on hearing.
+
+## monsters > bearded-devil
+
+Bearded Devil
+
+Type: fiend (devil)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 10
+
+Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
+
+Magic Resistance. The devil has advantage on saving throws against spells and other magical effects.
+
+Steadfast. The devil can't be frightened while it can see an allied creature within 30 feet of it.
+
+## monsters > behir
+
+Behir
+
+Type: monstrosity
+Size: Huge
+Speed: 50 ft., climb 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: darkvision 90 ft., passive Perception 16
+
+Actions
+
+Lightning Breath. The behir exhales a line of lightning that is 20 ft. long and 5 ft. wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 66 (12d10) lightning damage on a failed save, or half as much damage on a successful one.
+
+Swallow. The behir makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is blinded and restrained, it has total cover against attacks and other effects outside the behir, and it takes 21 (6d6) acid damage at the start of each of the behir's turns. A behir can have only one creature swallowed at a time.
+If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls prone in a space within 10 ft. of the behir. If the behir dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 15 ft. of movement, exiting prone.
+
+## monsters > berserker
+
+Berserker
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Reckless. At the start of its turn, the berserker can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.
+
+## monsters > black-bear
+
+Black Bear
+
+Type: beast
+Size: Medium
+Speed: 40 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Smell. The bear has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > black-dragon-wyrmling
+
+Black Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., fly 60 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Acid Breath. The dragon exhales acid in a 15-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 22 (5d8) acid damage on a failed save, or half as much damage on a successful one.
+
+## monsters > black-pudding
+
+Black Pudding
+
+Type: ooze
+Size: Large
+Speed: 20 ft., climb 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid; cold; lightning; slashing
+Condition immunities: Blinded, Charmed, Exhaustion, Frightened, Prone
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Amorphous. The pudding can move through a space as narrow as 1 inch wide without squeezing.
+
+Corrosive Form. A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage. The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.
+
+Spider Climb. The pudding can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Reactions
+
+Split. When a pudding that is Medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.
+
+## monsters > blink-dog
+
+Blink Dog
+
+Type: fey
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Keen Hearing and Smell. The dog has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Actions
+
+Teleport. The dog magically teleports, along with any equipment it is wearing or carrying, up to 40 ft. to an unoccupied space it can see. Before or after teleporting, the dog can make one bite attack.
+
+## monsters > blood-hawk
+
+Blood Hawk
+
+Type: beast
+Size: Small
+Speed: 10 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Keen Sight. The hawk has advantage on Wisdom (Perception) checks that rely on sight.
+
+Pack Tactics. The hawk has advantage on an attack roll against a creature if at least one of the hawk's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > blue-dragon-wyrmling
+
+Blue Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., burrow 15 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Actions
+
+Lightning Breath. The dragon exhales lightning in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.
+
+## monsters > boar
+
+Boar
+
+Type: beast
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 9
+
+Charge. If the boar moves at least 20 ft. straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+
+Relentless. If the boar takes 7 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.
+
+## monsters > bone-devil
+
+Bone Devil
+
+Type: fiend (devil)
+Size: Large
+Speed: 40 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 12
+
+Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
+
+Magic Resistance. The devil has advantage on saving throws against spells and other magical effects.
+
+## monsters > brass-dragon-wyrmling
+
+Brass Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., burrow 15 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Fire Breath. The dragon exhales fire in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one.
+Sleep Breath. The dragon exhales sleep gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw or fall unconscious for 1 minute. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.
+
+## monsters > bronze-dragon-wyrmling
+
+Bronze Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., fly 60 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Lightning Breath. The dragon exhales lightning in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 16 (3d10) lightning damage on a failed save, or half as much damage on a successful one.
+Repulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 12 Strength saving throw. On a failed save, the creature is pushed 30 feet away from the dragon.
+
+## monsters > brown-bear
+
+Brown Bear
+
+Type: beast
+Size: Large
+Speed: 40 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Smell. The bear has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > bugbear
+
+Bugbear
+
+Type: humanoid (goblinoid)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Brute. A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).
+
+Surprise Attack. If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.
+
+## monsters > bulette
+
+Bulette
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft., burrow 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 16
+
+Standing Leap. The bulette's long jump is up to 30 ft. and its high jump is up to 15 ft., with or without a running start.
+
+Actions
+
+Deadly Leap. If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6 + 4) bludgeoning damage plus 14 (3d6 + 4) slashing damage. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls prone in the bulette's space.
+
+## monsters > camel
+
+Camel
+
+Type: beast
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 9
+
+## monsters > cat
+
+Cat
+
+Type: beast
+Size: Tiny
+Speed: 40 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Smell. The cat has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > centaur
+
+Centaur
+
+Type: monstrosity
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Charge. If the centaur moves at least 30 ft. straight toward a target and then hits it with a pike attack on the same turn, the target takes an extra 10 (3d6) piercing damage.
+
+## monsters > chain-devil
+
+Chain Devil
+
+Type: fiend (devil)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 11
+
+Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
+
+Magic Resistance. The devil has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Animate Chains. Up to four chains the devil can see within 60 feet of it magically sprout razor-edged barbs and animate under the devil's control, provided that the chains aren't being worn or carried.
+Each animated chain is an object with AC 20, 20 hit points, resistance to piercing damage, and immunity to psychic and thunder damage. When the devil uses Multiattack on its turn, it can use each animated chain to make one additional chain attack. An animated chain can grapple one creature of its own but can't make attacks while grappling. An animated chain reverts to its inanimate state if reduced to 0 hit points or if the devil is incapacitated or dies.
+
+Reactions
+
+Unnerving Mask. When a creature the devil can see starts its turn within 30 feet of the devil, the devil can create the illusion that it looks like one of the creature's departed loved ones or bitter enemies. If the creature can see the devil, it must succeed on a DC 14 Wisdom saving throw or be frightened until the end of its turn.
+
+## monsters > chimera
+
+Chimera
+
+Type: monstrosity
+Size: Large
+Speed: 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 18
+
+Actions
+
+Fire Breath. The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 31 (7d8) fire damage on a failed save, or half as much damage on a successful one.
+
+## monsters > chuul
+
+Chuul
+
+Type: aberration
+Size: Large
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 14
+
+Amphibious. The chuul can breathe air and water.
+
+Sense Magic. The chuul senses magic within 120 feet of it at will. This trait otherwise works like the detect magic spell but isn't itself magical.
+
+Actions
+
+Tentacles. One creature grappled by the chuul must succeed on a DC 13 Constitution saving throw or be poisoned for 1 minute. Until this poison ends, the target is paralyzed. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+## monsters > clay-golem
+
+Clay Golem
+
+Type: construct
+Size: Large
+Speed: 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid; poison; psychic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
+Senses: darkvision 60 ft., passive Perception 9
+
+Acid Absorption. Whenever the golem is subjected to acid damage, it takes no damage and instead regains a number of hit points equal to the acid damage dealt.
+
+Berserk. Whenever the golem starts its turn with 60 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.
+
+Immutable Form. The golem is immune to any spell or effect that would alter its form.
+
+Magic Resistance. The golem has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The golem's weapon attacks are magical.
+
+Actions
+
+Haste. Until the end of its next turn, the golem magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use its slam attack as a bonus action.
+
+## monsters > cloaker
+
+Cloaker
+
+Type: aberration
+Size: Large
+Speed: 10 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 11
+
+Damage Transfer. While attached to a creature, the cloaker takes only half the damage dealt to it (rounded down). and that creature takes the other half.
+
+False Appearance. While the cloaker remains motionless without its underside exposed, it is indistinguishable from a dark leather cloak.
+
+Light Sensitivity. While in bright light, the cloaker has disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight.
+
+Actions
+
+Moan. Each creature within 60 feet of the cloaker that can hear its moan and that isn't an aberration must succeed on a DC 13 Wisdom saving throw or become frightened until the end of the cloaker's next turn. If a creature's saving throw is successful, the creature is immune to the cloaker's moan for the next 24 hours.
+
+Phantasms. The cloaker magically creates three illusory duplicates of itself if it isn't in bright light. The duplicates move with it and mimic its actions, shifting position so as to make it impossible to track which cloaker is the real one. If the cloaker is ever in an area of bright light, the duplicates disappear.
+Whenever any creature targets the cloaker with an attack or a harmful spell while a duplicate remains, that creature rolls randomly to determine whether it targets the cloaker or one of the duplicates. A creature is unaffected by this magical effect if it can't see or if it relies on senses other than sight.
+A duplicate has the cloaker's AC and uses its saving throws. If an attack hits a duplicate, or if a duplicate fails a saving throw against an effect that deals damage, the duplicate disappears.
+
+## monsters > cloud-giant
+
+Cloud Giant
+
+Type: giant
+Size: Huge
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 17
+
+Keen Smell. The giant has advantage on Wisdom (Perception) checks that rely on smell.
+
+Innate Spellcasting. The giant's innate spellcasting ability is Charisma. It can innately cast the following spells, requiring no material components:
+
+At will: detect magic, fog cloud, light
+3/day each: feather fall, fly, misty step, telekinesis
+1/day each: control weather, gaseous form
+
+## monsters > cockatrice
+
+Cockatrice
+
+Type: monstrosity
+Size: Small
+Speed: 20 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 11
+
+## monsters > commoner
+
+Commoner
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+## monsters > constrictor-snake
+
+Constrictor Snake
+
+Type: beast
+Size: Large
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., passive Perception 10
+
+## monsters > copper-dragon-wyrmling
+
+Copper Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., climb 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Acid Breath. The dragon exhales acid in an 20-foot line that is 5 feet wide. Each creature in that line must make a DC 11 Dexterity saving throw, taking 18 (4d8) acid damage on a failed save, or half as much damage on a successful one.
+Slowing Breath. The dragon exhales gas in a 15-foot cone. Each creature in that area must succeed on a DC 11 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.
+
+## monsters > couatl
+
+Couatl
+
+Type: celestial
+Size: Medium
+Speed: 30 ft., fly 90 ft.
+Damage vulnerabilities: none
+Damage resistances: radiant
+Damage immunities: psychic; bludgeoning, piercing, and slashing from nonmagical weapons
+Condition immunities: none
+Senses: truesight 120 ft., passive Perception 15
+
+Innate Spellcasting. The couatl's spellcasting ability is Charisma (spell save DC 14). It can innately cast the following spells, requiring only verbal components:
+
+At will: detect evil and good, detect magic, detect thoughts
+3/day each: bless, create food and water, cure wounds, lesser restoration, protection from poison, sanctuary, shield
+1/day each: dream, greater restoration, scrying
+
+Magic Weapons. The couatl's weapon attacks are magical.
+
+Shielded Mind. The couatl is immune to scrying and to any effect that would sense its emotions, read its thoughts, or detect its location.
+
+Actions
+
+Change Shape. The couatl magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the couatl's choice).
+In a new form, the couatl retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and other actions are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks. If the new form has a bite attack, the couatl can use its bite in that form.
+
+## monsters > crab
+
+Crab
+
+Type: beast
+Size: Tiny
+Speed: 20 ft., swim 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 30 ft., passive Perception 9
+
+Amphibious. The crab can breathe air and water.
+
+## monsters > crocodile
+
+Crocodile
+
+Type: beast
+Size: Large
+Speed: 20 ft., swim 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Hold Breath. The crocodile can hold its breath for 15 minutes.
+
+## monsters > cult-fanatic
+
+Cult Fanatic
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Dark Devotion. The fanatic has advantage on saving throws against being charmed or frightened.
+
+Spellcasting. The fanatic is a 4th-level spellcaster. Its spell casting ability is Wisdom (spell save DC 11, +3 to hit with spell attacks). The fanatic has the following cleric spells prepared:
+
+Cantrips (at will): light, sacred flame, thaumaturgy
+- 1st level (4 slots): command, inflict wounds, shield of faith
+- 2nd level (3 slots): hold person, spiritual weapon
+
+## monsters > cultist
+
+Cultist
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Dark Devotion. The cultist has advantage on saving throws against being charmed or frightened.
+
+## monsters > darkmantle
+
+Darkmantle
+
+Type: monstrosity
+Size: Small
+Speed: 10 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 60 ft., passive Perception 10
+
+Echolocation. The darkmantle can't use its blindsight while deafened.
+
+False Appearance. While the darkmantle remains motionless, it is indistinguishable from a cave formation such as a stalactite or stalagmite.
+
+Actions
+
+Darkness Aura. A 15-foot radius of magical darkness extends out from the darkmantle, moves with it, and spreads around corners. The darkness lasts as long as the darkmantle maintains concentration, up to 10 minutes (as if concentrating on a spell). Darkvision can't penetrate this darkness, and no natural light can illuminate it. If any of the darkness overlaps with an area of light created by a spell of 2nd level or lower, the spell creating the light is dispelled.
+
+## monsters > death-dog
+
+Death Dog
+
+Type: monstrosity
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 15
+
+Two-Headed. The dog has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, or knocked unconscious.
+
+## monsters > deep-gnome-svirfneblin
+
+Deep Gnome (Svirfneblin)
+
+Type: humanoid (gnome)
+Size: Small
+Speed: 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 12
+
+Stone Camouflage. The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
+
+Gnome Cunning. The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic.
+
+Innate Spellcasting. The gnome's innate spellcasting ability is Intelligence (spell save DC 11). It can innately cast the following spells, requiring no material components:
+At will: nondetection (self only)
+1/day each: blindness/deafness, blur, disguise self
+
+## monsters > deer
+
+Deer
+
+Type: beast
+Size: Medium
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+## monsters > deva
+
+Deva
+
+Type: celestial
+Size: Medium
+Speed: 30 ft., fly 90 ft.
+Damage vulnerabilities: none
+Damage resistances: radiant; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: Charmed, Exhaustion, Frightened
+Senses: darkvision 120 ft., passive Perception 19
+
+Angelic Weapons. The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack).
+
+Innate Spellcasting. The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components:
+At will: detect evil and good
+1/day each: commune, raise dead
+
+Magic Resistance. The deva has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Healing Touch. The deva touches another creature. The target magically regains 20 (4d8 + 2) hit points and is freed from any curse, disease, poison, blindness, or deafness.
+
+Change Shape. The deva magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the deva's choice).
+In a new form, the deva retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and special senses are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks.
+
+## monsters > dire-wolf
+
+Dire Wolf
+
+Type: beast
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Pack Tactics. The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > djinni
+
+Djinni
+
+Type: elemental
+Size: Large
+Speed: 30 ft., fly 90 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning; thunder
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 13
+
+Elemental Demise. If the djinni dies, its body disintegrates into a warm breeze, leaving behind only equipment the djinni was wearing or carrying.
+
+Innate Spellcasting. The djinni's innate spellcasting ability is Charisma (spell save DC 17, +9 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+
+At will: detect evil and good, detect magic, thunderwave
+3/day each: create food and water (can create wine instead of water), tongues, wind walk
+1/day each: conjure elemental (air elemental only), creation, gaseous form, invisibility, major image, plane shift
+
+Actions
+
+Create Whirlwind. A 5-foot-radius, 30-foot-tall cylinder of swirling air magically forms on a point the djinni can see within 120 feet of it. The whirlwind lasts as long as the djinni maintains concentration (as if concentrating on a spell). Any creature but the djinni that enters the whirlwind must succeed on a DC 18 Strength saving throw or be restrained by it. The djinni can move the whirlwind up to 60 feet as an action, and creatures restrained by the whirlwind move with it. The whirlwind ends if the djinni loses sight of it.
+A creature can use its action to free a creature restrained by the whirlwind, including itself, by succeeding on a DC 18 Strength check. If the check succeeds, the creature is no longer restrained and moves to the nearest space outside the whirlwind.
+
+## monsters > doppelganger
+
+Doppelganger
+
+Type: monstrosity (shapechanger)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: Charmed
+Senses: darkvision 60 ft., passive Perception 11
+
+Shapechanger. The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Ambusher. In the first round of combat, the doppelganger has advantage on attack rolls against any creature it has surprised.
+
+Surprise Attack. If the doppelganger surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 10 (3d6) damage from the attack.
+
+Actions
+
+Read Thoughts. The doppelganger magically reads the surface thoughts of one creature within 60 ft. of it. The effect can penetrate barriers, but 3 ft. of wood or dirt, 2 ft. of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the doppelganger can continue reading its thoughts, as long as the doppelganger's concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the doppelganger has advantage on Wisdom (Insight) and Charisma (Deception, Intimidation, and Persuasion) checks against the target.
+
+## monsters > draft-horse
+
+Draft Horse
+
+Type: beast
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+## monsters > dragon-turtle
+
+Dragon Turtle
+
+Type: dragon
+Size: Gargantuan
+Speed: 20 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: fire
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 11
+
+Amphibious. The dragon turtle can breathe air and water.
+
+Actions
+
+Steam Breath. The dragon turtle exhales scalding steam in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 52 (15d6) fire damage on a failed save, or half as much damage on a successful one. Being underwater doesn't grant resistance against this damage.
+
+## monsters > dretch
+
+Dretch
+
+Type: fiend (demon)
+Size: Small
+Speed: 20 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 9
+
+Actions
+
+Fetid Cloud. A 10-foot radius of disgusting green gas extends out from the dretch. The gas spreads around corners, and its area is lightly obscured. It lasts for 1 minute or until a strong wind disperses it. Any creature that starts its turn in that area must succeed on a DC 11 Constitution saving throw or be poisoned until the start of its next turn. While poisoned in this way, the target can take either an action or a bonus action on its turn, not both, and can't take reactions.
+
+## monsters > drider
+
+Drider
+
+Type: monstrosity
+Size: Large
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 15
+
+Fey Ancestry. The drider has advantage on saving throws against being charmed, and magic can't put the drider to sleep.
+
+Innate Spellcasting. The drider's innate spellcasting ability is Wisdom (spell save DC 13). The drider can innately cast the following spells, requiring no material components:
+At will: dancing lights
+1/day each: darkness, faerie fire
+
+Spider Climb. The drider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Sunlight Sensitivity. While in sunlight, the drider has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+Web Walker. The drider ignores movement restrictions caused by webbing.
+
+## monsters > drow
+
+Drow
+
+Type: humanoid (elf)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 12
+
+Fey Ancestry. The drow has advantage on saving throws against being charmed, and magic can't put the drow to sleep.
+
+Innate Spellcasting. The drow's spellcasting ability is Charisma (spell save DC 11). It can innately cast the following spells, requiring no material components:
+At will: dancing lights
+1/day each: darkness, faerie fire
+
+Sunlight Sensitivity. While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+## monsters > druid
+
+Druid
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Spellcasting. The druid is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). It has the following druid spells prepared:
+
+- Cantrips (at will): druidcraft, produce flame, shillelagh
+- 1st level (4 slots): entangle, longstrider, speak with animals, thunderwave
+- 2nd level (3 slots): animal messenger, barkskin
+
+## monsters > dryad
+
+Dryad
+
+Type: fey
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Innate Spellcasting. The dryad's innate spellcasting ability is Charisma (spell save DC 14). The dryad can innately cast the following spells, requiring no material components:
+
+At will: druidcraft
+3/day each: entangle, goodberry
+1/day each: barkskin, pass without trace, shillelagh
+
+Magic Resistance. The dryad has advantage on saving throws against spells and other magical effects.
+
+Speak with Beasts and Plants. The dryad can communicate with beasts and plants as if they shared a language.
+
+Tree Stride. Once on her turn, the dryad can use 10 ft. of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 ft. of the first tree, appearing in an unoccupied space within 5 ft. of the second tree. Both trees must be large or bigger.
+
+Actions
+
+Fey Charm. The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a DC 14 Wisdom saving throw or be magically charmed. The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.
+Each time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.
+The dryad can have no more than one humanoid and up to three beasts charmed at a time.
+
+## monsters > duergar
+
+Duergar
+
+Type: humanoid (dwarf)
+Size: Medium
+Speed: 25 ft.
+Damage vulnerabilities: none
+Damage resistances: poison
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 10
+
+Duergar Resilience. The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.
+
+Sunlight Sensitivity. While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+Actions
+
+Enlarge. For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.
+
+Invisibility. The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.
+
+## monsters > dust-mephit
+
+Dust Mephit
+
+Type: elemental
+Size: Small
+Speed: 30 ft., fly 30 ft.
+Damage vulnerabilities: fire
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 12
+
+Death Burst. When the mephit dies, it explodes in a burst of dust. Each creature within 5 ft. of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.
+
+Innate Spellcasting. The mephit can innately cast sleep, requiring no material components. Its innate spellcasting ability is Charisma.
+
+Actions
+
+Blinding Breath. The mephit exhales a 15-foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+## monsters > eagle
+
+Eagle
+
+Type: beast
+Size: Small
+Speed: 10 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Keen Sight. The eagle has advantage on Wisdom (Perception) checks that rely on sight.
+
+## monsters > earth-elemental
+
+Earth Elemental
+
+Type: elemental
+Size: Large
+Speed: 30 ft., burrow 30 ft.
+Damage vulnerabilities: thunder
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Exhaustion, Paralyzed, Petrified, Poisoned, Unconscious
+Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 10
+
+Earth Glide. The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through.
+
+Siege Monster. The elemental deals double damage to objects and structures.
+
+## monsters > efreeti
+
+Efreeti
+
+Type: elemental
+Size: Large
+Speed: 40 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 12
+
+Elemental Demise. If the efreeti dies, its body disintegrates in a flash of fire and puff of smoke, leaving behind only equipment the djinni was wearing or carrying.
+
+Innate Spellcasting. The efreeti's innate spell casting ability is Charisma (spell save DC 15, +7 to hit with spell attacks). It can innately cast the following spells, requiring no material components:
+
+At will: detect magic
+3/day: enlarge/reduce, tongues
+1/day each: conjure elemental (fire elemental only), gaseous form, invisibility, major image, plane shift, wall of fire
+
+## monsters > elephant
+
+Elephant
+
+Type: beast
+Size: Huge
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Trampling Charge. If the elephant moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the elephant can make one stomp attack against it as a bonus action.
+
+## monsters > elk
+
+Elk
+
+Type: beast
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Charge. If the elk moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+
+## monsters > erinyes
+
+Erinyes
+
+Type: fiend (devil)
+Size: Medium
+Speed: 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: truesight 120 ft., passive Perception 12
+
+Hellish Weapons. The erinyes's weapon attacks are magical and deal an extra 13 (3d8) poison damage on a hit (included in the attacks).
+
+Magic Resistance. The erinyes has advantage on saving throws against spells and other magical effects.
+
+Reactions
+
+Parry. The erinyes adds 4 to its AC against one melee attack that would hit it. To do so, the erinyes must see the attacker and be wielding a melee weapon.
+
+## monsters > ettercap
+
+Ettercap
+
+Type: monstrosity
+Size: Medium
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 13
+
+Spider Climb. The ettercap can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Web Sense. While in contact with a web, the ettercap knows the exact location of any other creature in contact with the same web.
+
+Web Walker. The ettercap ignores movement restrictions caused by webbing.
+
+## monsters > ettin
+
+Ettin
+
+Type: giant
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Two Heads. The ettin has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.
+
+Wakeful. When one of the ettin's heads is asleep, its other head is awake.
+
+## monsters > fire-elemental
+
+Fire Elemental
+
+Type: elemental
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: fire; poison
+Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
+Senses: darkvision 60 ft., passive Perception 10
+
+Fire Form. The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 ft. of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the creature takes 5 (1d10) fire damage at the start of each of its turns.
+
+Illumination. The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 ft..
+
+Water Susceptibility. For every 5 ft. the elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.
+
+## monsters > fire-giant
+
+Fire Giant
+
+Type: giant
+Size: Huge
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: passive Perception 16
+
+## monsters > flesh-golem
+
+Flesh Golem
+
+Type: construct
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning; poison; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
+Senses: darkvision 60 ft., passive Perception 10
+
+Berserk. Whenever the golem starts its turn with 40 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.
+The golem's creator, if within 60 feet of the berserk golem, can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a DC 15 Charisma (Persuasion) check. If the check succeeds, the golem ceases being berserk. If it takes damage while still at 40 hit points or fewer, the golem might go berserk again.
+
+Aversion of Fire. If the golem takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn.
+
+Immutable Form. The golem is immune to any spell or effect that would alter its form.
+
+Lightning Absorption. Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt.
+
+Magic Resistance. The golem has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The golem's weapon attacks are magical.
+
+## monsters > flying-snake
+
+Flying Snake
+
+Type: beast
+Size: Tiny
+Speed: 30 ft., fly 60 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., passive Perception 11
+
+Flyby. The snake doesn't provoke opportunity attacks when it flies out of an enemy's reach.
+
+## monsters > flying-sword
+
+Flying Sword
+
+Type: construct
+Size: Small
+Speed: 0 ft., fly 50 ft. (hover)
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison; psychic
+Condition immunities: Blinded, Charmed, Blinded, Frightened, Paralyzed, Petrified, Poisoned
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 7
+
+Antimagic Susceptibility. The sword is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the sword must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.
+
+False Appearance. While the sword remains motionless and isn't flying, it is indistinguishable from a normal sword.
+
+## monsters > frog
+
+Frog
+
+Type: beast
+Size: Tiny
+Speed: 20 ft., swim 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 11
+
+Amphibious. The frog can breathe air and water
+
+Standing Leap. The frog's long jump is up to 10 ft. and its high jump is up to 5 ft., with or without a running start.
+
+## monsters > frost-giant
+
+Frost Giant
+
+Type: giant
+Size: Huge
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: passive Perception 13
+
+## monsters > gargoyle
+
+Gargoyle
+
+Type: elemental
+Size: Medium
+Speed: 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
+Damage immunities: poison
+Condition immunities: Exhaustion, Petrified, Poisoned
+Senses: darkvision 60 ft., passive Perception 10
+
+False Appearance. While the gargoyle remains motion less, it is indistinguishable from an inanimate statue.
+
+## monsters > gelatinous-cube
+
+Gelatinous Cube
+
+Type: ooze
+Size: Large
+Speed: 15 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: Blinded, Charmed, Deafened, Exhaustion, Frightened, Prone
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Ooze Cube. The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.
+Creatures inside the cube can be seen but have total cover.
+A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 (3d6) acid damage.
+The cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.
+
+Transparent. Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.
+
+Actions
+
+Engulf. The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.
+On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.
+On a failed save, the cube enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.
+An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube.
+
+## monsters > ghast
+
+Ghast
+
+Type: undead
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: necrotic
+Damage immunities: poison
+Condition immunities: Poisoned, Charmed, Exhaustion
+Senses: darkvision 60 ft., passive Perception 10
+
+Stench. Any creature that starts its turn within 5 ft. of the ghast must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.
+
+Turn Defiance. The ghast and any ghouls within 30 ft. of it have advantage on saving throws against effects that turn undead.
+
+## monsters > ghost
+
+Ghost
+
+Type: undead
+Size: Medium
+Speed: 0 ft., fly 40 ft. (hover)
+Damage vulnerabilities: none
+Damage resistances: acid; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: cold; necrotic; poison
+Condition immunities: Charmed, Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained
+Senses: darkvision 60 ft., passive Perception 11
+
+Ethereal Sight. The ghost can see 60 ft. into the Ethereal Plane when it is on the Material Plane, and vice versa.
+
+Incorporeal Movement. The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+Actions
+
+Etherealness. The ghost enters the Ethereal Plane from the Material Plane, or vice versa. It is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can't affect or be affected by anything on the other plane.
+
+Horrifying Visage. Each non-undead creature within 60 ft. of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 × 10 years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.
+
+Possession. One humanoid that the ghost can see within 5 ft. of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control of its body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being charmed and frightened. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.
+The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 ft. of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession ends.
+
+## monsters > ghoul
+
+Ghoul
+
+Type: undead
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned, Charmed, Exhaustion
+Senses: darkvision 60 ft., passive Perception 10
+
+## monsters > giant-ape
+
+Giant Ape
+
+Type: beast
+Size: Huge
+Speed: 40 ft., climb 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+## monsters > giant-badger
+
+Giant Badger
+
+Type: beast
+Size: Medium
+Speed: 30 ft., burrow 10 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 11
+
+Keen Smell. The badger has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > giant-bat
+
+Giant Bat
+
+Type: beast
+Size: Large
+Speed: 10 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 60 ft., passive Perception 11
+
+Echolocation. The bat can't use its blindsight while deafened.
+
+Keen Hearing. The bat has advantage on Wisdom (Perception) checks that rely on hearing.
+
+## monsters > giant-boar
+
+Giant Boar
+
+Type: beast
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 8
+
+Charge. If the boar moves at least 20 ft. straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+
+Relentless. If the boar takes 10 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.
+
+## monsters > giant-centipede
+
+Giant Centipede
+
+Type: beast
+Size: Small
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 30 ft., passive Perception 8
+
+## monsters > giant-constrictor-snake
+
+Giant Constrictor Snake
+
+Type: beast
+Size: Huge
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., passive Perception 12
+
+## monsters > giant-crab
+
+Giant Crab
+
+Type: beast
+Size: Medium
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 30 ft., passive Perception 9
+
+Amphibious. The crab can breathe air and water.
+
+## monsters > giant-crocodile
+
+Giant Crocodile
+
+Type: beast
+Size: Huge
+Speed: 30 ft., swim 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Hold Breath. The crocodile can hold its breath for 30 minutes.
+
+## monsters > giant-eagle
+
+Giant Eagle
+
+Type: beast
+Size: Large
+Speed: 10 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Keen Sight. The eagle has advantage on Wisdom (Perception) checks that rely on sight.
+
+## monsters > giant-elk
+
+Giant Elk
+
+Type: beast
+Size: Huge
+Speed: 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Charge. If the elk moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.
+
+## monsters > giant-fire-beetle
+
+Giant Fire Beetle
+
+Type: beast
+Size: Small
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 30 ft., passive Perception 8
+
+Illumination. The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 ft..
+
+## monsters > giant-frog
+
+Giant Frog
+
+Type: beast
+Size: Medium
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 12
+
+Amphibious. The frog can breathe air and water
+
+Standing Leap. The frog's long jump is up to 20 ft. and its high jump is up to 10 ft., with or without a running start.
+
+Actions
+
+Swallow. The frog makes one bite attack against a Small or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the frog, and it takes 5 (2d4) acid damage at the start of each of the frog's turns. The frog can have only one target swallowed at a time. If the frog dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 ft. of movement, exiting prone.
+
+## monsters > giant-goat
+
+Giant Goat
+
+Type: beast
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Charge. If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+
+Sure-Footed. The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.
+
+## monsters > giant-hyena
+
+Giant Hyena
+
+Type: beast
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Rampage. When the hyena reduces a creature to 0 hit points with a melee attack on its turn, the hyena can take a bonus action to move up to half its speed and make a bite attack.
+
+## monsters > giant-lizard
+
+Giant Lizard
+
+Type: beast
+Size: Large
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 10
+
+## monsters > giant-octopus
+
+Giant Octopus
+
+Type: beast
+Size: Large
+Speed: 10 ft., swim 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Hold Breath. While out of water, the octopus can hold its breath for 1 hour.
+
+Underwater Camouflage. The octopus has advantage on Dexterity (Stealth) checks made while underwater.
+
+Water Breathing. The octopus can breathe only underwater.
+
+Actions
+
+Ink Cloud. A 20-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.
+
+## monsters > giant-owl
+
+Giant Owl
+
+Type: beast
+Size: Large
+Speed: 5 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 15
+
+Flyby. The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.
+
+Keen Hearing and Sight. The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight.
+
+## monsters > giant-poisonous-snake
+
+Giant Poisonous Snake
+
+Type: beast
+Size: Medium
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., passive Perception 12
+
+## monsters > giant-rat
+
+Giant Rat
+
+Type: beast
+Size: Small
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell.
+
+Pack Tactics. The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > giant-rat-diseased
+
+Giant Rat (Diseased)
+
+Type: beast
+Size: Small
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell.
+
+Pack Tactics. The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > giant-scorpion
+
+Giant Scorpion
+
+Type: beast
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 60 ft., passive Perception 9
+
+## monsters > giant-sea-horse
+
+Giant Sea Horse
+
+Type: beast
+Size: Large
+Speed: 0 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Charge. If the sea horse moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+
+Water Breathing. The sea horse can breathe only underwater.
+
+## monsters > giant-shark
+
+Giant Shark
+
+Type: beast
+Size: Huge
+Speed: swim 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 60 ft., passive Perception 13
+
+Blood Frenzy. The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.
+
+Water Breathing. The shark can breathe only underwater.
+
+## monsters > giant-spider
+
+Giant Spider
+
+Type: beast
+Size: Large
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 10
+
+Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Web Sense. While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+
+Web Walker. The spider ignores movement restrictions caused by webbing.
+
+## monsters > giant-toad
+
+Giant Toad
+
+Type: beast
+Size: Large
+Speed: 20 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 10
+
+Amphibious. The toad can breathe air and water
+
+Standing Leap. The toad's long jump is up to 20 ft. and its high jump is up to 10 ft., with or without a running start.
+
+Actions
+
+Swallow. The toad makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the toad, and it takes 10 (3d6) acid damage at the start of each of the toad's turns. The toad can have only one target swallowed at a time.
+If the toad dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting prone.
+
+## monsters > giant-vulture
+
+Giant Vulture
+
+Type: beast
+Size: Large
+Speed: 10 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Sight and Smell. The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.
+
+Pack Tactics. The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > giant-wasp
+
+Giant Wasp
+
+Type: beast
+Size: Medium
+Speed: 10 ft., fly 50 ft., swim 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+## monsters > giant-weasel
+
+Giant Weasel
+
+Type: beast
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 13
+
+Keen Hearing and Smell. The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > giant-wolf-spider
+
+Giant Wolf Spider
+
+Type: beast
+Size: Medium
+Speed: 40 ft., climb 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 13
+
+Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Web Sense. While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+
+Web Walker. The spider ignores movement restrictions caused by webbing.
+
+## monsters > gibbering-mouther
+
+Gibbering Mouther
+
+Type: aberration
+Size: Medium
+Speed: 10 ft., swim 10 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: Prone
+Senses: darkvision 60 ft., passive Perception 10
+
+Aberrant Ground. The ground in a 10-foot radius around the mouther is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a DC 10 Strength saving throw or have its speed reduced to 0 until the start of its next turn.
+
+Gibbering. The mouther babbles incoherently while it can see any creature and isn't incapacitated. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a DC 10 Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a d8 to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack.
+
+Actions
+
+Blinding Spittle. The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DC 13 Dexterity saving throw or be blinded until the end of the mouther's next turn.
+
+## monsters > glabrezu
+
+Glabrezu
+
+Type: fiend (demon)
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: truesight 120 ft., passive Perception 13
+
+Innate Spellcasting. The glabrezu's spellcasting ability is Intelligence (spell save DC 16). The glabrezu can innately cast the following spells, requiring no material components:
+At will: darkness, detect magic, dispel magic
+1/day each: confusion, fly, power word stun
+
+Magic Resistance. The glabrezu has advantage on saving throws against spells and other magical effects.
+
+## monsters > gladiator
+
+Gladiator
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Brave. The gladiator has advantage on saving throws against being frightened.
+
+Brute. A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack).
+
+Reactions
+
+Parry. The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.
+
+## monsters > gnoll
+
+Gnoll
+
+Type: humanoid (gnoll)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Rampage. When the gnoll reduces a creature to 0 hit points with a melee attack on its turn, the gnoll can take a bonus action to move up to half its speed and make a bite attack.
+
+## monsters > goat
+
+Goat
+
+Type: beast
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Charge. If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 2 (1d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 10 Strength saving throw or be knocked prone.
+
+Sure-Footed. The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.
+
+## monsters > goblin
+
+Goblin
+
+Type: humanoid (goblinoid)
+Size: Small
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 9
+
+Nimble Escape. The goblin can take the Disengage or Hide action as a bonus action on each of its turns.
+
+## monsters > gold-dragon-wyrmling
+
+Gold Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., fly 60 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Fire Breath. The dragon exhales fire in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 22 (4d10) fire damage on a failed save, or half as much damage on a successful one.
+Weakening Breath. The dragon exhales gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+## monsters > gorgon
+
+Gorgon
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: Petrified
+Senses: darkvision 60 ft., passive Perception 14
+
+Trampling Charge. If the gorgon moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 16 Strength saving throw or be knocked prone. If the target is prone, the gorgon can make one attack with its hooves against it as a bonus action.
+
+Actions
+
+Petrifying Breath. The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw. On a failed save, a target begins to turn to stone and is restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is petrified until freed by the greater restoration spell or other magic.
+
+## monsters > gray-ooze
+
+Gray Ooze
+
+Type: ooze
+Size: Medium
+Speed: 10 ft., climb 10 ft.
+Damage vulnerabilities: none
+Damage resistances: acid; cold; fire
+Damage immunities: none
+Condition immunities: Blinded, Charmed, Deafened, Exhaustion, Frightened, Prone
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Amorphous. The ooze can move through a space as narrow as 1 inch wide without squeezing.
+
+Corrode Metal. Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.
+The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.
+
+False Appearance. While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock.
+
+## monsters > green-dragon-wyrmling
+
+Green Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., fly 60 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Poison Breath. The dragon exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 11 Constitution saving throw, taking 21 (6d6) poison damage on a failed save, or half as much damage on a successful one.
+
+## monsters > green-hag
+
+Green Hag
+
+Type: fey
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Amphibious. The hag can breathe air and water.
+
+Innate Spellcasting. The hag's innate spellcasting ability is Charisma (spell save DC 12). She can innately cast the following spells, requiring no material components:
+
+At will: dancing lights, minor illusion, vicious mockery
+
+Mimicry. The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check.
+
+Actions
+
+Illusory Appearance. The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.
+The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised.
+
+Invisible Passage. The hag magically turns invisible until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her.
+
+## monsters > grick
+
+Grick
+
+Type: monstrosity
+Size: Medium
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 12
+
+Stone Camouflage. The grick has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
+
+## monsters > griffon
+
+Griffon
+
+Type: monstrosity
+Size: Large
+Speed: 30 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 15
+
+Keen Sight. The griffon has advantage on Wisdom (Perception) checks that rely on sight.
+
+## monsters > grimlock
+
+Grimlock
+
+Type: humanoid (grimlock)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: Blinded
+Senses: blindsight 30 ft. or 10 ft. while deafened (blind beyond this radius), passive Perception 13
+
+Blind Senses. The grimlock can't use its blindsight while deafened and unable to smell.
+
+Keen Hearing and Smell. The grimlock has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Stone Camouflage. The grimlock has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
+
+## monsters > guard
+
+Guard
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+## monsters > guardian-naga
+
+Guardian Naga
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Charmed, Poisoned
+Senses: darkvision 60 ft., passive Perception 14
+
+Rejuvenation. If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.
+
+Spellcasting. The naga is an 11th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16, +8 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following cleric spells prepared:
+
+- Cantrips (at will): mending, sacred flame, thaumaturgy
+- 1st level (4 slots): command, cure wounds, shield of faith
+- 2nd level (3 slots): calm emotions, hold person
+- 3rd level (3 slots): bestow curse, clairvoyance
+- 4th level (3 slots): banishment, freedom of movement
+- 5th level (2 slots): flame strike, geas
+- 6th level (1 slot): true seeing
+
+## monsters > gynosphinx
+
+Gynosphinx
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: psychic
+Condition immunities: Charmed, Frightened
+Senses: truesight 120 ft., passive Perception 18
+
+Inscrutable. The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (Insight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.
+
+Magic Weapons. The sphinx's weapon attacks are magical.
+
+Spellcasting. The sphinx is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 16, +8 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following wizard spells prepared:
+
+- Cantrips (at will): mage hand, minor illusion, prestidigitation
+- 1st level (4 slots): detect magic, identify, shield
+- 2nd level (3 slots): darkness, locate object, suggestion
+- 3rd level (3 slots): dispel magic, remove curse, tongues
+- 4th level (3 slots): banishment, greater invisibility
+- 5th level (1 slot): legend lore
+
+Legendary Actions
+
+Claw Attack. The sphinx makes one claw attack.
+
+Teleport (Costs 2 Actions). The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.
+
+Cast a Spell (Costs 3 Actions). The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.
+
+## monsters > half-red-dragon-veteran
+
+Half-Red Dragon Veteran
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: fire
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 12
+
+Actions
+
+Fire Breath. The veteran exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.
+
+## monsters > harpy
+
+Harpy
+
+Type: monstrosity
+Size: Medium
+Speed: 20 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Actions
+
+Luring Song. The harpy sings a magical melody. Every humanoid and giant within 300 ft. of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be charmed until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is incapacitated.
+While charmed by the harpy, a target is incapacitated and ignores the songs of other harpies. If the charmed target is more than 5 ft. away from the harpy, the must move on its turn toward the harpy by the most direct route. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, a target can repeat the saving throw. A creature can also repeat the saving throw at the end of each of its turns. If a creature's saving throw is successful, the effect ends on it.
+A target that successfully saves is immune to this harpy's song for the next 24 hours.
+
+## monsters > hawk
+
+Hawk
+
+Type: beast
+Size: Tiny
+Speed: 10 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Keen Sight. The hawk has advantage on Wisdom (Perception) checks that rely on sight.
+
+## monsters > hell-hound
+
+Hell Hound
+
+Type: fiend
+Size: Medium
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 15
+
+Keen Hearing and Smell. The hound has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Pack Tactics. The hound has advantage on an attack roll against a creature if at least one of the hound's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+Actions
+
+Fire Breath. The hound exhales fire in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.
+
+## monsters > hezrou
+
+Hezrou
+
+Type: fiend (demon)
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 11
+
+Magic Resistance. The hezrou has advantage on saving throws against spells and other magical effects.
+
+Stench. Any creature that starts its turn within 10 feet of the hezrou must succeed on a DC 14 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the hezrou's stench for 24 hours.
+
+## monsters > hill-giant
+
+Hill Giant
+
+Type: giant
+Size: Huge
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+## monsters > hippogriff
+
+Hippogriff
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 15
+
+Keen Sight. The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.
+
+## monsters > hobgoblin
+
+Hobgoblin
+
+Type: humanoid (goblinoid)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Martial Advantage. Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the hobgoblin that isn't incapacitated.
+
+## monsters > homunculus
+
+Homunculus
+
+Type: construct
+Size: Tiny
+Speed: 20 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Charmed, Poisoned
+Senses: darkvision 60 ft., passive Perception 10
+
+Telepathic Bond. While the homunculus is on the same plane of existence as its master, it can magically convey what it senses to its master, and the two can communicate telepathically.
+
+## monsters > horned-devil
+
+Horned Devil
+
+Type: fiend (devil)
+Size: Large
+Speed: 20 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 13
+
+Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
+
+Magic Resistance. The devil has advantage on saving throws against spells and other magical effects.
+
+## monsters > hunter-shark
+
+Hunter Shark
+
+Type: beast
+Size: Large
+Speed: swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 12
+
+Blood Frenzy. The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.
+
+Water Breathing. The shark can breathe only underwater.
+
+## monsters > hydra
+
+Hydra
+
+Type: monstrosity
+Size: Huge
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 16
+
+Hold Breath. The hydra can hold its breath for 1 hour.
+
+Multiple Heads. The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.
+Whenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.
+At the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken fire damage since its last turn. The hydra regains 10 hit points for each head regrown in this way.
+
+Reactive Heads. For each head the hydra has beyond one, it gets an extra reaction that can be used only for opportunity attacks.
+
+Wakeful. While the hydra sleeps, at least one of its heads is awake.
+
+## monsters > hyena
+
+Hyena
+
+Type: beast
+Size: Medium
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Pack Tactics. The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > ice-devil
+
+Ice Devil
+
+Type: fiend (devil)
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: blindsight 60 ft., darkvision 120 ft., passive Perception 12
+
+Devil's Sight. Magical darkness doesn't impede the devil's darkvision.
+
+Magic Resistance. The devil has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Wall of Ice. The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.
+When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a DC 17 Dexterity saving throw, taking 35 (10d6) cold damage on a failed save, or half as much damage on a successful one.
+The wall lasts for 1 minute or until the devil is incapacitated or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to fire damage, and immunity to acid, cold, necrotic, poison, and psychic damage. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a DC 17 Constitution saving throw, taking 17 (5d6) cold damage on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.
+
+## monsters > ice-mephit
+
+Ice Mephit
+
+Type: elemental
+Size: Small
+Speed: 30 ft., fly 30 ft.
+Damage vulnerabilities: bludgeoning; fire
+Damage resistances: none
+Damage immunities: cold; poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 12
+
+Death Burst. When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 ft. of it must make a DC 10 Dexterity saving throw, taking 4 (1d8) slashing damage on a failed save, or half as much damage on a successful one.
+
+False Appearance. While the mephit remains motionless, it is indistinguishable from an ordinary shard of ice.
+
+Innate Spellcasting. The mephit can innately cast fog cloud, requiring no material components. Its innate spellcasting ability is Charisma.
+
+Actions
+
+Frost Breath. The mephit exhales a 15-foot cone of cold air. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 5 (2d4) cold damage on a failed save, or half as much damage on a successful one.
+
+## monsters > imp
+
+Imp
+
+Type: fiend (devil)
+Size: Tiny
+Speed: 20 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 11
+
+Shapechanger. The imp can use its action to polymorph into a beast form that resembles a rat (speed 20 ft.), a raven (20 ft., fly 60 ft.), or a spider (20 ft., climb 20 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Devil's Sight. Magical darkness doesn't impede the imp's darkvision.
+
+Magic Resistance. The imp has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Invisibility. The imp magically turns invisible until it attacks, or until its concentration ends (as if concentrating on a spell). Any equipment the imp wears or carries is invisible with it.
+
+## monsters > invisible-stalker
+
+Invisible Stalker
+
+Type: elemental
+Size: Medium
+Speed: 50 ft., fly 50 ft. (hover)
+Damage vulnerabilities: none
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
+Senses: darkvision 60 ft., passive Perception 18
+
+Invisibility. The stalker is invisible.
+
+Faultless Tracker. The stalker is given a quarry by its summoner. The stalker knows the direction and distance to its quarry as long as the two of them are on the same plane of existence. The stalker also knows the location of its summoner.
+
+## monsters > iron-golem
+
+Iron Golem
+
+Type: construct
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire; poison; psychic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
+Senses: darkvision 120 ft., passive Perception 10
+
+Fire Absorption. Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.
+
+Immutable Form. The golem is immune to any spell or effect that would alter its form.
+
+Magic Resistance. The golem has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The golem's weapon attacks are magical.
+
+Actions
+
+Poison Breath. The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.
+
+## monsters > jackal
+
+Jackal
+
+Type: beast
+Size: Small
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Hearing and Smell. The jackal has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Pack Tactics. The jackal has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > killer-whale
+
+Killer Whale
+
+Type: beast
+Size: Huge
+Speed: swim 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 120 ft., passive Perception 13
+
+Echolocation. The whale can't use its blindsight while deafened.
+
+Hold Breath. The whale can hold its breath for 30 minutes
+
+Keen Hearing. The whale has advantage on Wisdom (Perception) checks that rely on hearing.
+
+## monsters > knight
+
+Knight
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Brave. The knight has advantage on saving throws against being frightened.
+
+Actions
+
+Leadership. For 1 minute, the knight can utter a special command or warning whenever a nonhostile creature that it can see within 30 ft. of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the knight. A creature can benefit from only one Leadership die at a time. This effect ends if the knight is incapacitated.
+
+Reactions
+
+Parry. The knight adds 2 to its AC against one melee attack that would hit it. To do so, the knight must see the attacker and be wielding a melee weapon.
+
+## monsters > kobold
+
+Kobold
+
+Type: humanoid (kobold)
+Size: Small
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 8
+
+Sunlight Sensitivity. While in sunlight, the kobold has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+Pack Tactics. The kobold has advantage on an attack roll against a creature if at least one of the kobold's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > kraken
+
+Kraken
+
+Type: monstrosity (titan)
+Size: Gargantuan
+Speed: 20 ft., swim 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Condition immunities: Frightened, Paralyzed
+Senses: truesight 120 ft., passive Perception 14
+
+Amphibious. The kraken can breathe air and water.
+
+Freedom of Movement. The kraken ignores difficult terrain, and magical effects can't reduce its speed or cause it to be restrained. It can spend 5 feet of movement to escape from nonmagical restraints or being grappled.
+
+Siege Monster. The kraken deals double damage to objects and structures.
+
+Actions
+
+Fling. One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.
+
+Lightning Storm. The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.
+
+Legendary Actions
+
+Tentacle Attack or Fling. The kraken makes one tentacle attack or uses its Fling.
+
+Lightning Storm (Costs 2 Actions). The kraken uses Lightning Storm.
+
+Ink Cloud (Costs 3 Actions). While underwater, the kraken expels an ink cloud in a 60-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than the kraken. Each creature other than the kraken that ends its turn there must succeed on a DC 23 Constitution saving throw, taking 16 (3d10) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end of the kraken's next turn.
+
+## monsters > lamia
+
+Lamia
+
+Type: monstrosity
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 12
+
+Innate Spellcasting. The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components. At will: disguise self (any humanoid form), major image 3/day each: charm person, mirror image, scrying, suggestion 1/day: geas
+
+## monsters > lemure
+
+Lemure
+
+Type: fiend (devil)
+Size: Medium
+Speed: 15 ft.
+Damage vulnerabilities: none
+Damage resistances: cold
+Damage immunities: fire; poison
+Condition immunities: Charmed, Frightened, Poisoned
+Senses: darkvision 120 ft., passive Perception 10
+
+Devil's Sight. Magical darkness doesn't impede the lemure's darkvision.
+
+Hellish Rejuvenation. A lemure that dies in the Nine Hells comes back to life with all its hit points in 1d10 days unless it is killed by a good-aligned creature with a bless spell cast on that creature or its remains are sprinkled with holy water.
+
+## monsters > lich
+
+Lich
+
+Type: undead
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; lightning; necrotic
+Damage immunities: poison; bludgeoning, piercing, and slashing from nonmagical weapons
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
+Senses: truesight 120 ft., passive Perception 19
+
+Legendary Resistance. If the lich fails a saving throw, it can choose to succeed instead.
+
+Rejuvenation. If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.
+
+Spellcasting. The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:
+
+- Cantrips (at will): mage hand, prestidigitation, ray of frost
+- 1st level (4 slots): detect magic, magic missile, shield, thunderwave
+- 2nd level (3 slots): acid arrow, detect thoughts, invisibility, mirror image
+- 3rd level (3 slots): animate dead, counterspell, dispel magic, fireball
+- 4th level (3 slots): blight, dimension door
+- 5th level (3 slots): cloudkill, scrying
+- 6th level (1 slot): disintegrate, globe of invulnerability
+- 7th level (1 slot): finger of death, plane shift
+- 8th level (1 slot): dominate monster, power word stun
+- 9th level (1 slot): power word kill
+
+Turn Resistance. The lich has advantage on saving throws against any effect that turns undead.
+
+Legendary Actions
+
+Cantrip. The lich casts a cantrip.
+
+Paralyzing Touch (Costs 2 Actions). The lich uses its Paralyzing Touch.
+
+Frightening Gaze (Costs 2 Actions). The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.
+
+Disrupt Life (Costs 3 Actions). Each living creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.
+
+## monsters > lion
+
+Lion
+
+Type: beast
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Smell. The lion has advantage on Wisdom (Perception) checks that rely on smell.
+
+Pack Tactics. The lion has advantage on an attack roll against a creature if at least one of the lion's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+Pounce. If the lion moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the lion can make one bite attack against it as a bonus action.
+
+Running Leap. With a 10-foot running start, the lion can long jump up to 25 ft..
+
+## monsters > lizard
+
+Lizard
+
+Type: beast
+Size: Tiny
+Speed: 20 ft., climb 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 9
+
+## monsters > lizardfolk
+
+Lizardfolk
+
+Type: humanoid (lizardfolk)
+Size: Medium
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Hold Breath. The lizardfolk can hold its breath for 15 minutes.
+
+## monsters > mage
+
+Mage
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Spellcasting. The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). The mage has the following wizard spells prepared:
+
+- Cantrips (at will): fire bolt, light, mage hand, prestidigitation
+- 1st level (4 slots): detect magic, mage armor, magic missile, shield
+- 2nd level (3 slots): misty step, suggestion
+- 3rd level (3 slots): counterspell, fireball, fly
+- 4th level (3 slots): greater invisibility, ice storm
+- 5th level (1 slot): cone of cold
+
+## monsters > magma-mephit
+
+Magma Mephit
+
+Type: elemental
+Size: Small
+Speed: 30 ft., fly 30 ft.
+Damage vulnerabilities: cold
+Damage resistances: none
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 10
+
+Death Burst. When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.
+
+False Appearance. While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma.
+
+Innate Spellcasting. The mephit can innately cast heat metal (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma.
+
+Actions
+
+Fire Breath. The mephit exhales a 15-foot cone of fire. Each creature in that area must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.
+
+## monsters > magmin
+
+Magmin
+
+Type: elemental
+Size: Small
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: fire
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Death Burst. When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 ft. of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited.
+
+Ignited Illumination. As a bonus action, the magmin can set itself ablaze or extinguish its flames. While ablaze, the magmin sheds bright light in a 10-foot radius and dim light for an additional 10 ft.
+
+## monsters > mammoth
+
+Mammoth
+
+Type: beast
+Size: Huge
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Trampling Charge. If the mammoth moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 18 Strength saving throw or be knocked prone. If the target is prone, the mammoth can make one stomp attack against it as a bonus action.
+
+## monsters > manticore
+
+Manticore
+
+Type: monstrosity
+Size: Large
+Speed: 30 ft., fly 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 11
+
+Tail Spike Regrowth. The manticore has twenty-four tail spikes. Used spikes regrow when the manticore finishes a long rest.
+
+## monsters > marilith
+
+Marilith
+
+Type: fiend (demon)
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: truesight 120 ft., passive Perception 13
+
+Magic Resistance. The marilith has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The marilith's weapon attacks are magical.
+
+Reactive. The marilith can take one reaction on every turn in combat.
+
+Actions
+
+Teleport. The marilith magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.
+
+Reactions
+
+Parry. The marilith adds 5 to its AC against one melee attack that would hit it. To do so, the marilith must see the attacker and be wielding a melee weapon.
+
+## monsters > mastiff
+
+Mastiff
+
+Type: beast
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Hearing and Smell. The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > medusa
+
+Medusa
+
+Type: monstrosity
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Petrifying Gaze. When a creature that can see the medusa's eyes starts its turn within 30 ft. of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
+Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save.
+If the medusa sees itself reflected on a polished surface within 30 ft. of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze.
+
+## monsters > merfolk
+
+Merfolk
+
+Type: humanoid (merfolk)
+Size: Medium
+Speed: 10 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+Amphibious. The merfolk can breathe air and water.
+
+## monsters > merrow
+
+Merrow
+
+Type: monstrosity
+Size: Large
+Speed: 10 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Amphibious. The merrow can breathe air and water.
+
+## monsters > mimic
+
+Mimic
+
+Type: monstrosity (shapechanger)
+Size: Medium
+Speed: 15 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: Prone
+Senses: darkvision 60 ft., passive Perception 11
+
+Shapechanger. The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn 't transformed. It reverts to its true form if it dies.
+
+Adhesive (Object Form Only). The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled by it (escape DC 13). Ability checks made to escape this grapple have disadvantage.
+
+False Appearance (Object Form Only). While the mimic remains motionless, it is indistinguishable from an ordinary object.
+
+Grappler. The mimic has advantage on attack rolls against any creature grappled by it.
+
+## monsters > minotaur
+
+Minotaur
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 17
+
+Charge. If the minotaur moves at least 10 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 ft. away and knocked prone.
+
+Labyrinthine Recall. The minotaur can perfectly recall any path it has traveled.
+
+Reckless. At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.
+
+## monsters > minotaur-skeleton
+
+Minotaur Skeleton
+
+Type: undead
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: bludgeoning
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Exhaustion, Poisoned
+Senses: darkvision 60 ft., passive Perception 9
+
+Charge. If the skeleton moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 feet away and knocked prone.
+
+## monsters > mule
+
+Mule
+
+Type: beast
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Beast of Burden. The mule is considered to be a Large animal for the purpose of determining its carrying capacity.
+
+Sure-Footed. The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.
+
+## monsters > mummy
+
+Mummy
+
+Type: undead
+Size: Medium
+Speed: 20 ft.
+Damage vulnerabilities: fire
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: necrotic; poison
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
+Senses: darkvision 60 ft., passive Perception 10
+
+Actions
+
+Dreadful Glare. The mummy targets one creature it can see within 60 ft. of it. If the target can see the mummy, it must succeed on a DC 11 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies (but not mummy lords) for the next 24 hours.
+
+## monsters > mummy-lord
+
+Mummy Lord
+
+Type: undead
+Size: Medium
+Speed: 20 ft.
+Damage vulnerabilities: fire
+Damage resistances: none
+Damage immunities: necrotic; poison; bludgeoning, piercing, and slashing from nonmagical weapons
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
+Senses: darkvision 60 ft., passive Perception 14
+
+Magic Resistance. The mummy lord has advantage on saving throws against spells and other magical effects.
+
+Rejuvenation. A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the mummy lord's heart.
+
+Spellcasting. The mummy lord is a 10th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared:
+
+- Cantrips (at will): sacred flame, thaumaturgy
+- 1st level (4 slots): command, guiding bolt, shield of faith
+- 2nd level (3 slots): hold person, silence, spiritual weapon
+- 3rd level (3 slots): animate dead, dispel magic
+- 4th level (3 slots): divination, guardian of faith
+- 5th level (2 slots): contagion, insect plague
+- 6th level (1 slot): harm
+
+Actions
+
+Dreadful Glare. The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a DC 16 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours.
+
+Legendary Actions
+
+Attack. The mummy lord makes one attack with its rotting fist or uses its Dreadful Glare.
+
+Blinding Dust. Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a DC 16 Constitution saving throw or be blinded until the end of the creature's next turn.
+
+Blasphemous Word (Costs 2 Actions). The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be stunned until the end of the mummy lord's next turn.
+
+Channel Negative Energy (Costs 2 Actions). The mummy lord magically unleashes negative energy. Creatures within 60 feet of the mummy lord, including ones behind barriers and around corners, can't regain hit points until the end of the mummy lord's next turn.
+
+Whirlwind of Sand (Costs 2 Actions). The mummy lord magically transforms into a whirlwind of sand, moves up to 60 feet, and reverts to its normal form. While in whirlwind form, the mummy lord is immune to all damage, and it can't be grappled, petrified, knocked prone, restrained, or stunned. Equipment worn or carried by the mummy lord remain in its possession.
+
+## monsters > nalfeshnee
+
+Nalfeshnee
+
+Type: fiend (demon)
+Size: Large
+Speed: 20 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: truesight 120 ft., passive Perception 11
+
+Magic Resistance. The nalfeshnee has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Horror Nimbus. The nalfeshnee magically emits scintillating, multicolored light. Each creature within 15 feet of the nalfeshnee that can see the light must succeed on a DC 15 Wisdom saving throw or be frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the nalfeshnee's Horror Nimbus for the next 24 hours.
+
+Teleport. The nalfeshnee magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.
+
+## monsters > night-hag
+
+Night Hag
+
+Type: fiend
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: none
+Condition immunities: Charmed
+Senses: darkvision 120 ft., passive Perception 16
+
+Innate Spellcasting. The hag's innate spellcasting ability is Charisma (spell save DC 14, +6 to hit with spell attacks). She can innately cast the following spells, requiring no material components:
+
+At will: detect magic, magic missile
+2/day each: plane shift (self only), ray of enfeeblement, sleep
+
+Magic Resistance. The hag has advantage on saving throws against spells and other magical effects.
+
+Night Hag Items. A night hag carries two very rare magic items that she must craft for herself If either object is lost, the night hag will go to great lengths to retrieve it, as creating a new tool takes time and effort.
+Heartstone: This lustrous black gem allows a night hag to become ethereal while it is in her possession. The touch of a heartstone also cures any disease. Crafting a heartstone takes 30 days.
+Soul Bag: When an evil humanoid dies as a result of a night hag's Nightmare Haunting, the hag catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only the night hag who crafted the bag can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag).
+
+Actions
+
+Change Shape. The hag magically polymorphs into a Small or Medium female humanoid, or back into her true form. Her statistics are the same in each form. Any equipment she is wearing or carrying isn't transformed. She reverts to her true form if she dies.
+
+Etherealness. The hag magically enters the Ethereal Plane from the Material Plane, or vice versa. To do so, the hag must have a heartstone in her possession.
+
+Nightmare Haunting. While on the Ethereal Plane, the hag magically touches a sleeping humanoid on the Material Plane. A protection from evil and good spell cast on the target prevents this contact, as does a magic circle. As long as the contact persists, the target has dreadful visions. If these visions last for at least 1 hour, the target gains no benefit from its rest, and its hit point maximum is reduced by 5 (1d10). If this effect reduces the target's hit point maximum to 0, the target dies, and if the target was evil, its soul is trapped in the hag's soul bag. The reduction to the target's hit point maximum lasts until removed by the greater restoration spell or similar magic.
+
+## monsters > nightmare
+
+Nightmare
+
+Type: fiend
+Size: Large
+Speed: 60 ft., fly 90 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: passive Perception 11
+
+Confer Fire Resistance. The nightmare can grant resistance to fire damage to anyone riding it.
+
+Illumination. The nightmare sheds bright light in a 10-foot radius and dim light for an additional 10 feet.
+
+Actions
+
+Ethereal Stride. The nightmare and up to three willing creatures within 5 feet of it magically enter the Ethereal Plane from the Material Plane, or vice versa.
+
+## monsters > noble
+
+Noble
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+Reactions
+
+Parry. The noble adds 2 to its AC against one melee attack that would hit it. To do so, the noble must see the attacker and be wielding a melee weapon.
+
+## monsters > ochre-jelly
+
+Ochre Jelly
+
+Type: ooze
+Size: Large
+Speed: 10 ft., climb 10 ft.
+Damage vulnerabilities: none
+Damage resistances: acid
+Damage immunities: lightning; slashing
+Condition immunities: Blinded, Charmed, Blinded, Exhaustion, Frightened, Prone
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 8
+
+Amorphous. The jelly can move through a space as narrow as 1 inch wide without squeezing.
+
+Spider Climb. The jelly can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Reactions
+
+Split. When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.
+
+## monsters > octopus
+
+Octopus
+
+Type: beast
+Size: Small
+Speed: 5 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 12
+
+Hold Breath. While out of water, the octopus can hold its breath for 30 minutes.
+
+Underwater Camouflage. The octopus has advantage on Dexterity (Stealth) checks made while underwater.
+
+Water Breathing. The octopus can breathe only underwater.
+
+Actions
+
+Ink Cloud. A 5-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.
+
+## monsters > ogre
+
+Ogre
+
+Type: giant
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 8
+
+## monsters > ogre-zombie
+
+Ogre Zombie
+
+Type: undead
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 8
+
+Undead Fortitude. If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
+
+## monsters > oni
+
+Oni
+
+Type: giant
+Size: Large
+Speed: 30 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Innate Spellcasting. The oni's innate spellcasting ability is Charisma (spell save DC 13). The oni can innately cast the following spells, requiring no material components:
+
+At will: darkness, invisibility
+1/day each: charm person, cone of cold, gaseous form, sleep
+
+Magic Weapons. The oni's weapon attacks are magical.
+
+Regeneration. The oni regains 10 hit points at the start of its turn if it has at least 1 hit point.
+
+Actions
+
+Change Shape. The oni magically polymorphs into a Small or Medium humanoid, into a Large giant, or back into its true form. Other than its size, its statistics are the same in each form. The only equipment that is transformed is its glaive, which shrinks so that it can be wielded in humanoid form. If the oni dies, it reverts to its true form, and its glaive reverts to its normal size.
+
+## monsters > orc
+
+Orc
+
+Type: humanoid (orc)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Aggressive. As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.
+
+## monsters > otyugh
+
+Otyugh
+
+Type: aberration
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 11
+
+Limited Telepathy. The otyugh can magically transmit simple messages and images to any creature within 120 ft. of it that can understand a language. This form of telepathy doesn't allow the receiving creature to telepathically respond.
+
+Actions
+
+Tentacle Slam. The otyugh slams creatures grappled by it into each other or a solid surface. Each creature must succeed on a DC 14 Constitution saving throw or take 10 (2d6 + 3) bludgeoning damage and be stunned until the end of the otyugh's next turn. On a successful save, the target takes half the bludgeoning damage and isn't stunned.
+
+## monsters > owl
+
+Owl
+
+Type: beast
+Size: Tiny
+Speed: 5 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 13
+
+Flyby. The owl doesn't provoke opportunity attacks when it flies out of an enemy's reach.
+
+Keen Hearing and Sight. The owl has advantage on Wisdom (Perception) checks that rely on hearing or sight.
+
+## monsters > owlbear
+
+Owlbear
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 13
+
+Keen Sight and Smell. The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell.
+
+## monsters > panther
+
+Panther
+
+Type: beast
+Size: Medium
+Speed: 50 ft., climb 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Keen Smell. The panther has advantage on Wisdom (Perception) checks that rely on smell.
+
+Pounce. If the panther moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the panther can make one bite attack against it as a bonus action.
+
+## monsters > pegasus
+
+Pegasus
+
+Type: celestial
+Size: Large
+Speed: 60 ft., fly 90 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 16
+
+## monsters > phase-spider
+
+Phase Spider
+
+Type: monstrosity
+Size: Large
+Speed: 30 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Ethereal Jaunt. As a bonus action, the spider can magically shift from the Material Plane to the Ethereal Plane, or vice versa.
+
+Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Web Walker. The spider ignores movement restrictions caused by webbing.
+
+## monsters > pit-fiend
+
+Pit Fiend
+
+Type: fiend (devil)
+Size: Large
+Speed: 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: truesight 120 ft., passive Perception 14
+
+Fear Aura. Any creature hostile to the pit fiend that starts its turn within 20 feet of the pit fiend must make a DC 21 Wisdom saving throw, unless the pit fiend is incapacitated. On a failed save, the creature is frightened until the start of its next turn. If a creature's saving throw is successful, the creature is immune to the pit fiend's Fear Aura for the next 24 hours.
+
+Magic Resistance. The pit fiend has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The pit fiend's weapon attacks are magical.
+
+Innate Spellcasting. The pit fiend's spellcasting ability is Charisma (spell save DC 21). The pit fiend can innately cast the following spells, requiring no material components:
+At will: detect magic, fireball
+3/day each: hold monster, wall of fire
+
+## monsters > planetar
+
+Planetar
+
+Type: celestial
+Size: Large
+Speed: 40 ft., fly 120 ft.
+Damage vulnerabilities: none
+Damage resistances: radiant; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: Charmed, Exhaustion, Frightened
+Senses: truesight 120 ft., passive Perception 21
+
+Angelic Weapons. The planetar's weapon attacks are magical. When the planetar hits with any weapon, the weapon deals an extra 5d8 radiant damage (included in the attack).
+
+Divine Awareness. The planetar knows if it hears a lie.
+
+Innate Spellcasting. The planetar's spellcasting ability is Charisma (spell save DC 20). The planetar can innately cast the following spells, requiring no material components:
+At will: detect evil and good, invisibility (self only)
+3/day each: blade barrier, dispel evil and good, flame strike, raise dead
+1/day each: commune, control weather, insect plague
+
+Magic Resistance. The planetar has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Healing Touch. The planetar touches another creature. The target magically regains 30 (6d8 + 3) hit points and is freed from any curse, disease, poison, blindness, or deafness.
+
+## monsters > plesiosaurus
+
+Plesiosaurus
+
+Type: beast
+Size: Large
+Speed: 20 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Hold Breath. The plesiosaurus can hold its breath for 1 hour.
+
+## monsters > poisonous-snake
+
+Poisonous Snake
+
+Type: beast
+Size: Tiny
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., passive Perception 10
+
+## monsters > polar-bear
+
+Polar Bear
+
+Type: beast
+Size: Large
+Speed: 40 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Smell. The bear has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > pony
+
+Pony
+
+Type: beast
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+## monsters > priest
+
+Priest
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 25 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Divine Eminence. As a bonus action, the priest can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 (3d6) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priest expends a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each level above 1st.
+
+Spellcasting. The priest is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:
+
+- Cantrips (at will): light, sacred flame, thaumaturgy
+- 1st level (4 slots): cure wounds, guiding bolt, sanctuary
+- 2nd level (3 slots): lesser restoration, spiritual weapon
+- 3rd level (2 slots): dispel magic, spirit guardians
+
+## monsters > pseudodragon
+
+Pseudodragon
+
+Type: dragon
+Size: Tiny
+Speed: 15 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 13
+
+Keen Senses. The pseudodragon has advantage on Wisdom (Perception) checks that rely on sight, hearing, or smell.
+
+Magic Resistance. The pseudodragon has advantage on saving throws against spells and other magical effects.
+
+Limited Telepathy. The pseudodragon can magically communicate simple ideas, emotions, and images telepathically with any creature within 100 ft. of it that can understand a language.
+
+## monsters > purple-worm
+
+Purple Worm
+
+Type: monstrosity
+Size: Gargantuan
+Speed: 50 ft., burrow 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 30 ft., tremorsense 60 ft., passive Perception 9
+
+Tunneler. The worm can burrow through solid rock at half its burrow speed and leaves a 10-foot-diameter tunnel in its wake.
+
+## monsters > quasit
+
+Quasit
+
+Type: fiend (demon)
+Size: Tiny
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 10
+
+Shapechanger. The quasit can use its action to polymorph into a beast form that resembles a bat (speed 10 ft. fly 40 ft.), a centipede (40 ft., climb 40 ft.), or a toad (40 ft., swim 40 ft.), or back into its true form . Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed . It reverts to its true form if it dies.
+
+Magic Resistance. The quasit has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Scare. One creature of the quasit's choice within 20 ft. of it must succeed on a DC 10 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the quasit is within line of sight, ending the effect on itself on a success.
+
+Invisibility. The quasit magically turns invisible until it attacks or uses Scare, or until its concentration ends (as if concentrating on a spell). Any equipment the quasit wears or carries is invisible with it.
+
+## monsters > quipper
+
+Quipper
+
+Type: beast
+Size: Tiny
+Speed: swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 8
+
+Blood Frenzy. The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points.
+
+Water Breathing. The quipper can breathe only underwater.
+
+## monsters > rakshasa
+
+Rakshasa
+
+Type: fiend
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: piercing from magic weapons wielded by good creatures
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 13
+
+Limited Magic Immunity. The rakshasa can't be affected or detected by spells of 6th level or lower unless it wishes to be. It has advantage on saving throws against all other spells and magical effects.
+
+Innate Spellcasting. The rakshasa's innate spellcasting ability is Charisma (spell save DC 18, +10 to hit with spell attacks). The rakshasa can innately cast the following spells, requiring no material components:
+
+At will: detect thoughts, disguise self, mage hand, minor illusion
+3/day each: charm person, detect magic, invisibility, major image, suggestion
+1/day each: dominate person, fly, plane shift, true seeing
+
+## monsters > rat
+
+Rat
+
+Type: beast
+Size: Tiny
+Speed: 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 10
+
+Keen Smell. The rat has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > raven
+
+Raven
+
+Type: beast
+Size: Tiny
+Speed: 10 ft., fly 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Mimicry. The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check.
+
+## monsters > red-dragon-wyrmling
+
+Red Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., climb 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Actions
+
+Fire Breath. The dragon exhales fire in a 15-foot cone. Each creature in that area must make a DC 13 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save, or half as much damage on a successful one.
+
+## monsters > reef-shark
+
+Reef Shark
+
+Type: beast
+Size: Medium
+Speed: swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 30 ft., passive Perception 12
+
+Pack Tactics. The shark has advantage on an attack roll against a creature if at least one of the shark's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+Water Breathing. The shark can breathe only underwater.
+
+## monsters > remorhaz
+
+Remorhaz
+
+Type: monstrosity
+Size: Huge
+Speed: 30 ft., burrow 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold; fire
+Condition immunities: none
+Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 10
+
+Heated Body. A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.
+
+Actions
+
+Swallow. The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 (6d6) acid damage at the start of each of the remorhaz's turns.
+If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a DC 15 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the remorhaz. If the remorhaz dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone.
+
+## monsters > rhinoceros
+
+Rhinoceros
+
+Type: beast
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Charge. If the rhinoceros moves at least 20 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.
+
+## monsters > riding-horse
+
+Riding Horse
+
+Type: beast
+Size: Large
+Speed: 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+## monsters > roc
+
+Roc
+
+Type: monstrosity
+Size: Gargantuan
+Speed: 20 ft., fly 120 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+Keen Sight. The roc has advantage on Wisdom (Perception) checks that rely on sight.
+
+## monsters > roper
+
+Roper
+
+Type: monstrosity
+Size: Large
+Speed: 10 ft., climb 10 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 16
+
+False Appearance. While the roper remains motionless, it is indistinguishable from a normal cave formation, such as a stalagmite.
+
+Grasping Tendrils. The roper can have up to six tendrils at a time. Each tendril can be attacked (AC 20; 10 hit points; immunity to poison and psychic damage). Destroying a tendril deals no damage to the roper, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a DC 15 Strength check against it.
+
+Spider Climb. The roper can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Actions
+
+Reel. The roper pulls each creature grappled by it up to 25 ft. straight toward it.
+
+## monsters > rug-of-smothering
+
+Rug of Smothering
+
+Type: construct
+Size: Large
+Speed: 10 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison; psychic
+Condition immunities: Blinded, Charmed, Blinded, Frightened, Paralyzed, Petrified, Poisoned
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 6
+
+Antimagic Susceptibility. The rug is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the rug must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute.
+
+Damage Transfer. While it is grappling a creature, the rug takes only half the damage dealt to it, and the creature grappled by the rug takes the other half.
+
+False Appearance. While the rug remains motionless, it is indistinguishable from a normal rug.
+
+## monsters > rust-monster
+
+Rust Monster
+
+Type: monstrosity
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 11
+
+Iron Scent. The rust monster can pinpoint, by scent, the location of ferrous metal within 30 feet of it.
+
+Rust Metal. Any nonmagical weapon made of metal that hits the rust monster corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the rust monster is destroyed after dealing damage.
+
+Actions
+
+Antennae. The rust monster corrodes a nonmagical ferrous metal object it can see within 5 feet of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. If the object is being worn or carried by a creature, the creature can make a DC 11 Dexterity saving throw to avoid the rust monster's touch.
+If the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the Rust Metal trait.
+
+## monsters > saber-toothed-tiger
+
+Saber-Toothed Tiger
+
+Type: beast
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Smell. The tiger has advantage on Wisdom (Perception) checks that rely on smell.
+
+Pounce. If the tiger moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action.
+
+## monsters > sahuagin
+
+Sahuagin
+
+Type: humanoid (sahuagin)
+Size: Medium
+Speed: 30 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 15
+
+Blood Frenzy. The sahuagin has advantage on melee attack rolls against any creature that doesn't have all its hit points.
+
+Limited Amphibiousness. The sahuagin can breathe air and water, but it needs to be submerged at least once every 4 hours to avoid suffocating.
+
+Shark Telepathy. The sahuagin can magically command any shark within 120 feet of it, using a limited telepathy.
+
+## monsters > salamander
+
+Salamander
+
+Type: elemental
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: cold
+Damage resistances: bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: fire
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 10
+
+Heated Body. A creature that touches the salamander or hits it with a melee attack while within 5 ft. of it takes 7 (2d6) fire damage.
+
+Heated Weapons. Any metal melee weapon the salamander wields deals an extra 3 (1d6) fire damage on a hit (included in the attack).
+
+## monsters > satyr
+
+Satyr
+
+Type: fey
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+Magic Resistance. The satyr has advantage on saving throws against spells and other magical effects.
+
+## monsters > scorpion
+
+Scorpion
+
+Type: beast
+Size: Tiny
+Speed: 10 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: blindsight 10 ft., passive Perception 9
+
+## monsters > scout
+
+Scout
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 15
+
+Keen Hearing and Sight. The scout has advantage on Wisdom (Perception) checks that rely on hearing or sight.
+
+## monsters > sea-hag
+
+Sea Hag
+
+Type: fey
+Size: Medium
+Speed: 30 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 11
+
+Amphibious. The hag can breathe air and water.
+
+Horrific Appearance. Any humanoid that starts its turn within 30 feet of the hag and can see the hag's true form must make a DC 11 Wisdom saving throw. On a failed save, the creature is frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the hag is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Horrific Appearance for the next 24 hours.
+Unless the target is surprised or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the hag.
+
+Actions
+
+Death Glare. The hag targets one frightened creature she can see within 30 ft. of her. If the target can see the hag, it must succeed on a DC 11 Wisdom saving throw against this magic or drop to 0 hit points.
+
+Illusory Appearance. The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like an ugly creature of her general size and humanoid shape. The effect ends if the hag takes a bonus action to end it or if she dies.
+The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have no claws, but someone touching her hand might feel the claws. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 16 Intelligence (Investigation) check to discern that the hag is disguised.
+
+## monsters > sea-horse
+
+Sea Horse
+
+Type: beast
+Size: Tiny
+Speed: swim 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Water Breathing. The sea horse can breathe only underwater.
+
+## monsters > shadow
+
+Shadow
+
+Type: undead
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: radiant
+Damage resistances: acid; cold; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: necrotic; poison
+Condition immunities: Exhaustion, Frightened, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained
+Senses: darkvision 60 ft., passive Perception 10
+
+Amorphous. The shadow can move through a space as narrow as 1 inch wide without squeezing.
+
+Shadow Stealth. While in dim light or darkness, the shadow can take the Hide action as a bonus action. Its stealth bonus is also improved to +6.
+
+Sunlight Weakness. While in sunlight, the shadow has disadvantage on attack rolls, ability checks, and saving throws.
+
+## monsters > shambling-mound
+
+Shambling Mound
+
+Type: plant
+Size: Large
+Speed: 20 ft., swim 20 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire
+Damage immunities: lightning
+Condition immunities: Blinded, Blinded, Exhaustion
+Senses: blindsight 60 ft. (blind beyond this radius), passive Perception 10
+
+Lightning Absorption. Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.
+
+Actions
+
+Engulf. The shambling mound engulfs a Medium or smaller creature grappled by it. The engulfed target is blinded, restrained, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 (2d8 + 4) bludgeoning damage. If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time.
+
+## monsters > shield-guardian
+
+Shield Guardian
+
+Type: construct
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Poisoned
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 10
+
+Bound. The shield guardian is magically bound to an amulet. As long as the guardian and its amulet are on the same plane of existence, the amulet's wearer can telepathically call the guardian to travel to it, and the guardian knows the distance and direction to the amulet. If the guardian is within 60 feet of the amulet's wearer, half of any damage the wearer takes (rounded up) is transferred to the guardian.
+
+Regeneration. The shield guardian regains 10 hit points at the start of its turn if it has at least 1 hit. point.
+
+Spell Storing. A spellcaster who wears the shield guardian's amulet can cause the guardian to store one spell of 4th level or lower. To do so, the wearer must cast the spell on the guardian. The spell has no effect but is stored within the guardian. When commanded to do so by the wearer or when a situation arises that was predefined by the spellcaster, the guardian casts the stored spell with any parameters set by the original caster, requiring no components. When the spell is cast or a new spell is stored, any previously stored spell is lost.
+
+Reactions
+
+Shield. When a creature makes an attack against the wearer of the guardian's amulet, the guardian grants a +2 bonus to the wearer's AC if the guardian is within 5 feet of the wearer.
+
+## monsters > shrieker
+
+Shrieker
+
+Type: plant
+Size: Medium
+Speed: 0 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: Blinded, Blinded, Frightened
+Senses: blindsight 30 ft. (blind beyond this radius), passive Perception 6
+
+False Appearance. While the shrieker remains motionless, it is indistinguishable from an ordinary fungus.
+
+Reactions
+
+Shriek. When bright light or a creature is within 30 feet of the shrieker, it emits a shriek audible within 300 feet of it. The shrieker continues to shriek until the disturbance moves out of range and for 1d4 of the shrieker's turns afterward
+
+## monsters > silver-dragon-wyrmling
+
+Silver Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Cold Breath. The dragon exhales an icy blast in a 15-foot cone. Each creature in that area must make a DC 13 Constitution saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.
+Paralyzing Breath. The dragon exhales paralyzing gas in a 15-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+## monsters > skeleton
+
+Skeleton
+
+Type: undead
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: bludgeoning
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned, Exhaustion
+Senses: darkvision 60 ft., passive Perception 9
+
+## monsters > solar
+
+Solar
+
+Type: celestial
+Size: Large
+Speed: 50 ft., fly 150 ft.
+Damage vulnerabilities: none
+Damage resistances: radiant; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: necrotic; poison
+Condition immunities: Charmed, Exhaustion, Frightened, Poisoned
+Senses: truesight 120 ft., passive Perception 24
+
+Angelic Weapons. The solar's weapon attacks are magical. When the solar hits with any weapon, the weapon deals an extra 6d8 radiant damage (included in the attack).
+
+Divine Awareness. The solar knows if it hears a lie.
+
+Innate Spellcasting. The solar's spell casting ability is Charisma (spell save DC 25). It can innately cast the following spells, requiring no material components:
+At will: detect evil and good, invisibility (self only)
+3/day each: blade barrier, dispel evil and good, resurrection
+1/day each: commune, control weather
+
+Magic Resistance. The solar has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Flying Sword. The solar releases its greatsword to hover magically in an unoccupied space within 5 ft. of it. If the solar can see the sword, the solar can mentally command it as a bonus action to fly up to 50 ft. and either make one attack against a target or return to the solar's hands. If the hovering sword is targeted by any effect, the solar is considered to be holding it. The hovering sword falls if the solar dies.
+
+Healing Touch. The solar touches another creature. The target magically regains 40 (8d8 + 4) hit points and is freed from any curse, disease, poison, blindness, or deafness.
+
+Legendary Actions
+
+Teleport. The solar magically teleports, along with any equipment it is wearing or carrying, up to 120 ft. to an unoccupied space it can see.
+
+Searing Burst (Costs 2 Actions). The solar emits magical, divine energy. Each creature of its choice in a 10-foot radius must make a DC 23 Dexterity saving throw, taking 14 (4d6) fire damage plus 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.
+
+Blinding Gaze (Costs 3 Actions). The solar targets one creature it can see within 30 ft. of it. If the target can see it, the target must succeed on a DC 15 Constitution saving throw or be blinded until magic such as the lesser restoration spell removes the blindness.
+
+## monsters > specter
+
+Specter
+
+Type: undead
+Size: Medium
+Speed: 0 ft., fly 50 ft. (hover)
+Damage vulnerabilities: none
+Damage resistances: acid; cold; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: necrotic; poison
+Condition immunities: Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
+Senses: darkvision 60 ft., passive Perception 10
+
+Incorporeal Movement. The specter can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+Sunlight Sensitivity. While in sunlight, the specter has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+## monsters > spider
+
+Spider
+
+Type: beast
+Size: Tiny
+Speed: 20 ft., climb 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 30 ft., passive Perception 12
+
+Spider Climb. The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Web Sense. While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+
+Web Walker. The spider ignores movement restrictions caused by webbing.
+
+## monsters > spirit-naga
+
+Spirit Naga
+
+Type: monstrosity
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Charmed, Poisoned
+Senses: darkvision 60 ft., passive Perception 12
+
+Rejuvenation. If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.
+
+Spellcasting. The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:
+
+- Cantrips (at will): mage hand, minor illusion, ray of frost
+- 1st level (4 slots): charm person, detect magic, sleep
+- 2nd level (3 slots): detect thoughts, hold person
+- 3rd level (3 slots): lightning bolt, water breathing
+- 4th level (3 slots): blight, dimension door
+- 5th level (2 slots): dominate person
+
+## monsters > sprite
+
+Sprite
+
+Type: fey
+Size: Tiny
+Speed: 10 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Actions
+
+Heart Sight. The sprite touches a creature and magically knows the creature's current emotional state. If the target fails a DC 10 Charisma saving throw, the sprite also knows the creature's alignment. Celestials, fiends, and undead automatically fail the saving throw.
+
+Invisibility. The sprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it.
+
+## monsters > spy
+
+Spy
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 16
+
+Cunning Action. On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.
+
+Sneak Attack (1/Turn). The spy deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 ft. of an ally of the spy that isn't incapacitated and the spy doesn't have disadvantage on the attack roll.
+
+## monsters > steam-mephit
+
+Steam Mephit
+
+Type: elemental
+Size: Small
+Speed: 30 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire; poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 10
+
+Death Burst. When the mephit dies, it explodes in a cloud of steam. Each creature within 5 ft. of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage.
+
+Innate Spellcasting. The mephit can innately cast blur, requiring no material components. Its innate spellcasting ability is Charisma.
+
+Actions
+
+Steam Breath. The mephit exhales a 15-foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 (1d8) fire damage on a failed save, or half as much damage on a successful one.
+
+## monsters > stirge
+
+Stirge
+
+Type: beast
+Size: Tiny
+Speed: 10 ft., fly 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 9
+
+## monsters > stone-giant
+
+Stone Giant
+
+Type: giant
+Size: Huge
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Stone Camouflage. The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
+
+Reactions
+
+Rock Catching. If a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it.
+
+## monsters > stone-golem
+
+Stone Golem
+
+Type: construct
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison; psychic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't adamantine
+Condition immunities: Charmed, Exhaustion, Frightened, Paralyzed, Petrified, Poisoned
+Senses: darkvision 120 ft., passive Perception 10
+
+Immutable Form. The golem is immune to any spell or effect that would alter its form.
+
+Magic Resistance. The golem has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The golem's weapon attacks are magical.
+
+Actions
+
+Slow. The golem targets one or more creatures it can see within 10 ft. of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+## monsters > storm-giant
+
+Storm Giant
+
+Type: giant
+Size: Huge
+Speed: 50 ft., swim 50 ft.
+Damage vulnerabilities: none
+Damage resistances: cold
+Damage immunities: lightning; thunder
+Condition immunities: none
+Senses: passive Perception 19
+
+Amphibious. The giant can breathe air and water.
+
+Innate Spellcasting. The giant's innate spellcasting ability is Charisma (spell save DC 17). It can innately cast the following spells, requiring no material components:
+
+At will: detect magic, feather fall, levitate, light
+3/day each: control weather, water breathing
+
+Actions
+
+Lightning Strike. The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.
+
+## monsters > succubus-incubus
+
+Succubus/Incubus
+
+Type: fiend (shapechanger)
+Size: Medium
+Speed: 30 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning; poison; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 15
+
+Telepathic Bond. The fiend ignores the range restriction on its telepathy when communicating with a creature it has charmed. The two don't even need to be on the same plane of existence.
+
+Shapechanger. The fiend can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Without wings, the fiend loses its flying speed. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Actions
+
+Charm. One humanoid the fiend can see within 30 feet of it must succeed on a DC 15 Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the fiend's verbal or telepathic commands. If the target suffers any harm or receives a suicidal command, it can repeat the saving throw, ending the effect on a success. If the target successfully saves against the effect, or if the effect on it ends, the target is immune to this fiend's Charm for the next 24 hours.
+The fiend can have only one target charmed at a time. If it charms another, the effect on the previous target ends.
+
+Draining Kiss. The fiend kisses a creature charmed by it or a willing creature. The target must make a DC 15 Constitution saving throw against this magic, taking 32 (5d10 + 5) psychic damage on a failed save, or half as much damage on a successful one. The target's hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+
+Etherealness. The fiend magically enters the Ethereal Plane from the Material Plane, or vice versa.
+
+## monsters > swarm-of-bats
+
+Swarm of Bats
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 0 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: blindsight 60 ft., passive Perception 11
+
+Echolocation. The swarm can't use its blindsight while deafened.
+
+Keen Hearing. The swarm has advantage on Wisdom (Perception) checks that rely on hearing.
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny bat. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > swarm-of-beetles
+
+Swarm of Beetles
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 20 ft., burrow 5 ft., climb 20 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: blindsight 10 ft., passive Perception 8
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > swarm-of-centipedes
+
+Swarm of Centipedes
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 20 ft., climb 20 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: blindsight 10 ft., passive Perception 8
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > swarm-of-insects
+
+Swarm of Insects
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 20 ft., climb 20 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: blindsight 10 ft., passive Perception 8
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > swarm-of-poisonous-snakes
+
+Swarm of Poisonous Snakes
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 30 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: blindsight 10 ft., passive Perception 10
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny snake. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > swarm-of-quippers
+
+Swarm of Quippers
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 0 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: darkvision 60 ft., passive Perception 8
+
+Blood Frenzy. The swarm has advantage on melee attack rolls against any creature that doesn't have all its hit points.
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny quipper. The swarm can't regain hit points or gain temporary hit points.
+
+Water Breathing. The swarm can breathe only underwater.
+
+## monsters > swarm-of-rats
+
+Swarm of Rats
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: darkvision 30 ft., passive Perception 10
+
+Keen Smell. The swarm has advantage on Wisdom (Perception) checks that rely on smell.
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > swarm-of-ravens
+
+Swarm of Ravens
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 10 ft., fly 50 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: passive Perception 15
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny raven. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > swarm-of-spiders
+
+Swarm of Spiders
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 20 ft., climb 20 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: blindsight 10 ft., passive Perception 8
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
+
+Spider Climb. The swarm can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Web Sense. While in contact with a web, the swarm knows the exact location of any other creature in contact with the same web.
+
+Web Walker. The swarm ignores movement restrictions caused by webbing.
+
+## monsters > swarm-of-wasps
+
+Swarm of Wasps
+
+Type: swarm of Tiny beasts
+Size: Medium
+Speed: 5 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: bludgeoning; piercing; slashing
+Damage immunities: none
+Condition immunities: Charmed, Frightened, Grappled, Paralyzed, Petrified, Prone, Restrained, Stunned
+Senses: blindsight 10 ft., passive Perception 8
+
+Swarm. The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.
+
+## monsters > tarrasque
+
+Tarrasque
+
+Type: monstrosity (titan)
+Size: Gargantuan
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire; poison; bludgeoning, piercing, and slashing from nonmagical weapons
+Condition immunities: Charmed, Frightened, Paralyzed, Poisoned
+Senses: blindsight 120 ft., passive Perception 10
+
+Legendary Resistance. If the tarrasque fails a saving throw, it can choose to succeed instead.
+
+Magic Resistance. The tarrasque has advantage on saving throws against spells and other magical effects.
+
+Reflective Carapace. Any time the tarrasque is targeted by a magic missile spell, a line spell, or a spell that requires a ranged attack roll, roll a d6. On a 1 to 5, the tarrasque is unaffected. On a 6, the tarrasque is unaffected, and the effect is reflected back at the caster as though it originated from the tarrasque, turning the caster into the target.
+
+Siege Monster. The tarrasque deals double damage to objects and structures.
+
+Actions
+
+Frightful Presence. Each creature of the tarrasque's choice within 120 feet of it and aware of it must succeed on a DC 17 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the tarrasque is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the tarrasque's Frightful Presence for the next 24 hours.
+
+Swallow. The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 (16d6) acid damage at the start of each of the tarrasque's turns.
+If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 30 feet of movement, exiting prone.
+
+Legendary Actions
+
+Attack. The tarrasque makes one claw attack or tail attack.
+
+Move. The tarrasque moves up to half its speed.
+
+Chomp (Costs 2 Actions). The tarrasque makes one bite attack or uses its Swallow.
+
+## monsters > thug
+
+Thug
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Pack Tactics. The thug has advantage on an attack roll against a creature if at least one of the thug's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > tiger
+
+Tiger
+
+Type: beast
+Size: Large
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 13
+
+Keen Smell. The tiger has advantage on Wisdom (Perception) checks that rely on smell.
+
+Pounce. If the tiger moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action.
+
+## monsters > treant
+
+Treant
+
+Type: plant
+Size: Huge
+Speed: 30 ft.
+Damage vulnerabilities: fire
+Damage resistances: bludgeoning; piercing
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+False Appearance. While the treant remains motionless, it is indistinguishable from a normal tree.
+
+Siege Monster. The treant deals double damage to objects and structures.
+
+Actions
+
+Animate Trees. The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.
+
+## monsters > tribal-warrior
+
+Tribal Warrior
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Pack Tactics. The warrior has advantage on an attack roll against a creature if at least one of the warrior's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > triceratops
+
+Triceratops
+
+Type: beast
+Size: Huge
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 10
+
+Trampling Charge. If the triceratops moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the triceratops can make one stomp attack against it as a bonus action.
+
+## monsters > troll
+
+Troll
+
+Type: giant
+Size: Large
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 12
+
+Keen Smell. The troll has advantage on Wisdom (Perception) checks that rely on smell.
+
+Regeneration. The troll regains 10 hit points at the start of its turn. If the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate.
+
+## monsters > tyrannosaurus-rex
+
+Tyrannosaurus Rex
+
+Type: beast
+Size: Huge
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 14
+
+## monsters > unicorn
+
+Unicorn
+
+Type: celestial
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Charmed, Paralyzed, Poisoned
+Senses: darkvision 60 ft., passive Perception 13
+
+Charge. If the unicorn moves at least 20 ft. straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.
+
+Innate Spellcasting. The unicorn's innate spellcasting ability is Charisma (spell save DC 14). The unicorn can innately cast the following spells, requiring no components:
+
+At will: detect evil and good, druidcraft, pass without trace
+1/day each: calm emotions, dispel evil and good, entangle
+
+Magic Resistance. The unicorn has advantage on saving throws against spells and other magical effects.
+
+Magic Weapons. The unicorn's weapon attacks are magical.
+
+Actions
+
+Healing Touch. The unicorn touches another creature with its horn. The target magically regains 11 (2d8 + 2) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target.
+
+Teleport. The unicorn magically teleports itself and up to three willing creatures it can see within 5 ft. of it, along with any equipment they are wearing or carrying, to a location the unicorn is familiar with, up to 1 mile away.
+
+Legendary Actions
+
+Hooves. The unicorn makes one attack with its hooves.
+
+Shimmering Shield (Costs 2 Actions). The unicorn creates a shimmering, magical field around itself or another creature it can see within 60 ft. of it. The target gains a +2 bonus to AC until the end of the unicorn's next turn.
+
+Heal Self (Costs 3 Actions). The unicorn magically regains 11 (2d8 + 2) hit points.
+
+## monsters > vampire-vampire
+
+Vampire, Vampire Form
+
+Type: undead (shapechanger)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 17
+
+Shapechanger. If the vampire isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.
+While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.
+While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight.
+
+Legendary Resistance. If the vampire fails a saving throw, it can choose to succeed instead.
+
+Misty Escape. When it drops to 0 hit points outside its resting place, the vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.
+While it has 0 hit points in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its vampire form. It is then paralyzed until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point.
+
+Regeneration. The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.
+
+Spider Climb. The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Vampire Weaknesses. The vampire has the following flaws:
+Forbiddance. The vampire can't enter a residence without an invitation from one of the occupants.
+Harmed by Running Water. The vampire takes 20 acid damage if it ends its turn in running water.
+Stake to the Heart. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.
+Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.
+
+Actions
+
+Charm. The vampire targets one humanoid it can see within 30 ft. of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire. The charmed target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bit attack.
+Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect.
+
+Children of the Night. The vampire magically calls 2d4 swarms of bats or rats, provided that the sun isn't up. While outdoors, the vampire can call 3d6 wolves instead. The called creatures arrive in 1d4 rounds, acting as allies of the vampire and obeying its spoken commands. The beasts remain for 1 hour, until the vampire dies, or until the vampire dismisses them as a bonus action.
+
+Legendary Actions
+
+Move. The vampire moves up to its speed without provoking opportunity attacks.
+
+Unarmed Strike. The vampire makes one unarmed strike.
+
+Bite (Costs 2 Actions). The vampire makes one bite attack.
+
+## monsters > vampire-bat
+
+Vampire, Bat Form
+
+Type: undead (shapechanger)
+Size: Medium
+Speed: 5 ft., fly 30 ft.
+Damage vulnerabilities: none
+Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 17
+
+Shapechanger. If the vampire isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.
+While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.
+While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight.
+
+Legendary Resistance. If the vampire fails a saving throw, it can choose to succeed instead.
+
+Misty Escape. When it drops to 0 hit points outside its resting place, the vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.
+While it has 0 hit points in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its vampire form. It is then paralyzed until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point.
+
+Regeneration. The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.
+
+Spider Climb. The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Vampire Weaknesses. The vampire has the following flaws:
+Forbiddance. The vampire can't enter a residence without an invitation from one of the occupants.
+Harmed by Running Water. The vampire takes 20 acid damage if it ends its turn in running water.
+Stake to the Heart. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.
+Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.
+
+Actions
+
+Charm. The vampire targets one humanoid it can see within 30 ft. of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire. The charmed target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bit attack.
+Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect.
+
+Children of the Night. The vampire magically calls 2d4 swarms of bats or rats, provided that the sun isn't up. While outdoors, the vampire can call 3d6 wolves instead. The called creatures arrive in 1d4 rounds, acting as allies of the vampire and obeying its spoken commands. The beasts remain for 1 hour, until the vampire dies, or until the vampire dismisses them as a bonus action.
+
+Legendary Actions
+
+Move. The vampire moves up to its speed without provoking opportunity attacks.
+
+Unarmed Strike. The vampire makes one unarmed strike.
+
+Bite (Costs 2 Actions). The vampire makes one bite attack.
+
+## monsters > vampire-mist
+
+Vampire, Mist Form
+
+Type: undead (shapechanger)
+Size: Medium
+Speed: fly 20 ft.
+Damage vulnerabilities: none
+Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 120 ft., passive Perception 17
+
+Shapechanger. If the vampire isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.
+While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.
+While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight.
+
+Legendary Resistance. If the vampire fails a saving throw, it can choose to succeed instead.
+
+Misty Escape. When it drops to 0 hit points outside its resting place, the vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.
+While it has 0 hit points in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its vampire form. It is then paralyzed until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point.
+
+Regeneration. The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.
+
+Spider Climb. The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Vampire Weaknesses. The vampire has the following flaws:
+Forbiddance. The vampire can't enter a residence without an invitation from one of the occupants.
+Harmed by Running Water. The vampire takes 20 acid damage if it ends its turn in running water.
+Stake to the Heart. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.
+Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.
+
+Legendary Actions
+
+Move. The vampire moves up to its speed without provoking opportunity attacks.
+
+Unarmed Strike. The vampire makes one unarmed strike.
+
+Bite (Costs 2 Actions). The vampire makes one bite attack.
+
+## monsters > vampire-spawn
+
+Vampire Spawn
+
+Type: undead
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 13
+
+Regeneration. The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.
+
+Spider Climb. The vampire can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+
+Vampire Weaknesses. The vampire has the following flaws:
+Forbiddance. The vampire can't enter a residence without an invitation from one of the occupants.
+Harmed by Running Water. The vampire takes 20 acid damage when it ends its turn in running water.
+Stake to the Heart. The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is incapacitated in its resting place.
+Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.
+
+## monsters > veteran
+
+Veteran
+
+Type: humanoid (any race)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 12
+
+## monsters > violet-fungus
+
+Violet Fungus
+
+Type: plant
+Size: Medium
+Speed: 5 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: Blinded, Blinded, Frightened
+Senses: blindsight 30 ft. (blind beyond this radius), passive Perception 6
+
+False Appearance. While the violet fungus remains motionless, it is indistinguishable from an ordinary fungus.
+
+## monsters > vrock
+
+Vrock
+
+Type: fiend (demon)
+Size: Large
+Speed: 40 ft., fly 60 ft.
+Damage vulnerabilities: none
+Damage resistances: cold; fire; lightning; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 120 ft., passive Perception 11
+
+Magic Resistance. The vrock has advantage on saving throws against spells and other magical effects.
+
+Actions
+
+Spores. A 15-foot-radius cloud of toxic spores extends out from the vrock. The spores spread around corners. Each creature in that area must succeed on a DC 14 Constitution saving throw or become poisoned. While poisoned in this way, a target takes 5 (1d10) poison damage at the start of each of its turns. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. Emptying a vial of holy water on the target also ends the effect on it.
+
+Stunning Screech. The vrock emits a horrific screech. Each creature within 20 feet of it that can hear it and that isn't a demon must succeed on a DC 14 Constitution saving throw or be stunned until the end of the vrock's next turn .
+
+## monsters > vulture
+
+Vulture
+
+Type: beast
+Size: Medium
+Speed: 10 ft., fly 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Sight and Smell. The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell.
+
+Pack Tactics. The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > warhorse
+
+Warhorse
+
+Type: beast
+Size: Large
+Speed: 60 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 11
+
+Trampling Charge. If the horse moves at least 20 ft. straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action.
+
+## monsters > warhorse-skeleton
+
+Warhorse Skeleton
+
+Type: undead
+Size: Large
+Speed: 60 ft.
+Damage vulnerabilities: bludgeoning
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Exhaustion, Poisoned
+Senses: darkvision 60 ft., passive Perception 9
+
+## monsters > water-elemental
+
+Water Elemental
+
+Type: elemental
+Size: Large
+Speed: 30 ft., swim 90 ft.
+Damage vulnerabilities: none
+Damage resistances: acid; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: poison
+Condition immunities: Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained, Unconscious
+Senses: darkvision 60 ft., passive Perception 10
+
+Water Form. The elemental can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch wide without squeezing.
+
+Freeze. If the elemental takes cold damage, it partially freezes; its speed is reduced by 20 ft. until the end of its next turn.
+
+Actions
+
+Whelm. Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8 + 4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.
+The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8 + 4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength and succeeding.
+
+## monsters > weasel
+
+Weasel
+
+Type: beast
+Size: Tiny
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Hearing and Smell. The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > werebear-bear
+
+Werebear, Bear Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 40 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 17
+
+Shapechanger. The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Smell. The werebear has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > werebear-human
+
+Werebear, Human Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 17
+
+Shapechanger. The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Smell. The werebear has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > werebear-hybrid
+
+Werebear, Hybrid Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 40 ft., climb 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 17
+
+Shapechanger. The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Smell. The werebear has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > wereboar-boar
+
+Wereboar, Boar Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 12
+
+Shapechanger. The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Charge (Boar or Hybrid Form Only). If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+
+Relentless. If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.
+
+## monsters > wereboar-human
+
+Wereboar, Human Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 12
+
+Shapechanger. The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Relentless. If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.
+
+## monsters > wereboar-hybrid
+
+Wereboar, Hybrid Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 12
+
+Shapechanger. The wereboar can use its action to polymorph into a boar-humanoid hybrid or into a boar, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Charge (Boar or Hybrid Form Only). If the wereboar moves at least 15 feet straight toward a target and then hits it with its tusks on the same turn, the target takes an extra 7 (2d6) slashing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+
+Relentless. If the wereboar takes 14 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.
+
+## monsters > wererat-human
+
+Wererat, Human Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 12
+
+Shapechanger. The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Smell. The wererat has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > wererat-hybrid
+
+Wererat, Hybrid Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 12
+
+Shapechanger. The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Smell. The wererat has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > wererat-rat
+
+Wererat, Rat Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 12
+
+Shapechanger. The wererat can use its action to polymorph into a rat-humanoid hybrid or into a giant rat, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Smell. The wererat has advantage on Wisdom (Perception) checks that rely on smell.
+
+## monsters > weretiger-human
+
+Weretiger, Human Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 15
+
+Shapechanger. The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Hearing and Smell. The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > weretiger-hybrid
+
+Weretiger, Hybrid Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 15
+
+Shapechanger. The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Hearing and Smell. The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Pounce. If the weretiger moves at least 15 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the weretiger can make one bite attack against it as a bonus action.
+
+## monsters > weretiger-tiger
+
+Weretiger, Tiger Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 15
+
+Shapechanger. The weretiger can use its action to polymorph into a tiger-humanoid hybrid or into a tiger, or back into its true form, which is humanoid. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Hearing and Smell. The weretiger has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Pounce. If the weretiger moves at least 15 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the weretiger can make one bite attack against it as a bonus action.
+
+## monsters > werewolf-human
+
+Werewolf, Human Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 14
+
+Shapechanger. The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Hearing and Smell. The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > werewolf-hybrid
+
+Werewolf, Hybrid Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 14
+
+Shapechanger. The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Hearing and Smell. The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > werewolf-wolf
+
+Werewolf, Wolf Form
+
+Type: humanoid (human)
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Condition immunities: none
+Senses: passive Perception 14
+
+Shapechanger. The werewolf can use its action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into its true form, which is humanoid. Its statistics, other than its AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.
+
+Keen Hearing and Smell. The werewolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > white-dragon-wyrmling
+
+White Dragon Wyrmling
+
+Type: dragon
+Size: Medium
+Speed: 30 ft., burrow 15 ft., fly 60 ft., swim 30 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 10 ft., darkvision 60 ft., passive Perception 14
+
+Actions
+
+Cold Breath. The dragon exhales an icy blast of hail in a 15-foot cone. Each creature in that area must make a DC 12 Constitution saving throw, taking 22 (5d8) cold damage on a failed save, or half as much damage on a successful one.
+
+## monsters > wight
+
+Wight
+
+Type: undead
+Size: Medium
+Speed: 30 ft.
+Damage vulnerabilities: none
+Damage resistances: necrotic; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: poison
+Condition immunities: Exhaustion, Poisoned
+Senses: darkvision 60 ft., passive Perception 13
+
+Sunlight Sensitivity. While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+## monsters > will-o-wisp
+
+Will-o'-Wisp
+
+Type: undead
+Size: Tiny
+Speed: 0 ft., fly 50 ft. (hover)
+Damage vulnerabilities: none
+Damage resistances: acid; cold; fire; necrotic; thunder; bludgeoning, piercing, and slashing from nonmagical weapons
+Damage immunities: lightning; poison
+Condition immunities: Exhaustion, Grappled, Paralyzed, Poisoned, Prone, Restrained, Unconscious
+Senses: darkvision 120 ft., passive Perception 12
+
+Consume Life. As a bonus action, the will-o'-wisp can target one creature it can see within 5 ft. of it that has 0 hit points and is still alive. The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.
+
+Ephemeral. The will-o'-wisp can't wear or carry anything.
+
+Incorporeal Movement. The will-o'-wisp can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+Variable Illumination. The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of ft. equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action.
+
+Actions
+
+Invisibility. The will-o'-wisp and its light magically become invisible until it attacks or uses its Consume Life, or until its concentration ends (as if concentrating on a spell).
+
+## monsters > winter-wolf
+
+Winter Wolf
+
+Type: monstrosity
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: passive Perception 15
+
+Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Pack Tactics. The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+Snow Camouflage. The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.
+
+Actions
+
+Cold Breath. The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much damage on a successful one.
+
+## monsters > wolf
+
+Wolf
+
+Type: beast
+Size: Medium
+Speed: 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: passive Perception 13
+
+Keen Hearing and Smell. The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+Pack Tactics. The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated.
+
+## monsters > worg
+
+Worg
+
+Type: monstrosity
+Size: Large
+Speed: 50 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+Keen Hearing and Smell. The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+
+## monsters > wraith
+
+Wraith
+
+Type: undead
+Size: Medium
+Speed: 0 ft., fly 60 ft. (hover)
+Damage vulnerabilities: none
+Damage resistances: acid; cold; fire; lightning; thunder; bludgeoning, piercing, and slashing from nonmagical weapons that aren't silvered
+Damage immunities: necrotic; poison
+Condition immunities: Charmed, Exhaustion, Grappled, Paralyzed, Petrified, Poisoned, Prone, Restrained
+Senses: darkvision 60 ft., passive Perception 12
+
+Incorporeal Movement. The wraith can move through other creatures and objects as if they were difficult terrain. It takes 5 (1d10) force damage if it ends its turn inside an object.
+
+Sunlight Sensitivity. While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.
+
+Actions
+
+Create Specter. The wraith targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at one time.
+
+## monsters > wyvern
+
+Wyvern
+
+Type: dragon
+Size: Large
+Speed: 20 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., passive Perception 14
+
+## monsters > xorn
+
+Xorn
+
+Type: elemental
+Size: Medium
+Speed: 20 ft., burrow 20 ft.
+Damage vulnerabilities: none
+Damage resistances: piercing and slashing from nonmagical weapons that aren't adamantine
+Damage immunities: none
+Condition immunities: none
+Senses: darkvision 60 ft., tremorsense 60 ft., passive Perception 16
+
+Earth Glide. The xorn can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through.
+
+Stone Camouflage. The xorn has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.
+
+Treasure Sense. The xorn can pinpoint, by scent, the location of precious metals and stones, such as coins and gems, within 60 ft. of it.
+
+## monsters > young-black-dragon
+
+Young Black Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 16
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Acid Breath. The dragon exhales acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 49 (11d8) acid damage on a failed save, or half as much damage on a successful one.
+
+## monsters > young-blue-dragon
+
+Young Blue Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., burrow 20 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 19
+
+Actions
+
+Lightning Breath. The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.
+
+## monsters > young-brass-dragon
+
+Young Brass Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., burrow 20 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 16
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Fire Breath. The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 42 (12d6) fire damage on a failed save, or half as much damage on a successful one.
+Sleep Breath. The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw or fall unconscious for 5 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.
+
+## monsters > young-bronze-dragon
+
+Young Bronze Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: lightning
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 17
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Lightning Breath. The dragon exhales lightning in a 60-foot line that is 5 feet wide. Each creature in that line must make a DC 15 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.
+Repulsion Breath. The dragon exhales repulsion energy in a 30-foot cone. Each creature in that area must succeed on a DC 15 Strength saving throw. On a failed save, the creature is pushed 40 feet away from the dragon.
+
+## monsters > young-copper-dragon
+
+Young Copper Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., climb 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: acid
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 17
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Acid Breath. The dragon exhales acid in an 40-foot line that is 5 feet wide. Each creature in that line must make a DC 14 Dexterity saving throw, taking 40 (9d8) acid damage on a failed save, or half as much damage on a successful one.
+Slowing Breath. The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a DC 14 Constitution saving throw. On a failed save, the creature can't use reactions, its speed is halved, and it can't make more than one attack on its turn. In addition, the creature can use either an action or a bonus action on its turn, but not both. These effects last for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself with a successful save.
+
+## monsters > young-gold-dragon
+
+Young Gold Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 19
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Fire Breath. The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 55 (10d10) fire damage on a failed save, or half as much damage on a successful one.
+Weakening Breath. The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a DC 17 Strength saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+## monsters > young-green-dragon
+
+Young Green Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 17
+
+Amphibious. The dragon can breathe air and water.
+
+Actions
+
+Poison Breath. The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.
+
+## monsters > young-red-dragon
+
+Young Red Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., climb 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: fire
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 18
+
+Actions
+
+Fire Breath. The dragon exhales fire in a 30-foot cone. Each creature in that area must make a DC 17 Dexterity saving throw, taking 56 (16d6) fire damage on a failed save, or half as much damage on a successful one.
+
+## monsters > young-silver-dragon
+
+Young Silver Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., fly 80 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 18
+
+Actions
+
+Breath Weapons. The dragon uses one of the following breath weapons.
+Cold Breath. The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 17 Constitution saving throw, taking 54 (12d8) cold damage on a failed save, or half as much damage on a successful one.
+Paralyzing Breath. The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must succeed on a DC 17 Constitution saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+
+## monsters > young-white-dragon
+
+Young White Dragon
+
+Type: dragon
+Size: Large
+Speed: 40 ft., burrow 20 ft., fly 80 ft., swim 40 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: cold
+Condition immunities: none
+Senses: blindsight 30 ft., darkvision 120 ft., passive Perception 16
+
+Ice Walk. The dragon can move across and climb icy surfaces without needing to make an ability check. Additionally, difficult terrain composed of ice or snow doesn't cost it extra movement.
+
+Actions
+
+Cold Breath. The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a DC 15 Constitution saving throw, taking 45 (10d8) cold damage on a failed save, or half as much damage on a successful one.
+
+## monsters > zombie
+
+Zombie
+
+Type: undead
+Size: Medium
+Speed: 20 ft.
+Damage vulnerabilities: none
+Damage resistances: none
+Damage immunities: poison
+Condition immunities: Poisoned
+Senses: darkvision 60 ft., passive Perception 8
+
+Undead Fortitude. If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
+
 ## class-features > wizard > your-spellbook
 
 Your Spellbook
