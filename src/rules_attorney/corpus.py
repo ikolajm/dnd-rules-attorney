@@ -564,6 +564,22 @@ def item_fields(line: str) -> list[str]:
     return [f"Type: {kind}", f"Rarity: {rarity}", f"Attunement: {attunement}"]
 
 
+def magic_item_entries(record: dict[str, Any]) -> list[Entry]:
+    """The single entry for a magic item; a variant record makes none."""
+    if record["variant"]:
+        return []
+    name: str = record["name"]
+    desc: list[str] = record["desc"]
+    lines = item_fields(desc[0])
+    variants = [
+        variant["name"] for variant in record["variants"] if variant["name"] != name
+    ]
+    if variants:
+        lines.append(f"Variants: {'; '.join(variants)}")
+    text = "\n\n".join([name, "\n".join(lines), *desc[1:]])
+    return [Entry(path=f"magic-items > {record['index']}", text=text)]
+
+
 def spellcasting_path(class_index: str) -> str:
     """The feature a class's spellcasting text joins: Spellcasting or Pact Magic."""
     feature = (

@@ -26,6 +26,7 @@ from rules_attorney.corpus import (
     focus_entries,
     item_fields,
     load_corpus,
+    magic_item_entries,
     prerequisite,
     race_entries,
     section_entries,
@@ -506,6 +507,41 @@ def test_item_fields_refuses_a_line_without_a_comma_outside_parentheses() -> Non
 def test_item_fields_refuses_two_attunement_clauses() -> None:
     with pytest.raises(CorpusError, match="Ring, rare"):
         item_fields("Ring, rare (requires attunement) (requires attunement by a bard)")
+
+
+def potion_record() -> dict[str, Any]:
+    """A made-up parent whose variants include one named as the parent."""
+    return {
+        "index": "potion-of-healing",
+        "name": "Potion of Healing",
+        "variant": False,
+        "variants": [
+            {"index": "potion-of-healing", "name": "Potion of Healing"},
+            {"index": "potion-of-greater-healing", "name": "Potion of Greater Healing"},
+            {"index": "weapon-1", "name": "Weapon, +1"},
+        ],
+        "desc": ["Potion, varies", "You regain hit points.", "| Potion | Rarity |"],
+    }
+
+
+def test_magic_item_entries_writes_the_fields_variants_and_text() -> None:
+    entries = magic_item_entries(potion_record())
+    assert [e.path for e in entries] == ["magic-items > potion-of-healing"]
+    assert entries[0].text == (
+        "Potion of Healing\n\n"
+        "Type: Potion\nRarity: varies\nAttunement: none\n"
+        "Variants: Potion of Greater Healing; Weapon, +1\n\n"
+        "You regain hit points.\n\n| Potion | Rarity |"
+    )
+
+
+def test_magic_item_entries_makes_no_entry_for_a_variant() -> None:
+    assert magic_item_entries({**potion_record(), "variant": True}) == []
+
+
+def test_magic_item_entries_writes_no_variants_line_without_variants() -> None:
+    entries = magic_item_entries({**potion_record(), "variants": []})
+    assert "Variants:" not in entries[0].text
 
 
 def test_spellcasting_joins_label_each_rule_and_skip_non_casters() -> None:
