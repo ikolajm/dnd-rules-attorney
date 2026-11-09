@@ -633,9 +633,29 @@ def monster_lines(record: dict[str, Any]) -> list[str]:
     return lines
 
 
+def usage_text(usage: dict[str, Any], name: str) -> str:
+    """How often an ability can be used, as a stat block writes it after the name."""
+    kind = usage["type"]
+    if kind == "per day":
+        return f"{usage['times']}/Day"
+    if kind == "recharge on roll":
+        if usage["dice"] != "1d6":
+            raise CorpusError(f"{name}: recharge on {usage['dice']}, not 1d6")
+        low = usage["min_value"]
+        return "Recharge 6" if low == 6 else f"Recharge {low}-6"
+    if kind == "recharge after rest":
+        rests = " or ".join(rest.capitalize() for rest in usage["rest_types"])
+        return f"Recharges after a {rests} Rest"
+    raise CorpusError(f"{name}: unknown usage {kind!r}")
+
+
 def ability_text(ability: dict[str, Any]) -> str:
-    """A named ability as a stat block runs it in: its name, then its text."""
-    return f"{ability['name']}. {ability['desc']}"
+    """A named ability as a stat block runs it in: its name and limit, then text."""
+    name: str = ability["name"]
+    usage: dict[str, Any] | None = ability.get("usage")
+    if usage:
+        name += f" ({usage_text(usage, name)})"
+    return f"{name}. {ability['desc']}"
 
 
 def monster_entries(record: dict[str, Any]) -> list[Entry]:
