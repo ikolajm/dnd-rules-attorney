@@ -586,16 +586,41 @@ def magic_item_entries(record: dict[str, Any]) -> list[Entry]:
 # Hover is not a mode: it is read beside fly.
 SPEEDS = ("walk", "fly", "swim", "climb", "burrow")
 SENSES = ("darkvision", "blindsight", "truesight", "tremorsense", "passive_perception")
+# The ability scores in a stat block's order, each under its abbreviation.
+ABILITY_SCORES = (
+    ("Str", "strength"),
+    ("Dex", "dexterity"),
+    ("Con", "constitution"),
+    ("Int", "intelligence"),
+    ("Wis", "wisdom"),
+    ("Cha", "charisma"),
+)
+# The challenge ratings below 1, written as a stat block writes them.
+FRACTIONS = {0.125: "1/8", 0.25: "1/4", 0.5: "1/2"}
+
+
+def challenge(rating: float, index: str) -> str:
+    """A challenge rating as a stat block writes it: a whole number or a fraction."""
+    if rating in FRACTIONS:
+        return FRACTIONS[rating]
+    if not float(rating).is_integer():
+        raise CorpusError(f"{index}: unknown challenge rating {rating!r}")
+    return str(int(rating))
 
 
 def monster_lines(record: dict[str, Any]) -> list[str]:
-    """A stat block's rule-bearing fields: type, size, speed, defenses and senses."""
+    """A stat block's rule-bearing fields, from its type to its challenge."""
     index: str = record["index"]
     kind: str = record["type"]
     subtype: str | None = record.get("subtype")
     if subtype:
         kind += f" ({subtype})"
-    lines = [f"Type: {kind}", f"Size: {record['size']}"]
+    roll = re.sub(r"([+-])", r" \1 ", record["hit_points_roll"])
+    lines = [
+        f"Type: {kind}",
+        f"Size: {record['size']}",
+        f"Hit points: {record['hit_points']} ({roll})",
+    ]
 
     speed: dict[str, Any] = record["speed"]
     speeds: list[str] = []
@@ -612,6 +637,8 @@ def monster_lines(record: dict[str, Any]) -> list[str]:
                 text += " (hover)"
             speeds.append(text)
     lines.append(f"Speed: {', '.join(speeds)}")
+    scores = ", ".join(f"{short} {record[key]}" for short, key in ABILITY_SCORES)
+    lines.append(f"Abilities: {scores}")
 
     for label, key in (
         ("Damage vulnerabilities", "damage_vulnerabilities"),
@@ -630,6 +657,8 @@ def monster_lines(record: dict[str, Any]) -> list[str]:
         else:
             senses.append(f"{sense} {value}")
     lines.append(f"Senses: {', '.join(senses)}")
+    lines.append(f"Languages: {record['languages'] or 'none'}")
+    lines.append(f"Challenge: {challenge(record['challenge_rating'], index)}")
     return lines
 
 
