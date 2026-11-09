@@ -10,6 +10,7 @@ from rules_attorney.corpus import (
     FEATURES_FILE,
     FOCI,
     GEAR_WITH_RULES,
+    MAGIC_ITEMS_FILE,
     SOURCES,
     SUPPLEMENT_FILE,
     TRAITS_FILE,
@@ -74,8 +75,10 @@ def test_records_match_the_source_files() -> None:
     # one, as is gear with a rule and each spellcasting focus; other gear
     # makes no entry. Class features and racial traits are one record per
     # distinct text, however many repeat it; a race, class or feat is one
-    # record of one. The supplement's new entries group by their first step,
-    # as a rule section's do; its other passages join entries already counted.
+    # record of one, as is a magic item, and a variant makes none, its name
+    # written into its parent. The supplement's new entries group by their
+    # first step, as a rule section's do; its other passages join entries
+    # already counted.
     expected = 0
     for name in SOURCES:
         rows: list[dict[str, Any]] = json.loads(
@@ -89,6 +92,8 @@ def test_records_match_the_source_files() -> None:
                 or r["index"] in GEAR_WITH_RULES
             ]
             expected += len(FOCI)
+        if name == MAGIC_ITEMS_FILE:
+            rows = [r for r in rows if not r["variant"]]
         if name in (FEATURES_FILE, TRAITS_FILE):
             expected += len({"\n\n".join(r["desc"]) for r in rows})
             continue

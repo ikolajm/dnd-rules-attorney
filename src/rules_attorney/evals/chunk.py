@@ -15,6 +15,7 @@ WHOLE = (
     "races",
     "racial-traits",
     "classes",
+    "magic-items",
 )
 WINDOW = 800
 OVERLAP = 200
