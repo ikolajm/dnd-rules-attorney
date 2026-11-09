@@ -16,6 +16,7 @@ from rules_attorney.corpus import (
     CorpusError,
     Entry,
     Join,
+    ability_text,
     apply_joins,
     armor_lines,
     class_entries,
@@ -680,6 +681,46 @@ def test_monster_entries_writes_no_heading_over_an_empty_group() -> None:
     text = monster_entries(record)[0].text
     for heading in ("Actions", "Reactions", "Legendary Actions"):
         assert heading not in text.split("\n\n")
+
+
+@pytest.mark.parametrize(
+    ("usage", "written"),
+    [
+        ({"type": "per day", "times": 3}, "Fend (3/Day). It fends."),
+        (
+            {"type": "recharge on roll", "dice": "1d6", "min_value": 5},
+            "Fend (Recharge 5-6). It fends.",
+        ),
+        (
+            {"type": "recharge on roll", "dice": "1d6", "min_value": 6},
+            "Fend (Recharge 6). It fends.",
+        ),
+        (
+            {"type": "recharge after rest", "rest_types": ["short", "long"]},
+            "Fend (Recharges after a Short or Long Rest). It fends.",
+        ),
+    ],
+)
+def test_ability_text_writes_its_usage_after_the_name(
+    usage: dict[str, Any], written: str
+) -> None:
+    assert ability_text({**ability("Fend", "It fends."), "usage": usage}) == written
+
+
+def test_ability_text_writes_no_usage_when_it_has_none() -> None:
+    assert ability_text(ability("Fend", "It fends.")) == "Fend. It fends."
+
+
+def test_ability_text_refuses_an_unknown_usage() -> None:
+    usage = {"type": "per moon", "times": 1}
+    with pytest.raises(CorpusError, match="Fend: unknown usage"):
+        ability_text({**ability("Fend", "It fends."), "usage": usage})
+
+
+def test_ability_text_refuses_a_recharge_not_on_a_d6() -> None:
+    usage = {"type": "recharge on roll", "dice": "1d8", "min_value": 7}
+    with pytest.raises(CorpusError, match="Fend: recharge on 1d8"):
+        ability_text({**ability("Fend", "It fends."), "usage": usage})
 
 
 def test_spellcasting_joins_label_each_rule_and_skip_non_casters() -> None:
