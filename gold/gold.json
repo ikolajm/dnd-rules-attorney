@@ -1811,5 +1811,228 @@
       "resting > long-rest"
     ],
     "split": "dev"
+  },
+  {
+    "id": "turn-undead-werewolf",
+    "question": "Can my cleric's Turn Undead send a werewolf running?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Turn Undead affects each undead that can see or hear the cleric within 30 feet. A werewolf's stat block types it a humanoid, in its human form and its wolf form alike, so it is not undead and the turning doesn't touch it.",
+    "cites": [
+      "class-features > cleric > channel-divinity-turn-undead",
+      "monsters > werewolf-human",
+      "monsters > werewolf-wolf"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "hold-person-werewolf-wolf-form",
+    "question": "The werewolf has changed into a wolf. Can I still target it with hold person?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Hold person targets a humanoid. The werewolf's wolf form keeps its type, humanoid, and its Shapechanger trait says its statistics other than its AC are the same in each form, so the wolf is still a humanoid and a valid target.",
+    "cites": [
+      "spells > hold-person",
+      "monsters > werewolf-wolf"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "turn-undead-possessing-ghost",
+    "question": "A ghost has possessed my fighter. Can my cleric's Turn Undead still reach it?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "While it possesses a body, the ghost can't be targeted by any attack, spell or other effect except ones that turn undead, so Turn Undead is the exception its stat block names. If the ghost fails its save it is turned, and being turned ends the possession; the ghost reappears in an unoccupied space within 5 feet of the body.",
+    "cites": [
+      "monsters > ghost",
+      "class-features > cleric > channel-divinity-turn-undead"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "poison-spray-skeleton",
+    "question": "Is poison spray any use against a skeleton?",
+    "status": "settled",
+    "verdict": "no, it takes no damage",
+    "ruling": "A skeleton is immune to poison damage, and poison spray deals only poison damage, so even on a failed save it takes none. The monster rules give creatures immunity to damage types beside resistance and vulnerability, but neither they nor the damage rules say what immunity does; taking no damage of the type is its plain meaning, not a rule the SRD writes down.",
+    "cites": [
+      "monsters > skeleton",
+      "spells > poison-spray",
+      "monster-statistics > vulnerabilities-resistances-and-immunities"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "grapple-a-ghost",
+    "question": "Can I grapple a ghost to keep it from slipping away through the wall?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "The ghost is immune to the grappled condition, so a grapple can't impose it and there is nothing to hold. Its Incorporeal Movement also lets it move through objects as if they were difficult terrain, so the wall is no barrier to it.",
+    "cites": [
+      "monsters > ghost",
+      "conditions > grappled",
+      "making-an-attack > melee-attacks > grappling"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "evasion-dragon-breath",
+    "question": "My 7th-level rogue succeeds on her Dexterity save against an adult red dragon's fire breath. How much damage does she take?",
+    "status": "settled",
+    "verdict": "none",
+    "ruling": "Fire Breath calls for a DC 21 Dexterity saving throw, with half damage on a success. Evasion turns an effect that allows a Dexterity save for half damage into no damage on a success and half on a failure, and it names a red dragon's fiery breath as its example. On her success she takes no damage.",
+    "cites": [
+      "class-features > rogue > evasion",
+      "monsters > adult-red-dragon"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "frightful-presence-after-success",
+    "question": "I saved against an adult red dragon's Frightful Presence last round. Can it frighten me again this fight?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A creature whose saving throw succeeds, or whose fright ends, is immune to the dragon's Frightful Presence for the next 24 hours. Having succeeded, you can't be frightened by this dragon's Frightful Presence again for a day.",
+    "cites": [
+      "monsters > adult-red-dragon",
+      "conditions > frightened"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "legendary-resistance-count",
+    "question": "The adult red dragon failed its save against my hold monster and chose to succeed instead. How many times can it do that?",
+    "status": "settled",
+    "verdict": "three times a day",
+    "ruling": "Legendary Resistance lets the dragon choose to succeed when it fails a saving throw, and the adult red dragon has it 3/Day. That notation means three uses, regained when the dragon finishes a long rest, so after the third it must take the saves it fails until it has rested.",
+    "cites": [
+      "monsters > adult-red-dragon",
+      "spells > hold-monster",
+      "monster-statistics > limited-usage"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "dragon-breath-recharge",
+    "question": "The dragon just used its fire breath. Can it breathe again on its next turn?",
+    "status": "settled",
+    "verdict": "only if its recharge roll comes up 5 or 6",
+    "ruling": "Fire Breath is Recharge 5-6. At the start of each of the dragon's turns it rolls a d6 and regains the breath on a 5 or 6, so it breathes again next turn only on that roll and otherwise uses its other actions. A short or long rest also recharges it.",
+    "cites": [
+      "monsters > adult-red-dragon",
+      "monster-statistics > limited-usage"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "legendary-action-mid-turn",
+    "question": "Can the adult red dragon use its Wing Attack legendary action in the middle of my turn, right after I attack?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A legendary creature takes its legendary actions outside its turn, but only one option at a time and only at the end of another creature's turn, regaining the spent ones at the start of its own. Wing Attack, costing two, can't interrupt your turn; the dragon waits until your turn ends.",
+    "cites": [
+      "monsters > adult-red-dragon",
+      "legendary-creatures > legendary-actions"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "werewolf-magic-sword",
+    "question": "My +1 longsword isn't silvered. Can it hurt a werewolf?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "The werewolf is immune to bludgeoning, piercing and slashing damage from nonmagical weapons that aren't silvered. A magical attack is one delivered by a spell, a magic item or another magical source, and a +1 longsword is a magic item, so its damage isn't from a nonmagical weapon and the immunity doesn't apply; silver matters only for a weapon that isn't magical.",
+    "cites": [
+      "monsters > werewolf-human",
+      "magic-items > weapon",
+      "monster-statistics > vulnerabilities-resistances-and-immunities",
+      "weapons > silvered-weapons"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "wild-shape-giant-spider",
+    "question": "My 4th-level druid wants to Wild Shape into a giant spider. Can she?",
+    "status": "settled",
+    "verdict": "no, not until 8th level",
+    "ruling": "Wild Shape's druid level sets the beasts a druid can become: at 4th level, a beast of challenge rating 1/2 or lower with no flying speed. The giant spider is a beast with a climbing speed and no flying speed, but its challenge is 1, above her limit. At 8th level the limit rises to challenge 1, and the spider becomes a form she can take.",
+    "cites": [
+      "class-features > druid > wild-shape",
+      "monsters > giant-spider"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sleep-full-health-ogre",
+    "question": "Can a 1st-level sleep spell put an ogre at full health to sleep?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Sleep rolls 5d8 for the hit points of creatures it can affect, and a creature is affected only if its current hit points are equal to or less than what remains of the total. An ogre at full health has 59 hit points, more than the 40 that 5d8 can roll at most, so a 1st-level casting can't reach it. Each slot level above 1st adds 2d8, and from a 3rd-level slot, 9d8 can roll 59 or more.",
+    "cites": [
+      "spells > sleep",
+      "monsters > ogre"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "protection-against-possession",
+    "question": "My fighter is under protection from evil and good. Can the ghost possess him?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Protection from evil and good guards against undead, among other types, and its target can't be charmed, frightened or possessed by them. The ghost is undead, so its Possession can't take hold of him while the spell lasts.",
+    "cites": [
+      "spells > protection-from-evil-and-good",
+      "monsters > ghost"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "ghost-ends-turn-in-a-creature",
+    "question": "Can a ghost use Incorporeal Movement to end its turn inside my character's space?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. Incorporeal Movement lets the ghost move through creatures and objects as if they were difficult terrain, but says nothing about where it may stop, and the movement rules say that, friend or enemy, a creature can't willingly end its move in another creature's space. Reading B: yes. The trait sets the cost of ending a turn inside an object, 5 force damage, which shows it expects the ghost to stop inside what it moves through, and a creature is one of those things, so the trait sets the general rule aside. Why the text does not settle it: the trait prices ending a turn inside an object and is silent on a creature, and whether that silence leaves the general rule in place or the trait's reach covers creatures too is not said.",
+    "cites": [
+      "monsters > ghost",
+      "movement-and-position > moving-around-other-creatures"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "undead-fortitude-divine-smite",
+    "question": "My paladin's longsword hit, with Divine Smite, drops a zombie to 0 hit points. Does it get its Undead Fortitude save?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. Undead Fortitude doesn't apply when the damage is radiant, and Divine Smite's radiant damage is part of the damage that reduced the zombie to 0 hit points, so the exception holds. Reading B: yes. The hit deals slashing damage as well as radiant, and the exception names damage that is radiant, not damage that includes some; with slashing in the total, the damage isn't radiant, and the zombie saves against DC 5 plus the damage taken. Why the text does not settle it: the trait treats the damage as one thing, radiant or not, and does not say what happens when a single hit deals two types.",
+    "cites": [
+      "monsters > zombie",
+      "class-features > paladin > divine-smite"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "protection-after-possession",
+    "question": "The ghost has already possessed my fighter. If I cast protection from evil and good on him, does the possession end?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. The spell says a target already possessed by such a creature has advantage on any new saving throw against the effect, and Possession offers no new save: it lasts until the body drops to 0 hit points, the ghost ends it, or the ghost is turned or forced out by an effect like dispel evil and good. Advantage on a save that never comes does nothing, and the spell needs a willing target while the ghost controls the body. Reading B: yes. The target can't be possessed by undead while the spell lasts, and a possession that continues is the target being possessed, so the spell ends it. Why the text does not settle it: the spell's bar on being possessed may stop a new possession or the state of being possessed, and its own line for a target already possessed grants advantage only on saves this possession doesn't offer.",
+    "cites": [
+      "spells > protection-from-evil-and-good",
+      "monsters > ghost"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "protection-against-horrifying-visage",
+    "question": "I'm under protection from evil and good when a ghost uses Horrifying Visage on me. Can I still be aged?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. The spell keeps you from being frightened by the ghost, not from its other effects: you still make the Wisdom save, and the aging follows a save failed by 5 or more, not the fright, so a bad enough roll still ages you 1d4 x 10 years. Reading B: no. The aging is the frightening effect at its worst, the target also aging on the same failed save that frightens it; with the fright barred, the effect has nothing to add the aging to. Why the text does not settle it: the visage makes one save for two results, and the spell bars only one of them by name without saying whether the other still lands.",
+    "cites": [
+      "spells > protection-from-evil-and-good",
+      "monsters > ghost",
+      "conditions > frightened"
+    ],
+    "split": "dev"
   }
 ]
