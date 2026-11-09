@@ -1590,5 +1590,226 @@
       "spells > bless"
     ],
     "split": "test"
+  },
+  {
+    "id": "attune-a-fourth-item",
+    "question": "I'm attuned to three magic items. Can I attune to a cloak of protection as well?",
+    "status": "settled",
+    "verdict": "no, not without ending one first",
+    "ruling": "A creature can be attuned to no more than three magic items at a time, and any attempt to attune to a fourth fails. The cloak of protection requires attunement, so its bonus waits on it. You must first end your attunement to one of the three, which takes a short rest focused on that item unless it is cursed, and then spend another short rest attuning to the cloak.",
+    "cites": [
+      "attunement",
+      "magic-items > cloak-of-protection"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "racial-cantrip-spellcaster",
+    "question": "My high elf fighter knows one wizard cantrip from his race. Can he attune to a wand of fireballs?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "The wand of fireballs requires attunement by a spellcaster. A creature qualifies as a spellcaster if it can cast at least one spell using its traits or features, not using a magic item or the like. The High Elf Cantrip trait gives him a cantrip from the wizard spell list, and a cantrip is a spell, so he qualifies and can attune to the wand.",
+    "cites": [
+      "attunement",
+      "magic-items > wand-of-fireballs",
+      "racial-traits > elf > high-elf > high-elf-cantrip",
+      "what-is-a-spell > cantrips"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "use-magic-device-spellcaster",
+    "question": "My 13th-level thief has Use Magic Device. Can she attune to a wand of fireballs, which requires a spellcaster?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. Use Magic Device lets her ignore all class, race, and level requirements on the use of magic items, and requiring a spellcaster is a requirement of the class kind: the attunement rules set a spellcaster prerequisite beside a class prerequisite, and the rules for casting from items expect a rogue with Use Magic Device to cast spells from them, at a spellcasting ability modifier of +0. Reading B: no. Use Magic Device names three kinds of requirement, and being a spellcaster is none of them: the attunement rules define it apart from class, as a creature that can cast at least one spell using its traits or features, and a thief casts none. Why the text does not settle it: the spellcaster prerequisite is defined by what a creature can do, not by its class, and the feature's list neither names nor excludes it; the item-spell rules show a rogue with the feature casting from an item without saying whether that item required a spellcaster.",
+    "cites": [
+      "class-features > rogue > thief > use-magic-device",
+      "attunement",
+      "magic-items > wand-of-fireballs",
+      "activating-an-item > spells"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "two-rings-of-protection",
+    "question": "Can I wear two rings of protection for a +2 bonus to AC?",
+    "status": "settled",
+    "verdict": "no, only one can be attuned",
+    "ruling": "The ring of protection requires attunement, and a creature can't attune to more than one copy of an item; the attunement rules use two rings of protection as their example. You can wear both rings, but only the attuned one grants its +1, since without attunement a creature gains only an item's nonmagical benefits.",
+    "cites": [
+      "attunement",
+      "magic-items > ring-of-protection"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "ring-and-cloak-of-protection",
+    "question": "I'm attuned to a ring of protection and a cloak of protection. Do their bonuses stack?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "They stack, for +2 to AC and saving throws. The bar on attuning to more than one copy of an item covers copies of the same item, and these are two different items. The rule that the same effect doesn't combine is written for spells: the effects of the same spell cast more than once don't add together. Neither item is a spell, and no rule stops two different items' bonuses from adding.",
+    "cites": [
+      "attunement",
+      "magic-items > ring-of-protection",
+      "magic-items > cloak-of-protection",
+      "casting-a-spell > combining-magical-effects"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "single-boot-of-elvenkind",
+    "question": "I found one boot of elvenkind; its mate is lost. Do my steps still make no sound?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Boots come in pairs, and items that come in pairs impart their benefits only if both items of the pair are worn. One boot of elvenkind gives neither the silent steps nor the advantage on Stealth checks.",
+    "cites": [
+      "wearing-and-wielding-items > paired-items",
+      "magic-items > boots-of-elvenkind"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "two-cloaks-at-once",
+    "question": "Can I wear a cloak of protection over a cloak of elvenkind?",
+    "status": "settled",
+    "verdict": "only if the GM allows it",
+    "ruling": "A character can't normally wear more than one cloak. The rule leaves room for exceptions, and layering two cloaks is its own example of one, so it is the GM's call. Without that allowance, only one of the two cloaks can be worn, and only the worn one works.",
+    "cites": [
+      "wearing-and-wielding-items > multiple-items-of-the-same-kind",
+      "magic-items > cloak-of-protection",
+      "magic-items > cloak-of-elvenkind"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "staff-spell-while-concentrating",
+    "question": "I'm concentrating on a spell when I cast wall of fire from my staff of fire. Do I keep the first spell?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A spell cast from a magic item uses its normal duration, and the user must concentrate if the spell requires it. Wall of fire does. Casting another spell that requires concentration ends concentration on the first, since you can't concentrate on two spells at once, so the first spell ends. Paying with the staff's charges instead of a spell slot doesn't change that.",
+    "cites": [
+      "activating-an-item > spells",
+      "magic-items > staff-of-fire",
+      "spells > wall-of-fire",
+      "casting-a-spell > duration > concentration"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "wand-of-fireballs-in-silence",
+    "question": "Can I use a wand of fireballs while I stand inside a silence spell?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "Silence makes casting a spell with a verbal component impossible, and fireball has one. But a spell cast from a magic item requires no components unless the item's description says otherwise, and the wand's doesn't. A command word can't be spoken in silence either, and the wand needs none: you use an action and expend its charges. So the wand works inside the sphere.",
+    "cites": [
+      "activating-an-item > spells",
+      "activating-an-item > command-word",
+      "magic-items > wand-of-fireballs",
+      "spells > silence"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "fast-hands-wand",
+    "question": "Can my thief use Fast Hands to fire a wand of magic missiles as a bonus action?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Fast Hands lets a thief take the Use an Object action as a bonus action. The wand takes an action to use, but an action that activates a magic item isn't a function of that action, which the item rules call Use an Item, and they name Fast Hands as a feature that can't be used to activate one. Firing the wand takes her action.",
+    "cites": [
+      "class-features > rogue > thief > fast-hands",
+      "activating-an-item",
+      "magic-items > wand-of-magic-missiles",
+      "actions-in-combat > use-an-object"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "flame-tongue-critical",
+    "question": "I score a critical hit with my flame tongue while it's ablaze. Do I roll its fire damage twice too?",
+    "status": "settled",
+    "verdict": "yes",
+    "ruling": "While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. On a critical hit you roll all of the attack's damage dice twice, and the rule counts other damage dice the attack involves, such as Sneak Attack's. The flame tongue's 2d6 are dice of the attack's damage, so they become 4d6.",
+    "cites": [
+      "damage-and-healing > damage-rolls > critical-hits",
+      "magic-items > flame-tongue"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "flame-tongue-two-weapon",
+    "question": "My flame tongue is a shortsword, and I hold a dagger in my other hand. Can I ignite the sword and make my off-hand attack on the same turn?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "Speaking the flame tongue's command word takes a bonus action, and so does the second weapon's attack in two-weapon fighting. You can take only one bonus action on your turn, so you choose one: ignite the sword or make the off-hand attack. Lit on an earlier turn, the sword stays ablaze until you speak the word again, drop it or sheathe it, and the off-hand attack is then free to take.",
+    "cites": [
+      "magic-items > flame-tongue",
+      "making-an-attack > melee-attacks > two-weapon-fighting",
+      "the-order-of-combat > your-turn > bonus-actions"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "cursed-axe-end-attunement",
+    "question": "I attuned to a berserker axe and found out it's cursed. Can I spend a short rest to end the attunement?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "A creature can voluntarily end attunement by spending a short rest focused on the item, unless the item is cursed, and the berserker axe is. Its curse also makes you unwilling to part with it, keeping it within reach, so leaving it more than 100 feet away for a day is out too. Remove curse is the way: it breaks the owner's attunement to a cursed item so the item can be removed or discarded, though the item's curse remains.",
+    "cites": [
+      "attunement",
+      "magic-items > berserker-axe",
+      "spells > remove-curse"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "cursed-axe-after-remove-curse",
+    "question": "Remove curse broke my attunement to a berserker axe, but I'm still carrying it. If an orc hits me, can I still go berserk?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no. The axe's curse reaches you through attunement: becoming attuned extends the curse to you, and remove curse ends every curse affecting you and breaks the attunement, so the berserk save, part of the curse, no longer applies. Reading B: yes. Remove curse leaves the item's curse in place, and the berserk paragraph triggers whenever a hostile creature damages you while the axe is in your possession, with no mention of attunement or of your being cursed, so carrying it still risks the save until you put it down. Why the text does not settle it: the curse section says attunement extends the curse to you, but its berserk trigger is written on possession, and remove curse says the item's curse remains without saying what it does to a holder who isn't attuned.",
+    "cites": [
+      "magic-items > berserker-axe",
+      "spells > remove-curse",
+      "attunement"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "sphere-trap-control",
+    "question": "Can I use an Arcana check to steer the sphere of annihilation out of the stone-face trap, the way I could control the item?",
+    "status": "settled",
+    "verdict": "no",
+    "ruling": "An uncontrolled sphere of annihilation can be levitated by a creature within 60 feet that uses an action and succeeds on a DC 25 Intelligence (Arcana) check. The trap's sphere is the exception: a DC 20 Intelligence (Arcana) check reveals that the mouth holds a sphere that can't be controlled or moved, otherwise identical to a normal one. The check identifies it; it can't steer it.",
+    "cites": [
+      "traps > sample-traps > sphere-of-annihilation",
+      "magic-items > sphere-of-annihilation"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sphere-trap-arm",
+    "question": "My fighter reaches into the stone face's mouth in the sphere of annihilation trap. Does he lose his arm?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: no, he takes 4d10 force damage. The trap's sphere is otherwise identical to a normal one, and the item says anything that touches the sphere but isn't wholly engulfed and obliterated by it takes 4d10 force damage; a fighter with one arm inside is not wholly engulfed. Reading B: yes. The trap says any matter that enters the mouth is instantly obliterated, and the item obliterates all matter it passes through; the arm is matter that entered, so it is gone, and the 4d10 is for the creature that touched it. Why the text does not settle it: one sentence obliterates all matter that enters, another gives damage to whatever touches the sphere without being wholly engulfed, and neither says what happens to part of a creature. The SRD has no rule for losing a limb, so a GM who rules yes rules from outside the corpus.",
+    "cites": [
+      "traps > sample-traps > sphere-of-annihilation",
+      "magic-items > sphere-of-annihilation"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "attune-during-long-rest",
+    "question": "Can I attune to a magic item during a long rest instead of a short one?",
+    "status": "contested",
+    "verdict": "",
+    "ruling": "Reading A: yes. Attuning takes a short rest, a period of downtime at least 1 hour long, focused on the item; a long rest is extended downtime that allows light activity, so an hour of it spent focused on the item meets the requirement and the long rest goes on. Reading B: no, not as part of the long rest. The attunement rule names a short rest focused on only that item, and a long rest is spent sleeping or on the light activity it lists; an hour of focus inside it is either a short rest of its own, which a long rest does not contain, or not the rest the rule asks for. Why the text does not settle it: the rule asks for a short rest without saying whether one can sit inside a long rest, and the resting rules define both without saying whether a long rest includes a short one.",
+    "cites": [
+      "attunement",
+      "resting > short-rest",
+      "resting > long-rest"
+    ],
+    "split": "dev"
   }
 ]
