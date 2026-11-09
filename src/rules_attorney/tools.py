@@ -25,7 +25,7 @@ SEARCH_DESCRIPTION = (
 LOOKUP_DESCRIPTION = (
     "Fetch a record by its exact name: "
     "a spell, condition, weapon property, piece of equipment, "
-    "feat, class, race, class feature, racial trait or magic item. "
+    "feat, class, race, class feature, racial trait, magic item or creature. "
     "Returns its entry, or says that no record has that name."
 )
 

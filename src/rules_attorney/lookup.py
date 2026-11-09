@@ -17,6 +17,7 @@ KINDS: tuple[str, ...] = (
     "class-features",
     "racial-traits",
     "magic-items",
+    "monsters",
 )
 
 
