@@ -61,7 +61,7 @@ Every stage hands the answering model 10 SRD entries, so none wins by reading mo
 
 - **Level 1** ranks the entries, chunked by header and embedded with `nomic-embed-text`, by cosine similarity to the question.
 - **1 + rerank** reorders level 1's top 30 with the cross-encoder `BAAI/bge-reranker-v2-m3` and fuses that order with level 1's.
-- **1 + lookup** puts the records the question names, a weapon, a spell, a condition, a race or a class feature, ahead of level 1's order.
+- **1 + lookup** puts the records the question names, a weapon, a spell, a condition, a race, a class feature or a magic item, ahead of level 1's order.
 - **Level 3** has the answering model split the question into sub-questions, one per rule it turns on, ranks the entries for the question and each sub-question, and fuses the rankings with reciprocal rank fusion, each cut to its first 10.
 - **The loop** gives the answering model two tools, `search`, which returns the top five entries in full, and `lookup`, which resolves a record by name, for up to six calls. The code then hands over the records looked up first, then the question's ranking fused with every search's, each cut to its first 10.
 
