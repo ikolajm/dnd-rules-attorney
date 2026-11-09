@@ -205,6 +205,8 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "monsters > skeleton",
         "monsters > ghost",
         "monsters > vampire-bat",
+        "monster-statistics > limited-usage",
+        "legendary-creatures > legendary-actions",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:
