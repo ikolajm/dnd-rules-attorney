@@ -196,6 +196,9 @@ def test_load_corpus_refuses_duplicate_paths(tmp_path: Path) -> None:
         "armor > armor-proficiency",
         "weapons > improvised-weapons",
         "feats",
+        "magic-items > flame-tongue",
+        "magic-items > ring-of-resistance",
+        "magic-items > weapon",
     ],
 )
 def test_committed_corpus_holds_known_paths(path: str) -> None:
