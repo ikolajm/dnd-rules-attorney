@@ -196,7 +196,7 @@ From `web/`:
 
 ```
 npm run build
-node --test src/*.test.ts
+node --test 'src/**/*.test.ts'
 ```
 
 This work includes material taken from the System Reference Document 5.1 ("SRD 5.1") by Wizards of the Coast LLC and available at
