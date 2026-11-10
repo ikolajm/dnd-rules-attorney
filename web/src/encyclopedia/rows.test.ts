@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
+import { splitCorpus } from './corpus-text.ts'
 import {
   challengeText,
   equipmentRow,
@@ -31,10 +32,9 @@ const ITEMS = read<MagicItemRecord>('5e-SRD-Magic-Items.json')
 const EQUIPMENT = read<EquipmentRecord>('5e-SRD-Equipment.json')
 const MONSTERS = read<MonsterRecord>('5e-SRD-Monsters.json')
 
-// Every path the corpus build wrote, one per `## ` line.
-const CORPUS = new Set(
-  [...readFileSync(new URL('corpus.md', DATA), 'utf8').matchAll(/^## (.+)$/gm)].map((m) => m[1]),
-)
+// The corpus by path, through the same split a record's view reads, so a row's
+// path is checked against what that view will look up.
+const CORPUS = splitCorpus(readFileSync(new URL('corpus.md', DATA), 'utf8'))
 
 // Each kind's rows, the records that make none dropped.
 function rowsOf<T>(records: T[], toRow: (record: T) => Row | null): Row[] {
