@@ -74,7 +74,9 @@ function yesNo(value: boolean): string {
 const ATTUNEMENT = /\(requires attunement[^)]*\)/
 
 // A Map keeps its keys numbers, where an object would turn them into strings.
-const FRACTIONS = new Map([
+// filter.ts reads it the other way, text back to rating, so this is the one
+// place a fraction is written.
+export const FRACTIONS = new Map([
   [0.125, '1/8'],
   [0.25, '1/4'],
   [0.5, '1/2'],
