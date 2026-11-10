@@ -2,10 +2,11 @@
  * Loom's nesting levels: content between the regions, section inside one, group
  * between a label and what it labels. */
 
+/* Three rows: the view toggle, the view, and the input bar at the foot. */
 .app {
   min-height: 100dvh;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* A reading column, narrower than Loom's content width, which is sized for a
@@ -26,9 +27,34 @@ main.column {
 
 /* A run builds from the foot up, as a chat thread does: the first phases sit
  * just above the input, and each new one pushes the rest up. The main fills
- * the grid row above the input, so flex-end anchors it there. */
+ * its view, which fills the grid row above the input, so flex-end anchors it
+ * there. */
 main.thread {
   justify-content: flex-end;
+}
+
+/* A view fills the grid's middle row, and its main fills the view, so the empty
+ * screen still centres and the thread still anchors at its foot. */
+.view {
+  display: flex;
+  flex-direction: column;
+}
+
+.view > main {
+  flex: 1;
+}
+
+/* The browser hides [hidden] with its own display: none, which any author
+ * display outranks: .view's flex would show a hidden view. Restated here. */
+.view[hidden] {
+  display: none;
+}
+
+/* The view toggle, spaced as the input bar spaces its controls. */
+.views {
+  display: flex;
+  gap: var(--group-gap);
+  padding-block: var(--group-gap);
 }
 
 /* Gold marks the small label that names a block: a phase's label, the one a
