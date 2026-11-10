@@ -139,7 +139,9 @@ export default function App() {
   )
 
   return (
-    <div className="app" data-idle={run === null || undefined}>
+    // data-view lets the layout know which view shows: the encyclopedia fixes
+    // the app's height so its table scrolls in its own box.
+    <div className="app" data-idle={run === null || undefined} data-view={view}>
       {/* `undefined` leaves aria-current off; `false` would write "false". */}
       <nav className="views column" aria-label="Views">
         {VIEWS.map(([id, label]) => (
@@ -225,7 +227,7 @@ export default function App() {
 
       {visited && (
         <div ref={encyclopediaRef} className="view" hidden={view !== 'encyclopedia'}>
-          <Encyclopedia />
+          <Encyclopedia onOpen={open} />
         </div>
       )}
 
@@ -236,7 +238,13 @@ export default function App() {
         </footer>
       </div>
 
-      <SourcePanel entry={openEntry} cited={openEntry ? citedPaths.has(openEntry.path) : false} onClose={close} />
+      {/* "Cited" is about the ruling, so it shows only on the ask view: a
+          record opened from the encyclopedia is not a cite. */}
+      <SourcePanel
+        entry={openEntry}
+        cited={openEntry !== null && view === 'ask' && citedPaths.has(openEntry.path)}
+        onClose={close}
+      />
     </div>
   )
 }

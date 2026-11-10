@@ -50,11 +50,207 @@ main.thread {
   display: none;
 }
 
-/* The view toggle, spaced as the input bar spaces its controls. */
+/* The view toggle, spaced as the input bar spaces its controls. It holds the
+ * content width on both views, so a switch does not move it; the ask view's
+ * reading column stays narrower beneath it. */
 .views {
   display: flex;
   gap: var(--group-gap);
   padding-block: var(--group-gap);
+}
+
+.views.column {
+  max-width: var(--content-max-width);
+}
+
+/* On the encyclopedia view every column takes the content width, sized for a
+ * page of panels: the view and the footer share the toggle row's edge, where
+ * .column's reading width would wrap a six-column table everywhere. */
+.app[data-view='encyclopedia'] .column {
+  max-width: var(--content-max-width);
+}
+
+/* Its parts sit a group apart, not the content gap between a page's regions.
+ * main.column sets that gap; this matches its weight, an element and a class,
+ * and wins by coming after it, so it stays below main.column in this file. */
+main.encyclopedia {
+  gap: var(--group-gap);
+}
+
+/* While the encyclopedia shows, the app is the viewport's height, so the toggle
+ * and the controls stay put and the table scrolls in its own box. Grid and flex
+ * children default to min-height: auto, their content's height; without the
+ * zeros the table pushes its box past the viewport and the page scrolls again. */
+.app[data-view='encyclopedia'] {
+  height: 100dvh;
+}
+
+.app[data-view='encyclopedia'] .view,
+.encyclopedia {
+  min-height: 0;
+}
+
+/* Kind, the name search, the Filters button and the count, wrapping at a
+ * phone's width. */
+.encyclopedia__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--group-gap);
+}
+
+/* Kind holds one width whatever is chosen; a longer label is cut with an
+ * ellipsis. The rule reaches the value through the trigger, since Radix's
+ * SelectValue drops a className passed to it. The value is a flex item in the
+ * trigger, so it needs min-width: 0 to shrink below its text. */
+.encyclopedia__kind {
+  inline-size: 12rem;
+}
+
+.encyclopedia__kind-trigger > :first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The count of rows shown, at the controls' far end beside the filters. */
+.encyclopedia__results {
+  margin: 0 0 0 auto;
+  align-self: center;
+}
+
+/* The field dropdowns, behind the Filters button. An author display outranks
+ * the browser's [hidden], as on .view, so the hiding is restated. The minimum
+ * keeps "Condition immunities" whole. */
+.encyclopedia__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--group-gap);
+}
+
+.encyclopedia__filters[hidden] {
+  display: none;
+}
+
+.encyclopedia__filters .form-field {
+  min-width: 12rem;
+}
+
+/* The count of active filters in the button's corner. pointer-events: none
+ * sends a click on it to the button. */
+.encyclopedia__filters-button {
+  position: relative;
+}
+
+/* Round: as wide as it is tall, the small label's line and the badge's 2px above
+ * and below, with no side padding. Loom's badge takes the component radius and
+ * side padding, a rectangle for one digit; a kind's filters never reach two. */
+.encyclopedia__badge {
+  inline-size: calc(var(--type-label-sm-line) + 4px);
+  block-size: calc(var(--type-label-sm-line) + 4px);
+  padding: 0;
+  border-radius: var(--radius-pill);
+  position: absolute;
+  top: calc(-1 * var(--space-2));
+  inset-inline-end: calc(-1 * var(--space-2));
+  pointer-events: none;
+}
+
+/* The loading and failure states in the table's place, a live region that
+ * stays mounted. Each child keeps its own width rather than the column's. The
+ * failure's line matches .run-status__line, so both screens' errors look
+ * alike. */
+.encyclopedia__state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--group-gap);
+}
+
+/* Empty, as when the rows are ready, it would still take the view's gap on
+ * each side. Out of the flow it takes none, and unlike display: none it stays
+ * a live region. */
+.encyclopedia__state:empty {
+  position: absolute;
+}
+
+.encyclopedia__state p,
+.encyclopedia__state-text {
+  margin: 0;
+}
+
+/* An icon as well as the words, so the failure never rests on colour. */
+.encyclopedia__state-line {
+  display: flex;
+  align-items: center;
+  gap: var(--component-gap);
+  color: var(--tone-text);
+}
+
+.encyclopedia__state-line svg {
+  width: var(--icon-2);
+  height: var(--icon-2);
+  flex: none;
+}
+
+/* The table fills what is left of the view and scrolls both ways in its own box,
+ * never the page. */
+.encyclopedia__table {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+/* The header pins inside the box. Sticky goes on the cells, which browsers apply
+ * it to reliably, unlike thead. Loom's thead has no background, so rows would
+ * show through it, and its rule is the tr's border, which with border-collapse
+ * scrolls away from a sticky cell, so an inset shadow redraws it. */
+.encyclopedia__table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface);
+  box-shadow: inset 0 calc(-1 * var(--bw-1)) var(--outline);
+}
+
+/* A browser centres a button's own text, so a wrapped name or header would sit
+ * centred in its cell though .table aligns the cell left. */
+.encyclopedia__table button {
+  text-align: start;
+}
+
+/* Below this height, as at 400% zoom where a laptop's viewport is about 256px,
+ * the pinned rows would leave almost no table: the page scrolls instead and the
+ * header stops pinning. The box's height follows the table, so only its sideways
+ * scroll is left; overflow-y: visible would compute to auto beside it anyway. */
+@media (max-height: 30rem) {
+  .app[data-view='encyclopedia'] {
+    height: auto;
+  }
+
+  .encyclopedia__table {
+    flex: none;
+  }
+}
+
+/* A header's sort button reads as the header's text and its arrow. Loom's base
+ * clears a button's UA border; the focus ring is an element-level rule this
+ * leaves alone. */
+.encyclopedia__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.encyclopedia__sort svg {
+  width: 1em;
+  height: 1em;
 }
 
 /* Gold marks the small label that names a block: a phase's label, the one a
@@ -376,6 +572,12 @@ main.empty h1 {
    white-space stays normal. The look is provisional until the design sweep. */
 .source-panel__text :is(h3, p, ul, ol) {
   margin-block: 0 var(--space-3);
+}
+
+/* The browser's 40px indent sits on top of the panel's own padding; this is the
+ * indent the sub-questions and View all use. */
+.source-panel__text :is(ul, ol) {
+  padding-inline-start: 1.25em;
 }
 
 .source-panel__table {

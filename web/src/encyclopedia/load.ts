@@ -19,34 +19,69 @@ import {
   type SpellRecord,
 } from './rows.ts'
 
-// One loader per file, its path written out: Vite bundles a dynamic import only
-// when its argument is a literal, so a shared function taking the file's name
-// would leave the file out of dist/. A JSON module's content is its default
-// export. The typed import is what makes each cast a checked one: tsc refuses a
-// record type the file's shape does not fit, which `fetch`'s `any` would take.
-// Its cost is a slower full type check. The cast stays here, where tsc still
-// knows the file's shape, and not in a helper taking `unknown`. H reads the
-// records of the kinds it lays out; the rest are read only through KINDS.
+// Each file's address, which Vite writes for `?url`: the file served as it is
+// in dev, and copied into dist/ under a hashed name in a build. An import's path
+// must be a literal for Vite to find the file, so each is written out.
+import conditionsUrl from '../../../data/srd-5.1/5e-SRD-Conditions.json?url'
+import equipmentUrl from '../../../data/srd-5.1/5e-SRD-Equipment.json?url'
+import magicItemsUrl from '../../../data/srd-5.1/5e-SRD-Magic-Items.json?url'
+import monstersUrl from '../../../data/srd-5.1/5e-SRD-Monsters.json?url'
+import racesUrl from '../../../data/srd-5.1/5e-SRD-Races.json?url'
+import spellsUrl from '../../../data/srd-5.1/5e-SRD-Spells.json?url'
+import propertiesUrl from '../../../data/srd-5.1/5e-SRD-Weapon-Properties.json?url'
+import corpusUrl from '../../../data/srd-5.1/corpus.md?url'
+import supplementUrl from '../../../data/srd-5.1/supplement.json?url'
+
+// A file's response, refused unless it succeeded: fetch rejects only when the
+// network fails, and resolves on a 404 or a 500. Fetched rather than imported,
+// since a browser keeps a failed import() of a URL for the page's life, so a
+// retry would reject again without asking the network.
+async function fetched(url: string): Promise<Response> {
+  const response = await fetch(url)
+  if (!response.ok) throw new Error(`${url} answered ${response.status}`)
+  return response
+}
+
+// A JSON file's contents as T. json() returns `any`, so T is only as true as
+// the type the caller names. No runtime schema checks it: each loader names
+// the type of the very file the URL serves, copied into the build under a
+// hashed name, so no outside source can drift from what tsc read.
+async function json<T>(url: string): Promise<T> {
+  return (await fetched(url)).json() as Promise<T>
+}
+
+// One loader per file. Each names its file's own type, `typeof import(...)`, a
+// type-only import that ships nothing, so the cast to a record type stays a
+// checked one: tsc refuses a record type the file's shape does not fit, which
+// json()'s `any` alone would take. Its cost is a slower full type check. The
+// record view reads the exported loaders' records for its stat blocks; the rest
+// are read only through KINDS.
 export const spellRecords = once(() =>
-  import('../../../data/srd-5.1/5e-SRD-Spells.json').then((m) => m.default as SpellRecord[]),
+  json<typeof import('../../../data/srd-5.1/5e-SRD-Spells.json')>(spellsUrl).then((r) => r as SpellRecord[]),
 )
 export const magicItemRecords = once(() =>
-  import('../../../data/srd-5.1/5e-SRD-Magic-Items.json').then((m) => m.default as MagicItemRecord[]),
+  json<typeof import('../../../data/srd-5.1/5e-SRD-Magic-Items.json')>(magicItemsUrl).then(
+    (r) => r as MagicItemRecord[],
+  ),
 )
 export const monsterRecords = once(() =>
-  import('../../../data/srd-5.1/5e-SRD-Monsters.json').then((m) => m.default as MonsterRecord[]),
+  json<typeof import('../../../data/srd-5.1/5e-SRD-Monsters.json')>(monstersUrl).then((r) => r as MonsterRecord[]),
 )
 const equipmentRecords = once(() =>
-  import('../../../data/srd-5.1/5e-SRD-Equipment.json').then((m) => m.default as EquipmentRecord[]),
+  json<typeof import('../../../data/srd-5.1/5e-SRD-Equipment.json')>(equipmentUrl).then(
+    (r) => r as EquipmentRecord[],
+  ),
 )
 const raceRecords = once(() =>
-  import('../../../data/srd-5.1/5e-SRD-Races.json').then((m) => m.default as RaceRecord[]),
+  json<typeof import('../../../data/srd-5.1/5e-SRD-Races.json')>(racesUrl).then((r) => r as RaceRecord[]),
 )
 const conditionRecords = once(() =>
-  import('../../../data/srd-5.1/5e-SRD-Conditions.json').then((m) => m.default as NamedRecord[]),
+  json<typeof import('../../../data/srd-5.1/5e-SRD-Conditions.json')>(conditionsUrl).then((r) => r as NamedRecord[]),
 )
 const propertyRecords = once(() =>
-  import('../../../data/srd-5.1/5e-SRD-Weapon-Properties.json').then((m) => m.default as NamedRecord[]),
+  json<typeof import('../../../data/srd-5.1/5e-SRD-Weapon-Properties.json')>(propertiesUrl).then(
+    (r) => r as NamedRecord[],
+  ),
 )
 
 // A kind as the table's picker lists it.
@@ -72,11 +107,8 @@ export const KINDS: Kind[] = [
   },
 ]
 
-// `?raw` imports a file's contents as a string; Vite's client types declare it.
-export const corpus = once(() =>
-  import('../../../data/srd-5.1/corpus.md?raw').then((m) => splitCorpus(m.default)),
-)
+export const corpus = once(async () => splitCorpus(await (await fetched(corpusUrl)).text()))
 
 export const supplement = once(() =>
-  import('../../../data/srd-5.1/supplement.json').then((m) => m.default as Supplement),
+  json<typeof import('../../../data/srd-5.1/supplement.json')>(supplementUrl).then((s) => s as Supplement),
 )
