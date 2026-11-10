@@ -44,7 +44,7 @@ export function compareValues(field: string, a: string, b: string): number {
 
 // A field's value as a list, whether the row writes it as a string or a list:
 // 'undead' as ['undead'], and an empty list as none.
-function members(row: Row, field: string): string[] {
+export function members(row: Row, field: string): string[] {
   return [row.fields[field]].flat()
 }
 
