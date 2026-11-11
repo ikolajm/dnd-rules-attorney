@@ -23,7 +23,8 @@ export function entryBody(text: string): string {
 // ends a markdown table, so seven spells' tables, Control Weather's among them,
 // would render as a paragraph per row. A blank line between two table rows is
 // closed up; every other blank line stays. Display only, as above: the corpus
-// keeps the text the model was measured on.
-function joinTableRows(text: string): string {
+// keeps the text the model was measured on. A spell's description built from
+// its record joins its paragraphs the same way, so it is closed up here too.
+export function joinTableRows(text: string): string {
   return text.replace(/(\|[ \t]*)\n\n(?=[ \t]*\|)/g, '$1\n')
 }

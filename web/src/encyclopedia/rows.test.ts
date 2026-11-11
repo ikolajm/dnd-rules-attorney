@@ -1,8 +1,6 @@
 // Run with `node --test src/encyclopedia/rows.test.ts` from web/.
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import { splitCorpus } from './corpus-text.ts'
 import {
   challengeText,
   equipmentRow,
@@ -11,30 +9,9 @@ import {
   namedRow,
   raceRow,
   spellRow,
-  type EquipmentRecord,
-  type MagicItemRecord,
-  type MonsterRecord,
-  type NamedRecord,
-  type RaceRecord,
   type Row,
-  type SpellRecord,
 } from './rows.ts'
-
-// The real files, read rather than imported: Node imports JSON only with an
-// import attribute, which the Vite build does not need.
-const DATA = new URL('../../../data/srd-5.1/', import.meta.url)
-
-function read<T>(name: string): T[] {
-  return JSON.parse(readFileSync(new URL(name, DATA), 'utf8')) as T[]
-}
-
-const ITEMS = read<MagicItemRecord>('5e-SRD-Magic-Items.json')
-const EQUIPMENT = read<EquipmentRecord>('5e-SRD-Equipment.json')
-const MONSTERS = read<MonsterRecord>('5e-SRD-Monsters.json')
-
-// The corpus by path, through the same split a record's view reads, so a row's
-// path is checked against what that view will look up.
-const CORPUS = splitCorpus(readFileSync(new URL('corpus.md', DATA), 'utf8'))
+import { CONDITIONS, CORPUS, EQUIPMENT, MAGIC_ITEMS, MONSTERS, PROPERTIES, RACES, SPELLS } from '../test-data.ts'
 
 // Each kind's rows, the records that make none dropped.
 function rowsOf<T>(records: T[], toRow: (record: T) => Row | null): Row[] {
@@ -49,15 +26,15 @@ function byIndex<T extends { index: string }>(records: T[], index: string): T {
 
 test("every row's path is a corpus path", () => {
   const kinds: [string, Row[]][] = [
-    ['spells', rowsOf(read<SpellRecord>('5e-SRD-Spells.json'), spellRow)],
-    ['magic items', rowsOf(ITEMS, magicItemRow)],
+    ['spells', rowsOf(SPELLS, spellRow)],
+    ['magic items', rowsOf(MAGIC_ITEMS, magicItemRow)],
     ['monsters', rowsOf(MONSTERS, monsterRow)],
     ['equipment', rowsOf(EQUIPMENT, equipmentRow)],
-    ['races', rowsOf(read<RaceRecord>('5e-SRD-Races.json'), raceRow)],
-    ['conditions', rowsOf(read<NamedRecord>('5e-SRD-Conditions.json'), (r) => namedRow('conditions', r))],
+    ['races', rowsOf(RACES, raceRow)],
+    ['conditions', rowsOf(CONDITIONS, (r) => namedRow('conditions', r))],
     [
       'weapon properties',
-      rowsOf(read<NamedRecord>('5e-SRD-Weapon-Properties.json'), (r) => namedRow('weapon-properties', r)),
+      rowsOf(PROPERTIES, (r) => namedRow('weapon-properties', r)),
     ],
   ]
   for (const [kind, rows] of kinds) {
@@ -72,9 +49,9 @@ test("every row's path is a corpus path", () => {
 })
 
 test('a magic item variant makes no row, and every other item one', () => {
-  assert.equal(magicItemRow(ITEMS.find((r) => r.variant)!), null)
-  const parents = ITEMS.filter((r) => !r.variant).length
-  assert.equal(rowsOf(ITEMS, magicItemRow).length, parents)
+  assert.equal(magicItemRow(MAGIC_ITEMS.find((r) => r.variant)!), null)
+  const parents = MAGIC_ITEMS.filter((r) => !r.variant).length
+  assert.equal(rowsOf(MAGIC_ITEMS, magicItemRow).length, parents)
 })
 
 test('only weapons and armor make an equipment row', () => {
@@ -101,9 +78,9 @@ test('a weapon or armor with no category is refused', () => {
 
 test('attunement is read from the clause in the first line', () => {
   // "Wondrous item, uncommon (requires attunement)"
-  assert.equal(magicItemRow(byIndex(ITEMS, 'cloak-of-protection'))!.fields.Attunement, 'yes')
+  assert.equal(magicItemRow(byIndex(MAGIC_ITEMS, 'cloak-of-protection'))!.fields.Attunement, 'yes')
   // "Wondrous item, uncommon"
-  assert.equal(magicItemRow(byIndex(ITEMS, 'bag-of-holding'))!.fields.Attunement, 'no')
+  assert.equal(magicItemRow(byIndex(MAGIC_ITEMS, 'bag-of-holding'))!.fields.Attunement, 'no')
 })
 
 test('a challenge below 1 reads as a fraction', () => {

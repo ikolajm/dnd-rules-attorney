@@ -1,24 +1,22 @@
 // The encyclopedia's view: a kind's records in a table, narrowed by a name
 // search and a choice per field, each name opening its record in the source
 // panel.
-import { ArrowDown, ArrowUp, CircleAlert, RotateCcw, SlidersHorizontal } from 'lucide-react'
-import { useEffect, useId, useRef, useState } from 'react'
+import { ArrowDown, ArrowUp, RotateCcw, SlidersHorizontal } from 'lucide-react'
+import { useId, useState } from 'react'
 import { Badge } from '../components/loom/badge.tsx'
 import { Button } from '../components/loom/button.tsx'
 import { FormField } from '../components/loom/form-field.tsx'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/loom/select.tsx'
-import type { Entry } from '../types.ts'
+import type { PanelEntry } from '../SourcePanel.tsx'
 import { compareRows, matches, members, NAME, options } from './filter.ts'
-import { corpus, KINDS, type Kind } from './load.ts'
+import { KINDS, type Kind } from './load.ts'
+import { LoadState } from './LoadState.tsx'
 import type { Row } from './rows.ts'
+import { useLoad } from './use-load.ts'
 
 // The "Any" item's value: Radix's Select refuses '' as an item's value, and no
 // field value in the data is '*'. Choosing it deletes the field's key.
 const ANY = '*'
-
-// A kind's rows: loading, ready, or failed. A union, so a check on `status`
-// narrows to the variant holding the rows.
-type Loaded = { status: 'loading' } | { status: 'ready'; rows: Row[] } | { status: 'failed' }
 
 // The column sorted, a field's label or NAME, and its direction.
 type Sort = { field: string; descending: boolean }
@@ -33,47 +31,22 @@ function display(value: string): string {
 }
 
 // onOpen is App's open, the one the ask screen's cites call.
-export function Encyclopedia({ onOpen }: { onOpen: (entry: Entry) => void }) {
-  // The Kind itself rather than its root, so nothing looks it up by force. The
-  // objects come from a module constant, so the effect below sees a stable one.
+export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }) {
+  // The Kind itself rather than its root, so nothing looks it up by force.
   const [kind, setKind] = useState<Kind>(KINDS[0])
-  const [loaded, setLoaded] = useState<Loaded>({ status: 'loading' })
+  // Keyed by root, so picking Monsters and then Races before the monster file
+  // arrives cannot let the monster rows land last.
+  const { state: loaded, retry } = useLoad(kind.root, kind.rows)
   const [search, setSearch] = useState('')
   const [chosen, setChosen] = useState<Record<string, string>>({})
   const [sort, setSort] = useState<Sort>(BY_NAME)
   const [filtersOpen, setFiltersOpen] = useState(false)
-  // Raised by Retry. The load effect lists it, so a retry re-runs the effect
-  // for the same kind.
-  const [attempt, setAttempt] = useState(0)
-  // Retry moves focus here, since its own button is about to unmount.
-  const headingRef = useRef<HTMLHeadingElement>(null)
   // One base for the labels' htmlFor: hooks cannot run inside the field loop,
   // so each field takes a suffix on it.
   const id = useId()
 
-  // `current` drops a load that a later kind has overtaken: picking Monsters and
-  // then Races before the monster file arrives would otherwise let the monster
-  // rows land last. Retry raises `attempt`, so the same kind loads again; `once`
-  // forgets a failed load, so the call fetches afresh.
-  useEffect(() => {
-    let current = true
-    setLoaded({ status: 'loading' })
-    kind
-      .rows()
-      .then((rows) => {
-        if (current) setLoaded({ status: 'ready', rows })
-      })
-      .catch((error: unknown) => {
-        // The screen says only that the kind could not load; the console says why.
-        console.error(error)
-        if (current) setLoaded({ status: 'failed' })
-      })
-    return () => {
-      current = false
-    }
-  }, [kind, attempt])
 
-  const rows = loaded.status === 'ready' ? loaded.rows : []
+  const rows = loaded.status === 'ready' ? loaded.value : []
   // Every row of a kind holds the same fields in one order, so the first speaks
   // for all. Conditions and weapon properties hold none.
   const fields = rows.length > 0 ? Object.keys(rows[0].fields) : []
@@ -104,22 +77,9 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: Entry) => void }) {
       current.field === field ? { field, descending: !current.descending } : { field, descending: false },
     )
 
-  // The text loads with the corpus on the first open; `once` makes the rest
-  // immediate. Every row's path is a corpus path, which rows.test.ts proves, so
-  // the '' never runs. After the await, focus is still on the name's button,
-  // which App's open keeps to return to.
-  const openRow = async (row: Row) => {
-    const texts = await corpus()
-    onOpen({ path: row.path, text: texts.get(row.path) ?? '' })
-  }
-
-  // Focus first, while Retry's button is still there to leave: once the load
-  // restarts, the failure gives way to the loading line, and focus on a removed
-  // element drops to the page's start.
-  const retry = () => {
-    headingRef.current?.focus()
-    setAttempt((a) => a + 1)
-  }
+  // The panel opens at once with the row's name and loads its text itself, so
+  // its loading and failure show in the panel.
+  const openRow = (row: Row) => onOpen({ path: row.path, title: row.name })
 
   // Only the sorted column carries aria-sort; `undefined` leaves it off the rest.
   const ariaSort = (field: string) =>
@@ -151,7 +111,7 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: Entry) => void }) {
       {/* Hidden from sight: the toggle shows the view and the kind picker names
           what is in it. It stays for screen readers and for the focus a switch
           moves here; -1 keeps it out of the Tab order. */}
-      <h1 ref={headingRef} className="visually-hidden" tabIndex={-1}>
+      <h1 className="visually-hidden" tabIndex={-1}>
         Encyclopedia
       </h1>
 
@@ -263,34 +223,14 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: Entry) => void }) {
         ))}
       </div>
 
-      {/* The table's place holds one of four states. Loading and the failure
-          sit in a live region rendered from the first paint, so each is
-          announced as its text arrives: a region added in the same render as
-          its text is often not. */}
-      <div className="encyclopedia__state" aria-live="polite">
-        {loaded.status === 'loading' && (
-          <p className="text-body-lg text-on-surface-variant">{`Loading ${kind.label.toLowerCase()}…`}</p>
-        )}
-
-        {loaded.status === 'failed' && (
-          <>
-            <p className="encyclopedia__state-line text-title-md tone-error">
-              <CircleAlert aria-hidden="true" />
-              {`${kind.label} could not be loaded.`}
-            </p>
-            <p className="text-body-lg text-on-surface-variant">Check your connection and try again.</p>
-            <Button
-              variant="outline"
-              color="neutral"
-              size="sm"
-              leadingIcon={<RotateCcw aria-hidden="true" />}
-              onClick={retry}
-            >
-              Retry
-            </Button>
-          </>
-        )}
-      </div>
+      {/* The table's place holds one of four states: loading or the failure
+          here, then no matches or the table below. */}
+      <LoadState
+        status={loaded.status}
+        loading={`Loading ${kind.label.toLowerCase()}…`}
+        message={`${kind.label} could not be loaded.`}
+        onRetry={retry}
+      />
 
       {/* Outside the live region: the count already announces "0 of 319". The
           controls stay above it, so the search can be edited and Clear
@@ -320,7 +260,7 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: Entry) => void }) {
               {sorted.map((row) => (
                 <tr key={row.path}>
                   <th scope="row">
-                    <button type="button" className="link link-prose" onClick={() => void openRow(row)}>
+                    <button type="button" className="link link-prose" onClick={() => openRow(row)}>
                       {row.name}
                     </button>
                   </th>

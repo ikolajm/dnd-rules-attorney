@@ -1,17 +1,14 @@
 // Run with `node --test src/encyclopedia/filter.test.ts` from web/.
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import { compareRows, compareValues, matches, NAME, options } from './filter.ts'
 import {
   magicItemRow,
   monsterRow,
   spellRow,
-  type MagicItemRecord,
-  type MonsterRecord,
   type Row,
-  type SpellRecord,
 } from './rows.ts'
+import { MAGIC_ITEMS, MONSTERS, SPELLS } from '../test-data.ts'
 
 // Undead first and twice, so an unsorted or a repeated result shows; poison in
 // two rows' lists; and an empty list, as armor's properties are.
@@ -112,18 +109,10 @@ test("a field's options sort as its column does", () => {
 // rank matches field labels as strings that rows.ts writes as keys. The tests
 // above type the labels in, so only rows built by the real row functions show a
 // label the two files disagree on: that column falls back to text order.
-const DATA = new URL('../../../data/srd-5.1/', import.meta.url)
-
-function read<T>(name: string): T[] {
-  return JSON.parse(readFileSync(new URL(name, DATA), 'utf8')) as T[]
-}
-
 test("the real rows' ordered fields sort in their own order", () => {
-  const monsters = read<MonsterRecord>('5e-SRD-Monsters.json').map(monsterRow)
-  const spells = read<SpellRecord>('5e-SRD-Spells.json').map(spellRow)
-  const items = read<MagicItemRecord>('5e-SRD-Magic-Items.json')
-    .map(magicItemRow)
-    .filter((row) => row !== null)
+  const monsters = MONSTERS.map(monsterRow)
+  const spells = SPELLS.map(spellRow)
+  const items = MAGIC_ITEMS.map(magicItemRow).filter((row) => row !== null)
   assert.deepEqual(options(monsters, 'Challenge').slice(0, 6), ['0', '1/8', '1/4', '1/2', '1', '2'])
   assert.deepEqual(options(monsters, 'Size'), ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'])
   assert.deepEqual(options(spells, 'Level').slice(0, 3), ['cantrip', '1', '2'])

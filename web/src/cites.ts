@@ -16,6 +16,17 @@ export function resolveCite(cite: string, entries: Entry[]): ResolvedCite {
   return entry ? { found: true, cite, entry } : { found: false, cite }
 }
 
+// A path's first step and its last, as slugs: "racial-traits > dwarf >
+// stonecunning" has the root "racial-traits" and the leaf "stonecunning". One
+// place cuts a path, rather than each reader slicing at ' > ' itself.
+export function pathRoot(path: string): string {
+  return path.split(' > ')[0]
+}
+
+export function pathLeaf(path: string): string {
+  return path.slice(path.lastIndexOf(' > ') + 3)
+}
+
 // "making-an-attack > melee-attacks" reads as "Making an attack › Melee attacks".
 export function pathSegments(path: string): string[] {
   return path.split(' > ').map((slug) => {

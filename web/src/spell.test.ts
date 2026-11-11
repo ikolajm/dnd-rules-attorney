@@ -1,7 +1,9 @@
 // Run with `node --test src/spell.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { parseSpell } from './spell.ts'
+import { entryBody } from './entry.ts'
+import { parseSpell, spellFromRecord } from './spell.ts'
+import { CORPUS, SPELLS, SUPPLEMENT } from './test-data.ts'
 
 // Bodies as the corpus writes them, the title line already dropped.
 const FIRE_BOLT =
@@ -41,4 +43,21 @@ test('stat lines not in the corpus form are left alone', () => {
   assert.equal(parseSpell('When you want to grab a creature, make a grapple.'), null)
   // Eight lines, but one label not the corpus's, so the count alone passes it.
   assert.equal(parseSpell(FIRE_BOLT.replace('Range: 120 feet', 'Reach: 120 feet')), null)
+})
+
+// The corpus has the four reaction spells' casting times completed from the
+// supplement's inserts, and so does the record's Spell, which takes them too.
+test("every spell's record builds the Spell its corpus text parses to", () => {
+  for (const record of SPELLS) {
+    const path = `spells > ${record.index}`
+    const text = CORPUS.get(path)
+    assert.ok(text, path)
+    assert.deepEqual(spellFromRecord(record, SUPPLEMENT), parseSpell(entryBody(text)), path)
+  }
+  const counterspell = SPELLS.find((r) => r.index === 'counterspell')
+  assert.ok(counterspell)
+  assert.equal(
+    spellFromRecord(counterspell, SUPPLEMENT).castingTime,
+    '1 reaction, which you take when you see a creature within 60 feet of you casting a spell',
+  )
 })

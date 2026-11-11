@@ -1,14 +1,8 @@
 // Run with `node --test src/encyclopedia/corpus-text.test.ts` from web/.
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import { additions, splitCorpus, type Supplement } from './corpus-text.ts'
-
-const MARKDOWN = readFileSync(new URL('../../../data/srd-5.1/corpus.md', import.meta.url), 'utf8')
-const CORPUS = splitCorpus(MARKDOWN)
-const SUPPLEMENT = JSON.parse(
-  readFileSync(new URL('../../../data/srd-5.1/supplement.json', import.meta.url), 'utf8'),
-) as Supplement
+import { CORPUS, CORPUS_TEXT as MARKDOWN, SUPPLEMENT } from '../test-data.ts'
+import { additions } from './corpus-text.ts'
 
 // Catches a dropped `.slice(1)` or `m` flag. It counts with the pattern the
 // split cuts on, so a text holding a `## ` line would move both alike.
