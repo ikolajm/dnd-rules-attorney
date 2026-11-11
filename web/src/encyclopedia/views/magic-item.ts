@@ -1,6 +1,6 @@
 // A magic item's view from its record: the type, rarity and attunement its
 // first line holds, its variants with their rarities, and its description.
-import { joinTableRows } from '../../entry.ts'
+import { joinTableRows } from '../../shared/entry.ts'
 import { ATTUNEMENT, type MagicItemRecord } from '../rows.ts'
 import { capitalized, size, type Section } from './section.ts'
 

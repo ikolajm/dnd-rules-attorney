@@ -1,7 +1,7 @@
 // Run with `node --test src/encyclopedia/corpus-text.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { CORPUS, CORPUS_TEXT as MARKDOWN, SUPPLEMENT } from '../test-data.ts'
+import { CORPUS, CORPUS_TEXT as MARKDOWN, SUPPLEMENT } from '../shared/test-data.ts'
 import { additions } from './corpus-text.ts'
 
 // Catches a dropped `.slice(1)` or `m` flag. It counts with the pattern the

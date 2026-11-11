@@ -1,6 +1,6 @@
 import { ChevronRight, Quote } from 'lucide-react'
-import { entryLabels, resolveCite } from './cites.ts'
-import type { Entry } from './types.ts'
+import { entryLabels, resolveCite } from '../shared/cites.ts'
+import type { Entry } from '../shared/types.ts'
 
 type Props = {
   entries: Entry[]

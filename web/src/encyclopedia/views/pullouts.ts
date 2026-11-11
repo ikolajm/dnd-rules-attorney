@@ -4,9 +4,9 @@
 // its text is shared, `racial-traits > darkvision` for one several races hold,
 // `racial-traits > dwarf > stonecunning` for one only the dwarf does, and that
 // rule stays in Python alone.
-import { pathLeaf } from '../../cites.ts'
-import { entryBody, entryTitle } from '../../entry.ts'
-import type { Entry } from '../../types.ts'
+import { pathLeaf } from '../../shared/cites.ts'
+import { entryBody, entryTitle } from '../../shared/entry.ts'
+import type { Entry } from '../../shared/types.ts'
 import { splitFieldBlock } from './fields.ts'
 import type { Section } from './section.ts'
 

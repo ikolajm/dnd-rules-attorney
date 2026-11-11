@@ -1,4 +1,4 @@
-// Run with `node --test src/entry.test.ts` from web/.
+// Run with `node --test src/shared/entry.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { entryBody, entryTitle } from './entry.ts'

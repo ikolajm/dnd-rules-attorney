@@ -1,4 +1,4 @@
-// Run with `node --test src/cites.test.ts` from web/.
+// Run with `node --test src/shared/cites.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { entryLabel, entryLabels, linkExplanation } from './cites.ts'

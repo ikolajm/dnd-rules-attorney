@@ -1,7 +1,7 @@
 // The roots whose paths have a view built from their record. Apart from
 // record.ts, which imports the loaders, so the panel and the tests can ask
 // without them: Node cannot run the loaders' Vite `?url` imports.
-import { pathRoot } from '../../cites.ts'
+import { pathRoot } from '../../shared/cites.ts'
 
 // `as const` keeps each root a literal, so `Root` is their union and the
 // switch in record.ts's loadView can check it has a case for every one.

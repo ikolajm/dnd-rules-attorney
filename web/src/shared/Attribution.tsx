@@ -1,4 +1,4 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './components/loom/dialog.tsx'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../components/loom/dialog.tsx'
 
 // The SRD 5.1 credit: one line at the foot, kept visible, since CC-BY asks for
 // attribution in a reasonable manner, opening the full statement. It is the

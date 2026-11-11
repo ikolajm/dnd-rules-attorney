@@ -11,7 +11,7 @@ import {
   spellRow,
   type Row,
 } from './rows.ts'
-import { CONDITIONS, CORPUS, EQUIPMENT, MAGIC_ITEMS, MONSTERS, PROPERTIES, RACES, SPELLS } from '../test-data.ts'
+import { CONDITIONS, CORPUS, EQUIPMENT, MAGIC_ITEMS, MONSTERS, PROPERTIES, RACES, SPELLS } from '../shared/test-data.ts'
 
 // Each kind's rows, the records that make none dropped.
 function rowsOf<T>(records: T[], toRow: (record: T) => Row | null): Row[] {

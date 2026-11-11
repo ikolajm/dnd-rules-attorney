@@ -1,10 +1,10 @@
 // Run with `node --test src/encyclopedia/views/monster.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { entryBody } from '../../entry.ts'
+import { entryBody } from '../../shared/entry.ts'
 import { monsterFromRecord, type Monster, type Trait } from './monster.ts'
 import type { Line, Section } from './section.ts'
-import { CORPUS, MONSTERS } from '../../test-data.ts'
+import { CORPUS, MONSTERS } from '../../shared/test-data.ts'
 import type { MonsterRecord } from '../rows.ts'
 
 function byIndex(index: string): Monster {

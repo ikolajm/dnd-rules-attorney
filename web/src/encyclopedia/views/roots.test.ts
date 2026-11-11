@@ -1,7 +1,7 @@
 // Run with `node --test src/encyclopedia/views/roots.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { SUPPLEMENT } from '../../test-data.ts'
+import { SUPPLEMENT } from '../../shared/test-data.ts'
 import { hasView } from './roots.ts'
 
 // A record's view is built from the record, not the corpus text the supplement

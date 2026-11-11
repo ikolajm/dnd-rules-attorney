@@ -157,60 +157,10 @@ main.encyclopedia {
   pointer-events: none;
 }
 
-/* The loading and failure states in the table's place, a live region that
- * stays mounted. Each child keeps its own width rather than the column's. The
- * failure's line matches .run-status__line, so both screens' errors look
- * alike. */
-.encyclopedia__state {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--group-gap);
-}
-
-/* Empty, as when the rows are ready, it would still take the view's gap on
- * each side. Out of the flow it takes none, and unlike display: none it stays
- * a live region. */
-.encyclopedia__state:empty {
-  position: absolute;
-}
-
-.encyclopedia__state p,
-.encyclopedia__state-text {
+/* The table's line when the search leaves no rows. Outside the status region:
+   the count above already announces "0 of 319". */
+.encyclopedia__empty {
   margin: 0;
-}
-
-/* The compact state, in the panel: the lines sit closer, as its smaller type
-   does. */
-.encyclopedia__state--compact {
-  gap: var(--group-compact-gap);
-}
-
-/* In the panel, its text rule gives every p a bottom margin at the same
-   specificity, later in the file; this one beats it, so the region's lines
-   space by its gap alone, as they do above the table. */
-.source-panel__text .encyclopedia__state p {
-  margin: 0;
-}
-
-/* An icon as well as the words, so the failure never rests on colour. */
-.encyclopedia__state-line {
-  display: flex;
-  align-items: center;
-  gap: var(--component-gap);
-  color: var(--tone-text);
-}
-
-.encyclopedia__state-line svg {
-  width: var(--icon-2);
-  height: var(--icon-2);
-  flex: none;
-}
-
-/* The panel's: the icon at the size of its label-sized line. */
-.encyclopedia__state-line--compact svg {
-  width: var(--icon-1);
-  height: var(--icon-1);
 }
 
 /* The table fills what is left of the view and scrolls both ways in its own box,
@@ -369,32 +319,61 @@ main.empty h1 {
   font-family: var(--font-heading);
 }
 
-.run-status {
+/* A state said in place of what failed or is loading, on either screen: a run
+   refused, failed or stopped where its ruling would be, a kind's rows in the
+   table's place, a record or a text in the panel. Each child keeps its own
+   width rather than the column's. */
+.status {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--group-gap);
 }
 
-.run-status p {
+/* Empty, as when a load is ready, a region would still take its container's
+   gap on each side. Out of the flow it takes none, and unlike display: none it
+   stays a live region. */
+.status:empty {
+  position: absolute;
+}
+
+.status p {
   margin: 0;
 }
 
-/* A status carries an icon as well as its words, so it never rests on colour. */
-.run-status__line {
+/* In the panel, its text rule gives every p a bottom margin; this one is more
+   specific, so the lines space by the gap alone, as they do elsewhere. */
+.source-panel__text .status p {
+  margin: 0;
+}
+
+/* The panel's: the lines sit closer, as its smaller type does. */
+.status--compact {
+  gap: var(--group-compact-gap);
+}
+
+/* An icon as well as the words, so a state never rests on colour. A tone class,
+   the failure's, colours the line; "Stopped" and a refusal carry none. */
+.status__line {
   display: flex;
   align-items: center;
   gap: var(--component-gap);
 }
 
-.run-status__line[class*='tone-'] {
+.status__line[class*='tone-'] {
   color: var(--tone-text);
 }
 
-.run-status__line svg {
+.status__line svg {
   width: var(--icon-2);
   height: var(--icon-2);
   flex: none;
+}
+
+/* The panel's: the icon at the size of its label-sized line. */
+.status__line--compact svg {
+  width: var(--icon-1);
+  height: var(--icon-1);
 }
 
 .verdict,
@@ -531,8 +510,13 @@ main.empty h1 {
 }
 
 .ask__form .textarea {
-  flex: 1;
   resize: none;
+}
+
+/* The label and its box take the row's width; the button stays level with the
+   box's foot, the form aligning its items to the end. */
+.ask__field {
+  flex: 1;
 }
 
 /* Over the column, never beside it: opening it moves nothing. */

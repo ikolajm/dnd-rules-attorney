@@ -1,8 +1,8 @@
 // Run with `node --test src/encyclopedia/views/pullouts.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { entryBody } from '../../entry.ts'
-import { CORPUS, EQUIPMENT } from '../../test-data.ts'
+import { entryBody } from '../../shared/entry.ts'
+import { CORPUS, EQUIPMENT } from '../../shared/test-data.ts'
 import { equipmentRow } from '../rows.ts'
 import { corpusFields } from './fields.ts'
 import { propertyEntry, pulloutText, subraceEntries, traitEntries } from './pullouts.ts'

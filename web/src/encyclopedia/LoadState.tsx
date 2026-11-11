@@ -41,7 +41,7 @@ export function LoadState({
     <div
       ref={regionRef}
       tabIndex={-1}
-      className={`encyclopedia__state ${compact ? 'encyclopedia__state--compact' : ''}`}
+      className={`status ${compact ? 'status--compact' : ''}`}
       aria-live={live ? 'polite' : undefined}
     >
       {status === 'loading' && (
@@ -50,7 +50,7 @@ export function LoadState({
       {status === 'failed' && (
         <>
           <p
-            className={`encyclopedia__state-line tone-error ${compact ? 'encyclopedia__state-line--compact text-label-lg' : 'text-title-md'}`}
+            className={`status__line tone-error ${compact ? 'status__line--compact text-label-lg' : 'text-title-md'}`}
           >
             <CircleAlert aria-hidden="true" />
             {message}

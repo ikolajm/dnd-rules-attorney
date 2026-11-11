@@ -7,7 +7,7 @@ import { Badge } from '../components/loom/badge.tsx'
 import { Button } from '../components/loom/button.tsx'
 import { FormField } from '../components/loom/form-field.tsx'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/loom/select.tsx'
-import type { PanelEntry } from '../SourcePanel.tsx'
+import type { PanelEntry } from '../shared/SourcePanel.tsx'
 import { compareRows, matches, members, NAME, options } from './filter.ts'
 import { KINDS, type Kind } from './load.ts'
 import { LoadState } from './LoadState.tsx'
@@ -236,7 +236,7 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
           controls stay above it, so the search can be edited and Clear
           pressed. */}
       {loaded.status === 'ready' && shown.length === 0 && (
-        <p className="encyclopedia__state-text text-body-lg text-on-surface-variant">
+        <p className="encyclopedia__empty text-body-lg text-on-surface-variant">
           {`No ${kind.label.toLowerCase()} match the current search.`}
         </p>
       )}

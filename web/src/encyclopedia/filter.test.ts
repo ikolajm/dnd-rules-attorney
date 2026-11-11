@@ -8,7 +8,7 @@ import {
   spellRow,
   type Row,
 } from './rows.ts'
-import { MAGIC_ITEMS, MONSTERS, SPELLS } from '../test-data.ts'
+import { MAGIC_ITEMS, MONSTERS, SPELLS } from '../shared/test-data.ts'
 
 // Undead first and twice, so an unsorted or a repeated result shows; poison in
 // two rows' lists; and an empty list, as armor's properties are.
