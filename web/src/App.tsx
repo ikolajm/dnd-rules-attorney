@@ -9,13 +9,13 @@ import { RunStatus } from './ask/RunStatus.tsx'
 import { SourcePanel, type PanelEntry } from './shared/SourcePanel.tsx'
 import { Verdict } from './ask/Verdict.tsx'
 import { ViewAll } from './ask/ViewAll.tsx'
-import { Button } from './components/loom/button.tsx'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/loom/tabs.tsx'
 import { Encyclopedia } from './encyclopedia/Encyclopedia.tsx'
 import './app.css'
 
 type View = 'ask' | 'encyclopedia'
 
-// Each view and its button's label, in the toggle's order.
+// Each view and its tab's label, in the tab list's order.
 const VIEWS: [View, string][] = [
   ['ask', 'Ask'],
   ['encyclopedia', 'Encyclopedia'],
@@ -35,13 +35,6 @@ export default function App() {
   // Each view's scroll position, saved on leaving it, since both share the
   // window's scroll.
   const scrollRef = useRef<Record<View, number>>({ ask: 0, encyclopedia: 0 })
-  // Raised by show and consumed by the effect that moves focus, so focus moves
-  // only after a switch. A flag the first run cleared would not do: StrictMode
-  // runs effects twice on mount in dev, and the second run would move focus.
-  const switchedRef = useRef(false)
-  // The view wrappers, so a switch can find the shown view's heading.
-  const askRef = useRef<HTMLDivElement>(null)
-  const encyclopediaRef = useRef<HTMLDivElement>(null)
   const abortRef = useRef<AbortController | null>(null)
   // The control that opened the panel, so focus goes back to it on close.
   const triggerRef = useRef<HTMLElement | null>(null)
@@ -75,16 +68,12 @@ export default function App() {
     if (view === 'ask' && run && followRef.current) window.scrollTo({ top: document.documentElement.scrollHeight })
   }, [run, view])
 
-  // The shown view's own scroll position, put back before the browser paints,
-  // then focus on its heading after a switch. Layout effects run before plain
-  // ones, so the follow above lands after this: a thread that was following
-  // goes to its foot. preventScroll keeps the focus from undoing the restore.
+  // The shown view's own scroll position, put back before the browser paints.
+  // Layout effects run before plain ones, so the follow above lands after this:
+  // a thread that was following goes to its foot. Focus stays on the tab, as
+  // the tab pattern has it.
   useLayoutEffect(() => {
     window.scrollTo(0, scrollRef.current[view])
-    if (!switchedRef.current) return
-    switchedRef.current = false
-    const shown = view === 'ask' ? askRef.current : encyclopediaRef.current
-    shown?.querySelector('h1')?.focus({ preventScroll: true })
   }, [view])
 
   // A new question clears the screen: a ruling left up while the next one
@@ -127,7 +116,6 @@ export default function App() {
   const show = (next: View) => {
     // `view` is still the view being left; the update has not happened yet.
     scrollRef.current[view] = window.scrollY
-    switchedRef.current = true
     setOpenEntry(null)
     setView(next)
     if (next === 'encyclopedia') setVisited(true)
@@ -138,112 +126,110 @@ export default function App() {
   )
 
   return (
-    // data-view lets the layout know which view shows: the encyclopedia fixes
-    // the app's height so its table scrolls in its own box.
-    <div className="app" data-idle={run === null || undefined} data-view={view}>
-      {/* `undefined` leaves aria-current off; `false` would write "false". */}
-      <nav className="views column" aria-label="Views">
-        {VIEWS.map(([id, label]) => (
-          <Button
-            key={id}
-            variant={view === id ? 'filled' : 'ghost'}
-            aria-current={view === id ? 'page' : undefined}
-            onClick={() => show(id)}
-          >
-            {label}
-          </Button>
-        ))}
-      </nav>
-
-      <div ref={askRef} className="view" hidden={view !== 'ask'}>
-        {run === null ? (
-          // The empty screen: the input centred under the name, until a question runs.
-          <main className="column empty">
-            {/* -1: focusable from code, out of the Tab order. */}
-            <h1 className="text-display-md" tabIndex={-1}>
-              Lazy Dunmas
-            </h1>
-            {form}
-          </main>
-        ) : (
-          // One turn told in time order, each phase mounting as its event lands.
-          <main key={turn} className="column thread">
-            <h1 className="visually-hidden" tabIndex={-1}>
-              Lazy Dunmas
-            </h1>
-
-            <Phase id="phase-question" label={PHASE_LABEL.question}>
-              <blockquote className="phase__question text-body-lg">
-                <p>“{run.question}”</p>
-              </blockquote>
-            </Phase>
-
-            {run.subQuestions && (
-              <Phase id="phase-plan" label={PHASE_LABEL.plan}>
-                {run.subQuestions.length > 0 ? (
-                  <ol className="sub-questions text-body-lg">
-                    {run.subQuestions.map((q) => (
-                      <li key={q}>{q}</li>
-                    ))}
-                  </ol>
-                ) : (
-                  <p className="text-body-lg text-on-surface-variant">
-                    Not split: the question is searched as it was asked.
-                  </p>
-                )}
-              </Phase>
-            )}
-
-            {run.entries && (
-              <Phase id="phase-entries" label={PHASE_LABEL.entries}>
-                <ViewAll entries={run.entries} cites={run.ruling?.cites ?? null} onOpen={open} />
-              </Phase>
-            )}
-
-            {/* A ruling, or how the run ended without one, in the Verdict's place. */}
-            {run.ruling ? (
-              <Phase id="phase-verdict" label={PHASE_LABEL.verdict}>
-                <Verdict ruling={run.ruling} entries={entries} onOpen={open} />
-              </Phase>
-            ) : (
-              !running && (
-                <Phase id="phase-verdict" label={PHASE_LABEL.verdict}>
-                  <RunStatus run={run} onRetry={() => void ask(run.question)} />
-                </Phase>
-              )
-            )}
-
-            {/* The phase the run waits on, pending at the foot. The slot stays
-                mounted so a screen reader hears each label as it changes. */}
-            <div aria-live="polite">
-              {running && (
-                <p className="phase__pending phase__label eyebrow text-label-lg">{PENDING_LABEL[run.stage]}</p>
-              )}
-            </div>
-          </main>
-        )}
-      </div>
-
-      {visited && (
-        <div ref={encyclopediaRef} className="view" hidden={view !== 'encyclopedia'}>
-          <Encyclopedia onOpen={open} />
+    // The tabs take the app's own element, so its grid rows stay the tab list,
+    // the view and the input bar. data-view lets the layout know which view
+    // shows: the encyclopedia fixes the app's height so its table scrolls in its
+    // own box.
+    <Tabs asChild value={view} onValueChange={(next) => show(next as View)}>
+      <div className="app" data-idle={run === null || undefined} data-view={view}>
+        <div className="views column">
+          <TabsList aria-label="Views">
+            {VIEWS.map(([id, label]) => (
+              <TabsTrigger key={id} value={id}>
+                {label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
         </div>
-      )}
 
-      <div className="ask">
-        {run !== null && view === 'ask' && <div className="column">{form}</div>}
-        <footer className="attribution column text-body-sm text-on-surface-variant">
-          <Attribution />
-        </footer>
+        {/* Both views stay mounted and the other is hidden, so a switch keeps
+            each one's state. -1 keeps a panel out of the Tab order: each holds
+            controls of its own, which are the next stop after the tabs. */}
+        <TabsContent value="ask" keepMounted tabIndex={-1} className="view">
+          {run === null ? (
+            // The empty screen: the input centred under the name, until a question runs.
+            <main className="column empty">
+              <h1 className="text-display-md">Lazy Dunmas</h1>
+              {form}
+            </main>
+          ) : (
+            // One turn told in time order, each phase mounting as its event lands.
+            <main key={turn} className="column thread">
+              <h1 className="visually-hidden">Lazy Dunmas</h1>
+
+              <Phase id="phase-question" label={PHASE_LABEL.question}>
+                <blockquote className="phase__question text-body-lg">
+                  <p>“{run.question}”</p>
+                </blockquote>
+              </Phase>
+
+              {run.subQuestions && (
+                <Phase id="phase-plan" label={PHASE_LABEL.plan}>
+                  {run.subQuestions.length > 0 ? (
+                    <ol className="sub-questions text-body-lg">
+                      {run.subQuestions.map((q) => (
+                        <li key={q}>{q}</li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <p className="text-body-lg text-on-surface-variant">
+                      Not split: the question is searched as it was asked.
+                    </p>
+                  )}
+                </Phase>
+              )}
+
+              {run.entries && (
+                <Phase id="phase-entries" label={PHASE_LABEL.entries}>
+                  <ViewAll entries={run.entries} cites={run.ruling?.cites ?? null} onOpen={open} />
+                </Phase>
+              )}
+
+              {/* A ruling, or how the run ended without one, in the Verdict's place. */}
+              {run.ruling ? (
+                <Phase id="phase-verdict" label={PHASE_LABEL.verdict}>
+                  <Verdict ruling={run.ruling} entries={entries} onOpen={open} />
+                </Phase>
+              ) : (
+                !running && (
+                  <Phase id="phase-verdict" label={PHASE_LABEL.verdict}>
+                    <RunStatus run={run} onRetry={() => void ask(run.question)} />
+                  </Phase>
+                )
+              )}
+
+              {/* The phase the run waits on, pending at the foot. The slot stays
+                  mounted so a screen reader hears each label as it changes. */}
+              <div aria-live="polite">
+                {running && (
+                  <p className="phase__pending phase__label eyebrow text-label-lg">{PENDING_LABEL[run.stage]}</p>
+                )}
+              </div>
+            </main>
+          )}
+        </TabsContent>
+
+        {/* The panel is there from the start, so its tab names a real element;
+            the encyclopedia inside it waits for the first visit. */}
+        <TabsContent value="encyclopedia" keepMounted tabIndex={-1} className="view">
+          {visited && <Encyclopedia onOpen={open} />}
+        </TabsContent>
+
+        <div className="ask">
+          {run !== null && view === 'ask' && <div className="column">{form}</div>}
+          <footer className="attribution column text-body-sm text-on-surface-variant">
+            <Attribution />
+          </footer>
+        </div>
+
+        {/* "Cited" is about the ruling, so it shows only on the ask view: a
+            record opened from the encyclopedia is not a cite. */}
+        <SourcePanel
+          entry={openEntry}
+          cited={openEntry !== null && view === 'ask' && citedPaths.has(openEntry.path)}
+          onClose={close}
+        />
       </div>
-
-      {/* "Cited" is about the ruling, so it shows only on the ask view: a
-          record opened from the encyclopedia is not a cite. */}
-      <SourcePanel
-        entry={openEntry}
-        cited={openEntry !== null && view === 'ask' && citedPaths.has(openEntry.path)}
-        onClose={close}
-      />
-    </div>
+    </Tabs>
   )
 }

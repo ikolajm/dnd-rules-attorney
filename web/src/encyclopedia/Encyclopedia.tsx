@@ -108,12 +108,9 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
 
   return (
     <main className="column encyclopedia">
-      {/* Hidden from sight: the toggle shows the view and the kind picker names
-          what is in it. It stays for screen readers and for the focus a switch
-          moves here; -1 keeps it out of the Tab order. */}
-      <h1 className="visually-hidden" tabIndex={-1}>
-        Encyclopedia
-      </h1>
+      {/* Hidden from sight: the tabs show the view and the kind picker names
+          what is in it. It stays for screen readers. */}
+      <h1 className="visually-hidden">Encyclopedia</h1>
 
       <div className="encyclopedia__controls">
         {/* A label's `for` names Radix's trigger, which is a button. The field

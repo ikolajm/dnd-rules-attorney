@@ -1,0 +1,24 @@
+{
+  "name": "tabs",
+  "kind": "atom",
+  "category": "layout",
+  "file": "tabs.tsx",
+  "dependencies": [
+    "cn"
+  ],
+  "npmDependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "tokens": [
+    "color",
+    "typography",
+    "spacing",
+    "sizing"
+  ],
+  "composition": "none",
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ]
+}
