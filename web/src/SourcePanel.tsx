@@ -1,37 +1,20 @@
 import { X } from 'lucide-react'
-import { useEffect, useRef, useSyncExternalStore } from 'react'
-import Markdown, { type Components } from 'react-markdown'
-import remarkBreaks from 'remark-breaks'
-import remarkGfm from 'remark-gfm'
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { Badge } from './components/loom/badge.tsx'
 import { Button } from './components/loom/button.tsx'
 import { entryLabel, pathSegments } from './cites.ts'
-import { entryBody } from './entry.ts'
-import { parseSpell } from './spell.ts'
-import { SpellStats } from './SpellStats.tsx'
+import { useEntryText } from './encyclopedia/entry-text.ts'
+import { LoadState } from './encyclopedia/LoadState.tsx'
+import { corpusFields } from './encyclopedia/views/fields.ts'
+import { FieldsView } from './encyclopedia/views/FieldsView.tsx'
+import { hasView } from './encyclopedia/views/roots.ts'
+import { RecordView } from './encyclopedia/views/RecordView.tsx'
+import { PULLOUT_HEADINGS, pulloutText } from './encyclopedia/views/pullouts.ts'
+import type { Expand } from './encyclopedia/views/StatBlock.tsx'
+import { usePullouts } from './encyclopedia/views/use-pullouts.ts'
+import { entryBody, entryTitle } from './entry.ts'
+import { Prose } from './Prose.tsx'
 import type { Entry } from './types.ts'
-
-// Tables are GFM, not CommonMark. Breaks keeps each single line break, which
-// two rule sections write as one; the spells' stat lines, which wrote most of
-// them, are laid out by SpellStats instead.
-const PLUGINS = [remarkGfm, remarkBreaks]
-
-// The corpus's markdown onto Loom. Headings inside an entry sit under the
-// panel's own h2, whatever level the source wrote them at, and a table scrolls
-// on its own rather than widening the panel.
-const ELEMENTS: Components = {
-  h1: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
-  h2: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
-  h3: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
-  h4: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
-  h5: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
-  h6: ({ children }) => <h3 className="text-title-sm">{children}</h3>,
-  table: ({ children }) => (
-    <div className="source-panel__table">
-      <table className="table">{children}</table>
-    </div>
-  ),
-}
 
 // Wide enough that a panel beside the column leaves the ruling readable. Below
 // it nothing can be read beside the panel, so it becomes a modal.
@@ -48,8 +31,13 @@ function useWide(): boolean {
   )
 }
 
+// What the panel opens. A cite's entry carries its text from the run; a row
+// opened from the encyclopedia carries its path and name, and the panel loads
+// its text. `'text' in entry` tells them apart.
+export type PanelEntry = Entry | { path: string; title: string }
+
 type Props = {
-  entry: Entry | null
+  entry: PanelEntry | null
   cited: boolean
   onClose: () => void
 }
@@ -107,18 +95,80 @@ function ModalPanel({ entry, cited, onClose }: Props) {
   )
 }
 
+// Which text the panel shows for an entry with a view of its own: the view, or
+// the source text, the corpus entry the model is handed. Each button says
+// whether it is the one on through aria-pressed.
+function SourceToggle({ source, onChange }: { source: boolean; onChange: (source: boolean) => void }) {
+  return (
+    <div className="source-panel__toggle" role="group" aria-label="Text shown">
+      <Button size="sm" variant={source ? 'ghost' : 'filled'} aria-pressed={!source} onClick={() => onChange(false)}>
+        Formatted
+      </Button>
+      <Button size="sm" variant={source ? 'filled' : 'ghost'} aria-pressed={source} onClick={() => onChange(true)}>
+        Source text
+      </Button>
+    </div>
+  )
+}
+
 function PanelBody({
   entry,
   cited,
   onClose,
   closeRef,
-}: Props & { entry: Entry; closeRef: React.RefObject<HTMLButtonElement | null> }) {
-  const title = entryLabel(entry)
+}: Props & { entry: PanelEntry; closeRef: React.RefObject<HTMLButtonElement | null> }) {
+  // A row's name from the first frame, so the heading does not change when its
+  // text arrives.
+  const title = 'text' in entry ? entryLabel(entry) : entry.title
   const trail = pathSegments(entry.path).slice(0, -1)
-  const body = entryBody(entry.text)
-  // A spell's stat lines get their own layout; anything that does not parse as
-  // one renders as markdown, as every other entry does.
-  const spell = entry.path.startsWith('spells > ') ? parseSpell(body) : null
+  const { text, retry } = useEntryText(entry)
+  const body = text.status === 'ready' ? entryBody(text.value) : null
+  // A spell, a monster or a magic item opens its view, built from its record,
+  // which needs no source text; a weapon, a piece of armor or a race its fields
+  // as rows, read from the text once it is there; anything else renders as
+  // markdown.
+  const hasRecordView = hasView(entry.path)
+  const fields = hasRecordView || body === null ? null : corpusFields(entry.path, body)
+  // Only a view that differs from the source text gets the toggle; a condition
+  // already shows its source text. The choice lives here, which the side panel
+  // keeps mounted from entry to entry, so it holds until the panel closes.
+  const formatted = hasRecordView || fields !== null
+  // What a race's traits and subraces and a weapon's properties open to in
+  // place, once the corpus is loaded to find them in.
+  const pulled = usePullouts(entry.path, fields?.sections ?? [])
+  // An open row's own region is live already, so its state's is not.
+  const expand: Expand = (heading, item) => {
+    if (!PULLOUT_HEADINGS.has(heading)) return undefined
+    if (pulled.state.status !== 'ready') {
+      return (
+        <LoadState
+          status={pulled.state.status}
+          message="This text could not be loaded."
+          onRetry={pulled.retry}
+          compact
+          live={false}
+        />
+      )
+    }
+    const entries = pulled.state.value.get(heading)?.get(item)
+    if (!entries) return undefined
+    // A subrace opens to its traits, each under its own name; a trait or a
+    // property to its own text, its name already the row's.
+    return (
+      <Prose>
+        {entries.length === 1 && heading !== 'Subraces'
+          ? pulloutText(entries[0])
+          : entries.map((e) => `**${entryTitle(e.text) ?? ''}.** ${pulloutText(e)}`).join('\n\n')}
+      </Prose>
+    )
+  }
+  const [source, setSource] = useState(false)
+
+  // The source text's loading or failure. Empty for a cite, whose text is
+  // there from the start.
+  const textState = (
+    <LoadState status={text.status} message="The source text could not be loaded." onRetry={retry} compact />
+  )
 
   return (
     <>
@@ -138,11 +188,30 @@ function PanelBody({
           <X />
         </Button>
       </header>
+      {formatted && <SourceToggle source={source} onChange={setSource} />}
       <div className="source-panel__text text-body-md">
-        {spell && <SpellStats spell={spell} />}
-        <Markdown remarkPlugins={PLUGINS} components={ELEMENTS}>
-          {spell ? spell.body : body}
-        </Markdown>
+        {formatted ? (
+          <>
+            {/* Both stay mounted and the other is hidden, so switching back
+                does not load the record again; `hidden` keeps it out of the
+                page's find and the accessibility tree too. The key mounts a
+                fresh RecordView for each path, so the last record does not
+                show while the next one loads. A record's view does not wait
+                for the source text; only its Source text side does. */}
+            <div hidden={source}>
+              {hasRecordView ? <RecordView key={entry.path} path={entry.path} /> : fields && <FieldsView key={entry.path} fields={fields} expand={expand} />}
+            </div>
+            <div hidden={!source}>
+              {textState}
+              {body !== null && <Prose>{body}</Prose>}
+            </div>
+          </>
+        ) : (
+          <>
+            {textState}
+            {body !== null && <Prose>{body}</Prose>}
+          </>
+        )}
       </div>
     </>
   )

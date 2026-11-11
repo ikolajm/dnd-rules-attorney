@@ -180,6 +180,19 @@ main.encyclopedia {
   margin: 0;
 }
 
+/* The compact state, in the panel: the lines sit closer, as its smaller type
+   does. */
+.encyclopedia__state--compact {
+  gap: var(--group-compact-gap);
+}
+
+/* In the panel, its text rule gives every p a bottom margin at the same
+   specificity, later in the file; this one beats it, so the region's lines
+   space by its gap alone, as they do above the table. */
+.source-panel__text .encyclopedia__state p {
+  margin: 0;
+}
+
 /* An icon as well as the words, so the failure never rests on colour. */
 .encyclopedia__state-line {
   display: flex;
@@ -192,6 +205,12 @@ main.encyclopedia {
   width: var(--icon-2);
   height: var(--icon-2);
   flex: none;
+}
+
+/* The panel's: the icon at the size of its label-sized line. */
+.encyclopedia__state-line--compact svg {
+  width: var(--icon-1);
+  height: var(--icon-1);
 }
 
 /* The table fills what is left of the view and scrolls both ways in its own box,
@@ -568,6 +587,13 @@ main.empty h1 {
   margin: 0;
 }
 
+/* Formatted and Source text side by side; the panel's own gap spaces them from
+   the header and the text. */
+.source-panel__toggle {
+  display: flex;
+  gap: var(--space-1);
+}
+
 /* The entry renders as markdown, so its line breaks come from the renderer and
    white-space stays normal. The look is provisional until the design sweep. */
 .source-panel__text :is(h3, p, ul, ol) {
@@ -585,25 +611,160 @@ main.empty h1 {
   margin-block-end: var(--space-3);
 }
 
-/* A spell's stats: labels in one column, values in the other, a long material
-   sentence wrapping inside its own column. */
+/* A spell's stats, above its description. */
 .spell-stats {
   margin-block-end: var(--space-4);
 }
 
-.spell-stats__rows {
+/* Stat lines, a spell's or a monster's: labels in one column, values in the
+   other, a long value wrapping inside its own column. */
+.stat-rows {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: var(--space-1) var(--space-4);
   margin: 0;
 }
 
-.spell-stats__rows dt {
+.stat-rows dt {
   color: var(--on-surface-variant);
 }
 
-.spell-stats__rows dd {
+.stat-rows dd {
   margin: 0;
+}
+
+/* Each section's rows sit a step above the next heading. The > keeps the rule
+   off a list inside a trait's text. */
+.stat-block > dl {
+  margin-block: 0 var(--space-4);
+}
+
+/* A stat block's rows read as a table: no gap between rows, a rule under each so
+   a value far to the right stays tied to its label. The label column takes at
+   most half the width, so a long label wraps rather than pushing the values
+   aside. */
+.stat-block .stat-rows {
+  grid-template-columns: fit-content(50%) 1fr;
+  row-gap: 0;
+}
+
+/* Each pair's div spans both columns and takes their tracks through subgrid,
+   so the columns still line up across rows and the rule is one line, not one
+   per cell broken at the gap. The last row has none. */
+.stat-block .stat-rows > div {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  padding-block: var(--space-1);
+  border-block-end: var(--bw-1) solid var(--outline-subtle);
+}
+
+.stat-block .stat-rows > div:last-child {
+  border-block-end: none;
+}
+
+/* Right-aligned, so the values read down a column of their own; a spell's stay
+   beside their labels. */
+.stat-block .stat-rows dd {
+  text-align: end;
+}
+
+/* A list section, whose entries are sentences, a monster's defenses: bullets,
+   left-aligned across the full width, spaced below as a section of rows is. */
+.stat-block__list {
+  margin-block: 0 var(--space-4);
+  padding-inline-start: var(--space-4);
+}
+
+/* A list whose items open in place, a race's traits or a weapon's properties:
+   ruled like a monster's abilities, a rule under each row but the last, and no
+   bullets, the chevron marking each row instead. Flush left as the rows are:
+   the panel indents every list (`.source-panel__text :is(ul, ol)`), and this
+   selector outranks it, as a lone class would not. A list inside an opened
+   row's text keeps that indent. */
+.stat-block .stat-block__pullouts {
+  list-style: none;
+  margin-block: 0 var(--space-4);
+  padding: 0;
+}
+
+.stat-block__pullouts > li {
+  border-block-end: var(--bw-1) solid var(--outline-subtle);
+}
+
+.stat-block__pullouts > li:last-child {
+  border-block-end: none;
+}
+
+/* The row: the name, then the chevron at the far end. The browser's own
+   triangle is hidden, both the standard marker and WebKit's. */
+.stat-block__pullouts summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-block: var(--space-2);
+  cursor: pointer;
+  list-style: none;
+}
+
+.stat-block__pullouts summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The chevron turns over when its row opens, as View all's does; Loom's
+   --transition drops to nothing under reduced motion. */
+.stat-block__pullouts summary svg {
+  width: var(--icon-1);
+  height: var(--icon-1);
+  flex: none;
+  transition: transform var(--transition);
+}
+
+.stat-block__pullouts details[open] > summary svg {
+  transform: rotate(180deg);
+}
+
+.stat-block__pullout {
+  padding-block-end: var(--space-2);
+}
+
+/* The abilities as a list ruled like the rows, no rule after the last. */
+.monster-stats__traits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.monster-stats__traits > li {
+  padding-block: var(--space-2);
+  border-block-end: var(--bw-1) solid var(--outline-subtle);
+}
+
+.monster-stats__traits > li:last-child {
+  border-block-end: none;
+}
+
+/* The name and its usage badge on one line, the badge wrapping under the name
+   when the panel is narrow. */
+.monster-stats__title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.monster-stats__title h4,
+.monster-stats__options h5 {
+  margin: 0;
+}
+
+/* An ability's options, indented inside it, with no marker and no rules: the
+   bold name marks each one as part of the ability above. */
+.monster-stats__options {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: var(--space-4);
 }
 
 .attribution {

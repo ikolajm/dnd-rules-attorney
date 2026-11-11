@@ -26,6 +26,17 @@ export type SpellRecord = Base & {
   concentration: boolean
   ritual: boolean
   classes: Ref[]
+  casting_time: string
+  range: string
+  // The letters, ['V', 'S', 'M'].
+  components: string[]
+  // Only the spells with an M carry the key; the rest leave it out.
+  material?: string
+  duration: string
+  // The description's paragraphs.
+  desc: string[]
+  // Carried by the spells that scale with a higher slot, 90 of them.
+  higher_level?: string[]
 }
 
 export type MagicItemRecord = Base & {
@@ -34,7 +45,30 @@ export type MagicItemRecord = Base & {
   rarity: { name: string }
   // The first paragraph is the line holding the attunement clause.
   desc: string[]
+  // The variants, each a record of its own in the same file that makes no row.
+  variants: Ref[]
 }
+
+// How often an ability can be used, the three kinds usage_text in
+// src/rules_attorney/corpus.py writes. A check on `type` narrows to one member.
+// The recharge's dice stay out: the corpus build refuses any but 1d6.
+export type Usage =
+  | { type: 'per day'; times: number }
+  | { type: 'recharge on roll'; min_value: number }
+  | { type: 'recharge after rest'; rest_types: string[] }
+
+// A monster lists one or two of these. The cast in load.ts checks a union only
+// loosely, since a record's entry passes if any member fits, so
+// monster.test.ts names each shape.
+export type ArmorClass =
+  | { type: 'natural' | 'dex'; value: number }
+  // 34 name their armor; three describe it, the frost giant's "patchwork armor".
+  | { type: 'armor'; value: number; armor?: Ref[]; desc?: string }
+  | { type: 'spell'; value: number; spell: Ref }
+  | { type: 'condition'; value: number; condition: Ref }
+
+// A trait, action, reaction or legendary action as the record writes it.
+export type Ability = { name: string; desc: string; usage?: Usage }
 
 export type MonsterRecord = Base & {
   type: string
@@ -43,6 +77,37 @@ export type MonsterRecord = Base & {
   challenge_rating: number
   damage_immunities: string[]
   condition_immunities: Ref[]
+  // Carried by 76 monsters.
+  subtype?: string
+  alignment: string
+  armor_class: ArmorClass[]
+  hit_points: number
+  // "19d12+133".
+  hit_points_roll: string
+  // Distances by mode, and `hover` the one boolean. `undefined` because tsc,
+  // inferring the file's type, fills each record's missing modes with it, and
+  // the cast in load.ts must fit that.
+  speed: Record<string, string | boolean | undefined>
+  strength: number
+  dexterity: number
+  constitution: number
+  intelligence: number
+  wisdom: number
+  charisma: number
+  // Saves and skills, named "Saving Throw: DEX" and "Skill: Perception".
+  proficiencies: { value: number; proficiency: Ref }[]
+  damage_vulnerabilities: string[]
+  damage_resistances: string[]
+  // Passive Perception the one number; `undefined` as for speed.
+  senses: Record<string, string | number | undefined>
+  // '' when the monster has none.
+  languages: string
+  xp: number
+  proficiency_bonus: number
+  special_abilities?: Ability[]
+  actions?: Ability[]
+  reactions?: Ability[]
+  legendary_actions?: Ability[]
 }
 
 // Weapons and armor write the keys they do not use as null; the gear, tools
@@ -69,9 +134,10 @@ function yesNo(value: boolean): string {
 
 // A magic item's attunement clause, as item_fields in
 // src/rules_attorney/corpus.py matches it. The corpus build refuses a first
-// line with two, so only whether one is there is read. No `g` flag: with it,
-// `test` keeps its place between calls.
-const ATTUNEMENT = /\(requires attunement[^)]*\)/
+// line with two, so the first is the only one. No `g` flag: with it, `test`
+// keeps its place between calls. The group holds the clause without its
+// parentheses, for the magic item's view; `test` ignores it.
+export const ATTUNEMENT = /\((requires attunement[^)]*)\)/
 
 // A Map keeps its keys numbers, where an object would turn them into strings.
 // filter.ts reads it the other way, text back to rating, so this is the one

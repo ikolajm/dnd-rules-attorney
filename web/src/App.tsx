@@ -6,8 +6,7 @@ import { live } from './live.ts'
 import { Phase } from './Phase.tsx'
 import { applyEvent, PENDING_LABEL, PHASE_LABEL, startRun, type Run } from './run.ts'
 import { RunStatus } from './RunStatus.tsx'
-import { SourcePanel } from './SourcePanel.tsx'
-import type { Entry } from './types.ts'
+import { SourcePanel, type PanelEntry } from './SourcePanel.tsx'
 import { Verdict } from './Verdict.tsx'
 import { ViewAll } from './ViewAll.tsx'
 import { Button } from './components/loom/button.tsx'
@@ -28,7 +27,7 @@ export default function App() {
   // Counts the questions asked. It keys the run's phases, so each new question
   // mounts them afresh and they play their entrance again.
   const [turn, setTurn] = useState(0)
-  const [openEntry, setOpenEntry] = useState<Entry | null>(null)
+  const [openEntry, setOpenEntry] = useState<PanelEntry | null>(null)
   const [view, setView] = useState<View>('ask')
   // The encyclopedia mounts on its first visit, so its files load then rather
   // than at startup, and stays mounted after, so a switch keeps its state.
@@ -114,7 +113,7 @@ export default function App() {
 
   const stop = () => abortRef.current?.abort()
 
-  const open = (entry: Entry) => {
+  const open = (entry: PanelEntry) => {
     triggerRef.current = document.activeElement as HTMLElement | null
     setOpenEntry(entry)
   }

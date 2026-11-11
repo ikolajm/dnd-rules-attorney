@@ -14,7 +14,7 @@ export function SpellStats({ spell }: Props) {
   return (
     <div className="spell-stats">
       <p className="eyebrow text-label-md">{spell.subtitle}</p>
-      <dl className="spell-stats__rows text-body-md">
+      <dl className="stat-rows text-body-md">
         <dt>Casting Time</dt>
         <dd>{spell.castingTime}</dd>
         <dt>Range</dt>
