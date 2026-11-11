@@ -1,5 +1,5 @@
-// Run with `node --test src/sse.test.ts` from web/. Node strips the types and
-// runs the file as written.
+// Run with `node --test src/ask/sse.test.ts` from web/. Node strips the types
+// and runs the file as written.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { parser } from './sse.ts'

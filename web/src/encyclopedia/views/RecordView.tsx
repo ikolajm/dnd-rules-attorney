@@ -2,8 +2,8 @@
 // monster's or a magic item's. Loading and a failure are said in a live region,
 // as the table says its own.
 import type { JSX } from 'react'
-import { Prose } from '../../Prose.tsx'
-import { SpellStats } from '../../SpellStats.tsx'
+import { Prose } from '../../shared/Prose.tsx'
+import { SpellStats } from './SpellStats.tsx'
 import { LoadState } from '../LoadState.tsx'
 import { useLoad } from '../use-load.ts'
 import { MagicItemStats } from './MagicItemStats.tsx'

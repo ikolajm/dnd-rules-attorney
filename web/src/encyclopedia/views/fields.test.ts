@@ -1,8 +1,8 @@
 // Run with `node --test src/encyclopedia/views/fields.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { entryBody } from '../../entry.ts'
-import { CORPUS, EQUIPMENT, RACES } from '../../test-data.ts'
+import { entryBody } from '../../shared/entry.ts'
+import { CORPUS, EQUIPMENT, RACES } from '../../shared/test-data.ts'
 import { equipmentRow, raceRow } from '../rows.ts'
 import { corpusFields, type Fields } from './fields.ts'
 

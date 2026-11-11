@@ -3,9 +3,9 @@
 // the record's build to. The corpus writes every spell the same way, eight lines in one
 // order, `Level: cantrip` to `Ritual: no`, and that text is what the model was
 // measured on, so it stays; this is display only.
-import type { Supplement } from './encyclopedia/corpus-text.ts'
-import type { SpellRecord } from './encyclopedia/rows.ts'
-import { joinTableRows } from './entry.ts'
+import type { Supplement } from '../corpus-text.ts'
+import type { SpellRecord } from '../rows.ts'
+import { joinTableRows } from '../../shared/entry.ts'
 
 export type Spell = {
   // "Cantrip · Evocation", "Level 8 · Transmutation · Ritual".

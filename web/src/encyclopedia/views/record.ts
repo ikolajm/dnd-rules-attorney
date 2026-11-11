@@ -1,8 +1,8 @@
 // The loading of a path's view, built from its record: a spell's, a monster's
 // or a magic item's. Apart from RecordView.tsx so that file exports only its
 // component, which Vite's fast refresh needs to swap it in place.
-import { pathLeaf } from '../../cites.ts'
-import { spellFromRecord, type Spell } from '../../spell.ts'
+import { pathLeaf } from '../../shared/cites.ts'
+import { spellFromRecord, type Spell } from './spell.ts'
 import { magicItemRecords, monsterRecords, spellRecords, supplement } from '../load.ts'
 import { magicItemFromRecord, type MagicItem } from './magic-item.ts'
 import { monsterFromRecord, type Monster } from './monster.ts'

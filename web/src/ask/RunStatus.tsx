@@ -1,7 +1,7 @@
 import { CircleAlert, CircleSlash, RotateCcw, Square } from 'lucide-react'
-import { Button } from './components/loom/button.tsx'
+import { Button } from '../components/loom/button.tsx'
 import type { Run } from './run.ts'
-import type { ErrorReason } from './types.ts'
+import type { ErrorReason } from '../shared/types.ts'
 
 const ERROR_TEXT: Record<ErrorReason, string> = {
   unreachable: 'The model could not be reached. Check that Ollama is running.',
@@ -20,10 +20,10 @@ type Props = {
 // on colour.
 export function RunStatus({ run, onRetry }: Props) {
   return (
-    <div className="run-status">
+    <div className="status">
       {run.phase === 'refused' && (
         <>
-          <p className="run-status__line text-title-md">
+          <p className="status__line text-title-md">
             <CircleSlash aria-hidden="true" />
             Not a rules question
           </p>
@@ -35,7 +35,7 @@ export function RunStatus({ run, onRetry }: Props) {
 
       {run.phase === 'error' && run.error && (
         <>
-          <p className="run-status__line text-title-md tone-error">
+          <p className="status__line text-title-md tone-error">
             <CircleAlert aria-hidden="true" />
             Something went wrong
           </p>
@@ -49,7 +49,7 @@ export function RunStatus({ run, onRetry }: Props) {
       )}
 
       {run.phase === 'stopped' && (
-        <p className="run-status__line text-title-md text-on-surface-variant">
+        <p className="status__line text-title-md text-on-surface-variant">
           <Square aria-hidden="true" />
           Stopped
         </p>

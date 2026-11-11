@@ -2,7 +2,7 @@
 // first block, "Category: Martial melee weapon", read as a stat block's
 // sections. Their records hold no more than the corpus does, so the corpus is
 // what this reads.
-import { pathRoot } from '../../cites.ts'
+import { pathRoot } from '../../shared/cites.ts'
 import { size, type Line, type Section } from './section.ts'
 
 // One field line: a label of letters and spaces, then its value.

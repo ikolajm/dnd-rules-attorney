@@ -1,9 +1,9 @@
-// Run with `node --test src/spell.test.ts` from web/.
+// Run with `node --test src/encyclopedia/views/spell.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { entryBody } from './entry.ts'
+import { entryBody } from '../../shared/entry.ts'
 import { parseSpell, spellFromRecord } from './spell.ts'
-import { CORPUS, SPELLS, SUPPLEMENT } from './test-data.ts'
+import { CORPUS, SPELLS, SUPPLEMENT } from '../../shared/test-data.ts'
 
 // Bodies as the corpus writes them, the title line already dropped.
 const FIRE_BOLT =

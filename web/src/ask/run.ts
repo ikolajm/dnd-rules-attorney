@@ -1,4 +1,4 @@
-import type { Entry, ErrorReason, Ruling, StreamEvent } from './types.ts'
+import type { Entry, ErrorReason, Ruling, StreamEvent } from '../shared/types.ts'
 
 // One question's run, built up event by event. Each region shows nothing until
 // its event arrives, and whatever arrived stays when the run ends early.

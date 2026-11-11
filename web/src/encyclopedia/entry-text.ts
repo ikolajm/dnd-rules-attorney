@@ -2,7 +2,7 @@
 // the run; a row opened from the encyclopedia carries only its path and name,
 // and its text loads here with the corpus, so the panel opens at once and says
 // in its own body that the text is loading or could not be loaded.
-import type { PanelEntry } from '../SourcePanel.tsx'
+import type { PanelEntry } from '../shared/SourcePanel.tsx'
 import { corpus } from './load.ts'
 import { useLoad, type Load } from './use-load.ts'
 

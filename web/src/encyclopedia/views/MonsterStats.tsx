@@ -1,6 +1,6 @@
 // A monster's stat block as headed sections of rows or lists, then its abilities.
 import { Badge } from '../../components/loom/badge.tsx'
-import { Prose } from '../../Prose.tsx'
+import { Prose } from '../../shared/Prose.tsx'
 import type { Monster, Trait } from './monster.ts'
 import { Sections } from './StatBlock.tsx'
 

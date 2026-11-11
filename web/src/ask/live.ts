@@ -1,5 +1,5 @@
 import { parser } from './sse.ts'
-import type { StreamEvent } from './types.ts'
+import type { StreamEvent } from '../shared/types.ts'
 
 // The stream: a question in, the endpoint's events out, ended early by the
 // signal.

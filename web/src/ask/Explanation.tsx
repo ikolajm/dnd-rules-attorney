@@ -1,5 +1,5 @@
-import { linkExplanation } from './cites.ts'
-import type { Entry } from './types.ts'
+import { linkExplanation } from '../shared/cites.ts'
+import type { Entry } from '../shared/types.ts'
 
 type Props = {
   explanation: string

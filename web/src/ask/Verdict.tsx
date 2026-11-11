@@ -1,9 +1,9 @@
 import { CircleSlash, Scale } from 'lucide-react'
-import { Badge } from './components/loom/badge.tsx'
-import { Button } from './components/loom/button.tsx'
-import { entryLabels, resolveCite } from './cites.ts'
+import { Badge } from '../components/loom/badge.tsx'
+import { Button } from '../components/loom/button.tsx'
+import { entryLabels, resolveCite } from '../shared/cites.ts'
 import { Explanation } from './Explanation.tsx'
-import type { Answer, Entry, Ruling } from './types.ts'
+import type { Answer, Entry, Ruling } from '../shared/types.ts'
 
 type Props = {
   ruling: Ruling

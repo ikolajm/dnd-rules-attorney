@@ -1,8 +1,8 @@
 // Run with `node --test src/encyclopedia/views/magic-item.test.ts` from web/.
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { entryBody } from '../../entry.ts'
-import { CORPUS, MAGIC_ITEMS as RECORDS } from '../../test-data.ts'
+import { entryBody } from '../../shared/entry.ts'
+import { CORPUS, MAGIC_ITEMS as RECORDS } from '../../shared/test-data.ts'
 import { magicItemFromRecord, type MagicItem } from './magic-item.ts'
 
 const BY_INDEX = new Map(RECORDS.map((r) => [r.index, r] as const))

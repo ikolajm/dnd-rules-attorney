@@ -1,6 +1,6 @@
 // A magic item's view: its sections, then its description as markdown, whose
 // tables render as the panel's do.
-import { Prose } from '../../Prose.tsx'
+import { Prose } from '../../shared/Prose.tsx'
 import type { MagicItem } from './magic-item.ts'
 import { Sections } from './StatBlock.tsx'
 
