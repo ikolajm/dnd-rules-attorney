@@ -2,7 +2,7 @@
  * Loom's nesting levels: content between the regions, section inside one, group
  * between a label and what it labels. */
 
-/* Three rows: the view toggle, the view, and the input bar at the foot. */
+/* Three rows: the view tabs, the view, and the input bar at the foot. */
 .app {
   min-height: 100dvh;
   display: grid;
@@ -50,12 +50,11 @@ main.thread {
   display: none;
 }
 
-/* The view toggle, spaced as the input bar spaces its controls. It holds the
- * content width on both views, so a switch does not move it; the ask view's
- * reading column stays narrower beneath it. */
+/* The view tabs' row, spaced as the input bar spaces its controls. It holds the
+ * content width on both views, so a switch does not move the tabs; the ask
+ * view's reading column stays narrower beneath it. */
 .views {
   display: flex;
-  gap: var(--group-gap);
   padding-block: var(--group-gap);
 }
 
@@ -64,7 +63,7 @@ main.thread {
 }
 
 /* On the encyclopedia view every column takes the content width, sized for a
- * page of panels: the view and the footer share the toggle row's edge, where
+ * page of panels: the view and the footer share the tab row's edge, where
  * .column's reading width would wrap a six-column table everywhere. */
 .app[data-view='encyclopedia'] .column {
   max-width: var(--content-max-width);
@@ -77,7 +76,7 @@ main.encyclopedia {
   gap: var(--group-gap);
 }
 
-/* While the encyclopedia shows, the app is the viewport's height, so the toggle
+/* While the encyclopedia shows, the app is the viewport's height, so the tabs
  * and the controls stay put and the table scrolls in its own box. Grid and flex
  * children default to min-height: auto, their content's height; without the
  * zeros the table pushes its box past the viewport and the page scrolls again. */
@@ -571,11 +570,10 @@ main.empty h1 {
   margin: 0;
 }
 
-/* Formatted and Source text side by side; the panel's own gap spaces them from
-   the header and the text. */
-.source-panel__toggle {
-  display: flex;
-  gap: var(--space-1);
+/* The tabs' own element takes no box, so the tab list and the text stay the
+   panel's flex children and its gap spaces them from the header and each other. */
+.source-panel__tabs {
+  display: contents;
 }
 
 /* The entry renders as markdown, so its line breaks come from the renderer and

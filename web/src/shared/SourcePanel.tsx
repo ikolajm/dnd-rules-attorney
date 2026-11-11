@@ -2,6 +2,7 @@ import { X } from 'lucide-react'
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { Badge } from '../components/loom/badge.tsx'
 import { Button } from '../components/loom/button.tsx'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/loom/tabs.tsx'
 import { entryLabel, pathSegments } from './cites.ts'
 import { useEntryText } from '../encyclopedia/entry-text.ts'
 import { LoadState } from '../encyclopedia/LoadState.tsx'
@@ -95,22 +96,6 @@ function ModalPanel({ entry, cited, onClose }: Props) {
   )
 }
 
-// Which text the panel shows for an entry with a view of its own: the view, or
-// the source text, the corpus entry the model is handed. Each button says
-// whether it is the one on through aria-pressed.
-function SourceToggle({ source, onChange }: { source: boolean; onChange: (source: boolean) => void }) {
-  return (
-    <div className="source-panel__toggle" role="group" aria-label="Text shown">
-      <Button size="sm" variant={source ? 'ghost' : 'filled'} aria-pressed={!source} onClick={() => onChange(false)}>
-        Formatted
-      </Button>
-      <Button size="sm" variant={source ? 'filled' : 'ghost'} aria-pressed={source} onClick={() => onChange(true)}>
-        Source text
-      </Button>
-    </div>
-  )
-}
-
 function PanelBody({
   entry,
   cited,
@@ -129,7 +114,7 @@ function PanelBody({
   // markdown.
   const hasRecordView = hasView(entry.path)
   const fields = hasRecordView || body === null ? null : corpusFields(entry.path, body)
-  // Only a view that differs from the source text gets the toggle; a condition
+  // Only a view that differs from the source text gets the tabs; a condition
   // already shows its source text. The choice lives here, which the side panel
   // keeps mounted from entry to entry, so it holds until the panel closes.
   const formatted = hasRecordView || fields !== null
@@ -188,31 +173,44 @@ function PanelBody({
           <X />
         </Button>
       </header>
-      {formatted && <SourceToggle source={source} onChange={setSource} />}
-      <div className="source-panel__text text-body-md">
-        {formatted ? (
-          <>
+      {formatted ? (
+        // Which text the panel shows for an entry with a view of its own: the
+        // view, or the source text, the corpus entry the model is handed.
+        <Tabs
+          value={source ? 'source' : 'formatted'}
+          onValueChange={(next) => setSource(next === 'source')}
+          className="source-panel__tabs"
+        >
+          {/* The panel is surface-1, the track's own default, so the track
+              takes the step below it. */}
+          <TabsList size="sm" aria-label="Text shown" className="surface">
+            <TabsTrigger value="formatted">Formatted</TabsTrigger>
+            <TabsTrigger value="source">Source text</TabsTrigger>
+          </TabsList>
+          <div className="source-panel__text text-body-md">
             {/* Both stay mounted and the other is hidden, so switching back
                 does not load the record again; `hidden` keeps it out of the
                 page's find and the accessibility tree too. The key mounts a
                 fresh RecordView for each path, so the last record does not
                 show while the next one loads. A record's view does not wait
-                for the source text; only its Source text side does. */}
-            <div hidden={source}>
+                for the source text; only its Source text side does. Each panel
+                keeps its Tab stop, since a spell's text may hold nothing
+                focusable for the keyboard to reach it by. */}
+            <TabsContent value="formatted" keepMounted>
               {hasRecordView ? <RecordView key={entry.path} path={entry.path} /> : fields && <FieldsView key={entry.path} fields={fields} expand={expand} />}
-            </div>
-            <div hidden={!source}>
+            </TabsContent>
+            <TabsContent value="source" keepMounted>
               {textState}
               {body !== null && <Prose>{body}</Prose>}
-            </div>
-          </>
-        ) : (
-          <>
-            {textState}
-            {body !== null && <Prose>{body}</Prose>}
-          </>
-        )}
-      </div>
+            </TabsContent>
+          </div>
+        </Tabs>
+      ) : (
+        <div className="source-panel__text text-body-md">
+          {textState}
+          {body !== null && <Prose>{body}</Prose>}
+        </div>
+      )}
     </>
   )
 }
