@@ -76,15 +76,21 @@ export function Encyclopedia({
   const ariaSort = (field: string) =>
     sort.field !== field ? undefined : sort.descending ? 'descending' : 'ascending'
 
-  const header = (field: string) => (
-    <th key={field} scope="col" aria-sort={ariaSort(field)}>
-      <button type="button" className="encyclopedia__sort" onClick={() => sortBy(field)}>
+  // A list field has no order of its own: Classes would sort by whichever class is named first.
+  const header = (field: string) =>
+    Array.isArray(rows[0]?.fields[field]) ? (
+      <th key={field} scope="col">
         {field}
-        {sort.field === field &&
-          (sort.descending ? <ArrowDown aria-hidden="true" /> : <ArrowUp aria-hidden="true" />)}
-      </button>
-    </th>
-  )
+      </th>
+    ) : (
+      <th key={field} scope="col" aria-sort={ariaSort(field)}>
+        <button type="button" className="encyclopedia__sort" onClick={() => sortBy(field)}>
+          {field}
+          {sort.field === field &&
+            (sort.descending ? <ArrowDown aria-hidden="true" /> : <ArrowUp aria-hidden="true" />)}
+        </button>
+      </th>
+    )
 
   const choose = (field: string, value: string) =>
     setChosen((current) => {
