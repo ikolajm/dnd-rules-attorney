@@ -59,8 +59,7 @@ function SectionBody({ section, expand }: { section: Section; expand?: Expand })
                     <span>{item}</span>
                     <ChevronDown aria-hidden="true" />
                   </summary>
-                  {/* Live, so text that arrives or fails in an open row is
-                      said; opening a row only reveals it, which is not. */}
+                  {/* Live for text that arrives or fails in an open row; opening one is not announced. */}
                   <div className="stat-block__pullout" aria-live="polite">
                     {contents[i]}
                   </div>

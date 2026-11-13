@@ -10,24 +10,17 @@ export type Load<T> = { status: 'loading' } | { status: 'ready'; value: T } | { 
 // null one loads nothing. `load` may be a new function each render; the one
 // from the latest render runs.
 export function useLoad<T>(key: string | null, load: () => Promise<T>): { state: Load<T>; retry: () => void } {
-  // The state names the key it is for. A component that stays mounted while
-  // its key changes, the side panel from entry to entry, would otherwise show
-  // the last key's value on the first render after the switch.
+  // Tagged with its key, so a component kept mounted across keys never shows the last key's value.
   const [loaded, setLoaded] = useState<{ key: string | null } & Load<T>>({ key, status: 'loading' })
-  // Raised by Retry, which the effect lists, so a retry loads the same key
-  // again; `once` forgets a failed load, so it fetches afresh.
   const [attempt, setAttempt] = useState(0)
-  // The latest `load`, read by the effect below without listing it: listed, a
-  // function built each render would re-run the load every render. Set in an
-  // effect, since a ref is not written during render; effects run in order, so
-  // this one runs first.
+  // Read by the effect below without listing it, which would rerun the load
+  // every render. Written in an effect, since a ref is not written during render.
   const latest = useRef(load)
   useEffect(() => {
     latest.current = load
   })
 
-  // `current` drops a load a later key has overtaken, so its value cannot land
-  // last. The screen says only that the load failed; the console says why.
+  // `current` drops a load a later key has overtaken.
   useEffect(() => {
     if (key === null) return
     let current = true
@@ -48,7 +41,6 @@ export function useLoad<T>(key: string | null, load: () => Promise<T>): { state:
 
   const retry = () => setAttempt((a) => a + 1)
   if (loaded.key !== key) return { state: { status: 'loading' }, retry }
-  // The key is the state's own bookkeeping, left out of what the caller reads.
   const { key: _, ...state } = loaded
   return { state, retry }
 }

@@ -27,16 +27,13 @@ export function LoadState({
   live?: boolean
 }) {
   const regionRef = useRef<HTMLDivElement>(null)
-  // Focus moves to the region first, since Retry's own button is about to
-  // unmount and focus on a removed element drops to the page's start.
+  // Focus moves first: Retry is about to unmount, and focus on a removed element drops to the page's start.
   const retry = () => {
     regionRef.current?.focus()
     onRetry()
   }
 
-  // Rendered from the first paint, even when ready and empty, so its text is
-  // announced as it arrives: a live region added in the same render as its
-  // text often is not. -1: focusable from code, out of the Tab order.
+  // Rendered even when empty: a live region added with its text is often not announced.
   return (
     <div
       ref={regionRef}

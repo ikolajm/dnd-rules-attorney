@@ -6,12 +6,10 @@
 
 export function splitCorpus(markdown: string): Map<string, string> {
   const entries = new Map<string, string>()
-  // `m` makes `^` match at every line's start, not only the string's. The file
-  // opens with `## `, so the first piece is empty.
+  // The file opens with `## `, so the first piece is empty.
   for (const block of markdown.split(/^## /m).slice(1)) {
     const newline = block.indexOf('\n')
-    // The trim takes the blank lines either side of the text, or the file's
-    // final newline after the last; no text begins or ends with whitespace.
+    // Safe to trim: no entry's text begins or ends with whitespace.
     entries.set(block.slice(0, newline), block.slice(newline).trim())
   }
   return entries

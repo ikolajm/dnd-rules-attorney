@@ -79,10 +79,9 @@ export function parseSpell(body: string): Spell | null {
 // description joins its paragraphs as src/rules_attorney/corpus.py does, with
 // At Higher Levels set bold here where the corpus runs it into the text.
 // `.length` rather than the list itself: an empty list is truthy here, where
-// corpus.py's `if higher:` skips one. The four reaction spells' casting times
-// take the supplement's insert, "1 reaction, which you take when you see…",
-// since the clause means nothing apart from the line it completes, which is
-// how the corpus reads it too.
+// corpus.py's `if higher:` skips one. A reaction spell's casting time takes the
+// supplement's insert, "1 reaction, which you take when you see…", as the
+// corpus reads it.
 export function spellFromRecord(record: SpellRecord, supplement: Supplement): Spell {
   const after = `Casting time: ${record.casting_time}`
   const inserted = supplement.passages

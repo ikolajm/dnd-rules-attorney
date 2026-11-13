@@ -9,8 +9,7 @@ type Props = {
 
 // One phase of a run, told in the order the stream tells it: Question, Splitting
 // the dispute, Rules found, Verdict. Each mounts when its event lands and fades
-// in, rising to rest; under reduced motion it only fades. Its label is the
-// secondary gold, which means a phase and nothing else on the screen.
+// in, rising to rest; under reduced motion it only fades.
 export function Phase({ id, label, children }: Props) {
   return (
     <section className="phase" aria-labelledby={id}>

@@ -55,7 +55,6 @@ export function options(rows: Row[], field: string): string[] {
   for (const row of rows) {
     for (const value of members(row, field)) values.add(value)
   }
-  // In the column's own order, so a challenge filter reads 0 to 30.
   return [...values].sort((a, b) => compareValues(field, a, b))
 }
 

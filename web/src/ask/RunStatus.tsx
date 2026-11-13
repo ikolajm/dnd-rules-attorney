@@ -16,8 +16,7 @@ type Props = {
 }
 
 // How a run ended without a ruling, in the Verdict phase's place: refused,
-// failed, or stopped. Each carries an icon as well as its words, so none rests
-// on colour.
+// failed, or stopped.
 export function RunStatus({ run, onRetry }: Props) {
   return (
     <div className="status">

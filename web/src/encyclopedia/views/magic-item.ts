@@ -41,9 +41,7 @@ function attunementText(clause: string | null): string {
 // no row of their own.
 export function magicItemFromRecord(record: MagicItemRecord, byIndex: Map<string, MagicItemRecord>): MagicItem {
   const { type, rarity, attunement } = firstLine(record.desc[0])
-  // Each variant's rarity from its own first line, so it reads as the item's
-  // does. Potion of Healing lists itself among its variants, which the corpus
-  // leaves out; here its row is the one that tells the four potions apart.
+  // Potion of Healing lists itself among its variants: kept here, where the corpus drops it.
   const variants = record.variants.flatMap((ref) => {
     const variant = byIndex.get(ref.index)
     return variant ? [{ label: variant.name, value: capitalized(firstLine(variant.desc[0]).rarity) }] : []
@@ -62,7 +60,6 @@ export function magicItemFromRecord(record: MagicItemRecord, byIndex: Map<string
   ]
   return {
     sections: sections.filter((s) => size(s) > 0),
-    // The rest of the description, its tables closed up as a spell's are.
     description: joinTableRows(record.desc.slice(1).join('\n\n')),
   }
 }
