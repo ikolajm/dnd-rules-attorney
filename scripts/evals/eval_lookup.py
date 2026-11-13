@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from rules_attorney.corpus import load_corpus
-from rules_attorney.evals.metrics import all_cites_at_k, recall_at_k
+from rules_attorney.evals.metrics import report
 from rules_attorney.evals.provenance import commit
 from rules_attorney.evals.split import SPLITS
 from rules_attorney.lookup import KINDS, links, lookup_order, name_index
@@ -34,28 +34,6 @@ GOLD = ROOT / "gold" / "gold.json"
 RUNS = ROOT / "runs"
 KS = [3, 5, 10, 20]
 EMBEDDER = NOMIC
-
-
-def report(
-    name: str, rankings: list[list[str]], chosen: list[dict[str, Any]], ks: list[int]
-) -> None:
-    """Print recall@k and all-cites@k at each k for one order."""
-    ranked_paths: list[list[tuple[str, ...]]] = [
-        [(path,) for path in ranking] for ranking in rankings
-    ]
-    print(name)
-    print("k   recall  all-cites")
-
-    for k in ks:
-        recall = sum(
-            recall_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, chosen, strict=True)
-        ) / len(chosen)
-        complete = sum(
-            all_cites_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, chosen, strict=True)
-        ) / len(chosen)
-        print(f"{k:<4}{recall:.3f}   {complete:.3f}")
 
 
 def link_line(name: str, linked: int, cited: int, cites: int) -> str:

@@ -32,7 +32,7 @@ from rules_attorney.agentic import (
 )
 from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
 from rules_attorney.corpus import load_corpus
-from rules_attorney.evals.metrics import all_cites_at_k, recall_at_k
+from rules_attorney.evals.metrics import all_cites_at_k, report
 from rules_attorney.evals.provenance import commit
 from rules_attorney.evals.split import SPLITS
 from rules_attorney.hosted import EFFORT, MAX_TOKENS, MODEL_PREFIX, ClaudeBackend
@@ -66,28 +66,6 @@ COLON_ITEMS = (
     "cleric-ritual-unprepared",
     "copy-fireball-too-early",
 )
-
-
-def report(
-    name: str, rankings: list[list[str]], chosen: list[dict[str, Any]], ks: list[int]
-) -> None:
-    """Print recall@k and all-cites@k at each k for one order."""
-    ranked_paths: list[list[tuple[str, ...]]] = [
-        [(path,) for path in ranking] for ranking in rankings
-    ]
-    print(name)
-    print("k   recall  all-cites")
-
-    for k in ks:
-        recall = sum(
-            recall_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, chosen, strict=True)
-        ) / len(chosen)
-        complete = sum(
-            all_cites_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, chosen, strict=True)
-        ) / len(chosen)
-        print(f"{k:<4}{recall:.3f}   {complete:.3f}")
 
 
 def calls_of(record: dict[str, Any]) -> list[dict[str, Any]]:
