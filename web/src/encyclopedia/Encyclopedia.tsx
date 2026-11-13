@@ -32,36 +32,25 @@ function display(value: string): string {
 
 // onOpen is App's open, the one the ask screen's cites call.
 export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }) {
-  // The Kind itself rather than its root, so nothing looks it up by force.
   const [kind, setKind] = useState<Kind>(KINDS[0])
-  // Keyed by root, so picking Monsters and then Races before the monster file
-  // arrives cannot let the monster rows land last.
+  // Keyed by root, so a slow file cannot land after a later pick.
   const { state: loaded, retry } = useLoad(kind.root, kind.rows)
   const [search, setSearch] = useState('')
   const [chosen, setChosen] = useState<Record<string, string>>({})
   const [sort, setSort] = useState<Sort>(BY_NAME)
   const [filtersOpen, setFiltersOpen] = useState(false)
-  // One base for the labels' htmlFor: hooks cannot run inside the field loop,
-  // so each field takes a suffix on it.
   const id = useId()
 
-
   const rows = loaded.status === 'ready' ? loaded.value : []
-  // Every row of a kind holds the same fields in one order, so the first speaks
-  // for all. Conditions and weapon properties hold none.
+  // Every row of a kind holds the same fields in one order, so the first speaks for all.
   const fields = rows.length > 0 ? Object.keys(rows[0].fields) : []
-  // The filters narrowing the table, for the badge. The search is not counted,
-  // since it is always in view.
   const active = Object.keys(chosen).length
   const shown = rows.filter((row) => matches(row, search, chosen))
-  // A copy, since sort works in place. Reversing the ascending order for
-  // descending reverses rows that tie too, which is harmless and needs no second
-  // comparator.
   const sorted = [...shown].sort(compareRows(sort.field))
+  // Reverses ties too, which is harmless.
   if (sort.descending) sorted.reverse()
 
-  // A kind's fields are not another's, so its choices and sort go; the search
-  // stays.
+  // Another kind's fields differ, so choices and sort reset; the search stays.
   const pickKind = (root: string) => {
     const next = KINDS.find((k) => k.root === root)
     if (next) {
@@ -71,22 +60,16 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
     }
   }
 
-  // A second press on the sorted header reverses it; a new one starts ascending.
   const sortBy = (field: string) =>
     setSort((current) =>
       current.field === field ? { field, descending: !current.descending } : { field, descending: false },
     )
 
-  // The panel opens at once with the row's name and loads its text itself, so
-  // its loading and failure show in the panel.
   const openRow = (row: Row) => onOpen({ path: row.path, title: row.name })
 
-  // Only the sorted column carries aria-sort; `undefined` leaves it off the rest.
   const ariaSort = (field: string) =>
     sort.field !== field ? undefined : sort.descending ? 'descending' : 'ascending'
 
-  // A header's button and the sorted column's arrow, hidden from screen readers
-  // since aria-sort says the direction.
   const header = (field: string) => (
     <th key={field} scope="col" aria-sort={ariaSort(field)}>
       <button type="button" className="encyclopedia__sort" onClick={() => sortBy(field)}>
@@ -97,7 +80,6 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
     </th>
   )
 
-  // A copy, since React sees a change only in a new object.
   const choose = (field: string, value: string) =>
     setChosen((current) => {
       const next = { ...current }
@@ -108,14 +90,10 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
 
   return (
     <main className="column encyclopedia">
-      {/* Hidden from sight: the tabs show the view and the kind picker names
-          what is in it. It stays for screen readers. */}
       <h1 className="visually-hidden">Encyclopedia</h1>
 
       <div className="encyclopedia__controls">
-        {/* A label's `for` names Radix's trigger, which is a button. The field
-            holds one width, and a label longer than it is cut with an
-            ellipsis; a screen reader still hears it whole. */}
+        {/* The label's htmlFor names Radix's trigger, which is a button. */}
         <FormField className="encyclopedia__kind">
           <label className="label" data-size="sm" htmlFor={`${id}-kind`}>
             Kind
@@ -148,10 +126,8 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
           />
         </FormField>
 
-        {/* aria-expanded says whether the panel is open and aria-controls names
-            it. The label holds the count, so the badge is hidden from screen
-            readers, which would read it twice; it keeps the visible "Filters"
-            first, so a voice user can still say it. */}
+        {/* The label carries the count, so the badge is hidden; it opens with the
+            visible "Filters", so voice control can still name the button. */}
         {fields.length > 0 && (
           <>
             <Button
@@ -171,8 +147,6 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
                 </Badge>
               )}
             </Button>
-            {/* The word as well as the icon: a reset arrow alone reads close to
-                the sort arrows beside it. */}
             {active > 0 && (
               <Button
                 color="primary"
@@ -186,17 +160,13 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
           </>
         )}
 
-        {/* With the filters it counts, at the row's far end. Rendered from the
-            first paint with only its text changing: a live region added in the
-            same render as its text is often not announced. */}
+        {/* Mounted from the first paint: a live region added with its text is often not announced. */}
         <p className="encyclopedia__results text-body-md" aria-live="polite">
           {loaded.status === 'ready' ? `${shown.length} of ${rows.length}` : ''}
         </p>
       </div>
 
-      {/* Hidden rather than unmounted while closed, so each choice holds and
-          the badge counts it. The index goes in each id, since labels such as
-          "Damage immunities" hold spaces. */}
+      {/* Hidden, not unmounted, so the choices hold. Ids take the index: labels hold spaces. */}
       <div id={`${id}-filters`} className="encyclopedia__filters" hidden={!filtersOpen || fields.length === 0}>
         {fields.map((field, i) => (
           <FormField key={field}>
@@ -220,8 +190,6 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
         ))}
       </div>
 
-      {/* The table's place holds one of four states: loading or the failure
-          here, then no matches or the table below. */}
       <LoadState
         status={loaded.status}
         loading={`Loading ${kind.label.toLowerCase()}…`}
@@ -229,20 +197,14 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
         onRetry={retry}
       />
 
-      {/* Outside the live region: the count already announces "0 of 319". The
-          controls stay above it, so the search can be edited and Clear
-          pressed. */}
+      {/* Not live: the count above already announces the zero. */}
       {loaded.status === 'ready' && shown.length === 0 && (
         <p className="encyclopedia__empty text-body-lg text-on-surface-variant">
           {`No ${kind.label.toLowerCase()} match the current search.`}
         </p>
       )}
 
-      {/* A wide table scrolls in its own box, so the box takes Tab to be
-          scrolled by keyboard, and a role and a name to say what it is. The
-          name is a th with scope="row", what a screen reader reads as each
-          row's header, and a button, since a clickable row reaches no
-          keyboard. */}
+      {/* tabIndex 0, so the scrolling box can be scrolled by keyboard. */}
       {loaded.status === 'ready' && shown.length > 0 && (
         <div className="encyclopedia__table" role="region" aria-label={`${kind.label} table`} tabIndex={0}>
           <table className="table" data-size="sm">
