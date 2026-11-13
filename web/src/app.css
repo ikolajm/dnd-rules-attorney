@@ -2,6 +2,11 @@
 
 /* Layout */
 
+/* The heights are written by App, measured from the sticky bars. */
+html {
+  scroll-padding-block: var(--views-height, 0px) var(--ask-height, 0px);
+}
+
 .app {
   min-height: 100dvh;
   display: grid;

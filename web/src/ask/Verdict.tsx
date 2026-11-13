@@ -8,6 +8,7 @@ import type { Answer, Entry, Ruling } from '../shared/types.ts'
 type Props = {
   ruling: Ruling
   entries: Entry[]
+  openPath: string | null
   onOpen: (entry: Entry) => void
 }
 
@@ -24,14 +25,14 @@ function verdictText(answer: Answer): string {
 
 // The Verdict phase's body: the answer, the ambiguity when it is set, then the
 // explanation and the citations, each under a sub-heading.
-export function Verdict({ ruling, entries, onOpen }: Props) {
+export function Verdict({ ruling, entries, openPath, onOpen }: Props) {
   const cites = ruling.cites.map((cite) => resolveCite(cite, entries))
   const labels = entryLabels(entries)
   const short = ruling.answer.kind !== 'what'
 
   return (
     <div className="verdict" data-ambiguous={ruling.ambiguous || undefined}>
-      <p className={short ? 'verdict__answer text-display-lg' : 'verdict__answer text-title-lg'}>
+      <p className={short ? 'verdict__answer text-display-sm' : 'verdict__answer text-title-md'}>
         {verdictText(ruling.answer)}
       </p>
 
@@ -48,7 +49,7 @@ export function Verdict({ ruling, entries, onOpen }: Props) {
 
       <div className="verdict__part">
         <h3 className="subhead text-label-md">Explanation</h3>
-        <Explanation explanation={ruling.explanation} entries={entries} onOpen={onOpen} />
+        <Explanation explanation={ruling.explanation} entries={entries} openPath={openPath} onOpen={onOpen} />
       </div>
 
       <div className="verdict__part">
@@ -60,7 +61,13 @@ export function Verdict({ ruling, entries, onOpen }: Props) {
             {cites.map((c) => (
               <li key={c.cite}>
                 {c.found ? (
-                  <Button variant="outline" color="neutral" size="sm" onClick={() => onOpen(c.entry)}>
+                  <Button
+                    variant="outline"
+                    color={openPath === c.entry.path ? 'primary' : 'neutral'}
+                    size="sm"
+                    aria-expanded={openPath === c.entry.path}
+                    onClick={() => onOpen(c.entry)}
+                  >
                     {labels.get(c.entry.path)}
                   </Button>
                 ) : (
