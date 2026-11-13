@@ -1,0 +1,259 @@
+/* The encyclopedia: its table and controls, and the record views' stat blocks. */
+
+/* Encyclopedia */
+
+.app[data-view='encyclopedia'] .column {
+  max-width: var(--content-max-width);
+}
+
+/* Ties main.column and wins by order: App.tsx imports app.css first. */
+main.encyclopedia {
+  gap: var(--group-gap);
+}
+
+.app[data-view='encyclopedia'] {
+  height: 100dvh;
+}
+
+/* Without the zeros, min-height: auto lets the table push the page past the viewport. */
+.app[data-view='encyclopedia'] .view,
+.encyclopedia {
+  min-height: 0;
+}
+
+.encyclopedia__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--group-gap);
+}
+
+.encyclopedia__kind {
+  inline-size: 12rem;
+}
+
+/* Reached through the trigger: Radix's SelectValue drops a className passed to it. */
+.encyclopedia__kind-trigger > :first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.encyclopedia__results {
+  margin: 0 0 0 auto;
+  align-self: center;
+}
+
+.encyclopedia__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--group-gap);
+}
+
+/* Restated, as on .view. */
+.encyclopedia__filters[hidden] {
+  display: none;
+}
+
+/* Keeps "Condition immunities" whole. */
+.encyclopedia__filters .form-field {
+  min-width: 12rem;
+}
+
+.encyclopedia__filters-button {
+  position: relative;
+}
+
+/* Round rather than Loom's badge shape: a kind's filters never reach two digits. */
+.encyclopedia__badge {
+  inline-size: calc(var(--type-label-sm-line) + 4px);
+  block-size: calc(var(--type-label-sm-line) + 4px);
+  padding: 0;
+  border-radius: var(--radius-pill);
+  position: absolute;
+  top: calc(-1 * var(--space-2));
+  inset-inline-end: calc(-1 * var(--space-2));
+  pointer-events: none;
+}
+
+.encyclopedia__empty {
+  margin: 0;
+}
+
+.encyclopedia__table {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+/* Sticky on the cells, which browsers honour where thead is unreliable. The
+ * inset shadow redraws the rule border-collapse scrolls away. */
+.encyclopedia__table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface);
+  box-shadow: inset 0 calc(-1 * var(--bw-1)) var(--outline);
+}
+
+.encyclopedia__table button {
+  text-align: start;
+}
+
+/* At 400% zoom the pinned rows would leave almost no table, so the page scrolls instead. */
+@media (max-height: 30rem) {
+  .app[data-view='encyclopedia'] {
+    height: auto;
+  }
+
+  .encyclopedia__table {
+    flex: none;
+  }
+}
+
+.encyclopedia__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.encyclopedia__sort svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* Stat blocks */
+
+.spell-stats {
+  margin-block-end: var(--space-4);
+}
+
+.stat-rows {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-1) var(--space-4);
+  margin: 0;
+}
+
+.stat-rows dt {
+  color: var(--on-surface-variant);
+}
+
+.stat-rows dd {
+  margin: 0;
+}
+
+/* The > keeps the rule off a list inside a trait's text. */
+.stat-block > dl {
+  margin-block: 0 var(--space-4);
+}
+
+.stat-block .stat-rows {
+  grid-template-columns: fit-content(50%) 1fr;
+  row-gap: 0;
+}
+
+/* Subgrid, so each row's rule is one line across both columns. */
+.stat-block .stat-rows > div {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  padding-block: var(--space-1);
+  border-block-end: var(--bw-1) solid var(--outline-subtle);
+}
+
+.stat-block .stat-rows > div:last-child {
+  border-block-end: none;
+}
+
+.stat-block .stat-rows dd {
+  text-align: end;
+}
+
+.stat-block__list {
+  margin-block: 0 var(--space-4);
+  padding-inline-start: var(--space-4);
+}
+
+/* Two classes to outrank the panel's list indent, which a lone class would not. */
+.stat-block .stat-block__pullouts {
+  list-style: none;
+  margin-block: 0 var(--space-4);
+  padding: 0;
+}
+
+.stat-block__pullouts > li {
+  border-block-end: var(--bw-1) solid var(--outline-subtle);
+}
+
+.stat-block__pullouts > li:last-child {
+  border-block-end: none;
+}
+
+.stat-block__pullouts summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-block: var(--space-2);
+  cursor: pointer;
+  list-style: none;
+}
+
+.stat-block__pullouts summary::-webkit-details-marker {
+  display: none;
+}
+
+.stat-block__pullouts summary svg {
+  width: var(--icon-1);
+  height: var(--icon-1);
+  flex: none;
+  transition: transform var(--transition);
+}
+
+.stat-block__pullouts details[open] > summary svg {
+  transform: rotate(180deg);
+}
+
+.stat-block__pullout {
+  padding-block-end: var(--space-2);
+}
+
+.monster-stats__traits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.monster-stats__traits > li {
+  padding-block: var(--space-2);
+  border-block-end: var(--bw-1) solid var(--outline-subtle);
+}
+
+.monster-stats__traits > li:last-child {
+  border-block-end: none;
+}
+
+.monster-stats__title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.monster-stats__title h4,
+.monster-stats__options h5 {
+  margin: 0;
+}
+
+.monster-stats__options {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: var(--space-4);
+}
