@@ -16,7 +16,7 @@ from typing import Any
 
 from rules_attorney.answer import NUM_CTX, NUM_PREDICT, SEED, TEMPERATURE, THINK
 from rules_attorney.corpus import load_corpus
-from rules_attorney.evals.metrics import all_cites_at_k, recall_at_k
+from rules_attorney.evals.metrics import report
 from rules_attorney.evals.provenance import commit
 from rules_attorney.evals.split import SPLITS
 from rules_attorney.multihop import (
@@ -109,21 +109,7 @@ def main() -> None:
             print(f"{item['id']}: {len(sub_questions)} sub-questions")
 
     print(out)
-    ranked_paths: list[list[tuple[str, ...]]] = [
-        [(path,) for path in merged] for merged in merged_rankings
-    ]
-    print("k   recall  all-cites")
-    for k in KS:
-        recall = sum(
-            recall_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, chosen, strict=True)
-        ) / len(chosen)
-        complete = sum(
-            all_cites_at_k(ranked, item["cites"], k)
-            for ranked, item in zip(ranked_paths, chosen, strict=True)
-        ) / len(chosen)
-        print(f"{k:<4}{recall:.3f}   {complete:.3f}")
-
+    report("level 3", merged_rankings, chosen, KS)
     print(f"failed plans: {failures} / {len(chosen)}")
 
 
