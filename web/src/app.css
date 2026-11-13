@@ -1,16 +1,13 @@
-/* The app's own layout, unlayered so it sits above Loom's classes. Spacing reads
- * Loom's nesting levels: content between the regions, section inside one, group
- * between a label and what it labels. */
+/* The app's own layout, unlayered so it sits above Loom's classes. */
 
-/* Three rows: the view tabs, the view, and the input bar at the foot. */
+/* Layout */
+
 .app {
   min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 
-/* A reading column, narrower than Loom's content width, which is sized for a
- * page of panels rather than prose. */
 .column {
   width: 100%;
   max-width: 46rem;
@@ -25,16 +22,10 @@ main.column {
   padding-block: var(--screen-y-padding);
 }
 
-/* A run builds from the foot up, as a chat thread does: the first phases sit
- * just above the input, and each new one pushes the rest up. The main fills
- * its view, which fills the grid row above the input, so flex-end anchors it
- * there. */
 main.thread {
   justify-content: flex-end;
 }
 
-/* A view fills the grid's middle row, and its main fills the view, so the empty
- * screen still centres and the thread still anchors at its foot. */
 .view {
   display: flex;
   flex-direction: column;
@@ -44,8 +35,7 @@ main.thread {
   flex: 1;
 }
 
-/* The browser hides [hidden] with its own display: none, which any author
- * display outranks: .view's flex would show a hidden view. Restated here. */
+/* Any author display outranks the browser's [hidden], so it is restated. */
 .view[hidden] {
   display: none;
 }
@@ -65,35 +55,27 @@ main.thread {
   max-width: var(--content-max-width);
 }
 
-/* On the encyclopedia view every column takes the content width, sized for a
- * page of panels: the view and the footer share the tab row's edge, where
- * .column's reading width would wrap a six-column table everywhere. */
+/* Encyclopedia */
+
 .app[data-view='encyclopedia'] .column {
   max-width: var(--content-max-width);
 }
 
-/* Its parts sit a group apart, not the content gap between a page's regions.
- * main.column sets that gap; this matches its weight, an element and a class,
- * and wins by coming after it, so it stays below main.column in this file. */
+/* Same specificity as main.column, so it wins by order: keep it below. */
 main.encyclopedia {
   gap: var(--group-gap);
 }
 
-/* While the encyclopedia shows, the app is the viewport's height, so the tabs
- * and the controls stay put and the table scrolls in its own box. Grid and flex
- * children default to min-height: auto, their content's height; without the
- * zeros the table pushes its box past the viewport and the page scrolls again. */
 .app[data-view='encyclopedia'] {
   height: 100dvh;
 }
 
+/* Without the zeros, min-height: auto lets the table push the page past the viewport. */
 .app[data-view='encyclopedia'] .view,
 .encyclopedia {
   min-height: 0;
 }
 
-/* Kind, the name search, the Filters button and the count, wrapping at a
- * phone's width. */
 .encyclopedia__controls {
   display: flex;
   flex-wrap: wrap;
@@ -101,14 +83,11 @@ main.encyclopedia {
   gap: var(--group-gap);
 }
 
-/* Kind holds one width whatever is chosen; a longer label is cut with an
- * ellipsis. The rule reaches the value through the trigger, since Radix's
- * SelectValue drops a className passed to it. The value is a flex item in the
- * trigger, so it needs min-width: 0 to shrink below its text. */
 .encyclopedia__kind {
   inline-size: 12rem;
 }
 
+/* Reached through the trigger: Radix's SelectValue drops a className passed to it. */
 .encyclopedia__kind-trigger > :first-child {
   min-width: 0;
   overflow: hidden;
@@ -116,38 +95,32 @@ main.encyclopedia {
   white-space: nowrap;
 }
 
-/* The count of rows shown, at the controls' far end beside the filters. */
 .encyclopedia__results {
   margin: 0 0 0 auto;
   align-self: center;
 }
 
-/* The field dropdowns, behind the Filters button. An author display outranks
- * the browser's [hidden], as on .view, so the hiding is restated. The minimum
- * keeps "Condition immunities" whole. */
 .encyclopedia__filters {
   display: flex;
   flex-wrap: wrap;
   gap: var(--group-gap);
 }
 
+/* Restated, as on .view. */
 .encyclopedia__filters[hidden] {
   display: none;
 }
 
+/* Keeps "Condition immunities" whole. */
 .encyclopedia__filters .form-field {
   min-width: 12rem;
 }
 
-/* The count of active filters in the button's corner. pointer-events: none
- * sends a click on it to the button. */
 .encyclopedia__filters-button {
   position: relative;
 }
 
-/* Round: as wide as it is tall, the small label's line and the badge's 2px above
- * and below, with no side padding. Loom's badge takes the component radius and
- * side padding, a rectangle for one digit; a kind's filters never reach two. */
+/* Round rather than Loom's badge shape: a kind's filters never reach two digits. */
 .encyclopedia__badge {
   inline-size: calc(var(--type-label-sm-line) + 4px);
   block-size: calc(var(--type-label-sm-line) + 4px);
@@ -159,24 +132,18 @@ main.encyclopedia {
   pointer-events: none;
 }
 
-/* The table's line when the search leaves no rows. Outside the status region:
-   the count above already announces "0 of 319". */
 .encyclopedia__empty {
   margin: 0;
 }
 
-/* The table fills what is left of the view and scrolls both ways in its own box,
- * never the page. */
 .encyclopedia__table {
   flex: 1;
   min-height: 0;
   overflow: auto;
 }
 
-/* The header pins inside the box. Sticky goes on the cells, which browsers apply
- * it to reliably, unlike thead. Loom's thead has no background, so rows would
- * show through it, and its rule is the tr's border, which with border-collapse
- * scrolls away from a sticky cell, so an inset shadow redraws it. */
+/* Sticky on the cells, which browsers honour where thead is unreliable. The
+ * inset shadow redraws the rule border-collapse scrolls away. */
 .encyclopedia__table thead th {
   position: sticky;
   top: 0;
@@ -185,16 +152,11 @@ main.encyclopedia {
   box-shadow: inset 0 calc(-1 * var(--bw-1)) var(--outline);
 }
 
-/* A browser centres a button's own text, so a wrapped name or header would sit
- * centred in its cell though .table aligns the cell left. */
 .encyclopedia__table button {
   text-align: start;
 }
 
-/* Below this height, as at 400% zoom where a laptop's viewport is about 256px,
- * the pinned rows would leave almost no table: the page scrolls instead and the
- * header stops pinning. The box's height follows the table, so only its sideways
- * scroll is left; overflow-y: visible would compute to auto beside it anyway. */
+/* At 400% zoom the pinned rows would leave almost no table, so the page scrolls instead. */
 @media (max-height: 30rem) {
   .app[data-view='encyclopedia'] {
     height: auto;
@@ -205,9 +167,6 @@ main.encyclopedia {
   }
 }
 
-/* A header's sort button reads as the header's text and its arrow. Loom's base
- * clears a button's UA border; the focus ring is an element-level rule this
- * leaves alone. */
 .encyclopedia__sort {
   display: inline-flex;
   align-items: center;
@@ -224,17 +183,14 @@ main.encyclopedia {
   height: 1em;
 }
 
-/* Gold marks the small label that names a block: a phase's label, the one a
- * run waits on, the source panel's trail and a spell's subtitle. Nothing gold
- * is a warning, so the colour reads as a label and only that. */
+/* Labels */
+
 .eyebrow {
   color: var(--secondary-text);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
-/* A label one level under a phase's, naming a part of its body. Neutral, so
- * gold stays the top of the hierarchy. */
 .subhead {
   margin: 0;
   color: var(--on-surface-variant);
@@ -242,9 +198,8 @@ main.encyclopedia {
   letter-spacing: 0.08em;
 }
 
-/* A phase of the run: a gold label over its body, fading in and rising to rest
- * when its event lands. Under reduced motion it fades without the rise. The
- * look is provisional until the design sweep closes. */
+/* Phases */
+
 .phase {
   display: flex;
   flex-direction: column;
@@ -273,7 +228,6 @@ main.encyclopedia {
   }
 }
 
-/* The phase the run waits on, its label pulsing at the foot. */
 .phase__pending {
   animation: pending 1.4s ease-in-out infinite;
 }
@@ -309,7 +263,8 @@ main.encyclopedia {
   margin: 0;
 }
 
-/* Before the first question the input sits centred under the name. */
+/* Empty screen */
+
 main.empty {
   justify-content: center;
   gap: var(--section-gap);
@@ -321,10 +276,8 @@ main.empty h1 {
   font-family: var(--font-heading);
 }
 
-/* A state said in place of what failed or is loading, on either screen: a run
-   refused, failed or stopped where its ruling would be, a kind's rows in the
-   table's place, a record or a text in the panel. Each child keeps its own
-   width rather than the column's. */
+/* Status */
+
 .status {
   display: flex;
   flex-direction: column;
@@ -332,9 +285,7 @@ main.empty h1 {
   gap: var(--group-gap);
 }
 
-/* Empty, as when a load is ready, a region would still take its container's
-   gap on each side. Out of the flow it takes none, and unlike display: none it
-   stays a live region. */
+/* Out of the flow so an empty region takes no gap; display: none would end the live region. */
 .status:empty {
   position: absolute;
 }
@@ -343,19 +294,15 @@ main.empty h1 {
   margin: 0;
 }
 
-/* In the panel, its text rule gives every p a bottom margin; this one is more
-   specific, so the lines space by the gap alone, as they do elsewhere. */
+/* Outranks the panel's text rule, which gives every p a bottom margin. */
 .source-panel__text .status p {
   margin: 0;
 }
 
-/* The panel's: the lines sit closer, as its smaller type does. */
 .status--compact {
   gap: var(--group-compact-gap);
 }
 
-/* An icon as well as the words, so a state never rests on colour. A tone class,
-   the failure's, colours the line; "Stopped" and a refusal carry none. */
 .status__line {
   display: flex;
   align-items: center;
@@ -372,11 +319,12 @@ main.empty h1 {
   flex: none;
 }
 
-/* The panel's: the icon at the size of its label-sized line. */
 .status__line--compact svg {
   width: var(--icon-1);
   height: var(--icon-1);
 }
+
+/* Verdict */
 
 .verdict,
 .verdict__part {
@@ -394,10 +342,6 @@ main.empty h1 {
   margin: 0;
 }
 
-/* Neutral by decision. Size, place and the gold label above it already set the
-   answer apart. A yes-green or no-red would mean nothing on a number or a
-   sentence and would read a correct "No" as a failure; gold is the labels';
-   violet costs contrast on the line that must read first. */
 .verdict__answer {
   font-family: var(--font-heading);
 }
@@ -439,13 +383,13 @@ main.empty h1 {
   margin-bottom: 0;
 }
 
-/* An inline cite is a button so it can open the panel, but it reads as a link in
- * the sentence: no box, and it wraps with the words around it. */
 .explanation .link {
   display: inline;
   padding: 0;
   text-align: start;
 }
+
+/* View all */
 
 .view-all__summary {
   display: flex;
@@ -469,7 +413,6 @@ main.empty h1 {
   transform: rotate(90deg);
 }
 
-/* A numbered list of links, spaced as the sub-questions are. */
 .view-all__list {
   margin: var(--group-gap) 0 0;
   padding-inline-start: 1.25em;
@@ -478,7 +421,6 @@ main.empty h1 {
   gap: var(--group-compact-gap);
 }
 
-/* Each entry is a button so it can open the panel, read as a link. */
 .view-all__list .link {
   padding: 0;
   text-align: start;
@@ -492,8 +434,8 @@ main.empty h1 {
   color: var(--on-surface-variant);
 }
 
-/* Once a question runs, the input pins to the bottom of the viewport while the
- * ruling scrolls above it. */
+/* Input bar */
+
 .ask {
   position: sticky;
   bottom: 0;
@@ -515,13 +457,12 @@ main.empty h1 {
   resize: none;
 }
 
-/* The label and its box take the row's width; the button stays level with the
-   box's foot, the form aligning its items to the end. */
 .ask__field {
   flex: 1;
 }
 
-/* Over the column, never beside it: opening it moves nothing. */
+/* Source panel */
+
 .source-panel {
   position: fixed;
   inset-block: 0;
@@ -535,7 +476,7 @@ main.empty h1 {
   z-index: 2;
 }
 
-/* The modal fills the screen; the UA's own centring and max sizes are undone. */
+/* Undoes the UA's dialog centring and max sizes. */
 .source-panel--modal {
   width: 100vw;
   max-width: none;
@@ -573,20 +514,15 @@ main.empty h1 {
   margin: 0;
 }
 
-/* The tabs' own element takes no box, so the tab list and the text stay the
-   panel's flex children and its gap spaces them from the header and each other. */
+/* No box of its own, so the tab list and the text stay the panel's flex children. */
 .source-panel__tabs {
   display: contents;
 }
 
-/* The entry renders as markdown, so its line breaks come from the renderer and
-   white-space stays normal. The look is provisional until the design sweep. */
 .source-panel__text :is(h3, p, ul, ol) {
   margin-block: 0 var(--space-3);
 }
 
-/* The browser's 40px indent sits on top of the panel's own padding; this is the
- * indent the sub-questions and View all use. */
 .source-panel__text :is(ul, ol) {
   padding-inline-start: 1.25em;
 }
@@ -596,13 +532,12 @@ main.empty h1 {
   margin-block-end: var(--space-3);
 }
 
-/* A spell's stats, above its description. */
+/* Stat blocks */
+
 .spell-stats {
   margin-block-end: var(--space-4);
 }
 
-/* Stat lines, a spell's or a monster's: labels in one column, values in the
-   other, a long value wrapping inside its own column. */
 .stat-rows {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -618,24 +553,17 @@ main.empty h1 {
   margin: 0;
 }
 
-/* Each section's rows sit a step above the next heading. The > keeps the rule
-   off a list inside a trait's text. */
+/* The > keeps the rule off a list inside a trait's text. */
 .stat-block > dl {
   margin-block: 0 var(--space-4);
 }
 
-/* A stat block's rows read as a table: no gap between rows, a rule under each so
-   a value far to the right stays tied to its label. The label column takes at
-   most half the width, so a long label wraps rather than pushing the values
-   aside. */
 .stat-block .stat-rows {
   grid-template-columns: fit-content(50%) 1fr;
   row-gap: 0;
 }
 
-/* Each pair's div spans both columns and takes their tracks through subgrid,
-   so the columns still line up across rows and the rule is one line, not one
-   per cell broken at the gap. The last row has none. */
+/* Subgrid, so each row's rule is one line across both columns. */
 .stat-block .stat-rows > div {
   display: grid;
   grid-template-columns: subgrid;
@@ -648,25 +576,16 @@ main.empty h1 {
   border-block-end: none;
 }
 
-/* Right-aligned, so the values read down a column of their own; a spell's stay
-   beside their labels. */
 .stat-block .stat-rows dd {
   text-align: end;
 }
 
-/* A list section, whose entries are sentences, a monster's defenses: bullets,
-   left-aligned across the full width, spaced below as a section of rows is. */
 .stat-block__list {
   margin-block: 0 var(--space-4);
   padding-inline-start: var(--space-4);
 }
 
-/* A list whose items open in place, a race's traits or a weapon's properties:
-   ruled like a monster's abilities, a rule under each row but the last, and no
-   bullets, the chevron marking each row instead. Flush left as the rows are:
-   the panel indents every list (`.source-panel__text :is(ul, ol)`), and this
-   selector outranks it, as a lone class would not. A list inside an opened
-   row's text keeps that indent. */
+/* Two classes to outrank the panel's list indent, which a lone class would not. */
 .stat-block .stat-block__pullouts {
   list-style: none;
   margin-block: 0 var(--space-4);
@@ -681,8 +600,6 @@ main.empty h1 {
   border-block-end: none;
 }
 
-/* The row: the name, then the chevron at the far end. The browser's own
-   triangle is hidden, both the standard marker and WebKit's. */
 .stat-block__pullouts summary {
   display: flex;
   align-items: center;
@@ -697,8 +614,6 @@ main.empty h1 {
   display: none;
 }
 
-/* The chevron turns over when its row opens, as View all's does; Loom's
-   --transition drops to nothing under reduced motion. */
 .stat-block__pullouts summary svg {
   width: var(--icon-1);
   height: var(--icon-1);
@@ -714,7 +629,6 @@ main.empty h1 {
   padding-block-end: var(--space-2);
 }
 
-/* The abilities as a list ruled like the rows, no rule after the last. */
 .monster-stats__traits {
   list-style: none;
   margin: 0;
@@ -730,8 +644,6 @@ main.empty h1 {
   border-block-end: none;
 }
 
-/* The name and its usage badge on one line, the badge wrapping under the name
-   when the panel is narrow. */
 .monster-stats__title {
   display: flex;
   align-items: center;
@@ -744,22 +656,19 @@ main.empty h1 {
   margin: 0;
 }
 
-/* An ability's options, indented inside it, with no marker and no rules: the
-   bold name marks each one as part of the ability above. */
 .monster-stats__options {
   list-style: none;
   margin: 0;
   padding-inline-start: var(--space-4);
 }
 
+/* Footer and dialogs */
+
 .attribution {
   text-align: center;
 }
 
-/* Loom spaces a dialog's parts with gap and sets no margins, but its title is
-   an h2 and its description a p, and the reset here zeroes body's margin
-   alone, so the browser's own heading and paragraph margins stacked on top of
-   the gap. */
+/* The reset zeroes only body's margin, so the UA's h2 and p margins stack on Loom's dialog gap. */
 .dialog-title,
 .dialog-description {
   margin: 0;
