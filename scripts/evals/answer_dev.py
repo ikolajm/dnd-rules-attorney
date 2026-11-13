@@ -231,7 +231,6 @@ def main() -> None:
                 ranking = lookup_order(named, ranking, K)
                 looked_up = {"links": named}
             if handed is not None:
-                # The ten the loop's record handed over, in place of level 1's.
                 ranking = handed[item["id"]]
             top = ranking[:K]
             prompt = build_prompt(item["question"], [by_path[path] for path in top])
@@ -241,8 +240,6 @@ def main() -> None:
             if hosted:
                 message = claude_answer(prompt, model=model)
                 reply = reply_text(message)
-                # The stop reason shows a refusal or a hit cap, and the
-                # tokens give the run's measured cost.
                 usage = {
                     "stop": message.stop_reason,
                     "input_tokens": message.usage.input_tokens,

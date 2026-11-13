@@ -17,7 +17,7 @@ NUM_CTX = 16384
 NUM_PREDICT = 4096
 # No penalty is set, so each model samples with the penalties it ships,
 # as it runs with its own template. Pinned off, qwen3.5 lost its presence
-# penalty of 1.5 and looped to the cap on 22 dev items across the ladder.
+# penalty and looped to the cap.
 OPTIONS: dict[str, Any] = {
     "temperature": TEMPERATURE,
     "seed": SEED,

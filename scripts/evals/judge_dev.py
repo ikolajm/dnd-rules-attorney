@@ -50,7 +50,6 @@ def main() -> None:
     agreed = 0
     # Answers that failed their own schema, so no call was made.
     unanswered = 0
-    # Judge replies that did not parse.
     judge_failures = 0
     # The flag as two rates, never one count of flags right: settled items
     # outnumber the rest, so a model that never flags scores well on a count.
@@ -87,7 +86,6 @@ def main() -> None:
             if needs_judge(status):
                 judged += 1
                 if ruling is None:
-                    # Nothing to judge, and it does not agree.
                     unanswered += 1
                     agrees = False
                 else:

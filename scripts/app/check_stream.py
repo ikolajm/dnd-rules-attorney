@@ -38,7 +38,6 @@ def events(lines: Iterator[str]) -> Iterator[tuple[str, Any]]:
         elif line.startswith("data: "):
             data.append(line.removeprefix("data: "))
         elif not line and data:
-            # A blank line ends the event.
             yield name, json.loads("\n".join(data))
             name, data = "", []
 
@@ -55,9 +54,7 @@ def stream(url: str, question: str) -> dict[str, Any]:
         lines = (raw.decode("utf-8").rstrip("\r\n") for raw in response)
         for name, data in events(lines):
             served[name] = data
-            # Printed as each lands, so a run stopped by hand shows how far
-            # it got, and the next run's gate shows whether the stop
-            # reached Ollama.
+            # Flushed, so a run stopped by hand shows how far it got.
             print(f"  {name} at {time.perf_counter() - start:.2f}s", flush=True)
     return served
 
