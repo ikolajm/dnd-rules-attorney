@@ -1,0 +1,15 @@
+{
+  "name": "lazy-dunmas-capture",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "spider": "node run.ts",
+    "check": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "playwright": "^1.65.0",
+    "typescript": "~6.0.2"
+  }
+}
