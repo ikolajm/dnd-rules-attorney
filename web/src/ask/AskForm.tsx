@@ -48,8 +48,8 @@ export function AskForm({ draft, running, onDraft, onSubmit, onStop }: Props) {
         />
       </FormField>
       {running ? (
-        <Button type="button" iconOnly color="neutral" aria-label="Stop" onClick={onStop}>
-          <Square />
+        <Button type="button" iconOnly aria-label="Stop" onClick={onStop}>
+          <Square fill="currentColor" />
         </Button>
       ) : (
         <Button type="submit" iconOnly aria-label="Ask" disabled={question === ''}>

@@ -41,6 +41,7 @@ export default function App() {
 
   const running = run?.phase === 'running'
   const entries = run?.entries ?? []
+  const openPath = openEntry?.path ?? null
   const citedPaths = new Set(
     (run?.ruling?.cites ?? []).flatMap((cite) => {
       const c = resolveCite(cite, entries)
@@ -64,6 +65,26 @@ export default function App() {
     if (view === 'ask' && run && followRef.current) window.scrollTo({ top: document.documentElement.scrollHeight })
   }, [run, view])
 
+  // The sticky bars' heights, as the page's scroll padding reads them, so a
+  // control scrolled into view clears both bars.
+  const viewsRef = useRef<HTMLDivElement>(null)
+  const askRef = useRef<HTMLDivElement>(null)
+  useLayoutEffect(() => {
+    const bars: [HTMLElement | null, string][] = [
+      [viewsRef.current, '--views-height'],
+      [askRef.current, '--ask-height'],
+    ]
+    const root = document.documentElement.style
+    const observer = new ResizeObserver((records) => {
+      for (const record of records) {
+        const name = bars.find(([bar]) => bar === record.target)?.[1]
+        if (name) root.setProperty(name, `${record.borderBoxSize[0].blockSize}px`)
+      }
+    })
+    for (const [bar] of bars) if (bar) observer.observe(bar)
+    return () => observer.disconnect()
+  }, [])
+
   // A layout effect, so it runs before the follow above, which then wins.
   useLayoutEffect(() => {
     window.scrollTo(0, scrollRef.current[view])
@@ -75,12 +96,10 @@ export default function App() {
     followRef.current = true
     setTurn((t) => t + 1)
     setOpenEntry(null)
-    setDraft('')
     setRun(startRun(question))
     try {
       for await (const e of live(question, controller.signal)) {
         setRun((r) => r && applyEvent(r, e))
-        if (e.event === 'gate' && !e.data.about_rules) setDraft(question)
       }
     } catch (err) {
       if (!controller.signal.aborted) throw err
@@ -118,7 +137,7 @@ export default function App() {
     // asChild: the tabs take the app's element, so its grid rows stay tabs, view, input bar.
     <Tabs asChild value={view} onValueChange={(next) => show(next as View)}>
       <div className="app" data-idle={run === null || undefined} data-view={view}>
-        <div className="views">
+        <div ref={viewsRef} className="views">
           <div className="column">
             <TabsList aria-label="Views">
               {VIEWS.map(([id, label]) => (
@@ -165,13 +184,13 @@ export default function App() {
 
               {run.entries && (
                 <Phase id="phase-entries" label={PHASE_LABEL.entries}>
-                  <ViewAll entries={run.entries} cites={run.ruling?.cites ?? null} onOpen={open} />
+                  <ViewAll entries={run.entries} cites={run.ruling?.cites ?? null} openPath={openPath} onOpen={open} />
                 </Phase>
               )}
 
               {run.ruling ? (
                 <Phase id="phase-verdict" label={PHASE_LABEL.verdict}>
-                  <Verdict ruling={run.ruling} entries={entries} onOpen={open} />
+                  <Verdict ruling={run.ruling} entries={entries} openPath={openPath} onOpen={open} />
                 </Phase>
               ) : (
                 !running && (
@@ -193,10 +212,10 @@ export default function App() {
 
         {/* Mounted from the start, so its tab's aria-controls names a real element. */}
         <TabsContent value="encyclopedia" keepMounted tabIndex={-1} className="view">
-          {visited && <Encyclopedia onOpen={open} />}
+          {visited && <Encyclopedia openPath={openPath} onOpen={open} />}
         </TabsContent>
 
-        <div className="ask">
+        <div ref={askRef} className="ask">
           {run !== null && view === 'ask' && <div className="column">{form}</div>}
           <footer className="attribution column text-body-sm text-on-surface-variant">
             <Attribution />

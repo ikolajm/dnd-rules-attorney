@@ -31,7 +31,13 @@ function display(value: string): string {
 }
 
 // onOpen is App's open, the one the ask screen's cites call.
-export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }) {
+export function Encyclopedia({
+  openPath,
+  onOpen,
+}: {
+  openPath: string | null
+  onOpen: (entry: PanelEntry) => void
+}) {
   const [kind, setKind] = useState<Kind>(KINDS[0])
   // Keyed by root, so a slow file cannot land after a later pick.
   const { state: loaded, retry } = useLoad(kind.root, kind.rows)
@@ -219,7 +225,12 @@ export function Encyclopedia({ onOpen }: { onOpen: (entry: PanelEntry) => void }
               {sorted.map((row) => (
                 <tr key={row.path}>
                   <th scope="row">
-                    <button type="button" className="link link-prose" onClick={() => openRow(row)}>
+                    <button
+                      type="button"
+                      className="link link-prose"
+                      aria-expanded={openPath === row.path}
+                      onClick={() => openRow(row)}
+                    >
                       {row.name}
                     </button>
                   </th>

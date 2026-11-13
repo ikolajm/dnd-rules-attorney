@@ -27,7 +27,7 @@ export function RunStatus({ run, onRetry }: Props) {
             Not a rules question
           </p>
           <p className="text-body-lg text-on-surface-variant">
-            This rules only on questions the SRD 5.1 answers. Your question is back in the box to edit.
+            This rules only on questions the SRD 5.1 answers. Your question is still in the box to edit.
           </p>
         </>
       )}

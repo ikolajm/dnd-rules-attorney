@@ -6,13 +6,14 @@ type Props = {
   entries: Entry[]
   // Null until the ruling lands, when the cited entries can be marked.
   cites: string[] | null
+  openPath: string | null
   onOpen: (entry: Entry) => void
 }
 
 // The ten entries retrieval handed over, in merged order, behind one line. Open,
 // a numbered list of links, spaced as the sub-questions are, each cited one
 // marked once the ruling lands.
-export function ViewAll({ entries, cites, onOpen }: Props) {
+export function ViewAll({ entries, cites, openPath, onOpen }: Props) {
   const cited = new Set(
     (cites ?? []).flatMap((cite) => {
       const c = resolveCite(cite, entries)
@@ -30,7 +31,12 @@ export function ViewAll({ entries, cites, onOpen }: Props) {
       <ol className="view-all__list text-body-lg">
         {entries.map((entry) => (
           <li key={entry.path}>
-            <button type="button" className="link link-prose" onClick={() => onOpen(entry)}>
+            <button
+              type="button"
+              className="link link-prose"
+              aria-expanded={openPath === entry.path}
+              onClick={() => onOpen(entry)}
+            >
               {labels.get(entry.path)}
             </button>
             {cited.has(entry.path) && <Quote className="view-all__cited" role="img" aria-label="Cited" />}
