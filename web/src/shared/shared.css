@@ -1,0 +1,120 @@
+/* What both screens use: status lines and the source panel. */
+
+/* Status */
+
+.status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--group-gap);
+}
+
+/* Out of the flow so an empty region takes no gap; display: none would end the live region. */
+.status:empty {
+  position: absolute;
+}
+
+.status p {
+  margin: 0;
+}
+
+/* Outranks the panel's text rule, which gives every p a bottom margin. */
+.source-panel__text .status p {
+  margin: 0;
+}
+
+.status--compact {
+  gap: var(--group-compact-gap);
+}
+
+.status__line {
+  display: flex;
+  align-items: center;
+  gap: var(--component-gap);
+}
+
+.status__line[class*='tone-'] {
+  color: var(--tone-text);
+}
+
+.status__line svg {
+  width: var(--icon-2);
+  height: var(--icon-2);
+  flex: none;
+}
+
+.status__line--compact svg {
+  width: var(--icon-1);
+  height: var(--icon-1);
+}
+
+/* Source panel */
+
+.source-panel {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: min(28rem, 100vw);
+  overflow-y: auto;
+  padding: var(--section-y-padding) var(--section-x-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  z-index: 2;
+}
+
+/* Undoes the UA's dialog centring and max sizes. */
+.source-panel--modal {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  border: none;
+  color: inherit;
+}
+
+.source-panel--modal:not([open]) {
+  display: none;
+}
+
+.source-panel--modal::backdrop {
+  background: var(--scrim);
+}
+
+.source-panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--group-gap);
+}
+
+.source-panel__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--group-compact-gap);
+}
+
+.source-panel__heading p,
+.source-panel__heading h2 {
+  margin: 0;
+}
+
+/* No box of its own, so the tab list and the text stay the panel's flex children. */
+.source-panel__tabs {
+  display: contents;
+}
+
+.source-panel__text :is(h3, p, ul, ol) {
+  margin-block: 0 var(--space-3);
+}
+
+.source-panel__text :is(ul, ol) {
+  padding-inline-start: 1.25em;
+}
+
+.source-panel__table {
+  overflow-x: auto;
+  margin-block-end: var(--space-3);
+}

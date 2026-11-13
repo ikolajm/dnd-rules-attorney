@@ -11,7 +11,11 @@ import { Verdict } from './ask/Verdict.tsx'
 import { ViewAll } from './ask/ViewAll.tsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/loom/tabs.tsx'
 import { Encyclopedia } from './encyclopedia/Encyclopedia.tsx'
+// app.css first: main.encyclopedia and main.empty tie main.column and win by order.
 import './app.css'
+import './ask/ask.css'
+import './encyclopedia/encyclopedia.css'
+import './shared/shared.css'
 
 type View = 'ask' | 'encyclopedia'
 
