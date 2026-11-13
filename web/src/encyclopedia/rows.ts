@@ -35,7 +35,7 @@ export type SpellRecord = Base & {
   duration: string
   // The description's paragraphs.
   desc: string[]
-  // Carried by the spells that scale with a higher slot, 90 of them.
+  // Carried by the spells that scale with a higher slot.
   higher_level?: string[]
 }
 
@@ -62,7 +62,7 @@ export type Usage =
 // monster.test.ts names each shape.
 export type ArmorClass =
   | { type: 'natural' | 'dex'; value: number }
-  // 34 name their armor; three describe it, the frost giant's "patchwork armor".
+  // Most name their armor; a few describe it, as the frost giant's "patchwork armor".
   | { type: 'armor'; value: number; armor?: Ref[]; desc?: string }
   | { type: 'spell'; value: number; spell: Ref }
   | { type: 'condition'; value: number; condition: Ref }
@@ -77,7 +77,6 @@ export type MonsterRecord = Base & {
   challenge_rating: number
   damage_immunities: string[]
   condition_immunities: Ref[]
-  // Carried by 76 monsters.
   subtype?: string
   alignment: string
   armor_class: ArmorClass[]
@@ -198,8 +197,7 @@ export function monsterRow(record: MonsterRecord): Row {
 export function equipmentRow(record: EquipmentRecord): Row | null {
   const kind = record.equipment_category.index
   if (kind !== 'weapon' && kind !== 'armor') return null
-  // A weapon fills category_range and armor armor_category; the type allows
-  // null for the gear. A record missing its own is refused, not written blank.
+  // The type allows null for the gear; a weapon or armor missing its own is refused.
   const named = kind === 'weapon' ? record.category_range : record.armor_category
   if (!named) throw new Error(`${record.index} has no ${kind} category`)
   return namedRow('equipment', record, {
