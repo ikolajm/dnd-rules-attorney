@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "spider": "node run.ts",
+    "spider": "node spider.ts",
+    "monsters": "node monsters.ts",
+    "spells": "node spells.ts",
     "check": "tsc"
   },
   "devDependencies": {
