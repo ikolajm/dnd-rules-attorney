@@ -132,14 +132,16 @@ export default function App() {
     // own box.
     <Tabs asChild value={view} onValueChange={(next) => show(next as View)}>
       <div className="app" data-idle={run === null || undefined} data-view={view}>
-        <div className="views column">
-          <TabsList aria-label="Views">
-            {VIEWS.map(([id, label]) => (
-              <TabsTrigger key={id} value={id}>
-                {label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        <div className="views">
+          <div className="column">
+            <TabsList aria-label="Views">
+              {VIEWS.map(([id, label]) => (
+                <TabsTrigger key={id} value={id}>
+                  {label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
         </div>
 
         {/* Both views stay mounted and the other is hidden, so a switch keeps

@@ -50,15 +50,18 @@ main.thread {
   display: none;
 }
 
-/* The view tabs' row, spaced as the input bar spaces its controls. It holds the
- * content width on both views, so a switch does not move the tabs; the ask
- * view's reading column stays narrower beneath it. */
 .views {
-  display: flex;
+  position: sticky;
+  top: 0;
+  /* Over a phase mid-entrance, whose transform paints it above the row; under the source panel. */
+  z-index: 1;
+  background: var(--surface);
+  border-bottom: var(--bw-1) solid var(--outline-subtle);
   padding-block: var(--group-gap);
 }
 
-.views.column {
+.views > .column {
+  display: flex;
   max-width: var(--content-max-width);
 }
 
