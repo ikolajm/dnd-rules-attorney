@@ -45,8 +45,8 @@ test('stat lines not in the corpus form are left alone', () => {
   assert.equal(parseSpell(FIRE_BOLT.replace('Range: 120 feet', 'Reach: 120 feet')), null)
 })
 
-// The corpus has the four reaction spells' casting times completed from the
-// supplement's inserts, and so does the record's Spell, which takes them too.
+// The corpus has the reaction spells' casting times completed from the
+// supplement's inserts, and so does the record's Spell.
 test("every spell's record builds the Spell its corpus text parses to", () => {
   for (const record of SPELLS) {
     const path = `spells > ${record.index}`

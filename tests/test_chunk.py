@@ -70,15 +70,8 @@ def test_prepended_chunk_never_carries_its_own_path() -> None:
 
 def test_records_match_the_source_files() -> None:
     # Counted from the files, so the test follows the data rather than a
-    # number typed in. A rule section is one record of many entries; a
-    # condition, spell, weapon property, weapon or armor is one record of
-    # one, as is gear with a rule and each spellcasting focus; other gear
-    # makes no entry. Class features and racial traits are one record per
-    # distinct text, however many repeat it; a race, class or feat is one
-    # record of one, as is a magic item, and a variant makes none, its name
-    # written into its parent. The supplement's new entries group by their
-    # first step, as a rule section's do; its other passages join entries
-    # already counted.
+    # number typed in. The supplement's new entries group by their first
+    # step, as a rule section's do.
     expected = 0
     for name in SOURCES:
         rows: list[dict[str, Any]] = json.loads(

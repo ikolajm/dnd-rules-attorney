@@ -54,7 +54,7 @@ test('every chosen field must pass', () => {
   )
 })
 
-// A copy, since sort sorts in place. Each list below starts out of order.
+// Each list below starts out of order.
 const sortedAs = (field: string, values: string[]) => [...values].sort((a, b) => compareValues(field, a, b))
 
 test('a challenge sorts by its rating, fractions first', () => {
