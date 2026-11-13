@@ -9,7 +9,6 @@ import type { Section } from './section.ts'
 
 export function usePullouts(path: string, sections: Section[]): { state: Load<Pullouts>; retry: () => void } {
   const lists = sections.filter((s) => s.kind === 'list' && PULLOUT_HEADINGS.has(s.heading))
-  // Keyed by path, or null for an entry with no list that opens in place,
-  // which loads nothing. An entry's sections follow from its path.
+  // Keyed by path, since an entry's sections follow from it; null loads nothing.
   return useLoad(lists.length > 0 ? path : null, async () => pullouts(path, lists, await corpus()))
 }

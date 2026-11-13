@@ -2,8 +2,7 @@ import { entryTitle } from './entry.ts'
 import type { Entry } from './types.ts'
 
 // The model's commonest slip is copying the `## ` the prompt puts before each
-// path. Stripped, the cite names one of the ten entries or none at all; on the
-// level 3 dev run no cite named a corpus section outside the ten.
+// path. Stripped, the cite names one of the ten entries or none at all.
 const MARKER = /^##\s*/
 
 export type ResolvedCite =
@@ -17,8 +16,7 @@ export function resolveCite(cite: string, entries: Entry[]): ResolvedCite {
 }
 
 // A path's first step and its last, as slugs: "racial-traits > dwarf >
-// stonecunning" has the root "racial-traits" and the leaf "stonecunning". One
-// place cuts a path, rather than each reader slicing at ' > ' itself.
+// stonecunning" has the root "racial-traits" and the leaf "stonecunning".
 export function pathRoot(path: string): string {
   return path.split(' > ')[0]
 }

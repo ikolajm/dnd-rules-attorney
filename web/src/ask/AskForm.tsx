@@ -26,9 +26,6 @@ export function AskForm({ draft, running, onDraft, onSubmit, onStop }: Props) {
         submit()
       }}
     >
-      {/* A visible label, styled as the encyclopedia's Kind: the placeholder
-          is an example, gone on the first keystroke, so it cannot be the
-          name. */}
       <FormField className="ask__field">
         <label className="label" data-size="sm" htmlFor="question">
           Rules question
@@ -42,7 +39,6 @@ export function AskForm({ draft, running, onDraft, onSubmit, onStop }: Props) {
           value={draft}
           onChange={(e) => onDraft(e.target.value)}
           onKeyDown={(e) => {
-            // Enter asks and Shift+Enter breaks the line, as in the agent chats.
             // An IME composing a character also sends Enter, which must not submit.
             if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
               e.preventDefault()

@@ -21,8 +21,7 @@ export async function* live(question: string, signal: AbortSignal): AsyncGenerat
       signal,
     })
   } catch (err) {
-    // A stop aborts the fetch, and the screen handles that; anything else is a
-    // server that could not be reached.
+    // A stop is the screen's to handle; anything else is a server that could not be reached.
     if (signal.aborted) throw err
     yield SERVER_DOWN
     return
@@ -32,8 +31,7 @@ export async function* live(question: string, signal: AbortSignal): AsyncGenerat
     return
   }
 
-  // Read with getReader rather than `for await`, which Safari does not support
-  // on a ReadableStream.
+  // getReader, not `for await`: Safari cannot iterate a ReadableStream.
   const reader = response.body.pipeThrough(new TextDecoderStream()).getReader()
   const push = parser()
   let ended = false
@@ -42,8 +40,7 @@ export async function* live(question: string, signal: AbortSignal): AsyncGenerat
       const { done, value } = await reader.read()
       if (done) break
       for (const raw of push(value)) {
-        // JSON arrives untyped. The cast is the boundary; the server writes
-        // these shapes, mirrored in types.ts.
+        // The cast is the boundary: the server writes these shapes, mirrored in types.ts.
         const e = { event: raw.event, data: JSON.parse(raw.data) } as StreamEvent
         yield e
         if (ends(e)) ended = true
@@ -54,7 +51,6 @@ export async function* live(question: string, signal: AbortSignal): AsyncGenerat
     yield SERVER_DOWN
     return
   }
-  // A stream that closes before the run ends would leave the screen at a stage
-  // with nothing more to come.
+  // A stream that closes before the run ends would otherwise leave the screen waiting.
   if (!ended) yield SERVER_DOWN
 }

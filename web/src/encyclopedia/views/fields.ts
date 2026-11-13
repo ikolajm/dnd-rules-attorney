@@ -42,8 +42,7 @@ export function corpusFields(path: string, body: string): Fields | null {
   const lines: Line[] = []
   const lists: Section[] = []
   for (const [label, value] of fields) {
-    // The corpus writes "none" for an empty list, a human's traits; no items,
-    // so the section drops.
+    // The corpus writes "none" for an empty list, as a human's traits.
     if (LISTS.has(label)) lists.push({ kind: 'list', heading: label, items: value === 'none' ? [] : value.split(', ') })
     else lines.push({ label, value })
   }

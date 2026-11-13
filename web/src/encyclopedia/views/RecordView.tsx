@@ -29,8 +29,6 @@ function ViewBody({ view }: { view: View }): JSX.Element {
 }
 
 export function RecordView({ path }: { path: string }) {
-  // A record the path names but the file lacks fails too, the error saying
-  // which path.
   const { state, retry } = useLoad(path, async () => {
     const view = await loadView(path)
     if (!view) throw new Error(`no record for ${path}`)

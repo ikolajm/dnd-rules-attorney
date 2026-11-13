@@ -64,10 +64,8 @@ function usageText(usage: Usage): string {
 }
 
 // The text up to its first named line after the first, then an option per
-// named line. 25 abilities have options: the metallic dragons' Breath Weapons,
-// the androsphinx's Roar and the vampires' Vampire Weaknesses. A line with no
-// name joins the option above it rather than being lost; in the data only the
-// roars' blank lines do.
+// named line, as a metallic dragon's Breath Weapons. A line with no name joins
+// the option above it rather than being lost.
 function trait(ability: Ability): Trait {
   const name = ability.name
   const usage = ability.usage ? usageText(ability.usage) : undefined
@@ -113,8 +111,7 @@ function proficiencies(record: MonsterRecord, prefix: string): Line[] {
 }
 
 export function monsterFromRecord(record: MonsterRecord): Monster {
-  // A row per mode, in the record's own order, which is the corpus's too.
-  // `hover` is not a mode but a note on fly.
+  // `hover` is a note on fly, not a mode.
   const speeds = Object.entries(record.speed)
     .filter(([mode]) => mode !== 'hover')
     .map(([mode, value]) => ({
@@ -125,7 +122,6 @@ export function monsterFromRecord(record: MonsterRecord): Monster {
     label: sense === 'passive_perception' ? 'Passive Perception' : capitalized(sense),
     value: String(value),
   }))
-  // Annotated, or TypeScript infers an array of mixed values rather than pairs.
   const groups: [string, Ability[] | undefined][] = [
     ['Actions', record.actions],
     ['Reactions', record.reactions],
@@ -171,9 +167,6 @@ export function monsterFromRecord(record: MonsterRecord): Monster {
     },
     { kind: 'rows', heading: 'Saving Throws', lines: proficiencies(record, 'Saving Throw: ') },
     { kind: 'rows', heading: 'Skills', lines: proficiencies(record, 'Skill: ') },
-    // An entry a bullet, in the record's order. The callback's return is
-    // annotated: a literal returned from a callback is typed before it meets
-    // Section[], so `kind` would widen to string without it.
     ...LEVELS.map(([heading, key]): Section => ({ kind: 'list', heading, items: record[key].map(capitalized) })),
     {
       kind: 'list',
@@ -184,12 +177,11 @@ export function monsterFromRecord(record: MonsterRecord): Monster {
   ]
 
   return {
-    // An empty section is dropped, as a printed block drops an empty line.
     sections: sections.filter((s) => size(s) > 0),
     // `||`: `??` replaces only null and undefined, and '' is neither.
     languages: record.languages || '—',
     traits: (record.special_abilities ?? []).map(trait),
-    // An empty group drops out: one monster's actions are an empty list.
+    // Length, not presence: a monster's actions can be an empty list.
     groups: groups.flatMap(([heading, list]) => (list?.length ? [{ heading, traits: list.map(trait) }] : [])),
   }
 }

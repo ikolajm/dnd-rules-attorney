@@ -27,8 +27,6 @@ function verdictText(answer: Answer): string {
 export function Verdict({ ruling, entries, onOpen }: Props) {
   const cites = ruling.cites.map((cite) => resolveCite(cite, entries))
   const labels = entryLabels(entries)
-  // A word or a number reads at display size; a sentence would wrap into a
-  // wall at that size, so it steps down to a title.
   const short = ruling.answer.kind !== 'what'
 
   return (
@@ -39,8 +37,6 @@ export function Verdict({ ruling, entries, onOpen }: Props) {
 
       {ruling.ambiguous && (
         <p className="verdict__ambiguous">
-          {/* Soft primary, not warning: the warning ramp is the secondary gold
-              the phase labels use, so a warning badge would read as a label. */}
           <Badge color="primary" intensity="soft" leadingIcon={<Scale />}>
             Ambiguous
           </Badge>
@@ -50,7 +46,6 @@ export function Verdict({ ruling, entries, onOpen }: Props) {
         </p>
       )}
 
-      {/* The answer stands alone; the rest sits under sub-headings of its own. */}
       <div className="verdict__part">
         <h3 className="subhead text-label-md">Explanation</h3>
         <Explanation explanation={ruling.explanation} entries={entries} onOpen={onOpen} />
@@ -58,8 +53,6 @@ export function Verdict({ ruling, entries, onOpen }: Props) {
 
       <div className="verdict__part">
         <h3 className="subhead text-label-md">Citations</h3>
-        {/* A ruling grounded in no named text is the failure this screen is
-            there to show, so the section stays and says so. */}
         {cites.length === 0 ? (
           <p className="verdict__no-cites text-body-lg text-on-surface-variant">The ruling cites no entry.</p>
         ) : (

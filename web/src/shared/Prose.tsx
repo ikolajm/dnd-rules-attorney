@@ -4,9 +4,8 @@ import Markdown, { type Components } from 'react-markdown'
 import remarkBreaks from 'remark-breaks'
 import remarkGfm from 'remark-gfm'
 
-// Tables are GFM, not CommonMark. Breaks keeps each single line break, which
-// two rule sections write as one; the spells' stat lines, which wrote most of
-// them, are laid out by SpellStats instead.
+// Tables are GFM, not CommonMark. Breaks keeps each single line break the
+// corpus writes.
 const PLUGINS = [remarkGfm, remarkBreaks]
 
 // The corpus's markdown onto Loom. Headings inside an entry sit under the

@@ -8,9 +8,7 @@ import { useLoad, type Load } from './use-load.ts'
 
 export function useEntryText(entry: PanelEntry): { text: Load<string>; retry: () => void } {
   const given = 'text' in entry ? entry.text : null
-  // A cite's text needs no load, so its key is null. A path the corpus lacks
-  // fails, the error saying which; every row's path is a corpus path, which
-  // rows.test.ts proves.
+  // A null key loads nothing: a cite's text needs no load.
   const { state, retry } = useLoad(given === null ? entry.path : null, async () => {
     const text = (await corpus()).get(entry.path)
     if (text === undefined) throw new Error(`no corpus entry for ${entry.path}`)

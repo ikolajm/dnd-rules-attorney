@@ -29,7 +29,6 @@ export function parser(): (chunk: string) => RawEvent[] {
       } else if (line.startsWith('data: ')) {
         data.push(line.slice('data: '.length))
       } else if (line === '') {
-        // A blank line ends the event.
         if (data.length > 0) done.push({ event, data: data.join('\n') })
         event = ''
         data = []

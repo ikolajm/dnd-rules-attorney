@@ -33,8 +33,6 @@ export function ViewAll({ entries, cites, onOpen }: Props) {
             <button type="button" className="link link-prose" onClick={() => onOpen(entry)}>
               {labels.get(entry.path)}
             </button>
-            {/* An icon, named for a screen reader, beside each entry the ruling
-                cites: what retrieval found set beside what the ruling used. */}
             {cited.has(entry.path) && <Quote className="view-all__cited" role="img" aria-label="Cited" />}
           </li>
         ))}

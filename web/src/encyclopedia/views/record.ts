@@ -20,12 +20,10 @@ export type View =
 export async function loadView(path: string): Promise<View | null> {
   const root = rootOf(path)
   if (root === null) return null
-  // "monsters > aboleth" to "aboleth".
   const index = pathLeaf(path)
   switch (root) {
     case 'spells': {
-      // Both files at once, rather than one after the other: a spell's casting
-      // time may take the supplement's insert.
+      // The supplement too: a reaction spell's casting time takes its insert.
       const [records, passages] = await Promise.all([spellRecords(), supplement()])
       const record = records.find((r) => r.index === index)
       return record ? { kind: 'spell', spell: spellFromRecord(record, passages) } : null
@@ -35,7 +33,6 @@ export async function loadView(path: string): Promise<View | null> {
       return record ? { kind: 'monster', monster: monsterFromRecord(record) } : null
     }
     case 'magic-items': {
-      // Every record by index, so the item's variants are found by theirs.
       const byIndex = new Map((await magicItemRecords()).map((r) => [r.index, r] as const))
       const record = byIndex.get(index)
       return record ? { kind: 'magic-item', item: magicItemFromRecord(record, byIndex) } : null
