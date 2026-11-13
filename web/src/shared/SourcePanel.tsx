@@ -102,28 +102,17 @@ function PanelBody({
   onClose,
   closeRef,
 }: Props & { entry: PanelEntry; closeRef: React.RefObject<HTMLButtonElement | null> }) {
-  // A row's name from the first frame, so the heading does not change when its
-  // text arrives.
   const title = 'text' in entry ? entryLabel(entry) : entry.title
   const trail = pathSegments(entry.path).slice(0, -1)
   const { text, retry } = useEntryText(entry)
   const body = text.status === 'ready' ? entryBody(text.value) : null
-  // A spell, a monster or a magic item opens its view, built from its record,
-  // which needs no source text; a weapon, a piece of armor or a race its fields
-  // as rows, read from the text once it is there; anything else renders as
-  // markdown.
   const hasRecordView = hasView(entry.path)
   const fields = hasRecordView || body === null ? null : corpusFields(entry.path, body)
-  // Only a view that differs from the source text gets the tabs; a condition
-  // already shows its source text. The choice lives here, which the side panel
-  // keeps mounted from entry to entry, so it holds until the panel closes.
   const formatted = hasRecordView || fields !== null
-  // What a race's traits and subraces and a weapon's properties open to in
-  // place, once the corpus is loaded to find them in.
   const pulled = usePullouts(entry.path, fields?.sections ?? [])
-  // An open row's own region is live already, so its state's is not.
   const expand: Expand = (heading, item) => {
     if (!PULLOUT_HEADINGS.has(heading)) return undefined
+    // live={false}: an open row's region is live already.
     if (pulled.state.status !== 'ready') {
       return (
         <LoadState
@@ -137,8 +126,7 @@ function PanelBody({
     }
     const entries = pulled.state.value.get(heading)?.get(item)
     if (!entries) return undefined
-    // A subrace opens to its traits, each under its own name; a trait or a
-    // property to its own text, its name already the row's.
+    // A subrace names each trait it opens to, even a lone one; a trait's name is already the row's.
     return (
       <Prose>
         {entries.length === 1 && heading !== 'Subraces'
@@ -147,10 +135,9 @@ function PanelBody({
       </Prose>
     )
   }
+  // Holds from entry to entry: the side panel keeps this body mounted until it closes.
   const [source, setSource] = useState(false)
 
-  // The source text's loading or failure. Empty for a cite, whose text is
-  // there from the start.
   const textState = (
     <LoadState status={text.status} message="The source text could not be loaded." onRetry={retry} compact />
   )
@@ -174,28 +161,19 @@ function PanelBody({
         </Button>
       </header>
       {formatted ? (
-        // Which text the panel shows for an entry with a view of its own: the
-        // view, or the source text, the corpus entry the model is handed.
         <Tabs
           value={source ? 'source' : 'formatted'}
           onValueChange={(next) => setSource(next === 'source')}
           className="source-panel__tabs"
         >
-          {/* The panel is surface-1, the track's own default, so the track
-              takes the step below it. */}
+          {/* The panel is already surface-1, the track's default, so the track steps below it. */}
           <TabsList size="sm" aria-label="Text shown" className="surface">
             <TabsTrigger value="formatted">Formatted</TabsTrigger>
             <TabsTrigger value="source">Source text</TabsTrigger>
           </TabsList>
           <div className="source-panel__text text-body-md">
-            {/* Both stay mounted and the other is hidden, so switching back
-                does not load the record again; `hidden` keeps it out of the
-                page's find and the accessibility tree too. The key mounts a
-                fresh RecordView for each path, so the last record does not
-                show while the next one loads. A record's view does not wait
-                for the source text; only its Source text side does. Each panel
-                keeps its Tab stop, since a spell's text may hold nothing
-                focusable for the keyboard to reach it by. */}
+            {/* The key remounts the view per path, so the last record never shows while the
+                next loads. The panels keep their Tab stop: a spell's text may hold nothing focusable. */}
             <TabsContent value="formatted" keepMounted>
               {hasRecordView ? <RecordView key={entry.path} path={entry.path} /> : fields && <FieldsView key={entry.path} fields={fields} expand={expand} />}
             </TabsContent>
