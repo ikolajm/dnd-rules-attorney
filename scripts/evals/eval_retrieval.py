@@ -113,7 +113,6 @@ def main() -> None:
     out = RUNS / f"retrieval-{stamp}-{split}.jsonl"
 
     with out.open("w", encoding="utf-8") as file:
-        # Written once, outside the loop: BM25 is the same for every embedder.
         report("bm25", keyword, chosen)
         write_records(
             file, chosen, keyword, embedder=None, method="bm25", config=config

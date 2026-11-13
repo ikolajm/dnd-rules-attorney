@@ -192,7 +192,6 @@ def summarize(records: list[dict[str, Any]], chosen: list[dict[str, Any]]) -> No
     matcher = [lookup_order(r["links"], r["question"], K) for r in records]
     report("matcher", matcher, chosen, KS)
 
-    # The lookup tool against the matcher it wraps, each path counted once.
     returned = [
         {
             path
@@ -241,9 +240,8 @@ def summarize(records: list[dict[str, Any]], chosen: list[dict[str, Any]]) -> No
     print(f"invalid calls: {invalid}")
     print(f"lookups told {NO_RECORD!r}: {unresolved}")
 
-    # The conversation only grows, so input tokens that fall from one turn to
-    # the next mean the count leaves out a prompt prefix reused from cache.
-    # Each turn is paired with the next, so the lists differ by one on purpose.
+    # Input tokens that fall between turns mean a cached prefix went uncounted.
+    # strict=False: each turn pairs with the next, so the lists differ by one.
     fell = sum(
         any(
             b["input_tokens"] < a["input_tokens"]
