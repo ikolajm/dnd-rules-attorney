@@ -1,12 +1,12 @@
 // What every capture shares: the browser, the pacing, the keyboard moves and
-// the timeline each take writes beside its script, as <name>.timeline.json.
+// the timeline each take writes to takes/<name>.timeline.json, beside OBS's recordings.
 import { writeFile } from 'node:fs/promises'
 import { chromium, type Locator, type Page } from 'playwright'
 
 // Setup
 
 const SCREEN = 'http://localhost:5173'
-export const VIEWPORT = { width: 1600, height: 900 }
+export const VIEWPORT = { width: 1024, height: 768 }
 const COLOR_SCHEME: 'light' | 'dark' = 'dark'
 
 // Pacing, in milliseconds
@@ -116,21 +116,24 @@ export async function capture(name: string, take: (page: Page, mark: Mark) => Pr
   let start = 0
   const mark: Mark = (step) => steps.push({ name: step, ms: Math.round(performance.now() - start) })
 
-  const browser = await chromium.launch({ headless: false })
+  // An app window: no tab strip or address bar, only the title bar OBS's Client Area drops.
+  // '' gives the persistent context a throwaway profile.
+  const context = await chromium.launchPersistentContext('', {
+    headless: false,
+    args: [`--app=${SCREEN}`],
+    viewport: VIEWPORT,
+    colorScheme: COLOR_SCHEME,
+    reducedMotion: 'no-preference',
+  })
   try {
-    const context = await browser.newContext({
-      viewport: VIEWPORT,
-      colorScheme: COLOR_SCHEME,
-      reducedMotion: 'no-preference',
-    })
-    const page = await context.newPage()
+    const page = context.pages()[0] ?? (await context.newPage())
     await page.goto(SCREEN)
     start = performance.now()
     mark('load')
     await take(page, mark)
     mark('end')
 
-    const timeline = new URL(`./${name}.timeline.json`, import.meta.url)
+    const timeline = new URL(`./takes/${name}.timeline.json`, import.meta.url)
     await writeFile(timeline, JSON.stringify({ capture: name, viewport: VIEWPORT, steps }, null, 2) + '\n')
     console.log(`Timeline written: ${steps.length} steps over ${steps.at(-1)?.ms} ms.`)
   } catch (error) {
@@ -138,6 +141,6 @@ export async function capture(name: string, take: (page: Page, mark: Mark) => Pr
     console.error(`Take not usable: ${error.message}`)
     process.exitCode = 1
   } finally {
-    await browser.close()
+    await context.close()
   }
 }
